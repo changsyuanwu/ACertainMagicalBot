@@ -7,6 +7,7 @@ const aliasListHeroes = require(config.DataFilePath + "/FWTHeroAliases.json");
 const rainbowRotation = require(config.DataFilePath + "/FWTSetRotation.json");
 const heroDataTable = require(config.DataFilePath + "/FWTHeroStats.json");
 const itemDataTable = require(config.DataFilePath + "/FWTItemMaxStats.json");
+const flagNames = ["confusion", "charm", "stun", "taunt", "disarm", "immobilize", "decrease movement", "dot", "mp burn", "skill cost", "defense ignore", "defense ignoring damage", "weakening", "buff removal", "hp% damage", "defense decrease", "attack decrease", "hp drain"];
 
     // Declaring constants/loading databases
 
@@ -54,7 +55,6 @@ function coocooPull10() {
 
 
 function createOutput(list) {
-    const flagNames = ["confusion", "charm", "stun", "taunt", "disarm", "immobilize", "decrease movement", "dot", "mp burn", "skill cost", "defense ignore", "defense ignoring damage", "weakening", "buff removal", "hp% damage", "defense decrease", "attack decrease", "hp drain"];
     var dataString = "";
     for (var property in list) {
         if ((list.hasOwnProperty(property)) && (!flagNames.includes(property))) {
@@ -184,6 +184,10 @@ bot.on("message", msg => {
         
     } else if (msg.content.startsWith(config.prefix + "property")) { // Searches database for the requested property and returns which heroes have the property
         var splitContent = msg.content.split(" ");
+        if (splitContent.length <= 2) {
+            msg.channel.sendMessage("Invalid property!");
+            return;
+        }
         var property = capitalize(splitContent[1]);
         var effect = capitalize(splitContent[2]);
         var propertyHeroes = findProperty(property, effect);
