@@ -1,0 +1,9 @@
+[
+    {
+    "Name": "Alex",
+    "1": "Lance Piercing:\nThrusts a spear forward and inflicts damage equal to [102% ~ 139.8%] of Attack. Instantly increases Attack by [1,7% ~ 8%] for every space traveled for 1 turn.",
+    "2": "Absolute Charge:]nPierces enemies in front and inflicts damage equal to [116% ~ 159.2%] of Attack. Decreases the enemies’ Attack by [150 ~ 1430] for 2 turns with a [19% ~ 100%] chance, and inflicts [35% ~ 73.7%] damage over time.",
+    "3": "Giga-break:\nJumps high in the air and pounces on an enemy in front. Inflicts [125% ~ 171.8%] damage of Attack and stuns the enemy for 1 turn with a [30% ~ 75%] chance.",
+    "4": "Knighthood:\nAlex inflicts additional damage of 10% on enemies that are under debuff effect(s). Additionally, Alex's incoming crit damage decreases by [6% ~ 15%]."
+    }
+]

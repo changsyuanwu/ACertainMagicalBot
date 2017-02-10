@@ -7,6 +7,7 @@ const aliasListHeroes = require(config.DataFilePath + "/FWTHeroAliases.json");
 const rainbowRotation = require(config.DataFilePath + "/FWTSetRotation.json");
 const heroDataTable = require(config.DataFilePath + "/FWTHeroStats.json");
 const itemDataTable = require(config.DataFilePath + "/FWTItemMaxStats.json");
+const heroSkillTable = require(config.DataFilePath + "/FWTHeroSkills.json")
 const flagNames = ["confusion", "charm", "stun", "taunt", "disarm", "immobilize", "decrease movement", "dot", "mp burn", "skill cost", "defense ignore", "defense ignoring damage", "weakening", "buff removal", "hp% damage", "defense decrease", "attack decrease", "hp drain"];
 
     // Declaring constants/loading databases
@@ -101,6 +102,14 @@ function findItem(item, level) {
     var dataString = "";
     for (var i = 0, itemnum = itemDataTable.length; i < itemnum; i++) {
         if (itemDataTable[i]["Name"] == item) dataString = itemDataTable[i][level];
+    }
+    return dataString;
+}
+function findSkill(alias, skill) {
+    var dataString = "";
+    var name = findNameByAlias(alias, false)
+    for (var i = 0, heronum = heroSkillTable.length; i < heronum; i++) {
+        if (heroSkillTable[i]["Name"] == name) dataString = heroSkillTable[i][skill];
     }
     return dataString;
 } // End of database functions
@@ -199,6 +208,13 @@ bot.on("message", msg => {
         var itemLevel = splitContent[2];
         var itemStats = findItem(itemName, itemLevel);
         msg.channel.sendMessage(itemStats);
+        
+    } else if (msg.content.startsWith(config.prefix + "skill")) { // Searches database for the requested skill
+        var splitContent = msg.content.split(" ");
+        var heroName = splitContent[1].toLowerCase();
+        var skill = splitContent[2];
+        var skillData = findSkill(heroName, skill)
+        msg.channel.sendMessage(skillData);
         
     } else if (msg.content.startsWith(config.prefix + "nameset") && (msg.author.id == config.ownerID)) {
         msg.guild.member(bot.user).setNickname("A Certain Magical Bot");
