@@ -193,7 +193,7 @@ bot.on("message", msg => {
         var propertyHeroes = findProperty(property, effect);
         msg.channel.sendMessage(propertyHeroes);
         
-    } else if (msg.content.startsWith(config.prefix + "item")) { // Searches database for the requested property and returns which heroes have the property
+    } else if (msg.content.startsWith(config.prefix + "item")) { // Searches database for the requested item and returns the stats
         var splitContent = msg.content.split(" ");
         var itemName = splitContent[1].toLowerCase();
         var itemLevel = splitContent[2];
