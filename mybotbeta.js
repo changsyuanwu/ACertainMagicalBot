@@ -108,6 +108,7 @@ function findItem(item, level) {
 function findSkill(alias, skill) {
     var dataString = "";
     var name = findNameByAlias(alias, false)
+    if (name == "nosuchalias") return "nosuchdata";
     for (var i = 0, heronum = heroSkillTable.length; i < heronum; i++) {
         if (heroSkillTable[i]["Name"] == name) dataString = heroSkillTable[i][skill];
     }
@@ -168,6 +169,7 @@ bot.on("message", msg => {
     else if (msg.content.startsWith(config.prefix + "moe")) msg.channel.sendFile(config.FilePath + "/Images/Shushu/moe.PNG");
     // End of custom commands
     
+    
     else if (msg.content.startsWith(config.prefix + "pull")) msg.channel.sendFile(PullOrNot()); // 50/50 pull or no
     
     else if (msg.content.startsWith(config.prefix + "whale")) { // 10x pull
@@ -214,7 +216,8 @@ bot.on("message", msg => {
         var heroName = splitContent[1].toLowerCase();
         var skill = splitContent[2];
         var skillData = findSkill(heroName, skill)
-        msg.channel.sendMessage(skillData);
+        if (skillData != "nosuchdata") msg.channel.sendMessage(skillData);
+        else msg.channel.sendMessage("Unknown Hero!");
         
     } else if (msg.content.startsWith(config.prefix + "nameset") && (msg.author.id == config.ownerID)) {
         msg.guild.member(bot.user).setNickname("A Certain Magical Bot");
