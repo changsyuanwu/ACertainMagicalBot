@@ -919,7 +919,7 @@
     "Weapon": "Mace",
     "Armor": "Armor",
     "Accessory": "Brooch",
-    "2pc": "Increases hit rate by 1200",
+    "2pc": "Increases Hit Rate by 1200",
     "3pc": "Increases Critical Damage by 24%",
     "Restrictions": "None"
   },
@@ -1634,7 +1634,7 @@
     "Weapon": "Bow",
     "Armor": "Armor",
     "Accessory": "Brooch",
-    "2pc": "Increases Attack by 1344 and Hit rate by 600.",
+    "2pc": "Increases Attack by 1344 and Hit Rate by 600.",
     "3pc": "Increases Attack by 30% for 4 turns.",
     "Restrictions": "Exclusive to Mercedes (Maplestory Hero)"
   }

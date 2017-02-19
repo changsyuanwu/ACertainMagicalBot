@@ -65,6 +65,7 @@ function createOutput(list) {
     return dataString;
 }
 function findNameByAlias(alias, isSet) {
+    alias = alias.toLowerCase();
     if (isSet) var aliasList = aliasListSets;
     else var aliasList = aliasListHeroes;
     for (var i = 0, setnum = aliasList.length; i < setnum; i++) {
@@ -102,6 +103,13 @@ function findItem(item, level) {
     var dataString = "";
     for (var i = 0, itemnum = itemDataTable.length; i < itemnum; i++) {
         if (itemDataTable[i]["Name"] == item) dataString = itemDataTable[i][level];
+    }
+    return dataString;
+}
+function findStat(hero, stat) {
+    var dataString = "";
+    for (var i = 0, heronum = heroDataTable.length; i < heronum; i++) {
+        if (heroDataTable[i]["Name"] == hero) dataString = heroDataTable[i][stat];
     }
     return dataString;
 }
@@ -173,21 +181,47 @@ bot.on("message", msg => {
     else if (msg.content.startsWith(config.prefix + "pull")) msg.channel.sendFile(PullOrNot()); // 50/50 pull or no
     
     else if (msg.content.startsWith(config.prefix + "whale")) { // 10x pull
-        const pulls = coocooPull10().map((emoji_name) => findEmojiFromGuildByName(msg.guild, emoji_name));
-        msg.channel.sendMessage(pulls.join(" "));
-
+        var splitContent = msg.content.split(" ");
+        var pulls = "";
+        var totalPull = "";
+        if (splitContent.length = 2) {
+            for (var i = 0; i < splitContent[1]; i++) {
+                pulls = coocooPull10().map((emoji_name) => findEmojiFromGuildByName(msg.guild, emoji_name));
+                totalPull = pulls.join(" ") + "\n" + totalPull;
+            }
+            msg.channel.sendMessage(totalPull);
+        } else {
+            pulls = coocooPull10().map((emoji_name) => findEmojiFromGuildByName(msg.guild, emoji_name));
+            msg.channel.sendMessage(pulls.join(" "));
+        }
+        
     } else if (msg.content.startsWith(config.prefix + "set")) { // Searches database for set info
         var setName = msg.content.slice(msg.content.indexOf(" ", 0) + 1, msg.content.length);
-        var setInfo = findData(setName.toLowerCase(), true);
+        var setInfo = findData(setName, true);
         if (setInfo != "nosuchdata") msg.channel.sendMessage(setInfo);
         else msg.channel.sendMessage("Unknown Set!");
 
     } else if (msg.content.startsWith(config.prefix + "stats")) { // Searches database for hero stats
         var heroRequested = msg.content.slice(msg.content.indexOf(" ", 0) + 1, msg.content.length);
-        var heroStats = findData(heroRequested.toLowerCase(), false);
+        var heroStats = findData(heroRequested, false);
         if (heroStats != "nosuchdata") msg.channel.sendMessage(heroStats);
         else msg.channel.sendMessage("Unknown Hero!");
         
+    } else if (msg.content.startsWith(config.prefix + "stat")) { // Searches for the requested stat of the requested hero
+        var splitContent = msg.content.split(" ");
+        if (splitContent.length <= 2) {
+            msg.channel.sendMessage("Invalid request!");
+            return;
+        }
+        var heroRequested = findNameByAlias(splitContent[1]);
+        if ((splitContent[2].toLowerCase() == "hp") || (splitContent[2].toLowerCase() == "mp")) 
+            var statRequested = splitContent[2].toUpperCase();
+        else
+            var statRequested = capitalize(splitContent[2]);
+        var statData = findStat(heroRequested, statRequested)
+        if (statData != "nosuchdata") msg.channel.sendMessage(heroRequested + "'s " + statRequested + ": " + statData);
+        else msg.channel.sendMessage("Unknown Hero!");
+    
     } else if (msg.content.startsWith(config.prefix + "effect")) { // Searches database for the requested effect and returns which heroes can cause the effect
         var effect = msg.content.slice(msg.content.indexOf(" ", 0) + 1, msg.content.length);
         var effectHeroes = findProperty(effect, "true");
@@ -213,7 +247,7 @@ bot.on("message", msg => {
         
     } else if (msg.content.startsWith(config.prefix + "skill")) { // Searches database for the requested skill
         var splitContent = msg.content.split(" ");
-        var heroName = splitContent[1].toLowerCase();
+        var heroName = findNameByAlias(splitContent[1]);;
         var skill = splitContent[2];
         var skillData = findSkill(heroName, skill)
         if (skillData != "nosuchdata") msg.channel.sendMessage(skillData);
@@ -233,7 +267,7 @@ bot.on("message", msg => {
 });
 bot.on("ready", () => {
     console.log("I am ready!");
-    bot.user.setGame("with TOD Hell Sets");
+    bot.user.setGame("spamming Twins nerf requests");
 });
 bot.on("error", e => { console.error(e); });
 bot.login(config.token);

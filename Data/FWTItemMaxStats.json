@@ -83,70 +83,70 @@
     "Name": "pbow",
     "1": "Attack +364, Crit +397",
     "2": "Attack +857, Crit +495",
-    "3": "Attack +",
-    "4": "",
-    "5": ""
+    "3": "Attack +1488, Crit +599",
+    "4": "Attack +2311, Crit +712",
+    "5": "Attack +3416, Crit +833"
     },
     {
     "Name": "pmace",
-    "1": "",
-    "2": "",
-    "3": "",
-    "4": "",
-    "5": ""
+    "1": "Attack +439, Counter Damage +1389",
+    "2": "Attack +1044, Counter Damage +1697",
+    "3": "Attack +1810, Counter Damage +2019",
+    "4": "Attack +2808, Counter Damage +2356",
+    "5": "Attack +4162, Counter Damage +2707"
     },
     {
     "Name": "psword",
-    "1": "",
-    "2": "",
-    "3": "",
-    "4": "",
-    "5": ""
+    "1": "Attack +394, Hit +397",
+    "2": "Attack +934, Hit +495",
+    "3": "Attack +1616, Hit +599",
+    "4": "Attack +2511, Hit +712",
+    "5": "Attack +3716, Hit +833"
     },
     {
     "Name": "parmor",
-    "1": "",
-    "2": "",
-    "3": "",
-    "4": "",
-    "5": ""
+    "1": "HP +1500, Defense +397",
+    "2": "HP +3932, Defense +495",
+    "3": "HP +6332, Defense +599",
+    "4": "HP +9833, Defense +712",
+    "5": "HP +14558, Defense +833"
     },
     {
     "Name": "pboot",
-    "1": "",
-    "2": "",
-    "3": "",
-    "4": "",
-    "5": ""
+    "1": "HP +1379, Dodge +397",
+    "2": "HP +3343, Dodge +495",
+    "3": "HP +5825, Dodge +599",
+    "4": "HP +9048, Dodge +712",
+    "5": "HP +13393, Dodge +833"
     },
     {
     "Name": "pshield",
-    "1": "",
-    "2": "",
-    "3": "",
-    "4": "",
-    "5": ""
+    "1": "HP +1679, Counter Rate +198",
+    "2": "HP +4067, Counter Rate +283",
+    "3": "HP +, Counter Rate +",
+    "4": "HP +11016, Counter Rate +496",
+    "5": "HP +16305, Counter Rate +624"
     },
     {
     "Name": "pring",
-    "1": "",
-    "2": "",
-    "3": "",
-    "4": "",
-    "5": ""
+    "1": "Crit +337, Hit +337",
+    "2": "Crit +421, Hit +421",
+    "3": "Crit +509, Hit +509",
+    "4": "Crit +607, Hit +607",
+    "5": "Crit +708, Hit +708"
     },{
     "Name": "pnecklace",
-    "1": "",
-    "2": "",
-    "3": "",
-    "4": "",
-    "5": ""
+    "1": "Attack +197, Mastery +1467",
+    "2": "Attack +467, Mastery +1744",
+    "3": "Attack +808, Mastery +2019",
+    "4": "Attack +, Mastery +",
+    "5": "Attack +1858, Mastery +2569"
     },{
     "Name": "pbrooch",
-    "1": "",
-    "2": "",
-    "3": "",
-    "4": "",
-    "5": ""
+    "1": "HP +749, Defense +277",
+    "2": "HP +1818, Defense +346",
+    "3": "HP +3167, Defense +421",
+    "4": "HP +4915, Defense +501",
+    "5": "HP +7279, Defense +583"
     }
 ]

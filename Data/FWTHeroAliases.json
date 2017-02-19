@@ -5,13 +5,13 @@
 ,
 {"name":"Angela","aliases":["angela", "princess"]}
 ,
-{"name":"Azrael","aliases":["azrael", "azreal"]}
+{"name":"Azrael","aliases":["azrael", "azreal", "az"]}
 ,
 {"name":"Banshee","aliases":["banshee", "witch"]}
 ,
 {"name":"Bearman","aliases":["bearman", "bear"]}
 ,
-{"name":"Belle","aliases":["belle", "bel"]}
+{"name":"Belle","aliases":["belle", "bel", "bell"]}
 ,
 {"name":"Carrot","aliases":["carrot"]}
 ,
@@ -25,9 +25,9 @@
 ,
 {"name":"Deborah","aliases":["deborah", "deb"]}
 ,
-{"name":"Deimos","aliases":["deimos", "demois"]}
+{"name":"Deimos","aliases":["deimos", "demos"]}
 ,
-{"name":"Dolores","aliases":["dolores", "dorlors"]}
+{"name":"Dolores","aliases":["dolores", "dorlors", "dorlores"]}
 ,
 {"name":"Dominique","aliases":["dominique", "dom"]}
 ,
@@ -89,13 +89,13 @@
 ,
 {"name":"Muzaka","aliases":["muzaka", "muz"]}
 ,
-{"name":"Nirvana","aliases":["nirvana"]}
+{"name":"Nirvana","aliases":["nirvana", "nir", "nirv"]}
 ,
 {"name":"Noel","aliases":["noel"]}
 ,
 {"name":"Nox","aliases":["nox"]}
 ,
-{"name":"Persona","aliases":["persona", "theif"]}
+{"name":"Persona","aliases":["persona", "theif", "thief"]}
 ,
 {"name":"Phantom","aliases":["phantom"]}
 ,
@@ -140,6 +140,4 @@
 {"name":"Yekaterina","aliases":["yekaterina", "yeak", "yeka"]}
 ,
 {"name":"Zero","aliases":["zero"]}
-,
-{"name":"Bantya","aliases":["bantya", "bant", "bants"]}
 ]
