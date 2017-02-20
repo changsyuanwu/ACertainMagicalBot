@@ -59,7 +59,7 @@ function createOutput(list) {
     var dataString = "";
     for (var property in list) {
         if ((list.hasOwnProperty(property)) && (!flagNames.includes(property))) {
-            dataString = dataString + property + ": " + list[property] + "\n";
+            dataString = dataString + capitalize(property) + ": " + list[property] + "\n";
         } 
     }
     return dataString;
@@ -184,7 +184,7 @@ bot.on("message", msg => {
         var splitContent = msg.content.split(" ");
         var pulls = "";
         var totalPull = "";
-        if (splitContent.length = 2) {
+        if (splitContent.length > 1) {
             for (var i = 0; i < splitContent[1]; i++) {
                 pulls = coocooPull10().map((emoji_name) => findEmojiFromGuildByName(msg.guild, emoji_name));
                 totalPull = pulls.join(" ") + "\n" + totalPull;
@@ -194,7 +194,7 @@ bot.on("message", msg => {
             pulls = coocooPull10().map((emoji_name) => findEmojiFromGuildByName(msg.guild, emoji_name));
             msg.channel.sendMessage(pulls.join(" "));
         }
-        
+
     } else if (msg.content.startsWith(config.prefix + "set")) { // Searches database for set info
         var setName = msg.content.slice(msg.content.indexOf(" ", 0) + 1, msg.content.length);
         var setInfo = findData(setName, true);
@@ -214,17 +214,14 @@ bot.on("message", msg => {
             return;
         }
         var heroRequested = findNameByAlias(splitContent[1]);
-        if ((splitContent[2].toLowerCase() == "hp") || (splitContent[2].toLowerCase() == "mp")) 
-            var statRequested = splitContent[2].toUpperCase();
-        else
-            var statRequested = capitalize(splitContent[2]);
+        var statRequested = splitContent[2].toLowerCase();
         var statData = findStat(heroRequested, statRequested)
-        if (statData != "nosuchdata") msg.channel.sendMessage(heroRequested + "'s " + statRequested + ": " + statData);
+        if (statData != "nosuchdata") msg.channel.sendMessage(heroRequested + "'s " + capitalize(statRequested) + ": " + statData);
         else msg.channel.sendMessage("Unknown Hero!");
     
     } else if (msg.content.startsWith(config.prefix + "effect")) { // Searches database for the requested effect and returns which heroes can cause the effect
         var effect = msg.content.slice(msg.content.indexOf(" ", 0) + 1, msg.content.length);
-        var effectHeroes = findProperty(effect, "true");
+        var effectHeroes = findProperty(effect, "TRUE");
         msg.channel.sendMessage(effectHeroes);
         
     } else if (msg.content.startsWith(config.prefix + "property")) { // Searches database for the requested property and returns which heroes have the property
@@ -233,7 +230,7 @@ bot.on("message", msg => {
             msg.channel.sendMessage("Invalid property!");
             return;
         }
-        var property = capitalize(splitContent[1]);
+        var property = splitContent[1].toLowerCase();
         var effect = capitalize(splitContent[2]);
         var propertyHeroes = findProperty(property, effect);
         msg.channel.sendMessage(propertyHeroes);
