@@ -1,9 +1,9 @@
-name;title;class;type;hp;mp;mpregen;attack;defense;critical;dodge;hit rate;counterdmg;mastery;counter;cooperation;terrain;movement;growth;recruitment info;gene fragment;confusion;charm;stun;taunt;disarm;immobilize;decrease movement;dot;mp burn;skill cost;defense ignore;defense ignoring damage;weakening;buff removal;hp% damage;defense decrease;attack decrease;hp drain;mastery decrease;instant death;decrease crit rate;push/pull/switch;passive attack;seal;sleep;melee;ranged
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+Name;title;class;type;hp;mp;mpregen;attack;defense;critical;dodge;hit rate;counterdmg;mastery;counter;cooperation;terrain;movement;growth;recruitment;gene fragment;confusion;charm;stun;taunt;disarm;immobilize;decrease movement;dot;mp burn;skill cost;defense ignore;defense ignoring damage;weakening;buff removal;hp% damage;defense decrease;attack decrease;hp drain;mastery decrease;instant death;decrease crit rate;push/pull/switch;passive attack;seal;sleep;melee;ranged
+Alex;Lancer;Balance;Paper;29936;189;38;7216;2451;282;282;1058;5650;7800;10,50%;A;Field;4;Normal;Blue gene;670;;;TRUE;;;;;TRUE;;;;;;;;;;;;;;;;;;;TRUE
 Alfred;Professor;Area;Rock;20899;303;50;4335;2259;424;282;635;5500;7400;8,00%;SS;Field;4;Normal;Starter;N/A;;TRUE;;;;;TRUE;;;;;;;;;;;;;;;;;;;;
 Angela;Iron Princess;Balance;Paper;26063;303;35;8040;1975;1058;776;1058;5650;8600;6,00%;A;Poison;3;Normal;Ashan 4;366;;;;;;;;;;;;;;TRUE;;;;;;;;;;;;;TRUE
 Azrael;Artificial Angel;Attack;Paper;26063;189;36;8040;2400;424;1058;424;5950;8600;10,00%;A;Thornbush;5;Normal;Ashan 12;366;;;;;;;;;TRUE;;;;;;;TRUE;TRUE;TRUE;;;;;;;;TRUE;
-Banshee;Witch;Balance;Scissors;27225;205;26;9278;2224;824;944;824;6700;6800;10,50%;A;Poison;4;Slow;Lost Island - Banshee;980;TRUE;;TRUE;;;;;;;;TRUE;;;;;;;;;;;;;;;;TRUE
+Banshee;Witch;Balance;Scissors;27225;205;26;9278;2224;824;944;824;6700;6800;10,50%;A;Poison;4;Slow;Lost Island - Banshee;980;TRUE;;TRUE;;;;;;;;TRUE;;;;;;;;;;;;;;;;
 Bearman;Reinforced Human;Defense;Scissors;33938;197;33;5574;3388;565;353;141;7000;7600;9,00%;A;Poison;4;Normal;Girgas 8;108;;;TRUE;;;;;;;;;;;;;;TRUE;;;;;;;;;TRUE;
 Belle;Healer;Support;Scissors;22061;327;50;6787;2753;706;353;706;5650;9200;7,00%;SS;Swamp & Water;3;Normal;Battle of Honor Shop;240;;;;;;;;;;;;;;TRUE;;;;;;;;;;;;;TRUE
 Carrot;Big Shot;Attack;Paper;20899;295;33;8456;989;1200;776;424;6250;8400;7,00%;A;Field;4;Normal;Tezen 4;8;;;;;;;;;;;;;;;TRUE;TRUE;TRUE;;;;TRUE;;;;;;TRUE
@@ -12,7 +12,7 @@ Chenny;Magician;Balance;Scissors;23480;303;39;7216;2017;706;282;1412;5800;7800;5
 Chris;White Knight;Defense;Paper;31354;141;41;5992;3106;424;635;424;6400;7400;12,00%;A;Field;5;Normal;Starter;N/A;;;TRUE;;;;;;;;;;;;;TRUE;;;;;;;;;;TRUE;
 Cleo;Succubus;Balance;Paper;20899;205;41;6396;1694;565;565;989;5350;7400;13,50%;S;Thornbush;4;Normal;Glory 12;81;TRUE;TRUE;;;;;;TRUE;;;;;;;;;;;;;;;;;;;
 Deborah;Magician;Area;Scissors;18317;319;47;5992;2117;847;353;424;5500;7600;8,00%;S;Poison;3;Fast;Tezen 12;8;;;;;;;;TRUE;;;;;;;;;;;;;;;;;;;
-Deimos;Tyrant;Defense;Scissors;40264;287;28;6043;3706;606;706;762;6400;6400;8,00%;A;Poison;5;Slow;Library in the Sky;980;;;;TRUE;;;;;;;;;TRUE;;;;;;;;;TRUE;;;;TRUE;TRUE
+Deimos;Tyrant;Defense;Scissors;40264;287;28;6043;3706;606;706;762;6400;6400;8,00%;A;Poison;5;Slow;Library in the Sky;980;;;;TRUE;;;;;;;;;TRUE;;;;;;;;;TRUE;;;;TRUE;
 Dolores;Nouveau Riche;Balance;Paper;22191;262;36;5156;1975;494;847;1130;5800;8200;6,00%;A;Lava;3;Normal;Company 12;8;;;;;;;;;TRUE;;;;;TRUE;;;;;;;;;;;;;
 Dominique;Resistance;Attack;Rock;23480;181;38;7216;1130;424;1765;141;5500;8200;10,00%;A;Thornbush;5;Normal;Glory 8;81;;;;;;;;TRUE;;;TRUE;;;;;;;;;;;;;;;TRUE;
 Elektra;Fonea Queen;Support;Scissors;22191;254;39;7216;1835;353;776;1058;6700;8200;6,50%;A;Thornbush & Glacier;4;Normal;Lista 12;284;;;;;;;;TRUE;;;;;;;;;;;;;;;TRUE;;;TRUE;TRUE
@@ -21,7 +21,7 @@ Frankenstein;Butler;Attack;Scissors;24863;246;27;9683;1975;847;1130;847;6400;760
 Fruel;Combat Ranger;Attack;Scissors;19608;197;33;7216;1412;1130;1130;706;6400;8000;7,00%;A;Thornbush;4;Normal;Dimensional Breakthrough;360;;;;;;;;;;;;;;;;;;;;;;;;;;;TRUE
 Gillan;Drug Master;Support;Rock;18317;311;45;5574;1412;211;989;706;6550;8200;6,00%;A;Poison & Swamp;4;Normal;Foose 8;54;;;;;TRUE;;;;;;;;;;;;;;;;;;;;;;
 Hella;Aide;Support;Rock;26063;254;?;7635;1694;635;494;847;6400;8800;7,00%;S;Water & Glacier;4;Normal;Unknown;N/A;;;TRUE;;;;;;;;;;;;;;;;;;;;;;;;TRUE
-Henry;Killing Machine;Attack;Rock;23480;205;38;7216;2400;565;565;565;5350;8200;13,00%;A;Swamp;4;Normal;Nereid 12;176;;;;;;;;;;;;;;;;;;;;;;;;;;;TRUE
+Henry;Killing Machine;Attack;Rock;23480;205;38;7216;2400;565;565;565;5350;8200;13,00%;A;Swamp;4;Normal;Nereid 12;176;;;;;;;;;;;;;;;;;;;;;;;;;;;
 Ian;Black Cat;Balance;Rock;18317;238;38;5992;1412;917;776;565;6250;8400;7,00%;S;Thornbush;4;Normal;Starter;N/A;;;;;;;;;;;;;TRUE;;;TRUE;;;;;;;;;;;TRUE
 Jack;Werewolf;Defense;Rock;29936;238;38;4751;2682;211;494;0;6850;8000;8,50%;A;Lava;5;Normal;Vulcan 12;15;;;;;;;;TRUE;;;;;;;TRUE;;;;;;;;;;;TRUE;
 Jenny;Cowgirl;Area;Paper;20899;303;47;5156;1552;776;706;635;5650;7600;8,00%;S;Thornbush;3;Normal;Company 8;54;;;TRUE;;;;;;;;;;;;;;;;;;;;;;;;TRUE
@@ -36,16 +36,16 @@ Lee;Psychokinetic;Attack;Scissors;23480;262;36;8861;1412;1271;847;424;6250;8400;
 Lena;Diva;Balance;Scissors;22191;303;35;6396;1975;917;706;847;6400;8800;5,50%;A;Glacier;3;Normal;Dimensional Breakthrough;360;;TRUE;;;;TRUE;;;;;;;TRUE;;TRUE;;;;;;;;;;;;TRUE
 Lilid;Wild Boy;Defense;Rock;29936;205;36;4751;2230;324;915;241;7000;8400;11,00%;A;Poison;4;Normal;Nereid 4;176;;;;;;TRUE;TRUE;;;;;;;;;TRUE;;;;;;TRUE;;;;TRUE;
 Lily;Maid;Attack;Paper;24771;189;39;8456;706;353;917;424;6250;7800;10,50%;A;Swamp;5;Normal;Foose 12;54;;;TRUE;;;;TRUE;;;;;;;;;;;;;;;TRUE;;;;TRUE;
-Lucas;Zombie;Balance;Paper;29936;205;25;6812;2541;776;1130;1412;6100;7400;11,00%;A;Field;3;Slow;Lost Island - Lucas;980;TRUE;;;;;;TRUE;TRUE;;;;;;;;TRUE;TRUE;;;;;;;;;TRUE;TRUE
+Lucas;Zombie;Balance;Paper;29936;205;25;6812;2541;776;1130;1412;6100;7400;11,00%;A;Field;3;Slow;Lost Island - Lucas;980;TRUE;;;;;;TRUE;TRUE;;;;;;;;TRUE;TRUE;;;;;;;;;TRUE;
 Mas;Bard;Support;Paper;15735;319;50;4751;1694;706;565;565;6400;8000;6,50%;A;Field & Water;3;Normal;Company 4;N/A;;;;;;;;;;;;;;;;;;TRUE;;;;;;;;;TRUE
-Mercedes;Elf Queen;Attack;Rock;19608;246;24;11744;2141;1147;1212;1039;6850;6600;10,50%;A;Field;4;Slow;Maplestory Collab;980;;;;;;;;;;;TRUE;;;;;;;;;;;;;;;;TRUE
+Mercedes;Elf Queen;Attack;Rock;19608;246;24;11744;2141;1147;1212;1039;6850;6600;10,50%;A;Field;4;Slow;Maplestory Collab;980;;;;;;;;;;;TRUE;;;;;;;;;;;;;;;;
 Moa;Black Wizard;Area;Paper;20899;327;53;6396;1835;706;424;706;5800;7600;7,50%;S;Lava;3;Normal;Girgas 12;108;;;;;;;;;;TRUE;;;;;;;;;TRUE;;;;;;;;
 Momo;White Rabbit;Attack;Rock;27225;254;33;9278;1694;1200;565;494;6100;8400;25,00%;B;Field;3;Fast;Ancient Coin;45;;;;;;;;;;;;;;;;;;;;;;;;;;;TRUE
 Mu;Exorcist;Balance;Paper;24771;262;33;5992;2259;424;706;1058;5050;7400;10,50%;A;Swamp;4;Normal;Ancient Coin;108;;;TRUE;;;;;;;;;;;;;TRUE;TRUE;;;;;;;;;TRUE;
 Muang;Pyromaniac;Area;Scissors;23480;262;45;7216;2259;776;917;565;5500;7000;7,50%;S;Lava;4;Normal;Lost Island 1;720;;;;;;;;TRUE;;;;;;;;;TRUE;;;;;;;;;;
 Muzaka;Werewolf;Defense;Rock;27225;197;33;7635;2824;494;353;494;5800;7600;10,50%;A;Thornbush;4;Normal;Noblesse Collab Event;100;;;;;;TRUE;;TRUE;;;;TRUE;;;;;;;;;;;TRUE;;;TRUE;
 Nirvana;Healer;Support;Paper;26063;311;45;6396;2400;282;211;917;7000;8200;7,50%;A;Water & Glacier;2;Normal;Lost Island 3;720;;;;;;;;;;;;;;;;TRUE;;;;;;;;;;;TRUE
-Noel;Successor;Attack;Rock;24711;254;24;10921;1894;1150;865;894;6400;7400;9,00%;A;Field;4;Slow;BlazBlue Collab;720;;;;;;;;TRUE;;;TRUE;;;;;;;;;;;;;;;;TRUE
+Noel;Successor;Attack;Rock;24711;254;24;10921;1894;1150;865;894;6400;7400;9,00%;A;Field;4;Slow;BlazBlue Collab;720;;;;;;;;TRUE;;;TRUE;;;;;;;;;;;;;;;;
 Nox;Vampire;Attack;Paper;20889;238;35;8040;1975;1130;565;353;6100;8600;11,00%;B;Glacier;3;Normal;Battle of Honor Shop;180;TRUE;;;;;TRUE;;TRUE;;;;;;;;;;;;;;;;;;;TRUE
 Persona;Phantom Thief;Balance;Rock;22191;311;32;6812;1694;1058;1130;847;5200;7800;7,00%;S;Water;4;Slow;Battle of Honor Shop;180;;;;;;;;;;;;;;;;;;;;;TRUE;TRUE;;;;;TRUE
 Phantom;Thief;Balance;Paper;24480;319;26;9278;1941;947;1212;1039;7000;8400;10,50%;A;Thornbush;4;Slow;Maplestory Collab;980;;;;;;;;TRUE;;;;;TRUE;;;;;;;;;;;;;;
@@ -57,16 +57,16 @@ Ragna;Reaper;Attack;Scissors;28645;189;28;10921;2294;750;865;844;5950;7200;10,00
 Raizel;Noblesse;Attack;Paper;28645;246;24;10921;1975;1271;565;424;7000;8000;8,00%;A;Swamp;3;Slow;Noblesse Collab Event;720;;TRUE;;;;;;;TRUE;TRUE;;TRUE;;;;;TRUE;;;;;;;;;;TRUE
 Raskreia;Lord;Area;Scissors;24771;246;34;5992;2541;565;706;706;6250;7200;8,00%;S;Field;4;Normal;Noblesse Collab Event;200;;;;;;;;TRUE;;;;;;;;TRUE;;;;;;;;;;;
 Reina;Wolf Hunter;Balance;Scissors;33938;197;37;8861;3106;706;706;1412;5800;7200;3,00%;A;Field;4;Slow;Lost Island - Reina;720;;;;;;;TRUE;TRUE;;;;;;;;TRUE;;;TRUE;;;;;;;TRUE;TRUE
-Seira;Reaper;Attack;Paper;25463;189;?;10221;1541;847;1412;989;6250;8000;8,00%;S;Glacier;5;Fast;Noblesse Collab Event;200;;;TRUE;;;;;;;;TRUE;;;;;;;;;;;;;;;TRUE;TRUE
+Seira;Reaper;Attack;Paper;25463;189;?;10221;1541;847;1412;989;6250;8000;8,00%;S;Glacier;5;Fast;Noblesse Collab Event;200;;;TRUE;;;;;;;;TRUE;;;;;;;;;;;;;;;TRUE;
 Serendi;Dryad;Balance;Rock;20889;303;39;6812;706;847;1058;1412;5200;8000;7,50%;SS;Swamp;2;Normal;Foose 4;N/A;;TRUE;;;;;TRUE;TRUE;;;;;;;;;;;;;;;;;;;
 Shark;Pirate;Balance;Scissors;23480;246;48;5992;1975;565;353;2117;4000;7400;6,50%;A;Water;5;Normal;Ancient Coin;360;TRUE;;;;;;;;;;;;;TRUE;;;;;;;;;;;;TRUE;
 Shu-shu;Little Angel;Support;Rock;19608;262;47;5574;2117;776;494;989;5800;8800;6,50%;A;Glacier & Poison;3;Normal;Blue gene;670;;;;;;;;;;;;;;;;;;;;;;;;;;;TRUE
 Sione;Black Bride;Attack;Scissors;24171;262;26;9588;1694;1130;706;706;6850;8800;10,50%;A;Swamp;3;Normal;Achievements-100%;720;;;;;;;;TRUE;;;;;;;;;TRUE;;;;;;;;;;TRUE
 Sonic Boom;Ninja;Balance;Scissors;18317;303;38;6812;1694;706;353;989;5950;7400;6,50%;S;Lava;5;Normal;Vulcan 4;15;;;;;;;;;;;;;;;;;;;;TRUE;;;;;;;TRUE
-Spooky;Witch;Support;Rock;19608;262;26;6812;2424;674;744;1271?;6700;7600;12,00%;A;Thornbush & Lava;3;Slow;Event Shop - Twins;720;;;;;;;;;TRUE;;;;TRUE;;;;TRUE;;;;;;;;;;TRUE
+Spooky;Witch;Support;Rock;19608;262;26;6812;2424;674;744;1271?;6700;7600;12,00%;A;Thornbush & Lava;3;Slow;Event Shop - Twins;720;;;;;;;;;TRUE;;;;TRUE;;;;TRUE;;;;;;;;;;
 Sraka;Orc Warrior;Attack;Scissors;24771;141;38;7216;1412;424;706;424;5950;7600;9,50%;A;Water;5;Normal;Starter;N/A;;;;;;;;;;;;;;;;TRUE;;;;TRUE;;;;;;TRUE;
 Tao;Kung Fu Girl;Attack;Scissors;24771;197;32;7635;1412;565;706;989;6100;8400;8,00%;A;Thornbush;5;Normal;Blue gene;670;;;;;;;;;;;;;TRUE;;;TRUE;TRUE;;;;;;;;;TRUE;
 Unknown;Wanderer;Attack;Paper;23480;197;39;8040;1975;424;989;424;5500;7600;11,50%;S;Water;5;Normal;Ancient Coin;360;;;TRUE;;;;;;;;;;;;;;;;;;;;;;;TRUE;
-Valkyrie;Soul Gear;Defense;Paper;37166;255;27;5285;2975;571;415;324;7000;6400;8,00%;S;Thornbush;5;Normal;Guild Raid Clear;N/A;;;;TRUE;;;;;;;;;;;;;;;;;;;;;;TRUE;TRUE
+Valkyrie;Soul Gear;Defense;Paper;37166;255;27;5285;2975;571;415;324;7000;6400;8,00%;S;Thornbush;5;Normal;Guild Raid Clear;N/A;;;;TRUE;;;;;;;;;;;;;;;;;;;;;;TRUE;
 Yekaterina;Magician;Area;Rock;19608;351;32;6812;1612;776;989;1271;5500;7200;9,00%;A;Water;4;Slow;Tower of Dawn Floor 110;400;;;;;;;;;;;;;;;;;;;;;;;;;TRUE;;
-Zero;Assassin;Balance;Rock;24771;238;45;6812;1694;635;847;1058;5800;8000;6,50%;A;Poison;4;Normal;Blue gene;670;;;;;;;TRUE;;;;TRUE;;;;;;;TRUE;;;;;;;;;TRUE
+Zero;Assassin;Balance;Rock;24771;238;45;6812;1694;635;847;1058;5800;8000;6,50%;A;Poison;4;Normal;Blue gene;670;;;;;;;TRUE;;;;TRUE;;;;;;;TRUE;;;;;;;;;
