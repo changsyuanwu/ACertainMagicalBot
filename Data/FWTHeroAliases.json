@@ -5,6 +5,8 @@
 ,
 {"name":"Angela","aliases":["angela", "princess"]}
 ,
+{"name":"Aran","aliases":["aran"]}
+,
 {"name":"Azrael","aliases":["azrael", "azreal", "az"]}
 ,
 {"name":"Banshee","aliases":["banshee", "witch"]}
@@ -34,6 +36,8 @@
 {"name":"Elektra","aliases":["elektra", "elek"]}
 ,
 {"name":"Evan","aliases":["evan"]}
+,
+{"name":"Eunwol","aliases":["eunwol", "eun", "eunswol"]}
 ,
 {"name":"Frankenstein","aliases":["frankenstein", "frank"]}
 ,
@@ -75,7 +79,9 @@
 ,
 {"name":"Lucas","aliases":["lucas", "zombie"]}
 ,
-{"name":"Mas","aliases":["mas"]}
+{"name":"Luminous","aliases":["luminous", "lum", "lumi"]}
+,
+{"name":"Mas","aliases":["mas", "bard"]}
 ,
 {"name":"Mercedes","aliases":["mercedes", "merc"]}
 ,
