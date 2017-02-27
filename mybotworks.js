@@ -1,13 +1,15 @@
 const Discord = require("discord.js");
+const path = require("path");
 const bot = new Discord.Client();
-const config = require("/Users/Shared/config.json");
-const setTable = require(config.DataFilePath + "/FWTSetData.json");
-const aliasListSets = require(config.DataFilePath + "/FWTSetAliases.json");
-const aliasListHeroes = require(config.DataFilePath + "/FWTHeroAliases.json");
-const rainbowRotation = require(config.DataFilePath + "/FWTSetRotation.json");
-const heroDataTable = require(config.DataFilePath + "/FWTHeroStats.json");
-const itemDataTable = require(config.DataFilePath + "/FWTItemMaxStats.json");
-const heroSkillTable = require(config.DataFilePath + "/FWTHeroSkills.json")
+const launchLocation = __dirname;
+const config = require(path.join(launchLocation, "config.json"));
+const setTable = require(path.join(launchLocation, "Data", "FWTSetData.json"));
+const aliasListSets = require(path.join(launchLocation, "Data", "FWTSetAliases.json"));
+const aliasListHeroes = require(path.join(launchLocation, "Data", "FWTHeroAliases.json"));
+const rainbowRotation = require(path.join(launchLocation, "Data", "FWTSetRotation.json"));
+const heroDataTable = require(path.join(launchLocation, "Data", "FWTHeroStats.json"));
+const itemDataTable = require(path.join(launchLocation, "Data", "FWTItemMaxStats.json"));
+const heroSkillTable = require(path.join(launchLocation, "Data", "FWTHeroSkills.json"));
 const flagNames = ["confusion", "charm", "stun", "taunt", "disarm", "immobilize", "decrease movement", "dot", "mp burn", "skill cost", "defense ignore", "defense ignoring damage", "weakening", "buff removal", "hp% damage", "defense decrease", "attack decrease", "hp drain", "mastery decrease", "instant death", "decrease crit rate", "push/pull/switch", "passive attack", "seal", "sleep", "melee", "ranged"];
 
     // Declaring constants/loading databases
@@ -129,8 +131,8 @@ function findSkill(alias, skill) {
 function PullOrNot() {
     var number = Math.random();
     var YesNo;
-    if (number <= 0.5) YesNo =  config.FilePath + "/Images/Pull.png";
-    else YesNo = config.FilePath + "/Images/Don't Pull.png";
+    if (number <= 0.5) YesNo =  path.join(launchLocation, "Images", "Pull.png");
+    else YesNo = path.join(launchLocation, "Images", "Don't Pull.png");
     return YesNo;
 }
 function findEmojiFromGuildByName(guild, emoji_name) {
@@ -173,8 +175,8 @@ bot.on("message", msg => {
     else if (msg.content.startsWith(config.prefix + "tadaima") && (msg.content.includes("maid"))) msg.channel.sendMessage("おかえりなさいませ！ご主人様♥, \nDo you want dinner or a shower or \*blushes\* me?");
     else if (msg.content.startsWith(config.prefix + "tadaima") && (msg.content.includes("spades"))) msg.channel.sendMessage("おかえりなさいませ！ご主人様 :anger:, \nWell, I don't have much of a choice. I guess I'll end this here since I got ~~Shido~~ Spades-san to pat my head today.----right, all of me?");
     else if (msg.content.startsWith(config.prefix + "tadaima")) msg.channel.sendMessage("Okaeri dear, \nDo you want dinner or a shower or \*blushes\* me?");
-    else if (msg.content.startsWith(config.prefix + "tuturu")) msg.channel.sendFile(config.FilePath + "/Images/Tuturu.png");
-    else if (msg.content.startsWith(config.prefix + "moe")) msg.channel.sendFile(config.FilePath + "/Images/Shushu/moe.PNG");
+    else if (msg.content.startsWith(config.prefix + "tuturu")) msg.channel.sendFile(path.join(launchLocation, "Images", "Tuturu.png"));
+    else if (msg.content.startsWith(config.prefix + "moe")) msg.channel.sendFile(path.join(launchLocation, "Images", "Shushu.png"));
     // End of custom commands
     
     
@@ -195,7 +197,13 @@ bot.on("message", msg => {
             msg.channel.sendMessage(pulls.join(" "));
         }
 
-    } else if (msg.content.startsWith(config.prefix + "set")) { // Searches database for set info
+    } else if (msg.content.startsWith(config.prefix + "sets")) { // Searches database for set info
+        var setName = msg.content.slice(msg.content.indexOf(" ", 0) + 1, msg.content.length);
+        var setInfo = findData(setName, true);
+        if (setInfo != "nosuchdata") msg.channel.sendMessage(setInfo);
+        else msg.channel.sendMessage("Unknown Set!");
+
+    }else if (msg.content.startsWith(config.prefix + "set")) { // Searches database for set info
         var setName = msg.content.slice(msg.content.indexOf(" ", 0) + 1, msg.content.length);
         var setInfo = findData(setName, true);
         if (setInfo != "nosuchdata") msg.channel.sendMessage(setInfo);
@@ -273,7 +281,7 @@ bot.on("message", msg => {
 });
 bot.on("ready", () => {
     console.log("I am ready!");
-    bot.user.setGame("spamming Twins nerf requests");
+    bot.user.setGame("https://github.com/TheMasterDodo/ACertainMagicalBot");
 });
 bot.on("error", e => { console.error(e); });
 bot.login(config.token);
