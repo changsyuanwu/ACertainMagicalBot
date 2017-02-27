@@ -1637,5 +1637,38 @@
     "2pc": "Increases Attack by 1344 and Hit Rate by 600.",
     "3pc": "Increases Attack by 30% for 4 turns.",
     "Restrictions": "Exclusive to Mercedes (Maplestory Hero)"
+  },
+  {
+    "Name": "Hero's Armament: A Light in The Darkness",
+    "Tier": "★★★",
+    "Grade": "SS",
+    "Weapon": "Mace",
+    "Armor": "Armor",
+    "Accessory": "Brooch",
+    "2pc": "Decrease Crit Rate by 800 for all enemies",
+    "3pc": "Increases Attack by 40% and decreases MP cost by 20% for 3 turns",
+    "Restrictions": "Exclusive to Luminous (Maplestory 2 Hero)"
+  },
+  {
+    "Name": "Hero's Armament: Conqueror of Battlefield",
+    "Tier": "★★★",
+    "Grade": "S",
+    "Weapon": "Mace",
+    "Armor": "Armor",
+    "Accessory": "Brooch",
+    "2pc": "Increases HP by 6000",
+    "3pc": "Increases Attack by 400 with each attack (up to 2400)",
+    "Restrictions": "Exclusive to Aran (Maplestory 2 Hero)"
+  },
+  {
+    "Name": "Hero's Armament: The Forgotten One",
+    "Tier": "★★★",
+    "Grade": "SS",
+    "Weapon": "Mace",
+    "Armor": "Armor",
+    "Accessory": "Brooch",
+    "2pc": "Increases Defense by 10%",
+    "3pc": "Increases Attack by 30% and Crit by 1000 for 4 turns",
+    "Restrictions": "Exclusive to Eunwol (Maplestory 2 Hero)"
   }
 ]

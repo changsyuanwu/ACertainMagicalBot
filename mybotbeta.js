@@ -195,7 +195,13 @@ bot.on("message", msg => {
             msg.channel.sendMessage(pulls.join(" "));
         }
 
-    } else if (msg.content.startsWith(config.prefix + "set")) { // Searches database for set info
+    } else if (msg.content.startsWith(config.prefix + "sets")) { // Searches database for set info
+        var setName = msg.content.slice(msg.content.indexOf(" ", 0) + 1, msg.content.length);
+        var setInfo = findData(setName, true);
+        if (setInfo != "nosuchdata") msg.channel.sendMessage(setInfo);
+        else msg.channel.sendMessage("Unknown Set!");
+
+    }else if (msg.content.startsWith(config.prefix + "set")) { // Searches database for set info
         var setName = msg.content.slice(msg.content.indexOf(" ", 0) + 1, msg.content.length);
         var setInfo = findData(setName, true);
         if (setInfo != "nosuchdata") msg.channel.sendMessage(setInfo);
