@@ -144,6 +144,11 @@ function generateTier(tier) {
     }
     return setTier;
 }
+function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min)) + min;
+}
 function PullOrNot() {
     var number = Math.random();
     var YesNo;
@@ -288,9 +293,15 @@ bot.on("message", msg => {
         msg.channel.sendMessage(currentSets);
     }
 });
+
+var statusCycle = ["https://github.com/TheMasterDodo/ACertainMagicalBot", "Use !help for commands"]
+setInterval(function() { 
+    var random = getRandomInt(0, statusCycle.length + 1)
+    bot.user.setGame(statusCycle[random]);
+}, 180000);
+
 bot.on("ready", () => {
     console.log("I am ready!");
-    bot.user.setGame("https://github.com/TheMasterDodo/ACertainMagicalBot");
 });
 bot.on("error", e => { console.error(e); });
 bot.login(config.token);
