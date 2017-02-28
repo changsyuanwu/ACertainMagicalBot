@@ -3,7 +3,8 @@ const path = require("path");
 const bot = new Discord.Client();
 const launchLocation = __dirname;
 const config = require(path.join(launchLocation, "config.json"));
-const setTable = require(path.join(launchLocation, "Data", "FWTSetData.json"));
+const help = require(path.join(launchLocation, "help.json"));
+const setDataTable = require(path.join(launchLocation, "Data", "FWTSetData.json"));
 const aliasListSets = require(path.join(launchLocation, "Data", "FWTSetAliases.json"));
 const aliasListHeroes = require(path.join(launchLocation, "Data", "FWTHeroAliases.json"));
 const rainbowRotation = require(path.join(launchLocation, "Data", "FWTSetRotation.json"));
@@ -17,11 +18,11 @@ const flagNames = ["confusion", "charm", "stun", "taunt", "disarm", "immobilize"
 //--------------------------------------------------------------------------------------------
 
 
-for (let i = 0, len = setTable.length; i < len; i++) {
+for (let i = 0, len = setDataTable.length; i < len; i++) {
     for (let j = 0, weeks = rainbowRotation.length; j < weeks; j++) {
-        let grade = setTable[i]["Tier"].length.toString() + setTable[i]["Grade"];
-        if (rainbowRotation[j][grade] == setTable[i]["Name"]) {
-            setTable[i]["Last Time in the Rotation"] = rainbowRotation[j]["Week"];
+        let grade = setDataTable[i]["Tier"].length.toString() + setDataTable[i]["Grade"];
+        if (rainbowRotation[j][grade] == setDataTable[i]["Name"]) {
+            setDataTable[i]["Last Time in the Rotation"] = rainbowRotation[j]["Week"];
         }
     }
 }   // Adds the last time in rotation data to the set data
@@ -80,7 +81,7 @@ function findNameByAlias(alias, isSet) {
 function findData(alias, isSet) {
     if (isSet) {
         var name = findNameByAlias(alias, true);
-        var dataTable = setTable;
+        var dataTable = setDataTable;
     } else {
         var name = findNameByAlias(alias, false);
         var dataTable = heroDataTable;
@@ -123,11 +124,26 @@ function findSkill(alias, skill) {
         if (heroSkillTable[i]["Name"] == name) dataString = heroSkillTable[i][skill];
     }
     return dataString;
+} 
+function findSets(grade, tier) {
+    var dataString = "";
+    for (var i = 0; i < setDataTable.length; i++) {
+        if ((setDataTable[i]["Grade"] == grade) && (setDataTable[i]["Tier"] == tier)) {
+            dataString = dataString + "\n" + setDataTable[i]["Name"];
+        }
+    }
+    return dataString;
 } // End of database functions
 
 //--------------------------------------------------------------------------------------------
 
-
+function generateTier(tier) {
+    var setTier = "";
+    for (var i = 0; i < tier; i ++) {
+        setTier = setTier + "★"
+    }
+    return setTier;
+}
 function PullOrNot() {
     var number = Math.random();
     var YesNo;
@@ -151,25 +167,10 @@ bot.on("message", msg => {
     if (!msg.content.startsWith(config.prefix)) return; // Checks for prefix
     if (msg.author.bot) return; // Checks if sender is a bot
 
-    if (msg.channel.id == config.ReservedGeneral) {
-        const AllowedCommands = ["!set", "!rainbow", "!pull", "!hero", "!stats", "!ping", !"property"];
-        var command = 0;
-        for (var i = 0, cmdnum = AllowedCommands.length; i < cmdnum; i++) {
-            if (!msg.content.startsWith(AllowedCommands[i])) {
-                command = command++;
-                if (command == 6) {
-                    msg.channel.sendMessage(msg.content + " command is not allowed here. Please use it in " + config.ReservedCode + " or " + config.ReservedCasino);
-                    return;
-                }
-            }
-        }
-    }   // Server specific commands
-
-
     if (msg.content.startsWith(config.prefix + "ping")) msg.channel.sendMessage("pong!");
     // Bot testing
 
-    else if (msg.content.startsWith(config.prefix+ "help"))  msg.channel.sendMessage(config.Help);
+    else if (msg.content.startsWith(config.prefix+ "help"))  msg.channel.sendMessage(help.join("\n\n"));
     // Help command
     
     else if (msg.content.startsWith(config.prefix + "hug")) msg.channel.sendMessage("\*hug\*");
@@ -200,13 +201,18 @@ bot.on("message", msg => {
             msg.channel.sendMessage(pulls.join(" "));
         }
 
-    } else if (msg.content.startsWith(config.prefix + "sets")) { // Searches database for set info
-        var setName = msg.content.slice(msg.content.indexOf(" ", 0) + 1, msg.content.length);
-        var setInfo = findData(setName, true);
-        if (setInfo != "nosuchdata") msg.channel.sendMessage(setInfo);
-        else msg.channel.sendMessage("Unknown Set!");
+    } else if (msg.content.startsWith(config.prefix + "sets")) { // Searches database for sets at the requested grade and tier
+        var splitContent = msg.content.split(" ");
+        if (splitContent.length <= 2) {
+            msg.channel.sendMessage("Invalid request!");
+            return;
+        }
+        var setGrade = splitContent[1].toUpperCase();
+        var setTier = generateTier(splitContent[2]);
+        var setInfo = findSets(setGrade, setTier);
+        msg.channel.sendMessage(setInfo);
 
-    }else if (msg.content.startsWith(config.prefix + "set")) { // Searches database for set info
+    } else if (msg.content.startsWith(config.prefix + "set")) { // Searches database for set info
         var setName = msg.content.slice(msg.content.indexOf(" ", 0) + 1, msg.content.length);
         var setInfo = findData(setName, true);
         if (setInfo != "nosuchdata") msg.channel.sendMessage(setInfo);
