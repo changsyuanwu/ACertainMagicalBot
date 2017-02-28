@@ -1,0 +1,23 @@
+{
+  "name": "acertainmagicalbot",
+  "version": "1.0.0",
+  "description": "Bot for FWT data",
+  "main": "mybotbeta.js",
+  "dependencies": {
+    "discord.js": "^11.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "N/A"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheMasterDodo/ACertainMagicalBot.git"
+  },
+  "author": "The Master Dodo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TheMasterDodo/ACertainMagicalBot/issues"
+  },
+  "homepage": "https://github.com/TheMasterDodo/ACertainMagicalBot#readme"
+}
