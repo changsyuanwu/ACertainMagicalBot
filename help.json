@@ -11,7 +11,7 @@
 
     "**!rainbow [number]**: Retrieves the sets in rotation for the number of weeks back from current (Ex. [1] would be last week), leave blank for current week",
 
-    "**!effect [effect]**: Finds all the heroes who can inflict the requested effect. (Ex. [stun] finds all the heroes who can stun)",
+    "**!effect [effect]**: Finds all the heroes who can inflict the requested effect. [list] will list available effects. (Ex. [stun] finds all the heroes who can stun)",
 
     "**!property [propertyType] [property]**: Finds all the heroes who have the requested property. (Ex. [type] [rock] finds all the rock heroes)",
 
