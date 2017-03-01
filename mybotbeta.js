@@ -13,7 +13,7 @@ const itemDataTable = require(path.join(launchLocation, "Data", "FWTItemMaxStats
 const heroSkillTable = require(path.join(launchLocation, "Data", "FWTHeroSkills.json"));
 const flagNames = ["confusion", "charm", "stun", "taunt", "disarm", "immobilize", "decrease movement", "dot", "mp burn", "skill cost", "defense ignore", "defense ignoring damage", "weakening", "buff removal", "hp% damage", "defense decrease", "attack decrease", "hp drain", "mastery decrease", "instant death", "decrease crit rate", "push/pull/switch", "passive attack", "seal", "sleep", "melee", "ranged"];
 
-    // Declaring constants/loading databases
+// Declaring constants/loading databases
 
 //--------------------------------------------------------------------------------------------
 
@@ -63,7 +63,7 @@ function createOutput(list) {
     for (var property in list) {
         if ((list.hasOwnProperty(property)) && (!flagNames.includes(property))) {
             dataString = dataString + capitalize(property) + ": " + list[property] + "\n";
-        } 
+        }
     }
     return dataString;
 }
@@ -94,14 +94,14 @@ function findData(alias, isSet) {
 function SetsOfTheWeek(WeekRequested) {
     var rainbowData = rainbowRotation[rainbowRotation.length - 1 - WeekRequested];
     return createOutput(rainbowData);
-} 
+}
 function findProperty(propertyRequested, effectRequested) {
     var dataString = "";
     for (var i = 0, heronum = heroDataTable.length; i < heronum; i++) {
         if (heroDataTable[i][propertyRequested].includes(effectRequested)) dataString = dataString + "\n" + heroDataTable[i]["Name"];
     }
     return dataString;
-} 
+}
 function findItem(item, level) {
     var dataString = "";
     for (var i = 0, itemnum = itemDataTable.length; i < itemnum; i++) {
@@ -124,7 +124,7 @@ function findSkill(alias, skill) {
         if (heroSkillTable[i]["Name"] == name) dataString = heroSkillTable[i][skill];
     }
     return dataString;
-} 
+}
 function findSets(grade, tier) {
     var dataString = "";
     for (var i = 0; i < setDataTable.length; i++) {
@@ -139,7 +139,7 @@ function findSets(grade, tier) {
 
 function generateTier(tier) {
     var setTier = "";
-    for (var i = 0; i < tier; i ++) {
+    for (var i = 0; i < tier; i++) {
         setTier = setTier + "★"
     }
     return setTier;
@@ -152,7 +152,7 @@ function getRandomInt(min, max) {
 function PullOrNot() {
     var number = Math.random();
     var YesNo;
-    if (number <= 0.5) YesNo =  path.join(launchLocation, "Images", "Pull.png");
+    if (number <= 0.5) YesNo = path.join(launchLocation, "Images", "Pull.png");
     else YesNo = path.join(launchLocation, "Images", "Don't Pull.png");
     return YesNo;
 }
@@ -175,9 +175,9 @@ bot.on("message", msg => {
     if (msg.content.startsWith(config.prefix + "ping")) msg.channel.sendMessage("pong!");
     // Bot testing
 
-    else if (msg.content.startsWith(config.prefix+ "help"))  msg.channel.sendMessage(help.join("\n\n"));
+    else if (msg.content.startsWith(config.prefix + "help")) msg.channel.sendMessage(help.join("\n\n"));
     // Help command
-    
+
     else if (msg.content.startsWith(config.prefix + "hug")) msg.channel.sendMessage("\*hug\*");
     // Everyone needs hugs right?
 
@@ -187,10 +187,10 @@ bot.on("message", msg => {
     else if (msg.content.startsWith(config.prefix + "tuturu")) msg.channel.sendFile(path.join(launchLocation, "Images", "Tuturu.png"));
     else if (msg.content.startsWith(config.prefix + "moe")) msg.channel.sendFile(path.join(launchLocation, "Images", "Shushu.png"));
     // End of custom commands
-    
-    
+
+
     else if (msg.content.startsWith(config.prefix + "pull")) msg.channel.sendFile(PullOrNot()); // 50/50 pull or no
-    
+
     else if (msg.content.startsWith(config.prefix + "whale")) { // 10x pull
         var splitContent = msg.content.split(" ");
         var pulls = "";
@@ -228,7 +228,7 @@ bot.on("message", msg => {
         var heroStats = findData(heroRequested, false);
         if (heroStats != "nosuchdata") msg.channel.sendMessage(heroStats);
         else msg.channel.sendMessage("Unknown Hero!");
-        
+
     } else if (msg.content.startsWith(config.prefix + "stat")) { // Searches for the requested stat of the requested hero
         var splitContent = msg.content.split(" ");
         if (splitContent.length <= 2) {
@@ -240,7 +240,7 @@ bot.on("message", msg => {
         var statData = findStat(heroRequested, statRequested)
         if (statData != "nosuchdata") msg.channel.sendMessage(heroRequested + "'s " + capitalize(statRequested) + ": " + statData);
         else msg.channel.sendMessage("Unknown Hero!");
-    
+
     } else if (msg.content.startsWith(config.prefix + "effect")) { // Searches database for the requested effect and returns which heroes can cause the effect
         var effect = msg.content.slice(msg.content.indexOf(" ", 0) + 1, msg.content.length).toLowerCase();
         if (effect == "list") {
@@ -252,9 +252,9 @@ bot.on("message", msg => {
         } else if (flagNames.includes(effect)) {
             var effectHeroes = findProperty(effect, "TRUE");
             msg.channel.sendMessage(effectHeroes);
-        } else 
+        } else
             msg.channel.sendMessage("Unknown effect");
-        
+
     } else if (msg.content.startsWith(config.prefix + "property")) { // Searches database for the requested property and returns which heroes have the property
         var splitContent = msg.content.split(" ");
         if (splitContent.length <= 2) {
@@ -265,14 +265,14 @@ bot.on("message", msg => {
         var effect = capitalize(splitContent[2]);
         var propertyHeroes = findProperty(property, effect);
         msg.channel.sendMessage(propertyHeroes);
-        
+
     } else if (msg.content.startsWith(config.prefix + "item")) { // Searches database for the requested item and returns the stats
         var splitContent = msg.content.split(" ");
         var itemName = splitContent[1].toLowerCase();
         var itemLevel = splitContent[2];
         var itemStats = findItem(itemName, itemLevel);
         msg.channel.sendMessage(itemStats);
-        
+
     } else if (msg.content.startsWith(config.prefix + "skill")) { // Searches database for the requested skill
         var splitContent = msg.content.split(" ");
         var heroName = findNameByAlias(splitContent[1]);;
@@ -280,14 +280,14 @@ bot.on("message", msg => {
         var skillData = findSkill(heroName, skill)
         if (skillData != "nosuchdata") msg.channel.sendMessage(skillData);
         else msg.channel.sendMessage("Unknown Hero!");
-        
+
     } else if (msg.content.startsWith(config.prefix + "nameset") && (msg.author.id == config.ownerID)) {
         msg.guild.member(bot.user).setNickname("A Certain Magical Bot");
         msg.channel.sendMessage("My name has been set!");
 
     } else if (msg.content.startsWith(config.prefix + "rainbow")) { // Searches database for current set rotation
-        if (msg.content.indexOf(" ",0) != -1) {
-            var WeekRequested = msg.content.slice(msg.content.indexOf(" ",0) + 1, msg.content.length);
+        if (msg.content.indexOf(" ", 0) != -1) {
+            var WeekRequested = msg.content.slice(msg.content.indexOf(" ", 0) + 1, msg.content.length);
         } else WeekRequested = 0;
         const currentSets = SetsOfTheWeek(WeekRequested);
         msg.channel.sendMessage(currentSets);
@@ -295,7 +295,7 @@ bot.on("message", msg => {
 });
 
 var statusCycle = ["https://github.com/TheMasterDodo/ACertainMagicalBot", "Use !help for commands", "Spamming !whale"]
-setInterval(function() { 
+setInterval(function () {
     var random = getRandomInt(0, statusCycle.length + 1)
     bot.user.setGame(statusCycle[random]);
 }, 180000);
