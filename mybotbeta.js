@@ -183,7 +183,7 @@ bot.on("message", msg => {
 
 
     else if (msg.content.startsWith(config.prefix + "hug")) {
-        msg.channel.sendMessage("\*hug\*");
+        msg.channel.sendMessage("*hug*");
     } // Gives a nice warm hug
 
 
