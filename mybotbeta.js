@@ -173,9 +173,9 @@ bot.on("message", msg => {
     if (msg.author.bot) return; // Checks if sender is a bot
 
     if (msg.content.startsWith(config.prefix + "ping")) {
-        msg.channel.sendMessage("pong!");
+        msg.channel.sendMessage("pong! [Response time: " + bot.ping + "ms]");
     } // Bot testing
-    
+
 
     else if (msg.content.startsWith(config.prefix + "help")) {
         msg.channel.sendMessage(help.join("\n\n"));
