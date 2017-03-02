@@ -185,7 +185,7 @@ bot.on("message", msg => {
     else if (msg.content.startsWith(config.prefix + "hug")) {
         msg.channel.sendMessage("*hug*");
     } // Gives a nice warm hug
-
+    
 
     else if (msg.content.startsWith(config.prefix + "tadaima") && (msg.content.includes("maid"))) {
         msg.channel.sendMessage("おかえりなさいませ！ご主人様♥, \nDo you want dinner or a shower or \*blushes\* me?");
@@ -200,7 +200,11 @@ bot.on("message", msg => {
         msg.channel.sendFile(path.join(launchLocation, "Images", "Shushu.png"));
     } // Custom/Anime commands
 
-
+     else if (msg.content.startsWith(config.prefix + "nameset") && (msg.author.id == config.ownerID)) {
+        msg.guild.member(bot.user).setNickname("A Certain Magical Bot");
+        msg.channel.sendMessage("My name has been set!");
+    } // Sets the bot's name
+    
     else if (msg.content.startsWith(config.prefix + "pull")) { // Bot does a 50/50 pull or no
         msg.channel.sendFile(PullOrNot());
 
@@ -306,10 +310,6 @@ bot.on("message", msg => {
         } else {
             msg.channel.sendMessage("Unknown Hero!");
         }
-
-    } else if (msg.content.startsWith(config.prefix + "nameset") && (msg.author.id == config.ownerID)) {
-        msg.guild.member(bot.user).setNickname("A Certain Magical Bot");
-        msg.channel.sendMessage("My name has been set!");
 
     } else if (msg.content.startsWith(config.prefix + "rainbow")) { // Searches database for current set rotation
         if (msg.content.indexOf(" ", 0) != -1) {

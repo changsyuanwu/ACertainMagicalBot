@@ -352,11 +352,11 @@
   },
   {
     "name": "Wilderness Desperado",
-    "aliases": ["wilderness desperado", "desperado", "wd"]
+    "aliases": ["wilderness desperado", "desperado", "wd", "wilderness"]
   },
   {
     "name": "Black Crescent",
-    "aliases": ["black crescent", "bc"]
+    "aliases": ["black crescent", "bc", "cresent"]
   },
   {
     "name": "Token of Return",
