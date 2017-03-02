@@ -294,7 +294,7 @@ bot.on("message", msg => {
     }
 });
 
-var statusCycle = ["https://github.com/TheMasterDodo/ACertainMagicalBot", "Use !help for commands", "Spamming !whale"]
+var statusCycle = ["https://github.com/TheMasterDodo/ACertainMagicalBot", "Use !help for info", "Spamming !whale"]
 setInterval(function () {
     var random = getRandomInt(0, statusCycle.length + 1)
     bot.user.setGame(statusCycle[random]);
