@@ -191,14 +191,19 @@ bot.on("message", msg => {
         msg.channel.sendMessage("おかえりなさいませ！ご主人様♥, \nDo you want dinner or a shower or \*blushes\* me?");
     } else if (msg.content.startsWith(config.prefix + "tadaima")) {
         msg.channel.sendMessage("Okaeri dear, \nDo you want dinner or a shower or \*blushes\* me?");
-    }// Tadaima ("I'm home")
+    } // Tadaima ("I'm home")
 
 
     else if (msg.content.startsWith(config.prefix + "tuturu")) {
         msg.channel.sendFile(path.join(launchLocation, "Images", "Tuturu.png"));
     } else if (msg.content.startsWith(config.prefix + "moe")) {
         msg.channel.sendFile(path.join(launchLocation, "Images", "Shushu.png"));
+    } else if (msg.content.startsWith(config.prefix + "moa")) {
+        msg.channel.sendFile(path.join(launchLocation, "Images", "Moa.png"));
+    } else if (msg.content.startsWith(config.prefix + "tyrant")) {
+        msg.channel.sendFile(path.join(launchLocation, "Images", "Tyrant.png"));
     } // Custom/Anime commands
+
 
      else if (msg.content.startsWith(config.prefix + "nameset") && (msg.author.id == config.ownerID)) {
         msg.guild.member(bot.user).setNickname("A Certain Magical Bot");
