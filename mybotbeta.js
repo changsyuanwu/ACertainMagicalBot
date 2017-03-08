@@ -187,11 +187,9 @@ bot.on("message", msg => {
     } // Bot testing
 
 
-
     else if (msg.content.startsWith(config.prefix + "help")) {
         msg.channel.sendMessage(help.join("\n\n"));
     } // Help command
-
 
 
     else if (msg.content.startsWith(config.prefix + "hug")) {
@@ -199,12 +197,10 @@ bot.on("message", msg => {
     } // Gives a nice warm hug
 
 
-
     else if (msg.content.startsWith(config.prefix + "nameset") && (msg.author.id == config.ownerID)) {
         msg.guild.member(bot.user).setNickname("A Certain Magical Bot");
         msg.channel.sendMessage("My name has been set!");
     } // Sets the bot's name
-
 
 
     else if ((msg.content.startsWith(config.prefix + "eval")) && (msg.author.id == config.ownerID)) {
@@ -219,7 +215,12 @@ bot.on("message", msg => {
         } catch (err) {
             msg.channel.sendMessage(`\`ERROR\` \`\`\`xl\n${clean(err)}\n\`\`\``);
         }
-    } // /eval command
+    } // eval command
+
+
+    else if (msg.content.startsWith(config.prefix + "id")) {
+        msg.reply(`${msg.author.id}`);
+    } // Tells the user their ID
 
 
 
@@ -353,7 +354,7 @@ bot.on("message", msg => {
         msg.channel.sendMessage(currentSets);
 
     } else if (msg.content.startsWith(config.prefix + "trivia")) {
-        msg.channel.sendMessage()
+        msg.reply(`${msg.author.id}`);
     }
 });
 // End of all commands

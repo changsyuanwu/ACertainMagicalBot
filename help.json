@@ -3,6 +3,8 @@
     
     "**!ping**: Tests if bot is running (Bot should say \"pong!\")",
 
+    "**!id**: Bot tells you your Discord ID",
+
     "**!hug**: Bot gives you a hug (Everyone needs one at some point in their life)",
 
     "**!pull**: Bot does a 50/50 between pull and don't pull",
@@ -28,6 +30,8 @@
     "**!set <setAlias>**: Finds the data for the requested set. (Ex. <gr> finds all the data for the Super Ranger: Green set)",
 
     "**!help**: Lists all the commands. Although since you used it already you should know this one.",
+
+    "There are also some secret commands you'll have to learn on your own:wink:",
 
     "******All about A Certain Magical Bot!******"
 ]
