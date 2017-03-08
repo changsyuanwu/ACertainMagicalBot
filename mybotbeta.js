@@ -167,6 +167,14 @@ function capitalize(inputString) {
 
 //--------------------------------------------------------------------------------------------
 
+function clean(text) {
+  if (typeof(text) === "string")
+    return text.replace(/`/g, "`" + String.fromCharCode(8203)).replace(/@/g, "@" + String.fromCharCode(8203));
+  else
+      return text;
+} // VERY IMPORTANT function to prevent misuse of /eval
+
+//--------------------------------------------------------------------------------------------
 
 bot.on("message", msg => {
     if (!msg.content.startsWith(config.prefix)) return; // Checks for prefix
@@ -185,7 +193,23 @@ bot.on("message", msg => {
     else if (msg.content.startsWith(config.prefix + "hug")) {
         msg.channel.sendMessage("*hug*");
     } // Gives a nice warm hug
-    
+
+
+    else if ((msg.content.startsWith(config.prefix + "eval")) && (msg.author.id == config.ownerID)) {
+        const args = msg.content.split(" ").slice(1);
+        try {
+            var code = args.join(" ");
+            var evaled = eval(code);
+
+            if (typeof evaled !== "string")
+                evaled = require("util").inspect(evaled);
+
+            msg.channel.sendCode("xl", clean(evaled));
+        } catch (err) {
+            msg.channel.sendMessage(`\`ERROR\` \`\`\`xl\n${clean(err)}\n\`\`\``);
+        }
+    } // /eval command
+
 
     else if (msg.content.startsWith(config.prefix + "tadaima") && (msg.content.includes("maid"))) {
         msg.channel.sendMessage("おかえりなさいませ！ご主人様♥, \nDo you want dinner or a shower or \*blushes\* me?");
@@ -205,11 +229,11 @@ bot.on("message", msg => {
     } // Custom/Anime commands
 
 
-     else if (msg.content.startsWith(config.prefix + "nameset") && (msg.author.id == config.ownerID)) {
+    else if (msg.content.startsWith(config.prefix + "nameset") && (msg.author.id == config.ownerID)) {
         msg.guild.member(bot.user).setNickname("A Certain Magical Bot");
         msg.channel.sendMessage("My name has been set!");
     } // Sets the bot's name
-    
+
     else if (msg.content.startsWith(config.prefix + "pull")) { // Bot does a 50/50 pull or no
         msg.channel.sendFile(PullOrNot());
 
@@ -327,7 +351,7 @@ bot.on("message", msg => {
     }
 });
 
-var statusCycle = ["https://github.com/TheMasterDodo/ACertainMagicalBot", "Use !help for info", "Spamming !whale"]
+var statusCycle = ["https://github.com/TheMasterDodo/ACertainMagicalBot", "Use !help for info", "Spamming !whale", "Running on " + bot.guilds.size + " servers"]
 setInterval(function () {
     var random = getRandomInt(0, statusCycle.length + 1)
     bot.user.setGame(statusCycle[random]);
