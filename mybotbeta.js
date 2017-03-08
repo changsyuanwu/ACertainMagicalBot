@@ -351,6 +351,9 @@ bot.on("message", msg => {
         }
         const currentSets = SetsOfTheWeek(WeekRequested);
         msg.channel.sendMessage(currentSets);
+
+    } else if (msg.content.startsWith(config.prefix + "trivia")) {
+        msg.channel.sendMessage()
     }
 });
 // End of all commands
@@ -364,7 +367,6 @@ setInterval(function () {
 
 bot.on('error', (e) => console.error(e));
 bot.on('warn', (e) => console.warn(e));
-bot.on('debug', (e) => console.info(e));
 // Captures errors
 
 bot.on("ready", () => {
