@@ -168,10 +168,10 @@ function capitalize(inputString) {
 //--------------------------------------------------------------------------------------------
 
 function clean(text) {
-  if (typeof(text) === "string")
-    return text.replace(/`/g, "`" + String.fromCharCode(8203)).replace(/@/g, "@" + String.fromCharCode(8203));
-  else
-      return text;
+    if (typeof (text) === "string")
+        return text.replace(/`/g, "`" + String.fromCharCode(8203)).replace(/@/g, "@" + String.fromCharCode(8203));
+    else
+        return text;
 } // VERY IMPORTANT function to prevent misuse of /eval
 
 //--------------------------------------------------------------------------------------------
@@ -353,7 +353,7 @@ bot.on("message", msg => {
         msg.channel.sendMessage(currentSets);
     }
 });
-    // End of all commands
+// End of all commands
 //--------------------------------------------------------------------------------------------
 
 var statusCycle = ["https://github.com/TheMasterDodo/ACertainMagicalBot", "Use !help for info", "Spamming !whale", "Running on " + bot.guilds.size + " servers"]
@@ -365,10 +365,10 @@ setInterval(function () {
 bot.on('error', (e) => console.error(e));
 bot.on('warn', (e) => console.warn(e));
 bot.on('debug', (e) => console.info(e));
-    // Captures errors
+// Captures errors
 
 bot.on("ready", () => {
-    console.log("I am ready!");
+    console.log(`Ready to server in ${bot.channels.size} channels on ${bot.guilds.size} servers, for a total of ${bot.users.size} users.`);
 });
 
 bot.login(config.token);
