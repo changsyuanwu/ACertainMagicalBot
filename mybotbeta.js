@@ -353,15 +353,22 @@ bot.on("message", msg => {
         msg.channel.sendMessage(currentSets);
     }
 });
+    // End of all commands
+//--------------------------------------------------------------------------------------------
 
 var statusCycle = ["https://github.com/TheMasterDodo/ACertainMagicalBot", "Use !help for info", "Spamming !whale", "Running on " + bot.guilds.size + " servers"]
 setInterval(function () {
     var random = getRandomInt(0, statusCycle.length + 1)
     bot.user.setGame(statusCycle[random]);
-}, 180000);
+}, 180000); // Cycles the status message
+
+bot.on('error', (e) => console.error(e));
+bot.on('warn', (e) => console.warn(e));
+bot.on('debug', (e) => console.info(e));
+    // Captures errors
 
 bot.on("ready", () => {
     console.log("I am ready!");
 });
-bot.on("error", e => { console.error(e); });
+
 bot.login(config.token);
