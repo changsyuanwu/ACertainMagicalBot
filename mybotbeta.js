@@ -180,9 +180,12 @@ bot.on("message", msg => {
     if (!msg.content.startsWith(config.prefix)) return; // Checks for prefix
     if (msg.author.bot) return; // Checks if sender is a bot
 
+    const args = msg.content.split(" ");
+
     if (msg.content.startsWith(config.prefix + "ping")) {
         msg.channel.sendMessage("pong! [Response time: " + bot.ping + "ms]");
     } // Bot testing
+
 
 
     else if (msg.content.startsWith(config.prefix + "help")) {
@@ -190,13 +193,21 @@ bot.on("message", msg => {
     } // Help command
 
 
+
     else if (msg.content.startsWith(config.prefix + "hug")) {
         msg.channel.sendMessage("*hug*");
     } // Gives a nice warm hug
 
 
+
+    else if (msg.content.startsWith(config.prefix + "nameset") && (msg.author.id == config.ownerID)) {
+        msg.guild.member(bot.user).setNickname("A Certain Magical Bot");
+        msg.channel.sendMessage("My name has been set!");
+    } // Sets the bot's name
+
+
+
     else if ((msg.content.startsWith(config.prefix + "eval")) && (msg.author.id == config.ownerID)) {
-        const args = msg.content.split(" ").slice(1);
         try {
             var code = args.join(" ");
             var evaled = eval(code);
@@ -211,11 +222,13 @@ bot.on("message", msg => {
     } // /eval command
 
 
+
     else if (msg.content.startsWith(config.prefix + "tadaima") && (msg.content.includes("maid"))) {
         msg.channel.sendMessage("おかえりなさいませ！ご主人様♥, \nDo you want dinner or a shower or \*blushes\* me?");
     } else if (msg.content.startsWith(config.prefix + "tadaima")) {
         msg.channel.sendMessage("Okaeri dear, \nDo you want dinner or a shower or \*blushes\* me?");
     } // Tadaima ("I'm home")
+
 
 
     else if (msg.content.startsWith(config.prefix + "tuturu")) {
@@ -229,20 +242,15 @@ bot.on("message", msg => {
     } // Custom/Anime commands
 
 
-    else if (msg.content.startsWith(config.prefix + "nameset") && (msg.author.id == config.ownerID)) {
-        msg.guild.member(bot.user).setNickname("A Certain Magical Bot");
-        msg.channel.sendMessage("My name has been set!");
-    } // Sets the bot's name
 
     else if (msg.content.startsWith(config.prefix + "pull")) { // Bot does a 50/50 pull or no
         msg.channel.sendFile(PullOrNot());
 
     } else if (msg.content.startsWith(config.prefix + "whale")) { // 10x pull
-        var splitContent = msg.content.split(" ");
         var pulls = "";
         var totalPull = "";
-        if (splitContent.length > 1) {
-            for (var i = 0; i < splitContent[1]; i++) {
+        if (args.length > 1) {
+            for (var i = 0; i < args[1]; i++) {
                 pulls = coocooPull10().map((emoji_name) => findEmojiFromGuildByName(msg.guild, emoji_name));
                 totalPull = pulls.join(" ") + "\n" + totalPull;
             }
@@ -253,18 +261,17 @@ bot.on("message", msg => {
         }
 
     } else if (msg.content.startsWith(config.prefix + "sets")) { // Searches database for sets at the requested grade and tier
-        var splitContent = msg.content.split(" ");
-        if (splitContent.length <= 2) {
+        if (args.length <= 2) {
             msg.channel.sendMessage("Invalid request!");
             return;
         }
-        var setGrade = splitContent[1].toUpperCase();
-        var setTier = generateTier(splitContent[2]);
+        var setGrade = args[1].toUpperCase();
+        var setTier = generateTier(args[2]);
         var setInfo = findSets(setGrade, setTier);
         msg.channel.sendMessage(setInfo);
 
     } else if (msg.content.startsWith(config.prefix + "set")) { // Searches database for set info
-        var setName = msg.content.slice(msg.content.indexOf(" ", 0) + 1, msg.content.length);
+        var setName = args[1];
         var setInfo = findData(setName, true);
         if (setInfo != "nosuchdata") {
             msg.channel.sendMessage(setInfo);
@@ -273,7 +280,7 @@ bot.on("message", msg => {
         }
 
     } else if (msg.content.startsWith(config.prefix + "stats")) { // Searches database for hero stats
-        var heroRequested = msg.content.slice(msg.content.indexOf(" ", 0) + 1, msg.content.length);
+        var heroRequested = args[1];
         var heroStats = findData(heroRequested, false);
         if (heroStats != "nosuchdata") {
             msg.channel.sendMessage(heroStats);
@@ -282,13 +289,12 @@ bot.on("message", msg => {
         }
 
     } else if (msg.content.startsWith(config.prefix + "stat")) { // Searches for the requested stat of the requested hero
-        var splitContent = msg.content.split(" ");
-        if (splitContent.length <= 2) {
+        if (args.length <= 2) {
             msg.channel.sendMessage("Invalid request!");
             return;
         }
-        var heroRequested = findNameByAlias(splitContent[1]);
-        var statRequested = splitContent[2].toLowerCase();
+        var heroRequested = findNameByAlias(args[1]);
+        var statRequested = args[2].toLowerCase();
         var statData = findStat(heroRequested, statRequested)
         if (statData != "nosuchdata") {
             msg.channel.sendMessage(heroRequested + "'s " + capitalize(statRequested) + ": " + statData);
@@ -297,7 +303,7 @@ bot.on("message", msg => {
         }
 
     } else if (msg.content.startsWith(config.prefix + "effect")) { // Searches database for the requested effect and returns which heroes can cause the effect
-        var effect = msg.content.slice(msg.content.indexOf(" ", 0) + 1, msg.content.length).toLowerCase();
+        var effect = args[1];
         if (effect == "list") {
             var flags = "";
             for (var i = 0; i < flagNames.length; i++) {
@@ -312,27 +318,24 @@ bot.on("message", msg => {
         }
 
     } else if (msg.content.startsWith(config.prefix + "property")) { // Searches database for the requested property and returns which heroes have the property
-        var splitContent = msg.content.split(" ");
-        if (splitContent.length <= 2) {
+        if (args.length <= 2) {
             msg.channel.sendMessage("Invalid property!");
             return;
         }
-        var property = splitContent[1].toLowerCase();
-        var effect = capitalize(splitContent[2]);
+        var property = args[1].toLowerCase();
+        var effect = capitalize(args[2]);
         var propertyHeroes = findProperty(property, effect);
         msg.channel.sendMessage(propertyHeroes);
 
     } else if (msg.content.startsWith(config.prefix + "item")) { // Searches database for the requested item and returns the stats
-        var splitContent = msg.content.split(" ");
-        var itemName = splitContent[1].toLowerCase();
-        var itemLevel = splitContent[2];
+        var itemName = args[1].toLowerCase();
+        var itemLevel = args[2];
         var itemStats = findItem(itemName, itemLevel);
         msg.channel.sendMessage(itemStats);
 
     } else if (msg.content.startsWith(config.prefix + "skill")) { // Searches database for the requested skill
-        var splitContent = msg.content.split(" ");
-        var heroName = findNameByAlias(splitContent[1]);;
-        var skill = splitContent[2];
+        var heroName = findNameByAlias(args[1]);
+        var skill = args[2];
         var skillData = findSkill(heroName, skill)
         if (skillData != "nosuchdata") {
             msg.channel.sendMessage(skillData);
@@ -342,7 +345,7 @@ bot.on("message", msg => {
 
     } else if (msg.content.startsWith(config.prefix + "rainbow")) { // Searches database for current set rotation
         if (msg.content.indexOf(" ", 0) != -1) {
-            var WeekRequested = msg.content.slice(msg.content.indexOf(" ", 0) + 1, msg.content.length);
+            var WeekRequested = args[1];
         } else {
             WeekRequested = 0;
         }
