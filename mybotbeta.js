@@ -16,6 +16,8 @@ const heroSkillTable = require(path.join(launchLocation, "Data", "FWTHeroSkills.
 const triviaTable = require(path.join(launchLocation, "Data", "FWTTrivia.json"));
 const flagNames = ["confusion", "charm", "stun", "taunt", "disarm", "immobilize", "decrease movement", "dot", "mp burn", "skill cost", "defense ignore", "defense ignoring damage", "weakening", "buff removal", "hp% damage", "defense decrease", "attack decrease", "hp drain", "mastery decrease", "instant death", "decrease crit rate", "push/pull/switch", "passive attack", "seal", "sleep", "melee", "ranged"];
 
+var triviaChannels = new Set([]);
+
 // Declaring constants/loading databases
 
 //--------------------------------------------------------------------------------------------
@@ -388,13 +390,15 @@ bot.on("message", message => {
         const currentSets = SetsOfTheWeek(WeekRequested);
         message.channel.sendMessage(currentSets);
 
-    } else if (message.content.startsWith(config.prefix + "trivia")) {
+    } else if ((message.content.startsWith(config.prefix + "trivia")) && (!triviaChannels.has(message.channel.id))) {
         message.channel.sendMessage(`+++ ${message.member.displayName} started a new round of FWT Trivia. Get ready! +++`);
+        triviaChannels.add(message.channel.id);
         var question = getRandomInt(0, triviaTable.length - 1);
         var askedQuestion = triviaTable[question]["Question"];
         var correctAnswer = triviaTable[question]["Answer"];
 
-        wait(1000).then(() => message.channel.sendMessage(askedQuestion))
+        wait(1000)
+            .then(() => message.channel.sendMessage(askedQuestion))
             .then(() => {
                 message.channel.awaitMessages(response => response.content.toLowerCase() == correctAnswer.toLowerCase(), {
                     max: 1,
@@ -403,9 +407,11 @@ bot.on("message", message => {
                 })
                     .then((correctMessage) => {
                         message.channel.sendMessage(`Correct answer "${correctAnswer}" by ${correctMessage.first().member.displayName}!`);
+                        triviaChannels.delete(message.channel.id);
                     })
                     .catch(() => {
                         message.channel.sendMessage("Time's up!");
+                        triviaChannels.delete(message.channel.id);
                     });
             });
     }
