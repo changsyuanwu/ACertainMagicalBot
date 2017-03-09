@@ -226,7 +226,7 @@ bot.on("message", message => {
     else if (message.content.startsWith(config.prefix + "choose")) {
         var msg = message.content.slice(message.content.indexOf(" ") + 1);
         var choices = msg.split("|");
-        message.channel.sendMessage(choices[getRandomInt(0, 2)]);
+        message.channel.sendMessage(choices[getRandomInt(0, choices.length)]);
     } // Bot makes a choice
 
 
@@ -369,7 +369,7 @@ bot.on("message", message => {
 
 var statusCycle = ["https://github.com/TheMasterDodo/ACertainMagicalBot", "Use !help for info", "Spamming !whale", "Running on " + bot.guilds.size + " servers"]
 setInterval(function () {
-    var random = getRandomInt(0, statusCycle.length + 1)
+    var random = getRandomInt(0, statusCycle.length - 1)
     bot.user.setGame(statusCycle[random]);
 }, 180000); // Cycles the status message
 
