@@ -119,7 +119,7 @@ function findStat(hero, stat) {
 }
 function findSkill(alias, skill) {
     var dataString = "";
-    var name = findNameByAlias(alias, false)
+    var name = findNameByAlias(alias, false);
     if (name == "nosuchalias") return "nosuchdata";
     for (var i = 0, heronum = heroSkillTable.length; i < heronum; i++) {
         if (heroSkillTable[i]["Name"] == name) dataString = heroSkillTable[i][skill];
@@ -141,7 +141,7 @@ function findSets(grade, tier) {
 function generateTier(tier) {
     var setTier = "";
     for (var i = 0; i < tier; i++) {
-        setTier = setTier + "★"
+        setTier = setTier + "★";
     }
     return setTier;
 }
@@ -166,7 +166,7 @@ function capitalize(inputString) {
     return outputString;
 }
 function wait(time) {
-    return new Promise(function (resolve, reject) {
+    return new Promise(function (resolve) {
         setTimeout(function () {
             resolve();
         }, time);
@@ -316,7 +316,7 @@ bot.on("message", message => {
         if (args.length >= 3) {
             var heroRequested = findNameByAlias(args[1]);
             var statRequested = args[2].toLowerCase();
-            var statData = findStat(heroRequested, statRequested)
+            var statData = findStat(heroRequested, statRequested);
             if (statData != "nosuchdata") {
                 message.channel.sendMessage(heroRequested + "'s " + capitalize(statRequested) + ": " + statData);
             } else {
@@ -366,7 +366,7 @@ bot.on("message", message => {
 
     } else if (message.content.startsWith(config.prefix + "skill")) { // Searches database for the requested skill
         if (args.length >= 3) {
-            var skillData = findSkill(findNameByAlias(args[1]), args[2])
+            var skillData = findSkill(findNameByAlias(args[1]), args[2]);
             if (skillData != "nosuchdata") {
                 message.channel.sendMessage(skillData);
             } else {
@@ -387,11 +387,13 @@ bot.on("message", message => {
 
     } else if (message.content.startsWith(config.prefix + "trivia")) {
         message.channel.sendMessage(`+++ ${message.member.displayName} started a new round of FWT Trivia. Get ready! +++`);
-        var question = getRandomInt(0, triviaTable.length - 1)
+        var question = getRandomInt(0, triviaTable.length - 1);
+        var askedQuestion = triviaTable[question]["Question"];
+        var correctAnswer = triviaTable[question]["Answer"].toLowerCase();
 
-        wait(1000).then(() => message.channel.sendMessage())
+        wait(1000).then(() => message.channel.sendMessage(askedQuestion))
             .then(() => {
-                message.channel.awaitMessages(response => response.content.toLowerCase() == triviaTable[question]["Answer"], {
+                message.channel.awaitMessages(response => response.content.toLowerCase() == correctAnswer, {
                     max: 1,
                     time: 10000,
                     errors: ['time'],
@@ -408,9 +410,9 @@ bot.on("message", message => {
 // End of all commands
 //--------------------------------------------------------------------------------------------
 
-var statusCycle = ["https://github.com/TheMasterDodo/ACertainMagicalBot", "Use !help for info", "Spamming !whale", "Running on " + bot.guilds.size + " servers"]
+var statusCycle = ["https://github.com/TheMasterDodo/ACertainMagicalBot", "Use !help for info", "Spamming !whale", "Running on " + bot.guilds.size + " servers"];
 setInterval(function () {
-    var random = getRandomInt(0, statusCycle.length - 1)
+    var random = getRandomInt(0, statusCycle.length - 1);
     bot.user.setGame(statusCycle[random]);
 }, 180000); // Cycles the status message
 
