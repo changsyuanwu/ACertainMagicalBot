@@ -11,6 +11,7 @@ const rainbowRotation = require(path.join(launchLocation, "Data", "FWTSetRotatio
 const heroDataTable = require(path.join(launchLocation, "Data", "FWTHeroStats.json"));
 const itemDataTable = require(path.join(launchLocation, "Data", "FWTItemMaxStats.json"));
 const heroSkillTable = require(path.join(launchLocation, "Data", "FWTHeroSkills.json"));
+const triviaTable = require(path.join(launchLocation, "Data", "FWTTrivia.json"));
 const flagNames = ["confusion", "charm", "stun", "taunt", "disarm", "immobilize", "decrease movement", "dot", "mp burn", "skill cost", "defense ignore", "defense ignoring damage", "weakening", "buff removal", "hp% damage", "defense decrease", "attack decrease", "hp drain", "mastery decrease", "instant death", "decrease crit rate", "push/pull/switch", "passive attack", "seal", "sleep", "melee", "ranged"];
 
 // Declaring constants/loading databases
@@ -133,7 +134,7 @@ function findSets(grade, tier) {
         }
     }
     return dataString;
-} // End of database functions
+}   // End of database functions
 
 //--------------------------------------------------------------------------------------------
 
@@ -163,7 +164,14 @@ function findEmojiFromGuildByName(guild, emoji_name) {
 function capitalize(inputString) {
     var outputString = inputString.substr(0, 1).toUpperCase() + inputString.substr(1, inputString.length - 1).toLowerCase();
     return outputString;
-}  // End of other functions
+}
+function wait(time) {
+    return new Promise(function (resolve, reject) {
+        setTimeout(function () {
+            resolve();
+        }, time);
+    });
+}   // End of other functions
 
 //--------------------------------------------------------------------------------------------
 
@@ -177,7 +185,6 @@ function clean(text) {
 //--------------------------------------------------------------------------------------------
 
 bot.on("message", message => {
-    if (!message.content.startsWith(config.prefix)) return; // Checks for prefix
     if (message.author.bot) return; // Checks if sender is a bot
 
     const args = message.content.split(" ");
@@ -269,22 +276,27 @@ bot.on("message", message => {
         }
 
     } else if (message.content.startsWith(config.prefix + "sets")) { // Searches database for sets at the requested grade and tier
-        if (args.length <= 2) {
-            message.channel.sendMessage("Invalid request!");
-            return;
-        }
-        var setGrade = args[1].toUpperCase();
-        var setTier = generateTier(args[2]);
-        var setInfo = findSets(setGrade, setTier);
-        message.channel.sendMessage(setInfo);
-
-    } else if (message.content.startsWith(config.prefix + "set")) { // Searches database for set info
-        var setName = args[1];
-        var setInfo = findData(setName, true);
-        if (setInfo != "nosuchdata") {
+        if (args.length >= 3) {
+            var setGrade = args[1].toUpperCase();
+            var setTier = generateTier(args[2]);
+            var setInfo = findSets(setGrade, setTier);
             message.channel.sendMessage(setInfo);
         } else {
-            message.channel.sendMessage("Unknown Set!");
+            message.channel.sendMessage("Invalid request!");
+        }
+
+
+    } else if (message.content.startsWith(config.prefix + "set")) { // Searches database for set info
+        if (args.length >= 2) {
+            var setName = args[1];
+            var setInfo = findData(setName, true);
+            if (setInfo != "nosuchdata") {
+                message.channel.sendMessage(setInfo);
+            } else {
+                message.channel.sendMessage("Unknown Set!");
+            }
+        } else {
+            message.channel.sendMessage("Invalid request!");
         }
 
     } else if (message.content.startsWith(config.prefix + "stats")) { // Searches database for hero stats
@@ -362,6 +374,22 @@ bot.on("message", message => {
 
     } else if (message.content.startsWith(config.prefix + "trivia")) {
         message.channel.sendMessage(`+++ ${message.member.displayName} started a new round of FWT Trivia. Get ready! +++`);
+        var question = getRandomInt(0, triviaTable.length - 1)
+
+        wait(1000).then(() => message.channel.sendMessage())
+            .then(() => {
+                message.channel.awaitMessages(response => response.content.toLowerCase() == triviaTable[question]["Answer"], {
+                    max: 1,
+                    time: 10000,
+                    errors: ['time'],
+                })
+                    .then(() => {
+                        message.channel.sendMessage(`Correct answer "${triviaTable[question]["Answer"]}" by ${message.member.displayName}!`);
+                    })
+                    .catch(() => {
+                        message.channel.sendMessage("Time's up!");
+                    });
+            });
     }
 });
 // End of all commands
