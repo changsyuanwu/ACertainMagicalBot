@@ -2,5 +2,21 @@
     {
         "Question": "What is the name of the final boss in Tower of Dawn?",
         "Answer": "Celestial"
+    },
+    {
+        "Question": "Which hero is the last hero to be acquired in World Conquest?",
+        "Answer": "Klein"
+    },
+    {
+        "Question": "Which hero is acquired by completing Tower of Dawn Hard?",
+        "Answer": "Yekaterina"
+    },
+    {
+        "Question": "Including event heroes, how many Lost Island heroes are there?",
+        "Answer": "12"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"For me, paradise is where you and I can be together!\"",
+        "Answer": "Valkyrie"
     }
 ]
