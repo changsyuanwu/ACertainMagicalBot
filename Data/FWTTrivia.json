@@ -48,7 +48,7 @@
         "Answer": "300"
     },
     {
-        "Question": "Who is/was Belle's husband?",
+        "Question": "Who was Belle's husband?",
         "Answer": "Nirvana"
     },
     {
@@ -372,18 +372,18 @@
         "Question": "What is the name of this hero? http://i.imgur.com/6rXYdji.png",
         "Answer": "Zero"
     },
-    // {
-    //     "Question": "What is the name of this hero? ",
-    //     "Answer": "Aran"
-    // },
-    // {
-    //     "Question": "What is the name of this hero? ",
-    //     "Answer": "Eunwol"
-    // },
-    // {
-    //     "Question": "What is the name of this hero? ",
-    //     "Answer": "Luminous"
-    // },
+    {
+        "Question": "What is the name of this hero? ",
+        "Answer": "Aran"
+    },
+    {
+        "Question": "What is the name of this hero? ",
+        "Answer": "Eunwol"
+    },
+    {
+        "Question": "What is the name of this hero? ",
+        "Answer": "Luminous"
+    },
     {
         "Question": "What is the name of Mas's Cat?",
         "Answer": "Elastin"
