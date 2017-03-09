@@ -1,5 +1,9 @@
 [
     {
+        "Question": "",
+        "Answer": ""
+    },
+    {
         "Question": "What is the name of the final boss in Tower of Dawn?",
         "Answer": "Celestial"
     },
@@ -18,5 +22,13 @@
     {
         "Question": "Which hero is the following quote from? \"For me, paradise is where you and I can be together!\"",
         "Answer": "Valkyrie"
+    },
+    {
+        "Question": "What is the name of this hero? http://i.imgur.com/NxzOUEt.png",
+        "Answer": "Raskreia"
+    },
+    {
+        "Question": "",
+        "Answer": ""
     }
 ]

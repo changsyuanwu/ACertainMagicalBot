@@ -17,6 +17,8 @@ const triviaTable = require(path.join(launchLocation, "Data", "FWTTrivia.json"))
 const flagNames = ["confusion", "charm", "stun", "taunt", "disarm", "immobilize", "decrease movement", "dot", "mp burn", "skill cost", "defense ignore", "defense ignoring damage", "weakening", "buff removal", "hp% damage", "defense decrease", "attack decrease", "hp drain", "mastery decrease", "instant death", "decrease crit rate", "push/pull/switch", "passive attack", "seal", "sleep", "melee", "ranged"];
 
 var triviaChannels = new Set([]);
+var triviaQuestions = new Set([]);
+var triviaCount = 0;
 
 // Declaring constants/loading databases
 
@@ -394,6 +396,16 @@ bot.on("message", message => {
         message.channel.sendMessage(`+++ ${message.member.displayName} started a new round of FWT Trivia. Get ready! +++`);
         triviaChannels.add(message.channel.id);
         var question = getRandomInt(0, triviaTable.length - 1);
+        if (triviaQuestions.has([message.channel.id, question])) {
+            do {
+                question = getRandomInt(1, triviaTable.length - 1);
+            } while (triviaQuestions.has([message.channel.id, question]));
+        } else {
+            triviaQuestions.add([message.channel.id, question]);
+        }
+        if (triviaCount == 3) {
+            triviaQuestions.delete([message.channel.id, question]);
+        }
         var askedQuestion = triviaTable[question]["Question"];
         var correctAnswer = triviaTable[question]["Answer"];
 
@@ -408,10 +420,12 @@ bot.on("message", message => {
                     .then((correctMessage) => {
                         message.channel.sendMessage(`Correct answer "${correctAnswer}" by ${correctMessage.first().member.displayName}!`);
                         triviaChannels.delete(message.channel.id);
+                        triviaCount++;
                     })
                     .catch(() => {
                         message.channel.sendMessage("Time's up!");
                         triviaChannels.delete(message.channel.id);
+                        triviaCount++;
                     });
             });
     }
