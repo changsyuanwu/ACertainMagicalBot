@@ -1,5 +1,7 @@
 const Discord = require("discord.js");
 const path = require("path");
+const sql = require('sqlite');
+sql.open('./score.sqlite');
 const bot = new Discord.Client();
 const launchLocation = __dirname;
 const config = require(path.join(launchLocation, "config.json"));
@@ -185,6 +187,7 @@ function clean(text) {
 //--------------------------------------------------------------------------------------------
 
 bot.on("message", message => {
+    if (!message.content.startsWith(config.prefix)) return; // Ignore messages that don't start with the prefix
     if (message.author.bot) return; // Checks if sender is a bot
 
     const args = message.content.split(" ");
@@ -389,17 +392,17 @@ bot.on("message", message => {
         message.channel.sendMessage(`+++ ${message.member.displayName} started a new round of FWT Trivia. Get ready! +++`);
         var question = getRandomInt(0, triviaTable.length - 1);
         var askedQuestion = triviaTable[question]["Question"];
-        var correctAnswer = triviaTable[question]["Answer"].toLowerCase();
+        var correctAnswer = triviaTable[question]["Answer"];
 
         wait(1000).then(() => message.channel.sendMessage(askedQuestion))
             .then(() => {
-                message.channel.awaitMessages(response => response.content.toLowerCase() == correctAnswer, {
+                message.channel.awaitMessages(response => response.content.toLowerCase() == correctAnswer.toLowerCase(), {
                     max: 1,
                     time: 10000,
                     errors: ['time'],
                 })
                     .then(() => {
-                        message.channel.sendMessage(`Correct answer "${triviaTable[question]["Answer"]}" by ${message.member.displayName}!`);
+                        message.channel.sendMessage(`Correct answer "${correctAnswer}" by ${message.member.displayName}!`);
                     })
                     .catch(() => {
                         message.channel.sendMessage("Time's up!");
@@ -410,7 +413,7 @@ bot.on("message", message => {
 // End of all commands
 //--------------------------------------------------------------------------------------------
 
-var statusCycle = ["https://github.com/TheMasterDodo/ACertainMagicalBot", "Use !help for info", "Spamming !whale", "Running on " + bot.guilds.size + " servers"];
+var statusCycle = ["https://github.com/TheMasterDodo/ACertainMagicalBot", "Use !help for info", "Spamming !whale", `Serving ${bot.guilds.size} servers`, `Serving ${bot.channels.size} channels`, `Serving ${bot.users.size} users`];
 setInterval(function () {
     var random = getRandomInt(0, statusCycle.length - 1);
     bot.user.setGame(statusCycle[random]);

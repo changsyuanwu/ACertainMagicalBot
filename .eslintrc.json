@@ -1,0 +1,25 @@
+{
+    "env": {
+        "browser": true,
+        "commonjs": true,
+        "es6": true,
+        "node": true
+    },
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "sourceType": "module"
+    },
+    "rules": {
+        "no-const-assign": "error",
+        "no-this-before-super": "error",
+        "no-undef": "error",
+        "no-unreachable": "error",
+        "no-unused-vars": "warn",
+        "constructor-super": "error",
+        "valid-typeof": "error",
+        "no-use-before-define": "error",
+        "semi": ["error", "always", { "omitLastInOneLineBlock": true}]
+    }
+}

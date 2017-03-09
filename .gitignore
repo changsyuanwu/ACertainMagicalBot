@@ -5,5 +5,3 @@ fwtcsv/
 config.json
 
 .DS_Store
-
-.eslintrc.json
