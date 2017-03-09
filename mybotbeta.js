@@ -231,9 +231,13 @@ bot.on("message", message => {
 
 
     else if (message.content.startsWith(config.prefix + "choose")) {
-        var msg = message.content.slice(message.content.indexOf(" ") + 1);
-        var choices = msg.split("|");
-        message.channel.sendMessage(choices[getRandomInt(0, choices.length)]);
+        if (args.length >= 2) {
+            var msg = message.content.slice(message.content.indexOf(" ") + 1);
+            var choices = msg.split("|");
+            message.channel.sendMessage(choices[getRandomInt(0, choices.length)]);
+        } else {
+            message.channel.sendMessage("Invalid request!");
+        }
     } // Bot makes a choice
 
 
@@ -277,9 +281,7 @@ bot.on("message", message => {
 
     } else if (message.content.startsWith(config.prefix + "sets")) { // Searches database for sets at the requested grade and tier
         if (args.length >= 3) {
-            var setGrade = args[1].toUpperCase();
-            var setTier = generateTier(args[2]);
-            var setInfo = findSets(setGrade, setTier);
+            var setInfo = findSets(args[1].toUpperCase(), generateTier(args[2]));
             message.channel.sendMessage(setInfo);
         } else {
             message.channel.sendMessage("Invalid request!");
@@ -288,8 +290,7 @@ bot.on("message", message => {
 
     } else if (message.content.startsWith(config.prefix + "set")) { // Searches database for set info
         if (args.length >= 2) {
-            var setName = args[1];
-            var setInfo = findData(setName, true);
+            var setInfo = findData(args[1], true);
             if (setInfo != "nosuchdata") {
                 message.channel.sendMessage(setInfo);
             } else {
@@ -300,71 +301,83 @@ bot.on("message", message => {
         }
 
     } else if (message.content.startsWith(config.prefix + "stats")) { // Searches database for hero stats
-        var heroRequested = args[1];
-        var heroStats = findData(heroRequested, false);
-        if (heroStats != "nosuchdata") {
-            message.channel.sendMessage(heroStats);
+        if (args.length >= 2) {
+            var heroStats = findData(args[1], false);
+            if (heroStats != "nosuchdata") {
+                message.channel.sendMessage(heroStats);
+            } else {
+                message.channel.sendMessage("Unknown Hero!");
+            }
         } else {
-            message.channel.sendMessage("Unknown Hero!");
+            message.channel.sendMessage("Invalid request!");
         }
 
     } else if (message.content.startsWith(config.prefix + "stat")) { // Searches for the requested stat of the requested hero
-        if (args.length <= 2) {
-            message.channel.sendMessage("Invalid request!");
-            return;
-        }
-        var heroRequested = findNameByAlias(args[1]);
-        var statRequested = args[2].toLowerCase();
-        var statData = findStat(heroRequested, statRequested)
-        if (statData != "nosuchdata") {
-            message.channel.sendMessage(heroRequested + "'s " + capitalize(statRequested) + ": " + statData);
+        if (args.length >= 3) {
+            var heroRequested = findNameByAlias(args[1]);
+            var statRequested = args[2].toLowerCase();
+            var statData = findStat(heroRequested, statRequested)
+            if (statData != "nosuchdata") {
+                message.channel.sendMessage(heroRequested + "'s " + capitalize(statRequested) + ": " + statData);
+            } else {
+                message.channel.sendMessage("Unknown Hero!");
+            }
         } else {
-            message.channel.sendMessage("Unknown Hero!");
+            message.channel.sendMessage("Invalid request!");
         }
 
+
     } else if (message.content.startsWith(config.prefix + "effect")) { // Searches database for the requested effect and returns which heroes can cause the effect
-        var effect = args[1];
-        if (effect == "list") {
-            var flags = "";
-            for (var i = 0; i < flagNames.length; i++) {
-                flags = flags + "\n" + capitalize(flagNames[i]);
+        if (args.length >= 2) {
+            var effect = args[1];
+            if (effect == "list") {
+                var flags = "";
+                for (var i = 0; i < flagNames.length; i++) {
+                    flags = flags + "\n" + capitalize(flagNames[i]);
+                }
+                message.channel.sendMessage(flags);
+            } else if (flagNames.includes(effect)) {
+                var effectHeroes = findProperty(effect, "TRUE");
+                message.channel.sendMessage(effectHeroes);
+            } else {
+                message.channel.sendMessage("Unknown effect");
             }
-            message.channel.sendMessage(flags);
-        } else if (flagNames.includes(effect)) {
-            var effectHeroes = findProperty(effect, "TRUE");
-            message.channel.sendMessage(effectHeroes);
         } else {
-            message.channel.sendMessage("Unknown effect");
+            message.channel.sendMessage("Invalid request!");
         }
 
     } else if (message.content.startsWith(config.prefix + "property")) { // Searches database for the requested property and returns which heroes have the property
-        if (args.length <= 2) {
-            message.channel.sendMessage("Invalid property!");
-            return;
+        if (args.length >= 3) {
+            var propertyHeroes = findProperty(args[1].toLowerCase(), capitalize(args[2]));
+            message.channel.sendMessage(propertyHeroes);
+        } else {
+            message.channel.sendMessage("Invalid request!");
         }
-        var property = args[1].toLowerCase();
-        var effect = capitalize(args[2]);
-        var propertyHeroes = findProperty(property, effect);
-        message.channel.sendMessage(propertyHeroes);
 
     } else if (message.content.startsWith(config.prefix + "item")) { // Searches database for the requested item and returns the stats
-        var itemName = args[1].toLowerCase();
-        var itemLevel = args[2];
-        var itemStats = findItem(itemName, itemLevel);
-        message.channel.sendMessage(itemStats);
+        if (args.length >= 2) {
+            var itemName = args[1].toLowerCase();
+            var itemLevel = args[2];
+            var itemStats = findItem(itemName, itemLevel);
+            message.channel.sendMessage(itemStats);
+        } else {
+            message.channel.sendMessage("Invalid request!");
+        }
 
     } else if (message.content.startsWith(config.prefix + "skill")) { // Searches database for the requested skill
-        var heroName = findNameByAlias(args[1]);
-        var skill = args[2];
-        var skillData = findSkill(heroName, skill)
-        if (skillData != "nosuchdata") {
-            message.channel.sendMessage(skillData);
+        if (args.length >= 3) {
+            var skillData = findSkill(findNameByAlias(args[1]), args[2])
+            if (skillData != "nosuchdata") {
+                message.channel.sendMessage(skillData);
+            } else {
+                message.channel.sendMessage("Unknown Hero!");
+            }
         } else {
-            message.channel.sendMessage("Unknown Hero!");
+            message.channel.sendMessage("Invalid request!");
         }
 
     } else if (message.content.startsWith(config.prefix + "rainbow")) { // Searches database for current set rotation
-        if (message.content.indexOf(" ", 0) != -1) {
+        if (args.length >= 2) {
             var WeekRequested = args[1];
         } else {
             WeekRequested = 0;
