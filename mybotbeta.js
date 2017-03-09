@@ -409,7 +409,7 @@ bot.on("message", message => {
         var askedQuestion = triviaTable[question]["Question"];
         var correctAnswer = triviaTable[question]["Answer"];
 
-        wait(1000)
+        wait(1500)
             .then(() => message.channel.sendMessage(askedQuestion))
             .then(() => {
                 message.channel.awaitMessages(response => response.content.toLowerCase() == correctAnswer.toLowerCase(), {
