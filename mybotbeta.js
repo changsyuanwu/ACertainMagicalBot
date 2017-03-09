@@ -297,7 +297,7 @@ bot.on("message", message => {
 
     } else if (message.content.startsWith(config.prefix + "set")) { // Searches database for set info
         if (args.length >= 2) {
-            var setInfo = findData(args[1], true);
+            var setInfo = findData(message.content.slice(message.content.indexOf(" ") + 1), true);
             if (setInfo != "nosuchdata") {
                 message.channel.sendMessage(setInfo);
             } else {
@@ -423,7 +423,7 @@ bot.on("message", message => {
                         triviaCount++;
                     })
                     .catch(() => {
-                        message.channel.sendMessage("Time's up!");
+                        message.channel.sendMessage(`Time's up! The correct answer was "${correctAnswer}".`);
                         triviaChannels.delete(message.channel.id);
                         triviaCount++;
                     });
