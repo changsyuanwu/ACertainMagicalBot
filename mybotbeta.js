@@ -223,6 +223,13 @@ bot.on("message", message => {
     } // Tells the user their ID
 
 
+    else if (message.content.startsWith(config.prefix + "choose")) {
+        var msg = message.content.slice(message.content.indexOf(" ") + 1);
+        var choices = msg.split("|");
+        message.channel.sendMessage(choices[getRandomInt(0, 2)]);
+    } // Bot makes a choice
+
+
 
     else if (message.content.startsWith(config.prefix + "tadaima") && (message.content.includes("maid"))) {
         message.channel.sendMessage("おかえりなさいませ！ご主人様♥, \nDo you want dinner or a shower or \*blushes\* me?");
@@ -354,7 +361,7 @@ bot.on("message", message => {
         message.channel.sendMessage(currentSets);
 
     } else if (message.content.startsWith(config.prefix + "trivia")) {
-        message.channel.sendMessage(`+++ ${message.member.displayName} started a new round of FWT Trivia +++`);
+        message.channel.sendMessage(`+++ ${message.member.displayName} started a new round of FWT Trivia. Get ready! +++`);
     }
 });
 // End of all commands
