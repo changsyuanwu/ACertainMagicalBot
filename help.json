@@ -7,6 +7,8 @@
 
     "**!hug**: Bot gives you a hug (Everyone needs one at some point in their life)",
 
+    "**!choose <choice|choice2|choice3|etc.>: Bot makes a choice based on provided choices",
+
     "**!pull**: Bot does a 50/50 between pull and don't pull",
 
     "**!whale <number>**: Simulates a 10x pull the number of times specified. Assumes <1> if no number is entered. Max number is 7",
