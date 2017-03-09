@@ -398,11 +398,11 @@ bot.on("message", message => {
             .then(() => {
                 message.channel.awaitMessages(response => response.content.toLowerCase() == correctAnswer.toLowerCase(), {
                     max: 1,
-                    time: 10000,
+                    time: 15000,
                     errors: ['time'],
                 })
-                    .then(() => {
-                        message.channel.sendMessage(`Correct answer "${correctAnswer}" by ${message.member.displayName}!`);
+                    .then((correctMessage) => {
+                        message.channel.sendMessage(`Correct answer "${correctAnswer}" by ${correctMessage.first().member.displayName}!`);
                     })
                     .catch(() => {
                         message.channel.sendMessage("Time's up!");
