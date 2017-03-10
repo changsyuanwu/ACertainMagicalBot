@@ -143,12 +143,13 @@ function findSets(grade, tier) {
 //--------------------------------------------------------------------------------------------
 
 function getPoints(message) {
-    sql.get(`SELECT * FROM scores WHERE userID ='${message.author.id}'`).then(row => {
-        if (!row) 
-            return 0;
-        else 
-            return row.points;
-    });
+    sql.get(`SELECT * FROM scores WHERE userID ='${message.author.id}'`)
+        .then(row => {
+            if (!row)
+                return 0;
+            else
+                return row.points;
+        });
 }   // End of trivia score functions
 
 //--------------------------------------------------------------------------------------------
