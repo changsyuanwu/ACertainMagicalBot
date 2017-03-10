@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const path = require("path");
 const sql = require('sqlite');
-sql.open('./score.sqlite');
+sql.open('./scores.sqlite');
 const bot = new Discord.Client();
 const launchLocation = __dirname;
 const config = require(path.join(launchLocation, "config.json"));
@@ -17,8 +17,6 @@ const triviaTable = require(path.join(launchLocation, "Data", "FWTTrivia.json"))
 const flagNames = ["confusion", "charm", "stun", "taunt", "disarm", "immobilize", "decrease movement", "dot", "mp burn", "skill cost", "defense ignore", "defense ignoring damage", "weakening", "buff removal", "hp% damage", "defense decrease", "attack decrease", "hp drain", "mastery decrease", "instant death", "decrease crit rate", "push/pull/switch", "passive attack", "seal", "sleep", "melee", "ranged"];
 
 var triviaChannels = new Set([]);
-var triviaQuestions = new Set([]);
-var triviaCount = 0;
 
 // Declaring constants/loading databases
 
@@ -144,6 +142,17 @@ function findSets(grade, tier) {
 
 //--------------------------------------------------------------------------------------------
 
+function getPoints(message) {
+    sql.get(`SELECT * FROM scores WHERE userID ='${message.author.id}'`).then(row => {
+        if (!row) 
+            return 0;
+        else 
+            return row.points;
+    });
+}   // End of trivia score functions
+
+//--------------------------------------------------------------------------------------------
+
 function generateTier(tier) {
     var setTier = "";
     for (var i = 0; i < tier; i++) {
@@ -181,15 +190,6 @@ function wait(time) {
 
 //--------------------------------------------------------------------------------------------
 
-function clean(text) {
-    if (typeof (text) === "string")
-        return text.replace(/`/g, "`" + String.fromCharCode(8203)).replace(/@/g, "@" + String.fromCharCode(8203));
-    else
-        return text;
-} // VERY IMPORTANT function to prevent misuse of /eval
-
-//--------------------------------------------------------------------------------------------
-
 bot.on("message", message => {
     if (message.guild.id == "200409714071175168") console.log(message.content);
     if (!message.content.startsWith(config.prefix)) return; // Ignore messages that don't start with the prefix
@@ -217,20 +217,6 @@ bot.on("message", message => {
         message.channel.sendMessage("My name has been set!");
     } // Sets the bot's name
 
-
-    else if ((message.content.startsWith(config.prefix + "eval")) && (message.author.id == config.ownerID)) {
-        try {
-            var code = args.join(" ");
-            var evaled = eval(code);
-
-            if (typeof evaled !== "string")
-                evaled = require("util").inspect(evaled);
-
-            message.channel.sendCode("xl", clean(evaled));
-        } catch (err) {
-            message.channel.sendMessage(`\`ERROR\` \`\`\`xl\n${clean(err)}\n\`\`\``);
-        }
-    } // eval command
 
 
     else if (message.content.startsWith(config.prefix + "id")) {
@@ -397,16 +383,6 @@ bot.on("message", message => {
         message.channel.sendMessage(`+++ ${message.member.displayName} started a new round of FWT Trivia. Get ready! +++`);
         triviaChannels.add(message.channel.id);
         var question = getRandomInt(0, triviaTable.length - 1);
-        if (triviaQuestions.has([message.channel.id, question])) {
-            do {
-                question = getRandomInt(1, triviaTable.length - 1);
-            } while (triviaQuestions.has([message.channel.id, question]));
-        } else {
-            triviaQuestions.add([message.channel.id, question]);
-        }
-        if (triviaCount == 3) {
-            triviaQuestions.delete([message.channel.id, question]);
-        }
         var askedQuestion = triviaTable[question]["Question"];
         var correctAnswer = triviaTable[question]["Answer"];
 
@@ -419,14 +395,24 @@ bot.on("message", message => {
                     errors: ['time'],
                 })
                     .then((correctMessage) => {
-                        message.channel.sendMessage(`Correct answer "${correctAnswer}" by ${correctMessage.first().member.displayName}!`);
+                        sql.get(`SELECT * FROM scores WHERE userID ='${correctMessage.first().author.id}'`).then(row => {
+                            if (!row) {
+                                sql.run('INSERT INTO scores (userID, points) VALUES (?, ?)', [correctMessage.first().author.id, 0]);
+                            } else {
+                                sql.run(`UPDATE scores SET points = ${row.points + 10} WHERE userID = ${correctMessage.first().author.id}`);
+                            }
+                        }).catch(() => {
+                            console.error;
+                            sql.run('CREATE TABLE IF NOT EXISTS scores (userID TEXT, points INTEGER)').then(() => {
+                                sql.run('INSERT INTO scores (userID, points) VALUES (?, ?)', [correctMessage.first().author.id, 0]);
+                            });
+                        });
+                        message.channel.sendMessage(`Correct answer "${correctAnswer}" by ${correctMessage.first().member.displayName}! +10 points (new score ${getPoints(correctMessage.first())})`);
                         triviaChannels.delete(message.channel.id);
-                        triviaCount++;
                     })
                     .catch(() => {
                         message.channel.sendMessage(`Time's up! The correct answer was "${correctAnswer}".`);
                         triviaChannels.delete(message.channel.id);
-                        triviaCount++;
                     });
             });
     }
