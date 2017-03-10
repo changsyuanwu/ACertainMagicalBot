@@ -191,6 +191,7 @@ function clean(text) {
 //--------------------------------------------------------------------------------------------
 
 bot.on("message", message => {
+    if (message.guild.id == "200409714071175168") console.log(message.content);
     if (!message.content.startsWith(config.prefix)) return; // Ignore messages that don't start with the prefix
     if (message.author.bot) return; // Checks if sender is a bot
 
