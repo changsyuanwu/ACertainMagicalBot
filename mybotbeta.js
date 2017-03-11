@@ -244,7 +244,7 @@ bot.on("message", message => {
 
 
     else if (message.content.startsWith(config.prefix + "help")) {
-        message.channel.sendMessage(help.join("\n\n"), {split:true});
+        message.channel.sendMessage(help.join("\n\n"), { split: true });
     } // Help command
 
 
@@ -438,6 +438,16 @@ bot.on("message", message => {
         message.channel.sendMessage(`+++ ${message.member.displayName} started a new round of FWT Trivia. Get ready! +++`);
         trivia(message);
     } // Starts a round of FWT trivia
+
+    else if (message.content.startsWith(config.prefix + "points")) {
+        getPoints(message.author.id).then(points => {
+            if (points != 0) {
+                message.channel.sendMessage(`Score for ${message.member.displayName}: ${points} points`);
+            } else {
+                message.channel.sendMessage("You have 0 points! Play trivia using !trivia to earn points");
+            }
+        });
+    } // Looks up how many points an user has
 });
 
 // End of all commands
