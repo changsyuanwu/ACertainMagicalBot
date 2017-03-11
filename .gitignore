@@ -5,3 +5,5 @@ fwtcsv/
 config.json
 
 .DS_Store
+
+scores.sqlite
