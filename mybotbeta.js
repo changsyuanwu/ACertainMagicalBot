@@ -169,14 +169,14 @@ function trivia(message) {
                     var correctUserID = correctMessage.first().author.id;
                     sql.get(`SELECT * FROM scores WHERE userID ='${correctUserID}'`).then(row => {
                         if (!row) {
-                            sql.run('INSERT INTO scores (userID, points) VALUES (?, ?)', [correctUserID, 0]);
+                            sql.run('INSERT INTO scores (userID, points) VALUES (?, ?)', [correctUserID, 10]);
                         } else {
                             sql.run(`UPDATE scores SET points = ${row.points + 10} WHERE userID = ${correctUserID}`);
                         }
                     }).catch(() => {
                         console.error;
                         sql.run('CREATE TABLE IF NOT EXISTS scores (userID TEXT, points INTEGER)').then(() => {
-                            sql.run('INSERT INTO scores (userID, points) VALUES (?, ?)', [correctUserID, 0]);
+                            sql.run('INSERT INTO scores (userID, points) VALUES (?, ?)', [correctUserID, 10]);
                         });
                     });
                     getPoints(correctUserID).then(points => {
