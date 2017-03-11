@@ -304,7 +304,7 @@ bot.on("message", message => {
     else if (message.content.startsWith(config.prefix + "whale")) {
         var pulls = "";
         var totalPull = "";
-        if (args[1] > 100) {
+        if ((args[1] > 100) || ((args[1] > 10) && (message.guild.id == "164867600457662464"))) {
             message.channel.sendMessage("```OVERFLOW_ERROR```");
             return;
         }
@@ -435,6 +435,10 @@ bot.on("message", message => {
     } // Searches for current set rotation
 
     else if ((message.content.startsWith(config.prefix + "trivia")) && (!triviaChannels.has(message.channel.id))) {
+        if (message.channel.type == "dm") {
+            message.channel.sendMessage("Please use this command in a server!");
+            return;
+        }
         message.channel.sendMessage(`+++ ${message.member.displayName} started a new round of FWT Trivia. Get ready! +++`);
         trivia(message);
     } // Starts a round of FWT trivia
