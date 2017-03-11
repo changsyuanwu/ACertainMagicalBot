@@ -304,6 +304,10 @@ bot.on("message", message => {
     else if (message.content.startsWith(config.prefix + "whale")) {
         var pulls = "";
         var totalPull = "";
+        if (args[1] > 100) {
+            message.channel.sendMessage("```OVERFLOW_ERROR```");
+            return;
+        }
         if (args.length > 1) {
             for (var i = 0; i < args[1]; i++) {
                 pulls = coocooPull10().map((emoji_name) => findEmojiFromGuildByName(message.guild, emoji_name));
