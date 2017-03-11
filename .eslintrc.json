@@ -19,7 +19,7 @@
         "no-unused-vars": "warn",
         "constructor-super": "error",
         "valid-typeof": "error",
-        "no-use-before-define": "error",
+        "no-use-before-define": ["error", { "functions": false}],
         "semi": ["error", "always", { "omitLastInOneLineBlock": true}]
     }
 }
