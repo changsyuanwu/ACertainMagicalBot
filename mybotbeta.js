@@ -142,15 +142,56 @@ function findSets(grade, tier) {
 
 //--------------------------------------------------------------------------------------------
 
-function getPoints(message) {
-    sql.get(`SELECT * FROM scores WHERE userID ='${message.author.id}'`)
+function getPoints(ID) {
+    return sql.get(`SELECT * FROM scores WHERE userID ='${ID}'`)
         .then(row => {
             if (!row)
                 return 0;
             else
                 return row.points;
         });
-}   // End of trivia score functions
+}
+function trivia(message) {
+    triviaChannels.add(message.channel.id);
+    var question = getRandomInt(1, triviaTable.length - 1);
+    var askedQuestion = triviaTable[question]["Question"];
+    var correctAnswer = triviaTable[question]["Answer"];
+
+    wait(1500)
+        .then(() => message.channel.sendMessage(askedQuestion))
+        .then(() => {
+            message.channel.awaitMessages(response => response.content.toLowerCase() == correctAnswer.toLowerCase(), {
+                max: 1,
+                time: 15000,
+                errors: ['time'],
+            })
+                .then((correctMessage) => {
+                    var correctUserID = correctMessage.first().author.id;
+                    sql.get(`SELECT * FROM scores WHERE userID ='${correctUserID}'`).then(row => {
+                        if (!row) {
+                            sql.run('INSERT INTO scores (userID, points) VALUES (?, ?)', [correctUserID, 0]);
+                        } else {
+                            sql.run(`UPDATE scores SET points = ${row.points + 10} WHERE userID = ${correctUserID}`);
+                        }
+                    }).catch(() => {
+                        console.error;
+                        sql.run('CREATE TABLE IF NOT EXISTS scores (userID TEXT, points INTEGER)').then(() => {
+                            sql.run('INSERT INTO scores (userID, points) VALUES (?, ?)', [correctUserID, 0]);
+                        });
+                    });
+                    getPoints(correctUserID).then(points => {
+                        message.channel.sendMessage(`Correct answer "${correctAnswer}" by ${correctMessage.first().member.displayName}! +10 points (new score: ${points})`);
+                    });
+                    triviaChannels.delete(message.channel.id);
+                })
+                .catch(() => {
+                    message.channel.sendMessage(`Time's up! The correct answer was "${correctAnswer}".`);
+                    triviaChannels.delete(message.channel.id);
+                });
+        });
+}
+
+// End of trivia functions
 
 //--------------------------------------------------------------------------------------------
 
@@ -192,7 +233,6 @@ function wait(time) {
 //--------------------------------------------------------------------------------------------
 
 bot.on("message", message => {
-    if (message.guild.id == "200409714071175168") console.log(message.content);
     if (!message.content.startsWith(config.prefix)) return; // Ignore messages that don't start with the prefix
     if (message.author.bot) return; // Checks if sender is a bot
 
@@ -204,7 +244,7 @@ bot.on("message", message => {
 
 
     else if (message.content.startsWith(config.prefix + "help")) {
-        message.channel.sendMessage(help.join("\n\n"));
+        message.channel.sendMessage(help.join("\n\n"), {split:true});
     } // Help command
 
 
@@ -257,10 +297,11 @@ bot.on("message", message => {
 
 
 
-    else if (message.content.startsWith(config.prefix + "pull")) { // Bot does a 50/50 pull or no
+    else if (message.content.startsWith(config.prefix + "pull")) {
         message.channel.sendFile(PullOrNot());
+    } // Bot does a 50/50 pull or no
 
-    } else if (message.content.startsWith(config.prefix + "whale")) { // 10x pull
+    else if (message.content.startsWith(config.prefix + "whale")) {
         var pulls = "";
         var totalPull = "";
         if (args.length > 1) {
@@ -268,22 +309,23 @@ bot.on("message", message => {
                 pulls = coocooPull10().map((emoji_name) => findEmojiFromGuildByName(message.guild, emoji_name));
                 totalPull = pulls.join(" ") + "\n" + totalPull;
             }
-            message.channel.sendMessage(totalPull);
+            message.channel.sendMessage(totalPull, { split: true });
         } else {
             pulls = coocooPull10().map((emoji_name) => findEmojiFromGuildByName(message.guild, emoji_name));
             message.channel.sendMessage(pulls.join(" "));
         }
+    } // 10x pull
 
-    } else if (message.content.startsWith(config.prefix + "sets")) { // Searches database for sets at the requested grade and tier
+    else if (message.content.startsWith(config.prefix + "sets")) {
         if (args.length >= 3) {
             var setInfo = findSets(args[1].toUpperCase(), generateTier(args[2]));
             message.channel.sendMessage(setInfo);
         } else {
             message.channel.sendMessage("Invalid request!");
         }
+    } // Searches for sets at the requested grade and tier
 
-
-    } else if (message.content.startsWith(config.prefix + "set")) { // Searches database for set info
+    else if (message.content.startsWith(config.prefix + "set")) {
         if (args.length >= 2) {
             var setInfo = findData(message.content.slice(message.content.indexOf(" ") + 1), true);
             if (setInfo != "nosuchdata") {
@@ -294,8 +336,9 @@ bot.on("message", message => {
         } else {
             message.channel.sendMessage("Invalid request!");
         }
+    } // Searches for set info
 
-    } else if (message.content.startsWith(config.prefix + "stats")) { // Searches database for hero stats
+    else if (message.content.startsWith(config.prefix + "stats")) {
         if (args.length >= 2) {
             var heroStats = findData(args[1], false);
             if (heroStats != "nosuchdata") {
@@ -306,8 +349,9 @@ bot.on("message", message => {
         } else {
             message.channel.sendMessage("Invalid request!");
         }
+    } // Searches for hero stats
 
-    } else if (message.content.startsWith(config.prefix + "stat")) { // Searches for the requested stat of the requested hero
+    else if (message.content.startsWith(config.prefix + "stat")) {
         if (args.length >= 3) {
             var heroRequested = findNameByAlias(args[1]);
             var statRequested = args[2].toLowerCase();
@@ -320,9 +364,9 @@ bot.on("message", message => {
         } else {
             message.channel.sendMessage("Invalid request!");
         }
+    } // Searches for the requested stat of the requested hero
 
-
-    } else if (message.content.startsWith(config.prefix + "effect")) { // Searches database for the requested effect and returns which heroes can cause the effect
+    else if (message.content.startsWith(config.prefix + "effect")) {
         if (args.length >= 2) {
             var effect = args[1];
             if (effect == "list") {
@@ -340,16 +384,18 @@ bot.on("message", message => {
         } else {
             message.channel.sendMessage("Invalid request!");
         }
+    } // Searches for which heroes can cause the requested effect
 
-    } else if (message.content.startsWith(config.prefix + "property")) { // Searches database for the requested property and returns which heroes have the property
+    else if (message.content.startsWith(config.prefix + "property")) {
         if (args.length >= 3) {
             var propertyHeroes = findProperty(args[1].toLowerCase(), capitalize(args[2]));
             message.channel.sendMessage(propertyHeroes);
         } else {
             message.channel.sendMessage("Invalid request!");
         }
+    } // Searches for which heroes have the requested property
 
-    } else if (message.content.startsWith(config.prefix + "item")) { // Searches database for the requested item and returns the stats
+    else if (message.content.startsWith(config.prefix + "item")) {
         if (args.length >= 2) {
             var itemName = args[1].toLowerCase();
             var itemLevel = args[2];
@@ -358,8 +404,9 @@ bot.on("message", message => {
         } else {
             message.channel.sendMessage("Invalid request!");
         }
+    } // Searches for the requested item's max stats
 
-    } else if (message.content.startsWith(config.prefix + "skill")) { // Searches database for the requested skill
+    else if (message.content.startsWith(config.prefix + "skill")) {
         if (args.length >= 3) {
             var skillData = findSkill(findNameByAlias(args[1]), args[2]);
             if (skillData != "nosuchdata") {
@@ -370,8 +417,9 @@ bot.on("message", message => {
         } else {
             message.channel.sendMessage("Invalid request!");
         }
+    } // Searches for the requested hero skill
 
-    } else if (message.content.startsWith(config.prefix + "rainbow")) { // Searches database for current set rotation
+    else if (message.content.startsWith(config.prefix + "rainbow")) {
         if (args.length >= 2) {
             var WeekRequested = args[1];
         } else {
@@ -380,44 +428,14 @@ bot.on("message", message => {
         const currentSets = SetsOfTheWeek(WeekRequested);
         message.channel.sendMessage(currentSets);
 
-    } else if ((message.content.startsWith(config.prefix + "trivia")) && (!triviaChannels.has(message.channel.id))) {
-        message.channel.sendMessage(`+++ ${message.member.displayName} started a new round of FWT Trivia. Get ready! +++`);
-        triviaChannels.add(message.channel.id);
-        var question = getRandomInt(0, triviaTable.length - 1);
-        var askedQuestion = triviaTable[question]["Question"];
-        var correctAnswer = triviaTable[question]["Answer"];
+    } // Searches for current set rotation
 
-        wait(1500)
-            .then(() => message.channel.sendMessage(askedQuestion))
-            .then(() => {
-                message.channel.awaitMessages(response => response.content.toLowerCase() == correctAnswer.toLowerCase(), {
-                    max: 1,
-                    time: 15000,
-                    errors: ['time'],
-                })
-                    .then((correctMessage) => {
-                        sql.get(`SELECT * FROM scores WHERE userID ='${correctMessage.first().author.id}'`).then(row => {
-                            if (!row) {
-                                sql.run('INSERT INTO scores (userID, points) VALUES (?, ?)', [correctMessage.first().author.id, 0]);
-                            } else {
-                                sql.run(`UPDATE scores SET points = ${row.points + 10} WHERE userID = ${correctMessage.first().author.id}`);
-                            }
-                        }).catch(() => {
-                            console.error;
-                            sql.run('CREATE TABLE IF NOT EXISTS scores (userID TEXT, points INTEGER)').then(() => {
-                                sql.run('INSERT INTO scores (userID, points) VALUES (?, ?)', [correctMessage.first().author.id, 0]);
-                            });
-                        });
-                        message.channel.sendMessage(`Correct answer "${correctAnswer}" by ${correctMessage.first().member.displayName}! +10 points (new score ${getPoints(correctMessage.first())})`);
-                        triviaChannels.delete(message.channel.id);
-                    })
-                    .catch(() => {
-                        message.channel.sendMessage(`Time's up! The correct answer was "${correctAnswer}".`);
-                        triviaChannels.delete(message.channel.id);
-                    });
-            });
-    }
+    else if ((message.content.startsWith(config.prefix + "trivia")) && (!triviaChannels.has(message.channel.id))) {
+        message.channel.sendMessage(`+++ ${message.member.displayName} started a new round of FWT Trivia. Get ready! +++`);
+        trivia(message);
+    } // Starts a round of FWT trivia
 });
+
 // End of all commands
 //--------------------------------------------------------------------------------------------
 

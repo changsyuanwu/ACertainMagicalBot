@@ -10,7 +10,7 @@
     "**!choose <choice|choice2|choice3|etc.>**: Bot makes a choice based on provided choices",
 
     "**!trivia**: Starts a fun round of FWT trivia",
-
+    
     "**!pull**: Bot does a 50/50 between pull and don't pull",
 
     "**!whale <number>**: Simulates a 10x pull the number of times specified. Assumes <1> if no number is entered. Max number is 7",
