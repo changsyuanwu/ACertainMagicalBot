@@ -4,12 +4,68 @@
         "Answer": ""
     },
     {
+        "Question": "What is the cost of enhancing a 5* item from +9 to +10? (One try)",
+        "Answer": "25520"
+    },
+    {
+        "Question": "How much Attack does Klein's Secret Notebook set's 2nd effect add?",
+        "Answer": "5992"
+    },
+    {
+        "Question": "Which set gives equip bonuses of +900 Hit Rate and +110 Crit Rate?",
+        "Answer": "Sione's Ominous Prophecy"
+    },
+    {
+        "Question": "How much mastery does a +12 platinum necklace give?",
+        "Answer": "2569"
+    },
+    {
+        "Question": "What is the highest %Attack mod you can get at 5*?",
+        "Answer": "10%"
+    },
+    {
+        "Question": "What is the cost of enhancing a 4* item from +9 to +10? (One try)",
+        "Answer": "20300"
+    },
+    {
+        "Question": "Which 4* set gives a Lava terrain bonus?",
+        "Answer": "Dragon Slayer"
+    },
+    {
+        "Question": "How much Defense does a 2* platinum necklace give?",
+        "Answer": "225"
+    },
+    {
+        "Question": "How much movement does Ghost Step give?",
+        "Answer": "4"
+    },
+    {
+        "Question": "Which 1* set gives +1000 Defense and +820 final skill power?",
+        "Answer": "Battlefield Healer"
+    },
+    {
+        "Question": "Which 1* set gives a Glacier terrain bonus?",
+        "Answer": "Lista Blizzard"
+    },
+    {
+        "Question": "Which 2* set increases Crit Rate by 900 and Attack by 12%?",
+        "Answer": "Time for Your Shot!"
+    },
+    {
+        "Question": "Which 2* set increases Defense by 1500 and reduces incoming Critical Damage by 15%?",
+        "Answer": "Super Ranger: Green"
+    },
+    {
         "Question": "What is the name of the final boss in Tower of Dawn?",
         "Answer": "Celestial"
     },
     {
         "Question": "Which hero is the last hero to be acquired in World Conquest?",
         "Answer": "Klein"
+    },
+    {
+        "Question": "What is the name of Mas's Cat?",
+        "Answer": "Elastin"
     },
     {
         "Question": "Which hero is acquired by completing Tower of Dawn Hard?",
@@ -387,9 +443,5 @@
     {
         "Question": "What is the name of this hero? ",
         "Answer": "Luminous"
-    },
-    {
-        "Question": "What is the name of Mas's Cat?",
-        "Answer": "Elastin"
     }
 ]
