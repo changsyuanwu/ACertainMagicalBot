@@ -17,6 +17,7 @@ const triviaTable = require(path.join(launchLocation, "Data", "FWTTrivia.json"))
 const flagNames = ["confusion", "charm", "stun", "taunt", "disarm", "immobilize", "decrease movement", "dot", "mp burn", "skill cost", "defense ignore", "defense ignoring damage", "weakening", "buff removal", "hp% damage", "defense decrease", "attack decrease", "hp drain", "mastery decrease", "instant death", "decrease crit rate", "push/pull/switch", "passive attack", "seal", "sleep", "melee", "ranged"];
 
 var triviaChannels = new Set([]);
+var triviaLastQuestion = 0;
 
 // Declaring constants/loading databases
 
@@ -153,7 +154,10 @@ function getPoints(ID) {
 }
 function trivia(message) {
     triviaChannels.add(message.channel.id);
-    var question = getRandomInt(1, triviaTable.length - 1);
+    do {
+        var question = getRandomInt(1, triviaTable.length - 1);
+    } while (question == triviaLastQuestion);
+    triviaLastQuestion = question;
     var askedQuestion = triviaTable[question]["Question"];
     var correctAnswer = triviaTable[question]["Answer"];
 
