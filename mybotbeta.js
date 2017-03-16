@@ -139,7 +139,9 @@ function findSets(grade, tier) {
         }
     }
     return dataString;
-}   // End of database functions
+}   
+
+// End of database functions
 
 //--------------------------------------------------------------------------------------------
 
@@ -151,7 +153,8 @@ function getPoints(ID) {
             else
                 return row.points;
         });
-}
+} // Finds the user's score
+
 function trivia(message) {
     triviaChannels.add(message.channel.id);
     do {
@@ -193,7 +196,7 @@ function trivia(message) {
                     triviaChannels.delete(message.channel.id);
                 });
         });
-}
+} // Main trivia function
 
 // End of trivia functions
 
@@ -205,40 +208,50 @@ function generateTier(tier) {
         setTier = setTier + "★";
     }
     return setTier;
-}
+} // Makes the tiers for set equipment
+
 function getRandomInt(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min)) + min;
-}
+} // Generates a random integer between the specified values
+
 function PullOrNot() {
     var number = Math.random();
     var YesNo;
     if (number <= 0.5) YesNo = path.join(launchLocation, "Images", "Pull.png");
     else YesNo = path.join(launchLocation, "Images", "Don't Pull.png");
     return YesNo;
-}
+} // Does the 50/50 pull or not
+
 function findEmojiFromGuildByName(guild, emoji_name) {
     const emoji = guild.emojis.find((emoji) => emoji.name === emoji_name);
     return emoji ? emoji.toString() : emoji_name;
-}
+} // Finds the emoji id in a guild using the emoji name
+
 function capitalize(inputString) {
     var outputString = inputString.substr(0, 1).toUpperCase() + inputString.substr(1, inputString.length - 1).toLowerCase();
     return outputString;
-}
+} // Capitalizes the first letter in a string
+
 function wait(time) {
     return new Promise(function (resolve) {
         setTimeout(function () {
             resolve();
         }, time);
     });
-}   // End of other functions
+} // Waits for a set amount of time
+
+// End of other functions
 
 //--------------------------------------------------------------------------------------------
 
 bot.on("message", message => {
-    if (!message.content.startsWith(config.prefix)) return; // Ignore messages that don't start with the prefix
-    if (message.author.bot) return; // Checks if sender is a bot
+    if (!message.content.startsWith(config.prefix)) return; 
+    // Ignore messages that don't start with the prefix
+
+    if (message.author.bot) return; 
+    // Checks if sender is a bot
 
     const args = message.content.split(" ");
 
@@ -269,8 +282,12 @@ bot.on("message", message => {
 
     else if (message.content.startsWith(config.prefix + "calc")) {
         var input = message.content.replace(/[^-()\d/*+.]/g, '');
-        var result = eval(input);
-        message.channel.sendMessage(result);
+        if (input != "") {
+            var result = eval(input);
+            message.channel.sendMessage(result);
+        } else {
+            message.channel.sendMessage("Invalid request!");
+        }
     } // Calculator function
 
 
