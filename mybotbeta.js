@@ -258,7 +258,11 @@ bot.on("message", message => {
 
 
     else if (message.content.startsWith(config.prefix + "nameset") && (message.author.id == config.ownerID)) {
-        message.guild.member(bot.user).setNickname("A Certain Magical Bot");
+        if (args.length == 1) {
+            message.guild.member(bot.user).setNickname("A Certain Magical Bot");
+        } else {
+            message.guild.member(bot.user).setNickname(message.content.slice(message.content.indexOf(" ")));
+        }
         message.channel.sendMessage("My name has been set!");
     } // Sets the bot's name
 
