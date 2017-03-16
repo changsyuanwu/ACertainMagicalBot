@@ -264,8 +264,14 @@ bot.on("message", message => {
             message.guild.member(bot.user).setNickname(message.content.slice(message.content.indexOf(" ")));
         }
         message.channel.sendMessage("My name has been set!");
-    } // Sets the bot's name
+    } // Sets the bot's name (Only owner can do it)
 
+
+    else if (message.content.startsWith(config.prefix + "calc")) {
+        var input = message.content.replace(/[^-()\d/*+.]/g, '');
+        var result = eval(input);
+        message.channel.sendMessage(result);
+    } // Calculator function
 
 
     else if (message.content.startsWith(config.prefix + "id")) {
