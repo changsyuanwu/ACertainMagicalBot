@@ -439,8 +439,11 @@ bot.on("message", message => {
         }
         const currentSets = SetsOfTheWeek(WeekRequested);
         message.channel.sendMessage(currentSets);
-
     } // Searches for current set rotation
+
+    else if (message.content.startsWith(config.prefix + "triviaquestions")) {
+        message.channel.sendMessage(`There are currently ${triviaTable.length - 1} trivia questions available`);
+    } // Finds number of trivia questions
 
     else if ((message.content.startsWith(config.prefix + "trivia")) && (!triviaChannels.has(message.channel.id))) {
         if (message.channel.type == "dm") {
