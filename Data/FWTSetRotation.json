@@ -383,7 +383,7 @@
     "1S": "Savage Token",
     "1SS": "Slime King's Dignity",
     "2A": "Serial Killer",
-    "2S": "Coocoo Ranger: Red",
+    "2S": "Coocoo Ranger: Red!",
     "2SS": "Dasomier Battle Suit",
     "3A": "Tiger Claw Tribe Guardian",
     "3S": "Wilderness Desperado",
@@ -502,5 +502,23 @@
     "5A": "Hellish Flame's Guide",
     "5S": "Sun Flash",
     "5SS": "Klein's Secret Notebook"
+  },
+  {
+    "Week": "3rd week of March",
+    "1A": "Ketarh Apprentice",
+    "1S": "Cold-Hearted Sniper",
+    "1SS": "Rebel Army Supply",
+    "2A": "Material Collector",
+    "2S": "Coocoo Ranger: Red!",
+    "2SS": "Taunting Busybody",
+    "3A": "Vulcan Essence",
+    "3S": "Super Ranger: Blue",
+    "3SS": "I Perform the Surgery!",
+    "4A": "Ninja Attack",
+    "4S": "Dragon Slayer",
+    "4SS": "Pathfinder",
+    "5A": "Friday the 13th",
+    "5S": "Shadow Ruler",
+    "5SS": "Eldrika's Trinity"
   }
 ]
