@@ -54,12 +54,15 @@ function coocooPull(isLast) {
     else if (junkrate + platrate <= number && number < junkrate + platrate + arate) return "A_set";
     else if (junkrate + platrate + arate <= number && number < junkrate + platrate + arate + srate) return "S_set";
     else return "SS_set";
-}
+} // Processes a single coocoo pull
+
 function coocooPull10() {
     var pull10 = new Array(10);
     pull10.fill(null);
     return pull10.map((element, index, array) => coocooPull(index === array.length - 1));
-}   // End of CooCoo Pulling functions
+} // Pulls 10 times and returns results in an array
+
+// End of CooCoo Pulling functions
 
 //--------------------------------------------------------------------------------------------
 
@@ -139,7 +142,7 @@ function findSets(grade, tier) {
         }
     }
     return dataString;
-}   
+}
 
 // End of database functions
 
@@ -247,10 +250,10 @@ function wait(time) {
 //--------------------------------------------------------------------------------------------
 
 bot.on("message", message => {
-    if (!message.content.startsWith(config.prefix)) return; 
+    if (!message.content.startsWith(config.prefix)) return;
     // Ignore messages that don't start with the prefix
 
-    if (message.author.bot) return; 
+    if (message.author.bot) return;
     // Checks if sender is a bot
 
     const args = message.content.split(" ");
@@ -486,6 +489,8 @@ bot.on("message", message => {
             }
         });
     } // Looks up how many points an user has
+
+    
 });
 
 // End of all commands
