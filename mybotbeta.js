@@ -190,7 +190,7 @@ function trivia(message) {
                         });
                     });
                     getPoints(correctUserID).then(points => {
-                        message.channel.sendMessage(`Correct answer "${correctAnswer}" by ${correctMessage.first().member.displayName}! +10 points (new score: ${points})`);
+                        message.channel.sendMessage(`Correct answer "${correctAnswer}" by ${correctMessage.first().member.displayName}! +10 points (Total score: ${points + 10})`);
                     });
                     triviaChannels.delete(message.channel.id);
                 })
@@ -490,7 +490,7 @@ bot.on("message", message => {
         });
     } // Looks up how many points an user has
 
-    
+
 });
 
 // End of all commands
