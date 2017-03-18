@@ -266,6 +266,7 @@ bot.on("message", message => {
     // Checks if sender is a bot
 
     const args = message.content.split(" ");
+    const cont = message.content.slice(message.content.indexOf(" ") + 1);
 
     if (message.content.startsWith(config.prefix + "ping")) {
         message.channel.sendMessage("pong! [Response time: " + bot.ping + "ms]");
@@ -374,7 +375,7 @@ bot.on("message", message => {
 
     else if (message.content.startsWith(config.prefix + "set")) {
         if (args.length >= 2) {
-            var setInfo = findListedData(message.content.slice(message.content.indexOf(" ") + 1), "set");
+            var setInfo = findListedData(cont, "set");
             if (setInfo != "nosuchdata") {
                 message.channel.sendMessage(setInfo);
             } else {
@@ -415,7 +416,7 @@ bot.on("message", message => {
 
     else if (message.content.startsWith(config.prefix + "effect")) {
         if (args.length >= 2) {
-            var effect = args[1];
+            var effect = cont;
             if (effect == "list") {
                 var flags = "";
                 for (var i = 0; i < flagNames.length; i++) {
