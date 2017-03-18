@@ -67,7 +67,7 @@ function coocooPull10() {
 //--------------------------------------------------------------------------------------------
 
 
-function createOutput(list) {
+function createListOutput(list) {
     var dataString = "";
     for (var property in list) {
         if ((list.hasOwnProperty(property)) && (!flagNames.includes(property))) {
@@ -75,70 +75,79 @@ function createOutput(list) {
         }
     }
     return dataString;
-}
-function findNameByAlias(alias, isSet) {
+} // Creates a output in a list
+
+function findNameByAlias(alias, type) {
     alias = alias.toLowerCase();
-    if (isSet) var aliasList = aliasListSets;
-    else var aliasList = aliasListHeroes;
-    for (var i = 0, setnum = aliasList.length; i < setnum; i++) {
-        for (var j = 0, len = aliasList[i]["aliases"].length; j < len; j++) {
+    if (type == "set") {
+        var aliasList = aliasListSets;
+    } else if (type == "hero") {
+        var aliasList = aliasListHeroes;
+    } else {
+        return alias;
+    }
+    for (var i = 0; i < aliasList.length; i++) {
+        for (var j = 0; j < aliasList[i]["aliases"].length; j++) {
             if (aliasList[i]["aliases"][j] == alias) return aliasList[i]["name"];
         }
     }
     return "nosuchalias";
-}
-function findData(alias, isSet) {
-    if (isSet) {
-        var name = findNameByAlias(alias, true);
+} // Finds the correct name from the alias
+
+function findListedData(alias, type) {
+    if (type == "set") {
+        var name = findNameByAlias(alias, "set");
         var dataTable = setDataTable;
     } else {
-        var name = findNameByAlias(alias, false);
+        var name = findNameByAlias(alias, "hero");
         var dataTable = heroDataTable;
     }
-    if (name == "nosuchalias") return "nosuchdata";
-    const data = dataTable.find(dataItem => dataItem.Name === name);
+    if (name == "nosuchalias") {
+        return "nosuchdata";
+    }
+    var data = dataTable.find(dataItem => dataItem.Name === name);
+    return createListOutput(data);
+} // Finds a list of data with properties
 
-    return createOutput(data);
-}
 function SetsOfTheWeek(WeekRequested) {
     var rainbowData = rainbowRotation[rainbowRotation.length - 1 - WeekRequested];
-    return createOutput(rainbowData);
-}
-function findProperty(propertyRequested, effectRequested) {
+    return createListOutput(rainbowData);
+} // Finds the set rotation for the requested week
+
+function findSingleData(alias, data, type) {
+    if (type == "item") {
+        var dataTable = itemDataTable;
+        var name = findNameByAlias(alias, "item");
+    } else if (type == "stat") {
+        var dataTable = heroDataTable;
+        var name = findNameByAlias(alias, "hero");
+    } else if (type == "skill") {
+        var dataTable = heroSkillTable;
+        var name = findNameByAlias(alias, "hero");
+    }
     var dataString = "";
-    for (var i = 0, heronum = heroDataTable.length; i < heronum; i++) {
-        if (heroDataTable[i][propertyRequested].includes(effectRequested)) dataString = dataString + "\n" + heroDataTable[i]["Name"];
+    for (var i = 0; i < dataTable.length; i++) {
+        if (dataTable[i]["Name"] == name) {
+            dataString = dataTable[i][data];
+        }
     }
     return dataString;
-}
-function findItem(item, level) {
-    var dataString = "";
-    for (var i = 0, itemnum = itemDataTable.length; i < itemnum; i++) {
-        if (itemDataTable[i]["Name"] == item) dataString = itemDataTable[i][level];
-    }
-    return dataString;
-}
-function findStat(hero, stat) {
-    var dataString = "";
-    for (var i = 0, heronum = heroDataTable.length; i < heronum; i++) {
-        if (heroDataTable[i]["Name"] == hero) dataString = heroDataTable[i][stat];
-    }
-    return dataString;
-}
-function findSkill(alias, skill) {
-    var dataString = "";
-    var name = findNameByAlias(alias, false);
-    if (name == "nosuchalias") return "nosuchdata";
-    for (var i = 0, heronum = heroSkillTable.length; i < heronum; i++) {
-        if (heroSkillTable[i]["Name"] == name) dataString = heroSkillTable[i][skill];
-    }
-    return dataString;
-}
+} // Finds a single piece of data
+
 function findSets(grade, tier) {
     var dataString = "";
     for (var i = 0; i < setDataTable.length; i++) {
         if ((setDataTable[i]["Grade"] == grade) && (setDataTable[i]["Tier"] == tier)) {
             dataString = dataString + "\n" + setDataTable[i]["Name"];
+        }
+    }
+    return dataString;
+}
+function findProperty(propertyRequested, effectRequested) {
+    var dataString = "";
+    for (var i = 0, heronum = heroDataTable.length; i < heronum; i++) {
+        if (heroDataTable[i][propertyRequested].includes(effectRequested)) {
+            dataString = dataString + "\n" + heroDataTable[i]["Name"];
         }
     }
     return dataString;
@@ -365,7 +374,7 @@ bot.on("message", message => {
 
     else if (message.content.startsWith(config.prefix + "set")) {
         if (args.length >= 2) {
-            var setInfo = findData(message.content.slice(message.content.indexOf(" ") + 1), true);
+            var setInfo = findListedData(message.content.slice(message.content.indexOf(" ") + 1), "set");
             if (setInfo != "nosuchdata") {
                 message.channel.sendMessage(setInfo);
             } else {
@@ -378,7 +387,7 @@ bot.on("message", message => {
 
     else if (message.content.startsWith(config.prefix + "stats")) {
         if (args.length >= 2) {
-            var heroStats = findData(args[1], false);
+            var heroStats = findListedData(args[1], "hero");
             if (heroStats != "nosuchdata") {
                 message.channel.sendMessage(heroStats);
             } else {
@@ -391,9 +400,9 @@ bot.on("message", message => {
 
     else if (message.content.startsWith(config.prefix + "stat")) {
         if (args.length >= 3) {
-            var heroRequested = findNameByAlias(args[1]);
+            var heroRequested = findNameByAlias(args[1], "hero");
             var statRequested = args[2].toLowerCase();
-            var statData = findStat(heroRequested, statRequested);
+            var statData = findSingleData(args[1], statRequested, "stat");
             if (statData != "nosuchdata") {
                 message.channel.sendMessage(heroRequested + "'s " + capitalize(statRequested) + ": " + statData);
             } else {
@@ -437,7 +446,7 @@ bot.on("message", message => {
         if (args.length >= 2) {
             var itemName = args[1].toLowerCase();
             var itemLevel = args[2];
-            var itemStats = findItem(itemName, itemLevel);
+            var itemStats = findSingleData(itemName, itemLevel, "item");
             message.channel.sendMessage(itemStats);
         } else {
             message.channel.sendMessage("Invalid request!");
@@ -446,12 +455,8 @@ bot.on("message", message => {
 
     else if (message.content.startsWith(config.prefix + "skill")) {
         if (args.length >= 3) {
-            var skillData = findSkill(findNameByAlias(args[1]), args[2]);
-            if (skillData != "nosuchdata") {
-                message.channel.sendMessage(skillData);
-            } else {
-                message.channel.sendMessage("Unknown Hero!");
-            }
+            var skillData = findSingleData(args[1], args[2], "skill");
+            message.channel.sendMessage(skillData);
         } else {
             message.channel.sendMessage("Invalid request!");
         }
@@ -489,7 +494,6 @@ bot.on("message", message => {
             }
         });
     } // Looks up how many points an user has
-
 
 });
 
