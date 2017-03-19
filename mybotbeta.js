@@ -519,6 +519,9 @@ bot.setInterval(function () {
 
 bot.on('error', (e) => console.error(e));
 bot.on('warn', (e) => console.warn(e));
+process.on("unhandledRejection", err => {
+  console.error("Uncaught Promise Error: \n" + err.stack);
+});
 // Captures errors
 
 bot.on("ready", () => {
