@@ -486,14 +486,24 @@ bot.on("message", message => {
         trivia(message);
     } // Starts a round of FWT trivia
 
-    else if (message.content.startsWith(config.prefix + "points")) {
-        getPoints(message.author.id).then(points => {
-            if (points != 0) {
-                message.channel.sendMessage(`Score for ${message.member.displayName}: ${points} points`);
-            } else {
-                message.channel.sendMessage("You have 0 points! Play trivia using !trivia to earn points");
-            }
-        });
+    else if (message.content.startsWith(config.prefix + "score")) {
+        if (args.length == 1) {
+            getPoints(message.author.id).then(points => {
+                if (points != 0) {
+                    message.channel.sendMessage(`Score for ${message.member.displayName}: ${points} points`);
+                } else {
+                    message.channel.sendMessage("You have 0 points! Play trivia using !trivia to earn points");
+                }
+            });
+        } else {
+            getPoints(message.mentions.users.first().id).then(points => {
+                if (points != 0) {
+                    message.channel.sendMessage(`Score for ${message.mentions.users.first().username}: ${points} points`);
+                } else {
+                    message.channel.sendMessage(`${message.mentions.users.first().username} has 0 points! Play trivia using !trivia to earn points`);
+                }
+            });
+        }
     } // Looks up how many points an user has
 
 });
@@ -501,11 +511,11 @@ bot.on("message", message => {
 // End of all commands
 //--------------------------------------------------------------------------------------------
 
-var statusCycle = ["https://github.com/TheMasterDodo/ACertainMagicalBot", "Use !help for info", "Spamming !whale", `Serving ${bot.guilds.size} servers`, `Serving ${bot.channels.size} channels`, `Serving ${bot.users.size} users`];
-setInterval(function () {
+bot.setInterval(function () {
+    var statusCycle = ["https://github.com/TheMasterDodo/ACertainMagicalBot", "Use !help for info", "Spamming !whale", `Serving ${bot.guilds.size} servers`, `Serving ${bot.channels.size} channels`, `Serving ${bot.users.size} users`];
     var random = getRandomInt(0, statusCycle.length - 1);
     bot.user.setGame(statusCycle[random]);
-}, 180000); // Cycles the status message
+}, 10000); // Cycles the status message
 
 bot.on('error', (e) => console.error(e));
 bot.on('warn', (e) => console.warn(e));
