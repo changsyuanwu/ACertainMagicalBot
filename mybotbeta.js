@@ -94,7 +94,7 @@ function findNameByAlias(alias, type) {
     return "nosuchalias";
 } // Finds the correct name from the alias
 
-function findListedData(alias, type) {
+function findListedPropertyData(alias, type) {
     if (type == "set") {
         var name = findNameByAlias(alias, "set");
         var dataTable = setDataTable;
@@ -134,6 +134,7 @@ function findSingleData(alias, data, type) {
     return dataString;
 } // Finds a single piece of data
 
+function findListData()
 function findSets(grade, tier) {
     var dataString = "";
     for (var i = 0; i < setDataTable.length; i++) {
@@ -366,7 +367,7 @@ bot.on("message", message => {
 
     else if (message.content.startsWith(config.prefix + "sets")) {
         if (args.length >= 3) {
-            var setInfo = findSets(args[1].toUpperCase(), generateTier(args[2]));
+            var setInfo = findSets(generateTier(args[2]), args[1].toUpperCase());
             message.channel.sendMessage(setInfo);
         } else {
             message.channel.sendMessage("Invalid request!");
@@ -375,7 +376,7 @@ bot.on("message", message => {
 
     else if (message.content.startsWith(config.prefix + "set")) {
         if (args.length >= 2) {
-            var setInfo = findListedData(cont, "set");
+            var setInfo = findListedPropertyData(cont, "set");
             if (setInfo != "nosuchdata") {
                 message.channel.sendMessage(setInfo);
             } else {
@@ -388,7 +389,7 @@ bot.on("message", message => {
 
     else if (message.content.startsWith(config.prefix + "stats")) {
         if (args.length >= 2) {
-            var heroStats = findListedData(args[1], "hero");
+            var heroStats = findListedPropertyData(args[1], "hero");
             if (heroStats != "nosuchdata") {
                 message.channel.sendMessage(heroStats);
             } else {

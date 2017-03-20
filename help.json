@@ -5,15 +5,21 @@
 
     "**!id**: Bot tells you your Discord ID",
 
+    "**!calc** <mathExpression>: Bot becomes a calculator (Ex. <1+1> makes the bot output 2)",
+
     "**!hug**: Bot gives you a hug (Everyone needs one at some point in their life)",
 
     "**!choose <choice|choice2|choice3|etc.>**: Bot makes a choice based on provided choices",
 
     "**!trivia**: Starts a fun round of FWT trivia",
+
+    "**!triviaquestions**: Returns the number of trivia questions that are currently available",
+
+    "**!score <user>**: Find the trivia score of the mentioned user. If no user is mentioned, the one who used the command is used",
     
     "**!pull**: Bot does a 50/50 between pull and don't pull",
 
-    "**!whale <number>**: Simulates a 10x pull the number of times specified. Assumes <1> if no number is entered. Max number is 7",
+    "**!whale <number>**: Simulates a 10x pull the number of times specified. Assumes <1> if no number is entered",
 
     "**!rainbow <number>**: Retrieves the sets in rotation for the number of weeks back from current (Ex. <1> would be last week), leave blank for current week",
 
@@ -29,7 +35,7 @@
 
     "**!skill <heroAlias> <skillNumber>**: Finds the skill data for the requested skill. (Ex. <yeka> <3> finds the data for Yekaterina's 3rd skill) <WORK IN PROGRESS>",
 
-    "**!sets <setGrade> <setTier>**: Finds all the sets at the requested grade and tier. (Ex. <ss> <5> finds all the SS sets at 5*)",
+    "**!sets <setTier> <setGrade>**: Finds all the sets at the requested grade and tier. (Ex. <ss> <5> finds all the SS sets at 5*)",
 
     "**!set <setAlias>**: Finds the data for the requested set. (Ex. <gr> finds all the data for the Super Ranger: Green set)",
 
