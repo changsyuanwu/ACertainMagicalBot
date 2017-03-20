@@ -307,7 +307,11 @@ bot.on("message", message => {
 
 
     else if (message.content.startsWith(config.prefix + "id")) {
-        message.reply(`${message.author.id}`);
+        if (args.length == 1) {
+            message.reply(`${message.author.id}`);
+        } else {
+            message.channel.sendMessage(message.mentions.users.first().id);
+        }
     } // Tells the user their ID
 
 
