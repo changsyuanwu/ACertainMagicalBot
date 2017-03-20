@@ -125,6 +125,7 @@ function findSingleData(alias, data, type) {
         var dataTable = heroSkillTable;
         var name = findNameByAlias(alias, "hero");
     }
+
     var dataString = "";
     for (var i = 0; i < dataTable.length; i++) {
         if (dataTable[i]["Name"] == name) {
@@ -134,7 +135,6 @@ function findSingleData(alias, data, type) {
     return dataString;
 } // Finds a single piece of data
 
-function findListData()
 function findSets(grade, tier) {
     var dataString = "";
     for (var i = 0; i < setDataTable.length; i++) {
@@ -143,7 +143,8 @@ function findSets(grade, tier) {
         }
     }
     return dataString;
-}
+} // Finds all sets at the requested grade and tier
+
 function findProperty(propertyRequested, effectRequested) {
     var dataString = "";
     for (var i = 0, heronum = heroDataTable.length; i < heronum; i++) {
@@ -152,7 +153,7 @@ function findProperty(propertyRequested, effectRequested) {
         }
     }
     return dataString;
-}
+} // Finds all heroes who have the requested property
 
 // End of database functions
 
@@ -367,7 +368,7 @@ bot.on("message", message => {
 
     else if (message.content.startsWith(config.prefix + "sets")) {
         if (args.length >= 3) {
-            var setInfo = findSets(generateTier(args[2]), args[1].toUpperCase());
+            var setInfo = findSets(generateTier(args[1]), args[2].toUpperCase());
             message.channel.sendMessage(setInfo);
         } else {
             message.channel.sendMessage("Invalid request!");
