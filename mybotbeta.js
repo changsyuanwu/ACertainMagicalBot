@@ -261,6 +261,10 @@ function wait(time) {
 //--------------------------------------------------------------------------------------------
 
 bot.on("message", message => {
+    if (message.mentions.users.has(bot.user.id)) {
+        console.log(`Message Received!\n\tSender: ${message.author.username} \n\tContent: ${message.content.slice(message.content.indexOf(" "))}`);
+    } // Logs messages that mention the bot
+
     if (!message.content.startsWith(config.prefix)) return;
     // Ignore messages that don't start with the prefix
 
