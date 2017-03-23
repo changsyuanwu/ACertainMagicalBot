@@ -1,98 +1,189 @@
-[{
+[
+  {
     "name": "Hot-blooded Fighter Boy",
-    "aliases": ["hot-blooded fighter boy", "hot-blooded fighter", "hot blooded", "hot blooded fighter boy", "fighter boy"]
+    "aliases": [
+      "hot-blooded fighter boy",
+      "hot-blooded fighter",
+      "hot blooded",
+      "hot blooded fighter boy",
+      "fighter boy"
+    ]
   },
   {
     "name": "Knight of the Dawn",
-    "aliases": ["knight of the dawn", "kotd", "ss ba", "kod"]
+    "aliases": [
+      "knight of the dawn",
+      "kotd",
+      "ss ba",
+      "kod"
+    ]
   },
   {
     "name": "Death Blow",
-    "aliases": ["death blow", "db"]
+    "aliases": [
+      "death blow",
+      "db"
+    ]
   },
   {
     "name": "Slime King's Dignity",
-    "aliases": ["slime king's dignity", "slime king", "sk"]
+    "aliases": [
+      "slime king's dignity",
+      "slime king",
+      "sk"
+    ]
   },
   {
     "name": "Rebel Army Supply",
-    "aliases": ["rebel army supply", "ras"]
+    "aliases": [
+      "rebel army supply",
+      "ras"
+    ]
   },
   {
     "name": "Crusader's Path",
-    "aliases": ["crusader's path", "crusaders path", "crusader path", "cp"]
+    "aliases": [
+      "crusader's path",
+      "crusaders path",
+      "crusader path",
+      "cp"
+    ]
   },
   {
     "name": "Thank-you Letter",
-    "aliases": ["thank-you letter", "thank you letter", "anniversary", "letter", "thank you"]
+    "aliases": [
+      "thank-you letter",
+      "thank you letter",
+      "anniversary",
+      "letter",
+      "thank you"
+    ]
   },
   {
     "name": "Blue Moonlight Season",
-    "aliases": ["blue moonlight season", "blue moolight"]
+    "aliases": [
+      "blue moonlight season",
+      "blue moolight"
+    ]
   },
   {
     "name": "Power of the Ancients",
-    "aliases": ["power of the ancients"]
+    "aliases": [
+      "power of the ancients"
+    ]
   },
   {
     "name": "Volley of Bullets",
-    "aliases": ["volley of bullets", "volley"]
+    "aliases": [
+      "volley of bullets",
+      "volley"
+    ]
   },
   {
     "name": "Spirit of Cold Steel",
-    "aliases": ["spirit of cold steel", "socs", "kendo"]
+    "aliases": [
+      "spirit of cold steel",
+      "socs",
+      "kendo"
+    ]
   },
   {
     "name": "Transform! Magic Girl!",
-    "aliases": ["transform! magic girl!", "magic girl", "magical girl"]
+    "aliases": [
+      "transform! magic girl!",
+      "magic girl",
+      "magical girl"
+    ]
   },
   {
     "name": "Super Ranger: Yellow",
-    "aliases": ["super ranger: yellow", "yellow ranger", "yr"]
+    "aliases": [
+      "super ranger: yellow",
+      "yellow ranger",
+      "yr"
+    ]
   },
   {
     "name": "Cold-Hearted Sniper",
-    "aliases": ["cold-hearted sniper", "cold hearted sniper", "coldhearted sniper", "chs"]
+    "aliases": [
+      "cold-hearted sniper",
+      "cold hearted sniper",
+      "coldhearted sniper",
+      "chs"
+    ]
   },
   {
     "name": "Born Assassin",
-    "aliases": ["born assassin", "ba"]
+    "aliases": [
+      "born assassin",
+      "ba"
+    ]
   },
   {
     "name": "Savage Token",
-    "aliases": ["savage token"]
+    "aliases": [
+      "savage token"
+    ]
   },
   {
     "name": "Here Comes a Super Rookie!",
-    "aliases": ["here comes a super rookie!", "rookie", "noob"]
+    "aliases": [
+      "here comes a super rookie!",
+      "rookie",
+      "noob"
+    ]
   },
   {
     "name": "I'm a Cat",
-    "aliases": ["i'm a cat", "cat"]
+    "aliases": [
+      "i'm a cat",
+      "cat"
+    ]
   },
   {
     "name": "Here Comes The Gnome!",
-    "aliases": ["here comes the gnome!", "gnome"]
+    "aliases": [
+      "here comes the gnome!",
+      "gnome"
+    ]
   },
   {
     "name": "Girgas Sandstorm",
-    "aliases": ["girgas sandstorm", "girgas", "grigas"]
+    "aliases": [
+      "girgas sandstorm",
+      "girgas",
+      "grigas"
+    ]
   },
   {
     "name": "Lista Blizzard",
-    "aliases": ["lista blizzard", "lista"]
+    "aliases": [
+      "lista blizzard",
+      "lista"
+    ]
   },
   {
     "name": "Battlefield Healer",
-    "aliases": ["battlefield healer", "bf healer", "bfh"]
+    "aliases": [
+      "battlefield healer",
+      "bf healer",
+      "bfh"
+    ]
   },
   {
     "name": "Ketarh Apprentice",
-    "aliases": ["ketarh apprentice", "ketarh", "apprentice"]
+    "aliases": [
+      "ketarh apprentice",
+      "ketarh",
+      "apprentice"
+    ]
   },
   {
     "name": "Witch's Tool",
-    "aliases": ["witch's tool", "witch tool"]
+    "aliases": [
+      "witch's tool",
+      "witch tool"
+    ]
   },
   {
     "name": "",
@@ -100,103 +191,194 @@
   },
   {
     "name": "Intelligence War",
-    "aliases": ["intelligence war"]
+    "aliases": [
+      "intelligence war"
+    ]
   },
   {
     "name": "Blue Dragon's Blessing",
-    "aliases": ["blue dragon's blessing", "blue dragon", "bd"]
+    "aliases": [
+      "blue dragon's blessing",
+      "blue dragon",
+      "bd"
+    ]
   },
   {
     "name": "Time for Your Shot!",
-    "aliases": ["time for your shot!", "time for your shot", "tfys"]
+    "aliases": [
+      "time for your shot!",
+      "time for your shot",
+      "tfys"
+    ]
   },
   {
     "name": "Taunting Busybody",
-    "aliases": ["taunting busybody", "clown", "tbb"]
+    "aliases": [
+      "taunting busybody",
+      "clown",
+      "tbb"
+    ]
   },
   {
     "name": "The Lab Demon",
-    "aliases": ["the lab demon", "lab demon", "lab"]
+    "aliases": [
+      "the lab demon",
+      "lab demon",
+      "lab"
+    ]
   },
   {
     "name": "Cave Chaser",
-    "aliases": ["cave chaser", "cave"]
+    "aliases": [
+      "cave chaser",
+      "cave"
+    ]
   },
   {
     "name": "Lumen Hymn",
-    "aliases": ["lumen hymn", "lumen"]
+    "aliases": [
+      "lumen hymn",
+      "lumen"
+    ]
   },
   {
     "name": "Frenzy Token",
-    "aliases": ["frenzy token", "frenzy"]
+    "aliases": [
+      "frenzy token",
+      "frenzy"
+    ]
   },
   {
     "name": "Dasomier Battle Suit",
-    "aliases": ["dasomier battle suit", "daso"]
+    "aliases": [
+      "dasomier battle suit",
+      "daso"
+    ]
   },
   {
     "name": "Skilled Martial Artist",
-    "aliases": ["skilled martial artist", "sma", "martial artist", "ma"]
+    "aliases": [
+      "skilled martial artist",
+      "sma",
+      "martial artist",
+      "ma"
+    ]
   },
   {
     "name": "Super Ranger: Green",
-    "aliases": ["super ranger: green", "green ranger", "gr"]
+    "aliases": [
+      "super ranger: green",
+      "green ranger",
+      "gr"
+    ]
   },
   {
     "name": "Coocoo Ranger: Red",
-    "aliases": ["coocoo ranger: red", "red coocoo ranger", "coocoo ranger", "coocoo rr", "cc rr"]
+    "aliases": [
+      "coocoo ranger: red",
+      "red coocoo ranger",
+      "coocoo ranger",
+      "coocoo rr",
+      "cc rr"
+    ]
   },
   {
     "name": "Extra Curriculum",
-    "aliases": ["extra curriculum", "ec"]
+    "aliases": [
+      "extra curriculum",
+      "ec"
+    ]
   },
   {
     "name": "Unyielding Champion",
-    "aliases": ["unyielding champion", "reflect", "uc", "boxer"]
+    "aliases": [
+      "unyielding champion",
+      "reflect",
+      "uc",
+      "boxer"
+    ]
   },
   {
     "name": "Legion Banner",
-    "aliases": ["legion banner", "legion", "banner"]
+    "aliases": [
+      "legion banner",
+      "legion",
+      "banner"
+    ]
   },
   {
     "name": "Super Ranger: Red",
-    "aliases": ["super ranger: red", "red ranger", "rr"]
+    "aliases": [
+      "super ranger: red",
+      "red ranger",
+      "rr"
+    ]
   },
   {
     "name": "Pumpkin Ghost Step",
-    "aliases": ["pumpkin ghost step", "pumpkin gs", "pumpkin", "pgs"]
+    "aliases": [
+      "pumpkin ghost step",
+      "pumpkin gs",
+      "pumpkin",
+      "pgs"
+    ]
   },
   {
     "name": "Dasomier Batte Suit (Mass Prod. Type)",
-    "aliases": ["dasomier batte suit (mass prod. type)", "walmart daso", "fake daso", "mini daso"]
+    "aliases": [
+      "dasomier batte suit (mass prod. type)",
+      "walmart daso",
+      "fake daso",
+      "mini daso"
+    ]
   },
   {
     "name": "Nephthys Adventurer",
-    "aliases": ["nephthys adventurer"]
+    "aliases": [
+      "nephthys adventurer"
+    ]
   },
   {
     "name": "Shadow Death Band",
-    "aliases": ["shadow death band"]
+    "aliases": [
+      "shadow death band"
+    ]
   },
   {
     "name": "Root Vine Walk",
-    "aliases": ["root vine walk", "root vine", "vine"]
+    "aliases": [
+      "root vine walk",
+      "root vine",
+      "vine"
+    ]
   },
   {
     "name": "Material Collector",
-    "aliases": ["material collector", "mc"]
+    "aliases": [
+      "material collector",
+      "mc"
+    ]
   },
   {
     "name": "Pacifist",
-    "aliases": ["pacifist"]
+    "aliases": [
+      "pacifist"
+    ]
   },
   {
     "name": "Ancient Witch's Curse",
-    "aliases": ["ancient witch's curse", "ancient witch curse", "witch curse"]
+    "aliases": [
+      "ancient witch's curse",
+      "ancient witch curse",
+      "witch curse"
+    ]
   },
   {
     "name": "Serial Killer",
-    "aliases": ["serial killer", "killer"]
+    "aliases": [
+      "serial killer",
+      "killer"
+    ]
   },
   {
     "name": "",
@@ -204,91 +386,171 @@
   },
   {
     "name": "Heir of Flesh and Blood",
-    "aliases": ["heir of flesh and blood", "raskreia", "rask"]
+    "aliases": [
+      "heir of flesh and blood",
+      "raskreia",
+      "rask"
+    ]
   },
   {
     "name": "Loyard's Star",
-    "aliases": ["loyard's star", "seira"]
+    "aliases": [
+      "loyard's star",
+      "seira"
+    ]
   },
   {
     "name": "Vivid Claw Mark",
-    "aliases": ["vivid claw mark", "muzaka", "muz"]
+    "aliases": [
+      "vivid claw mark",
+      "muzaka",
+      "muz"
+    ]
   },
   {
     "name": "Mad Scientist",
-    "aliases": ["mad scientist", "frankenstein", "frank"]
+    "aliases": [
+      "mad scientist",
+      "frankenstein",
+      "frank"
+    ]
   },
   {
     "name": "Wild Lady",
-    "aliases": ["wild lady", "reina"]
+    "aliases": [
+      "wild lady",
+      "reina"
+    ]
   },
   {
     "name": "Kneel",
-    "aliases": ["kneel", "raizel", "rai"]
+    "aliases": [
+      "kneel",
+      "raizel",
+      "rai"
+    ]
   },
   {
     "name": "Roar of Madness",
-    "aliases": ["roar of madness", "krut"]
+    "aliases": [
+      "roar of madness",
+      "krut"
+    ]
   },
   {
     "name": "Dragon Incarnate",
-    "aliases": ["dragon incarnate", "celestial", "cel", "celes", "cel package"]
+    "aliases": [
+      "dragon incarnate",
+      "celestial",
+      "cel",
+      "celes",
+      "cel package"
+    ]
   },
   {
     "name": "Song of Death",
-    "aliases": ["song of death", "banshee"]
+    "aliases": [
+      "song of death",
+      "banshee"
+    ]
   },
   {
     "name": "Irresistible Power",
-    "aliases": ["irresistible power", "deimos", "deimos package"]
+    "aliases": [
+      "irresistible power",
+      "deimos",
+      "deimos package"
+    ]
   },
   {
     "name": "Separation Anxiety",
-    "aliases": ["separation anxiety", "spooky"]
+    "aliases": [
+      "separation anxiety",
+      "spooky"
+    ]
   },
   {
     "name": "I Like Living Things",
-    "aliases": ["i like living things", "lucas"]
+    "aliases": [
+      "i like living things",
+      "lucas"
+    ]
   },
   {
     "name": "Wanted Reaper",
-    "aliases": ["wanted reaper", "ragna"]
+    "aliases": [
+      "wanted reaper",
+      "ragna"
+    ]
   },
   {
     "name": "Hero of Ikaruga",
-    "aliases": ["hero of ikaruga", "jin kisaragi", "jink"]
+    "aliases": [
+      "hero of ikaruga",
+      "jin kisaragi",
+      "jink"
+    ]
   },
   {
     "name": "Diligent Secretary",
-    "aliases": ["diligent secretary", "noel"]
+    "aliases": [
+      "diligent secretary",
+      "noel"
+    ]
   },
   {
     "name": "Reluctant Sparring Partner",
-    "aliases": ["reluctant sparring partner", "rachel"]
+    "aliases": [
+      "reluctant sparring partner",
+      "rachel"
+    ]
   },
   {
     "name": "Hero's Armament: Dragon Master",
-    "aliases": ["hero's armament: dragon master", "evan"]
+    "aliases": [
+      "hero's armament: dragon master",
+      "evan"
+    ]
   },
   {
     "name": "Hero's Armament: Legendary Thief",
-    "aliases": ["hero's armament: legendary thief", "phantom"]
+    "aliases": [
+      "hero's armament: legendary thief",
+      "phantom"
+    ]
   },
   {
     "name": "Hero's Armament: Elf Queen",
-    "aliases": ["hero's armament: elf queen", "mercedes", "merc"]
+    "aliases": [
+      "hero's armament: elf queen",
+      "mercedes",
+      "merc"
+    ]
   },
   {
     "name": "Hero's Armament: A Light in The Darkness",
-    "aliases": ["hero's armament: a light in the darkness", "luminous", "lum", "lumi"]
+    "aliases": [
+      "hero's armament: a light in the darkness",
+      "luminous",
+      "lum",
+      "lumi"
+    ]
   },
   {
     "name": "Hero's Armament: Conqueror of Battlefield",
-    "aliases": ["hero's armament: conqueror of battlefield", "aran"]
+    "aliases": [
+      "hero's armament: conqueror of battlefield",
+      "aran"
+    ]
   },
   {
     "name": "Hero's Armament: The Forgotten One",
-    "aliases": ["hero's armament: the forgotten one", "eunwol", "eun", "eunswol"]
+    "aliases": [
+      "hero's armament: the forgotten one",
+      "eunwol",
+      "eun",
+      "eunswol"
+    ]
   },
   {
     "name": "",
@@ -296,99 +558,189 @@
   },
   {
     "name": "Arrogant Pureblood",
-    "aliases": ["arrogant pureblood", "apb"]
+    "aliases": [
+      "arrogant pureblood",
+      "apb"
+    ]
   },
   {
     "name": "Death Bringer",
-    "aliases": ["death bringer", "cheap apb", "reaper"]
+    "aliases": [
+      "death bringer",
+      "cheap apb",
+      "reaper"
+    ]
   },
   {
     "name": "I Perform the Surgery!",
-    "aliases": ["i perform the surgery!", "i perform the surgery", "surgery"]
+    "aliases": [
+      "i perform the surgery!",
+      "i perform the surgery",
+      "surgery"
+    ]
   },
   {
     "name": "Strategy Support System",
-    "aliases": ["strategy support system", "sss"]
+    "aliases": [
+      "strategy support system",
+      "sss"
+    ]
   },
   {
     "name": "High Human Guardian",
-    "aliases": ["high human guardian", "hh guardian", "hhg"]
+    "aliases": [
+      "high human guardian",
+      "hh guardian",
+      "hhg"
+    ]
   },
   {
     "name": "Beast Rain Project Prototype",
-    "aliases": ["beast rain project prototype", "beast rain", "br"]
+    "aliases": [
+      "beast rain project prototype",
+      "beast rain",
+      "br"
+    ]
   },
   {
     "name": "Rebel Army Commander",
-    "aliases": ["rebel army commander", "rac"]
+    "aliases": [
+      "rebel army commander",
+      "rac"
+    ]
   },
   {
     "name": "God's Judgement",
-    "aliases": ["god's judgement", "god judgement", "noblesse belle", "noblesse support"]
+    "aliases": [
+      "god's judgement",
+      "god judgement",
+      "noblesse belle",
+      "noblesse support"
+    ]
   },
   {
     "name": "Sweet and Scary Chocolate Warrior",
-    "aliases": ["sweet and scary chocolate warrior", "chocolate", "choco"]
+    "aliases": [
+      "sweet and scary chocolate warrior",
+      "chocolate",
+      "choco"
+    ]
   },
   {
     "name": "Super Ranger: Blue",
-    "aliases": ["super ranger: blue", "blue ranger"]
+    "aliases": [
+      "super ranger: blue",
+      "blue ranger"
+    ]
   },
   {
     "name": "Legendary Ranger",
-    "aliases": ["legendary ranger", "lr"]
+    "aliases": [
+      "legendary ranger",
+      "lr"
+    ]
   },
   {
     "name": "Unbeatable Warlord",
-    "aliases": ["unbeatable warlord", "nunchuck", "unknown", "bruce lee"]
+    "aliases": [
+      "unbeatable warlord",
+      "nunchuck",
+      "unknown",
+      "bruce lee"
+    ]
   },
   {
     "name": "Outer Space!",
-    "aliases": ["outer space!", "outer space", "os"]
+    "aliases": [
+      "outer space!",
+      "outer space",
+      "os"
+    ]
   },
   {
     "name": "Super Ranger: Pink",
-    "aliases": ["super ranger: pink", "pink ranger", "pr"]
+    "aliases": [
+      "super ranger: pink",
+      "pink ranger",
+      "pr"
+    ]
   },
   {
     "name": "Wilderness Desperado",
-    "aliases": ["wilderness desperado", "desperado", "wd", "wilderness"]
+    "aliases": [
+      "wilderness desperado",
+      "desperado",
+      "wd",
+      "wilderness"
+    ]
   },
   {
     "name": "Black Crescent",
-    "aliases": ["black crescent", "bc", "cresent"]
+    "aliases": [
+      "black crescent",
+      "bc",
+      "cresent"
+    ]
   },
   {
     "name": "Token of Return",
-    "aliases": ["token of return", "return"]
+    "aliases": [
+      "token of return",
+      "return"
+    ]
   },
   {
     "name": "Mad Guitarist",
-    "aliases": ["mad guitarist", "guitar", "mad guitar"]
+    "aliases": [
+      "mad guitarist",
+      "guitar",
+      "mad guitar"
+    ]
   },
   {
     "name": "Shadow Corps",
-    "aliases": ["shadow corps", "sc", "corps"]
+    "aliases": [
+      "shadow corps",
+      "sc",
+      "corps"
+    ]
   },
   {
     "name": "Nephthys Conqueror",
-    "aliases": ["nephthys conqueror"]
+    "aliases": [
+      "nephthys conqueror"
+    ]
   },
   {
     "name": "Wild Chaser",
-    "aliases": ["wild chaser", "chaser", "wc"]
+    "aliases": [
+      "wild chaser",
+      "chaser",
+      "wc"
+    ]
   },
   {
     "name": "Royal Family Assassin",
-    "aliases": ["royal family assassin", "assassin", "rfa"]
+    "aliases": [
+      "royal family assassin",
+      "assassin",
+      "rfa"
+    ]
   },
   {
     "name": "Vulcan Essence",
-    "aliases": ["vulcan essence", "vulcan"]
+    "aliases": [
+      "vulcan essence",
+      "vulcan"
+    ]
   },
   {
     "name": "Tiger Claw Tribe Guardian",
-    "aliases": ["tiger claw tribe guardian", "tiger claw", "tc"]
+    "aliases": [
+      "tiger claw tribe guardian",
+      "tiger claw",
+      "tc"
+    ]
   },
   {
     "name": "",
@@ -396,107 +748,212 @@
   },
   {
     "name": "Commander of the Central Knights",
-    "aliases": ["commander of the central knights", "cock"]
+    "aliases": [
+      "commander of the central knights",
+      "cock"
+    ]
   },
   {
     "name": "Devil Knight",
-    "aliases": ["devil knight", "dk", "devil"]
+    "aliases": [
+      "devil knight",
+      "dk",
+      "devil"
+    ]
   },
   {
     "name": "Forgotten Hitter No. 4",
-    "aliases": ["forgotten hitter no. 4", "forgotten hitter", "forgotten batter", "batter", "fh", "fh4"]
+    "aliases": [
+      "forgotten hitter no. 4",
+      "forgotten hitter",
+      "forgotten batter",
+      "batter",
+      "fh",
+      "fh4"
+    ]
   },
   {
     "name": "Defender of the Earth",
-    "aliases": ["defender of the earth", "earth defender", "defender", "dote"]
+    "aliases": [
+      "defender of the earth",
+      "earth defender",
+      "defender",
+      "dote"
+    ]
   },
   {
     "name": "Tower of Dawn Guardian",
-    "aliases": ["tower of dawn guardian", "tod guardian", "todg"]
+    "aliases": [
+      "tower of dawn guardian",
+      "tod guardian",
+      "todg"
+    ]
   },
   {
     "name": "Pathfinder",
-    "aliases": ["pathfinder", "pf"]
+    "aliases": [
+      "pathfinder",
+      "pf"
+    ]
   },
   {
     "name": "Ghost Step",
-    "aliases": ["ghost step", "gs", "ghost"]
+    "aliases": [
+      "ghost step",
+      "gs",
+      "ghost"
+    ]
   },
   {
     "name": "Defeated Ruler",
-    "aliases": ["defeated ruler", "deimos library", "tyrant"]
+    "aliases": [
+      "defeated ruler",
+      "deimos library",
+      "tyrant"
+    ]
   },
   {
     "name": "Dragon's Collection",
-    "aliases": ["dragon's collection", "dragon collection", "celestial library", "cel library", "dragon"]
+    "aliases": [
+      "dragon's collection",
+      "dragon collection",
+      "celestial library",
+      "cel library",
+      "dragon"
+    ]
   },
   {
     "name": "Winner's Proof",
-    "aliases": ["winner's proof", "winner proof", "wp"]
+    "aliases": [
+      "winner's proof",
+      "winner proof",
+      "wp"
+    ]
   },
   {
     "name": "Austere Noble",
-    "aliases": ["austere noble", "austere"]
+    "aliases": [
+      "austere noble",
+      "austere"
+    ]
   },
   {
     "name": "Iron Fortress",
-    "aliases": ["iron fortress", "if"]
+    "aliases": [
+      "iron fortress",
+      "if"
+    ]
   },
   {
     "name": "Brushing Wind",
-    "aliases": ["brushing wind", "bw"]
+    "aliases": [
+      "brushing wind",
+      "bw"
+    ]
   },
   {
     "name": "Dragon Slayer",
-    "aliases": ["dragon slayer", "dslayer", "ds"]
+    "aliases": [
+      "dragon slayer",
+      "dslayer",
+      "ds"
+    ]
   },
   {
     "name": "Sunset Sheriff",
-    "aliases": ["sunset sheriff", "sheriff", "ss", "sunset"]
+    "aliases": [
+      "sunset sheriff",
+      "sheriff",
+      "ss",
+      "sunset"
+    ]
   },
   {
     "name": "Ancestor's Voice",
-    "aliases": ["ancestor's voice", "ancestor voice", "ancestor"]
+    "aliases": [
+      "ancestor's voice",
+      "ancestor voice",
+      "ancestor"
+    ]
   },
   {
     "name": "Crusader's Light",
-    "aliases": ["crusader's light", "crusader light", "cl", "crusaders light"]
+    "aliases": [
+      "crusader's light",
+      "crusader light",
+      "cl",
+      "crusaders light"
+    ]
   },
   {
     "name": "Undaunted Fighter",
-    "aliases": ["undaunted fighter", "undaunted"]
+    "aliases": [
+      "undaunted fighter",
+      "undaunted"
+    ]
   },
   {
     "name": "Phoenix's Apostle",
-    "aliases": ["phoenix's apostle", "phoenix apostle", "phoenix"]
+    "aliases": [
+      "phoenix's apostle",
+      "phoenix apostle",
+      "phoenix"
+    ]
   },
   {
     "name": "Star Song",
-    "aliases": ["star song"]
+    "aliases": [
+      "star song"
+    ]
   },
   {
     "name": "Ninja Attack",
-    "aliases": ["ninja attack", "ninja"]
+    "aliases": [
+      "ninja attack",
+      "ninja"
+    ]
   },
   {
     "name": "Dimension Conqueror",
-    "aliases": ["dimension conqueror"]
+    "aliases": [
+      "dimension conqueror"
+    ]
   },
   {
     "name": "Ketarh's Secret",
-    "aliases": ["ketarh's secret", "ketarh secret", "improved ketarh"]
+    "aliases": [
+      "ketarh's secret",
+      "ketarh secret",
+      "improved ketarh"
+    ]
   },
   {
     "name": "New Elian Kingdom Cavalry",
-    "aliases": ["new elian kingdom cavalry", "new elian kingdom", "new elian cavalry", "new elian", "nec", "nekc"]
+    "aliases": [
+      "new elian kingdom cavalry",
+      "new elian kingdom",
+      "new elian cavalry",
+      "new elian",
+      "nec",
+      "nekc"
+    ]
   },
   {
     "name": "Super Ranger: Black",
-    "aliases": ["super ranger: black", "black ranger", "black"]
+    "aliases": [
+      "super ranger: black",
+      "black ranger",
+      "black"
+    ]
   },
   {
     "name": "Persona's Trick",
-    "aliases": ["persona's trick", "persona trick", "persona", "trick"]
+    "aliases": [
+      "persona's trick",
+      "persona trick",
+      "persona",
+      "trick"
+    ]
   },
   {
     "name": "",
@@ -504,110 +961,239 @@
   },
   {
     "name": "Oblivious Past",
-    "aliases": ["oblivious past", "past", "op"]
+    "aliases": [
+      "oblivious past",
+      "past",
+      "op"
+    ]
   },
   {
     "name": "Progressive Present",
-    "aliases": ["progressive present", "preceding present", "present", "pp"]
+    "aliases": [
+      "progressive present",
+      "preceding present",
+      "present",
+      "pp"
+    ]
   },
   {
     "name": "Changing Future",
-    "aliases": ["changing future", "fluctuating future", "future", "ff", "cf"]
+    "aliases": [
+      "changing future",
+      "fluctuating future",
+      "future",
+      "ff",
+      "cf"
+    ]
   },
   {
     "name": "Difference between You and Me",
-    "aliases": ["difference between you and me", "difference"]
+    "aliases": [
+      "difference between you and me",
+      "difference"
+    ]
   },
   {
     "name": "Magical Marksman",
-    "aliases": ["magical marksman", "marksman", "mm"]
+    "aliases": [
+      "magical marksman",
+      "marksman",
+      "mm"
+    ]
   },
   {
     "name": "Angel Knight",
-    "aliases": ["angel knight", "ak"]
+    "aliases": [
+      "angel knight",
+      "ak"
+    ]
   },
   {
     "name": "Klein's Secret Notebook",
-    "aliases": ["klein's secret notebook", "klein"]
+    "aliases": [
+      "klein's secret notebook",
+      "klein"
+    ]
   },
   {
     "name": "Omniscient and Omnipotent",
-    "aliases": ["omniscient and omnipotent", "omni", "o&o", "o and o", "oo", "0&0"]
+    "aliases": [
+      "omniscient and omnipotent",
+      "omni",
+      "o&o",
+      "o and o",
+      "oo",
+      "0&0"
+    ]
   },
   {
     "name": "Eldrika's Trinity",
-    "aliases": ["eldrika's trinity", "eldrika", "trinity", "et", "eldrikas"]
+    "aliases": [
+      "eldrika's trinity",
+      "eldrika",
+      "trinity",
+      "et",
+      "eldrikas"
+    ]
   },
   {
     "name": "Raboff's Great Strategy",
-    "aliases": ["raboff's great strategy", "raboff great strategy", "raboff"]
+    "aliases": [
+      "raboff's great strategy",
+      "raboff great strategy",
+      "raboff"
+    ]
   },
   {
     "name": "God of Massacre",
-    "aliases": ["god of massacre", "gom"]
+    "aliases": [
+      "god of massacre",
+      "gom"
+    ]
   },
   {
     "name": "Short in Height, Tall in Heart",
-    "aliases": ["short in height, tall in heart", "short in height tall in heart", "toilet paper", "nobless paper", "paper", "tp", "toilet"]
+    "aliases": [
+      "short in height, tall in heart",
+      "short in height tall in heart",
+      "toilet paper",
+      "nobless paper",
+      "paper",
+      "tp",
+      "toilet"
+    ]
   },
   {
     "name": "Calm Guide",
-    "aliases": ["calm guide", "calm", "guide"]
+    "aliases": [
+      "calm guide",
+      "calm",
+      "guide"
+    ]
   },
   {
     "name": "Pirate of Pirates",
-    "aliases": ["pirate of pirates", "pirate"]
+    "aliases": [
+      "pirate of pirates",
+      "pirate"
+    ]
   },
   {
     "name": "Shadow Ruler",
-    "aliases": ["shadow ruler"]
+    "aliases": [
+      "shadow ruler"
+    ]
   },
   {
     "name": "Sun Flash",
-    "aliases": ["sun flash"]
+    "aliases": [
+      "sun flash"
+    ]
   },
   {
     "name": "Legacy of the High Humans",
-    "aliases": ["legacy of the high humans", "high human legacy", "hh legacy", "lhh", "hh", "ecto", "hhl", "ectoplasm"]
+    "aliases": [
+      "legacy of the high humans",
+      "high human legacy",
+      "hh legacy",
+      "lhh",
+      "hh",
+      "ecto",
+      "hhl",
+      "ectoplasm"
+    ]
   },
   {
     "name": "Die to Live",
-    "aliases": ["die to live", "dtl", "die"]
+    "aliases": [
+      "die to live",
+      "dtl",
+      "die"
+    ]
   },
   {
     "name": "Ultimate Weapon Gold Tiger",
-    "aliases": ["ultimate weapon gold tiger", "ultimate gold tiger", "gold tiger", "ugt", "gt", "tiger"]
+    "aliases": [
+      "ultimate weapon gold tiger",
+      "ultimate gold tiger",
+      "gold tiger",
+      "ugt",
+      "gt",
+      "tiger"
+    ]
   },
   {
     "name": "Traveler from the East",
-    "aliases": ["traveler from the east", "traveler"]
+    "aliases": [
+      "traveler from the east",
+      "traveler"
+    ]
   },
   {
     "name": "I'm a Team Player",
-    "aliases": ["i'm a team player", "im a team player", "team player", "basketball", "lebron"]
+    "aliases": [
+      "i'm a team player",
+      "im a team player",
+      "team player",
+      "basketball",
+      "lebron"
+    ]
   },
   {
     "name": "Friday the 13th",
-    "aliases": ["friday the 13th", "friday"]
+    "aliases": [
+      "friday the 13th",
+      "friday"
+    ]
   },
   {
     "name": "Mantra of Awakening",
-    "aliases": ["mantra of awakening", "mantra", "moa", "mu"]
+    "aliases": [
+      "mantra of awakening",
+      "mantra",
+      "moa",
+      "mu"
+    ]
   },
   {
     "name": "Revelation of the Great Universe",
-    "aliases": ["revelation of the great universe", "revelation", "universe", "fake klein", "walmart klein", "cheap klein"]
+    "aliases": [
+      "revelation of the great universe",
+      "revelation",
+      "universe",
+      "fake klein",
+      "walmart klein",
+      "cheap klein"
+    ]
   },
   {
     "name": "Hellish Flame's Guide",
-    "aliases": ["hellish flame's guide", "hellish flame guide", "hellish flame", "hellflame", "hell flame"]
+    "aliases": [
+      "hellish flame's guide",
+      "hellish flame guide",
+      "hellish flame",
+      "hellflame",
+      "hell flame"
+    ]
   },
   {
     "name": "Sione's Ominous Prophecy",
-    "aliases": ["sione's ominous prophecy", "sione ominous prophecy", "sione's prophecy", "sione prophecy", "sione", "prophecy"]
+    "aliases": [
+      "sione's ominous prophecy",
+      "sione ominous prophecy",
+      "sione's prophecy",
+      "sione prophecy",
+      "sione",
+      "prophecy"
+    ]
   },
   {
     "name": "White Knight's Oath",
-    "aliases": ["white knight's oath", "white knight oath", "white knight", "wko"]
+    "aliases": [
+      "white knight's oath",
+      "white knight oath",
+      "white knight",
+      "wko"
+    ]
   }
 ]
