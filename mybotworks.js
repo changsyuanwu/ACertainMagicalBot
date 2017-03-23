@@ -485,6 +485,10 @@ bot.on("message", message => {
         message.channel.sendMessage(currentSets);
     } // Searches for current set rotation
 
+    else if (message.content.startsWith(config.prefix + "music")) {
+        
+    }
+
     else if (message.content.startsWith(config.prefix + "triviaquestions")) {
         message.channel.sendMessage(`There are currently ${triviaTable.length - 1} trivia questions available`);
     } // Finds number of trivia questions
