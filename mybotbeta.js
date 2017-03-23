@@ -1,7 +1,6 @@
 const Discord = require("discord.js");
 const path = require("path");
 const sql = require('sqlite');
-sql.open('./scores.sqlite');
 const bot = new Discord.Client();
 const launchLocation = __dirname;
 const config = require(path.join(launchLocation, "config.json"));
@@ -16,6 +15,7 @@ const heroSkillTable = require(path.join(launchLocation, "Data", "FWTHeroSkills.
 const triviaTable = require(path.join(launchLocation, "Data", "FWTTrivia.json"));
 const flagNames = ["confusion", "charm", "stun", "taunt", "disarm", "immobilize", "decrease movement", "dot", "mp burn", "skill cost", "defense ignore", "defense ignoring damage", "weakening", "buff removal", "hp% damage", "defense decrease", "attack decrease", "hp drain", "mastery decrease", "instant death", "decrease crit rate", "push/pull/switch", "passive attack", "seal", "sleep", "melee", "ranged"];
 
+sql.open(path.join(launchLocation, "Data", "scores.sqlite"));
 var triviaChannels = new Set([]);
 var triviaLastQuestion = 0;
 
