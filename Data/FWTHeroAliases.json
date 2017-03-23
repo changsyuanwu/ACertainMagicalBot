@@ -1,149 +1,493 @@
 [
-{"name":"Alex","aliases":["alex", "lancer"]}
-,
-{"name":"Alfred","aliases":["alfred", "professor"]}
-,
-{"name":"Angela","aliases":["angela", "princess"]}
-,
-{"name":"Aran","aliases":["aran"]}
-,
-{"name":"Azrael","aliases":["azrael", "azreal", "az"]}
-,
-{"name":"Banshee","aliases":["banshee", "witch"]}
-,
-{"name":"Bearman","aliases":["bearman", "bear"]}
-,
-{"name":"Belle","aliases":["belle", "bel", "bell"]}
-,
-{"name":"Carrot","aliases":["carrot"]}
-,
-{"name":"Celestial","aliases":["celestial", "celes", "cel"]}
-,
-{"name":"Chenny","aliases":["chenny"]}
-,
-{"name":"Chris","aliases":["chris"]}
-,
-{"name":"Cleo","aliases":["cleo"]}
-,
-{"name":"Deborah","aliases":["deborah", "deb"]}
-,
-{"name":"Deimos","aliases":["deimos", "demos"]}
-,
-{"name":"Dolores","aliases":["dolores", "dorlors", "dorlores"]}
-,
-{"name":"Dominique","aliases":["dominique", "dom"]}
-,
-{"name":"Elektra","aliases":["elektra", "elek"]}
-,
-{"name":"Evan","aliases":["evan"]}
-,
-{"name":"Eunwol","aliases":["eunwol", "eun", "eunswol"]}
-,
-{"name":"Frankenstein","aliases":["frankenstein", "frank"]}
-,
-{"name":"Fruel","aliases":["fruel"]}
-,
-{"name":"Gillan","aliases":["gillan", "gil", "gillian"]}
-,
-{"name":"Hella","aliases":["hella"]}
-,
-{"name":"Henry","aliases":["henry"]}
-,
-{"name":"Ian","aliases":["ian", "cat"]}
-,
-{"name":"Jack","aliases":["jack"]}
-,
-{"name":"Jenny","aliases":["jenny"]}
-,
-{"name":"Jin","aliases":["jin"]}
-,
-{"name":"Jin Kisaragi","aliases":["jin kisaragi", "jink"]}
-,
-{"name":"Kai","aliases":["kai"]}
-,
-{"name":"Kitty","aliases":["kitty"]}
-,
-{"name":"Klein","aliases":["klein"]}
-,
-{"name":"Krut","aliases":["krut"]}
-,
-{"name":"Lance","aliases":["lance"]}
-,
-{"name":"Lee","aliases":["lee"]} 
-,
-{"name":"Lena","aliases":["lena"]}
-,
-{"name":"Lilid","aliases":["lilid"]}
-,
-{"name":"Lily","aliases":["lily"]}
-,
-{"name":"Lucas","aliases":["lucas", "zombie"]}
-,
-{"name":"Luminous","aliases":["luminous", "lum", "lumi"]}
-,
-{"name":"Mas","aliases":["mas", "bard"]}
-,
-{"name":"Mercedes","aliases":["mercedes", "merc"]}
-,
-{"name":"Moa","aliases":["moa"]}
-,
-{"name":"Momo","aliases":["momo"]}
-,
-{"name":"Mu","aliases":["mu"]}
-,
-{"name":"Muang","aliases":["muang"]}
-,
-{"name":"Muzaka","aliases":["muzaka", "muz"]}
-,
-{"name":"Nirvana","aliases":["nirvana", "nir", "nirv"]}
-,
-{"name":"Noel","aliases":["noel"]}
-,
-{"name":"Nox","aliases":["nox"]}
-,
-{"name":"Persona","aliases":["persona", "theif", "thief"]}
-,
-{"name":"Phantom","aliases":["phantom"]}
-,
-{"name":"Poni","aliases":["poni"]}
-,
-{"name":"Rachel","aliases":["rachel", "rach"]}
-,
-{"name":"Raboff","aliases":["raboff", "ranboff", "ramboff"]}
-,
-{"name":"Rage","aliases":["rage"]}
-,
-{"name":"Ragna","aliases":["ragna"]}
-,
-{"name":"Raizel","aliases":["raizel", "rai"]}
-,
-{"name":"Raskreia","aliases":["raskreia", "rask"]}
-,
-{"name":"Reina","aliases":["reina"]}
-,
-{"name":"Seira","aliases":["seira"]}
-,
-{"name":"Serendi","aliases":["serendi"]}
-,
-{"name":"Shark","aliases":["shark"]}
-,
-{"name":"Shu-shu","aliases":["shu-shu", "shu", "shushu"]}
-,
-{"name":"Sione","aliases":["sione"]}
-,
-{"name":"Sonic Boom","aliases":["sonic boom", "sonic"]}
-,
-{"name":"Spooky","aliases":["spooky", "snoopy"]}
-,
-{"name":"Sraka","aliases":["sraka"]}
-,
-{"name":"Tao","aliases":["tao"]}
-,
-{"name":"Unknown","aliases":["unknown"]}
-,
-{"name":"Valkyrie","aliases":["valkyrie", "valk", "val"]}
-,
-{"name":"Yekaterina","aliases":["yekaterina", "yeak", "yeka"]}
-,
-{"name":"Zero","aliases":["zero"]}
+    {
+        "name": "Alex",
+        "aliases": [
+            "alex",
+            "lancer"
+        ]
+    },
+    {
+        "name": "Alfred",
+        "aliases": [
+            "alfred",
+            "professor"
+        ]
+    },
+    {
+        "name": "Angela",
+        "aliases": [
+            "angela",
+            "princess"
+        ]
+    },
+    {
+        "name": "Aran",
+        "aliases": [
+            "aran"
+        ]
+    },
+    {
+        "name": "Azrael",
+        "aliases": [
+            "azrael",
+            "azreal",
+            "az"
+        ]
+    },
+    {
+        "name": "Banshee",
+        "aliases": [
+            "banshee",
+            "witch"
+        ]
+    },
+    {
+        "name": "Bearman",
+        "aliases": [
+            "bearman",
+            "bear"
+        ]
+    },
+    {
+        "name": "Belle",
+        "aliases": [
+            "belle",
+            "bel",
+            "bell"
+        ]
+    },
+    {
+        "name": "Carrot",
+        "aliases": [
+            "carrot"
+        ]
+    },
+    {
+        "name": "Celestial",
+        "aliases": [
+            "celestial",
+            "celes",
+            "cel"
+        ]
+    },
+    {
+        "name": "Chenny",
+        "aliases": [
+            "chenny"
+        ]
+    },
+    {
+        "name": "Chris",
+        "aliases": [
+            "chris"
+        ]
+    },
+    {
+        "name": "Cleo",
+        "aliases": [
+            "cleo"
+        ]
+    },
+    {
+        "name": "Deborah",
+        "aliases": [
+            "deborah",
+            "deb"
+        ]
+    },
+    {
+        "name": "Deimos",
+        "aliases": [
+            "deimos",
+            "demos"
+        ]
+    },
+    {
+        "name": "Dolores",
+        "aliases": [
+            "dolores",
+            "dorlors",
+            "dorlores"
+        ]
+    },
+    {
+        "name": "Dominique",
+        "aliases": [
+            "dominique",
+            "dom"
+        ]
+    },
+    {
+        "name": "Elektra",
+        "aliases": [
+            "elektra",
+            "elek"
+        ]
+    },
+    {
+        "name": "Evan",
+        "aliases": [
+            "evan"
+        ]
+    },
+    {
+        "name": "Eunwol",
+        "aliases": [
+            "eunwol",
+            "eun",
+            "eunswol"
+        ]
+    },
+    {
+        "name": "Frankenstein",
+        "aliases": [
+            "frankenstein",
+            "frank"
+        ]
+    },
+    {
+        "name": "Fruel",
+        "aliases": [
+            "fruel"
+        ]
+    },
+    {
+        "name": "Gillan",
+        "aliases": [
+            "gillan",
+            "gil",
+            "gillian"
+        ]
+    },
+    {
+        "name": "Hella",
+        "aliases": [
+            "hella"
+        ]
+    },
+    {
+        "name": "Henry",
+        "aliases": [
+            "henry"
+        ]
+    },
+    {
+        "name": "Ian",
+        "aliases": [
+            "ian",
+            "cat"
+        ]
+    },
+    {
+        "name": "Jack",
+        "aliases": [
+            "jack"
+        ]
+    },
+    {
+        "name": "Jenny",
+        "aliases": [
+            "jenny"
+        ]
+    },
+    {
+        "name": "Jin",
+        "aliases": [
+            "jin"
+        ]
+    },
+    {
+        "name": "Jin Kisaragi",
+        "aliases": [
+            "jin kisaragi",
+            "jink"
+        ]
+    },
+    {
+        "name": "Kai",
+        "aliases": [
+            "kai"
+        ]
+    },
+    {
+        "name": "Kitty",
+        "aliases": [
+            "kitty"
+        ]
+    },
+    {
+        "name": "Klein",
+        "aliases": [
+            "klein"
+        ]
+    },
+    {
+        "name": "Krut",
+        "aliases": [
+            "krut"
+        ]
+    },
+    {
+        "name": "Lance",
+        "aliases": [
+            "lance"
+        ]
+    },
+    {
+        "name": "Lee",
+        "aliases": [
+            "lee"
+        ]
+    },
+    {
+        "name": "Lena",
+        "aliases": [
+            "lena"
+        ]
+    },
+    {
+        "name": "Lilid",
+        "aliases": [
+            "lilid"
+        ]
+    },
+    {
+        "name": "Lily",
+        "aliases": [
+            "lily"
+        ]
+    },
+    {
+        "name": "Lucas",
+        "aliases": [
+            "lucas",
+            "zombie"
+        ]
+    },
+    {
+        "name": "Luminous",
+        "aliases": [
+            "luminous",
+            "lum",
+            "lumi"
+        ]
+    },
+    {
+        "name": "Mas",
+        "aliases": [
+            "mas",
+            "bard"
+        ]
+    },
+    {
+        "name": "Mercedes",
+        "aliases": [
+            "mercedes",
+            "merc"
+        ]
+    },
+    {
+        "name": "Moa",
+        "aliases": [
+            "moa"
+        ]
+    },
+    {
+        "name": "Momo",
+        "aliases": [
+            "momo"
+        ]
+    },
+    {
+        "name": "Mu",
+        "aliases": [
+            "mu"
+        ]
+    },
+    {
+        "name": "Muang",
+        "aliases": [
+            "muang"
+        ]
+    },
+    {
+        "name": "Muzaka",
+        "aliases": [
+            "muzaka",
+            "muz"
+        ]
+    },
+    {
+        "name": "Nirvana",
+        "aliases": [
+            "nirvana",
+            "nir",
+            "nirv"
+        ]
+    },
+    {
+        "name": "Noel",
+        "aliases": [
+            "noel"
+        ]
+    },
+    {
+        "name": "Nox",
+        "aliases": [
+            "nox"
+        ]
+    },
+    {
+        "name": "Persona",
+        "aliases": [
+            "persona",
+            "theif",
+            "thief"
+        ]
+    },
+    {
+        "name": "Phantom",
+        "aliases": [
+            "phantom"
+        ]
+    },
+    {
+        "name": "Poni",
+        "aliases": [
+            "poni"
+        ]
+    },
+    {
+        "name": "Rachel",
+        "aliases": [
+            "rachel",
+            "rach"
+        ]
+    },
+    {
+        "name": "Raboff",
+        "aliases": [
+            "raboff",
+            "ranboff",
+            "ramboff"
+        ]
+    },
+    {
+        "name": "Rage",
+        "aliases": [
+            "rage"
+        ]
+    },
+    {
+        "name": "Ragna",
+        "aliases": [
+            "ragna"
+        ]
+    },
+    {
+        "name": "Raizel",
+        "aliases": [
+            "raizel",
+            "rai"
+        ]
+    },
+    {
+        "name": "Raskreia",
+        "aliases": [
+            "raskreia",
+            "rask"
+        ]
+    },
+    {
+        "name": "Reina",
+        "aliases": [
+            "reina"
+        ]
+    },
+    {
+        "name": "Seira",
+        "aliases": [
+            "seira"
+        ]
+    },
+    {
+        "name": "Serendi",
+        "aliases": [
+            "serendi"
+        ]
+    },
+    {
+        "name": "Shark",
+        "aliases": [
+            "shark"
+        ]
+    },
+    {
+        "name": "Shu-shu",
+        "aliases": [
+            "shu-shu",
+            "shu",
+            "shushu"
+        ]
+    },
+    {
+        "name": "Sione",
+        "aliases": [
+            "sione"
+        ]
+    },
+    {
+        "name": "Sonic Boom",
+        "aliases": [
+            "sonic boom",
+            "sonic"
+        ]
+    },
+    {
+        "name": "Spooky",
+        "aliases": [
+            "spooky",
+            "snoopy"
+        ]
+    },
+    {
+        "name": "Sraka",
+        "aliases": [
+            "sraka"
+        ]
+    },
+    {
+        "name": "Tao",
+        "aliases": [
+            "tao"
+        ]
+    },
+    {
+        "name": "Unknown",
+        "aliases": [
+            "unknown"
+        ]
+    },
+    {
+        "name": "Valkyrie",
+        "aliases": [
+            "valkyrie",
+            "valk",
+            "val"
+        ]
+    },
+    {
+        "name": "Yekaterina",
+        "aliases": [
+            "yekaterina",
+            "yeak",
+            "yeka"
+        ]
+    },
+    {
+        "name": "Zero",
+        "aliases": [
+            "zero"
+        ]
+    }
 ]
