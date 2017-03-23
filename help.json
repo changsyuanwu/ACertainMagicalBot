@@ -27,13 +27,13 @@
 
     "**!property <propertyType> <property>**: Finds all the heroes who have the requested property. (Ex. <type> <rock> finds all the rock heroes)",
 
-    "**!item <itemName> <itemTier>**: Finds the max stats for the requested item at the requested tier (Ex. <bow> <5> finds the max stats of a 5* bow) <WORK IN PROGRESS>",
+    "**!item <itemName> <itemTier>**: Finds the max stats for the requested item at the requested tier (Ex. <bow> <5> finds the max stats of a 5* bow) **<WORK IN PROGRESS>**",
 
     "**!stats <heroAlias>**: Finds all the stats for the requested heroes (Ex. <yeka> finds all the stats of Yekaterina)",
 
     "**!stat <heroAlias> <stat>**: Finds the requested stat of the hero (Ex. <yeka> <attack> finds Yekaterina's base attack)",
 
-    "**!skill <heroAlias> <skillNumber>**: Finds the skill data for the requested skill. (Ex. <yeka> <3> finds the data for Yekaterina's 3rd skill) <WORK IN PROGRESS>",
+    "**!skill <heroAlias> <skillNumber>**: Finds the skill data for the requested skill. (Ex. <yeka> <3> finds the data for Yekaterina's 3rd skill) **<WORK IN PROGRESS>**",
 
     "**!sets <setTier> <setGrade>**: Finds all the sets at the requested grade and tier. (Ex. <ss> <5> finds all the SS sets at 5*)",
 

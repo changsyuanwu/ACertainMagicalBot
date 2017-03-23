@@ -150,6 +150,8 @@ function findProperty(propertyRequested, effectRequested) {
     for (var i = 0, heronum = heroDataTable.length; i < heronum; i++) {
         if (heroDataTable[i][propertyRequested].includes(effectRequested)) {
             dataString = dataString + "\n" + heroDataTable[i]["Name"];
+        } else {
+            dataString = "Error";
         }
     }
     return dataString;
