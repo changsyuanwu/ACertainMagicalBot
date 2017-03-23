@@ -1,5 +1,12 @@
 [
     {
+        "name": "",
+        "aliases": [
+            "",
+            ""
+        ]
+    },
+    {
         "name": "Alex",
         "aliases": [
             "alex",
@@ -60,6 +67,21 @@
         "name": "Carrot",
         "aliases": [
             "carrot"
+        ]
+    },
+    {
+        "name": "Cat Sidhe",
+        "aliases": [
+            "cat",
+            "sid",
+            "catgirl",
+            "sidhe",
+            "catgirlmuzaka",
+            "wildcatsidhe",
+            "blackcat",
+            "catmuz",
+            "fakemuz",
+            "girlmuz"
         ]
     },
     {
@@ -175,7 +197,8 @@
         "name": "Ian",
         "aliases": [
             "ian",
-            "cat"
+            "blackcat",
+            "catboy"
         ]
     },
     {
@@ -199,7 +222,7 @@
     {
         "name": "Jin Kisaragi",
         "aliases": [
-            "jin kisaragi",
+            "jinkisaragi",
             "jink"
         ]
     },
@@ -414,6 +437,17 @@
         "name": "Serendi",
         "aliases": [
             "serendi"
+        ]
+    },
+    {
+        "name": "Serphina",
+        "aliases": [
+            "serphina",
+            "serf",
+            "serp",
+            "serph",
+            "greenrask",
+            "fakerask"
         ]
     },
     {

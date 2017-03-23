@@ -25,7 +25,7 @@
 
     "**!effect <effect>**: Finds all the heroes who can inflict the requested effect. <list> will list available effects. (Ex. <stun> finds all the heroes who can stun)",
 
-    "**!property <propertyType> <property>**: Finds all the heroes who have the requested property. (Ex. <type> <rock> finds all the rock heroes)",
+    "**!property <propertyType> <property>**: Finds all the heroes who have the requested property. (Ex. <type> <attack> finds all attack type heroes)",
 
     "**!item <itemName> <itemTier>**: Finds the max stats for the requested item at the requested tier (Ex. <bow> <5> finds the max stats of a 5* bow) **<WORK IN PROGRESS>**",
 
