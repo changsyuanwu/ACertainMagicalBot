@@ -125,7 +125,6 @@ function findSingleData(alias, data, type) {
         var dataTable = heroSkillTable;
         var name = findNameByAlias(alias, "hero");
     }
-    console.log(name);
     var dataString = "";
     for (var i = 0; i < dataTable.length; i++) {
         if (dataTable[i]["Name"] == name) {
