@@ -125,7 +125,7 @@ function findSingleData(alias, data, type) {
         var dataTable = heroSkillTable;
         var name = findNameByAlias(alias, "hero");
     }
-
+    console.log(name);
     var dataString = "";
     for (var i = 0; i < dataTable.length; i++) {
         if (dataTable[i]["Name"] == name) {
@@ -344,7 +344,7 @@ bot.on("message", message => {
     else if (message.content.startsWith(config.prefix + "tuturu")) {
         message.channel.sendFile(path.join(launchLocation, "Images", "Tuturu.png"));
     } else if (message.content.startsWith(config.prefix + "moe")) {
-        message.channel.sendFile(path.join(launchLocation, "Images", "Shushu.png"));
+        message.channel.sendFile("https://img.youtube.com/vi/p6iQozWtWxE/maxresdefault.jpg");
     } else if (message.content.startsWith(config.prefix + "moa")) {
         message.channel.sendFile(path.join(launchLocation, "Images", "Moa.png"));
     } else if (message.content.startsWith(config.prefix + "tyrant")) {
