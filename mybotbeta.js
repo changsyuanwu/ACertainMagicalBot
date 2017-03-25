@@ -134,10 +134,10 @@ function findSingleData(alias, data, type) {
     return dataString;
 } // Finds a single piece of data
 
-function findSets(grade, tier) {
+function findSets(tier, grade) {
     var dataString = "";
     for (var i = 0; i < setDataTable.length; i++) {
-        if ((setDataTable[i]["Grade"] === grade) && (setDataTable[i]["Tier"] === tier)) {
+        if ((setDataTable[i]["Tier"] === tier) && (setDataTable[i]["Grade"] == grade)) {
             dataString = dataString + "\n" + setDataTable[i]["Name"];
         }
     }
@@ -271,7 +271,7 @@ bot.on("message", message => {
     // Checks if sender is a bot
 
     const args = message.content.split(" ");
-    const cont = message.content.slice(message.content.indexOf(" ") + 1);
+    const msgContent = message.content.slice(message.content.indexOf(" ") + 1);
 
     if (message.content.startsWith(config.prefix + "ping")) {
         message.channel.sendMessage("pong! [Response time: " + bot.ping + "ms]");
@@ -384,7 +384,7 @@ bot.on("message", message => {
 
     else if (message.content.startsWith(config.prefix + "set")) {
         if (args.length >= 2) {
-            var setInfo = findListedPropertyData(cont, "set");
+            var setInfo = findListedPropertyData(msgContent, "set");
             if (setInfo != "nosuchdata") {
                 message.channel.sendMessage(setInfo);
             } else {
@@ -425,7 +425,7 @@ bot.on("message", message => {
 
     else if (message.content.startsWith(config.prefix + "effect")) {
         if (args.length >= 2) {
-            var effect = cont;
+            var effect = msgContent;
             if (effect === "list") {
                 var flags = "";
                 for (var i = 0; i < flagNames.length; i++) {
