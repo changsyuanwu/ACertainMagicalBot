@@ -27,7 +27,7 @@ var triviaLastQuestion = 0;
 for (let i = 0, len = setDataTable.length; i < len; i++) {
     for (let j = 0, weeks = rainbowRotation.length; j < weeks; j++) {
         let grade = setDataTable[i]["Tier"].length.toString() + setDataTable[i]["Grade"];
-        if (rainbowRotation[j][grade] == setDataTable[i]["Name"]) {
+        if (rainbowRotation[j][grade] === setDataTable[i]["Name"]) {
             setDataTable[i]["Last Time in the Rotation"] = rainbowRotation[j]["Week"];
         }
     }
@@ -79,30 +79,30 @@ function createListOutput(list) {
 
 function findNameByAlias(alias, type) {
     alias = alias.toLowerCase();
-    if (type == "set") {
+    if (type === "set") {
         var aliasList = aliasListSets;
-    } else if (type == "hero") {
+    } else if (type === "hero") {
         var aliasList = aliasListHeroes;
     } else {
         return alias;
     }
     for (var i = 0; i < aliasList.length; i++) {
         for (var j = 0; j < aliasList[i]["aliases"].length; j++) {
-            if (aliasList[i]["aliases"][j] == alias) return aliasList[i]["name"];
+            if (aliasList[i]["aliases"][j] === alias) return aliasList[i]["name"];
         }
     }
     return "nosuchalias";
 } // Finds the correct name from the alias
 
 function findListedPropertyData(alias, type) {
-    if (type == "set") {
+    if (type === "set") {
         var name = findNameByAlias(alias, "set");
         var dataTable = setDataTable;
     } else {
         var name = findNameByAlias(alias, "hero");
         var dataTable = heroDataTable;
     }
-    if (name == "nosuchalias") {
+    if (name === "nosuchalias") {
         return "nosuchdata";
     }
     var data = dataTable.find(dataItem => dataItem.Name === name);
@@ -115,19 +115,19 @@ function SetsOfTheWeek(WeekRequested) {
 } // Finds the set rotation for the requested week
 
 function findSingleData(alias, data, type) {
-    if (type == "item") {
+    if (type === "item") {
         var dataTable = itemDataTable;
         var name = findNameByAlias(alias, "item");
-    } else if (type == "stat") {
+    } else if (type === "stat") {
         var dataTable = heroDataTable;
         var name = findNameByAlias(alias, "hero");
-    } else if (type == "skill") {
+    } else if (type === "skill") {
         var dataTable = heroSkillTable;
         var name = findNameByAlias(alias, "hero");
     }
     var dataString = "";
     for (var i = 0; i < dataTable.length; i++) {
-        if (dataTable[i]["Name"] == name) {
+        if (dataTable[i]["Name"] === name) {
             dataString = dataTable[i][data];
         }
     }
@@ -137,7 +137,7 @@ function findSingleData(alias, data, type) {
 function findSets(grade, tier) {
     var dataString = "";
     for (var i = 0; i < setDataTable.length; i++) {
-        if ((setDataTable[i]["Grade"] == grade) && (setDataTable[i]["Tier"] == tier)) {
+        if ((setDataTable[i]["Grade"] === grade) && (setDataTable[i]["Tier"] === tier)) {
             dataString = dataString + "\n" + setDataTable[i]["Name"];
         }
     }
@@ -146,13 +146,11 @@ function findSets(grade, tier) {
 
 function findProperty(propertyRequested, effectRequested) {
     var dataString = "";
-    for (var i = 0, heronum = heroDataTable.length; i < heronum; i++) {
-        if (heroDataTable[i][propertyRequested].includes(effectRequested)) {
-            dataString = dataString + "\n" + heroDataTable[i]["Name"];
-        } else {
-            dataString = "Error";
+        for (var i = 0, heronum = heroDataTable.length; i < heronum; i++) {
+            if ((heroDataTable[i][propertyRequested] != undefined) && (heroDataTable[i][propertyRequested].includes(effectRequested)))  {
+                dataString = dataString + "\n" + heroDataTable[i]["Name"];
+            }
         }
-    }
     return dataString;
 } // Finds all heroes who have the requested property
 
@@ -174,7 +172,7 @@ function trivia(message) {
     triviaChannels.add(message.channel.id);
     do {
         var question = getRandomInt(1, triviaTable.length - 1);
-    } while (question == triviaLastQuestion);
+    } while (question === triviaLastQuestion);
     triviaLastQuestion = question;
     var askedQuestion = triviaTable[question]["Question"];
     var correctAnswer = triviaTable[question]["Answer"];
@@ -182,7 +180,7 @@ function trivia(message) {
     wait(1500)
         .then(() => message.channel.sendMessage(askedQuestion))
         .then(() => {
-            message.channel.awaitMessages(response => response.content.toLowerCase() == correctAnswer.toLowerCase(), {
+            message.channel.awaitMessages(response => response.content.toLowerCase() === correctAnswer.toLowerCase(), {
                 max: 1,
                 time: 15000,
                 errors: ['time'],
@@ -290,8 +288,8 @@ bot.on("message", message => {
     } // Gives a nice warm hug
 
 
-    else if (message.content.startsWith(config.prefix + "nameset") && (message.author.id == config.ownerID)) {
-        if (args.length == 1) {
+    else if (message.content.startsWith(config.prefix + "nameset") && (message.author.id === config.ownerID)) {
+        if (args.length === 1) {
             message.guild.member(bot.user).setNickname("A Certain Magical Bot");
         } else {
             message.guild.member(bot.user).setNickname(message.content.slice(message.content.indexOf(" ")));
@@ -312,7 +310,7 @@ bot.on("message", message => {
 
 
     else if (message.content.startsWith(config.prefix + "id")) {
-        if (args.length == 1) {
+        if (args.length === 1) {
             message.reply(`${message.author.id}`);
         } else {
             message.channel.sendMessage(message.mentions.users.first().id);
@@ -359,7 +357,7 @@ bot.on("message", message => {
     else if (message.content.startsWith(config.prefix + "whale")) {
         var pulls = "";
         var totalPull = "";
-        if ((args[1] > 100) || ((args[1] > 10) && (message.guild.id == "164867600457662464"))) {
+        if ((args[1] > 100) || ((args[1] > 10) && (message.guild.id === "164867600457662464"))) {
             message.channel.sendMessage("```OVERFLOW_ERROR```");
             return;
         }
@@ -428,7 +426,7 @@ bot.on("message", message => {
     else if (message.content.startsWith(config.prefix + "effect")) {
         if (args.length >= 2) {
             var effect = cont;
-            if (effect == "list") {
+            if (effect === "list") {
                 var flags = "";
                 for (var i = 0; i < flagNames.length; i++) {
                     flags = flags + "\n" + capitalize(flagNames[i]);
@@ -489,7 +487,7 @@ bot.on("message", message => {
     } // Finds number of trivia questions
 
     else if ((message.content.startsWith(config.prefix + "trivia")) && (!triviaChannels.has(message.channel.id))) {
-        if (message.channel.type == "dm") {
+        if (message.channel.type === "dm") {
             message.channel.sendMessage("Please use this command in a server!");
             return;
         }
@@ -498,7 +496,7 @@ bot.on("message", message => {
     } // Starts a round of FWT trivia
 
     else if (message.content.startsWith(config.prefix + "score")) {
-        if (args.length == 1) {
+        if (args.length === 1) {
             getPoints(message.author.id).then(points => {
                 if (points != 0) {
                     message.channel.sendMessage(`Score for ${message.member.displayName}: ${points} points`);
@@ -531,7 +529,7 @@ bot.setInterval(function () {
 bot.on('error', (e) => console.error(e));
 bot.on('warn', (e) => console.warn(e));
 process.on("unhandledRejection", err => {
-  console.error("Uncaught Promise Error: \n" + err.stack);
+    console.error("Uncaught Promise Error: \n" + err.stack);
 });
 // Captures errors
 
