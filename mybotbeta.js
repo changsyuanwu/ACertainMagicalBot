@@ -255,6 +255,22 @@ function wait(time) {
     });
 } // Waits for a set amount of time
 
+function prune(message, value){
+    value = Math.min(value, 100);
+
+    return message.channel.fetchMessages({ limit: 100 }).then(messages => {
+        const ownMessages = [];
+
+        for (const m of messages.values()){
+            if (ownMessages.length > value) break;
+            if (m.author.id !== bot.user.id) continue;
+            ownMessages.push(m);
+        }
+        
+        return Promise.all(ownMessages.map(msg => msg.delete()));
+    });
+} // Prunes messages from bot
+
 // End of other functions
 
 //--------------------------------------------------------------------------------------------
@@ -307,6 +323,17 @@ bot.on("message", message => {
             message.channel.sendMessage("Invalid request!");
         }
     } // Calculator function
+
+
+    else if ((message.content.startsWith(config.prefix + "prune")) && (message.author.id === config.ownerID)) {
+        if (args.length >= 2) {
+            prune(message, args[2] - 1);
+        } else if (args.length === 1) {
+            prune(message, 1 - 1);
+        } else {
+            message.channel.sendMessage("Invalid request!");
+        }
+    } // Prunes messages from bot (Prunes 1 more than the command)
 
 
     else if (message.content.startsWith(config.prefix + "id")) {
