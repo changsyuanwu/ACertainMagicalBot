@@ -35,7 +35,7 @@
 
     "**!skill <heroAlias> <skillNumber>**: Finds the skill data for the requested skill. (Ex. <yeka> <3> finds the data for Yekaterina's 3rd skill) **<WORK IN PROGRESS>**",
 
-    "**!sets <setTier> <setGrade>**: Finds all the sets at the requested grade and tier. (Ex. <ss> <5> finds all the SS sets at 5*)",
+    "**!sets <setTier> <setGrade>**: Finds all the sets at the requested grade and tier. (Ex. <5> <SS> finds all the SS sets at 5*)",
 
     "**!set <setAlias>**: Finds the data for the requested set. (Ex. <gr> finds all the data for the Super Ranger: Green set)",
 
