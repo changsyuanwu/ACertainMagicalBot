@@ -3,6 +3,7 @@ const path = require("path");
 const sql = require('sqlite');
 const bot = new Discord.Client();
 const launchLocation = __dirname;
+const Logger = require(path.join(launchLocation, "Utilities", "Logger.js"));
 const config = require(path.join(launchLocation, "config.json"));
 const help = require(path.join(launchLocation, "help.json"));
 const setDataTable = require(path.join(launchLocation, "Data", "FWTSetData.json"));
@@ -18,6 +19,7 @@ const flagNames = ["confusion", "charm", "stun", "taunt", "disarm", "immobilize"
 sql.open(path.join(launchLocation, "Data", "scores.sqlite"));
 var triviaChannels = new Set([]);
 var triviaLastQuestion = 0;
+const logger = new Logger(config.noLogs);
 
 // Declaring constants/loading databases
 
@@ -146,11 +148,11 @@ function findSets(tier, grade) {
 
 function findProperty(propertyRequested, effectRequested) {
     var dataString = "";
-        for (var i = 0, heronum = heroDataTable.length; i < heronum; i++) {
-            if ((heroDataTable[i][propertyRequested] != undefined) && (heroDataTable[i][propertyRequested].includes(effectRequested)))  {
-                dataString = dataString + "\n" + heroDataTable[i]["Name"];
-            }
+    for (var i = 0, heronum = heroDataTable.length; i < heronum; i++) {
+        if ((heroDataTable[i][propertyRequested] != undefined) && (heroDataTable[i][propertyRequested].includes(effectRequested))) {
+            dataString = dataString + "\n" + heroDataTable[i]["Name"];
         }
+    }
     return dataString;
 } // Finds all heroes who have the requested property
 
@@ -255,20 +257,14 @@ function wait(time) {
     });
 } // Waits for a set amount of time
 
-function prune(message, value){
+function prune(message, value) {
     value = Math.min(value, 100);
+    message.channel.fetchMessages({ limit: 100 }).then(messages => {
+        const filteredMessages = messages.filter(message => message.author.id === bot.user.id);
+        var filteredArray = filteredMessages.array();
 
-    return message.channel.fetchMessages({ limit: 100 }).then(messages => {
-        const ownMessages = [];
-
-        for (const m of messages.values()){
-            if (ownMessages.length > value) break;
-            if (m.author.id !== bot.user.id) continue;
-            ownMessages.push(m);
-        }
-        
-        return Promise.all(ownMessages.map(msg => msg.delete()));
-    });
+        message.channel.bulkDelete(filteredArray.slice(0, value));
+    }).catch(err => console.error(err));
 } // Prunes messages from bot
 
 // End of other functions
@@ -282,12 +278,14 @@ bot.on("message", message => {
 
     if (!message.content.startsWith(config.prefix)) return;
     // Ignore messages that don't start with the prefix
-
+    
     if (message.author.bot) return;
     // Checks if sender is a bot
 
-    const args = message.content.split(" ");
+    const args = message.content.slice(1).split(" ");
     const msgContent = message.content.slice(message.content.indexOf(" ") + 1);
+
+    logger.logFrom(message.channel, 1, `[command: ${args[0]}]`);
 
     if (message.content.startsWith(config.prefix + "ping")) {
         message.channel.sendMessage("pong! [Response time: " + bot.ping + "ms]");
@@ -551,17 +549,19 @@ bot.setInterval(function () {
     var statusCycle = ["https://github.com/TheMasterDodo/ACertainMagicalBot", "Use !help for info", "Spamming !whale", `Serving ${bot.guilds.size} servers`, `Serving ${bot.channels.size} channels`, `Serving ${bot.users.size} users`];
     var random = getRandomInt(0, statusCycle.length - 1);
     bot.user.setGame(statusCycle[random]);
-}, 180000); // Cycles the status message
+    logger.log(1, `Set status to ${statusCycle[random]}`);
+}, 600000); // Cycles the status message
 
 bot.on('error', (e) => console.error(e));
 bot.on('warn', (e) => console.warn(e));
 process.on("unhandledRejection", err => {
-    console.error("Uncaught Promise Error: \n" + err.stack);
+    logger.log(3, "An error occured!");
+    console.error(err.stack);
 });
 // Captures errors
 
 bot.on("ready", () => {
-    console.log(`Ready to server in ${bot.channels.size} channels on ${bot.guilds.size} servers, for a total of ${bot.users.size} users.`);
+    logger.log(1, `Ready to server in ${bot.channels.size} channels on ${bot.guilds.size} servers, for a total of ${bot.users.size} users.`);
 });
 
 bot.login(config.token);
