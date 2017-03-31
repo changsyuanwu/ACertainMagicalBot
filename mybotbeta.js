@@ -267,6 +267,14 @@ function prune(message, value) {
     }).catch(err => console.error(err));
 } // Prunes messages from bot
 
+function status () {
+    var statusCycle = ["https://github.com/TheMasterDodo/ACertainMagicalBot", "Use !help for info", "Spamming !whale", `Serving ${bot.guilds.size} servers`, `Serving ${bot.channels.size} channels`, `Serving ${bot.users.size} users`];
+    var random = getRandomInt(0, statusCycle.length - 1);
+    bot.user.setGame(statusCycle[random]);
+    logger.log(2, `Set status to ${statusCycle[random]}`);
+    setTimeout(status, 300000); // Cycles every 5 minutes
+} // Sets the status message of the bot
+
 // End of other functions
 
 //--------------------------------------------------------------------------------------------
@@ -545,13 +553,6 @@ bot.on("message", message => {
 // End of all commands
 //--------------------------------------------------------------------------------------------
 
-bot.setInterval(function () {
-    var statusCycle = ["https://github.com/TheMasterDodo/ACertainMagicalBot", "Use !help for info", "Spamming !whale", `Serving ${bot.guilds.size} servers`, `Serving ${bot.channels.size} channels`, `Serving ${bot.users.size} users`];
-    var random = getRandomInt(0, statusCycle.length - 1);
-    bot.user.setGame(statusCycle[random]);
-    logger.log(2, `Set status to ${statusCycle[random]}`);
-}, 600000); // Cycles the status message
-
 bot.on('error', (e) => console.error(e));
 bot.on('warn', (e) => console.warn(e));
 process.on("unhandledRejection", err => {
@@ -564,4 +565,4 @@ bot.on("ready", () => {
     logger.log(1, `Ready to server in ${bot.channels.size} channels on ${bot.guilds.size} servers, for a total of ${bot.users.size} users.`);
 });
 
-bot.login(config.token);
+bot.login(config.token).then(() => status());
