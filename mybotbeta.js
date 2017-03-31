@@ -549,7 +549,7 @@ bot.setInterval(function () {
     var statusCycle = ["https://github.com/TheMasterDodo/ACertainMagicalBot", "Use !help for info", "Spamming !whale", `Serving ${bot.guilds.size} servers`, `Serving ${bot.channels.size} channels`, `Serving ${bot.users.size} users`];
     var random = getRandomInt(0, statusCycle.length - 1);
     bot.user.setGame(statusCycle[random]);
-    logger.log(1, `Set status to ${statusCycle[random]}`);
+    logger.log(2, `Set status to ${statusCycle[random]}`);
 }, 600000); // Cycles the status message
 
 bot.on('error', (e) => console.error(e));

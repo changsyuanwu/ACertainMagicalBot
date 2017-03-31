@@ -54,7 +54,7 @@ module.exports = {
     LogLevels: [
         'Log',
         'Status',
-        'Debug',
+        'System',
         'Error'
     ],
     LogColors: [
