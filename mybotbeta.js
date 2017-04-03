@@ -267,7 +267,7 @@ function prune(message, value) {
     }).catch(err => console.error(err));
 } // Prunes messages from bot
 
-function status () {
+function status() {
     var statusCycle = ["https://github.com/TheMasterDodo/ACertainMagicalBot", "Use !help for info", "Spamming !whale", `Serving ${bot.guilds.size} servers`, `Serving ${bot.channels.size} channels`, `Serving ${bot.users.size} users`];
     var random = getRandomInt(0, statusCycle.length - 1);
     bot.user.setGame(statusCycle[random]);
