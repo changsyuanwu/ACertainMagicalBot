@@ -39,6 +39,8 @@
 
     "**!set <setAlias>**: Finds the data for the requested set. (Ex. <gr> finds all the data for the Super Ranger: Green set)",
 
+    "**!soulgear <heroAlias>**: Finds the soul gear data for the requested hero. (Ex. <lee> finds Lee's soul gear data)",
+
     "**!help**: Lists all the commands. Although since you used it already you should know this one.",
 
     "There are also some secret commands you'll have to learn on your own :wink:",

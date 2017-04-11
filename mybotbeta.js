@@ -14,6 +14,7 @@ const heroDataTable = require(path.join(launchLocation, "Data", "FWTHeroStats.js
 const itemDataTable = require(path.join(launchLocation, "Data", "FWTItemMaxStats.json"));
 const heroSkillTable = require(path.join(launchLocation, "Data", "FWTHeroSkills.json"));
 const triviaTable = require(path.join(launchLocation, "Data", "FWTTrivia.json"));
+const soulGearTable = require(path.join(launchLocation, "Data", "FWTSoulGear.json"));
 const flagNames = ["confusion", "charm", "stun", "taunt", "disarm", "immobilize", "decrease movement", "dot", "mp burn", "skill cost", "defense ignore", "defense ignoring damage", "weakening", "buff removal", "hp% damage", "defense decrease", "attack decrease", "hp drain", "mastery decrease", "instant death", "decrease crit rate", "push/pull/switch", "passive attack", "seal", "sleep", "melee", "ranged"];
 
 sql.open(path.join(launchLocation, "scores.sqlite"));
@@ -100,9 +101,12 @@ function findListedPropertyData(alias, type) {
     if (type === "set") {
         var name = findNameByAlias(alias, "set");
         var dataTable = setDataTable;
-    } else {
+    } else if (type === "hero") {
         var name = findNameByAlias(alias, "hero");
         var dataTable = heroDataTable;
+    } else if (type === "soulgear") {
+        var name = findNameByAlias(alias, "hero");
+        var dataTable = soulGearTable;
     }
     if (name === "nosuchalias") {
         return "nosuchdata";
@@ -547,6 +551,19 @@ bot.on("message", message => {
             });
         }
     } // Looks up how many points an user has
+
+    else if (message.content.startsWith(config.prefix + "soulgear")) {
+        if (args.length >= 2) {
+            var sgData = findListedPropertyData(args[1], "soulgear");
+            if (sgData != "nosuchdata") {
+                message.channel.sendMessage(sgData);
+            } else {
+                message.channel.sendMessage("Unknown Soul Gear!");
+            }
+        } else {
+            message.channel.sendMessage("Invalid request!");
+        }
+    } // Looks up a hero's soul gear
 
 });
 
