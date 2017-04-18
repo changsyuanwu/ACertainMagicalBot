@@ -8,8 +8,60 @@
         "Answer": "Raizel"
     },
     {
-        "Question": "Which hero is the following quote from? \"World... World conquest... I never knew I had such an ambitious student.\"",
+        "Question": "Which hero is the following quote from? \"If I lack anything, it is a lady whom I can sacrifice my soul for...\"",
+        "Answer": "Alex"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"Poetry, music and songs...Besides etiquette, there is no difference between a knight and a mercenary.\"",
+        "Answer": "Alex"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"Awaiting orders from Lord is a knight's virtue!\"",
+        "Answer": "Alex"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"Whether we fought for a cause is something history will decide.\"",
+        "Answer": "Alex"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"World... World conquest... I never knew I had such an ambitious student!\"",
         "Answer": "Alfred"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"I can't forgive anyone who disturbs the world's order!\"",
+        "Answer": "Alfred"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"You want me to fight too? Are you serious?\"",
+        "Answer": "Angela"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"Don't order me around! Stop giving me orders!\"",
+        "Answer": "Angela"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"Don't order...me around....Waaa...\"",
+        "Answer": "Angela"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"Everyone kneeling before me. That's what I want.\"",
+        "Answer": "Angela"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"Don't touch me! I can hear you just fine!\"",
+        "Answer": "Azrael"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"What am I waiting for? I'm waiting for an end to everything.\"",
+        "Answer": "Azrael"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"Is it time to take matters into my own hands? Hmph. I will finish this quickly.\"",
+        "Answer": "Azrael"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"What a meaningless, boring fight...\"",
+        "Answer": "Azrael"
     },
     {
         "Question": "Which hero is the following quote from? \"I am the Noblesse. I stand where I belong.\"",
@@ -104,6 +156,10 @@
         "Answer": "2569"
     },
     {
+        "Question": "When did Season 2 come to the game?",
+        "Answer": "4/20 2017"
+    },
+    {
         "Question": "What is the highest %Attack mod you can get at 5*?",
         "Answer": "10%"
     },
@@ -162,10 +218,6 @@
     {
         "Question": "Which hero is the following quote from? \"For me, paradise is where you and I can be together!\"",
         "Answer": "Valkyrie"
-    },
-    {
-        "Question": "How many event coins does a 3* Transcendence Hammer usually cost in Event Shops?",
-        "Answer": "1800"
     },
     {
         "Question": "How many floors are there in total for Tower of Dawn?",
@@ -282,7 +334,8 @@
     {
         "Question": "What is the name of this hero? http://i.imgur.com/eXTs0NT.png",
         "Answer": "Chenny"
-    },{
+    },
+    {
         "Question": "What is the name of this hero? http://i.imgur.com/s3LIfxi.png",
         "Answer": "Chris"
     },
@@ -361,7 +414,8 @@
     {
         "Question": "What is the name of this hero? http://i.imgur.com/vkRMpEb.png",
         "Answer": "Klein"
-    },{
+    },
+    {
         "Question": "What is the name of this hero? http://i.imgur.com/oV927Hu.png",
         "Answer": "Krut"
     },
@@ -440,7 +494,8 @@
     {
         "Question": "What is the name of this hero? http://i.imgur.com/Ibff9hZ.png",
         "Answer": "Poni"
-    },{
+    },
+    {
         "Question": "What is the name of this hero? http://i.imgur.com/UshsMFh.png",
         "Answer": "Raboff"
     },
