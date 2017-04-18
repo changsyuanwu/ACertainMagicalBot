@@ -1,23 +1,27 @@
 const Discord = require("discord.js");
 const path = require("path");
 const sql = require('sqlite');
-sql.open('./scores.sqlite');
 const bot = new Discord.Client();
 const launchLocation = __dirname;
 const config = require(path.join(launchLocation, "config.json"));
 const help = require(path.join(launchLocation, "help.json"));
-const setDataTable = require(path.join(launchLocation, "Data", "FWTSetData.json"));
-const aliasListSets = require(path.join(launchLocation, "Data", "FWTSetAliases.json"));
-const aliasListHeroes = require(path.join(launchLocation, "Data", "FWTHeroAliases.json"));
-const rainbowRotation = require(path.join(launchLocation, "Data", "FWTSetRotation.json"));
-const heroDataTable = require(path.join(launchLocation, "Data", "FWTHeroStats.json"));
-const itemDataTable = require(path.join(launchLocation, "Data", "FWTItemMaxStats.json"));
-const heroSkillTable = require(path.join(launchLocation, "Data", "FWTHeroSkills.json"));
-const triviaTable = require(path.join(launchLocation, "Data", "FWTTrivia.json"));
+const Logger = require(path.join(launchLocation, "src", "Utilities", "Logger.js"));
+const moe = require(path.join(launchLocation, "src", "Moe.json"));
+const setDataTable = require(path.join(launchLocation, "src", "Data", "FWTSetData.json"));
+const aliasListSets = require(path.join(launchLocation, "src", "Data", "FWTSetAliases.json"));
+const aliasListHeroes = require(path.join(launchLocation, "src", "Data", "FWTHeroAliases.json"));
+const rainbowRotation = require(path.join(launchLocation, "src", "Data", "FWTSetRotation.json"));
+const heroDataTable = require(path.join(launchLocation, "src", "Data", "FWTHeroStats.json"));
+const itemDataTable = require(path.join(launchLocation, "src", "Data", "FWTItemMaxStats.json"));
+const heroSkillTable = require(path.join(launchLocation, "src", "Data", "FWTHeroSkills.json"));
+const triviaTable = require(path.join(launchLocation, "src", "Data", "FWTTrivia.json"));
+const soulGearTable = require(path.join(launchLocation, "src", "Data", "FWTSoulGear.json"));
 const flagNames = ["confusion", "charm", "stun", "taunt", "disarm", "immobilize", "decrease movement", "dot", "mp burn", "skill cost", "defense ignore", "defense ignoring damage", "weakening", "buff removal", "hp% damage", "defense decrease", "attack decrease", "hp drain", "mastery decrease", "instant death", "decrease crit rate", "push/pull/switch", "passive attack", "seal", "sleep", "melee", "ranged"];
 
+sql.open(path.join(launchLocation, "src", "scores.sqlite"));
 var triviaChannels = new Set([]);
 var triviaLastQuestion = 0;
+const logger = new Logger(config.noLogs);
 
 // Declaring constants/loading databases
 
@@ -27,7 +31,7 @@ var triviaLastQuestion = 0;
 for (let i = 0, len = setDataTable.length; i < len; i++) {
     for (let j = 0, weeks = rainbowRotation.length; j < weeks; j++) {
         let grade = setDataTable[i]["Tier"].length.toString() + setDataTable[i]["Grade"];
-        if (rainbowRotation[j][grade] == setDataTable[i]["Name"]) {
+        if (rainbowRotation[j][grade] === setDataTable[i]["Name"]) {
             setDataTable[i]["Last Time in the Rotation"] = rainbowRotation[j]["Week"];
         }
     }
@@ -79,30 +83,33 @@ function createListOutput(list) {
 
 function findNameByAlias(alias, type) {
     alias = alias.toLowerCase();
-    if (type == "set") {
+    if (type === "set") {
         var aliasList = aliasListSets;
-    } else if (type == "hero") {
+    } else if (type === "hero") {
         var aliasList = aliasListHeroes;
     } else {
         return alias;
     }
     for (var i = 0; i < aliasList.length; i++) {
         for (var j = 0; j < aliasList[i]["aliases"].length; j++) {
-            if (aliasList[i]["aliases"][j] == alias) return aliasList[i]["name"];
+            if (aliasList[i]["aliases"][j] === alias) return aliasList[i]["name"];
         }
     }
     return "nosuchalias";
 } // Finds the correct name from the alias
 
 function findListedPropertyData(alias, type) {
-    if (type == "set") {
+    if (type === "set") {
         var name = findNameByAlias(alias, "set");
         var dataTable = setDataTable;
-    } else {
+    } else if (type === "hero") {
         var name = findNameByAlias(alias, "hero");
         var dataTable = heroDataTable;
+    } else if (type === "soulgear") {
+        var name = findNameByAlias(alias, "hero");
+        var dataTable = soulGearTable;
     }
-    if (name == "nosuchalias") {
+    if (name === "nosuchalias") {
         return "nosuchdata";
     }
     var data = dataTable.find(dataItem => dataItem.Name === name);
@@ -115,30 +122,29 @@ function SetsOfTheWeek(WeekRequested) {
 } // Finds the set rotation for the requested week
 
 function findSingleData(alias, data, type) {
-    if (type == "item") {
+    if (type === "item") {
         var dataTable = itemDataTable;
         var name = findNameByAlias(alias, "item");
-    } else if (type == "stat") {
+    } else if (type === "stat") {
         var dataTable = heroDataTable;
         var name = findNameByAlias(alias, "hero");
-    } else if (type == "skill") {
+    } else if (type === "skill") {
         var dataTable = heroSkillTable;
         var name = findNameByAlias(alias, "hero");
     }
-
     var dataString = "";
     for (var i = 0; i < dataTable.length; i++) {
-        if (dataTable[i]["Name"] == name) {
+        if (dataTable[i]["Name"] === name) {
             dataString = dataTable[i][data];
         }
     }
     return dataString;
 } // Finds a single piece of data
 
-function findSets(grade, tier) {
+function findSets(tier, grade) {
     var dataString = "";
     for (var i = 0; i < setDataTable.length; i++) {
-        if ((setDataTable[i]["Grade"] == grade) && (setDataTable[i]["Tier"] == tier)) {
+        if ((setDataTable[i]["Tier"] === tier) && (setDataTable[i]["Grade"] == grade)) {
             dataString = dataString + "\n" + setDataTable[i]["Name"];
         }
     }
@@ -148,10 +154,8 @@ function findSets(grade, tier) {
 function findProperty(propertyRequested, effectRequested) {
     var dataString = "";
     for (var i = 0, heronum = heroDataTable.length; i < heronum; i++) {
-        if (heroDataTable[i][propertyRequested].includes(effectRequested)) {
+        if ((heroDataTable[i][propertyRequested] != undefined) && (heroDataTable[i][propertyRequested].includes(effectRequested))) {
             dataString = dataString + "\n" + heroDataTable[i]["Name"];
-        } else {
-            dataString = "Error";
         }
     }
     return dataString;
@@ -175,7 +179,7 @@ function trivia(message) {
     triviaChannels.add(message.channel.id);
     do {
         var question = getRandomInt(1, triviaTable.length - 1);
-    } while (question == triviaLastQuestion);
+    } while (question === triviaLastQuestion);
     triviaLastQuestion = question;
     var askedQuestion = triviaTable[question]["Question"];
     var correctAnswer = triviaTable[question]["Answer"];
@@ -183,7 +187,7 @@ function trivia(message) {
     wait(1500)
         .then(() => message.channel.sendMessage(askedQuestion))
         .then(() => {
-            message.channel.awaitMessages(response => response.content.toLowerCase() == correctAnswer.toLowerCase(), {
+            message.channel.awaitMessages(response => response.content.toLowerCase() === correctAnswer.toLowerCase(), {
                 max: 1,
                 time: 15000,
                 errors: ['time'],
@@ -258,6 +262,24 @@ function wait(time) {
     });
 } // Waits for a set amount of time
 
+function prune(message, value) {
+    value = Math.min(value, 100);
+    message.channel.fetchMessages({ limit: 100 }).then(messages => {
+        const filteredMessages = messages.filter(message => message.author.id === bot.user.id);
+        var filteredArray = filteredMessages.array();
+
+        message.channel.bulkDelete(filteredArray.slice(0, value));
+    }).catch(err => console.error(err));
+} // Prunes messages from bot
+
+function status() {
+    var statusCycle = ["https://github.com/TheMasterDodo/ACertainMagicalBot", "Use !help for info", "Spamming !whale", `Serving ${bot.guilds.size} servers`, `Serving ${bot.channels.size} channels`, `Serving ${bot.users.size} users`];
+    var random = getRandomInt(0, statusCycle.length - 1);
+    bot.user.setGame(statusCycle[random]);
+    logger.log(2, `Set status to ${statusCycle[random]}`);
+    setTimeout(status, 300000); // Cycles every 5 minutes
+} // Sets the status message of the bot
+
 // End of other functions
 
 //--------------------------------------------------------------------------------------------
@@ -269,12 +291,14 @@ bot.on("message", message => {
 
     if (!message.content.startsWith(config.prefix)) return;
     // Ignore messages that don't start with the prefix
-
+    
     if (message.author.bot) return;
     // Checks if sender is a bot
 
-    const args = message.content.split(" ");
-    const cont = message.content.slice(message.content.indexOf(" ") + 1);
+    const args = message.content.slice(1).split(" ");
+    const msgContent = message.content.slice(message.content.indexOf(" ") + 1);
+
+    logger.logFrom(message.channel, 1, `[command: ${args[0]}]`);
 
     if (message.content.startsWith(config.prefix + "ping")) {
         message.channel.sendMessage("pong! [Response time: " + bot.ping + "ms]");
@@ -291,8 +315,8 @@ bot.on("message", message => {
     } // Gives a nice warm hug
 
 
-    else if (message.content.startsWith(config.prefix + "nameset") && (message.author.id == config.ownerID)) {
-        if (args.length == 1) {
+    else if (message.content.startsWith(config.prefix + "nameset") && (message.author.id === config.ownerID)) {
+        if (args.length === 1) {
             message.guild.member(bot.user).setNickname("A Certain Magical Bot");
         } else {
             message.guild.member(bot.user).setNickname(message.content.slice(message.content.indexOf(" ")));
@@ -312,13 +336,24 @@ bot.on("message", message => {
     } // Calculator function
 
 
+    else if ((message.content.startsWith(config.prefix + "prune")) && (message.author.id === config.ownerID)) {
+        if (args.length >= 2) {
+            prune(message, args[2] - 1);
+        } else if (args.length === 1) {
+            prune(message, 1 - 1);
+        } else {
+            message.channel.sendMessage("Invalid request!");
+        }
+    } // Prunes messages from bot (Prunes 1 more than the command)
+
+
     else if (message.content.startsWith(config.prefix + "id")) {
-        if (args.length == 1) {
+        if (args.length === 1) {
             message.reply(`${message.author.id}`);
         } else {
             message.channel.sendMessage(message.mentions.users.first().id);
         }
-    } // Tells the user their ID
+    } // Looks up an user's Discord ID
 
 
     else if (message.content.startsWith(config.prefix + "choose")) {
@@ -342,13 +377,13 @@ bot.on("message", message => {
 
 
     else if (message.content.startsWith(config.prefix + "tuturu")) {
-        message.channel.sendFile(path.join(launchLocation, "Images", "Tuturu.png"));
+        message.channel.sendFile(path.join(launchLocation, "src", "Images", "Tuturu.png"));
     } else if (message.content.startsWith(config.prefix + "moe")) {
-        message.channel.sendFile(path.join(launchLocation, "Images", "Shushu.png"));
+        message.channel.sendFile(moe[getRandomInt(0, moe.length)]);
     } else if (message.content.startsWith(config.prefix + "moa")) {
-        message.channel.sendFile(path.join(launchLocation, "Images", "Moa.png"));
+        message.channel.sendFile(path.join(launchLocation, "src", "Images", "Moa.png"));
     } else if (message.content.startsWith(config.prefix + "tyrant")) {
-        message.channel.sendFile(path.join(launchLocation, "Images", "Tyrant.png"));
+        message.channel.sendFile(path.join(launchLocation, "src", "Images", "Tyrant.png"));
     } // Custom/Anime commands
 
 
@@ -360,7 +395,7 @@ bot.on("message", message => {
     else if (message.content.startsWith(config.prefix + "whale")) {
         var pulls = "";
         var totalPull = "";
-        if ((args[1] > 100) || ((args[1] > 10) && (message.guild.id == "164867600457662464"))) {
+        if ((args[1] > 100) || ((args[1] > 10) && (message.guild.id === "164867600457662464"))) {
             message.channel.sendMessage("```OVERFLOW_ERROR```");
             return;
         }
@@ -387,7 +422,7 @@ bot.on("message", message => {
 
     else if (message.content.startsWith(config.prefix + "set")) {
         if (args.length >= 2) {
-            var setInfo = findListedPropertyData(cont, "set");
+            var setInfo = findListedPropertyData(msgContent, "set");
             if (setInfo != "nosuchdata") {
                 message.channel.sendMessage(setInfo);
             } else {
@@ -428,8 +463,8 @@ bot.on("message", message => {
 
     else if (message.content.startsWith(config.prefix + "effect")) {
         if (args.length >= 2) {
-            var effect = cont;
-            if (effect == "list") {
+            var effect = msgContent;
+            if (effect === "list") {
                 var flags = "";
                 for (var i = 0; i < flagNames.length; i++) {
                     flags = flags + "\n" + capitalize(flagNames[i]);
@@ -485,16 +520,12 @@ bot.on("message", message => {
         message.channel.sendMessage(currentSets);
     } // Searches for current set rotation
 
-    else if (message.content.startsWith(config.prefix + "music")) {
-        
-    }
-
     else if (message.content.startsWith(config.prefix + "triviaquestions")) {
         message.channel.sendMessage(`There are currently ${triviaTable.length - 1} trivia questions available`);
     } // Finds number of trivia questions
 
     else if ((message.content.startsWith(config.prefix + "trivia")) && (!triviaChannels.has(message.channel.id))) {
-        if (message.channel.type == "dm") {
+        if (message.channel.type === "dm") {
             message.channel.sendMessage("Please use this command in a server!");
             return;
         }
@@ -503,7 +534,7 @@ bot.on("message", message => {
     } // Starts a round of FWT trivia
 
     else if (message.content.startsWith(config.prefix + "score")) {
-        if (args.length == 1) {
+        if (args.length === 1) {
             getPoints(message.author.id).then(points => {
                 if (points != 0) {
                     message.channel.sendMessage(`Score for ${message.member.displayName}: ${points} points`);
@@ -522,26 +553,34 @@ bot.on("message", message => {
         }
     } // Looks up how many points an user has
 
+    else if (message.content.startsWith(config.prefix + "soulgear")) {
+        if (args.length >= 2) {
+            var sgData = findListedPropertyData(args[1], "soulgear");
+            if (sgData != "nosuchdata") {
+                message.channel.sendMessage(sgData);
+            } else {
+                message.channel.sendMessage("Unknown Soul Gear!");
+            }
+        } else {
+            message.channel.sendMessage("Invalid request!");
+        }
+    } // Looks up a hero's soul gear
+
 });
 
 // End of all commands
 //--------------------------------------------------------------------------------------------
 
-bot.setInterval(function () {
-    var statusCycle = ["https://github.com/TheMasterDodo/ACertainMagicalBot", "Use !help for info", "Spamming !whale", `Serving ${bot.guilds.size} servers`, `Serving ${bot.channels.size} channels`, `Serving ${bot.users.size} users`];
-    var random = getRandomInt(0, statusCycle.length - 1);
-    bot.user.setGame(statusCycle[random]);
-}, 180000); // Cycles the status message
-
 bot.on('error', (e) => console.error(e));
 bot.on('warn', (e) => console.warn(e));
 process.on("unhandledRejection", err => {
-  console.error("Uncaught Promise Error: \n" + err.stack);
+    logger.log(3, "An error occured!");
+    console.error(err);
 });
 // Captures errors
 
 bot.on("ready", () => {
-    console.log(`Ready to server in ${bot.channels.size} channels on ${bot.guilds.size} servers, for a total of ${bot.users.size} users.`);
+    logger.log(1, `Ready to server in ${bot.channels.size} channels on ${bot.guilds.size} servers, for a total of ${bot.users.size} users.`);
 });
 
-bot.login(config.token);
+bot.login(config.token).then(() => status());
