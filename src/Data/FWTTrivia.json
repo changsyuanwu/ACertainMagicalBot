@@ -521,15 +521,35 @@
         "Answer": "Zero"
     },
     {
-        "Question": "What is the name of this hero? ",
+        "Question": "What is the name of this hero? https://pbs.twimg.com/media/C5T7wxYWIAAHWUK.jpg",
         "Answer": "Aran"
     },
     {
-        "Question": "What is the name of this hero? ",
+        "Question": "What is the name of this hero? https://pbs.twimg.com/media/C5T7xOVWMAA-oEd.jpg",
         "Answer": "Eunwol"
     },
     {
-        "Question": "What is the name of this hero? ",
+        "Question": "What is the name of this hero? https://pbs.twimg.com/media/C5T7wUCWEAEGdZF.jpg",
+        "Answer": "Luminous"
+    },
+    {
+        "Question": "What is the name of this hero? https://scontent.fxds1-1.fna.fbcdn.net/v/t31.0-8/p843x403/17388966_1892274887653488_1246444373660336329_o.jpg?oh=065624776b02feadf70631dfdb03f00a&oe=5999C0C2",
+        "Answer": "Cat Sidhe"
+    },
+    {
+        "Question": "What is the name of this hero? https://scontent.fxds1-1.fna.fbcdn.net/v/t31.0-8/p720x720/17310934_1892275800986730_6097635567793601968_o.jpg?oh=c2806bf53389eca66ce7087f82474e8e&oe=598F5A13",
+        "Answer": "Serphina"
+    },
+    {
+        "Question": "What is the name of this hero? https://scontent.fxds1-1.fna.fbcdn.net/v/t1.0-9/17353176_1888088084738835_2099772338221079428_n.png?oh=800f4e2bfd4124a68e16a3bd87f84dbd&oe=598802D6",
+        "Answer": "Taehwa"
+    },
+    {
+        "Question": "What is the name of this hero? https://pbs.twimg.com/media/C5T7wUCWEAEGdZF.jpg",
+        "Answer": "Luminous"
+    },
+    {
+        "Question": "What is the name of this hero? https://pbs.twimg.com/media/C5T7wUCWEAEGdZF.jpg",
         "Answer": "Luminous"
     }
 ]
