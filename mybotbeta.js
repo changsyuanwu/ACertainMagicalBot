@@ -6,6 +6,7 @@ const launchLocation = __dirname;
 const config = require(path.join(launchLocation, "config.json"));
 const help = require(path.join(launchLocation, "help.json"));
 const Logger = require(path.join(launchLocation, "src", "Utilities", "Logger.js"));
+const moe = require(path.join(launchLocation, "src", "Moe.json"));
 const setDataTable = require(path.join(launchLocation, "src", "Data", "FWTSetData.json"));
 const aliasListSets = require(path.join(launchLocation, "src", "Data", "FWTSetAliases.json"));
 const aliasListHeroes = require(path.join(launchLocation, "src", "Data", "FWTHeroAliases.json"));
@@ -378,7 +379,7 @@ bot.on("message", message => {
     else if (message.content.startsWith(config.prefix + "tuturu")) {
         message.channel.sendFile(path.join(launchLocation, "src", "Images", "Tuturu.png"));
     } else if (message.content.startsWith(config.prefix + "moe")) {
-        message.channel.sendFile("https://img.youtube.com/vi/p6iQozWtWxE/maxresdefault.jpg");
+        message.channel.sendFile(moe[getRandomInt(0, moe.length)]);
     } else if (message.content.startsWith(config.prefix + "moa")) {
         message.channel.sendFile(path.join(launchLocation, "src", "Images", "Moa.png"));
     } else if (message.content.startsWith(config.prefix + "tyrant")) {
