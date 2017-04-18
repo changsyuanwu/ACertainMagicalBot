@@ -352,7 +352,7 @@ bot.on("message", message => {
         } else {
             message.channel.sendMessage(message.mentions.users.first().id);
         }
-    } // Tells the user their ID
+    } // Looks up an user's Discord ID
 
 
     else if (message.content.startsWith(config.prefix + "choose")) {
@@ -574,7 +574,7 @@ bot.on('error', (e) => console.error(e));
 bot.on('warn', (e) => console.warn(e));
 process.on("unhandledRejection", err => {
     logger.log(3, "An error occured!");
-    console.error(err.stack);
+    console.error(err);
 });
 // Captures errors
 
