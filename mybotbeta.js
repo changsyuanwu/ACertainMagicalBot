@@ -3,21 +3,21 @@ const path = require("path");
 const sql = require('sqlite');
 const bot = new Discord.Client();
 const launchLocation = __dirname;
-const Logger = require(path.join(launchLocation, "Utilities", "Logger.js"));
 const config = require(path.join(launchLocation, "config.json"));
 const help = require(path.join(launchLocation, "help.json"));
-const setDataTable = require(path.join(launchLocation, "Data", "FWTSetData.json"));
-const aliasListSets = require(path.join(launchLocation, "Data", "FWTSetAliases.json"));
-const aliasListHeroes = require(path.join(launchLocation, "Data", "FWTHeroAliases.json"));
-const rainbowRotation = require(path.join(launchLocation, "Data", "FWTSetRotation.json"));
-const heroDataTable = require(path.join(launchLocation, "Data", "FWTHeroStats.json"));
-const itemDataTable = require(path.join(launchLocation, "Data", "FWTItemMaxStats.json"));
-const heroSkillTable = require(path.join(launchLocation, "Data", "FWTHeroSkills.json"));
-const triviaTable = require(path.join(launchLocation, "Data", "FWTTrivia.json"));
-const soulGearTable = require(path.join(launchLocation, "Data", "FWTSoulGear.json"));
+const Logger = require(path.join(launchLocation, "src", "Utilities", "Logger.js"));
+const setDataTable = require(path.join(launchLocation, "src", "Data", "FWTSetData.json"));
+const aliasListSets = require(path.join(launchLocation, "src", "Data", "FWTSetAliases.json"));
+const aliasListHeroes = require(path.join(launchLocation, "src", "Data", "FWTHeroAliases.json"));
+const rainbowRotation = require(path.join(launchLocation, "src", "Data", "FWTSetRotation.json"));
+const heroDataTable = require(path.join(launchLocation, "src", "Data", "FWTHeroStats.json"));
+const itemDataTable = require(path.join(launchLocation, "src", "Data", "FWTItemMaxStats.json"));
+const heroSkillTable = require(path.join(launchLocation, "src", "Data", "FWTHeroSkills.json"));
+const triviaTable = require(path.join(launchLocation, "src", "Data", "FWTTrivia.json"));
+const soulGearTable = require(path.join(launchLocation, "src", "Data", "FWTSoulGear.json"));
 const flagNames = ["confusion", "charm", "stun", "taunt", "disarm", "immobilize", "decrease movement", "dot", "mp burn", "skill cost", "defense ignore", "defense ignoring damage", "weakening", "buff removal", "hp% damage", "defense decrease", "attack decrease", "hp drain", "mastery decrease", "instant death", "decrease crit rate", "push/pull/switch", "passive attack", "seal", "sleep", "melee", "ranged"];
 
-sql.open(path.join(launchLocation, "scores.sqlite"));
+sql.open(path.join(launchLocation, "src", "scores.sqlite"));
 var triviaChannels = new Set([]);
 var triviaLastQuestion = 0;
 const logger = new Logger(config.noLogs);
@@ -376,13 +376,13 @@ bot.on("message", message => {
 
 
     else if (message.content.startsWith(config.prefix + "tuturu")) {
-        message.channel.sendFile(path.join(launchLocation, "Images", "Tuturu.png"));
+        message.channel.sendFile(path.join(launchLocation, "src", "Images", "Tuturu.png"));
     } else if (message.content.startsWith(config.prefix + "moe")) {
         message.channel.sendFile("https://img.youtube.com/vi/p6iQozWtWxE/maxresdefault.jpg");
     } else if (message.content.startsWith(config.prefix + "moa")) {
-        message.channel.sendFile(path.join(launchLocation, "Images", "Moa.png"));
+        message.channel.sendFile(path.join(launchLocation, "src", "Images", "Moa.png"));
     } else if (message.content.startsWith(config.prefix + "tyrant")) {
-        message.channel.sendFile(path.join(launchLocation, "Images", "Tyrant.png"));
+        message.channel.sendFile(path.join(launchLocation, "src", "Images", "Tyrant.png"));
     } // Custom/Anime commands
 
 
