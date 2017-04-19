@@ -1670,5 +1670,104 @@
     "2pc": "Increases Defense by 10%",
     "3pc": "Increases Attack by 30% and Crit by 1000 for 4 turns",
     "Restrictions": "Exclusive to Eunwol (Maplestory 2 Hero)"
+  },
+  {
+    "Name": "Weight of the Protector",
+    "Slot": "III",
+    "Rareness": "★★★★★★",
+    "Weapon": "",
+    "Armor": "",
+    "Accessory": "",
+    "2pc": "Increases Resistance by 30% when HP falls below 80%",
+    "3pc": "Increases Attack by 60% and Max HP by 25% for 3 turns",
+    "Restrictions": "Exclusive to Ildo (Season 2 Hero)"
+  },
+  {
+    "Name": "Finishing Touch",
+    "Slot": "III",
+    "Rareness": "★★★★★★",
+    "Weapon": "",
+    "Armor": "",
+    "Accessory": "",
+    "2pc": "Increases Attack by 10% for every enemy attacked",
+    "3pc": "Increases Attack by 60% and decrease skill MP cost by 30% for 3 turns",
+    "Restrictions": "Exclusive to Taehwa (Season 2 Hero)"
+  },
+  {
+    "Name": "Fiery Dancer",
+    "Slot": "III",
+    "Rareness": "★★★★★★",
+    "Weapon": "",
+    "Armor": "",
+    "Accessory": "",
+    "2pc": "Decrease incoming damage by 10% while on Lava terrain",
+    "3pc": "Increases Attack by 60% and Critical Damage by 10% for 3 turns",
+    "Restrictions": "Exclusive to Hongyeom (Season 2 Hero)"
+  },
+  {
+    "Name": "Black Dragon's Armament I",
+    "Slot": "I",
+    "Rareness": "★★★",
+    "Weapon": "",
+    "Armor": "",
+    "Accessory": "",
+    "2pc": "Increase Attack by 250",
+    "3pc": "Increase Attack by 550",
+    "Restrictions": "Exclusive to Thanatos (Season 2 Login Reward Hero)"
+  },
+  {
+    "Name": "Black Dragon's Armament II",
+    "Slot": "II",
+    "Rareness": "★★★★",
+    "Weapon": "",
+    "Armor": "",
+    "Accessory": "",
+    "2pc": "Increases Dodge by 900",
+    "3pc": "Increases Critical Damage by 5%",
+    "Restrictions": "Exclusive to Thanatos (Season 2 Login Reward Hero)"
+  },
+  {
+    "Name": "Guide of the Apocalypse",
+    "Slot": "III",
+    "Rareness": "★★★★★★",
+    "Weapon": "",
+    "Armor": "",
+    "Accessory": "",
+    "2pc": "Increases Attack by 2200 for 1 turn upon killing an enemy",
+    "3pc": "Increases Attack by 60% and Movement by 1 for 3 turns",
+    "Restrictions": "Exclusive to Thanatos (Season 2 Login Reward Hero)"
+  },
+  {
+    "Name": "Black Dragon's Armament IV",
+    "Slot": "IV",
+    "Rareness": "★★★",
+    "Weapon": "",
+    "Armor": "",
+    "Accessory": "",
+    "2pc": "Increase Defense by 350",
+    "3pc": "Increase Defense by 450",
+    "Restrictions": "Exclusive to Thanatos (Season 2 Login Reward Hero)"
+  },
+  {
+    "Name": "Black Dragon's Armament V",
+    "Slot": "V",
+    "Rareness": "★★★★★",
+    "Weapon": "",
+    "Armor": "",
+    "Accessory": "",
+    "2pc": "Increase HP by 3250",
+    "3pc": "Increase Critical Rate by 650",
+    "Restrictions": "Exclusive to Thanatos (Season 2 Login Reward Hero)"
+  },
+  {
+    "Name": "",
+    "Slot": "",
+    "Rareness": "★★★★★★",
+    "Weapon": "",
+    "Armor": "",
+    "Accessory": "",
+    "2pc": "",
+    "3pc": "",
+    "Restrictions": ""
   }
 ]

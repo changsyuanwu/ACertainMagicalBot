@@ -200,7 +200,8 @@
     "aliases": [
       "blue dragon's blessing",
       "blue dragon",
-      "bd"
+      "bd",
+      "bdd"
     ]
   },
   {
@@ -1195,5 +1196,127 @@
       "white knight",
       "wko"
     ]
+  },
+  {
+    "name": "Weight of the Protector",
+    "aliases": [
+      "ildo",
+      "weight",
+      "protector",
+      "weight of the protector"
+    ]
+  },
+  {
+    "name": "Finishing Touch",
+    "aliases": [
+      "taehwa",
+      "finishing touch",
+      "artist",
+      "artisan"
+    ]
+  },
+  {
+    "name": "Fiery Dancer",
+    "aliases": [
+      "hongyeom",
+      "fiery dancer"
+    ]
+  },
+  {
+    "name": "Black Dragon's Armament I",
+    "aliases": [
+      "black dragon 1",
+      "black dragon i",
+      "black dragon's armament 1",
+      "black dragon's armament i",
+      "black dragons armament 1",
+      "black dragons armament i",
+      "thanatos 1",
+      "thanatos i"
+    ]
+  },
+  {
+    "name": "Black Dragon's Armament II",
+    "aliases": [
+      "black dragon 2",
+      "black dragon ii",
+      "black dragon's armament 2",
+      "black dragon's armament ii",
+      "black dragons armament 2",
+      "black dragons armament ii",
+      "thanatos 2",
+      "thanatos ii"
+    ]
+  },
+  {
+    "name": "Guide of the Apocalypse",
+    "aliases": [
+      "thanatos",
+      "guide of the apocalypse",
+      "apocalypse"
+    ]
+  },
+  {
+    "name": "Black Dragon's Armament IV",
+    "aliases": [
+      "black dragon 4",
+      "black dragon iv",
+      "black dragon's armament 4",
+      "black dragon's armament iv",
+      "black dragons armament 4",
+      "black dragons armament iv",
+      "thanatos 4",
+      "thanatos iv"
+    ]
+  },
+  {
+    "name": "Black Dragon's Armament V",
+    "aliases": [
+      "black dragon 5",
+      "black dragon v",
+      "black dragon's armament 5",
+      "black dragon's armament v",
+      "black dragons armament 5",
+      "black dragons armament v",
+      "thanatos 5",
+      "thanatos v"
+    ]
+  },
+  {
+    "name": "",
+    "aliases": [
+      ""
+    ]
+  },
+  {
+    "name": "",
+    "aliases": [
+      ""
+    ]
+  },
+  {
+    "name": "",
+    "aliases": [
+      ""
+    ]
+  },
+  {
+    "name": "",
+    "aliases": [
+      ""
+    ]
+  },
+  {
+    "name": "",
+    "aliases": [
+      ""
+    ]
+  },
+  {
+    "name": "",
+    "aliases": [
+      ""
+    ]
   }
+  
 ]
