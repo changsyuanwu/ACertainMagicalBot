@@ -239,9 +239,8 @@ function getRandomInt(min, max) {
 function PullOrNot() {
     var number = Math.random();
     var YesNo;
-    if (number <= 0.5) YesNo = path.join(launchLocation, "Images", "Pull.png");
-    else YesNo = path.join(launchLocation, "Images", "Don't Pull.png");
-    return YesNo;
+    if (number <= 0.5) return path.join(launchLocation, "src", "Images", "Pull.png");
+    else return path.join(launchLocation, "src", "Images", "Don't Pull.png");
 } // Does the 50/50 pull or not
 
 function findEmojiFromGuildByName(guild, emoji_name) {
@@ -326,7 +325,7 @@ bot.on("message", message => {
 
 
     else if ((message.content.startsWith(config.prefix + "invite")) && (message.author.id === config.ownerID)) {
-        message.mentions.users.first().sendMessage();("https://discordapp.com/oauth2/authorize?permissions=2012740672&scope=bot&client_id=269000767908610059");
+        message.mentions.users.first().sendMessage("https://discordapp.com/oauth2/authorize?permissions=2012740672&scope=bot&client_id=269000767908610059");
     } // Sends the invite link (Only owner can do it)
 
 
