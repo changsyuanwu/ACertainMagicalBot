@@ -325,6 +325,11 @@ bot.on("message", message => {
     } // Sets the bot's name (Only owner can do it)
 
 
+    else if ((message.content.startsWith(config.prefix + "invite")) && (message.author.id === config.ownerID)) {
+        message.mentions.users.first().sendMessage();("https://discordapp.com/oauth2/authorize?permissions=2012740672&scope=bot&client_id=269000767908610059");
+    } // Sends the invite link (Only owner can do it)
+
+
     else if (message.content.startsWith(config.prefix + "calc")) {
         var input = message.content.replace(/[^-()\d/*+.]/g, '');
         if (input != "") {
@@ -365,6 +370,7 @@ bot.on("message", message => {
             message.channel.sendMessage("Invalid request!");
         }
     } // Bot makes a choice
+
 
     else if (message.content.startsWith(config.prefix + "github")) {
         message.channel.sendMessage("https://github.com/TheMasterDodo/ACertainMagicalBot");
