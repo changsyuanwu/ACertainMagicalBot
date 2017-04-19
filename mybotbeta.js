@@ -1,38 +1,52 @@
+// Modules
 const Discord = require("discord.js");
 const path = require("path");
 const sql = require('sqlite');
 const bot = new Discord.Client();
+
+// Utils
 const launchLocation = __dirname;
 const config = require(path.join(launchLocation, "config.json"));
 const help = require(path.join(launchLocation, "help.json"));
 const Logger = require(path.join(launchLocation, "src", "Utilities", "Logger.js"));
 const moe = require(path.join(launchLocation, "src", "Moe.json"));
+
+// Datatables
 const setDataTable = require(path.join(launchLocation, "src", "Data", "FWTSetData.json"));
 const aliasListSets = require(path.join(launchLocation, "src", "Data", "FWTSetAliases.json"));
 const aliasListHeroes = require(path.join(launchLocation, "src", "Data", "FWTHeroAliases.json"));
-const rainbowRotation = require(path.join(launchLocation, "src", "Data", "FWTSetRotation.json"));
 const heroDataTable = require(path.join(launchLocation, "src", "Data", "FWTHeroStats.json"));
 const itemDataTable = require(path.join(launchLocation, "src", "Data", "FWTItemMaxStats.json"));
 const heroSkillTable = require(path.join(launchLocation, "src", "Data", "FWTHeroSkills.json"));
 const triviaTable = require(path.join(launchLocation, "src", "Data", "FWTTrivia.json"));
 const soulGearTable = require(path.join(launchLocation, "src", "Data", "FWTSoulGear.json"));
+const featuredSetTable = require(path.join(launchLocation, "src", "Data", "FWTFeaturedSets.json"));
+
+// Legacy Data
+const oldSetDataTable = require(path.join(launchLocation, "src", "Legacy", "OldFWTSetData.json"));
+const oldSetRotation = require(path.join(launchLocation, "src", "Legacy", "OldFWTSetRotation.json"));
+
+// Effects
 const flagNames = ["confusion", "charm", "stun", "taunt", "disarm", "immobilize", "decrease movement", "dot", "mp burn", "skill cost", "defense ignore", "defense ignoring damage", "weakening", "buff removal", "hp% damage", "defense decrease", "attack decrease", "hp drain", "mastery decrease", "instant death", "decrease crit rate", "push/pull/switch", "passive attack", "seal", "sleep", "melee", "ranged"];
 
 sql.open(path.join(launchLocation, "src", "scores.sqlite"));
+
+// Trivia
 var triviaChannels = new Set([]);
 var triviaLastQuestion = 0;
+
+// Logger
 const logger = new Logger(config.noLogs);
 
-// Declaring constants/loading databases
 
 //--------------------------------------------------------------------------------------------
 
 
-for (let i = 0, len = setDataTable.length; i < len; i++) {
-    for (let j = 0, weeks = rainbowRotation.length; j < weeks; j++) {
-        let grade = setDataTable[i]["Tier"].length.toString() + setDataTable[i]["Grade"];
-        if (rainbowRotation[j][grade] === setDataTable[i]["Name"]) {
-            setDataTable[i]["Last Time in the Rotation"] = rainbowRotation[j]["Week"];
+for (let i = 0, len = oldSetDataTable.length; i < len; i++) {
+    for (let j = 0, weeks = oldSetRotation.length; j < weeks; j++) {
+        let grade = oldSetDataTable[i]["Tier"].length.toString() + oldSetDataTable[i]["Grade"];
+        if (oldSetRotation[j][grade] === oldSetDataTable[i]["Name"]) {
+            oldSetDataTable[i]["Last Time in the Rotation"] = oldSetRotation[j]["Week"];
         }
     }
 }   // Adds the last time in rotation data to the set data
@@ -116,9 +130,9 @@ function findListedPropertyData(alias, type) {
     return createListOutput(data);
 } // Finds a list of data with properties
 
-function SetsOfTheWeek(WeekRequested) {
-    var rainbowData = rainbowRotation[rainbowRotation.length - 1 - WeekRequested];
-    return createListOutput(rainbowData);
+function findFeaturedSets(cycleRequested) {
+    var featuredSets = featuredSetTable[featuredSetTable.length - 1 - cycleRequested];
+    return createListOutput(featuredSets);
 } // Finds the set rotation for the requested week
 
 function findSingleData(alias, data, type) {
@@ -141,10 +155,10 @@ function findSingleData(alias, data, type) {
     return dataString;
 } // Finds a single piece of data
 
-function findSets(tier, grade) {
+function findSets(slot, rareness) {
     var dataString = "";
     for (var i = 0; i < setDataTable.length; i++) {
-        if ((setDataTable[i]["Tier"] === tier) && (setDataTable[i]["Grade"] == grade)) {
+        if ((setDataTable[i]["Slot"] === slot) && (setDataTable[i]["Rareness"] === rareness)) {
             dataString = dataString + "\n" + setDataTable[i]["Name"];
         }
     }
@@ -222,9 +236,9 @@ function trivia(message) {
 
 //--------------------------------------------------------------------------------------------
 
-function generateTier(tier) {
+function generateRareness(rareness) {
     var setTier = "";
-    for (var i = 0; i < tier; i++) {
+    for (var i = 0; i <rareness; i++) {
         setTier = setTier + "★";
     }
     return setTier;
@@ -383,7 +397,6 @@ bot.on("message", message => {
     } // Tadaima ("I'm home")
 
 
-
     else if (message.content.startsWith(config.prefix + "tuturu")) {
         message.channel.sendFile(path.join(launchLocation, "src", "Images", "Tuturu.png"));
     } else if (message.content.startsWith(config.prefix + "moa")) {
@@ -397,7 +410,6 @@ bot.on("message", message => {
             message.channel.sendFile(moe[i]);
         }
     } // Custom/Anime commands
-
 
 
     else if (message.content.startsWith(config.prefix + "pull")) {
@@ -425,7 +437,7 @@ bot.on("message", message => {
 
     else if (message.content.startsWith(config.prefix + "sets")) {
         if (args.length >= 3) {
-            var setInfo = findSets(generateTier(args[1]), args[2].toUpperCase());
+            var setInfo = findSets(args[1].toUpperCase(), generateRareness(args[2]));
             message.channel.sendMessage(setInfo);
         } else {
             message.channel.sendMessage("Invalid request!");
@@ -524,11 +536,11 @@ bot.on("message", message => {
 
     else if (message.content.startsWith(config.prefix + "rainbow")) {
         if (args.length >= 2) {
-            var WeekRequested = args[1];
+            var cycleRequested = args[1];
         } else {
-            WeekRequested = 0;
+            cycleRequested = 0;
         }
-        const currentSets = SetsOfTheWeek(WeekRequested);
+        const currentSets = findFeaturedSets(cycleRequested);
         message.channel.sendMessage(currentSets);
     } // Searches for current set rotation
 
