@@ -19,13 +19,15 @@
 
     "**!triviaquestions**: Returns the number of trivia questions that are currently available",
 
-    "**!score <user>**: Find the trivia score of the mentioned user. If no user is mentioned, the one who used the command is used",
+    "**!score <user>**: Finds the trivia score of the mentioned user. If no user is mentioned, the one who used the command is used",
+
+    "**!highscores**: Finds the top 10 leaderboard of Fantasy War Tactics Trivia",
     
     "**!pull**: Bot does a 50/50 between pull and don't pull",
 
     "**!whale <number>**: Simulates a 10x pull the number of times specified. Assumes <1> if no number is entered",
 
-    "**!rainbow <number>**: Retrieves the sets in rotation for the number of weeks back from current (Ex. <1> would be last week), leave blank for current week",
+    "**!rainbow <number>**: Retrieves the featured sets for the number of cycles back from current (Ex. <1> would be last cycle's sets), leave blank for current sets)",
 
     "**!effect <effect>**: Finds all the heroes who can inflict the requested effect. <list> will list available effects. (Ex. <stun> finds all the heroes who can stun)",
 
@@ -39,7 +41,7 @@
 
     "**!skill <heroAlias> <skillNumber>**: Finds the skill data for the requested skill. (Ex. <yeka> <3> finds the data for Yekaterina's 3rd skill) **<WORK IN PROGRESS>**",
 
-    "**!sets <setTier> <setGrade>**: Finds all the sets at the requested grade and tier. (Ex. <5> <SS> finds all the SS sets at 5*)",
+    "**!sets <setSlot> <setRareness>**: Finds all the sets at the requested grade and tier. (Ex. <IV> <6> finds all the 6* sets at slot IV)",
 
     "**!set <setAlias>**: Finds the data for the requested set. (Ex. <gr> finds all the data for the Super Ranger: Green set)",
 
