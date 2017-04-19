@@ -366,6 +366,9 @@ bot.on("message", message => {
         }
     } // Bot makes a choice
 
+    else if (message.content.startsWith(config.prefix + "github")) {
+        message.channel.sendMessage("https://github.com/TheMasterDodo/ACertainMagicalBot");
+    } // Sends the GitHub repository link
 
 
     else if (message.content.startsWith(config.prefix + "tadaima") && (message.content.includes("maid"))) {
@@ -378,12 +381,16 @@ bot.on("message", message => {
 
     else if (message.content.startsWith(config.prefix + "tuturu")) {
         message.channel.sendFile(path.join(launchLocation, "src", "Images", "Tuturu.png"));
-    } else if (message.content.startsWith(config.prefix + "moe")) {
-        message.channel.sendFile(moe[getRandomInt(0, moe.length)]);
     } else if (message.content.startsWith(config.prefix + "moa")) {
         message.channel.sendFile(path.join(launchLocation, "src", "Images", "Moa.png"));
     } else if (message.content.startsWith(config.prefix + "tyrant")) {
         message.channel.sendFile(path.join(launchLocation, "src", "Images", "Tyrant.png"));
+    } else if (message.content.startsWith(config.prefix + "moe")) {
+        message.channel.sendFile(moe[getRandomInt(0, moe.length)]);
+    } else if (message.content.startsWith(config.prefix + "doodoo")) {
+        for (var i = 0; i < moe.length; i++) {
+            message.channel.sendFile(moe[i]);
+        }
     } // Custom/Anime commands
 
 
