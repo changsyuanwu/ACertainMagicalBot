@@ -273,7 +273,7 @@ function prune(message, value) {
 
 function status() {
     var statusCycle = ["https://github.com/TheMasterDodo/ACertainMagicalBot", "Use !help for info", "Spamming !whale", `Serving ${bot.guilds.size} servers`, `Serving ${bot.channels.size} channels`, `Serving ${bot.users.size} users`];
-    var random = getRandomInt(0, statusCycle.length - 1);
+    var random = getRandomInt(0, statusCycle.length);
     bot.user.setGame(statusCycle[random]);
     logger.log(2, `Set status to ${statusCycle[random]}`);
     setTimeout(status, 300000); // Cycles every 5 minutes
@@ -290,7 +290,7 @@ bot.on("message", message => {
 
     if (!message.content.startsWith(config.prefix)) return;
     // Ignore messages that don't start with the prefix
-    
+
     if (message.author.bot) return;
     // Checks if sender is a bot
 
@@ -564,6 +564,17 @@ bot.on("message", message => {
             });
         }
     } // Looks up how many points an user has
+
+    else if (message.content.startsWith(config.prefix + "highscores")) {
+        var msg = "__**Fantasy War Tactics Trivia TOP 10**__";
+
+        sql.all(`SELECT userID, points FROM scores ORDER BY points DESC LIMIT 10`).then((rows) => {
+            for (var i = 0; i < 10; i++) {
+                msg += `\n#${i + 1} ${bot.users.get(rows[i].userID).username} (${rows[i].points})`;
+            }
+            message.channel.sendMessage(msg);
+        });
+    } // Finds top 10 highscores for FWT Trivia
 
     else if (message.content.startsWith(config.prefix + "soulgear")) {
         if (args.length >= 2) {
