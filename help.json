@@ -11,6 +11,10 @@
 
     "**!choose <choice|choice2|choice3|etc.>**: Bot makes a choice based on provided choices",
 
+    "**!moe:** Bot sends a moe picture",
+
+    "**!doodoo:** Bot sends all the moe pictures in it's library (WARNING: MOE SPAM INBOUND)",
+
     "**!trivia**: Starts a fun round of FWT trivia",
 
     "**!triviaquestions**: Returns the number of trivia questions that are currently available",
