@@ -122,6 +122,9 @@ function findListedPropertyData(alias, type) {
     } else if (type === "soulgear") {
         var name = findNameByAlias(alias, "hero");
         var dataTable = soulGearTable;
+    } else if (type === "legacyset") {
+        var name = findNameByAlias(alias, "hero");
+        var dataTable = oldSetDataTable;
     }
     if (name === "nosuchalias") {
         return "nosuchdata";
@@ -442,7 +445,7 @@ bot.on("message", message => {
         } else {
             message.channel.sendMessage("Invalid request!");
         }
-    } // Searches for sets at the requested grade and tier
+    } // Searches for sets at the requested slot and rareness
 
     else if (message.content.startsWith(config.prefix + "set")) {
         if (args.length >= 2) {
@@ -456,6 +459,19 @@ bot.on("message", message => {
             message.channel.sendMessage("Invalid request!");
         }
     } // Searches for set info
+
+    else if (message.content.startsWith(config.prefix + "legset")) {
+        if (args.length >= 2) {
+            var setInfo = findListedPropertyData(msgContent, "legacyset");
+            if (setInfo != "nosuchdata") {
+                message.channel.sendMessage(setInfo);
+            } else {
+                message.channel.sendMessage("Unknown Set!");
+            }
+        } else {
+            message.channel.sendMessage("Invalid request!");
+        }
+    } // Searches for legacy set info
 
     else if (message.content.startsWith(config.prefix + "stats")) {
         if (args.length >= 2) {
