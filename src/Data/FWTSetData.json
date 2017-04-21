@@ -1766,8 +1766,8 @@
         "Weapon": "Sword",
         "Armor": "Shield",
         "Accessory": "Ring",
-        "2pc": "Increases Aggro by 50%",
-        "3pc": "Increases Max HP by 18%, Immune to Push/Pull Effect",
+        "2pc": "Increases Aggro by 40%",
+        "3pc": "Increases Max HP by 8%, Immune to Push/Pull Effect",
         "Restrictions": "Defense-Type Heroes only"
     },
     {
@@ -1777,8 +1777,8 @@
         "Weapon": "Mace",
         "Armor": "Armor",
         "Accessory": "Ring",
-        "2pc": "Increases Critical Damage by 15% and Counter Rate by 5000",
-        "3pc": "Increases Attack by 15% and Counter Damage by 50%",
+        "2pc": "Increases Critical Damage by 5% and Counter Rate by 5000",
+        "3pc": "Increases Attack by 8% and Counter Damage by 40%",
         "Restrictions": "None"
     },
     {
@@ -1811,7 +1811,7 @@
         "Armor": "Armor",
         "Accessory": "Brooch",
         "2pc": "Can move through enemies",
-        "3pc": "Removes 1 debuff and increases movement by 1 at the beginning of each turn",
+        "3pc": "Increases Movement by 1 and increase Direction Strategy Advantage by 9%",
         "Restrictions": "None"
     },
     {
@@ -1821,8 +1821,8 @@
         "Weapon": "Bow",
         "Armor": "Armor",
         "Accessory": "Ring",
-        "2pc": "40% chance of increasing Defense by 2400 for 1 turn and 5% chance of ignoring 1200 Defense for 1 turn",
-        "3pc": "40% chance of increasing Attack by 45% for 1 turn and 5% chance of increasing Critical Damage by 10% for 1 turn",
+        "2pc": "40% chance of increasing Defense by 2400 for 1 turn and 5% chance of ignoring 1100 Defense for 1 turn",
+        "3pc": "40% chance of increasing Attack by 40% for 1 turn and 5% chance of increasing Critical Damage by 10% for 1 turn",
         "Restrictions": "Activated when casting skills on enemies"
     },
     {
@@ -1898,8 +1898,8 @@
         "Weapon": "Sword",
         "Armor": "Armor",
         "Accessory": "Ring",
-        "2pc": "Increases Attack by 4850",
-        "3pc": "Increases HP by 15860 and Resistance by 30%",
+        "2pc": "Increases Attack by 2820",
+        "3pc": "Increases HP by 8150 and Resistance by 25%",
         "Restrictions": "None"
     },
     {
@@ -1921,7 +1921,7 @@
         "Armor": "Boot",
         "Accessory": "Ring",
         "2pc": "Increases Movement by 1",
-        "3pc": "Increases Final Skill Power by 20%",
+        "3pc": "Increases Final Skill Power by 18%",
         "Restrictions": "Balance-Type Hero only"
     },
     {
@@ -1953,8 +1953,8 @@
         "Weapon": "Mace",
         "Armor": "Shield",
         "Accessory": "Ring",
-        "2pc": "Increases the wearer's Defense by 3% of its current HP (up to 4000)",
-        "3pc": "Increases the wearer's Attack by 3% of its current HP (up to 10000)",
+        "2pc": "Increases the wearer's Defense by 2% of its current HP (up to 4000)",
+        "3pc": "Increases the wearer's Attack by 2% of its current HP (up to 10000)",
         "Restrictions": "None"
     },
     {
@@ -1965,7 +1965,7 @@
         "Armor": "Armor",
         "Accessory": "Brooch",
         "2pc": "Casts a shield at the beginning of each turn to decrease damage by 10% once",
-        "3pc": "Increases Attack by 20% and at the start of every turn, has a 40% chance to gain Double Attack effect that deals additional damage equal to 35% of the original skill's damage",
+        "3pc": "Increases Attack by 10% and at the start of every turn, has a 40% chance to gain Double Attack effect that deals additional damage equal to 35% of the original skill's damage",
         "Restrictions": "None"
     },
     {
@@ -1975,8 +1975,8 @@
         "Weapon": "Sword",
         "Armor": "Armor",
         "Accessory": "Ring",
-        "2pc": "Increases HP by 50% and ignore enemy Defense by 2000",
-        "3pc": "Increases Attack by 80% and decreases incoming Critical Damage by 20%",
+        "2pc": "Increases HP by 90% and ignore enemy Defense by 1400",
+        "3pc": "Increases Attack by 80% and decreases incoming Critical Damage by 10%",
         "Restrictions": "Activated if only you are left standing"
     },
     {
