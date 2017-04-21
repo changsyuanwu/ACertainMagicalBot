@@ -339,7 +339,7 @@ bot.on("message", message => {
 
 
     else if ((message.content.startsWith(config.prefix + "invite")) && (message.author.id === config.ownerID)) {
-        message.mentions.users.first().sendMessage("https://discordapp.com/oauth2/authorize?permissions=2012740672&scope=bot&client_id=269000767908610059");
+        message.mentions.users.first().sendMessage(config.invite);
     } // Sends the invite link (Only owner can do it)
 
 
