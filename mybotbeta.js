@@ -2,9 +2,9 @@
 const Discord = require("discord.js");
 const path = require("path");
 const sql = require("sqlite");
-const Moment = require("moment");
-const MomentRange = require("moment-range");
-const moment = MomentRange.extendMoment(Moment);
+const moment = require("moment");
+// const MomentRange = require("moment-range");
+// const moment = MomentRange.extendMoment(Moment);
 const bot = new Discord.Client();
 
 // Utils
@@ -137,8 +137,18 @@ function findListedPropertyData(alias, type) {
 } // Finds a list of data with properties
 
 function findFeaturedSets(dateRequested) {
-    var featuredSets = featuredSetTable[dateRequested];
-    return createListOutput(featuredSets);
+    for (var i = 0; i < featuredSetTable.length; i++) {
+        var start = moment(featuredSetTable[i]["Start"], "MM-DD-YYYY");
+        var end = moment(featuredSetTable[i]["End"], "MM-DD-YYYY");
+        if (moment(dateRequested, "MM-DD-YYYY").isBetween(start, end, "day", "(]")) {
+            var featuredSets = featuredSetTable[i];
+        }
+    }
+    if (featuredSets === undefined) {
+        return "Date not found";
+    } else {
+        return createListOutput(featuredSets);
+    }
 } // Finds the set rotation for the requested week
 
 function findSingleData(alias, data, type) {
@@ -375,10 +385,6 @@ bot.on("message", message => {
         if (args.length === 1) {
             message.reply(`${message.author.id}`);
         } else {
-            if (args[1] === "server") {
-                message.channel.sendMessage(message.guild.id);
-                return;
-            }
             message.channel.sendMessage(message.mentions.users.first().id);
         }
     } // Looks up an user's Discord ID
@@ -398,6 +404,11 @@ bot.on("message", message => {
     else if (message.content.startsWith(config.prefix + "github")) {
         message.channel.sendMessage("https://github.com/TheMasterDodo/ACertainMagicalBot");
     } // Sends the GitHub repository link
+
+
+    else if (message.content.startsWith(config.prefix + "mee6")) {
+        message.channel.sendMessage(`Go check out **${message.guild.name}**'s leaderboard: https://mee6.xyz/levels/${message.guild.id}`);
+    } // Finds the link to the server's mee6 data
 
 
     else if (message.content.startsWith(config.prefix + "tadaima") && (message.content.includes("maid"))) {
