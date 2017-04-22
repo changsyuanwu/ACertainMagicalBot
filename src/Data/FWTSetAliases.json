@@ -1285,7 +1285,9 @@
     {
         "name": "Unassailable",
         "aliases": [
-            "unassailable"
+            "unassailable",
+            "40% aggro",
+            "1* aggro"
         ]
     },
     {
@@ -1295,7 +1297,8 @@
             "iron fist",
             "iffe",
             "ife",
-            "iffte"
+            "iffte",
+            "dbos"
         ]
     },
     {
