@@ -27,7 +27,7 @@
 
     "**!whale <number>**: Simulates a 10x pull the number of times specified. Assumes <1> if no number is entered",
 
-    "**!rainbow <number>**: Retrieves the featured sets for the number of cycles back from current (Ex. <1> would be last cycle's sets), leave blank for current sets)",
+    "**!featuredsets <MM-DD-YYYY>**: Retrieves the featured sets for the requested date (Ex. <04-20-2017> would be the featured sets for April 20th, 2017), leave blank for current sets)",
 
     "**!effect <effect>**: Finds all the heroes who can inflict the requested effect. <list> will list available effects. (Ex. <stun> finds all the heroes who can stun)",
 

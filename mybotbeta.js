@@ -1,7 +1,10 @@
 // Modules
 const Discord = require("discord.js");
 const path = require("path");
-const sql = require('sqlite');
+const sql = require("sqlite");
+const Moment = require("moment");
+const MomentRange = require("moment-range");
+const moment = MomentRange.extendMoment(Moment);
 const bot = new Discord.Client();
 
 // Utils
@@ -133,8 +136,8 @@ function findListedPropertyData(alias, type) {
     return createListOutput(data);
 } // Finds a list of data with properties
 
-function findFeaturedSets(cycleRequested) {
-    var featuredSets = featuredSetTable[featuredSetTable.length - 1 - cycleRequested];
+function findFeaturedSets(dateRequested) {
+    var featuredSets = featuredSetTable[dateRequested];
     return createListOutput(featuredSets);
 } // Finds the set rotation for the requested week
 
@@ -550,13 +553,13 @@ bot.on("message", message => {
         }
     } // Searches for the requested hero skill
 
-    else if (message.content.startsWith(config.prefix + "rainbow")) {
+    else if (message.content.startsWith(config.prefix + "featuredsets")) {
         if (args.length >= 2) {
-            var cycleRequested = args[1];
+            var dateRequested = args[1];
         } else {
-            cycleRequested = 0;
+            dateRequested = moment().format("MM-DD-YYYY");
         }
-        const currentSets = findFeaturedSets(cycleRequested);
+        const currentSets = findFeaturedSets(dateRequested);
         message.channel.sendMessage(currentSets);
     } // Searches for current set rotation
 
