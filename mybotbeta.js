@@ -126,7 +126,7 @@ function findListedPropertyData(alias, type) {
         var name = findNameByAlias(alias, "hero");
         var dataTable = soulGearTable;
     } else if (type === "legacyset") {
-        var name = findNameByAlias(alias, "hero");
+        var name = findNameByAlias(alias, "set");
         var dataTable = oldSetDataTable;
     }
     if (name === "nosuchalias") {
@@ -375,6 +375,10 @@ bot.on("message", message => {
         if (args.length === 1) {
             message.reply(`${message.author.id}`);
         } else {
+            if (args[1] === "server") {
+                message.channel.sendMessage(message.guild.id);
+                return;
+            }
             message.channel.sendMessage(message.mentions.users.first().id);
         }
     } // Looks up an user's Discord ID
