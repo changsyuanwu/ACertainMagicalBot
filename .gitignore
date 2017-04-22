@@ -7,3 +7,5 @@ config.json
 .DS_Store
 
 scores.sqlite
+
+test.js
