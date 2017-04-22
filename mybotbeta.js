@@ -205,7 +205,7 @@ function getPoints(ID) {
         });
 } // Finds the user's score
 
-function trivia(message) {
+function trivia(message, isCritQuestion) {
     triviaChannels.add(message.channel.id);
     do {
         var question = getRandomInt(1, triviaTable.length - 1);
@@ -213,6 +213,12 @@ function trivia(message) {
     triviaLastQuestion = question;
     var askedQuestion = triviaTable[question]["Question"];
     var correctAnswer = triviaTable[question]["Answer"];
+
+    if (isCritQuestion) {
+        var rewardPoints = 60;
+    } else {
+        rewardPoints = 15;
+    }
 
     wait(1500)
         .then(() => message.channel.sendMessage(askedQuestion))
@@ -226,18 +232,18 @@ function trivia(message) {
                     var correctUserID = correctMessage.first().author.id;
                     sql.get(`SELECT * FROM scores WHERE userID ='${correctUserID}'`).then(row => {
                         if (!row) {
-                            sql.run('INSERT INTO scores (userID, points) VALUES (?, ?)', [correctUserID, 10]);
+                            sql.run('INSERT INTO scores (userID, points) VALUES (?, ?)', [correctUserID, rewardPoints]);
                         } else {
-                            sql.run(`UPDATE scores SET points = ${row.points + 10} WHERE userID = ${correctUserID}`);
+                            sql.run(`UPDATE scores SET points = ${row.points + rewardPoints} WHERE userID = ${correctUserID}`);
                         }
                     }).catch(() => {
                         console.error;
                         sql.run('CREATE TABLE IF NOT EXISTS scores (userID TEXT, points INTEGER)').then(() => {
-                            sql.run('INSERT INTO scores (userID, points) VALUES (?, ?)', [correctUserID, 10]);
+                            sql.run('INSERT INTO scores (userID, points) VALUES (?, ?)', [correctUserID, rewardPoints]);
                         });
                     });
                     getPoints(correctUserID).then(points => {
-                        message.channel.sendMessage(`Correct answer "${correctAnswer}" by ${correctMessage.first().member.displayName}! +10 points (Total score: ${points + 10})`);
+                        message.channel.sendMessage(`Correct answer "${correctAnswer}" by ${correctMessage.first().member.displayName}! +${rewardPoints} points (Total score: ${points + rewardPoints}) || Highscores: !highscores`);
                     });
                     triviaChannels.delete(message.channel.id);
                 })
@@ -254,7 +260,7 @@ function trivia(message) {
 
 function generateRareness(rareness) {
     var setTier = "";
-    for (var i = 0; i <rareness; i++) {
+    for (var i = 0; i < rareness; i++) {
         setTier = setTier + "★";
     }
     return setTier;
@@ -587,8 +593,13 @@ bot.on("message", message => {
             message.channel.sendMessage("Please use this command in a server!");
             return;
         }
-        message.channel.sendMessage(`+++ ${message.member.displayName} started a new round of FWT Trivia. Get ready! +++`);
-        trivia(message);
+        if (getRandomInt(0, 100) < 5) {
+            message.channel.sendMessage(`+++ ${message.member.displayName} started a new round of FWT Trivia. Get ready! +++ CRITICAL QUESTION: 60 POINTS +++`);
+            trivia(message, true);
+        } else {
+            message.channel.sendMessage(`+++ ${message.member.displayName} started a new round of FWT Trivia. Get ready! +++`);
+            trivia(message, false);
+        }
     } // Starts a round of FWT trivia
 
     else if (message.content.startsWith(config.prefix + "score")) {
