@@ -3,8 +3,6 @@ const Discord = require("discord.js");
 const path = require("path");
 const sql = require("sqlite");
 const moment = require("moment");
-// const MomentRange = require("moment-range");
-// const moment = MomentRange.extendMoment(Moment);
 const bot = new Discord.Client();
 
 // Utils
@@ -20,7 +18,6 @@ const aliasListSets = require(path.join(launchLocation, "src", "Data", "FWTSetAl
 const aliasListHeroes = require(path.join(launchLocation, "src", "Data", "FWTHeroAliases.json"));
 const heroDataTable = require(path.join(launchLocation, "src", "Data", "FWTHeroStats.json"));
 const itemDataTable = require(path.join(launchLocation, "src", "Data", "FWTItemMaxStats.json"));
-const heroSkillTable = require(path.join(launchLocation, "src", "Data", "FWTHeroSkills.json"));
 const triviaTable = require(path.join(launchLocation, "src", "Data", "FWTTrivia.json"));
 const soulGearTable = require(path.join(launchLocation, "src", "Data", "FWTSoulGear.json"));
 const featuredSetTable = require(path.join(launchLocation, "src", "Data", "FWTFeaturedSets.json"));
@@ -158,9 +155,6 @@ function findSingleData(alias, data, type) {
     } else if (type === "stat") {
         var dataTable = heroDataTable;
         var name = findNameByAlias(alias, "hero");
-    } else if (type === "skill") {
-        var dataTable = heroSkillTable;
-        var name = findNameByAlias(alias, "hero");
     }
     var dataString = "";
     for (var i = 0; i < dataTable.length; i++) {
@@ -230,21 +224,24 @@ function trivia(message, isCritQuestion) {
             })
                 .then((correctMessage) => {
                     var correctUserID = correctMessage.first().author.id;
-                    sql.get(`SELECT * FROM scores WHERE userID ='${correctUserID}'`).then(row => {
-                        if (!row) {
-                            sql.run('INSERT INTO scores (userID, points) VALUES (?, ?)', [correctUserID, rewardPoints]);
-                        } else {
-                            sql.run(`UPDATE scores SET points = ${row.points + rewardPoints} WHERE userID = ${correctUserID}`);
-                        }
-                    }).catch(() => {
-                        console.error;
-                        sql.run('CREATE TABLE IF NOT EXISTS scores (userID TEXT, points INTEGER)').then(() => {
-                            sql.run('INSERT INTO scores (userID, points) VALUES (?, ?)', [correctUserID, rewardPoints]);
+                    sql.get(`SELECT * FROM scores WHERE userID ='${correctUserID}'`)
+                        .then(row => {
+                            if (!row) {
+                                sql.run('INSERT INTO scores (userID, points) VALUES (?, ?)', [correctUserID, rewardPoints]);
+                            } else {
+                                sql.run(`UPDATE scores SET points = ${row.points + rewardPoints} WHERE userID = ${correctUserID}`);
+                            }
+                        })
+                        .catch(() => {
+                            console.error;
+                            sql.run('CREATE TABLE IF NOT EXISTS scores (userID TEXT, points INTEGER)').then(() => {
+                                sql.run('INSERT INTO scores (userID, points) VALUES (?, ?)', [correctUserID, rewardPoints]);
+                            });
                         });
-                    });
-                    getPoints(correctUserID).then(points => {
-                        message.channel.sendMessage(`Correct answer "${correctAnswer}" by ${correctMessage.first().member.displayName}! +${rewardPoints} points (Total score: ${points + rewardPoints}) || Highscores: !highscores`);
-                    });
+                    getPoints(correctUserID)
+                        .then(points => {
+                            message.channel.sendMessage(`Correct answer "${correctAnswer}" by ${correctMessage.first().member.displayName}! +${rewardPoints} points (Total score: ${points + rewardPoints}) || Highscores: !highscores`);
+                        });
                     triviaChannels.delete(message.channel.id);
                 })
                 .catch(() => {
@@ -299,12 +296,13 @@ function wait(time) {
 
 function prune(message, value) {
     value = Math.min(value, 100);
-    message.channel.fetchMessages({ limit: 100 }).then(messages => {
-        const filteredMessages = messages.filter(message => message.author.id === bot.user.id);
-        var filteredArray = filteredMessages.array();
+    message.channel.fetchMessages({ limit: 100 })
+        .then(messages => {
+            const filteredMessages = messages.filter(message => message.author.id === bot.user.id);
+            var filteredArray = filteredMessages.array();
 
-        message.channel.bulkDelete(filteredArray.slice(0, value));
-    }).catch(err => console.error(err));
+            message.channel.bulkDelete(filteredArray.slice(0, value));
+        }).catch(err => console.error(err));
 } // Prunes messages from bot
 
 function status() {
@@ -312,7 +310,7 @@ function status() {
     var random = getRandomInt(0, statusCycle.length);
     bot.user.setGame(statusCycle[random]);
     logger.log(2, `Set status to ${statusCycle[random]}`);
-    setTimeout(status, 300000); // Cycles every 5 minutes
+    setTimeout(status, 600000); // Cycles every 10 minutes
 } // Sets the status message of the bot
 
 // End of other functions
@@ -327,6 +325,9 @@ bot.on("message", message => {
     if (!message.content.startsWith(config.prefix)) return;
     // Ignore messages that don't start with the prefix
 
+    if (message.author.id === bot.user.id) {
+        // do stuff
+    }
     if (message.author.bot) return;
     // Checks if sender is a bot
 
@@ -567,8 +568,25 @@ bot.on("message", message => {
 
     else if (message.content.startsWith(config.prefix + "skill")) {
         if (args.length >= 3) {
-            var skillData = findSingleData(args[1], args[2], "skill");
-            message.channel.sendMessage(skillData);
+            var fwtHelper = bot.users.get("187965487395635200");
+            // var fwtHelper = bot.users.get(config.ownerID);
+            fwtHelper.sendMessage(`!hero ${findNameByAlias(args[1], "hero")} ${args[2]}`)
+                .then((msg) => {
+                    msg.channel.fetchMessages({limit: 100}).then((messages) => {
+                        console.log(messages);
+                    });
+                    msg.channel.awaitMessages(response => response.author.id === "187965487395635200", {
+                        max: 1,
+                        time: 10000,
+                        errors: ["time"]
+                    })
+                        .then((data) => {
+                            message.channel.sendMessage(data.first().content);
+                        })
+                        .catch(() => {
+                            message.channel.sendMessage("Request timed out. Please try again later");
+                        });
+                });
         } else {
             message.channel.sendMessage("Invalid request!");
         }
@@ -604,36 +622,38 @@ bot.on("message", message => {
 
     else if (message.content.startsWith(config.prefix + "score")) {
         if (args.length === 1) {
-            getPoints(message.author.id).then(points => {
-                if (points != 0) {
-                    message.channel.sendMessage(`Score for ${message.member.displayName}: ${points} points`);
-                } else {
-                    message.channel.sendMessage("You have 0 points! Play trivia using !trivia to earn points");
-                }
-            });
+            getPoints(message.author.id)
+                .then(points => {
+                    if (points != 0) {
+                        message.channel.sendMessage(`Score for ${message.member.displayName}: ${points} points`);
+                    } else {
+                        message.channel.sendMessage("You have 0 points! Play trivia using !trivia to earn points");
+                    }
+                });
         } else {
-            getPoints(message.mentions.users.first().id).then(points => {
-                if (points != 0) {
-                    message.channel.sendMessage(`Score for ${message.mentions.users.first().username}: ${points} points`);
-                } else {
-                    message.channel.sendMessage(`${message.mentions.users.first().username} has 0 points! Play trivia using !trivia to earn points`);
-                }
-            });
+            getPoints(message.mentions.users.first().id)
+                .then(points => {
+                    if (points != 0) {
+                        message.channel.sendMessage(`Score for ${message.mentions.users.first().username}: ${points} points`);
+                    } else {
+                        message.channel.sendMessage(`${message.mentions.users.first().username} has 0 points! Play trivia using !trivia to earn points`);
+                    }
+                });
         }
     } // Looks up how many points an user has
 
     else if (message.content.startsWith(config.prefix + "highscores")) {
         var msg = "__**Fantasy War Tactics Trivia TOP 10**__";
-
-        sql.all(`SELECT userID, points FROM scores ORDER BY points DESC LIMIT 10`).then((rows) => {
-            for (var i = 0; i < 10; i++) {
-                msg += `\n#${i + 1} ${bot.users.get(rows[i].userID).username} (${rows[i].points})`;
-            }
-            message.channel.sendMessage(msg);
-        });
+        sql.all(`SELECT userID, points FROM scores ORDER BY points DESC LIMIT 10`)
+            .then((rows) => {
+                for (var i = 0; i < 10; i++) {
+                    msg += `\n#${i + 1} ${bot.users.get(rows[i].userID).username} (${rows[i].points})`;
+                }
+                message.channel.sendMessage(msg);
+            });
     } // Finds top 10 highscores for FWT Trivia
 
-    else if (message.content.startsWith(config.prefix + "soulgear")) {
+    else if (message.content.startsWith(config.prefix + "sg")) {
         if (args.length >= 2) {
             var sgData = findListedPropertyData(args[1], "soulgear");
             if (sgData != "nosuchdata") {
@@ -663,4 +683,5 @@ bot.on("ready", () => {
     logger.log(1, `Ready to server in ${bot.channels.size} channels on ${bot.guilds.size} servers, for a total of ${bot.users.size} users.`);
 });
 
-bot.login(config.token).then(() => status());
+bot.login(config.token)
+    .then(() => status());
