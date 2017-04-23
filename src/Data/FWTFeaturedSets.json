@@ -1,8 +1,38 @@
 [
     {
+        "Start": "",
+        "End": "",
+        "Set1": "",
+        "Set2": ""
+    },
+    {
         "Start": "4-20-2017",
         "End": "4-22-2017",
         "Set1": "Unassailable",
         "Set2": "Prisoner of Avici Hell"
+    },
+    {
+        "Start": "4-22-2017",
+        "End": "4-24-2017",
+        "Set1": "The Immortal",
+        "Set2": "Vermillion Bird's Red Bloodline"
+    },
+    {
+        "Start": "4-24-2017",
+        "End": "4-26-2017",
+        "Set1": "Elemental Knight",
+        "Set2": "Wind Walker"
+    },
+    {
+        "Start": "4-26-2017",
+        "End": "4-28-2017",
+        "Set1": "Stone Monkey's Treasure",
+        "Set2": "Iron Fist From the East"
+    },
+    {
+        "Start": "",
+        "End": "",
+        "Set1": "",
+        "Set2": ""
     }
 ]
