@@ -569,12 +569,8 @@ bot.on("message", message => {
     else if (message.content.startsWith(config.prefix + "skill")) {
         if (args.length >= 3) {
             var fwtHelper = bot.users.get("187965487395635200");
-            // var fwtHelper = bot.users.get(config.ownerID);
             fwtHelper.sendMessage(`!hero ${findNameByAlias(args[1], "hero")} ${args[2]}`)
                 .then((msg) => {
-                    msg.channel.fetchMessages({limit: 100}).then((messages) => {
-                        console.log(messages);
-                    });
                     msg.channel.awaitMessages(response => response.author.id === "187965487395635200", {
                         max: 1,
                         time: 10000,
