@@ -185,6 +185,24 @@ function findProperty(propertyRequested, effectRequested) {
     return dataString;
 } // Finds all heroes who have the requested property
 
+function findSkill(hero, skill, message) {
+    var fwtHelper = bot.users.get("187965487395635200");
+    fwtHelper.sendMessage(`!hero ${findNameByAlias(hero, "hero")} ${skill}`)
+        .then((msg) => {
+            msg.channel.awaitMessages(response => response.author.id === "187965487395635200", {
+                max: 1,
+                time: 10000,
+                errors: ["time"]
+            })
+                .then((data) => {
+                    message.channel.sendMessage(data.first().content);
+                })
+                .catch(() => {
+                    message.channel.sendMessage("Request timed out. Please try again later");
+                });
+        });
+}
+
 // End of database functions
 
 //--------------------------------------------------------------------------------------------
@@ -568,21 +586,8 @@ bot.on("message", message => {
 
     else if (message.content.startsWith(config.prefix + "skill")) {
         if (args.length >= 3) {
-            var fwtHelper = bot.users.get("187965487395635200");
-            fwtHelper.sendMessage(`!hero ${findNameByAlias(args[1], "hero")} ${args[2]}`)
-                .then((msg) => {
-                    msg.channel.awaitMessages(response => response.author.id === "187965487395635200", {
-                        max: 1,
-                        time: 10000,
-                        errors: ["time"]
-                    })
-                        .then((data) => {
-                            message.channel.sendMessage(data.first().content);
-                        })
-                        .catch(() => {
-                            message.channel.sendMessage("Request timed out. Please try again later");
-                        });
-                });
+            // findSkill(args[1], args[2], message);
+            message.channel.sendMessage(`!hero ${findNameByAlias(args[1], "hero")} ${args[2]}`);
         } else {
             message.channel.sendMessage("Invalid request!");
         }
