@@ -41,7 +41,6 @@ const logger = new Logger(config.noLogs);
 
 //--------------------------------------------------------------------------------------------
 
-
 for (let i = 0, len = oldSetDataTable.length; i < len; i++) {
     for (let j = 0, weeks = oldSetRotation.length; j < weeks; j++) {
         let grade = oldSetDataTable[i]["Tier"].length.toString() + oldSetDataTable[i]["Grade"];
@@ -52,7 +51,6 @@ for (let i = 0, len = oldSetDataTable.length; i < len; i++) {
 }   // Adds the last time in rotation data to the set data
 
 //--------------------------------------------------------------------------------------------
-
 
 function coocooPull(isLast) {
     var number = Math.random();
@@ -251,7 +249,6 @@ function trivia(message, isCritQuestion) {
                             }
                         })
                         .catch(() => {
-                            console.error;
                             sql.run('CREATE TABLE IF NOT EXISTS scores (userID TEXT, points INTEGER)').then(() => {
                                 sql.run('INSERT INTO scores (userID, points) VALUES (?, ?)', [correctUserID, rewardPoints]);
                             });
@@ -281,18 +278,16 @@ function generateRareness(rareness) {
     return setTier;
 } // Makes the tiers for set equipment
 
-function getRandomInt(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min)) + min;
-} // Generates a random integer between the specified values
-
 function PullOrNot() {
     var number = Math.random();
     var YesNo;
     if (number <= 0.5) return path.join(launchLocation, "src", "Images", "Pull.png");
     else return path.join(launchLocation, "src", "Images", "Don't Pull.png");
 } // Does the 50/50 pull or not
+
+// End of other FWT functions
+
+//--------------------------------------------------------------------------------------------
 
 function findEmojiFromGuildByName(guild, emoji_name) {
     const emoji = guild.emojis.find((emoji) => emoji.name === emoji_name);
@@ -303,6 +298,12 @@ function capitalize(inputString) {
     var outputString = inputString.substr(0, 1).toUpperCase() + inputString.substr(1, inputString.length - 1).toLowerCase();
     return outputString;
 } // Capitalizes the first letter in a string
+
+function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min)) + min;
+} // Generates a random integer between the specified values
 
 function wait(time) {
     return new Promise(function (resolve) {
@@ -331,7 +332,23 @@ function status() {
     setTimeout(status, 600000); // Cycles every 10 minutes
 } // Sets the status message of the bot
 
-// End of other functions
+function incrementUses() {
+    sql.get(`SELECT * FROM utilities WHERE type = "Uses"`)
+        .then(row => {
+            if (!row) {
+                sql.run('INSERT INTO utilities (type, value) VALUES (?, ?)', ["Uses", 0]);
+            } else {
+                sql.run(`UPDATE utilities SET value = ${row.value + 1} WHERE type = "Uses"`);
+            }
+        })
+        .catch(() => {
+            sql.run('CREATE TABLE IF NOT EXISTS utilities (type TEXT, value INTEGER)').then(() => {
+                sql.run('INSERT INTO utilities (type, values) VALUES (?, ?)', ["Uses", 0]);
+            });
+        });
+}
+
+// End of utility functions
 
 //--------------------------------------------------------------------------------------------
 
@@ -340,12 +357,13 @@ bot.on("message", message => {
         console.log(`Message Received!\n\tSender: ${message.author.username} \n\tContent: ${message.content.slice(message.content.indexOf(" "))}`);
     } // Logs messages that mention the bot
 
+    if (message.author.id === bot.user.id) {
+        incrementUses();
+    } // Increments whenever the bot sends a message (bot is "used")
+
     if (!message.content.startsWith(config.prefix)) return;
     // Ignore messages that don't start with the prefix
 
-    if (message.author.id === bot.user.id) {
-        // do stuff
-    }
     if (message.author.bot) return;
     // Checks if sender is a bot
 
