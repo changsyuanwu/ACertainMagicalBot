@@ -33,13 +33,13 @@
 
     "**!property <propertyType> <property>**: Finds all the heroes who have the requested property. (Ex. <type> <attack> finds all attack type heroes)",
 
-    "**!item <itemName> <itemTier>**: Finds the max stats for the requested item at the requested tier (Ex. <bow> <5> finds the max stats of a 5* bow) **<WORK IN PROGRESS>**",
+    "**!item <itemName> <slot> <rareness>**: Finds the max stats for the requested item at the requested slot and rareness (Ex. <bow> <V> <rareness> finds the max stats of a slot V 6* bow)",
 
     "**!stats <heroAlias>**: Finds all the stats for the requested heroes (Ex. <yeka> finds all the stats of Yekaterina)",
 
     "**!stat <heroAlias> <stat>**: Finds the requested stat of the hero (Ex. <yeka> <attack> finds Yekaterina's base attack)",
 
-    "**!skill <heroAlias> <skillNumber>**: Finds the skill data for the requested skill. (Ex. <yeka> <3> finds the data for Yekaterina's 3rd skill) **<WORK IN PROGRESS>**",
+    "**!skill <heroAlias> <skillNumber>**: Finds the skill data for the requested skill. (Ex. <yeka> <3> finds the data for Yekaterina's 3rd skill) **<ON HIATUS>**",
 
     "**!sets <setSlot> <setRareness>**: Finds all the sets at the requested grade and tier. (Ex. <IV> <6> finds all the 6* sets at slot IV)",
 

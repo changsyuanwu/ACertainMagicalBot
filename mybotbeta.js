@@ -148,10 +148,7 @@ function findFeaturedSets(dateRequested) {
 } // Finds the set rotation for the requested week
 
 function findSingleData(alias, data, type) {
-    if (type === "item") {
-        var dataTable = itemDataTable;
-        var name = findNameByAlias(alias, "item");
-    } else if (type === "stat") {
+    if (type === "stat") {
         var dataTable = heroDataTable;
         var name = findNameByAlias(alias, "hero");
     }
@@ -270,6 +267,7 @@ function findItem(item, slot, rareness) {
             var stat2 = "Attack";
             break;
     } // Gets type of item and stat types
+    if ((slot === "I") || ())
     for (var i = 0; i < itemDataTable.length; i++) {
         if (itemDataTable[i]["Type"] === type) {
             var valueOfStat1 = itemDataTable[i][capitalize(item)][slot][stat1] * transcendence;
@@ -689,7 +687,7 @@ function findItem(item, slot, rareness) {
         } // Searches for which heroes have the requested property
 
         else if (message.content.startsWith(config.prefix + "item")) {
-            if (args.length >= 2) {
+            if (args.length >= 4) {
                 var itemStats = findItem(args[1].toLowerCase(), args[2].toUpperCase(), args[3]);
                 message.channel.sendMessage(itemStats);
             } else {
