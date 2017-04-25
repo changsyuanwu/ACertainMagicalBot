@@ -690,11 +690,11 @@ bot.on("message", message => {
     else if (message.content.startsWith(config.prefix + "item")) {
         if (args.length >= 4) {
             var slot = args[2].toUpperCase();
-            if (((slot === "I") || (slot === "II") || (slot.toLowerCase() === "III") || (args[2] === "IV") || (slot === "V")) && (args[3] >= 1) && (args[3] <= 6)) {
+            if (((slot === "I") || (slot === "II") || (slot === "III") || (slot === "IV") || (slot === "V")) && (args[3] >= 1) && (args[3] <= 6)) {
                 var itemStats = findItem(args[1].toLowerCase(), slot, args[3]);
                 message.channel.sendMessage(itemStats);
+                return;
             }
-            return;
         }
         message.channel.sendMessage("Invalid request!");
     } // Searches for the requested item's max stats
