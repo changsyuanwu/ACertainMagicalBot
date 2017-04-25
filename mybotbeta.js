@@ -325,7 +325,7 @@ function prune(message, value) {
 } // Prunes messages from bot
 
 function status() {
-    var statusCycle = ["https://github.com/TheMasterDodo/ACertainMagicalBot", "Use !help for info", "Spamming !whale", `Serving ${bot.guilds.size} servers`, `Serving ${bot.channels.size} channels`, `Serving ${bot.users.size} users`];
+    var statusCycle = ["https://github.com/TheMasterDodo/ACertainMagicalBot", "Use !help for info", "Spamming !whale", `Serving ${bot.guilds.size} servers`, `Serving ${bot.channels.size} channels`, `Serving ${bot.users.size} users`, ""];
     var random = getRandomInt(0, statusCycle.length);
     bot.user.setGame(statusCycle[random]);
     logger.log(2, `Set status to ${statusCycle[random]}`);
@@ -345,6 +345,16 @@ function incrementUses() {
             sql.run('CREATE TABLE IF NOT EXISTS utilities (type TEXT, value INTEGER)').then(() => {
                 sql.run('INSERT INTO utilities (type, values) VALUES (?, ?)', ["Uses", 0]);
             });
+        });
+} // Increments the number of uses of the bot by 1
+
+function getUses(ID) {
+    return sql.get(`SELECT * FROM utilities WHERE type = "Uses"`)
+        .then(row => {
+            if (!row)
+                return 0;
+            else
+                return row.value;
         });
 }
 
@@ -431,6 +441,14 @@ bot.on("message", message => {
             message.channel.sendMessage(message.mentions.users.first().id);
         }
     } // Looks up an user's Discord ID
+
+
+    else if (message.content.startsWith(config.prefix + "uses")) {
+        getUses()
+            .then(uses => {
+                message.channel.sendMessage(`There have been ${uses} uses since 2017-04-24`);
+            });
+    } // Gets the number of uses
 
 
     else if (message.content.startsWith(config.prefix + "choose")) {
