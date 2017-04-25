@@ -4,6 +4,34 @@
         "Answer": ""
     },
     {
+        "Question": "Who are the elite guards of the Sibyls of the Dohwa Dynasty?",
+        "Answer": "The Crimson Templars"
+    },
+    {
+        "Question": "Which unit of the Crimson Templars is Taehwa the leader of?",
+        "Answer": "Man"
+    },
+    {
+        "Question": "What is the name of the ruling dynasty of the Sia continent?",
+        "Answer": "Dohwa"
+    },
+    {
+        "Question": "What is the name of the Left Sybil of the Dohwa Dynasty",
+        "Answer": "Ara"
+    },
+    {
+        "Question": "Which country is Ara from?",
+        "Answer": "Dohwa Dynasty"
+    },
+    {
+        "Question": "Which animal is Hongyeom the symbol for?",
+        "Answer": "Bird"
+    },
+    {
+        "Question": "Which set lets you move through enemies?",
+        "Answer": "The Immortal"
+    },
+    {
         "Question": "Which hero has the title of \"Noblesse\"?",
         "Answer": "Raizel"
     },
@@ -62,6 +90,10 @@
     {
         "Question": "Which hero is the following quote from? \"What a meaningless, boring fight...\"",
         "Answer": "Azrael"
+    },
+    {
+        "Question": "",
+        "Answer": ""
     },
     {
         "Question": "Which hero is the following quote from? \"I am the Noblesse. I stand where I belong.\"",
@@ -140,7 +172,7 @@
         "Answer": "Vexx"
     },
     {
-        "Question": "What is the cost of enhancing a 5* item from +9 to +10? (One try)",
+        "Question": "What is the cost of enhancing a slot V item from +9 to +10? (One try)",
         "Answer": "25520"
     },
     {
@@ -164,7 +196,7 @@
         "Answer": "10%"
     },
     {
-        "Question": "What is the cost of enhancing a 4* item from +9 to +10? (One try)",
+        "Question": "What is the cost of enhancing a slot IV item from +9 to +10? (One try)",
         "Answer": "20300"
     },
     {
