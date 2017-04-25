@@ -57,6 +57,7 @@ function coocooPull(isLast) {
     if (isLast) {
         var junkrate = 0;
         var platrate = 0;
+        var brate = 0;
         var arate = 0.7;
         var srate = 0.27;
     } else {
@@ -201,524 +202,600 @@ function findSkill(hero, skill, message) {
         });
 }
 
-// End of database functions
-
-//--------------------------------------------------------------------------------------------
-
-function getPoints(ID) {
-    return sql.get(`SELECT * FROM scores WHERE userID ='${ID}'`)
-        .then(row => {
-            if (!row)
-                return 0;
-            else
-                return row.points;
-        });
-} // Finds the user's score
-
-function trivia(message, isCritQuestion) {
-    triviaChannels.add(message.channel.id);
-    do {
-        var question = getRandomInt(1, triviaTable.length - 1);
-    } while (question === triviaLastQuestion);
-    triviaLastQuestion = question;
-    var askedQuestion = triviaTable[question]["Question"];
-    var correctAnswer = triviaTable[question]["Answer"];
-
-    if (isCritQuestion) {
-        var rewardPoints = 60;
-    } else {
-        rewardPoints = 15;
+function findItem(item, slot, rareness) {
+    switch (Number(rareness)) {
+        case 1:
+            var transcendence = 1;
+            break;
+        case 2:
+            var transcendence = 1.24;
+            break;
+        case 3:
+            var transcendence = 1.60;
+            break;
+        case 4:
+            var transcendence = 1.60;
+            break;
+        case 5:
+            var transcendence = 1.75;
+            break;
+        case 6:
+            var transcendence = 2.00;
+            break;
+    } // Gets the max transcendence multiplier
+    switch (item) {
+        case "bow":
+            var type = "Weapon";
+            var stat1 = "Attack";
+            var stat2 = "Crit";
+            break;
+        case "mace":
+            var type = "Weapon";
+            var stat1 = "Attack";
+            var stat2 = "Counter Damage";
+            break;
+        case "sword":
+            var type = "Weapon";
+            var stat1 = "Attack";
+            var stat2 = "Hit";
+            break;
+        case "armor":
+            var type = "Armor";
+            var stat1 = "HP";
+            var stat2 = "Defense";
+            break;
+        case "shield":
+            var type = "Armor";
+            var stat1 = "HP";
+            var stat2 = "Counter Rate";
+            break;
+        case "boots":
+            var type = "Armor";
+            var stat1 = "HP";
+            var stat2 = "Dodge";
+            break;
+        case "ring":
+            var type = "Accessory";
+            var stat1 = "Hit";
+            var stat2 = "Crit";
+            break;
+        case "brooch":
+            var type = "Accessory";
+            var stat1 = "HP";
+            var stat2 = "Defense";
+            break;
+        case "necklace":
+            var type = "Accessory";
+            var stat1 = "Mastery";
+            var stat2 = "Attack";
+            break;
+    } // Gets type of item and stat types
+    for (var i = 0; i < itemDataTable.length; i++) {
+        if (itemDataTable[i]["Type"] === type) {
+            var valueOfStat1 = itemDataTable[i][capitalize(item)][slot][stat1] * transcendence;
+            var valueOfStat2 = itemDataTable[i][capitalize(item)][slot][stat2] * transcendence;
+            var dataString = `${stat1}: ${valueOfStat1.toString()}, ${stat2}: ${valueOfStat2.toString()}`;
+            return dataString;
+        }
     }
-
-    wait(1500)
-        .then(() => message.channel.sendMessage(askedQuestion))
-        .then(() => {
-            message.channel.awaitMessages(response => response.content.toLowerCase() === correctAnswer.toLowerCase(), {
-                max: 1,
-                time: 15000,
-                errors: ['time'],
-            })
-                .then((correctMessage) => {
-                    var correctUserID = correctMessage.first().author.id;
-                    sql.get(`SELECT * FROM scores WHERE userID ='${correctUserID}'`)
-                        .then(row => {
-                            if (!row) {
-                                sql.run('INSERT INTO scores (userID, points) VALUES (?, ?)', [correctUserID, rewardPoints]);
-                            } else {
-                                sql.run(`UPDATE scores SET points = ${row.points + rewardPoints} WHERE userID = ${correctUserID}`);
-                            }
-                        })
-                        .catch(() => {
-                            sql.run('CREATE TABLE IF NOT EXISTS scores (userID TEXT, points INTEGER)').then(() => {
-                                sql.run('INSERT INTO scores (userID, points) VALUES (?, ?)', [correctUserID, rewardPoints]);
-                            });
-                        });
-                    getPoints(correctUserID)
-                        .then(points => {
-                            message.channel.sendMessage(`Correct answer "${correctAnswer}" by ${correctMessage.first().member.displayName}! +${rewardPoints} points (Total score: ${points + rewardPoints}) || Highscores: !highscores`);
-                        });
-                    triviaChannels.delete(message.channel.id);
-                })
-                .catch(() => {
-                    message.channel.sendMessage(`Time's up! The correct answer was "${correctAnswer}".`);
-                    triviaChannels.delete(message.channel.id);
-                });
-        });
-} // Main trivia function
-
-// End of trivia functions
-
-//--------------------------------------------------------------------------------------------
-
-function generateRareness(rareness) {
-    var setTier = "";
-    for (var i = 0; i < rareness; i++) {
-        setTier = setTier + "★";
-    }
-    return setTier;
-} // Makes the tiers for set equipment
-
-function PullOrNot() {
-    var number = Math.random();
-    var YesNo;
-    if (number <= 0.5) return path.join(launchLocation, "src", "Images", "Pull.png");
-    else return path.join(launchLocation, "src", "Images", "Don't Pull.png");
-} // Does the 50/50 pull or not
-
-// End of other FWT functions
-
-//--------------------------------------------------------------------------------------------
-
-function findEmojiFromGuildByName(guild, emoji_name) {
-    const emoji = guild.emojis.find((emoji) => emoji.name === emoji_name);
-    return emoji ? emoji.toString() : emoji_name;
-} // Finds the emoji id in a guild using the emoji name
-
-function capitalize(inputString) {
-    var outputString = inputString.substr(0, 1).toUpperCase() + inputString.substr(1, inputString.length - 1).toLowerCase();
-    return outputString;
-} // Capitalizes the first letter in a string
-
-function getRandomInt(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min)) + min;
-} // Generates a random integer between the specified values
-
-function wait(time) {
-    return new Promise(function (resolve) {
-        setTimeout(function () {
-            resolve();
-        }, time);
-    });
-} // Waits for a set amount of time
-
-function prune(message, value) {
-    value = Math.min(value, 100);
-    message.channel.fetchMessages({ limit: 100 })
-        .then(messages => {
-            const filteredMessages = messages.filter(message => message.author.id === bot.user.id);
-            var filteredArray = filteredMessages.array();
-
-            message.channel.bulkDelete(filteredArray.slice(0, value));
-        }).catch(err => console.error(err));
-} // Prunes messages from bot
-
-function status() {
-    var statusCycle = ["https://github.com/TheMasterDodo/ACertainMagicalBot", "Use !help for info", "Spamming !whale", `Serving ${bot.guilds.size} servers`, `Serving ${bot.channels.size} channels`, `Serving ${bot.users.size} users`, ""];
-    var random = getRandomInt(0, statusCycle.length);
-    bot.user.setGame(statusCycle[random]);
-    logger.log(2, `Set status to ${statusCycle[random]}`);
-    setTimeout(status, 600000); // Cycles every 10 minutes
-} // Sets the status message of the bot
-
-function incrementUses() {
-    sql.get(`SELECT * FROM utilities WHERE type = "Uses"`)
-        .then(row => {
-            if (!row) {
-                sql.run('INSERT INTO utilities (type, value) VALUES (?, ?)', ["Uses", 0]);
-            } else {
-                sql.run(`UPDATE utilities SET value = ${row.value + 1} WHERE type = "Uses"`);
-            }
-        })
-        .catch(() => {
-            sql.run('CREATE TABLE IF NOT EXISTS utilities (type TEXT, value INTEGER)').then(() => {
-                sql.run('INSERT INTO utilities (type, values) VALUES (?, ?)', ["Uses", 0]);
-            });
-        });
-} // Increments the number of uses of the bot by 1
-
-function getUses(ID) {
-    return sql.get(`SELECT * FROM utilities WHERE type = "Uses"`)
-        .then(row => {
-            if (!row)
-                return 0;
-            else
-                return row.value;
-        });
 }
 
-// End of utility functions
+    // End of database functions
 
-//--------------------------------------------------------------------------------------------
+    //--------------------------------------------------------------------------------------------
 
-bot.on("message", message => {
-    if (message.mentions.users.has(bot.user.id)) {
-        console.log(`Message Received!\n\tSender: ${message.author.username} \n\tContent: ${message.content.slice(message.content.indexOf(" "))}`);
-    } // Logs messages that mention the bot
-
-    if (message.author.id === bot.user.id) {
-        incrementUses();
-    } // Increments whenever the bot sends a message (bot is "used")
-
-    if (!message.content.startsWith(config.prefix)) return;
-    // Ignore messages that don't start with the prefix
-
-    if (message.author.bot) return;
-    // Checks if sender is a bot
-
-    const args = message.content.slice(1).split(" ");
-    const msgContent = message.content.slice(message.content.indexOf(" ") + 1);
-
-    logger.logFrom(message.channel, 1, `[command: ${args[0]}]`);
-
-    if (message.content.startsWith(config.prefix + "ping")) {
-        message.channel.sendMessage("pong! [Response time: " + bot.ping + "ms]");
-    } // Bot testing
-
-
-    else if (message.content.startsWith(config.prefix + "help")) {
-        message.channel.sendMessage(help.join("\n\n"), { split: true });
-    } // Help command
-
-
-    else if (message.content.startsWith(config.prefix + "hug")) {
-        message.channel.sendMessage("*hug*");
-    } // Gives a nice warm hug
-
-
-    else if (message.content.startsWith(config.prefix + "nameset") && (message.author.id === config.ownerID)) {
-        if (args.length === 1) {
-            message.guild.member(bot.user).setNickname("A Certain Magical Bot");
-        } else {
-            message.guild.member(bot.user).setNickname(message.content.slice(message.content.indexOf(" ")));
-        }
-        message.channel.sendMessage("My name has been set!");
-    } // Sets the bot's name (Only owner can do it)
-
-
-    else if ((message.content.startsWith(config.prefix + "invite")) && (message.author.id === config.ownerID)) {
-        message.mentions.users.first().sendMessage(config.invite);
-    } // Sends the invite link (Only owner can do it)
-
-
-    else if (message.content.startsWith(config.prefix + "calc")) {
-        var input = message.content.replace(/[^-()\d/*+.]/g, '');
-        if (input != "") {
-            var result = eval(input);
-            message.channel.sendMessage(result);
-        } else {
-            message.channel.sendMessage("Invalid request!");
-        }
-    } // Calculator function
-
-
-    else if ((message.content.startsWith(config.prefix + "prune")) && (message.author.id === config.ownerID)) {
-        if (args.length >= 2) {
-            prune(message, args[2] - 1);
-        } else if (args.length === 1) {
-            prune(message, 1 - 1);
-        } else {
-            message.channel.sendMessage("Invalid request!");
-        }
-    } // Prunes messages from bot (Prunes 1 more than the command)
-
-
-    else if (message.content.startsWith(config.prefix + "id")) {
-        if (args.length === 1) {
-            message.reply(`${message.author.id}`);
-        } else {
-            message.channel.sendMessage(message.mentions.users.first().id);
-        }
-    } // Looks up an user's Discord ID
-
-
-    else if (message.content.startsWith(config.prefix + "uses")) {
-        getUses()
-            .then(uses => {
-                message.channel.sendMessage(`There have been ${uses} uses since 2017-04-24`);
+    function getPoints(ID) {
+        return sql.get(`SELECT * FROM scores WHERE userID ='${ID}'`)
+            .then(row => {
+                if (!row)
+                    return 0;
+                else
+                    return row.points;
             });
-    } // Gets the number of uses
+    } // Finds the user's score
 
+    function trivia(message, isCritQuestion) {
+        triviaChannels.add(message.channel.id);
+        do {
+            var question = getRandomInt(1, triviaTable.length - 1);
+        } while (question === triviaLastQuestion);
+        triviaLastQuestion = question;
+        var askedQuestion = triviaTable[question]["Question"];
+        var correctAnswer = triviaTable[question]["Answer"];
 
-    else if (message.content.startsWith(config.prefix + "choose")) {
-        if (args.length >= 2) {
-            var msg = message.content.slice(message.content.indexOf(" ") + 1);
-            var choices = msg.split("|");
-            message.channel.sendMessage(choices[getRandomInt(0, choices.length)]);
+        if (isCritQuestion) {
+            var rewardPoints = 60;
         } else {
-            message.channel.sendMessage("Invalid request!");
+            rewardPoints = 15;
         }
-    } // Bot makes a choice
 
+        wait(1500)
+            .then(() => message.channel.sendMessage(askedQuestion))
+            .then(() => {
+                message.channel.awaitMessages(response => response.content.toLowerCase() === correctAnswer.toLowerCase(), {
+                    max: 1,
+                    time: 15000,
+                    errors: ['time'],
+                })
+                    .then((correctMessage) => {
+                        var correctUserID = correctMessage.first().author.id;
+                        sql.get(`SELECT * FROM scores WHERE userID ='${correctUserID}'`)
+                            .then(row => {
+                                if (!row) {
+                                    sql.run('INSERT INTO scores (userID, points) VALUES (?, ?)', [correctUserID, rewardPoints]);
+                                } else {
+                                    sql.run(`UPDATE scores SET points = ${row.points + rewardPoints} WHERE userID = ${correctUserID}`);
+                                }
+                            })
+                            .catch(() => {
+                                sql.run('CREATE TABLE IF NOT EXISTS scores (userID TEXT, points INTEGER)').then(() => {
+                                    sql.run('INSERT INTO scores (userID, points) VALUES (?, ?)', [correctUserID, rewardPoints]);
+                                });
+                            });
+                        getPoints(correctUserID)
+                            .then(points => {
+                                message.channel.sendMessage(`Correct answer "${correctAnswer}" by ${correctMessage.first().member.displayName}! +${rewardPoints} points (Total score: ${points + rewardPoints}) || Highscores: !highscores`);
+                            });
+                        triviaChannels.delete(message.channel.id);
+                    })
+                    .catch(() => {
+                        message.channel.sendMessage(`Time's up! The correct answer was "${correctAnswer}".`);
+                        triviaChannels.delete(message.channel.id);
+                    });
+            });
+    } // Main trivia function
 
-    else if (message.content.startsWith(config.prefix + "github")) {
-        message.channel.sendMessage("https://github.com/TheMasterDodo/ACertainMagicalBot");
-    } // Sends the GitHub repository link
+    // End of trivia functions
 
+    //--------------------------------------------------------------------------------------------
 
-    else if (message.content.startsWith(config.prefix + "mee6")) {
-        message.channel.sendMessage(`Go check out **${message.guild.name}**'s leaderboard: https://mee6.xyz/levels/${message.guild.id}`);
-    } // Finds the link to the server's mee6 data
-
-
-    else if (message.content.startsWith(config.prefix + "tadaima") && (message.content.includes("maid"))) {
-        message.channel.sendMessage("おかえりなさいませ！ご主人様♥, \nDo you want dinner or a shower or \*blushes\* me?");
-    } else if (message.content.startsWith(config.prefix + "tadaima")) {
-        message.channel.sendMessage("Okaeri dear, \nDo you want dinner or a shower or \*blushes\* me?");
-    } // Tadaima ("I'm home")
-
-
-    else if (message.content.startsWith(config.prefix + "tuturu")) {
-        message.channel.sendFile(path.join(launchLocation, "src", "Images", "Tuturu.png"));
-    } else if (message.content.startsWith(config.prefix + "moa")) {
-        message.channel.sendFile(path.join(launchLocation, "src", "Images", "Moa.png"));
-    } else if (message.content.startsWith(config.prefix + "tyrant")) {
-        message.channel.sendFile(path.join(launchLocation, "src", "Images", "Tyrant.png"));
-    } else if (message.content.startsWith(config.prefix + "moe")) {
-        message.channel.sendFile(moe[getRandomInt(0, moe.length)]);
-    } else if (message.content.startsWith(config.prefix + "doodoo")) {
-        for (var i = 0; i < moe.length; i++) {
-            message.channel.sendFile(moe[i]);
+    function generateRareness(rareness) {
+        var setTier = "";
+        for (var i = 0; i < rareness; i++) {
+            setTier = setTier + "★";
         }
-    } // Custom/Anime commands
+        return setTier;
+    } // Makes the tiers for set equipment
+
+    function PullOrNot() {
+        var number = Math.random();
+        var YesNo;
+        if (number <= 0.5) return path.join(launchLocation, "src", "Images", "Pull.png");
+        else return path.join(launchLocation, "src", "Images", "Don't Pull.png");
+    } // Does the 50/50 pull or not
+
+    // End of other FWT functions
+
+    //--------------------------------------------------------------------------------------------
+
+    function findEmojiFromGuildByName(guild, emoji_name) {
+        const emoji = guild.emojis.find((emoji) => emoji.name === emoji_name);
+        return emoji ? emoji.toString() : emoji_name;
+    } // Finds the emoji id in a guild using the emoji name
+
+    function capitalize(inputString) {
+        var outputString = inputString.substr(0, 1).toUpperCase() + inputString.substr(1, inputString.length - 1).toLowerCase();
+        return outputString;
+    } // Capitalizes the first letter in a string
+
+    function getRandomInt(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min)) + min;
+    } // Generates a random integer between the specified values
+
+    function wait(time) {
+        return new Promise(function (resolve) {
+            setTimeout(function () {
+                resolve();
+            }, time);
+        });
+    } // Waits for a set amount of time
+
+    function prune(message, value) {
+        value = Math.min(value, 100);
+        message.channel.fetchMessages({ limit: 100 })
+            .then(messages => {
+                const filteredMessages = messages.filter(message => message.author.id === bot.user.id);
+                var filteredArray = filteredMessages.array();
+
+                message.channel.bulkDelete(filteredArray.slice(0, value));
+            }).catch(err => console.error(err));
+    } // Prunes messages from bot
+
+    function status() {
+        var statusCycle = ["https://github.com/TheMasterDodo/ACertainMagicalBot", "Use !help for info", "Spamming !whale", `Serving ${bot.guilds.size} servers`, `Serving ${bot.channels.size} channels`, `Serving ${bot.users.size} users`, ""];
+        var random = getRandomInt(0, statusCycle.length);
+        bot.user.setGame(statusCycle[random]);
+        logger.log(2, `Set status to ${statusCycle[random]}`);
+        setTimeout(status, 600000); // Cycles every 10 minutes
+    } // Sets the status message of the bot
+
+    function incrementUses() {
+        sql.get(`SELECT * FROM utilities WHERE type = "Uses"`)
+            .then(row => {
+                if (!row) {
+                    sql.run('INSERT INTO utilities (type, value) VALUES (?, ?)', ["Uses", 0]);
+                } else {
+                    sql.run(`UPDATE utilities SET value = ${row.value + 1} WHERE type = "Uses"`);
+                }
+            })
+            .catch(() => {
+                sql.run('CREATE TABLE IF NOT EXISTS utilities (type TEXT, value INTEGER)').then(() => {
+                    sql.run('INSERT INTO utilities (type, values) VALUES (?, ?)', ["Uses", 0]);
+                });
+            });
+    } // Increments the number of uses of the bot by 1
+
+    function getUses(ID) {
+        return sql.get(`SELECT * FROM utilities WHERE type = "Uses"`)
+            .then(row => {
+                if (!row)
+                    return 0;
+                else
+                    return row.value;
+            });
+    }
+
+    // End of utility functions
+
+    //--------------------------------------------------------------------------------------------
+
+    bot.on("message", message => {
+        if (message.mentions.users.has(bot.user.id)) {
+            console.log(`Message Received!\n\tSender: ${message.author.username} \n\tContent: ${message.content.slice(message.content.indexOf(" "))}`);
+        } // Logs messages that mention the bot
+
+        if (message.author.id === bot.user.id) {
+            incrementUses();
+        } // Increments whenever the bot sends a message (bot is "used")
+
+        if (!message.content.startsWith(config.prefix)) return;
+        // Ignore messages that don't start with the prefix
+
+        if (message.author.bot) return;
+        // Checks if sender is a bot
+
+        const args = message.content.slice(1).split(" ");
+        const msgContent = message.content.slice(message.content.indexOf(" ") + 1);
+
+        logger.logFrom(message.channel, 1, `[command: ${args[0]}]`);
+
+        if (message.content.startsWith(config.prefix + "ping")) {
+            message.channel.sendMessage("pong! [Response time: " + bot.ping + "ms]");
+        } // Bot testing
 
 
-    else if (message.content.startsWith(config.prefix + "pull")) {
-        message.channel.sendFile(PullOrNot());
-    } // Bot does a 50/50 pull or no
+        else if (message.content.startsWith(config.prefix + "help")) {
+            message.channel.sendMessage(help.join("\n\n"), { split: true });
+        } // Help command
 
-    else if (message.content.startsWith(config.prefix + "whale")) {
-        var pulls = "";
-        var totalPull = "";
-        if ((args[1] > 100) || ((args[1] > 10) && (message.guild.id === "164867600457662464"))) {
-            message.channel.sendMessage("```OVERFLOW_ERROR```");
-            return;
-        }
-        if (args.length > 1) {
-            for (var i = 0; i < args[1]; i++) {
+
+        else if (message.content.startsWith(config.prefix + "hug")) {
+            message.channel.sendMessage("*hug*");
+        } // Gives a nice warm hug
+
+
+        else if (message.content.startsWith(config.prefix + "nameset") && (message.author.id === config.ownerID)) {
+            if (args.length === 1) {
+                message.guild.member(bot.user).setNickname("A Certain Magical Bot");
+            } else {
+                message.guild.member(bot.user).setNickname(message.content.slice(message.content.indexOf(" ")));
+            }
+            message.channel.sendMessage("My name has been set!");
+        } // Sets the bot's name (Only owner can do it)
+
+
+        else if ((message.content.startsWith(config.prefix + "invite")) && (message.author.id === config.ownerID)) {
+            message.mentions.users.first().sendMessage(config.invite);
+        } // Sends the invite link (Only owner can do it)
+
+
+        else if (message.content.startsWith(config.prefix + "calc")) {
+            var input = message.content.replace(/[^-()\d/*+.]/g, '');
+            if (input != "") {
+                var result = eval(input);
+                message.channel.sendMessage(result);
+            } else {
+                message.channel.sendMessage("Invalid request!");
+            }
+        } // Calculator function
+
+
+        else if ((message.content.startsWith(config.prefix + "prune")) && (message.author.id === config.ownerID)) {
+            if (args.length >= 2) {
+                prune(message, args[2] - 1);
+            } else if (args.length === 1) {
+                prune(message, 1 - 1);
+            } else {
+                message.channel.sendMessage("Invalid request!");
+            }
+        } // Prunes messages from bot (Prunes 1 more than the command)
+
+
+        else if (message.content.startsWith(config.prefix + "id")) {
+            if (args.length === 1) {
+                message.reply(`${message.author.id}`);
+            } else {
+                message.channel.sendMessage(message.mentions.users.first().id);
+            }
+        } // Looks up an user's Discord ID
+
+
+        else if (message.content.startsWith(config.prefix + "uses")) {
+            getUses()
+                .then(uses => {
+                    message.channel.sendMessage(`There have been ${uses} uses since 2017-04-24`);
+                });
+        } // Gets the number of uses
+
+
+        else if (message.content.startsWith(config.prefix + "choose")) {
+            if (args.length >= 2) {
+                var msg = message.content.slice(message.content.indexOf(" ") + 1);
+                var choices = msg.split("|");
+                message.channel.sendMessage(choices[getRandomInt(0, choices.length)]);
+            } else {
+                message.channel.sendMessage("Invalid request!");
+            }
+        } // Bot makes a choice
+
+
+        else if (message.content.startsWith(config.prefix + "github")) {
+            message.channel.sendMessage("https://github.com/TheMasterDodo/ACertainMagicalBot");
+        } // Sends the GitHub repository link
+
+
+        else if (message.content.startsWith(config.prefix + "mee6")) {
+            message.channel.sendMessage(`Go check out **${message.guild.name}**'s leaderboard: https://mee6.xyz/levels/${message.guild.id}`);
+        } // Finds the link to the server's mee6 data
+
+
+        else if (message.content.startsWith(config.prefix + "tadaima") && (message.content.includes("maid"))) {
+            message.channel.sendMessage("おかえりなさいませ！ご主人様♥, \nDo you want dinner or a shower or \*blushes\* me?");
+        } else if (message.content.startsWith(config.prefix + "tadaima")) {
+            message.channel.sendMessage("Okaeri dear, \nDo you want dinner or a shower or \*blushes\* me?");
+        } // Tadaima ("I'm home")
+
+
+        else if (message.content.startsWith(config.prefix + "tuturu")) {
+            message.channel.sendFile(path.join(launchLocation, "src", "Images", "Tuturu.png"));
+        } else if (message.content.startsWith(config.prefix + "moa")) {
+            message.channel.sendFile(path.join(launchLocation, "src", "Images", "Moa.png"));
+        } else if (message.content.startsWith(config.prefix + "tyrant")) {
+            message.channel.sendFile(path.join(launchLocation, "src", "Images", "Tyrant.png"));
+        } else if (message.content.startsWith(config.prefix + "moe")) {
+            message.channel.sendFile(moe[getRandomInt(0, moe.length)]);
+        } else if (message.content.startsWith(config.prefix + "doodoo")) {
+            for (var i = 0; i < moe.length; i++) {
+                message.channel.sendFile(moe[i]);
+            }
+        } // Custom/Anime commands
+
+
+        else if (message.content.startsWith(config.prefix + "pull")) {
+            message.channel.sendFile(PullOrNot());
+        } // Bot does a 50/50 pull or no
+
+        else if (message.content.startsWith(config.prefix + "whale")) {
+            var pulls = "";
+            var totalPull = "";
+            if ((args[1] > 100) || ((args[1] > 10) && (message.guild.id === "164867600457662464"))) {
+                message.channel.sendMessage("```OVERFLOW_ERROR```");
+                return;
+            }
+            if (args.length > 1) {
+                for (var i = 0; i < args[1]; i++) {
+                    pulls = coocooPull10().map((emoji_name) => findEmojiFromGuildByName(message.guild, emoji_name));
+                    totalPull = pulls.join(" ") + "\n" + totalPull;
+                }
+                message.channel.sendMessage(totalPull, { split: true });
+            } else {
                 pulls = coocooPull10().map((emoji_name) => findEmojiFromGuildByName(message.guild, emoji_name));
-                totalPull = pulls.join(" ") + "\n" + totalPull;
+                message.channel.sendMessage(pulls.join(" "));
             }
-            message.channel.sendMessage(totalPull, { split: true });
-        } else {
-            pulls = coocooPull10().map((emoji_name) => findEmojiFromGuildByName(message.guild, emoji_name));
-            message.channel.sendMessage(pulls.join(" "));
-        }
-    } // 10x pull
+        } // 10x pull
 
-    else if (message.content.startsWith(config.prefix + "sets")) {
-        if (args.length >= 3) {
-            var setInfo = findSets(args[1].toUpperCase(), generateRareness(args[2]));
-            message.channel.sendMessage(setInfo);
-        } else {
-            message.channel.sendMessage("Invalid request!");
-        }
-    } // Searches for sets at the requested slot and rareness
-
-    else if (message.content.startsWith(config.prefix + "set")) {
-        if (args.length >= 2) {
-            var setInfo = findListedPropertyData(msgContent, "set");
-            if (setInfo != "nosuchdata") {
+        else if (message.content.startsWith(config.prefix + "sets")) {
+            if (args.length >= 3) {
+                var setInfo = findSets(args[1].toUpperCase(), generateRareness(args[2]));
                 message.channel.sendMessage(setInfo);
             } else {
-                message.channel.sendMessage("Unknown Set!");
+                message.channel.sendMessage("Invalid request!");
             }
-        } else {
-            message.channel.sendMessage("Invalid request!");
-        }
-    } // Searches for set info
+        } // Searches for sets at the requested slot and rareness
 
-    else if (message.content.startsWith(config.prefix + "legset")) {
-        if (args.length >= 2) {
-            var setInfo = findListedPropertyData(msgContent, "legacyset");
-            if (setInfo != "nosuchdata") {
-                message.channel.sendMessage(setInfo);
-            } else {
-                message.channel.sendMessage("Unknown Set!");
-            }
-        } else {
-            message.channel.sendMessage("Invalid request!");
-        }
-    } // Searches for legacy set info
-
-    else if (message.content.startsWith(config.prefix + "stats")) {
-        if (args.length >= 2) {
-            var heroStats = findListedPropertyData(args[1], "hero");
-            if (heroStats != "nosuchdata") {
-                message.channel.sendMessage(heroStats);
-            } else {
-                message.channel.sendMessage("Unknown Hero!");
-            }
-        } else {
-            message.channel.sendMessage("Invalid request!");
-        }
-    } // Searches for hero stats
-
-    else if (message.content.startsWith(config.prefix + "stat")) {
-        if (args.length >= 3) {
-            var heroRequested = findNameByAlias(args[1], "hero");
-            var statRequested = args[2].toLowerCase();
-            var statData = findSingleData(args[1], statRequested, "stat");
-            if (statData != "nosuchdata") {
-                message.channel.sendMessage(heroRequested + "'s " + capitalize(statRequested) + ": " + statData);
-            } else {
-                message.channel.sendMessage("Unknown Hero!");
-            }
-        } else {
-            message.channel.sendMessage("Invalid request!");
-        }
-    } // Searches for the requested stat of the requested hero
-
-    else if (message.content.startsWith(config.prefix + "effect")) {
-        if (args.length >= 2) {
-            var effect = msgContent;
-            if (effect === "list") {
-                var flags = "";
-                for (var i = 0; i < flagNames.length; i++) {
-                    flags = flags + "\n" + capitalize(flagNames[i]);
+        else if (message.content.startsWith(config.prefix + "set")) {
+            if (args.length >= 2) {
+                var setInfo = findListedPropertyData(msgContent, "set");
+                if (setInfo != "nosuchdata") {
+                    message.channel.sendMessage(setInfo);
+                } else {
+                    message.channel.sendMessage("Unknown Set!");
                 }
-                message.channel.sendMessage(flags);
-            } else if (flagNames.includes(effect)) {
-                var effectHeroes = findProperty(effect, "TRUE");
-                message.channel.sendMessage(effectHeroes);
             } else {
-                message.channel.sendMessage("Unknown effect");
+                message.channel.sendMessage("Invalid request!");
             }
-        } else {
-            message.channel.sendMessage("Invalid request!");
-        }
-    } // Searches for which heroes can cause the requested effect
+        } // Searches for set info
 
-    else if (message.content.startsWith(config.prefix + "property")) {
-        if (args.length >= 3) {
-            var propertyHeroes = findProperty(args[1].toLowerCase(), capitalize(args[2]));
-            message.channel.sendMessage(propertyHeroes);
-        } else {
-            message.channel.sendMessage("Invalid request!");
-        }
-    } // Searches for which heroes have the requested property
-
-    else if (message.content.startsWith(config.prefix + "item")) {
-        if (args.length >= 2) {
-            var itemName = args[1].toLowerCase();
-            var itemLevel = args[2];
-            var itemStats = findSingleData(itemName, itemLevel, "item");
-            message.channel.sendMessage(itemStats);
-        } else {
-            message.channel.sendMessage("Invalid request!");
-        }
-    } // Searches for the requested item's max stats
-
-    else if (message.content.startsWith(config.prefix + "skill")) {
-        if (args.length >= 3) {
-            // findSkill(args[1], args[2], message);
-            message.channel.sendMessage(`!hero ${findNameByAlias(args[1], "hero")} ${args[2]}`);
-        } else {
-            message.channel.sendMessage("Invalid request!");
-        }
-    } // Searches for the requested hero skill
-
-    else if (message.content.startsWith(config.prefix + "featuredsets")) {
-        if (args.length >= 2) {
-            var dateRequested = args[1];
-        } else {
-            dateRequested = moment().format("MM-DD-YYYY");
-        }
-        const currentSets = findFeaturedSets(dateRequested);
-        message.channel.sendMessage(currentSets);
-    } // Searches for current set rotation
-
-    else if (message.content.startsWith(config.prefix + "triviaquestions")) {
-        message.channel.sendMessage(`There are currently ${triviaTable.length - 1} trivia questions available`);
-    } // Finds number of trivia questions
-
-    else if ((message.content.startsWith(config.prefix + "trivia")) && (!triviaChannels.has(message.channel.id))) {
-        if (message.channel.type === "dm") {
-            message.channel.sendMessage("Please use this command in a server!");
-            return;
-        }
-        if (getRandomInt(0, 100) < 5) {
-            message.channel.sendMessage(`+++ ${message.member.displayName} started a new round of FWT Trivia. Get ready! +++ CRITICAL QUESTION: 60 POINTS +++`);
-            trivia(message, true);
-        } else {
-            message.channel.sendMessage(`+++ ${message.member.displayName} started a new round of FWT Trivia. Get ready! +++`);
-            trivia(message, false);
-        }
-    } // Starts a round of FWT trivia
-
-    else if (message.content.startsWith(config.prefix + "score")) {
-        if (args.length === 1) {
-            getPoints(message.author.id)
-                .then(points => {
-                    if (points != 0) {
-                        message.channel.sendMessage(`Score for ${message.member.displayName}: ${points} points`);
-                    } else {
-                        message.channel.sendMessage("You have 0 points! Play trivia using !trivia to earn points");
-                    }
-                });
-        } else {
-            getPoints(message.mentions.users.first().id)
-                .then(points => {
-                    if (points != 0) {
-                        message.channel.sendMessage(`Score for ${message.mentions.users.first().username}: ${points} points`);
-                    } else {
-                        message.channel.sendMessage(`${message.mentions.users.first().username} has 0 points! Play trivia using !trivia to earn points`);
-                    }
-                });
-        }
-    } // Looks up how many points an user has
-
-    else if (message.content.startsWith(config.prefix + "highscores")) {
-        var msg = "__**Fantasy War Tactics Trivia TOP 10**__";
-        sql.all(`SELECT userID, points FROM scores ORDER BY points DESC LIMIT 10`)
-            .then((rows) => {
-                for (var i = 0; i < 10; i++) {
-                    msg += `\n#${i + 1} ${bot.users.get(rows[i].userID).username} (${rows[i].points})`;
+        else if (message.content.startsWith(config.prefix + "legset")) {
+            if (args.length >= 2) {
+                var setInfo = findListedPropertyData(msgContent, "legacyset");
+                if (setInfo != "nosuchdata") {
+                    message.channel.sendMessage(setInfo);
+                } else {
+                    message.channel.sendMessage("Unknown Set!");
                 }
-                message.channel.sendMessage(msg);
-            });
-    } // Finds top 10 highscores for FWT Trivia
-
-    else if (message.content.startsWith(config.prefix + "sg")) {
-        if (args.length >= 2) {
-            var sgData = findListedPropertyData(args[1], "soulgear");
-            if (sgData != "nosuchdata") {
-                message.channel.sendMessage(sgData);
             } else {
-                message.channel.sendMessage("Unknown Soul Gear!");
+                message.channel.sendMessage("Invalid request!");
             }
-        } else {
-            message.channel.sendMessage("Invalid request!");
-        }
-    } // Looks up a hero's soul gear
+        } // Searches for legacy set info
 
-});
+        else if (message.content.startsWith(config.prefix + "stats")) {
+            if (args.length >= 2) {
+                var heroStats = findListedPropertyData(args[1], "hero");
+                if (heroStats != "nosuchdata") {
+                    message.channel.sendMessage(heroStats);
+                } else {
+                    message.channel.sendMessage("Unknown Hero!");
+                }
+            } else {
+                message.channel.sendMessage("Invalid request!");
+            }
+        } // Searches for hero stats
 
-// End of all commands
-//--------------------------------------------------------------------------------------------
+        else if (message.content.startsWith(config.prefix + "stat")) {
+            if (args.length >= 3) {
+                var heroRequested = findNameByAlias(args[1], "hero");
+                var statRequested = args[2].toLowerCase();
+                var statData = findSingleData(args[1], statRequested, "stat");
+                if (statData != "nosuchdata") {
+                    message.channel.sendMessage(heroRequested + "'s " + capitalize(statRequested) + ": " + statData);
+                } else {
+                    message.channel.sendMessage("Unknown Hero!");
+                }
+            } else {
+                message.channel.sendMessage("Invalid request!");
+            }
+        } // Searches for the requested stat of the requested hero
 
-bot.on('error', (e) => console.error(e));
-bot.on('warn', (e) => console.warn(e));
-process.on("unhandledRejection", err => {
-    logger.log(3, "An error occured!");
-    console.error(err);
-});
-// Captures errors
+        else if (message.content.startsWith(config.prefix + "effect")) {
+            if (args.length >= 2) {
+                var effect = msgContent;
+                if (effect === "list") {
+                    var flags = "";
+                    for (var i = 0; i < flagNames.length; i++) {
+                        flags = flags + "\n" + capitalize(flagNames[i]);
+                    }
+                    message.channel.sendMessage(flags);
+                } else if (flagNames.includes(effect)) {
+                    var effectHeroes = findProperty(effect, "TRUE");
+                    message.channel.sendMessage(effectHeroes);
+                } else {
+                    message.channel.sendMessage("Unknown effect");
+                }
+            } else {
+                message.channel.sendMessage("Invalid request!");
+            }
+        } // Searches for which heroes can cause the requested effect
 
-bot.on("ready", () => {
-    logger.log(1, `Ready to server in ${bot.channels.size} channels on ${bot.guilds.size} servers, for a total of ${bot.users.size} users.`);
-});
+        else if (message.content.startsWith(config.prefix + "property")) {
+            if (args.length >= 3) {
+                var propertyHeroes = findProperty(args[1].toLowerCase(), capitalize(args[2]));
+                message.channel.sendMessage(propertyHeroes);
+            } else {
+                message.channel.sendMessage("Invalid request!");
+            }
+        } // Searches for which heroes have the requested property
 
-bot.login(config.token)
-    .then(() => status());
+        else if (message.content.startsWith(config.prefix + "item")) {
+            if (args.length >= 2) {
+                var itemStats = findItem(args[1].toLowerCase(), args[2].toUpperCase(), args[3]);
+                message.channel.sendMessage(itemStats);
+            } else {
+                message.channel.sendMessage("Invalid request!");
+            }
+        } // Searches for the requested item's max stats
+
+        else if (message.content.startsWith(config.prefix + "skill")) {
+            if (args.length >= 3) {
+                // findSkill(args[1], args[2], message);
+                message.channel.sendMessage(`!hero ${findNameByAlias(args[1], "hero")} ${args[2]}`);
+            } else {
+                message.channel.sendMessage("Invalid request!");
+            }
+        } // Searches for the requested hero skill
+
+        else if (message.content.startsWith(config.prefix + "featuredsets")) {
+            if (args.length >= 2) {
+                var dateRequested = args[1];
+            } else {
+                dateRequested = moment().format("MM-DD-YYYY");
+            }
+            const currentSets = findFeaturedSets(dateRequested);
+            message.channel.sendMessage(currentSets);
+        } // Searches for current set rotation
+
+        else if (message.content.startsWith(config.prefix + "triviaquestions")) {
+            message.channel.sendMessage(`There are currently ${triviaTable.length - 1} trivia questions available`);
+        } // Finds number of trivia questions
+
+        else if ((message.content.startsWith(config.prefix + "trivia")) && (!triviaChannels.has(message.channel.id))) {
+            if (message.channel.type === "dm") {
+                message.channel.sendMessage("Please use this command in a server!");
+                return;
+            }
+            if (getRandomInt(0, 100) < 5) {
+                message.channel.sendMessage(`+++ ${message.member.displayName} started a new round of FWT Trivia. Get ready! +++ CRITICAL QUESTION: 60 POINTS +++`);
+                trivia(message, true);
+            } else {
+                message.channel.sendMessage(`+++ ${message.member.displayName} started a new round of FWT Trivia. Get ready! +++`);
+                trivia(message, false);
+            }
+        } // Starts a round of FWT trivia
+
+        else if (message.content.startsWith(config.prefix + "score")) {
+            if (args.length === 1) {
+                getPoints(message.author.id)
+                    .then(points => {
+                        if (points != 0) {
+                            message.channel.sendMessage(`Score for ${message.member.displayName}: ${points} points`);
+                        } else {
+                            message.channel.sendMessage("You have 0 points! Play trivia using !trivia to earn points");
+                        }
+                    });
+            } else {
+                getPoints(message.mentions.users.first().id)
+                    .then(points => {
+                        if (points != 0) {
+                            message.channel.sendMessage(`Score for ${message.mentions.users.first().username}: ${points} points`);
+                        } else {
+                            message.channel.sendMessage(`${message.mentions.users.first().username} has 0 points! Play trivia using !trivia to earn points`);
+                        }
+                    });
+            }
+        } // Looks up how many points an user has
+
+        else if (message.content.startsWith(config.prefix + "highscores")) {
+            var msg = "__**Fantasy War Tactics Trivia TOP 10**__";
+            sql.all(`SELECT userID, points FROM scores ORDER BY points DESC LIMIT 10`)
+                .then((rows) => {
+                    for (var i = 0; i < 10; i++) {
+                        msg += `\n#${i + 1} ${bot.users.get(rows[i].userID).username} (${rows[i].points})`;
+                    }
+                    message.channel.sendMessage(msg);
+                });
+        } // Finds top 10 highscores for FWT Trivia
+
+        else if (message.content.startsWith(config.prefix + "sg")) {
+            if (args.length >= 2) {
+                var sgData = findListedPropertyData(args[1], "soulgear");
+                if (sgData != "nosuchdata") {
+                    message.channel.sendMessage(sgData);
+                } else {
+                    message.channel.sendMessage("Unknown Soul Gear!");
+                }
+            } else {
+                message.channel.sendMessage("Invalid request!");
+            }
+        } // Looks up a hero's soul gear
+
+    });
+
+    // End of all commands
+    //--------------------------------------------------------------------------------------------
+
+    bot.on('error', (e) => console.error(e));
+    bot.on('warn', (e) => console.warn(e));
+    process.on("unhandledRejection", err => {
+        logger.log(3, "An error occured!");
+        console.error(err);
+    });
+    // Captures errors
+
+    bot.on("ready", () => {
+        logger.log(1, `Ready to server in ${bot.channels.size} channels on ${bot.guilds.size} servers, for a total of ${bot.users.size} users.`);
+    });
+
+    bot.login(config.token)
+        .then(() => status());
