@@ -50,6 +50,14 @@ for (let i = 0, len = oldSetDataTable.length; i < len; i++) {
     }
 }   // Adds the last time in rotation data to the set data
 
+for (var i = 0; i < setDataTable.length; i++) {
+    for (var j = 0; j < featuredSetTable.length; i++) {
+        if (((featuredSetTable[j]["Set1"]) || (featuredSetTable["Set2"])) === setDataTable[i]["Name"]) {
+            setDataTable[i]["Last Time in Rotation"] = `${featuredSetTable[j]["Start"]} - ${featuredSetTable[j]["End"]}`;
+        }
+    }
+}
+
 //--------------------------------------------------------------------------------------------
 
 function coocooPull(isLast) {
