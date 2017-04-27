@@ -403,7 +403,7 @@ function prune(message, value) {
 } // Prunes messages from bot
 
 function status() {
-    var statusCycle = ["https://github.com/TheMasterDodo/ACertainMagicalBot", "Use !help for info", "Spamming !whale", `Serving ${bot.guilds.size} servers`, `Serving ${bot.channels.size} channels`, `Serving ${bot.users.size} users`, ""];
+    var statusCycle = ["https://github.com/TheMasterDodo/ACertainMagicalBot", "Use !help for info", "Spamming !whale", `Serving ${bot.guilds.size} servers`, `Serving ${bot.channels.size} channels`, `Serving ${bot.users.size} users`];
     var random = getRandomInt(0, statusCycle.length);
     bot.user.setGame(statusCycle[random]);
     logger.log(2, `Set status to ${statusCycle[random]}`);
