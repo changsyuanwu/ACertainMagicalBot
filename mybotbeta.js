@@ -38,22 +38,21 @@ var triviaLastQuestion = 0;
 // Logger
 const logger = new Logger(config.noLogs);
 
-
 //--------------------------------------------------------------------------------------------
 
-for (let i = 0, len = oldSetDataTable.length; i < len; i++) {
-    for (let j = 0, weeks = oldSetRotation.length; j < weeks; j++) {
-        let grade = oldSetDataTable[i]["Tier"].length.toString() + oldSetDataTable[i]["Grade"];
-        if (oldSetRotation[j][grade] === oldSetDataTable[i]["Name"]) {
-            oldSetDataTable[i]["Last Time in the Rotation"] = oldSetRotation[j]["Week"];
-        }
-    }
-}   // Adds the last time in rotation data to the set data
+// for (let i = 0, len = oldSetDataTable.length; i < len; i++) {
+//     for (let j = 0, weeks = oldSetRotation.length; j < weeks; j++) {
+//         let grade = oldSetDataTable[i]["Tier"].length.toString() + oldSetDataTable[i]["Grade"];
+//         if (oldSetRotation[j][grade] === oldSetDataTable[i]["Name"]) {
+//             oldSetDataTable[i]["Last Time in the Rotation"] = oldSetRotation[j]["Week"];
+//         }
+//     }
+// }   // Adds the last time in rotation data to the set data
 
 for (var i = 0; i < setDataTable.length; i++) {
-    for (var j = 0; j < featuredSetTable.length; i++) {
-        if (((featuredSetTable[j]["Set1"]) || (featuredSetTable["Set2"])) === setDataTable[i]["Name"]) {
-            setDataTable[i]["Last Time in Rotation"] = `${featuredSetTable[j]["Start"]} - ${featuredSetTable[j]["End"]}`;
+    for (var j = 0; j < featuredSetTable.length; j++) {
+        if ((featuredSetTable[j]["Set1"] === setDataTable[i]["Name"]) || (featuredSetTable["Set2"] === setDataTable[i]["Name"])) {
+            setDataTable[i]["Last Time in Rotation"] = `${featuredSetTable[j]["Start"]} ~ ${featuredSetTable[j]["End"]}`;
         }
     }
 }
