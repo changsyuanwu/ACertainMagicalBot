@@ -13,7 +13,7 @@
     },
     {
         "Question": "What is the name of the ruling dynasty of the Sia continent?",
-        "Answer": "Dohwa"
+        "Answer": "Dohwa Dynasty"
     },
     {
         "Question": "What is the name of the Left Sybil of the Dohwa Dynasty",
@@ -76,6 +76,18 @@
         "Answer": "Angela"
     },
     {
+        "Question": "Which hero is the following quote from? \"They're not much, but...take them if you need.\"",
+        "Answer": "Angela"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"I've leveled up...Though you probably know that already.\"",
+        "Answer": "Angela"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"Go ahead and fight. I'll help.\"",
+        "Answer": "Angela"
+    },
+    {
         "Question": "Which hero is the following quote from? \"Don't touch me! I can hear you just fine!\"",
         "Answer": "Azrael"
     },
@@ -92,7 +104,27 @@
         "Answer": "Azrael"
     },
     {
+        "Question": "Which hero is the following quote from? \"I brought you the spoils of battle, Lord. Make sure to take a look at it\"",
+        "Answer": "Azrael"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"Hm, I've leveled up. Of course, it's only natural, but still....\"",
+        "Answer": "Azrael"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"For a perfect victory!\"",
+        "Answer": "Azrael"
+    },
+    {
         "Question": "Which hero is the following quote from? \"The size of my breasts? I can't tell you that. Haha.\"",
+        "Answer": "Belle"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"After healing people, I leveled up, Lord.\"",
+        "Answer": "Belle"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"It's not that I want a reward for healing... but I couldn't say no to all this stuff.\"",
         "Answer": "Belle"
     },
     {
@@ -164,20 +196,304 @@
         "Answer": "Jack"
     },
     {
-        "Question": "Which hero is the following quote from? \"Ian is a Cat.\"",
-        "Answer": "Jenny"
+        "Question": "Which collaboration event was Jin Kisaragi part of?",
+        "Answer": "Blazblue"
     },
     {
-        "Question": "Which hero is the following quote from? \"Ian is a Cat.\"",
-        "Answer": "Jenny"
+        "Question": "Which hero is the following quote from? \"Lord... Are you planning something bad? Y... You're not right? I, I trust that you're not\"",
+        "Answer": "Kai"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"As long as my powers put to good use, I am more than willing to fight.\"",
+        "Answer": "Kai"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"We won't get anywhere if we just stand here, Lord! Let's go!\"",
+        "Answer": "Kai"
+    },
+    {
+        "Question": "Which hero speaks backwards?",
+        "Answer": "Kitty"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"One after another...seeing my students grow up is my only joy\"",
+        "Answer": "Lance"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"Eldrika...May this world you loved so much find peace some day...\"",
+        "Answer": "Lance"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"Call me if you need me, Lord. I'll be meditating until then.\"",
+        "Answer": "Lance"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"Haha...Lord, I feel like I can really talk to you.\"",
+        "Answer": "Lee"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"Roasted fish? Not that i hate it but...\"",
+        "Answer": "Lee"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"Go fight? Hmm...Where are we going?\"",
+        "Answer": "Lee"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"Don't be so annoying. Actually... I don't like fighting too much.\"",
+        "Answer": "Lee"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"...Ah, this adventure...There was a lot of useless loot.\"",
+        "Answer": "Lee"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"Level up, you say? Hm...Come to think of it, you may be right...\"",
+        "Answer": "Lee"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"Is it show time? Now, everyone, listen to my song!\"",
+        "Answer": "Lena"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"What an idiotic thing to say! Are you telling me to go now?! I haven't finished my makeup yet!\"",
+        "Answer": "Lena"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"Eh...I don't like the way things are now. I don't even get a chance to show my performance...\"",
+        "Answer": "Lena"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"I am ____, the goddess of the battlefield...Stay Excited!\"",
+        "Answer": "Lena"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"Wohoo! I've leveled up! I am so awesome!\"",
+        "Answer": "Lena"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"Do I have to bring back loot like a penny-pincher? Here, take this.\"",
+        "Answer": "Lena"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"It's showtime! Watch and Enjoy!☆\"",
+        "Answer": "Lena"
+    },
+    {
+        "Question": "What is the name of Lilid's tribe?",
+        "Answer": "Tiger Tribe"
+    },
+    {
+        "Question": "Who is the only person who likes Mas' songs?",
+        "Answer": "Lord"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"I-I-I-I'll Help!\"",
+        "Answer": "Moa"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"If I just go back like this...my master will beat me to death...\"",
+        "Answer": "Mu"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"Huh?! Roasted fish! Are you giving this to me for free?!\"",
+        "Answer": "Mu"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"The reason I fight? Money...Because I need money!\"",
+        "Answer": "Mu"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"How are you? Exorcist Mu at your service!\"",
+        "Answer": "Mu"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"I brought some loot, Lord. It's good stuff!\"",
+        "Answer": "Mu"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"I have leveled up, Lord! Will my salary increase, too?\"",
+        "Answer": "Mu"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"I will help you if you give me 10 million gold.\"",
+        "Answer": "Mu"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"I wouldn't mind living like this for a while.\"",
+        "Answer": "Muzaka"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"I hate to forget my purpose and run amok.\"",
+        "Answer": "Muzaka"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"Fight? Might as well do it now.\"",
+        "Answer": "Muzaka"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"World Domination? Geez, you humans are as greedy as ever.\"",
+        "Answer": "Muzaka"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"I will show you what I am capable of.\"",
+        "Answer": "Muzaka"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"I have to do what I must when the situation calls for it.\"",
+        "Answer": "Muzaka"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"Ah. I've leveled up. Or so it seems...\"",
+        "Answer": "Nirvana"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"I got some loot during the adventure. It's not much though.\"",
+        "Answer": "Nirvana"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"Why do I send a warning message? What a silly question... I want everyone to come and see me.\"",
+        "Answer": "Persona"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"To steal with such great eloquence... Isn't that the artistry of the great Phantom Thief?\"",
+        "Answer": "Persona"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"Whew... I don't really belong in this era. I need an era where I can stand out.\"",
+        "Answer": "Persona"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"I don't just steal things. I also steal hearts of beautiful ladies... Hahaha\"",
+        "Answer": "Persona"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"The loot? Of course I brought it! I'm a Phantom Thief after all.\"",
+        "Answer": "Persona"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"Phantom Thief _______, gorgeous level up!\"",
+        "Answer": "Persona"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"I won't let you steal my spotlight!\"",
+        "Answer": "Persona"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"I won't let you steal my thunder!\"",
+        "Answer": "Persona"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"I won't let you get the spotlight by yourself!\"",
+        "Answer": "Persona"
+    },
+    {
+        "Question": "What is the name of the empire that Raboff was a General of?",
+        "Answer": " Lagrangian Empire"
+    },
+    {
+        "Question": "What is the name of the empire that Chris was a General of?",
+        "Answer": " Lagrangian Empire"
     },
     {
         "Question": "Which hero is the following quote from? \"I am the Noblesse. I stand where I belong.\"",
         "Answer": "Raizel"
     },
     {
+        "Question": "Which hero is the following quote from? \"..(Remaining silent. Looks bothered about his clothes in disarray.)\"",
+        "Answer": "Raizel"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"...I am more concerned with this one.\"",
+        "Answer": "Raizel"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"...Be careful.\"",
+        "Answer": "Raizel"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"...You are the Lord, nobody else ever will be.\"",
+        "Answer": "Raizel"
+    },
+    {
         "Question": "Which hero is the following quote from? \"Maybe that's why Father liked Humans.\"",
         "Answer": "Raskreia"
+    },
+    {
+        "Question": "What is Reina allergic to?",
+        "Answer": "Cats"
+    },
+    {
+        "Question": "Who was the first hero to be obtainable only through real-worl currency?",
+        "Answer": "Seira"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"Did you say i look stupid? You are joking...Right Lord?\"",
+        "Answer": "Shark"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"A mighty fine morning! Lets have some fun fighting!\"",
+        "Answer": "Shark"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"I'm not crying! This is my heart's sweat! I wasn't reminiscing about our captain!\"",
+        "Answer": "Shark"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"Hahaha! Hahahahaha! Hahahahahahahah! Hahahahahahahaha\"",
+        "Answer": "Shark"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"Somehow I'm reminded of my master.\"",
+        "Answer": "Shark"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"Haha... Gaining strength is always nice. Right?\"",
+        "Answer": "Sione"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"Being the winner is great. I mean, taking whatever you want from the defeated ones.\"",
+        "Answer": "Sione"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"_____ wants to fight! _____ does fight! Fight!\"",
+        "Answer": "Sraka"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"Lord is strong! _____ only follows strong people!\"",
+        "Answer": "Sraka"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"New stuff, Lord! But no food!\"",
+        "Answer": "Sraka"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"Thank you for the healing, Nirvana.\"",
+        "Answer": "Unknown"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"Can I keep the best loot for my master?\"",
+        "Answer": "Valkyrie"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"My Level went up! Let me go tell my master! ❤\"",
+        "Answer": "Valkyrie"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"I hope my magic will help you.\"",
+        "Answer": "Yekaterina"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"We've found some loot from this battle.\"",
+        "Answer": "Yekaterina"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"I have leveled up, my lord! I haven't felt this for so long.\"",
+        "Answer": "Yekaterina"
+    },
+    {
+        "Question": "How many genes does it take to recruit ?",
+        "Answer": "lol"
     },
     {
         "Question": "What is Bearman's title?",
@@ -198,6 +514,14 @@
     {
         "Question": "What gender does Angela prefer?",
         "Answer": "Women"
+    },
+    {
+        "Question": "When is Spooky and Banshee's birthday?",
+        "Answer": "February 23rd"
+    },
+    {
+        "Question": "When is Shu-shu's birthday?",
+        "Answer": "February 12th"
     },
     {
         "Question": "When is Jenny's birthday?",
@@ -260,7 +584,7 @@
         "Answer": "Sione's Ominous Prophecy"
     },
     {
-        "Question": "How much mastery does a +12 5* platinum necklace give?",
+        "Question": "How much mastery does a +12 slot V platinum necklace give?",
         "Answer": "2569"
     },
     {
@@ -268,7 +592,7 @@
         "Answer": "4/20 2017"
     },
     {
-        "Question": "What is the highest %Attack mod you can get at 5*?",
+        "Question": "What is the highest %Attack mod you can get at slot V?",
         "Answer": "10%"
     },
     {
@@ -276,11 +600,11 @@
         "Answer": "20300"
     },
     {
-        "Question": "Which 4* set gives a Lava terrain bonus?",
+        "Question": "Which slot IV set gives a Lava terrain bonus?",
         "Answer": "Dragon Slayer"
     },
     {
-        "Question": "How much Defense does a 2* platinum necklace give?",
+        "Question": "How much Defense does a slot II platinum necklace give?",
         "Answer": "225"
     },
     {
@@ -288,19 +612,19 @@
         "Answer": "4"
     },
     {
-        "Question": "Which 1* set gives +1000 Defense and +820 final skill power?",
+        "Question": "Which slot I set gives +1000 Defense and +820 final skill power?",
         "Answer": "Battlefield Healer"
     },
     {
-        "Question": "Which 1* set gives a Glacier terrain bonus?",
+        "Question": "Which slot I set gives a Glacier terrain bonus?",
         "Answer": "Lista Blizzard"
     },
     {
-        "Question": "Which 2* set increases Crit Rate by 900 and Attack by 12%?",
+        "Question": "Which slot II set increases Crit Rate by 900 and Attack by 12%?",
         "Answer": "Time for Your Shot!"
     },
     {
-        "Question": "Which 2* set increases Defense by 1500 and reduces incoming Critical Damage by 15%?",
+        "Question": "Which slot II set increases Defense by 1500 and reduces incoming Critical Damage by 15%?",
         "Answer": "Super Ranger: Green"
     },
     {
