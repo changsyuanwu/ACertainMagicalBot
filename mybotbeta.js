@@ -572,7 +572,7 @@ bot.on("message", message => {
         message.channel.sendFile(path.join(launchLocation, "src", "Images", "Tyrant.png"));
     } else if (message.content.startsWith(config.prefix + "moe")) {
         message.channel.sendFile(moe[getRandomInt(0, moe.length)]);
-    } else if (message.content.startsWith(config.prefix + "doodoo")) {
+    } else if ((message.content.startsWith(config.prefix + "doodoo")) && (message.author.id === config.ownerID)) {
         for (var i = 0; i < moe.length; i++) {
             message.channel.sendFile(moe[i]);
         }
