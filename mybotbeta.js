@@ -22,10 +22,6 @@ const triviaTable = require(path.join(launchLocation, "src", "Data", "FWTTrivia.
 const soulGearTable = require(path.join(launchLocation, "src", "Data", "FWTSoulGear.json"));
 const featuredSetTable = require(path.join(launchLocation, "src", "Data", "FWTFeaturedSets.json"));
 
-// Legacy Data
-const oldSetDataTable = require(path.join(launchLocation, "src", "Legacy", "OldFWTSetData.json"));
-const oldSetRotation = require(path.join(launchLocation, "src", "Legacy", "OldFWTSetRotation.json"));
-
 // Effects
 const flagNames = ["confusion", "charm", "stun", "taunt", "disarm", "immobilize", "decrease movement", "dot", "mp burn", "skill cost", "defense ignore", "defense ignoring damage", "weakening", "buff removal", "hp% damage", "defense decrease", "attack decrease", "hp drain", "mastery decrease", "instant death", "decrease crit rate", "push/pull/switch", "passive attack", "seal", "sleep", "melee", "ranged", "overload", "terrain change", "dodge decrease", "decrease healing"];
 
@@ -40,22 +36,13 @@ const logger = new Logger(config.noLogs);
 
 //--------------------------------------------------------------------------------------------
 
-for (let i = 0, len = oldSetDataTable.length; i < len; i++) {
-    for (let j = 0, weeks = oldSetRotation.length; j < weeks; j++) {
-        let grade = oldSetDataTable[i]["Tier"].length.toString() + oldSetDataTable[i]["Grade"];
-        if (oldSetRotation[j][grade] === oldSetDataTable[i]["Name"]) {
-            oldSetDataTable[i]["Last Time in the Rotation"] = oldSetRotation[j]["Week"];
-        }
-    }
-}   // Adds the last time in rotation data to the set data
-
 for (var i = 0; i < setDataTable.length; i++) {
     for (var j = 0; j < featuredSetTable.length; j++) {
         if ((featuredSetTable[j]["Set1"] === setDataTable[i]["Name"]) || (featuredSetTable[j]["Set2"] === setDataTable[i]["Name"])) {
             setDataTable[i]["Last Time in Rotation"] = `${featuredSetTable[j]["Start"]} ~ ${featuredSetTable[j]["End"]}`;
         }
     }
-}
+} // Adds the last time in rotation data to the set data
 
 //--------------------------------------------------------------------------------------------
 
@@ -128,10 +115,7 @@ function findListedPropertyData(alias, type) {
     } else if (type === "soulgear") {
         var name = findNameByAlias(alias, "hero");
         var dataTable = soulGearTable;
-    } else if (type === "legacyset") {
-        var name = findNameByAlias(alias, "set");
-        var dataTable = oldSetDataTable;
-    }
+    } 
     if (name === "nosuchalias") {
         return "nosuchdata";
     }
@@ -623,19 +607,6 @@ bot.on("message", message => {
             message.channel.sendMessage("Invalid request!");
         }
     } // Searches for set info
-
-    else if (message.content.startsWith(config.prefix + "legset")) {
-        if (args.length >= 2) {
-            var setInfo = findListedPropertyData(msgContent, "legacyset");
-            if (setInfo != "nosuchdata") {
-                message.channel.sendMessage(setInfo);
-            } else {
-                message.channel.sendMessage("Unknown Set!");
-            }
-        } else {
-            message.channel.sendMessage("Invalid request!");
-        }
-    } // Searches for legacy set info
 
     else if (message.content.startsWith(config.prefix + "stats")) {
         if (args.length >= 2) {
