@@ -6,6 +6,6 @@ config.json
 
 .DS_Store
 
-scores.sqlite
+botdata.sqlite
 
 test.js
