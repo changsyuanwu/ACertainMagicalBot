@@ -115,7 +115,7 @@ function findListedPropertyData(alias, type) {
     } else if (type === "soulgear") {
         var name = findNameByAlias(alias, "hero");
         var dataTable = soulGearTable;
-    } 
+    }
     if (name === "nosuchalias") {
         return "nosuchdata";
     }
