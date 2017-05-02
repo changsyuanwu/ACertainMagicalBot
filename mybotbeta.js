@@ -50,20 +50,19 @@ function coocooPull(isLast) {
     var number = Math.random();
     if (isLast) {
         var junkrate = 0;
-        var platrate = 0;
         var brate = 0;
-        var arate = 0.7;
-        var srate = 0.27;
+        var arate = 0.7174;
+        var srate = 0.1957;
     } else {
-        var junkrate = 0.55;
-        var platrate = 0.28;
-        var arate = 0.1;
-        var srate = 0.045;
+        var junkrate = 0.507;
+        var brate = 0.225;
+        var arate = 0.178;
+        var srate = 0.049;
     }
     if (number < junkrate) return "junk";
-    else if (junkrate <= number && number < junkrate + platrate) return "platinum";
-    else if (junkrate + platrate <= number && number < junkrate + platrate + arate) return "A_set";
-    else if (junkrate + platrate + arate <= number && number < junkrate + platrate + arate + srate) return "S_set";
+    else if (junkrate <= number && number < junkrate + brate) return "B_set";
+    else if (junkrate + brate <= number && number < junkrate + brate + arate) return "A_set";
+    else if (junkrate + brate + arate <= number && number < junkrate + brate + arate + srate) return "S_set";
     else return "SS_set";
 } // Processes a single coocoo pull
 
