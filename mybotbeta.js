@@ -172,21 +172,7 @@ function findProperty(propertyRequested, effectRequested) {
 } // Finds all heroes who have the requested property
 
 function findSkill(hero, skill, message) {
-    var fwtHelper = bot.users.get("187965487395635200");
-    fwtHelper.sendMessage(`!hero ${findNameByAlias(hero, "hero")} ${skill}`)
-        .then((msg) => {
-            msg.channel.awaitMessages(response => response.author.id === "187965487395635200", {
-                max: 1,
-                time: 10000,
-                errors: ["time"]
-            })
-                .then((data) => {
-                    message.channel.sendMessage(data.first().content);
-                })
-                .catch(() => {
-                    message.channel.sendMessage("Request timed out. Please try again later");
-                });
-        });
+    // Database in production
 } // Finds a hero skill
 
 function findItem(item, slot, rareness) {
@@ -299,7 +285,7 @@ function trivia(message, isCritQuestion) {
     }
 
     wait(1500)
-        .then(() => message.channel.sendMessage(askedQuestion))
+        .then(() => message.channel.send(askedQuestion))
         .then(() => {
             message.channel.awaitMessages(response => response.content.toLowerCase() === correctAnswer.toLowerCase(), {
                 max: 1,
@@ -323,12 +309,12 @@ function trivia(message, isCritQuestion) {
                         });
                     getPoints(correctUserID)
                         .then(points => {
-                            message.channel.sendMessage(`Correct answer "${correctAnswer}" by ${correctMessage.first().member.displayName}! +${rewardPoints} points (Total score: ${points + rewardPoints}) || Highscores: !highscores`);
+                            message.channel.send(`Correct answer "${correctAnswer}" by ${correctMessage.first().member.displayName}! +${rewardPoints} points (Total score: ${points + rewardPoints}) || Highscores: !highscores`);
                         });
                     triviaChannels.delete(message.channel.id);
                 })
                 .catch(() => {
-                    message.channel.sendMessage(`Time's up! The correct answer was "${correctAnswer}".`);
+                    message.channel.send(`Time's up! The correct answer was "${correctAnswer}".`);
                     triviaChannels.delete(message.channel.id);
                 });
         });
@@ -451,17 +437,17 @@ bot.on("message", message => {
     logger.logFrom(message.channel, 1, `[command: ${args[0]}]`);
 
     if (message.content.startsWith(config.prefix + "ping")) {
-        message.channel.sendMessage("pong! [Response time: " + bot.ping + "ms]");
+        message.channel.send("pong! [Response time: " + bot.ping + "ms]");
     } // Bot testing
 
 
     else if (message.content.startsWith(config.prefix + "help")) {
-        message.channel.sendMessage(help.join("\n\n"), { split: true });
+        message.channel.send(help.join("\n\n"), { split: true });
     } // Help command
 
 
     else if (message.content.startsWith(config.prefix + "hug")) {
-        message.channel.sendMessage("*hug*");
+        message.channel.send("*hug*");
     } // Gives a nice warm hug
 
 
@@ -471,12 +457,12 @@ bot.on("message", message => {
         } else {
             message.guild.member(bot.user).setNickname(message.content.slice(message.content.indexOf(" ")));
         }
-        message.channel.sendMessage("My name has been set!");
+        message.channel.send("My name has been set!");
     } // Sets the bot's name (Only owner can do it)
 
 
     else if ((message.content.startsWith(config.prefix + "invite")) && (message.author.id === config.ownerID)) {
-        message.mentions.users.first().sendMessage(config.invite);
+        message.mentions.users.first().send(config.invite);
     } // Sends the invite link (Only owner can do it)
 
 
@@ -484,9 +470,9 @@ bot.on("message", message => {
         var input = message.content.replace(/[^-()\d/*+.]/g, '');
         if (input != "") {
             var result = eval(input);
-            message.channel.sendMessage(result);
+            message.channel.send(result);
         } else {
-            message.channel.sendMessage("Invalid request!");
+            message.channel.send("Invalid request!");
         }
     } // Calculator function
 
@@ -497,7 +483,7 @@ bot.on("message", message => {
         } else if (args.length === 1) {
             prune(message, 1 - 1);
         } else {
-            message.channel.sendMessage("Invalid request!");
+            message.channel.send("Invalid request!");
         }
     } // Prunes messages from bot (Prunes 1 more than the command)
 
@@ -506,7 +492,7 @@ bot.on("message", message => {
         if (args.length === 1) {
             message.reply(`${message.author.id}`);
         } else {
-            message.channel.sendMessage(message.mentions.users.first().id);
+            message.channel.send(message.mentions.users.first().id);
         }
     } // Looks up an user's Discord ID
 
@@ -514,7 +500,7 @@ bot.on("message", message => {
     else if (message.content.startsWith(config.prefix + "uses")) {
         getUses()
             .then(uses => {
-                message.channel.sendMessage(`There have been ${uses} uses since 2017-04-24`);
+                message.channel.send(`There have been ${uses} uses since 2017-04-24`);
             });
     } // Gets the number of uses
 
@@ -523,54 +509,54 @@ bot.on("message", message => {
         if (args.length >= 2) {
             var msg = message.content.slice(message.content.indexOf(" ") + 1);
             var choices = msg.split("|");
-            message.channel.sendMessage(choices[getRandomInt(0, choices.length)]);
+            message.channel.send(choices[getRandomInt(0, choices.length)]);
         } else {
-            message.channel.sendMessage("Invalid request!");
+            message.channel.send("Invalid request!");
         }
     } // Bot makes a choice
 
 
     else if (message.content.startsWith(config.prefix + "github")) {
-        message.channel.sendMessage("https://github.com/TheMasterDodo/ACertainMagicalBot");
+        message.channel.send("https://github.com/TheMasterDodo/ACertainMagicalBot");
     } // Sends the GitHub repository link
 
 
     else if (message.content.startsWith(config.prefix + "mee6")) {
-        message.channel.sendMessage(`Go check out **${message.guild.name}**'s leaderboard: https://mee6.xyz/levels/${message.guild.id}`);
+        message.channel.send(`Go check out **${message.guild.name}**'s leaderboard: https://mee6.xyz/levels/${message.guild.id}`);
     } // Finds the link to the server's mee6 data
 
 
     else if (message.content.startsWith(config.prefix + "tadaima") && (message.content.includes("maid"))) {
-        message.channel.sendMessage("おかえりなさいませ！ご主人様♥, \nDo you want dinner or a shower or \*blushes\* me?");
+        message.channel.send("おかえりなさいませ！ご主人様♥, \nDo you want dinner or a shower or \*blushes\* me?");
     } else if (message.content.startsWith(config.prefix + "tadaima")) {
-        message.channel.sendMessage("Okaeri dear, \nDo you want dinner or a shower or \*blushes\* me?");
+        message.channel.send("Okaeri dear, \nDo you want dinner or a shower or \*blushes\* me?");
     } // Tadaima ("I'm home")
 
 
     else if (message.content.startsWith(config.prefix + "tuturu")) {
-        message.channel.sendFile(path.join(launchLocation, "src", "Images", "Tuturu.png"));
+        message.channel.send({files: [path.join(launchLocation, "src", "Images", "Tuturu.png")]});
     } else if (message.content.startsWith(config.prefix + "moa")) {
-        message.channel.sendFile(path.join(launchLocation, "src", "Images", "Moa.png"));
+        message.channel.send({files: [path.join(launchLocation, "src", "Images", "Moa.png")]});
     } else if (message.content.startsWith(config.prefix + "tyrant")) {
-        message.channel.sendFile(path.join(launchLocation, "src", "Images", "Tyrant.png"));
+        message.channel.send({files: [path.join(launchLocation, "src", "Images", "Tyrant.png")]});
     } else if (message.content.startsWith(config.prefix + "moe")) {
-        message.channel.sendFile(moe[getRandomInt(0, moe.length)]);
+        message.channel.send({files: [moe[getRandomInt(0, moe.length)]]});
     } else if ((message.content.startsWith(config.prefix + "doodoo")) && (message.author.id === config.ownerID)) {
         for (var i = 0; i < moe.length; i++) {
-            message.channel.sendFile(moe[i]);
+            message.channel.send({files: [moe[i]]});
         }
     } // Custom/Anime commands
 
 
     else if (message.content.startsWith(config.prefix + "pull")) {
-        message.channel.sendFile(PullOrNot());
+        message.channel.send({files: [PullOrNot()]});
     } // Bot does a 50/50 pull or no
 
     else if (message.content.startsWith(config.prefix + "whale")) {
         var pulls = "";
         var totalPull = "";
         if ((args[1] > 100) || ((args[1] > 10) && (message.guild.id === "164867600457662464"))) {
-            message.channel.sendMessage("```OVERFLOW_ERROR```");
+            message.channel.send("```OVERFLOW_ERROR```");
             return;
         }
         if (args.length > 1) {
@@ -578,19 +564,19 @@ bot.on("message", message => {
                 pulls = coocooPull10().map((emoji_name) => findEmojiFromGuildByName(message.guild, emoji_name));
                 totalPull = pulls.join(" ") + "\n" + totalPull;
             }
-            message.channel.sendMessage(totalPull, { split: true });
+            message.channel.send(totalPull, { split: true });
         } else {
             pulls = coocooPull10().map((emoji_name) => findEmojiFromGuildByName(message.guild, emoji_name));
-            message.channel.sendMessage(pulls.join(" "));
+            message.channel.send(pulls.join(" "));
         }
     } // 10x pull
 
     else if (message.content.startsWith(config.prefix + "sets")) {
         if (args.length >= 3) {
             var setInfo = findSets(args[1].toUpperCase(), generateRareness(args[2]));
-            message.channel.sendMessage(setInfo);
+            message.channel.send(setInfo);
         } else {
-            message.channel.sendMessage("Invalid request!");
+            message.channel.send("Invalid request!");
         }
     } // Searches for sets at the requested slot and rareness
 
@@ -598,12 +584,12 @@ bot.on("message", message => {
         if (args.length >= 2) {
             var setInfo = findListedPropertyData(msgContent, "set");
             if (setInfo != "nosuchdata") {
-                message.channel.sendMessage(setInfo);
+                message.channel.send(setInfo);
             } else {
-                message.channel.sendMessage("Unknown Set!");
+                message.channel.send("Unknown Set!");
             }
         } else {
-            message.channel.sendMessage("Invalid request!");
+            message.channel.send("Invalid request!");
         }
     } // Searches for set info
 
@@ -611,12 +597,12 @@ bot.on("message", message => {
         if (args.length >= 2) {
             var heroStats = findListedPropertyData(args[1], "hero");
             if (heroStats != "nosuchdata") {
-                message.channel.sendMessage(heroStats);
+                message.channel.send(heroStats);
             } else {
-                message.channel.sendMessage("Unknown Hero!");
+                message.channel.send("Unknown Hero!");
             }
         } else {
-            message.channel.sendMessage("Invalid request!");
+            message.channel.send("Invalid request!");
         }
     } // Searches for hero stats
 
@@ -626,12 +612,12 @@ bot.on("message", message => {
             var statRequested = args[2].toLowerCase();
             var statData = findSingleData(args[1], statRequested, "stat");
             if (statData != "nosuchdata") {
-                message.channel.sendMessage(heroRequested + "'s " + capitalize(statRequested) + ": " + statData);
+                message.channel.send(heroRequested + "'s " + capitalize(statRequested) + ": " + statData);
             } else {
-                message.channel.sendMessage("Unknown Hero!");
+                message.channel.send("Unknown Hero!");
             }
         } else {
-            message.channel.sendMessage("Invalid request!");
+            message.channel.send("Invalid request!");
         }
     } // Searches for the requested stat of the requested hero
 
@@ -643,24 +629,24 @@ bot.on("message", message => {
                 for (var i = 0; i < flagNames.length; i++) {
                     flags = flags + "\n" + capitalize(flagNames[i]);
                 }
-                message.channel.sendMessage(flags);
+                message.channel.send(flags);
             } else if (flagNames.includes(effect)) {
                 var effectHeroes = findProperty(effect, "TRUE");
-                message.channel.sendMessage(effectHeroes);
+                message.channel.send(effectHeroes);
             } else {
-                message.channel.sendMessage("Unknown effect");
+                message.channel.send("Unknown effect");
             }
         } else {
-            message.channel.sendMessage("Invalid request!");
+            message.channel.send("Invalid request!");
         }
     } // Searches for which heroes can cause the requested effect
 
     else if (message.content.startsWith(config.prefix + "property")) {
         if (args.length >= 3) {
             var propertyHeroes = findProperty(args[1].toLowerCase(), capitalize(args[2]));
-            message.channel.sendMessage(propertyHeroes);
+            message.channel.send(propertyHeroes);
         } else {
-            message.channel.sendMessage("Invalid request!");
+            message.channel.send("Invalid request!");
         }
     } // Searches for which heroes have the requested property
 
@@ -669,19 +655,19 @@ bot.on("message", message => {
             var slot = args[2].toUpperCase();
             if (((slot === "I") || (slot === "II") || (slot === "III") || (slot === "IV") || (slot === "V")) && (args[3] >= 1) && (args[3] <= 6)) {
                 var itemStats = findItem(args[1].toLowerCase(), slot, args[3]);
-                message.channel.sendMessage(itemStats);
+                message.channel.send(itemStats);
                 return;
             }
         }
-        message.channel.sendMessage("Invalid request!");
+        message.channel.send("Invalid request!");
     } // Searches for the requested item's max stats
 
     else if (message.content.startsWith(config.prefix + "skill")) {
         if (args.length >= 3) {
             // findSkill(args[1], args[2], message);
-            message.channel.sendMessage(`!hero ${findNameByAlias(args[1], "hero")} ${args[2]}`);
+            message.channel.send(`!hero ${findNameByAlias(args[1], "hero")} ${args[2]}`);
         } else {
-            message.channel.sendMessage("Invalid request!");
+            message.channel.send("Invalid request!");
         }
     } // Searches for the requested hero skill
 
@@ -692,23 +678,23 @@ bot.on("message", message => {
             dateRequested = moment().format("MM-DD-YYYY");
         }
         const currentSets = findFeaturedSets(dateRequested);
-        message.channel.sendMessage(currentSets);
+        message.channel.send(currentSets);
     } // Searches for current set rotation
 
     else if (message.content.startsWith(config.prefix + "triviaquestions")) {
-        message.channel.sendMessage(`There are currently ${triviaTable.length - 1} trivia questions available`);
+        message.channel.send(`There are currently ${triviaTable.length - 1} trivia questions available`);
     } // Finds number of trivia questions
 
     else if ((message.content.startsWith(config.prefix + "trivia")) && (!triviaChannels.has(message.channel.id))) {
         if (message.channel.type === "dm") {
-            message.channel.sendMessage("Please use this command in a server!");
+            message.channel.send("Please use this command in a server!");
             return;
         }
         if (getRandomInt(0, 100) < 5) {
-            message.channel.sendMessage(`+++ ${message.member.displayName} started a new round of FWT Trivia. Get ready! +++ CRITICAL QUESTION: 60 POINTS +++`);
+            message.channel.send(`+++ ${message.member.displayName} started a new round of FWT Trivia. Get ready! +++ CRITICAL QUESTION: 60 POINTS +++`);
             trivia(message, true);
         } else {
-            message.channel.sendMessage(`+++ ${message.member.displayName} started a new round of FWT Trivia. Get ready! +++`);
+            message.channel.send(`+++ ${message.member.displayName} started a new round of FWT Trivia. Get ready! +++`);
             trivia(message, false);
         }
     } // Starts a round of FWT trivia
@@ -718,18 +704,18 @@ bot.on("message", message => {
             getPoints(message.author.id)
                 .then(points => {
                     if (points != 0) {
-                        message.channel.sendMessage(`Score for ${message.member.displayName}: ${points} points`);
+                        message.channel.send(`Score for ${message.member.displayName}: ${points} points`);
                     } else {
-                        message.channel.sendMessage("You have 0 points! Play trivia using !trivia to earn points");
+                        message.channel.send("You have 0 points! Play trivia using !trivia to earn points");
                     }
                 });
         } else {
             getPoints(message.mentions.users.first().id)
                 .then(points => {
                     if (points != 0) {
-                        message.channel.sendMessage(`Score for ${message.mentions.users.first().username}: ${points} points`);
+                        message.channel.send(`Score for ${message.mentions.users.first().username}: ${points} points`);
                     } else {
-                        message.channel.sendMessage(`${message.mentions.users.first().username} has 0 points! Play trivia using !trivia to earn points`);
+                        message.channel.send(`${message.mentions.users.first().username} has 0 points! Play trivia using !trivia to earn points`);
                     }
                 });
         }
@@ -742,7 +728,7 @@ bot.on("message", message => {
                 for (var i = 0; i < 10; i++) {
                     msg += `\n#${i + 1} ${bot.users.get(rows[i].userID).username} (${rows[i].points})`;
                 }
-                message.channel.sendMessage(msg);
+                message.channel.send(msg);
             });
     } // Finds top 10 highscores for FWT Trivia
 
@@ -750,12 +736,12 @@ bot.on("message", message => {
         if (args.length >= 2) {
             var sgData = findListedPropertyData(args[1], "soulgear");
             if (sgData != "nosuchdata") {
-                message.channel.sendMessage(sgData);
+                message.channel.send(sgData);
             } else {
-                message.channel.sendMessage("Unknown Soul Gear!");
+                message.channel.send("Unknown Soul Gear!");
             }
         } else {
-            message.channel.sendMessage("Invalid request!");
+            message.channel.send("Invalid request!");
         }
     } // Looks up a hero's soul gear
 
