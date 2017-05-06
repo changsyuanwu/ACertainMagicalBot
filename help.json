@@ -39,6 +39,8 @@
 
     "**!stat <heroAlias> <stat>**: Finds the requested stat of the hero (Ex. <yeka> <attack> finds Yekaterina's base attack)",
 
+    "**!compare <stat> <heroAlias> <heroAlias>**: Finds the requested stat for all requested heroes. There can be an infinite number of requested heroes. (Ex. <attack> <shushu> <krut> finds the base attack of Shu-shu and Krut)",
+
     "**!skill <heroAlias> <skillNumber>**: Finds the skill data for the requested skill. (Ex. <yeka> <3> finds the data for Yekaterina's 3rd skill) **<ON HIATUS>**",
 
     "**!sets <setSlot> <setRareness>**: Finds all the sets at the requested grade and tier. (Ex. <IV> <6> finds all the 6* sets at slot IV)",

@@ -81,7 +81,7 @@ function createListOutput(list) {
     var dataString = "";
     for (var property in list) {
         if ((list.hasOwnProperty(property)) && (!flagNames.includes(property))) {
-            dataString = dataString + capitalize(property) + ": " + list[property] + "\n";
+            dataString += capitalize(property) + ": " + list[property] + "\n";
         }
     }
     return dataString;
@@ -140,7 +140,7 @@ function findFeaturedSets(dateRequested) {
 function findSingleData(alias, data, type) {
     if (type === "stat") {
         var dataTable = heroDataTable;
-        var name = findNameByAlias(alias, "hero");
+        var name = alias;
     }
     var dataString = "";
     for (var i = 0; i < dataTable.length; i++) {
@@ -155,7 +155,7 @@ function findSets(slot, rareness) {
     var dataString = "";
     for (var i = 0; i < setDataTable.length; i++) {
         if ((setDataTable[i]["Slot"] === slot) && (setDataTable[i]["Rareness"] === rareness)) {
-            dataString = dataString + "\n" + setDataTable[i]["Name"];
+            dataString += "\n" + setDataTable[i]["Name"];
         }
     }
     return dataString;
@@ -165,14 +165,14 @@ function findProperty(propertyRequested, effectRequested) {
     var dataString = "";
     for (var i = 0, heronum = heroDataTable.length; i < heronum; i++) {
         if ((heroDataTable[i][propertyRequested] != undefined) && (heroDataTable[i][propertyRequested].includes(effectRequested))) {
-            dataString = dataString + "\n" + heroDataTable[i]["Name"];
+            dataString += "\n" + heroDataTable[i]["Name"];
         }
     }
     return dataString;
 } // Finds all heroes who have the requested property
 
-function findSkill(hero, skill, message) {
-    // Database in production
+function findSkillImage(hero, skill) {
+    return path.join(launchLocation, "src", "Images", "Hero Skills", `${hero} ${skill}.jpg`);
 } // Finds a hero skill
 
 function findItem(item, slot, rareness) {
@@ -334,7 +334,6 @@ function generateRareness(rareness) {
 
 function PullOrNot() {
     var number = Math.random();
-    var YesNo;
     if (number <= 0.5) return path.join(launchLocation, "src", "Images", "Pull.png");
     else return path.join(launchLocation, "src", "Images", "Don't Pull.png");
 } // Does the 50/50 pull or not
@@ -402,7 +401,7 @@ function incrementUses() {
         });
 } // Increments the number of uses of the bot by 1
 
-function getUses(ID) {
+function getUses() {
     return sql.get(`SELECT * FROM utilities WHERE type = "Uses"`)
         .then(row => {
             if (!row)
@@ -534,22 +533,22 @@ bot.on("message", message => {
 
 
     else if (message.content.startsWith(config.prefix + "tuturu")) {
-        message.channel.send({files: [path.join(launchLocation, "src", "Images", "Tuturu.png")]});
+        message.channel.send({ files: [path.join(launchLocation, "src", "Images", "Tuturu.png")] });
     } else if (message.content.startsWith(config.prefix + "moa")) {
-        message.channel.send({files: [path.join(launchLocation, "src", "Images", "Moa.png")]});
+        message.channel.send({ files: [path.join(launchLocation, "src", "Images", "Moa.png")] });
     } else if (message.content.startsWith(config.prefix + "tyrant")) {
-        message.channel.send({files: [path.join(launchLocation, "src", "Images", "Tyrant.png")]});
+        message.channel.send({ files: [path.join(launchLocation, "src", "Images", "Tyrant.png")] });
     } else if (message.content.startsWith(config.prefix + "moe")) {
-        message.channel.send({files: [moe[getRandomInt(0, moe.length)]]});
+        message.channel.send({ files: [moe[getRandomInt(0, moe.length)]] });
     } else if ((message.content.startsWith(config.prefix + "doodoo")) && (message.author.id === config.ownerID)) {
         for (var i = 0; i < moe.length; i++) {
-            message.channel.send({files: [moe[i]]});
+            message.channel.send({ files: [moe[i]] });
         }
     } // Custom/Anime commands
 
 
     else if (message.content.startsWith(config.prefix + "pull")) {
-        message.channel.send({files: [PullOrNot()]});
+        message.channel.send({ files: [PullOrNot()] });
     } // Bot does a 50/50 pull or no
 
     else if (message.content.startsWith(config.prefix + "whale")) {
@@ -610,7 +609,7 @@ bot.on("message", message => {
         if (args.length >= 3) {
             var heroRequested = findNameByAlias(args[1], "hero");
             var statRequested = args[2].toLowerCase();
-            var statData = findSingleData(args[1], statRequested, "stat");
+            var statData = findSingleData(heroRequested, statRequested, "stat");
             if (statData != "nosuchdata") {
                 message.channel.send(heroRequested + "'s " + capitalize(statRequested) + ": " + statData);
             } else {
@@ -620,6 +619,26 @@ bot.on("message", message => {
             message.channel.send("Invalid request!");
         }
     } // Searches for the requested stat of the requested hero
+
+    else if (message.content.startsWith(config.prefix + "compare")) {
+        if (args.length >= 4) {
+            var statRequested = args[1].toLowerCase();
+            var dataString = "";
+            for (var i = 0; i < args.length - 2; i++) {
+                var heroRequested = findNameByAlias(args[2 + i], "hero");
+                var statData = findSingleData(heroRequested, statRequested, "stat");
+                if (statData != "nosuchdata") {
+                    dataString += "\n" + heroRequested + "'s " + capitalize(statRequested) + ": " + statData;
+                } else {
+                    dataString += "\n" + "Unknown Hero!";
+                }
+            }
+
+            message.channel.send(dataString);
+        } else {
+            message.channel.send("Invalid request!");
+        }
+    } // Searches for the requested stat of the requested heroes
 
     else if (message.content.startsWith(config.prefix + "effect")) {
         if (args.length >= 2) {
@@ -664,8 +683,8 @@ bot.on("message", message => {
 
     else if (message.content.startsWith(config.prefix + "skill")) {
         if (args.length >= 3) {
-            // findSkill(args[1], args[2], message);
-            message.channel.send(`!hero ${findNameByAlias(args[1], "hero")} ${args[2]}`);
+            message.channel.send("ask van if hes done the skill descriptions yet", {files: [findSkillImage(args[1], args[2])]});
+            // message.channel.send(`!hero ${findNameByAlias(args[1], "hero")} ${args[2]}`);
         } else {
             message.channel.send("Invalid request!");
         }
