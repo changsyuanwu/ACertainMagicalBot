@@ -4,6 +4,6 @@ config.json
 
 .DS_Store
 
-botdata.sqlite
-
 test.js
+
+botdata.sqlite
