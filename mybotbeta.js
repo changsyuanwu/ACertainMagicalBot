@@ -171,8 +171,9 @@ function findProperty(propertyRequested, effectRequested) {
     return dataString;
 } // Finds all heroes who have the requested property
 
-function findSkillImage(hero, skill) {
-    return path.join(launchLocation, "src", "Images", "Hero Skills", `${hero} ${skill}.jpg`);
+function findSkillImage(heroAlias, skill) {
+    var heroName = findNameByAlias(heroAlias, "hero");
+    return path.join(launchLocation, "src", "Images", "Hero Skills", `${heroName} ${skill}.jpg`);
 } // Finds a hero skill
 
 function findItem(item, slot, rareness) {
@@ -683,8 +684,7 @@ bot.on("message", message => {
 
     else if (message.content.startsWith(config.prefix + "skill")) {
         if (args.length >= 3) {
-            message.channel.send("ask van if hes done the skill descriptions yet", {files: [findSkillImage(args[1], args[2])]});
-            // message.channel.send(`!hero ${findNameByAlias(args[1], "hero")} ${args[2]}`);
+            message.channel.send("skill description in progress", {files: [findSkillImage(args[1], args[2])]});
         } else {
             message.channel.send("Invalid request!");
         }
