@@ -682,13 +682,23 @@ bot.on("message", message => {
         message.channel.send("Invalid request!");
     } // Searches for the requested item's max stats
 
+    else if (message.content.startsWith(config.prefix + "skills")) {
+        if (args.length >= 2) {
+            for (var i = 1; i < 5; i++) {
+                message.channel.send("skill description in progress", {files: [findSkillImage(args[1], i)]});
+            }
+        } else {
+            message.channel.send("Invalid request!");
+        }
+    } // Searches for the skill infos of the requested hero
+
     else if (message.content.startsWith(config.prefix + "skill")) {
         if (args.length >= 3) {
             message.channel.send("skill description in progress", {files: [findSkillImage(args[1], args[2])]});
         } else {
             message.channel.send("Invalid request!");
         }
-    } // Searches for the requested hero skill
+    } // Searches for the info for the requested hero skill
 
     else if (message.content.startsWith(config.prefix + "featuredsets")) {
         if (args.length >= 2) {
