@@ -416,7 +416,7 @@ function getUses() {
 
 //--------------------------------------------------------------------------------------------
 
-bot.on("message", message => {
+bot.on("message", async (message) => {
     if (message.mentions.users.has(bot.user.id)) {
         console.log(`Message Received!\n\tSender: ${message.author.username} \n\tContent: ${message.content.slice(message.content.indexOf(" "))}`);
     } // Logs messages that mention the bot
@@ -685,8 +685,7 @@ bot.on("message", message => {
     else if (message.content.startsWith(config.prefix + "skills")) {
         if (args.length >= 2) {
             for (var i = 1; i < 5; i++) {
-                message.channel.send(`skill ${i}`, {files: [findSkillImage(args[1], i)]});
-                wait(500);
+                await message.channel.send(`skill ${i}`, {files: [findSkillImage(args[1], i)]});
             }
         } else {
             message.channel.send("Invalid request!");
