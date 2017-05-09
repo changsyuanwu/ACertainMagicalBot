@@ -685,7 +685,8 @@ bot.on("message", message => {
     else if (message.content.startsWith(config.prefix + "skills")) {
         if (args.length >= 2) {
             for (var i = 1; i < 5; i++) {
-                message.channel.send("skill description in progress", {files: [findSkillImage(args[1], i)]});
+                message.channel.send(`skill ${i}`, {files: [findSkillImage(args[1], i)]});
+                wait(500);
             }
         } else {
             message.channel.send("Invalid request!");
