@@ -171,6 +171,11 @@ function findProperty(propertyRequested, effectRequested) {
     return dataString;
 } // Finds all heroes who have the requested property
 
+// function findSkillDescription(heroAlias, skill) {
+//     var heroName = findNameByAlias(heroAlias, "hero");
+//     for (var i = 0; i < heroSkillTable)
+// }
+
 function findSkillImage(heroAlias, skill) {
     var heroName = findNameByAlias(heroAlias, "hero");
     return path.join(launchLocation, "src", "Images", "Hero Skills", `${heroName} ${skill}.jpg`);
@@ -424,6 +429,10 @@ bot.on("message", async (message) => {
     if (message.author.id === bot.user.id) {
         incrementUses();
     } // Increments whenever the bot sends a message (bot is "used")
+
+    if (message.content.includes("gimme")) {
+        message.channel.send({files: path.join(launchLocation, "src", "Images", "Gimme.gif")})
+    } // Sends Shu-shu gimme gif when message contains "gimme"
 
     if (!message.content.startsWith(config.prefix)) return;
     // Ignore messages that don't start with the prefix
@@ -684,8 +693,8 @@ bot.on("message", async (message) => {
 
     else if (message.content.startsWith(config.prefix + "skills")) {
         if (args.length >= 2) {
-            for (var i = 1; i < 5; i++) {
-                await message.channel.send(`skill ${i}`, {files: [findSkillImage(args[1], i)]});
+            for (var i = 1; i <= 5; i++) {
+                await message.channel.send(`skill ${i}`, { files: [findSkillImage(args[1], i)] });
             }
         } else {
             message.channel.send("Invalid request!");
@@ -694,7 +703,7 @@ bot.on("message", async (message) => {
 
     else if (message.content.startsWith(config.prefix + "skill")) {
         if (args.length >= 3) {
-            message.channel.send("skill description in progress", {files: [findSkillImage(args[1], args[2])]});
+            message.channel.send("skill description in progress", { files: [findSkillImage(args[1], args[2])] });
         } else {
             message.channel.send("Invalid request!");
         }
