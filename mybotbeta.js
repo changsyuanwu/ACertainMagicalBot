@@ -431,7 +431,7 @@ bot.on("message", async (message) => {
     } // Increments whenever the bot sends a message (bot is "used")
 
     if (message.content.includes("gimme")) {
-        message.channel.send({files: path.join(launchLocation, "src", "Images", "Gimme.gif")})
+        message.channel.send({files: [path.join(launchLocation, "src", "Images", "Gimme.gif")]})
     } // Sends Shu-shu gimme gif when message contains "gimme"
 
     if (!message.content.startsWith(config.prefix)) return;
