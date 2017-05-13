@@ -657,7 +657,7 @@
         "Accessory": "Brooch",
         "2pc": "Restores 6% HP every turn and Increases HP by 6040",
         "3pc": "Applies a buff to all allies within 2 tiles, increasing Defense by 1000 and redirecting 50% of the Damage onto the wearer",
-        "Restrictions": "Defense-type character only,"
+        "Restrictions": "Defense-type character only"
     },
     {
         "Name": "Nephthys Conqueror",
