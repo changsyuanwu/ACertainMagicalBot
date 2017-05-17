@@ -498,31 +498,17 @@ function news(newsLimit) {
             } else {
                 resolve(response.data.map(postData => {
                     const attachments = postData.attachments.data[0];
-                    const embed = {
-                        description: getNewsDescription(postData),
-                        title: getNewsTitle(postData),
-                        author: {
-                            name: postData.from.name,
-                            url: 'https://www.facebook.com/' + facebookEntityName
-                        },
-                        url: postData.permalink_url
-                    };
+                    const embed = new Discord.RichEmbed()
+                        .setDescription(getNewsDescription(postData))
+                        .setTitle(getNewsTitle(postData))
+                        .setAuthor(postData.from.name, null, "https://www.facebook.com/" + facebookEntityName)
+                        .setURL(postData.permalink_url);
                     if (attachments.type !== 'album') {
-                        embed.image = {
-                            url: attachments.media.image.src
-                        };
-                    } else if (attachments.subattachments) {
-                        embed._submessages = attachments.subattachments.data.map(photo => ({
-                            embed: {
-                                image: {
-                                    url: photo.media.image.src
-                                }
-                            }
-                        }));
+                        embed.setImage(attachments.media.image.src);
                     }
                     return {
                         embed
-                    };
+                    }
                 }).filter(data => data !== null));
             }
         });
@@ -898,10 +884,10 @@ bot.on("message", async (message) => {
     else if (message.content.startsWith(config.prefix + "news")) {
         news(args[1])
             .then((news) => {
-                message.channel.send({embed: news});
-                console.log(news);
+                message.channel.send({ embed: news[0]["embed"] });
             });
-    }
+    } // Gets the latest FWT news from Facebook
+
 });
 
 // End of all commands
