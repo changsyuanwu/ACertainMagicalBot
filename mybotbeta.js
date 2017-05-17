@@ -3,6 +3,7 @@ const Discord = require("discord.js");
 const path = require("path");
 const sql = require("sqlite");
 const moment = require("moment");
+const FB = require("fb");
 const bot = new Discord.Client();
 
 // Utils
@@ -384,7 +385,7 @@ function prune(message, value) {
 } // Prunes messages from bot
 
 function status() {
-    var statusCycle = ["https://github.com/TheMasterDodo/ACertainMagicalBot", "Use !help for info", "Spamming !whale", `Serving ${bot.guilds.size} servers`, `Serving ${bot.channels.size} channels`, `Serving ${bot.users.size} users`];
+    var statusCycle = ["https://github.com/TheMasterDodo/ACertainMagicalBot", "Use !help for info", "Spamming !whale", `Serving ${bot.guilds.size} servers`, `Serving ${bot.channels.size} channels`];
     var random = getRandomInt(0, statusCycle.length);
     bot.user.setGame(statusCycle[random]);
     logger.log(2, `Set status to ${statusCycle[random]}`);
@@ -415,6 +416,117 @@ function getUses() {
             else
                 return row.value;
         });
+} // Gets the number of uses of the bot
+
+function setupFacebookAccessToken() {
+    return new Promise((resolve, reject) => {
+        FB.napi("oauth/access_token", {
+            client_id: config.fbClientID,
+            client_secret: config.fbClientSecret,
+            grant_type: "client_credentials"
+        }, (error, res) => {
+            if (error) {
+                reject(error);
+            } else {
+                FB.setAccessToken(res.access_token);
+                resolve();
+            }
+        });
+    });
+}
+
+function getNewsTitle(data) {
+    const attachments = data.attachments.data[0];
+    let title;
+    switch (attachments.type) {
+        case 'note':
+            title = data.message;
+            break;
+        case 'album':
+            title = data.message.substring(0, data.message.indexOf('\n'));
+            break;
+        case 'video_inline':
+            title = `${attachments.title}: ${data.message.substring(0, data.message.indexOf('\n'))}`;
+            break;
+        case 'cover_photo':
+            title = attachments.title;
+            break;
+        default:
+            title = data.message.substring(0, data.message.indexOf('\n'))
+            break;
+    }
+    return title;
+};
+
+function getNewsDescription(data) {
+    const attachments = data.attachments.data[0];
+    let description;
+    switch (attachments.type) {
+        case 'note':
+            description = attachments.description;
+            break;
+        case 'cover_photo':
+            description = '';
+            break;
+        case 'album':
+        case 'video_inline':
+        default:
+            description = data.message.substring(data.message.indexOf('\n'));
+    }
+    if (description.length > 2048) {
+        description = description.substring(0, 2048);
+    }
+    return description;
+};
+
+function news(newsLimit) {
+    const parseNewsLimit = (rawValue) => {
+        const limit = Number.parseInt(rawValue, 10);
+        return !Number.isNaN(limit) && limit > 0 && limit <= 100 ? limit : 1;
+    };
+    const limit = parseNewsLimit(newsLimit);
+    const facebookEntityName = 'Fwar';
+    return new Promise((resolve, reject) => {
+        FB.napi(facebookEntityName + '/posts', { fields: ['from', 'permalink_url', 'message', 'attachments{type,title,description,media,subattachments}'], limit }, (error, response) => {
+            if (error) {
+                if (error.response.error.code === 'ETIMEDOUT') {
+                    console.log('request timeout');
+                } else {
+                    console.log('error', error.message);
+                }
+                reject(error);
+            } else {
+                resolve(response.data.map(postData => {
+                    const attachments = postData.attachments.data[0];
+                    const embed = {
+                        description: getNewsDescription(postData),
+                        title: getNewsTitle(postData),
+                        author: {
+                            name: postData.from.name,
+                            url: 'https://www.facebook.com/' + facebookEntityName
+                        },
+                        url: postData.permalink_url
+                    };
+                    if (attachments.type !== 'album') {
+                        embed.image = {
+                            url: attachments.media.image.src
+                        };
+                    } else if (attachments.subattachments) {
+                        embed._submessages = attachments.subattachments.data.map(photo => ({
+                            embed: {
+                                image: {
+                                    url: photo.media.image.src
+                                }
+                            }
+                        }));
+                    }
+                    return {
+                        embed
+                    };
+                }).filter(data => data !== null));
+            }
+        });
+    });
 }
 
 // End of utility functions
@@ -431,7 +543,7 @@ bot.on("message", async (message) => {
     } // Increments whenever the bot sends a message (bot is "used")
 
     if (message.content.includes("gimme")) {
-        message.channel.send({files: [path.join(launchLocation, "src", "Images", "Gimme.gif")]})
+        message.channel.send({ files: [path.join(launchLocation, "src", "Images", "Gimme.gif")] })
     } // Sends Shu-shu gimme gif when message contains "gimme"
 
     if (!message.content.startsWith(config.prefix)) return;
@@ -783,6 +895,13 @@ bot.on("message", async (message) => {
         }
     } // Looks up a hero's soul gear
 
+    else if (message.content.startsWith(config.prefix + "news")) {
+        news(args[1])
+            .then((news) => {
+                message.channel.send({embed: news});
+                console.log(news);
+            });
+    }
 });
 
 // End of all commands
@@ -800,5 +919,12 @@ bot.on("ready", () => {
     logger.log(1, `Ready to server in ${bot.channels.size} channels on ${bot.guilds.size} servers, for a total of ${bot.users.size} users.`);
 });
 
-bot.login(config.token)
-    .then(() => status());
+Promise.all([
+    setupFacebookAccessToken()
+])
+    .then(() => {
+        bot.login(config.token)
+            .then(() => {
+                status();
+            });
+    })
