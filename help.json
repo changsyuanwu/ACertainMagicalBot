@@ -15,13 +15,15 @@
 
     "**!doodoo:** Bot sends all the moe pictures in it's library (WARNING: MOE SPAM INBOUND)",
 
-    "**!trivia**: Starts a fun round of FWT trivia",
+    "**!trivia**: Starts a fun round of Fantasy War Tactics R Trivia",
 
     "**!triviaquestions**: Returns the number of trivia questions that are currently available",
 
     "**!score <user>**: Finds the trivia score of the mentioned user. If no user is mentioned, the one who used the command is used",
 
-    "**!highscores**: Finds the top 10 leaderboard of Fantasy War Tactics Trivia",
+    "**!highscores**: Finds the top 10 leaderboard of Fantasy War Tactics R Trivia",
+
+    "**!news**: Gets the latest post from Fantasy War Tactics R's Facebook Page",
     
     "**!pull**: Bot does a 50/50 between pull and don't pull",
 
