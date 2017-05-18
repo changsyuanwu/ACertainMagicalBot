@@ -433,7 +433,7 @@ function setupFacebookAccessToken() {
             }
         });
     });
-}
+} // Gets a Facebook access token 
 
 function getNewsTitle(data) {
     const attachments = data.attachments.data[0];
@@ -456,7 +456,7 @@ function getNewsTitle(data) {
             break;
     }
     return title;
-};
+} // Gets the title of a Facebook post
 
 function getNewsDescription(data) {
     const attachments = data.attachments.data[0];
@@ -477,7 +477,7 @@ function getNewsDescription(data) {
         description = description.substring(0, 2048);
     }
     return description;
-};
+} // Gets text content from Faacebook post
 
 function news(newsLimit) {
     const parseNewsLimit = (rawValue) => {
@@ -513,7 +513,7 @@ function news(newsLimit) {
             }
         });
     });
-}
+} // Gets the lastest post from FWT Facebook
 
 // End of utility functions
 
@@ -827,10 +827,10 @@ bot.on("message", async (message) => {
             return;
         }
         if (getRandomInt(0, 100) < 5) {
-            message.channel.send(`+++ ${message.member.displayName} started a new round of FWT Trivia. Get ready! +++ CRITICAL QUESTION: 60 POINTS +++`);
+            message.channel.send(`+++ ${message.member.displayName} started a new round of FWTR Trivia. Get ready! +++ CRITICAL QUESTION: 60 POINTS +++`);
             trivia(message, true);
         } else {
-            message.channel.send(`+++ ${message.member.displayName} started a new round of FWT Trivia. Get ready! +++`);
+            message.channel.send(`+++ ${message.member.displayName} started a new round of FWTR Trivia. Get ready! +++`);
             trivia(message, false);
         }
     } // Starts a round of FWT trivia
@@ -858,7 +858,7 @@ bot.on("message", async (message) => {
     } // Looks up how many points an user has
 
     else if (message.content.startsWith(config.prefix + "highscores")) {
-        var msg = "__**Fantasy War Tactics Trivia TOP 10**__";
+        var msg = "__**Fantasy War Tactics R Trivia TOP 10**__";
         sql.all(`SELECT userID, points FROM scores ORDER BY points DESC LIMIT 10`)
             .then((rows) => {
                 for (var i = 0; i < 10; i++) {
@@ -913,4 +913,4 @@ Promise.all([
             .then(() => {
                 status();
             });
-    })
+    });
