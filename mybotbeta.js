@@ -52,13 +52,13 @@ function coocooPull(isLast) {
     if (isLast) {
         var junkrate = 0;
         var brate = 0;
-        var arate = 0.7174;
-        var srate = 0.1957;
+        var arate = 0.7;
+        var srate = 0.2;
     } else {
-        var junkrate = 0.507;
-        var brate = 0.225;
-        var arate = 0.178;
-        var srate = 0.049;
+        var junkrate = 0.524;
+        var brate = 0.2281;
+        var arate = 0.1587;
+        var srate = 0.0527;
     }
     if (number < junkrate) return "junk";
     else if (junkrate <= number && number < junkrate + brate) return "B_set";
