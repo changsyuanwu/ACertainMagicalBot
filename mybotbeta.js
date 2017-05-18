@@ -22,6 +22,7 @@ const itemDataTable = require(path.join(launchLocation, "src", "Data", "FWTItemM
 const triviaTable = require(path.join(launchLocation, "src", "Data", "FWTTrivia.json"));
 const soulGearTable = require(path.join(launchLocation, "src", "Data", "FWTSoulGear.json"));
 const featuredSetTable = require(path.join(launchLocation, "src", "Data", "FWTFeaturedSets.json"));
+const heroSkillTable = require(path.join(launchLocation, "src", "Data", "FWTHeroSkills.json"))
 
 // Effects
 const flagNames = ["confusion", "charm", "stun", "taunt", "disarm", "immobilize", "decrease movement", "dot", "mp burn", "skill cost", "defense ignore", "defense ignoring damage", "weakening", "buff removal", "hp% damage", "defense decrease", "attack decrease", "hp drain", "mastery decrease", "instant death", "decrease crit rate", "push/pull/switch", "passive attack", "seal", "sleep", "melee", "ranged", "overload", "terrain change", "dodge decrease", "decrease healing"];
@@ -172,10 +173,15 @@ function findProperty(propertyRequested, effectRequested) {
     return dataString;
 } // Finds all heroes who have the requested property
 
-// function findSkillDescription(heroAlias, skill) {
-//     var heroName = findNameByAlias(heroAlias, "hero");
-//     for (var i = 0; i < heroSkillTable)
-// }
+function findSkillDescription(heroAlias, skill) {
+    var heroName = findNameByAlias(heroAlias, "hero");
+    for (var i = 0; i < heroSkillTable.length; i++) {
+        if (heroName === heroSkillTable[i]["Name"]) {
+            return heroSkillTable[i][skill];
+        }
+    }
+    return "nosuchhero"
+}
 
 function findSkillImage(heroAlias, skill) {
     var heroName = findNameByAlias(heroAlias, "hero");
@@ -801,7 +807,7 @@ bot.on("message", async (message) => {
 
     else if (message.content.startsWith(config.prefix + "skill")) {
         if (args.length >= 3) {
-            message.channel.send("skill description in progress", { files: [findSkillImage(args[1], args[2])] });
+            message.channel.send(findSkillDescription(args[1], args[2]), { files: [findSkillImage(args[1], args[2])] });
         } else {
             message.channel.send("Invalid request!");
         }
