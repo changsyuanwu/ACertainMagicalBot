@@ -84,10 +84,22 @@
         "Set2": "Coocoo Rangers, Go!"
     },
     {
-        "Start": "",
-        "End": "",
-        "Set1": "",
-        "Set2": ""
+        "Start": "5-19-2017",
+        "End": "5-22-2017",
+        "Set1": "Defender of the Earth",
+        "Set2": "Elemental Knight"
+    },
+    {
+        "Start": "5-22-2017",
+        "End": "5-24-2017",
+        "Set1": "Cave Chaser",
+        "Set2": "Wind Walker"
+    },
+    {
+        "Start": "5-24-2017",
+        "End": "5-26-2017",
+        "Set1": "Rebel Army Supply",
+        "Set2": "Wisdom from the East"
     },
     {
         "Start": "",
