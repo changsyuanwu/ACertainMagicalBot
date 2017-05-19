@@ -1,17 +1,30 @@
 {
     "env": {
-        "browser": true,
-        "commonjs": true,
         "es6": true,
         "node": true
     },
+    "extends": "eslint:recommended",
     "parserOptions": {
-        "ecmaFeatures": {
-            "jsx": true
-        },
         "sourceType": "module"
     },
     "rules": {
+        "indent": [
+            "error",
+            "tab"
+        ],
+        "linebreak-style": [
+            "error",
+            "unix"
+        ],
+        "quotes": [
+            "error",
+            "double"
+        ],
+        "semi": [
+            "error",
+            "always", 
+            { "omitLastInOneLineBlock": true}
+        ],
         "no-const-assign": "error",
         "no-this-before-super": "error",
         "no-undef": "error",
@@ -19,7 +32,6 @@
         "no-unused-vars": "warn",
         "constructor-super": "error",
         "valid-typeof": "error",
-        "no-use-before-define": ["error", { "functions": false}],
-        "semi": ["error", "always", { "omitLastInOneLineBlock": true}]
+        "no-use-before-define": ["error", { "functions": false}]
     }
 }
