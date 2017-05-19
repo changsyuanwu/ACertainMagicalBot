@@ -173,15 +173,20 @@ function findProperty(propertyRequested, effectRequested) {
     return dataString;
 } // Finds all heroes who have the requested property
 
-function findSkillDescription(heroAlias, skill) {
+function findSkillData(heroAlias, skill) {
     var heroName = findNameByAlias(heroAlias, "hero");
+    var datastring = "";
     for (var i = 0; i < heroSkillTable.length; i++) {
         if (heroName === heroSkillTable[i]["Name"]) {
-            return heroSkillTable[i][skill];
+            if ((skill == "4") || (skill == "5")) {
+                datastring += heroSkillTable[i][skill] + "\n" + "**Total Gene Cost**: " + heroSkillTable[i][`${skill}GeneCost`];
+            } else {
+                datastring += heroSkillTable[i][skill] + "\n" + "**MP Cost**: " + heroSkillTable[i][`${skill}MPcost`] + "\n" + "**Total Gene Cost**: " + heroSkillTable[i][`${skill}GeneCost`];
+            }
         }
     }
-    return "nosuchhero"
-} // Finds the description of a hero skill
+    return datastring
+} // Finds the description, MP cost, and Gene cost for a hero's skill
 
 function findSkillImage(heroAlias, skill) {
     var heroName = findNameByAlias(heroAlias, "hero");
@@ -798,7 +803,7 @@ bot.on("message", async (message) => {
     else if (message.content.startsWith(config.prefix + "skills")) {
         if (args.length >= 2) {
             for (var i = 1; i <= 5; i++) {
-                await message.channel.send(`skill ${i}`, { files: [findSkillImage(args[1], i)] });
+                await message.channel.send(findSkillData(args[1], i), { files: [findSkillImage(args[1], i)] });
             }
         } else {
             message.channel.send("Invalid request!");
@@ -807,7 +812,7 @@ bot.on("message", async (message) => {
 
     else if (message.content.startsWith(config.prefix + "skill")) {
         if (args.length >= 3) {
-            message.channel.send(findSkillDescription(args[1], args[2]), { files: [findSkillImage(args[1], args[2])] });
+            message.channel.send(findSkillData(args[1], args[2]), { files: [findSkillImage(args[1], args[2])] });
         } else {
             message.channel.send("Invalid request!");
         }
