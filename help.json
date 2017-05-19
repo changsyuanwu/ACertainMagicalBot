@@ -23,7 +23,7 @@
 
     "**!highscores**: Finds the top 10 leaderboard of Fantasy War Tactics R Trivia",
 
-    "**!news**: Gets the latest post from Fantasy War Tactics R's Facebook Page",
+    "**!news <limit>**: Gets the latest <limit> number of posts from Fantasy War Tactics R's Facebook Page. Leave limit blank for just 1. (Ex. <2> would get the 2 latest posts",
     
     "**!pull**: Bot does a 50/50 between pull and don't pull",
 
