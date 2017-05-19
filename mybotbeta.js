@@ -181,12 +181,12 @@ function findSkillDescription(heroAlias, skill) {
         }
     }
     return "nosuchhero"
-}
+} // Finds the description of a hero skill
 
 function findSkillImage(heroAlias, skill) {
     var heroName = findNameByAlias(heroAlias, "hero");
     return path.join(launchLocation, "src", "Images", "Hero Skills", `${heroName} ${skill}.jpg`);
-} // Finds a hero skill
+} // Finds a hero skill's image
 
 function findItem(item, slot, rareness) {
     switch (Number(rareness)) {
@@ -303,21 +303,21 @@ function trivia(message, isCritQuestion) {
             message.channel.awaitMessages(response => response.content.toLowerCase() === correctAnswer.toLowerCase(), {
                 max: 1,
                 time: 15000,
-                errors: ['time'],
+                errors: ["time"],
             })
                 .then((correctMessage) => {
                     var correctUserID = correctMessage.first().author.id;
-                    sql.get(`SELECT * FROM scores WHERE userID ='${correctUserID}'`)
+                    sql.get(`SELECT * FROM scores WHERE userID ="${correctUserID}"`)
                         .then(row => {
                             if (!row) {
-                                sql.run('INSERT INTO scores (userID, points) VALUES (?, ?)', [correctUserID, rewardPoints]);
+                                sql.run("INSERT INTO scores (userID, points) VALUES (?, ?)", [correctUserID, rewardPoints]);
                             } else {
                                 sql.run(`UPDATE scores SET points = ${row.points + rewardPoints} WHERE userID = ${correctUserID}`);
                             }
                         })
                         .catch(() => {
-                            sql.run('CREATE TABLE IF NOT EXISTS scores (userID TEXT, points INTEGER)').then(() => {
-                                sql.run('INSERT INTO scores (userID, points) VALUES (?, ?)', [correctUserID, rewardPoints]);
+                            sql.run("CREATE TABLE IF NOT EXISTS scores (userID TEXT, points INTEGER)").then(() => {
+                                sql.run("INSERT INTO scores (userID, points) VALUES (?, ?)", [correctUserID, rewardPoints]);
                             });
                         });
                     getPoints(correctUserID)
@@ -402,14 +402,14 @@ function incrementUses() {
     sql.get(`SELECT * FROM utilities WHERE type = "Uses"`)
         .then(row => {
             if (!row) {
-                sql.run('INSERT INTO utilities (type, value) VALUES (?, ?)', ["Uses", 0]);
+                sql.run("INSERT INTO utilities (type, value) VALUES (?, ?)", ["Uses", 0]);
             } else {
                 sql.run(`UPDATE utilities SET value = ${row.value + 1} WHERE type = "Uses"`);
             }
         })
         .catch(() => {
-            sql.run('CREATE TABLE IF NOT EXISTS utilities (type TEXT, value INTEGER)').then(() => {
-                sql.run('INSERT INTO utilities (type, values) VALUES (?, ?)', ["Uses", 0]);
+            sql.run("CREATE TABLE IF NOT EXISTS utilities (type TEXT, value INTEGER)").then(() => {
+                sql.run("INSERT INTO utilities (type, values) VALUES (?, ?)", ["Uses", 0]);
             });
         });
 } // Increments the number of uses of the bot by 1
@@ -445,20 +445,20 @@ function getNewsTitle(data) {
     const attachments = data.attachments.data[0];
     let title;
     switch (attachments.type) {
-        case 'note':
+        case "note":
             title = data.message;
             break;
-        case 'album':
-            title = data.message.substring(0, data.message.indexOf('\n'));
+        case "album":
+            title = data.message.substring(0, data.message.indexOf("\n"));
             break;
-        case 'video_inline':
-            title = `${attachments.title}: ${data.message.substring(0, data.message.indexOf('\n'))}`;
+        case "video_inline":
+            title = `${attachments.title}: ${data.message.substring(0, data.message.indexOf("\n"))}`;
             break;
-        case 'cover_photo':
+        case "cover_photo":
             title = attachments.title;
             break;
         default:
-            title = data.message.substring(0, data.message.indexOf('\n'))
+            title = data.message.substring(0, data.message.indexOf("\n"));
             break;
     }
     return title;
@@ -468,16 +468,16 @@ function getNewsDescription(data) {
     const attachments = data.attachments.data[0];
     let description;
     switch (attachments.type) {
-        case 'note':
+        case "note":
             description = attachments.description;
             break;
-        case 'cover_photo':
-            description = '';
+        case "cover_photo":
+            description = " ";
             break;
-        case 'album':
-        case 'video_inline':
+        case "album":
+        case "video_inline":
         default:
-            description = data.message.substring(data.message.indexOf('\n'));
+            description = data.message.substring(data.message.indexOf("\n"));
     }
     if (description.length > 2048) {
         description = description.substring(0, 2048);
@@ -491,14 +491,16 @@ function news(newsLimit) {
         return !Number.isNaN(limit) && limit > 0 && limit <= 100 ? limit : 1;
     };
     const limit = parseNewsLimit(newsLimit);
-    const facebookEntityName = 'Fwar';
+    const facebookEntityName = "Fwar";
     return new Promise((resolve, reject) => {
-        FB.napi(facebookEntityName + '/posts', { fields: ['from', 'permalink_url', 'message', 'attachments{type,title,description,media,subattachments}'], limit }, (error, response) => {
+        FB.napi(facebookEntityName + "/posts", {
+            fields: ["from", "permalink_url", "message", "attachments{type,title,description,media,subattachments}"], limit
+        }, (error, response) => {
             if (error) {
-                if (error.response.error.code === 'ETIMEDOUT') {
-                    console.log('request timeout');
+                if (error.response.error.code === "ETIMEDOUT") {
+                    console.log("request timeout");
                 } else {
-                    console.log('error', error.message);
+                    console.log("error", error.message);
                 }
                 reject(error);
             } else {
@@ -509,7 +511,7 @@ function news(newsLimit) {
                         .setTitle(getNewsTitle(postData))
                         .setAuthor(postData.from.name, null, "https://www.facebook.com/" + facebookEntityName)
                         .setURL(postData.permalink_url);
-                    if (attachments.type !== 'album') {
+                    if (attachments.type !== "album") {
                         embed.setImage(attachments.media.image.src);
                     }
                     return {
@@ -580,7 +582,7 @@ bot.on("message", async (message) => {
 
 
     else if (message.content.startsWith(config.prefix + "calc")) {
-        var input = message.content.replace(/[^-()\d/*+.]/g, '');
+        var input = message.content.replace(/[^-()\d/*+.]/g, "");
         if (input != "") {
             var result = eval(input);
             message.channel.send(result);
@@ -890,7 +892,9 @@ bot.on("message", async (message) => {
     else if (message.content.startsWith(config.prefix + "news")) {
         news(args[1])
             .then((news) => {
-                message.channel.send({ embed: news[0]["embed"] });
+                for (var i = 0; i < news.length; i++) {
+                    message.channel.send({ embed: news[i]["embed"] });
+                }
             });
     } // Gets the latest FWT news from Facebook
 
@@ -899,8 +903,8 @@ bot.on("message", async (message) => {
 // End of all commands
 //--------------------------------------------------------------------------------------------
 
-bot.on('error', (e) => console.error(e));
-bot.on('warn', (e) => console.warn(e));
+bot.on("error", (e) => console.error(e));
+bot.on("warn", (e) => console.warn(e));
 process.on("unhandledRejection", err => {
     logger.log(3, "An error occured!");
     console.error(err);
