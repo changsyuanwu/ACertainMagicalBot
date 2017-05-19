@@ -486,15 +486,10 @@ function getNewsDescription(data) {
 } // Gets text content from Faacebook post
 
 function news(newsLimit) {
-    const parseNewsLimit = (rawValue) => {
-        const limit = Number.parseInt(rawValue, 10);
-        return !Number.isNaN(limit) && limit > 0 && limit <= 100 ? limit : 1;
-    };
-    const limit = parseNewsLimit(newsLimit);
     const facebookEntityName = "Fwar";
     return new Promise((resolve, reject) => {
         FB.napi(facebookEntityName + "/posts", {
-            fields: ["from", "permalink_url", "message", "attachments{type,title,description,media,subattachments}"], limit
+            fields: ["from", "permalink_url", "message", "attachments{type,title,description,media,subattachments}"], newsLimit
         }, (error, response) => {
             if (error) {
                 if (error.response.error.code === "ETIMEDOUT") {
@@ -890,9 +885,15 @@ bot.on("message", async (message) => {
     } // Looks up a hero's soul gear
 
     else if (message.content.startsWith(config.prefix + "news")) {
-        news(args[1])
+        var limit;
+        if (args.length === 2) {
+            limit = Math.min(Number.parseInt(args[1], 10), 10);
+        } else {
+            limit = 1;
+        }
+        news(limit)
             .then((news) => {
-                for (var i = 0; i < news.length; i++) {
+                for (var i = 0; i < limit; i++) {
                     message.channel.send({ embed: news[i]["embed"] });
                 }
             });
