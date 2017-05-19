@@ -356,6 +356,39 @@ function PullOrNot() {
     else return path.join(launchLocation, "src", "Images", "Don't Pull.png");
 } // Does the 50/50 pull or not
 
+function news(newsLimit) {
+    const facebookEntityName = "Fwar";
+    return new Promise((resolve, reject) => {
+        FB.napi(facebookEntityName + "/posts", {
+            fields: ["from", "permalink_url", "message", "attachments{type,title,description,media,subattachments}"], newsLimit
+        }, (error, response) => {
+            if (error) {
+                if (error.response.error.code === "ETIMEDOUT") {
+                    console.log("request timeout");
+                } else {
+                    console.log("error", error.message);
+                }
+                reject(error);
+            } else {
+                resolve(response.data.map(postData => {
+                    const attachments = postData.attachments.data[0];
+                    const embed = new Discord.RichEmbed()
+                        .setDescription(getNewsDescription(postData))
+                        .setTitle(getNewsTitle(postData))
+                        .setAuthor(postData.from.name, null, "https://www.facebook.com/" + facebookEntityName)
+                        .setURL(postData.permalink_url);
+                    if (attachments.type !== "album") {
+                        embed.setImage(attachments.media.image.src);
+                    }
+                    return {
+                        embed
+                    }
+                }).filter(data => data !== null));
+            }
+        });
+    });
+} // Gets the lastest posts from FWT Facebook
+
 // End of other FWT functions
 
 //--------------------------------------------------------------------------------------------
@@ -488,40 +521,14 @@ function getNewsDescription(data) {
         description = description.substring(0, 2048);
     }
     return description;
-} // Gets text content from Faacebook post
+} // Gets text content from Facebook post
 
-function news(newsLimit) {
-    const facebookEntityName = "Fwar";
-    return new Promise((resolve, reject) => {
-        FB.napi(facebookEntityName + "/posts", {
-            fields: ["from", "permalink_url", "message", "attachments{type,title,description,media,subattachments}"], newsLimit
-        }, (error, response) => {
-            if (error) {
-                if (error.response.error.code === "ETIMEDOUT") {
-                    console.log("request timeout");
-                } else {
-                    console.log("error", error.message);
-                }
-                reject(error);
-            } else {
-                resolve(response.data.map(postData => {
-                    const attachments = postData.attachments.data[0];
-                    const embed = new Discord.RichEmbed()
-                        .setDescription(getNewsDescription(postData))
-                        .setTitle(getNewsTitle(postData))
-                        .setAuthor(postData.from.name, null, "https://www.facebook.com/" + facebookEntityName)
-                        .setURL(postData.permalink_url);
-                    if (attachments.type !== "album") {
-                        embed.setImage(attachments.media.image.src);
-                    }
-                    return {
-                        embed
-                    }
-                }).filter(data => data !== null));
-            }
-        });
-    });
-} // Gets the lastest post from FWT Facebook
+function clean(text) {
+    if (typeof (text) === 'string')
+        return text.replace(/`/g, '`' + String.fromCharCode(8203)).replace(/@/g, '@' + String.fromCharCode(8203));
+    else
+        return text;
+} // Prevents the use of mentions in text
 
 // End of utility functions
 
@@ -613,6 +620,22 @@ bot.on("message", async (message) => {
             message.channel.send(message.mentions.users.first().id);
         }
     } // Looks up an user's Discord ID
+
+
+    else if (message.content.startsWith(config.prefix + 'eval')) {
+        if (message.author.id !== config.ownerID) return;
+        try {
+            const code = args.join(' ');
+            let evaled = eval(code);
+
+            if (typeof evaled !== 'string')
+                evaled = require('util').inspect(evaled);
+
+            message.channel.send(clean(evaled), { code: 'xl' });
+        } catch (err) {
+            message.channel.send(`\`ERROR\` \`\`\`xl\n${clean(err)}\n\`\`\``);
+        }
+    }
 
 
     else if (message.content.startsWith(config.prefix + "uses")) {
