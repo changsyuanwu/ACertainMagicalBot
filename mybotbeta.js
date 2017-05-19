@@ -572,7 +572,10 @@ bot.on("message", async (message) => {
 
 
     else if ((message.content.startsWith(config.prefix + "invite")) && (message.author.id === config.ownerID)) {
-        message.mentions.users.first().send(config.invite);
+        message.mentions.users.first().send(config.invite)
+            .then(() => {
+                message.channel.send(`Sent an invite to ${message.mentions.users.first()}`)
+            });
     } // Sends the invite link (Only owner can do it)
 
 
