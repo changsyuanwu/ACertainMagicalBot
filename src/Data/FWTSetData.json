@@ -1361,7 +1361,7 @@
         "Accessory": "Ring",
         "2pc": "Dodge +1200",
         "3pc": "Decreases Critical Damage from enemy Attacks by 20%",
-        "Restrictions": "Activates when the wearer's HP is below 75%"
+        "Restrictions": "Activates when the wearer's HP is above 75%"
     },
     {
         "Name": "Undaunted Fighter",
