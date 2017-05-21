@@ -635,7 +635,7 @@ bot.on("message", async (message) => {
         } catch (err) {
             message.channel.send(`\`ERROR\` \`\`\`xl\n${clean(err)}\n\`\`\``);
         }
-    }
+    } // Eval() code
 
 
     else if (message.content.startsWith(config.prefix + "uses")) {
@@ -890,17 +890,6 @@ bot.on("message", async (message) => {
                 });
         }
     } // Looks up how many points an user has
-
-    else if ((message.content.startsWith(config.prefix + "give") && (message.author.id === config.ownerID))) {
-        sql.get(`SELECT * FROM scores WHERE userID ="${message.mentions.users.first().id}"`)
-            .then(row => {
-                if (!row) {
-                    sql.run("INSERT INTO scores (userID, points) VALUES (?, ?)", [message.mentions.users.first().id, args[1]]);
-                } else {
-                    sql.run(`UPDATE scores SET points = ${row.points + args[1]} WHERE userID = ${message.mentions.users.first().id}`);
-                }
-            })
-    }
 
     else if (message.content.startsWith(config.prefix + "highscores")) {
         var msg = "__**Fantasy War Tactics R Trivia TOP 10**__";
