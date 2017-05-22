@@ -40,7 +40,7 @@ const logger = new Logger(config.noLogs);
 
 for (var i = 0; i < setDataTable.length; i++) {
     for (var j = 0; j < featuredSetTable.length; j++) {
-        if ((featuredSetTable[j]["Set1"] === setDataTable[i]["Name"]) || (featuredSetTable[j]["Set2"] === setDataTable[i]["Name"])) {
+        if ((featuredSetTable[j]["Set1"].toLowerCase() === setDataTable[i]["Name"].toLowerCase()) || (featuredSetTable[j]["Set2"].toLowerCase() === setDataTable[i]["Name"].toLowerCase())) {
             setDataTable[i]["Last Time in Rotation"] = `${featuredSetTable[j]["Start"]} ~ ${featuredSetTable[j]["End"]}`;
         }
     }
