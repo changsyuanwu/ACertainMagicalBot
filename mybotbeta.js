@@ -784,7 +784,7 @@ bot.on("message", async (message) => {
 
     else if (message.content.startsWith(config.prefix + "effect")) {
         if (args.length >= 2) {
-            var effect = msgContent;
+            var effect = msgContent.toLowerCase();
             if (effect === "list") {
                 var flags = "";
                 for (var i = 0; i < flagNames.length; i++) {
@@ -792,7 +792,7 @@ bot.on("message", async (message) => {
                 }
                 message.channel.send(flags);
             } else if (flagNames.includes(effect)) {
-                var effectHeroes = findProperty(effect.toLowerCase(), "TRUE");
+                var effectHeroes = findProperty(effect, "TRUE");
                 message.channel.send(effectHeroes);
             } else {
                 message.channel.send("Unknown effect");
