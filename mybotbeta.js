@@ -792,7 +792,7 @@ bot.on("message", async (message) => {
                 }
                 message.channel.send(flags);
             } else if (flagNames.includes(effect)) {
-                var effectHeroes = findProperty(effect, "TRUE");
+                var effectHeroes = findProperty(effect.toLowerCase(), "TRUE");
                 message.channel.send(effectHeroes);
             } else {
                 message.channel.send("Unknown effect");
