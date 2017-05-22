@@ -299,7 +299,7 @@
         "buff removal": "",
         "hp% damage": "",
         "defense decrease": "TRUE",
-        "attack decrease": "TRUE",
+        "attack decrease": "",
         "hp drain": "TRUE",
         "mastery decrease": "",
         "instant death": "",
