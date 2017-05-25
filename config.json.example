@@ -1,0 +1,9 @@
+{
+  "token": "Discord Bot Token",
+  "prefix": "Prefix of choice (Can be anything)",
+  "ownerID": "Your Discord ID",
+  "invite": "Bot invite link",
+  "noLogs": false, 
+  "fbClientID": "Facebook App Client ID",
+  "fbClientSecret": "Facebook App Client Secret"
+}
