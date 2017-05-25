@@ -9,7 +9,7 @@
     "fb": "^2.0.0",
     "moment": "^2.18.1",
     "relevant-urban": "^2.0.0",
-    "sqlite": "^2.7.0"
+    "sqlite": "^2.8.0"
   },
   "devDependencies": {
     "eslint": "^3.19.0",
