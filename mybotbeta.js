@@ -565,7 +565,10 @@ bot.on("message", async (message) => {
 
 
     else if (message.content.startsWith(config.prefix + "help")) {
-        message.channel.send(help.join("\n\n"), { split: true });
+        message.author.send(help.join("\n\n"), { split: true })
+            .then(() => {
+                message.channel.send(`Sent you a list of commands ${message.author}`)
+            })
     } // Help command
 
 
