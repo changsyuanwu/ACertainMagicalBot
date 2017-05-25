@@ -11,6 +11,10 @@
 
     "**!choose <choice|choice2|choice3|etc.>**: Bot makes a choice based on provided choices",
 
+    "**!google <phrase>**: Gets you the Google search link for the phrase you wanted to Google",
+
+    "**!urban <phrase>**: Finds the Urban Dictionary definition for the phrase",
+
     "**!moe:** Bot sends a moe picture",
 
     "**!doodoo:** Bot sends all the moe pictures in it's library (WARNING: MOE SPAM INBOUND)",
@@ -57,5 +61,5 @@
 
     "There are also some secret commands you'll have to learn on your own :wink:",
 
-    "******All about A Certain Magical Bot!******"
+    "\\*\\***All about A Certain Magical Bot!**\\*\\*"
 ]
