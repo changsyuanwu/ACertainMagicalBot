@@ -1214,14 +1214,17 @@
             "taehwa",
             "finishing touch",
             "artist",
-            "artisan"
+            "artisan",
+            "tae",
+            "taeh"
         ]
     },
     {
         "name": "Fiery Dancer",
         "aliases": [
             "hongyeom",
-            "fiery dancer"
+            "fiery dancer",
+            "hong"
         ]
     },
     {
@@ -1234,7 +1237,9 @@
             "black dragons armament 1",
             "black dragons armament i",
             "thanatos 1",
-            "thanatos i"
+            "thanatos i",
+            "than 1",
+            "than i"
         ]
     },
     {
@@ -1247,7 +1252,9 @@
             "black dragons armament 2",
             "black dragons armament ii",
             "thanatos 2",
-            "thanatos ii"
+            "thanatos ii",
+            "than 2",
+            "than ii"
         ]
     },
     {
@@ -1255,7 +1262,10 @@
         "aliases": [
             "thanatos",
             "guide of the apocalypse",
-            "apocalypse"
+            "apocalypse",
+            "than",
+            "than 3",
+            "than iii"
         ]
     },
     {
@@ -1268,7 +1278,9 @@
             "black dragons armament 4",
             "black dragons armament iv",
             "thanatos 4",
-            "thanatos iv"
+            "thanatos iv",
+            "than 4",
+            "than iv"
         ]
     },
     {
@@ -1281,7 +1293,9 @@
             "black dragons armament 5",
             "black dragons armament v",
             "thanatos 5",
-            "thanatos v"
+            "thanatos v",
+            "than 5",
+            "than v"
         ]
     },
     {
