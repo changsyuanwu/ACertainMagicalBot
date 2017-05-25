@@ -666,6 +666,11 @@ bot.on("message", async (message) => {
         message.channel.send(`Go check out **${message.guild.name}**'s leaderboard: https://mee6.xyz/levels/${message.guild.id}`);
     } // Finds the link to the server's mee6 data
 
+    
+    else if (message.content.startsWith(config.prefix + "google")) {
+        message.channel.send(`https://www.google.com/#q=${msgContent.replace(" ", "+")}`);
+    }
+
 
     else if (message.content.startsWith(config.prefix + "tadaima") && (message.content.includes("maid"))) {
         message.channel.send("おかえりなさいませ！ご主人様♥, \nDo you want dinner or a shower or \*blushes\* me?");
