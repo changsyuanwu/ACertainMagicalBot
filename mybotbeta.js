@@ -4,6 +4,7 @@ const path = require("path");
 const sql = require("sqlite");
 const moment = require("moment");
 const FB = require("fb");
+const urban = require('relevant-urban');
 const bot = new Discord.Client();
 
 // Utils
@@ -666,10 +667,26 @@ bot.on("message", async (message) => {
         message.channel.send(`Go check out **${message.guild.name}**'s leaderboard: https://mee6.xyz/levels/${message.guild.id}`);
     } // Finds the link to the server's mee6 data
 
-    
+
     else if (message.content.startsWith(config.prefix + "google")) {
         message.channel.send(`https://www.google.com/#q=${msgContent.replace(" ", "+")}`);
-    }
+    } // Sends the Google search link
+
+
+    else if (message.content.startsWith(config.prefix + "urban")) {
+        urban(msgContent)
+            .then(response => {
+                var msg = [];
+                msg.push(`**${response.word}**`);
+                msg.push(`\`\`\`${response.definition}\`\`\``);
+                msg.push(`**Example:** ${response.example}`);
+                msg.push(response.urbanURL);
+                message.channel.send(msg.join("\n"))
+            })
+            .catch(error => {
+                message.channel.send("An error occured");
+            });
+    } // Searches Urban Dictionary for the requested phrase
 
 
     else if (message.content.startsWith(config.prefix + "tadaima") && (message.content.includes("maid"))) {
