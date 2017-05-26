@@ -13,6 +13,7 @@ const config = require(path.join(launchLocation, "config.json"));
 const help = require(path.join(launchLocation, "help.json"));
 const Logger = require(path.join(launchLocation, "src", "Utilities", "Logger.js"));
 const moe = require(path.join(launchLocation, "src", "Moe.json"));
+const credits = require(path.join(launchLocation, "credits.json"));
 
 // Datatables
 const setDataTable = require(path.join(launchLocation, "src", "Data", "FWTSetData.json"));
@@ -570,6 +571,11 @@ bot.on("message", async (message) => {
                 message.channel.send(`Sent you a list of commands ${message.author}`)
             })
     } // Help command
+
+
+    else if (message.content.startsWith(config.prefix + "credits")) {
+         message.channel.send(credits.join("\n\n"))
+    }
 
 
     else if (message.content.startsWith(config.prefix + "hug")) {
