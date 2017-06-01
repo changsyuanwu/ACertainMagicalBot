@@ -1141,7 +1141,8 @@
         "seal": "TRUE",
         "sleep": "",
         "melee": "",
-        "ranged": ""
+        "ranged": "",
+        "decrease healing": "TRUE"
     },
     {
         "Name": "Frankenstein",
@@ -1193,7 +1194,8 @@
         "seal": "",
         "sleep": "",
         "melee": "",
-        "ranged": "TRUE"
+        "ranged": "TRUE",
+        "decrease healing": "TRUE"
     },
     {
         "Name": "Fruel",
@@ -1661,7 +1663,8 @@
         "seal": "",
         "sleep": "",
         "melee": "TRUE",
-        "ranged": "TRUE"
+        "ranged": "TRUE",
+        "decrease healing": "TRUE"
     },
     {
         "Name": "Kai",
