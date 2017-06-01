@@ -765,7 +765,7 @@ bot.on("message", async (message) => {
         }
     } // Searches for set info
 
-    else if ((message.content.startsWith(config.prefix + "stats")) || (message.content.startsWith(config.prefix + "hero"))) {
+    else if ((message.content.startsWith(config.prefix + "stats"))) {
         if (args.length >= 2) {
             var heroStats = findListedPropertyData(args[1], "hero");
             if (heroStats != "nosuchdata") {
