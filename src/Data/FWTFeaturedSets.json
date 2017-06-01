@@ -120,16 +120,22 @@
         "Set2": "Devil Knight"
     },
     {
-        "Start": "",
-        "End": "",
-        "Set1": "",
-        "Set2": ""
+        "Start": "06-02-2017",
+        "End": "06-05-2017",
+        "Set1": "Pathfinder",
+        "Set2": "Time for Your Shot!"
     },
     {
-        "Start": "",
-        "End": "",
-        "Set1": "",
-        "Set2": ""
+        "Start": "06-05-2017",
+        "End": "06-07-2017",
+        "Set1": "Slime King's Dignity",
+        "Set2": "High Human Guardian"
+    },
+    {
+        "Start": "06-07-2017",
+        "End": "06-09-2017",
+        "Set1": "Tower of Dawn Guardian",
+        "Set2": "Lumen Hymn"
     },
     {
         "Start": "",
