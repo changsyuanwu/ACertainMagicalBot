@@ -358,7 +358,7 @@ function PullOrNot() {
     else return path.join(launchLocation, "src", "Images", "Don't Pull.png");
 } // Does the 50/50 pull or not
 
-function news(newsLimit) {
+function news(newsLimit, message) {
     const facebookEntityName = "Fwar";
     return new Promise((resolve, reject) => {
         FB.napi(facebookEntityName + "/posts", {
@@ -374,10 +374,16 @@ function news(newsLimit) {
             } else {
                 resolve(response.data.map(postData => {
                     const attachments = postData.attachments.data[0];
+                    if (message.channel.type === "dm") {
+                        color = "#4F545C";
+                    } else {
+                        color = message.guild.me.displayColor;
+                    }
                     const embed = new Discord.RichEmbed()
                         .setDescription(getNewsDescription(postData))
                         .setTitle(getNewsTitle(postData))
                         .setAuthor(postData.from.name, null, "https://www.facebook.com/" + facebookEntityName)
+                        .setColor(color)
                         .setURL(postData.permalink_url);
                     if (attachments.type !== "album") {
                         embed.setImage(attachments.media.image.src);
@@ -933,6 +939,17 @@ bot.on("message", async (message) => {
             });
     } // Finds top 10 highscores for FWT Trivia
 
+    else if (message.content.startsWith(config.prefix + "rank")) {
+        var users;
+        sql.get("SELECT COUNT(*) FROM scores")
+            .then((data) => {
+                users = data;
+            });
+        const embed = new Discord.RichEmbed()
+            .setAuthor(message.member.displayName)
+        message.channel.send(`**${message.member.displayName}**\n`)
+    }
+
     else if (message.content.startsWith(config.prefix + "sg")) {
         if (args.length >= 2) {
             var sgData = findListedPropertyData(args[1], "soulgear");
@@ -953,7 +970,7 @@ bot.on("message", async (message) => {
         } else {
             limit = 1;
         }
-        news(limit)
+        news(limit, message)
             .then((news) => {
                 for (var i = 0; i < limit; i++) {
                     message.channel.send({ embed: news[i]["embed"] });
