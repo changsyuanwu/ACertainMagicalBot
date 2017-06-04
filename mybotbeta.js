@@ -580,7 +580,7 @@ bot.on("message", async (message) => {
 
 
     else if (message.content.startsWith(config.prefix + "credits")) {
-         message.channel.send(credits.join("\n\n"))
+        message.channel.send(credits.join("\n\n"))
     }
 
 
@@ -941,13 +941,16 @@ bot.on("message", async (message) => {
 
     else if (message.content.startsWith(config.prefix + "rank")) {
         var users;
-        sql.get("SELECT COUNT(*) FROM scores")
+        sql.all("SELECT COUNT(*) FROM scores")
             .then((data) => {
                 users = data;
+                console.log(data)
             });
         const embed = new Discord.RichEmbed()
             .setAuthor(message.member.displayName)
-        message.channel.send(`**${message.member.displayName}**\n`)
+            .addField("Rank", users);
+
+        message.channel.send({ embed: embed });
     }
 
     else if (message.content.startsWith(config.prefix + "sg")) {
