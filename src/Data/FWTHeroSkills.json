@@ -23,7 +23,7 @@
     {
         "Name": "Alex",
 
-        "1": "**Lance Piercing**:\nThrusts a spear forward and inflicts damage equal to [102% ~ 139.8%] of Attack. Instantly increases Attack by [1,7% ~ 8%] for every space traveled for 1 turn.",
+        "1": "**Lance Piercing**:\nThrusts a spear forward and inflicts damage equal to [102% ~ 139.8%] of Attack. Instantly increases Attack by [1.7% ~ 8%] for every space traveled for 1 turn.",
         "1MPcost": 15,
         "1GeneCost": 225,
 
