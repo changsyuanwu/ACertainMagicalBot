@@ -375,9 +375,9 @@ function news(newsLimit, message) {
                 resolve(response.data.map(postData => {
                     const attachments = postData.attachments.data[0];
                     if (message.channel.type === "dm") {
-                        color = "#4F545C";
+                        var color = "#4F545C";
                     } else {
-                        color = message.guild.me.displayColor;
+                        var color = message.guild.me.displayColor;
                     }
                     const embed = new Discord.RichEmbed()
                         .setDescription(getNewsDescription(postData))
@@ -943,14 +943,27 @@ bot.on("message", async (message) => {
         var users;
         sql.all("SELECT COUNT(*) FROM scores")
             .then((data) => {
-                users = data;
-                console.log(data)
-            });
-        const embed = new Discord.RichEmbed()
-            .setAuthor(message.member.displayName)
-            .addField("Rank", users);
+                getPoints(message.author.id)
+                    .then((points) => {
+                        sql.all("SELECT FIND_IN_SET(Points, (SELECT GROUP_CONCAT(Points ORDER BY Points DESC) FROM scores)) AS rank FROM scores WHERE userID=" + message.author.id + ";")
+                            .then((rank) => {
+                                console.log(rank);
+                            })
+                        totalPlayers = data[0]["COUNT(*)"];
+                        if (message.channel.type === "dm") {
+                            var color = "#4F545C";
+                        } else {
+                            var color = message.guild.me.displayColor;
+                        }
+                        const embed = new Discord.RichEmbed()
+                            .setAuthor(message.member.displayName, message.author.displayAvatarURL)
+                            .addField("Rank", `1/${totalPlayers}`, true)
+                            .addField("Points", points, true)
+                            .setColor(color);
 
-        message.channel.send({ embed: embed });
+                        message.channel.send({ embed: embed });
+                    });
+            });
     }
 
     else if (message.content.startsWith(config.prefix + "sg")) {
