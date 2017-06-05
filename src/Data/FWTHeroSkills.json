@@ -44,15 +44,15 @@
 	{
         "Name": "Alfred",
 
-        "1": "**Magic Burst**:\nPounds the ground with a fist full of magic to inflict damage equal to [x% ~ 127.2%] of Attack on nearby enemies.",
+        "1": "**Magic Burst**:\nAlfred charges his hands with magic and strikes the ground, attacking surrounding enemies at [?% ~ 134%] Attack. If 2 or more enemies are attacked, his Attack increases by 8% for 1 turn",
         "1MPcost": 20,
         "1GeneCost": 18,
 
-        "2": "**Pyro Eximus**:\nUses a magic energy bomb to inflict [x% ~ 145.6%] damage and temporarily charms enemies for 1 turn with a [10 ~ 28%] chance.",
+        "2": "**Pyro Eximus**:\nUses a magic energy bomb to inflict [?% ~ 156.3%] damage and temporarily charms enemies for 1 turn with a [10% ~ 40%] chance.",
         "2MPcost": 94,
         "2GeneCost": 37,
 
-        "3": "**Elemental Circle**:\nCreates a magic sigil that inflicts [x% ~ 183.5%] of damage on nearby enemies and has a [55% ~ 100%] chance to decrease their movement by 4 for 2 turns",
+        "3": "**Elemental Circle**:\nCreates a magic sigil that inflicts [?% ~ 193.5%] damage on nearby enemies and has a [55% ~ 100%] chance to decrease their Movement by 4 for 2 turns. If 2 or more enemies are attacked, then this skill decreases their Counter Rate by [? ~ 8000] for 2 turns.",
         "3MPcost": 144,
         "3GeneCost": 74,
 
@@ -208,5 +208,26 @@
 		
 		"5": "Beat and Steal:\n(Carrot's) companions come out of hiding and attack enemies at [540% ~ 742.5%] attack with a [55% ~ 100%] chance of confusing them for 2 turns. Also restores [120 ~ 300] MP.",
         "5GeneCost": 912
+    },
+    {
+        "Name": "Ildo",
+
+        "1": "****:",
+        "1MPcost": 15,
+        "1GeneCost": 0,
+
+        "2": "****:",
+        "2MPcost": 0,
+        "2GeneCost": 0,
+
+        "3": "****:",
+        "3MPcost": 0,
+        "3GeneCost": 0,
+
+        "4": "****:",
+        "4GeneCost": 0,
+		
+		"5": "**Flash Sword**:\nAttacks enemies in a straight line at [535% ~ ?%] Attack and causes Lethal Wound for 2 turns. Lethal Wound inflicts as much damage as [55% ~ ?%] Attack for every tile that it's target moved at the end of the turn. (Note that this skill's target range is 5 tiles, but it's effect range is 20 tiles)",
+        "5GeneCost": 5100
     }
 ]
