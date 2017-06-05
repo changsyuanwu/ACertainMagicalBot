@@ -128,19 +128,19 @@
     {
         "Name": "Banshee",
 
-        "1": "Bleak Footsteps:\nCold energy rolls in, hitting enemies in range at [? ~ 120.4%] Attack. Increases Banshee's Movement by 2 and her attack by [? ~ 960] for 2 turns if 2 or more enemies ate hit.",
+        "1": "**Bleak Footsteps**:\nCold energy rolls in, hitting enemies in range at [? ~ 120.4%] Attack. Increases Banshee's Movement by 2 and her attack by [? ~ 960] for 2 turns if 2 or more enemies ate hit.",
         "1MPcost": 15,
         "1GeneCost": 340,
 
-        "2": "Who Am I?:\nPunishes enemies in range for not answering her riddle correctly; deals damage at [? ~ 156.3%] Attack with a [? ~ 60%] chance of Confusion for 1 turns. If ally Spooky is on the battlefield, [? ~ 2080] enemy Defense is ignored.",
+        "2": "**Who Am I?**:\nPunishes enemies in range for not answering her riddle correctly; deals damage at [? ~ 156.3%] Attack with a [? ~ 60%] chance of Confusion for 1 turns. If ally Spooky is on the battlefield, [? ~ 2080] enemy Defense is ignored.",
         "2MPcost": 73,
         "2GeneCost": 1020,
 
-        "3": "A Punishment for Bad Children:\nA detonation of cold energy that hits enemies in its range at [? ~ 193.2%] Attack. This skil's Final Power increases by [15 ~ 24%] against Paper-type enemies. If ally Spooky is on the battlefield, this skill creates a [35% ~ 80%] chance of Stunning enemies in range for 1 turns.",
+        "3": "**A Punishment for Bad Children**:\nA detonation of cold energy that hits enemies in its range at [? ~ 193.2%] Attack. This skil's Final Power increases by [15 ~ 24%] against Paper-type enemies. If ally Spooky is on the battlefield, this skill creates a [35% ~ 80%] chance of Stunning enemies in range for 1 turns.",
         "3MPcost": 152,
         "3GeneCost": 1360,
 
-        "4": "White Witch of the Black Forest:\nBanshee absorbs [5% ~ 23%] of the damage she inflicts on the enemy as HP. If there is an ally spooky on the battlefield, Banshee's Attack increases by [1 ~ 10%] and she recieves 20% less damage from Rock types, at the cost of receiving 50% reduced healing skill effects.",
+        "4": "**White Witch of the Black Forest**:\nBanshee absorbs [5% ~ 23%] of the damage she inflicts on the enemy as HP. If there is an ally spooky on the battlefield, Banshee's Attack increases by [1 ~ 10%] and she recieves 20% less damage from Rock types, at the cost of receiving 50% reduced healing skill effects.",
         "4GeneCost": 680,
 		
 		"5": "Banshee currently has no awakening skill!",
@@ -149,19 +149,19 @@
     {
         "Name": "Bearman",
 
-        "1": "Poke the Bear:\nInflicts [? ~ 136.9% ] damage of Attack on 1 enemy and has [? ~ 75%] chance to stun them for 1 turn.",
+        "1": "**Poke the Bear**:\nInflicts [? ~ 136.9% ] damage of Attack on 1 enemy and has [? ~ 75%] chance to stun them for 1 turn.",
         "1MPcost": 15,
         "1GeneCost": 225,
 
-        "2": "Downward Force:\nPounces on enemeis straight ahead to inflict damage equal to [? ~ 166%] of attack and decreases their attack by [? ~ 825] for 2 turns.",
+        "2": "**Downward Force**:\nPounces on enemeis straight ahead to inflict damage equal to [? ~ 166%] of attack and decreases their attack by [? ~ 825] for 2 turns.",
         "2MPcost": 55,
         "2GeneCost": 450,
 
-        "3": "Unchain the Bear:\n Unleashes a forceful aura to inflict damage at [? ~ 198%] attack. Increaes defense by [? ~ 2040] and chance of being attacked by nearby enemies by [? ~ 95%] for 2 turns.",
+        "3": "**Unchain the Bear**:\n Unleashes a forceful aura to inflict damage at [? ~ 198%] attack. Increaes defense by [? ~ 2040] and chance of being attacked by nearby enemies by [? ~ 95%] for 2 turns.",
         "3MPcost": 116,
         "3GeneCost": 900,
 
-        "4": "Taunt:\nProvokes enemies, which increases the chance of being attacked by [? ~ 27.5%].",
+        "4": "**Taunt**:\nProvokes enemies, which increases the chance of being attacked by [? ~ 27.5%].",
         "4GeneCost": 450,
 		
 		"5": "Bearman currently has no awakening skill!",
@@ -170,19 +170,19 @@
     {
         "Name": "Belle",
 
-        "1": "Purification:\nInflicts damage at [? ~ 133%] of attack and with a [55% ~ 100%] chance, removes 1 buff of enemies.",
+        "1": "**Purification**:\nInflicts damage at [? ~ 133%] of attack and with a [55% ~ 100%] chance, removes 1 buff of enemies.",
         "1MPcost": 15,
         "1GeneCost": 270,
 
-        "2": "Miraculous Revival:\n heals allies in range for [? ~ 159.2%] of attack. If the target's HP is below 25%, the skill effect increases by [? ~ 27.5%]. With [55% ~ 100%] chance, removes 1 debuffs of allies.",
+        "2": "**Miraculous Revival**:\n heals allies in range for [? ~ 159.2%] of attack. If the target's HP is below 25%, the skill effect increases by [? ~ 27.5%]. With [55% ~ 100%] chance, removes 1 debuffs of allies.",
         "2MPcost": 65,
         "2GeneCost": 810,
 
-        "3": "Grace of the Goddess:\nHeals allies in range for [? ~ 89.3%] of Attack, and recovers a targeted ally's HP by [? ~ 116.5%] of attack. Increaese MAX HP by [? ~ 21.5%] for 2 turns, and continues to heal them by [? ~ 59.8%]",
+        "3": "**Grace of the Goddess**:\nHeals allies in range for [? ~ 89.3%] of Attack, and recovers a targeted ally's HP by [? ~ 116.5%] of attack. Increaese MAX HP by [? ~ 21.5%] for 2 turns, and continues to heal them by [? ~ 59.8%]",
         "3MPcost": 173,
         "3GeneCost": 1125,
 
-        "4": "Goddess of War:\n Belle does not suffer terrain-related damage. Whenever she uses a skill, her MAX MP increases by [2 ~ 20] until it reaches 80.",
+        "4": "**Goddess of War**:\n Belle does not suffer terrain-related damage. Whenever she uses a skill, her MAX MP increases by [2 ~ 20] until it reaches 80.",
 		"4GeneCost": 567,
 
 		"5": "Belle currently has no awakening skill!",
@@ -191,22 +191,22 @@
     {
         "Name": "Carrot",
 
-        "1": "Spray 'n Pray:\nAttacks an enemy to inflict [? ~ 146.8%] of Attack damage. if the enemy's HP is below 30%, deal additional damage at [1% ~ 5.5%] of the enemy's MAX HP.",
+        "1": "**Spray 'n Pray**:\nAttacks an enemy to inflict [? ~ 146.8%] of Attack damage. if the enemy's HP is below 30%, deal additional damage at [1% ~ 5.5%] of the enemy's MAX HP.",
         "1MPcost": 15,
         "1GeneCost": 70,
 
-        "2": "Bull's Eye:\nShoots cute arrows to influct damage at [? ~ 162.7%] of attack, and decreases the enemy's attack by [? ~ 2000] for 2 turns.",
+        "2": "**Bull's Eye**:\nShoots cute arrows to influct damage at [? ~ 162.7%] of attack, and decreases the enemy's attack by [? ~ 2000] for 2 turns.",
         "2MPcost": 74,
         "2GeneCost": 135,
 
-        "3": "Leech:\nInflicts [? ~ 192.2%] damage on the enemy. For 2 turns, decreases (enemy's) Defense by [? ~ 3700] and (enemy's) crit rate by [? ~ 3700].",
+        "3": "**Leech**:\nInflicts [? ~ 192.2%] damage on the enemy. For 2 turns, decreases (enemy's) Defense by [? ~ 3700] and (enemy's) crit rate by [? ~ 3700].",
         "3MPcost": 161,
         "3GeneCost": 270,
 
-        "4": "Have a Taste!:\nIncreaes damaghe by [1% ~ 10%] on targets that are at least 3 tiles away from Carrot.",
+        "4": "**Have a Taste!**:\nIncreaes damaghe by [1% ~ 10%] on targets that are at least 3 tiles away from Carrot.",
         "4GeneCost": 135,
 		
-		"5": "Beat and Steal:\n(Carrot's) companions come out of hiding and attack enemies at [540% ~ 742.5%] attack with a [55% ~ 100%] chance of confusing them for 2 turns. Also restores [120 ~ 300] MP.",
+		"5": "**Beat and Steal**:\n(Carrot's) companions come out of hiding and attack enemies at [540% ~ 742.5%] attack with a [55% ~ 100%] chance of confusing them for 2 turns. Also restores [120 ~ 300] MP.",
         "5GeneCost": 912
     },
     {
