@@ -945,23 +945,26 @@ bot.on("message", async (message) => {
             .then((data) => {
                 getPoints(message.author.id)
                     .then((points) => {
-                        sql.all("SELECT FIND_IN_SET(Points, (SELECT GROUP_CONCAT(Points ORDER BY Points DESC) FROM scores)) AS rank FROM scores WHERE userID=" + message.author.id + ";")
+                        sql.get(`SELECT COUNT(*) FROM scores WHERE Points >= (SELECT Points FROM scores WHERE userID = ${message.author.id})`)
                             .then((rank) => {
-                                console.log(rank);
-                            })
-                        totalPlayers = data[0]["COUNT(*)"];
-                        if (message.channel.type === "dm") {
-                            var color = "#4F545C";
-                        } else {
-                            var color = message.guild.me.displayColor;
-                        }
-                        const embed = new Discord.RichEmbed()
-                            .setAuthor(message.member.displayName, message.author.displayAvatarURL)
-                            .addField("Rank", `1/${totalPlayers}`, true)
-                            .addField("Points", points, true)
-                            .setColor(color);
+                                
+                                totalPlayers = data[0]["COUNT(*)"];
+                                rank = rank["COUNT(*)"];
 
-                        message.channel.send({ embed: embed });
+                                if (message.channel.type === "dm") {
+                                    var color = "#4F545C";
+                                } else {
+                                    var color = message.guild.me.displayColor;
+                                }
+                                const embed = new Discord.RichEmbed()
+                                    .setAuthor(message.member.displayName, message.author.displayAvatarURL)
+                                    .addField("Rank", `${rank}/${totalPlayers}`, true)
+                                    .addField("Points", points, true)
+                                    .setColor(color);
+
+                                message.channel.send({ embed: embed });
+                            })
+
                     });
             });
     }
