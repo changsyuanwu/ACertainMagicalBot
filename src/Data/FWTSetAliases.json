@@ -1332,7 +1332,9 @@
         "name": "Toxicologist",
         "aliases": [
             "toxicologist",
-            "poison"
+            "poison",
+            "toxin",
+            "toxic"
         ]
     },
     {
