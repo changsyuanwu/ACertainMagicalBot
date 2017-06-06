@@ -210,6 +210,363 @@
         "5GeneCost": 912
     },
     {
+        "Name": "Cat Sidhe",
+
+        "1": "****:",
+        "1MPcost": 15,
+        "1GeneCost": 0,
+
+        "2": "****:",
+        "2MPcost": 0,
+        "2GeneCost": 0,
+
+        "3": "****:",
+        "3MPcost": 0,
+        "3GeneCost": 0,
+
+        "4": "****:",
+        "4GeneCost": 0,
+		
+		"5": "****:",
+        "5GeneCost": 0
+    },
+    {
+        "Name": "Celestial",
+
+        "1": "****:",
+        "1MPcost": 15,
+        "1GeneCost": 0,
+
+        "2": "****:",
+        "2MPcost": 0,
+        "2GeneCost": 0,
+
+        "3": "****:",
+        "3MPcost": 0,
+        "3GeneCost": 0,
+
+        "4": "****:",
+        "4GeneCost": 0,
+		
+		"5": "****:",
+        "5GeneCost": 0
+    },
+    {
+        "Name": "Chenny",
+
+        "1": "****:",
+        "1MPcost": 15,
+        "1GeneCost": 0,
+
+        "2": "****:",
+        "2MPcost": 0,
+        "2GeneCost": 0,
+
+        "3": "****:",
+        "3MPcost": 0,
+        "3GeneCost": 0,
+
+        "4": "****:",
+        "4GeneCost": 0,
+		
+		"5": "****:",
+        "5GeneCost": 0
+    },
+    {
+        "Name": "Chris",
+
+        "1": "****:",
+        "1MPcost": 15,
+        "1GeneCost": 0,
+
+        "2": "****:",
+        "2MPcost": 0,
+        "2GeneCost": 0,
+
+        "3": "****:",
+        "3MPcost": 0,
+        "3GeneCost": 0,
+
+        "4": "****:",
+        "4GeneCost": 0,
+		
+		"5": "****:",
+        "5GeneCost": 0
+    },
+    {
+        "Name": "Cleo",
+
+        "1": "****:",
+        "1MPcost": 15,
+        "1GeneCost": 0,
+
+        "2": "****:",
+        "2MPcost": 0,
+        "2GeneCost": 0,
+
+        "3": "****:",
+        "3MPcost": 0,
+        "3GeneCost": 0,
+
+        "4": "****:",
+        "4GeneCost": 0,
+		
+		"5": "****:",
+        "5GeneCost": 0
+    },
+    {
+        "Name": "Deborah",
+
+        "1": "****:",
+        "1MPcost": 15,
+        "1GeneCost": 0,
+
+        "2": "****:",
+        "2MPcost": 0,
+        "2GeneCost": 0,
+
+        "3": "****:",
+        "3MPcost": 0,
+        "3GeneCost": 0,
+
+        "4": "****:",
+        "4GeneCost": 0,
+		
+		"5": "****:",
+        "5GeneCost": 0
+    },
+    {
+        "Name": "Deimos",
+
+        "1": "****:",
+        "1MPcost": 15,
+        "1GeneCost": 0,
+
+        "2": "****:",
+        "2MPcost": 0,
+        "2GeneCost": 0,
+
+        "3": "****:",
+        "3MPcost": 0,
+        "3GeneCost": 0,
+
+        "4": "****:",
+        "4GeneCost": 0,
+		
+		"5": "****:",
+        "5GeneCost": 0
+    },
+    {
+        "Name": "Dolores",
+
+        "1": "****:",
+        "1MPcost": 15,
+        "1GeneCost": 0,
+
+        "2": "****:",
+        "2MPcost": 0,
+        "2GeneCost": 0,
+
+        "3": "****:",
+        "3MPcost": 0,
+        "3GeneCost": 0,
+
+        "4": "****:",
+        "4GeneCost": 0,
+		
+		"5": "****:",
+        "5GeneCost": 0
+    },
+    {
+        "Name": "Dominique",
+
+        "1": "****:",
+        "1MPcost": 15,
+        "1GeneCost": 0,
+
+        "2": "****:",
+        "2MPcost": 0,
+        "2GeneCost": 0,
+
+        "3": "****:",
+        "3MPcost": 0,
+        "3GeneCost": 0,
+
+        "4": "****:",
+        "4GeneCost": 0,
+		
+		"5": "****:",
+        "5GeneCost": 0
+    },
+    {
+        "Name": "Elektra",
+
+        "1": "****:",
+        "1MPcost": 15,
+        "1GeneCost": 0,
+
+        "2": "****:",
+        "2MPcost": 0,
+        "2GeneCost": 0,
+
+        "3": "****:",
+        "3MPcost": 0,
+        "3GeneCost": 0,
+
+        "4": "****:",
+        "4GeneCost": 0,
+		
+		"5": "****:",
+        "5GeneCost": 0
+    },
+    {
+        "Name": "Eunwol",
+
+        "1": "****:",
+        "1MPcost": 15,
+        "1GeneCost": 0,
+
+        "2": "****:",
+        "2MPcost": 0,
+        "2GeneCost": 0,
+
+        "3": "****:",
+        "3MPcost": 0,
+        "3GeneCost": 0,
+
+        "4": "****:",
+        "4GeneCost": 0,
+		
+		"5": "****:",
+        "5GeneCost": 0
+    },
+    {
+        "Name": "",
+
+        "1": "****:",
+        "1MPcost": 15,
+        "1GeneCost": 0,
+
+        "2": "****:",
+        "2MPcost": 0,
+        "2GeneCost": 0,
+
+        "3": "****:",
+        "3MPcost": 0,
+        "3GeneCost": 0,
+
+        "4": "****:",
+        "4GeneCost": 0,
+		
+		"5": "****:",
+        "5GeneCost": 0
+    },
+    {
+        "Name": "",
+
+        "1": "****:",
+        "1MPcost": 15,
+        "1GeneCost": 0,
+
+        "2": "****:",
+        "2MPcost": 0,
+        "2GeneCost": 0,
+
+        "3": "****:",
+        "3MPcost": 0,
+        "3GeneCost": 0,
+
+        "4": "****:",
+        "4GeneCost": 0,
+		
+		"5": "****:",
+        "5GeneCost": 0
+    },
+    {
+        "Name": "",
+
+        "1": "****:",
+        "1MPcost": 15,
+        "1GeneCost": 0,
+
+        "2": "****:",
+        "2MPcost": 0,
+        "2GeneCost": 0,
+
+        "3": "****:",
+        "3MPcost": 0,
+        "3GeneCost": 0,
+
+        "4": "****:",
+        "4GeneCost": 0,
+		
+		"5": "****:",
+        "5GeneCost": 0
+    },
+    {
+        "Name": "",
+
+        "1": "****:",
+        "1MPcost": 15,
+        "1GeneCost": 0,
+
+        "2": "****:",
+        "2MPcost": 0,
+        "2GeneCost": 0,
+
+        "3": "****:",
+        "3MPcost": 0,
+        "3GeneCost": 0,
+
+        "4": "****:",
+        "4GeneCost": 0,
+		
+		"5": "****:",
+        "5GeneCost": 0
+    },
+    {
+        "Name": "",
+
+        "1": "****:",
+        "1MPcost": 15,
+        "1GeneCost": 0,
+
+        "2": "****:",
+        "2MPcost": 0,
+        "2GeneCost": 0,
+
+        "3": "****:",
+        "3MPcost": 0,
+        "3GeneCost": 0,
+
+        "4": "****:",
+        "4GeneCost": 0,
+		
+		"5": "****:",
+        "5GeneCost": 0
+    },
+    {
+        "Name": "",
+
+        "1": "****:",
+        "1MPcost": 15,
+        "1GeneCost": 0,
+
+        "2": "****:",
+        "2MPcost": 0,
+        "2GeneCost": 0,
+
+        "3": "****:",
+        "3MPcost": 0,
+        "3GeneCost": 0,
+
+        "4": "****:",
+        "4GeneCost": 0,
+		
+		"5": "****:",
+        "5GeneCost": 0
+    },
+    {
         "Name": "Ildo",
 
         "1": "****:",
@@ -229,5 +586,110 @@
 		
 		"5": "**Flash Sword**:\nAttacks enemies in a straight line at [535% ~ ?%] Attack and causes Lethal Wound for 2 turns. Lethal Wound inflicts as much damage as [55% ~ ?%] Attack for every tile that it's target moved at the end of the turn. (Note that this skill's target range is 5 tiles, but it's effect range is 20 tiles)",
         "5GeneCost": 5100
+    },
+    {
+        "Name": "",
+
+        "1": "****:",
+        "1MPcost": 15,
+        "1GeneCost": 0,
+
+        "2": "****:",
+        "2MPcost": 0,
+        "2GeneCost": 0,
+
+        "3": "****:",
+        "3MPcost": 0,
+        "3GeneCost": 0,
+
+        "4": "****:",
+        "4GeneCost": 0,
+		
+		"5": "****:",
+        "5GeneCost": 0
+    },
+    {
+        "Name": "",
+
+        "1": "****:",
+        "1MPcost": 15,
+        "1GeneCost": 0,
+
+        "2": "****:",
+        "2MPcost": 0,
+        "2GeneCost": 0,
+
+        "3": "****:",
+        "3MPcost": 0,
+        "3GeneCost": 0,
+
+        "4": "****:",
+        "4GeneCost": 0,
+		
+		"5": "****:",
+        "5GeneCost": 0
+    },
+    {
+        "Name": "",
+
+        "1": "****:",
+        "1MPcost": 15,
+        "1GeneCost": 0,
+
+        "2": "****:",
+        "2MPcost": 0,
+        "2GeneCost": 0,
+
+        "3": "****:",
+        "3MPcost": 0,
+        "3GeneCost": 0,
+
+        "4": "****:",
+        "4GeneCost": 0,
+		
+		"5": "****:",
+        "5GeneCost": 0
+    },
+    {
+        "Name": "",
+
+        "1": "****:",
+        "1MPcost": 15,
+        "1GeneCost": 0,
+
+        "2": "****:",
+        "2MPcost": 0,
+        "2GeneCost": 0,
+
+        "3": "****:",
+        "3MPcost": 0,
+        "3GeneCost": 0,
+
+        "4": "****:",
+        "4GeneCost": 0,
+		
+		"5": "****:",
+        "5GeneCost": 0
+    },
+    {
+        "Name": "",
+
+        "1": "****:",
+        "1MPcost": 15,
+        "1GeneCost": 0,
+
+        "2": "****:",
+        "2MPcost": 0,
+        "2GeneCost": 0,
+
+        "3": "****:",
+        "3MPcost": 0,
+        "3GeneCost": 0,
+
+        "4": "****:",
+        "4GeneCost": 0,
+		
+		"5": "****:",
+        "5GeneCost": 0
     }
 ]
