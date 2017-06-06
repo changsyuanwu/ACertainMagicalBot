@@ -280,11 +280,14 @@ function findItem(item, slot, rareness) {
 //--------------------------------------------------------------------------------------------
 
 function getPoints(ID) {
-    return sql.get(`SELECT * FROM scores WHERE userID ='${ID}'`)
+    return sql.get(`SELECT * FROM scores WHERE userID = ?`, ID)
         .then(row => {
-            if (!row)
-                return 0;
-            else
+            if (!row) {
+                sql.run("INSERT INTO scores (userID, points) VALUES (?, ?)", [ID, 0])
+                    .then(() => {
+                        return 0;
+                    })
+            } else
                 return row.points;
         });
 } // Finds the user's score
@@ -314,7 +317,7 @@ function trivia(message, isCritQuestion) {
             })
                 .then((correctMessage) => {
                     var correctUserID = correctMessage.first().author.id;
-                    sql.get(`SELECT * FROM scores WHERE userID ="${correctUserID}"`)
+                    sql.get(`SELECT * FROM scores WHERE userID = ?`, correctUserID)
                         .then(row => {
                             if (!row) {
                                 sql.run("INSERT INTO scores (userID, points) VALUES (?, ?)", [correctUserID, rewardPoints]);
@@ -454,9 +457,10 @@ function incrementUses() {
             }
         })
         .catch(() => {
-            sql.run("CREATE TABLE IF NOT EXISTS utilities (type TEXT, value INTEGER)").then(() => {
-                sql.run("INSERT INTO utilities (type, values) VALUES (?, ?)", ["Uses", 0]);
-            });
+            sql.run("CREATE TABLE IF NOT EXISTS utilities (type TEXT, value INTEGER)")
+                .then(() => {
+                    sql.run("INSERT INTO utilities (type, values) VALUES (?, ?)", ["Uses", 0]);
+                });
         });
 } // Increments the number of uses of the bot by 1
 
@@ -940,16 +944,17 @@ bot.on("message", async (message) => {
     } // Finds top 10 highscores for FWT Trivia
 
     else if (message.content.startsWith(config.prefix + "rank")) {
-        var users;
         sql.all("SELECT COUNT(*) FROM scores")
             .then((data) => {
+
                 getPoints(message.author.id)
                     .then((points) => {
-                        sql.get(`SELECT COUNT(*) FROM scores WHERE Points >= (SELECT Points FROM scores WHERE userID = ${message.author.id})`)
+
+                        sql.get(`SELECT COUNT(*) + 1 FROM scores WHERE Points > (SELECT Points FROM scores WHERE userID = ${message.author.id})`)
                             .then((rank) => {
-                                
+
                                 totalPlayers = data[0]["COUNT(*)"];
-                                rank = rank["COUNT(*)"];
+                                rank = rank["COUNT(*) + 1"];
 
                                 if (message.channel.type === "dm") {
                                     var color = "#4F545C";
