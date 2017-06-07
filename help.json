@@ -23,7 +23,7 @@
 
     "**!triviaquestions**: Returns the number of trivia questions that are currently available",
 
-    "**!score <user>**: Finds the trivia score of the mentioned user. If no user is mentioned, the one who used the command is used",
+    "**!rank <@user>**: Finds the trivia score and rank of the mentioned user. If no user is mentioned, the user who used the command's score and rank are returned",
 
     "**!highscores**: Finds the top 10 leaderboard of Fantasy War Tactics R Trivia",
 
