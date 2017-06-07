@@ -8,6 +8,7 @@
     "discord.js": "^11.1.0",
     "fb": "^2.0.0",
     "moment": "^2.18.1",
+    "node-pre-gyp": "^0.6.36",
     "relevant-urban": "^2.0.0",
     "sqlite": "^2.8.0"
   },
