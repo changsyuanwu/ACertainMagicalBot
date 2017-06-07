@@ -296,7 +296,7 @@
         "Answer": "Lena"
     },
     {
-        "Question": "Which hero is the following quote from? \"I am ____, the goddess of the battlefield...Stay Excited!\"",
+        "Question": "Which hero is the following quote from? \"I am \\_\\_\\_\\_, the goddess of the battlefield...Stay Excited!\"",
         "Answer": "Lena"
     },
     {
@@ -404,7 +404,7 @@
         "Answer": "Persona"
     },
     {
-        "Question": "Which hero is the following quote from? \"Phantom Thief _______, gorgeous level up!\"",
+        "Question": "Which hero is the following quote from? \"Phantom Thief \\_\\_\\_\\_\\_\\_\\_, gorgeous level up!\"",
         "Answer": "Persona"
     },
     {
@@ -492,11 +492,11 @@
         "Answer": "Sione"
     },
     {
-        "Question": "Which hero is the following quote from? \"_____ wants to fight! _____ does fight! Fight!\"",
+        "Question": "Which hero is the following quote from? \"\\_\\_\\_\\_\\_ wants to fight! \\_\\_\\_\\_\\_ does fight! Fight!\"",
         "Answer": "Sraka"
     },
     {
-        "Question": "Which hero is the following quote from? \"Lord is strong! _____ only follows strong people!\"",
+        "Question": "Which hero is the following quote from? \"Lord is strong! \\_\\_\\_\\_\\_ only follows strong people!\"",
         "Answer": "Sraka"
     },
     {
