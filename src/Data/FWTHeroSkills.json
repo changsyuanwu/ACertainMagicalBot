@@ -441,7 +441,7 @@
         "5GeneCost": 0
     },
     {
-        "Name": "",
+        "Name": "Evan",
 
         "1": "****:",
         "1MPcost": 15,
@@ -462,7 +462,7 @@
         "5GeneCost": 0
     },
     {
-        "Name": "",
+        "Name": "Frankenstein",
 
         "1": "****:",
         "1MPcost": 15,
@@ -483,7 +483,7 @@
         "5GeneCost": 0
     },
     {
-        "Name": "",
+        "Name": "Fruel",
 
         "1": "****:",
         "1MPcost": 15,
@@ -504,7 +504,7 @@
         "5GeneCost": 0
     },
     {
-        "Name": "",
+        "Name": "Gillan",
 
         "1": "****:",
         "1MPcost": 15,
@@ -525,7 +525,7 @@
         "5GeneCost": 0
     },
     {
-        "Name": "",
+        "Name": "Hella",
 
         "1": "****:",
         "1MPcost": 15,
@@ -546,7 +546,28 @@
         "5GeneCost": 0
     },
     {
-        "Name": "",
+        "Name": "Hongyeom",
+
+        "1": "****:",
+        "1MPcost": 15,
+        "1GeneCost": 0,
+
+        "2": "****:",
+        "2MPcost": 0,
+        "2GeneCost": 0,
+
+        "3": "****:",
+        "3MPcost": 0,
+        "3GeneCost": 0,
+
+        "4": "****:",
+        "4GeneCost": 0,
+		
+		"5": "****:",
+        "5GeneCost": 0
+    },
+    {
+        "Name": "Ian",
 
         "1": "****:",
         "1MPcost": 15,
@@ -588,7 +609,7 @@
         "5GeneCost": 5100
     },
     {
-        "Name": "",
+        "Name": "Jack",
 
         "1": "****:",
         "1MPcost": 15,
@@ -609,7 +630,7 @@
         "5GeneCost": 0
     },
     {
-        "Name": "",
+        "Name": "Jenny",
 
         "1": "****:",
         "1MPcost": 15,
@@ -630,7 +651,7 @@
         "5GeneCost": 0
     },
     {
-        "Name": "",
+        "Name": "Jin",
 
         "1": "****:",
         "1MPcost": 15,
@@ -651,7 +672,7 @@
         "5GeneCost": 0
     },
     {
-        "Name": "",
+        "Name": "Jin Kisaragi",
 
         "1": "****:",
         "1MPcost": 15,
@@ -672,7 +693,994 @@
         "5GeneCost": 0
     },
     {
-        "Name": "",
+        "Name": "Kai",
+
+        "1": "****:",
+        "1MPcost": 15,
+        "1GeneCost": 0,
+
+        "2": "****:",
+        "2MPcost": 0,
+        "2GeneCost": 0,
+
+        "3": "****:",
+        "3MPcost": 0,
+        "3GeneCost": 0,
+
+        "4": "****:",
+        "4GeneCost": 0,
+		
+		"5": "****:",
+        "5GeneCost": 0
+    },
+    {
+        "Name": "Kitty",
+
+        "1": "****:",
+        "1MPcost": 15,
+        "1GeneCost": 0,
+
+        "2": "****:",
+        "2MPcost": 0,
+        "2GeneCost": 0,
+
+        "3": "****:",
+        "3MPcost": 0,
+        "3GeneCost": 0,
+
+        "4": "****:",
+        "4GeneCost": 0,
+		
+		"5": "****:",
+        "5GeneCost": 0
+    },
+    {
+        "Name": "Klein",
+
+        "1": "****:",
+        "1MPcost": 15,
+        "1GeneCost": 0,
+
+        "2": "****:",
+        "2MPcost": 0,
+        "2GeneCost": 0,
+
+        "3": "****:",
+        "3MPcost": 0,
+        "3GeneCost": 0,
+
+        "4": "****:",
+        "4GeneCost": 0,
+		
+		"5": "****:",
+        "5GeneCost": 0
+    },
+    {
+        "Name": "Krut",
+
+        "1": "****:",
+        "1MPcost": 15,
+        "1GeneCost": 0,
+
+        "2": "****:",
+        "2MPcost": 0,
+        "2GeneCost": 0,
+
+        "3": "****:",
+        "3MPcost": 0,
+        "3GeneCost": 0,
+
+        "4": "****:",
+        "4GeneCost": 0,
+		
+		"5": "****:",
+        "5GeneCost": 0
+    },
+    {
+        "Name": "Lance",
+
+        "1": "****:",
+        "1MPcost": 15,
+        "1GeneCost": 0,
+
+        "2": "****:",
+        "2MPcost": 0,
+        "2GeneCost": 0,
+
+        "3": "****:",
+        "3MPcost": 0,
+        "3GeneCost": 0,
+
+        "4": "****:",
+        "4GeneCost": 0,
+		
+		"5": "****:",
+        "5GeneCost": 0
+    },
+    {
+        "Name": "Lee",
+
+        "1": "****:",
+        "1MPcost": 15,
+        "1GeneCost": 0,
+
+        "2": "****:",
+        "2MPcost": 0,
+        "2GeneCost": 0,
+
+        "3": "****:",
+        "3MPcost": 0,
+        "3GeneCost": 0,
+
+        "4": "****:",
+        "4GeneCost": 0,
+		
+		"5": "****:",
+        "5GeneCost": 0
+    },
+    {
+        "Name": "Lena",
+
+        "1": "****:",
+        "1MPcost": 15,
+        "1GeneCost": 0,
+
+        "2": "****:",
+        "2MPcost": 0,
+        "2GeneCost": 0,
+
+        "3": "****:",
+        "3MPcost": 0,
+        "3GeneCost": 0,
+
+        "4": "****:",
+        "4GeneCost": 0,
+		
+		"5": "****:",
+        "5GeneCost": 0
+    },
+    {
+        "Name": "Lilid",
+
+        "1": "****:",
+        "1MPcost": 15,
+        "1GeneCost": 0,
+
+        "2": "****:",
+        "2MPcost": 0,
+        "2GeneCost": 0,
+
+        "3": "****:",
+        "3MPcost": 0,
+        "3GeneCost": 0,
+
+        "4": "****:",
+        "4GeneCost": 0,
+		
+		"5": "****:",
+        "5GeneCost": 0
+    },
+    {
+        "Name": "Lily",
+
+        "1": "****:",
+        "1MPcost": 15,
+        "1GeneCost": 0,
+
+        "2": "****:",
+        "2MPcost": 0,
+        "2GeneCost": 0,
+
+        "3": "****:",
+        "3MPcost": 0,
+        "3GeneCost": 0,
+
+        "4": "****:",
+        "4GeneCost": 0,
+		
+		"5": "****:",
+        "5GeneCost": 0
+    },
+    {
+        "Name": "Lucas",
+
+        "1": "****:",
+        "1MPcost": 15,
+        "1GeneCost": 0,
+
+        "2": "****:",
+        "2MPcost": 0,
+        "2GeneCost": 0,
+
+        "3": "****:",
+        "3MPcost": 0,
+        "3GeneCost": 0,
+
+        "4": "****:",
+        "4GeneCost": 0,
+		
+		"5": "****:",
+        "5GeneCost": 0
+    },
+    {
+        "Name": "Luminous",
+
+        "1": "****:",
+        "1MPcost": 15,
+        "1GeneCost": 0,
+
+        "2": "****:",
+        "2MPcost": 0,
+        "2GeneCost": 0,
+
+        "3": "****:",
+        "3MPcost": 0,
+        "3GeneCost": 0,
+
+        "4": "****:",
+        "4GeneCost": 0,
+		
+		"5": "****:",
+        "5GeneCost": 0
+    },
+    {
+        "Name": "Mas",
+
+        "1": "****:",
+        "1MPcost": 15,
+        "1GeneCost": 0,
+
+        "2": "****:",
+        "2MPcost": 0,
+        "2GeneCost": 0,
+
+        "3": "****:",
+        "3MPcost": 0,
+        "3GeneCost": 0,
+
+        "4": "****:",
+        "4GeneCost": 0,
+		
+		"5": "****:",
+        "5GeneCost": 0
+    },
+    {
+        "Name": "Mercedes",
+
+        "1": "****:",
+        "1MPcost": 15,
+        "1GeneCost": 0,
+
+        "2": "****:",
+        "2MPcost": 0,
+        "2GeneCost": 0,
+
+        "3": "****:",
+        "3MPcost": 0,
+        "3GeneCost": 0,
+
+        "4": "****:",
+        "4GeneCost": 0,
+		
+		"5": "****:",
+        "5GeneCost": 0
+    },
+    {
+        "Name": "Moe",
+
+        "1": "****:",
+        "1MPcost": 15,
+        "1GeneCost": 0,
+
+        "2": "****:",
+        "2MPcost": 0,
+        "2GeneCost": 0,
+
+        "3": "****:",
+        "3MPcost": 0,
+        "3GeneCost": 0,
+
+        "4": "****:",
+        "4GeneCost": 0,
+		
+		"5": "****:",
+        "5GeneCost": 0
+    },
+    {
+        "Name": "Momo",
+
+        "1": "****:",
+        "1MPcost": 15,
+        "1GeneCost": 0,
+
+        "2": "****:",
+        "2MPcost": 0,
+        "2GeneCost": 0,
+
+        "3": "****:",
+        "3MPcost": 0,
+        "3GeneCost": 0,
+
+        "4": "****:",
+        "4GeneCost": 0,
+		
+		"5": "****:",
+        "5GeneCost": 0
+    },
+    {
+        "Name": "Mu",
+
+        "1": "****:",
+        "1MPcost": 15,
+        "1GeneCost": 0,
+
+        "2": "****:",
+        "2MPcost": 0,
+        "2GeneCost": 0,
+
+        "3": "****:",
+        "3MPcost": 0,
+        "3GeneCost": 0,
+
+        "4": "****:",
+        "4GeneCost": 0,
+		
+		"5": "****:",
+        "5GeneCost": 0
+    },
+    {
+        "Name": "Muang",
+
+        "1": "****:",
+        "1MPcost": 15,
+        "1GeneCost": 0,
+
+        "2": "****:",
+        "2MPcost": 0,
+        "2GeneCost": 0,
+
+        "3": "****:",
+        "3MPcost": 0,
+        "3GeneCost": 0,
+
+        "4": "****:",
+        "4GeneCost": 0,
+		
+		"5": "****:",
+        "5GeneCost": 0
+    },
+    {
+        "Name": "Muzaka",
+
+        "1": "****:",
+        "1MPcost": 15,
+        "1GeneCost": 0,
+
+        "2": "****:",
+        "2MPcost": 0,
+        "2GeneCost": 0,
+
+        "3": "****:",
+        "3MPcost": 0,
+        "3GeneCost": 0,
+
+        "4": "****:",
+        "4GeneCost": 0,
+		
+		"5": "****:",
+        "5GeneCost": 0
+    },
+    {
+        "Name": "Nirvana",
+
+        "1": "****:",
+        "1MPcost": 15,
+        "1GeneCost": 0,
+
+        "2": "****:",
+        "2MPcost": 0,
+        "2GeneCost": 0,
+
+        "3": "****:",
+        "3MPcost": 0,
+        "3GeneCost": 0,
+
+        "4": "****:",
+        "4GeneCost": 0,
+		
+		"5": "****:",
+        "5GeneCost": 0
+    },
+    {
+        "Name": "Noel",
+
+        "1": "****:",
+        "1MPcost": 15,
+        "1GeneCost": 0,
+
+        "2": "****:",
+        "2MPcost": 0,
+        "2GeneCost": 0,
+
+        "3": "****:",
+        "3MPcost": 0,
+        "3GeneCost": 0,
+
+        "4": "****:",
+        "4GeneCost": 0,
+		
+		"5": "****:",
+        "5GeneCost": 0
+    },
+    {
+        "Name": "Nox",
+
+        "1": "****:",
+        "1MPcost": 15,
+        "1GeneCost": 0,
+
+        "2": "****:",
+        "2MPcost": 0,
+        "2GeneCost": 0,
+
+        "3": "****:",
+        "3MPcost": 0,
+        "3GeneCost": 0,
+
+        "4": "****:",
+        "4GeneCost": 0,
+		
+		"5": "****:",
+        "5GeneCost": 0
+    },
+    {
+        "Name": "Persona",
+
+        "1": "****:",
+        "1MPcost": 15,
+        "1GeneCost": 0,
+
+        "2": "****:",
+        "2MPcost": 0,
+        "2GeneCost": 0,
+
+        "3": "****:",
+        "3MPcost": 0,
+        "3GeneCost": 0,
+
+        "4": "****:",
+        "4GeneCost": 0,
+		
+		"5": "****:",
+        "5GeneCost": 0
+    },
+    {
+        "Name": "Phantom",
+
+        "1": "****:",
+        "1MPcost": 15,
+        "1GeneCost": 0,
+
+        "2": "****:",
+        "2MPcost": 0,
+        "2GeneCost": 0,
+
+        "3": "****:",
+        "3MPcost": 0,
+        "3GeneCost": 0,
+
+        "4": "****:",
+        "4GeneCost": 0,
+		
+		"5": "****:",
+        "5GeneCost": 0
+    },
+    {
+        "Name": "Poni",
+
+        "1": "****:",
+        "1MPcost": 15,
+        "1GeneCost": 0,
+
+        "2": "****:",
+        "2MPcost": 0,
+        "2GeneCost": 0,
+
+        "3": "****:",
+        "3MPcost": 0,
+        "3GeneCost": 0,
+
+        "4": "****:",
+        "4GeneCost": 0,
+		
+		"5": "****:",
+        "5GeneCost": 0
+    },
+    {
+        "Name": "Raboff",
+
+        "1": "****:",
+        "1MPcost": 15,
+        "1GeneCost": 0,
+
+        "2": "****:",
+        "2MPcost": 0,
+        "2GeneCost": 0,
+
+        "3": "****:",
+        "3MPcost": 0,
+        "3GeneCost": 0,
+
+        "4": "****:",
+        "4GeneCost": 0,
+		
+		"5": "****:",
+        "5GeneCost": 0
+    },
+    {
+        "Name": "Rachel",
+
+        "1": "****:",
+        "1MPcost": 15,
+        "1GeneCost": 0,
+
+        "2": "****:",
+        "2MPcost": 0,
+        "2GeneCost": 0,
+
+        "3": "****:",
+        "3MPcost": 0,
+        "3GeneCost": 0,
+
+        "4": "****:",
+        "4GeneCost": 0,
+		
+		"5": "****:",
+        "5GeneCost": 0
+    },
+    {
+        "Name": "Rage",
+
+        "1": "****:",
+        "1MPcost": 15,
+        "1GeneCost": 0,
+
+        "2": "****:",
+        "2MPcost": 0,
+        "2GeneCost": 0,
+
+        "3": "****:",
+        "3MPcost": 0,
+        "3GeneCost": 0,
+
+        "4": "****:",
+        "4GeneCost": 0,
+		
+		"5": "****:",
+        "5GeneCost": 0
+    },
+    {
+        "Name": "Ragna",
+
+        "1": "****:",
+        "1MPcost": 15,
+        "1GeneCost": 0,
+
+        "2": "****:",
+        "2MPcost": 0,
+        "2GeneCost": 0,
+
+        "3": "****:",
+        "3MPcost": 0,
+        "3GeneCost": 0,
+
+        "4": "****:",
+        "4GeneCost": 0,
+		
+		"5": "****:",
+        "5GeneCost": 0
+    },
+    {
+        "Name": "Raizel",
+
+        "1": "****:",
+        "1MPcost": 15,
+        "1GeneCost": 0,
+
+        "2": "****:",
+        "2MPcost": 0,
+        "2GeneCost": 0,
+
+        "3": "****:",
+        "3MPcost": 0,
+        "3GeneCost": 0,
+
+        "4": "****:",
+        "4GeneCost": 0,
+		
+		"5": "****:",
+        "5GeneCost": 0
+    },
+    {
+        "Name": "Raskreia",
+
+        "1": "****:",
+        "1MPcost": 15,
+        "1GeneCost": 0,
+
+        "2": "****:",
+        "2MPcost": 0,
+        "2GeneCost": 0,
+
+        "3": "****:",
+        "3MPcost": 0,
+        "3GeneCost": 0,
+
+        "4": "****:",
+        "4GeneCost": 0,
+		
+		"5": "****:",
+        "5GeneCost": 0
+    },
+    {
+        "Name": "Reina",
+
+        "1": "****:",
+        "1MPcost": 15,
+        "1GeneCost": 0,
+
+        "2": "****:",
+        "2MPcost": 0,
+        "2GeneCost": 0,
+
+        "3": "****:",
+        "3MPcost": 0,
+        "3GeneCost": 0,
+
+        "4": "****:",
+        "4GeneCost": 0,
+		
+		"5": "****:",
+        "5GeneCost": 0
+    },
+    {
+        "Name": "Ryeogang",
+
+        "1": "****:",
+        "1MPcost": 15,
+        "1GeneCost": 0,
+
+        "2": "****:",
+        "2MPcost": 0,
+        "2GeneCost": 0,
+
+        "3": "****:",
+        "3MPcost": 0,
+        "3GeneCost": 0,
+
+        "4": "****:",
+        "4GeneCost": 0,
+		
+		"5": "****:",
+        "5GeneCost": 0
+    },
+    {
+        "Name": "Serendi",
+
+        "1": "****:",
+        "1MPcost": 15,
+        "1GeneCost": 0,
+
+        "2": "****:",
+        "2MPcost": 0,
+        "2GeneCost": 0,
+
+        "3": "****:",
+        "3MPcost": 0,
+        "3GeneCost": 0,
+
+        "4": "****:",
+        "4GeneCost": 0,
+		
+		"5": "****:",
+        "5GeneCost": 0
+    },
+    {
+        "Name": "Serphina",
+
+        "1": "****:",
+        "1MPcost": 15,
+        "1GeneCost": 0,
+
+        "2": "****:",
+        "2MPcost": 0,
+        "2GeneCost": 0,
+
+        "3": "****:",
+        "3MPcost": 0,
+        "3GeneCost": 0,
+
+        "4": "****:",
+        "4GeneCost": 0,
+		
+		"5": "****:",
+        "5GeneCost": 0
+    },
+    {
+        "Name": "Seira",
+
+        "1": "****:",
+        "1MPcost": 15,
+        "1GeneCost": 0,
+
+        "2": "****:",
+        "2MPcost": 0,
+        "2GeneCost": 0,
+
+        "3": "****:",
+        "3MPcost": 0,
+        "3GeneCost": 0,
+
+        "4": "****:",
+        "4GeneCost": 0,
+		
+		"5": "****:",
+        "5GeneCost": 0
+    },
+    {
+        "Name": "Shark",
+
+        "1": "****:",
+        "1MPcost": 15,
+        "1GeneCost": 0,
+
+        "2": "****:",
+        "2MPcost": 0,
+        "2GeneCost": 0,
+
+        "3": "****:",
+        "3MPcost": 0,
+        "3GeneCost": 0,
+
+        "4": "****:",
+        "4GeneCost": 0,
+		
+		"5": "****:",
+        "5GeneCost": 0
+    },
+    {
+        "Name": "Shu-Shu",
+
+        "1": "****:",
+        "1MPcost": 15,
+        "1GeneCost": 0,
+
+        "2": "****:",
+        "2MPcost": 0,
+        "2GeneCost": 0,
+
+        "3": "****:",
+        "3MPcost": 0,
+        "3GeneCost": 0,
+
+        "4": "****:",
+        "4GeneCost": 0,
+		
+		"5": "****:",
+        "5GeneCost": 0
+    },
+    {
+        "Name": "Sione",
+
+        "1": "****:",
+        "1MPcost": 15,
+        "1GeneCost": 0,
+
+        "2": "****:",
+        "2MPcost": 0,
+        "2GeneCost": 0,
+
+        "3": "****:",
+        "3MPcost": 0,
+        "3GeneCost": 0,
+
+        "4": "****:",
+        "4GeneCost": 0,
+		
+		"5": "****:",
+        "5GeneCost": 0
+    },
+    {
+        "Name": "Sonic Boom",
+
+        "1": "****:",
+        "1MPcost": 15,
+        "1GeneCost": 0,
+
+        "2": "****:",
+        "2MPcost": 0,
+        "2GeneCost": 0,
+
+        "3": "****:",
+        "3MPcost": 0,
+        "3GeneCost": 0,
+
+        "4": "****:",
+        "4GeneCost": 0,
+		
+		"5": "****:",
+        "5GeneCost": 0
+    },
+    {
+        "Name": "Spooky",
+
+        "1": "****:",
+        "1MPcost": 15,
+        "1GeneCost": 0,
+
+        "2": "****:",
+        "2MPcost": 0,
+        "2GeneCost": 0,
+
+        "3": "****:",
+        "3MPcost": 0,
+        "3GeneCost": 0,
+
+        "4": "****:",
+        "4GeneCost": 0,
+		
+		"5": "****:",
+        "5GeneCost": 0
+    },
+    {
+        "Name": "Sraka",
+
+        "1": "****:",
+        "1MPcost": 15,
+        "1GeneCost": 0,
+
+        "2": "****:",
+        "2MPcost": 0,
+        "2GeneCost": 0,
+
+        "3": "****:",
+        "3MPcost": 0,
+        "3GeneCost": 0,
+
+        "4": "****:",
+        "4GeneCost": 0,
+		
+		"5": "****:",
+        "5GeneCost": 0
+    },
+    {
+        "Name": "Taehwa",
+
+        "1": "****:",
+        "1MPcost": 15,
+        "1GeneCost": 0,
+
+        "2": "****:",
+        "2MPcost": 0,
+        "2GeneCost": 0,
+
+        "3": "****:",
+        "3MPcost": 0,
+        "3GeneCost": 0,
+
+        "4": "****:",
+        "4GeneCost": 0,
+		
+		"5": "****:",
+        "5GeneCost": 0
+    },
+    {
+        "Name": "Tao",
+
+        "1": "****:",
+        "1MPcost": 15,
+        "1GeneCost": 0,
+
+        "2": "****:",
+        "2MPcost": 0,
+        "2GeneCost": 0,
+
+        "3": "****:",
+        "3MPcost": 0,
+        "3GeneCost": 0,
+
+        "4": "****:",
+        "4GeneCost": 0,
+		
+		"5": "****:",
+        "5GeneCost": 0
+    },
+    {
+        "Name": "Thanatos",
+
+        "1": "****:",
+        "1MPcost": 15,
+        "1GeneCost": 0,
+
+        "2": "****:",
+        "2MPcost": 0,
+        "2GeneCost": 0,
+
+        "3": "****:",
+        "3MPcost": 0,
+        "3GeneCost": 0,
+
+        "4": "****:",
+        "4GeneCost": 0,
+		
+		"5": "****:",
+        "5GeneCost": 0
+    },
+    {
+        "Name": "Unknown",
+
+        "1": "****:",
+        "1MPcost": 15,
+        "1GeneCost": 0,
+
+        "2": "****:",
+        "2MPcost": 0,
+        "2GeneCost": 0,
+
+        "3": "****:",
+        "3MPcost": 0,
+        "3GeneCost": 0,
+
+        "4": "****:",
+        "4GeneCost": 0,
+		
+		"5": "****:",
+        "5GeneCost": 0
+    },
+    {
+        "Name": "Valkyrie",
+
+        "1": "****:",
+        "1MPcost": 15,
+        "1GeneCost": 0,
+
+        "2": "****:",
+        "2MPcost": 0,
+        "2GeneCost": 0,
+
+        "3": "****:",
+        "3MPcost": 0,
+        "3GeneCost": 0,
+
+        "4": "****:",
+        "4GeneCost": 0,
+		
+		"5": "****:",
+        "5GeneCost": 0
+    },
+    {
+        "Name": "Yekaterina",
+
+        "1": "****:",
+        "1MPcost": 15,
+        "1GeneCost": 0,
+
+        "2": "****:",
+        "2MPcost": 0,
+        "2GeneCost": 0,
+
+        "3": "****:",
+        "3MPcost": 0,
+        "3GeneCost": 0,
+
+        "4": "****:",
+        "4GeneCost": 0,
+		
+		"5": "****:",
+        "5GeneCost": 0
+    },
+    {
+        "Name": "Zero",
 
         "1": "****:",
         "1MPcost": 15,
