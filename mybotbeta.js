@@ -944,13 +944,16 @@ bot.on("message", async (message) => {
     } // Finds top 10 highscores for FWT Trivia
 
     else if (message.content.startsWith(config.prefix + "rank")) {
+        if (args.length === 1) {
+            var user = message.author;
+        } else {
+            var user = message.mentions.users.first();
+        }
         sql.all("SELECT COUNT(*) FROM scores")
             .then((data) => {
-
-                getPoints(message.author.id)
+                getPoints(user.id)
                     .then((points) => {
-
-                        sql.get(`SELECT COUNT(*) + 1 FROM scores WHERE Points > (SELECT Points FROM scores WHERE userID = ${message.author.id})`)
+                        sql.get(`SELECT COUNT(*) + 1 FROM scores WHERE Points > (SELECT Points FROM scores WHERE userID = ${user.id})`)
                             .then((rank) => {
 
                                 totalPlayers = data[0]["COUNT(*)"];
@@ -962,7 +965,7 @@ bot.on("message", async (message) => {
                                     var color = message.guild.me.displayColor;
                                 }
                                 const embed = new Discord.RichEmbed()
-                                    .setAuthor(message.member.displayName, message.author.displayAvatarURL)
+                                    .setAuthor(user.username, user.displayAvatarURL)
                                     .addField("Rank", `${rank}/${totalPlayers}`, true)
                                     .addField("Points", points, true)
                                     .setColor(color);
