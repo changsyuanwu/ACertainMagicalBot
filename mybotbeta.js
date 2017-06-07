@@ -914,7 +914,10 @@ bot.on("message", async (message) => {
         var msg = "__**Fantasy War Tactics R Trivia TOP 10**__";
         sql.all(`SELECT userID, points FROM scores ORDER BY points DESC LIMIT 10`)
             .then((rows) => {
-                for (var i = 0; i < 10; i++) {
+                for (var i = 0, j = 0; i < 10; i++) {
+                    if (bot.users.get(rows[i].userID) === undefined) {
+                        continue;
+                    }
                     msg += `\n#${i + 1} ${bot.users.get(rows[i].userID).username} (${rows[i].points})`;
                 }
                 message.channel.send(msg);
