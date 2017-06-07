@@ -910,28 +910,6 @@ bot.on("message", async (message) => {
         }
     } // Starts a round of FWT trivia
 
-    else if (message.content.startsWith(config.prefix + "score")) {
-        if (args.length === 1) {
-            getPoints(message.author.id)
-                .then(points => {
-                    if (points != 0) {
-                        message.channel.send(`Score for ${message.member.displayName}: ${points} points`);
-                    } else {
-                        message.channel.send("You have 0 points! Play trivia using !trivia to earn points");
-                    }
-                });
-        } else {
-            getPoints(message.mentions.users.first().id)
-                .then(points => {
-                    if (points != 0) {
-                        message.channel.send(`Score for ${message.mentions.users.first().username}: ${points} points`);
-                    } else {
-                        message.channel.send(`${message.mentions.users.first().username} has 0 points! Play trivia using !trivia to earn points`);
-                    }
-                });
-        }
-    } // Looks up how many points an user has
-
     else if (message.content.startsWith(config.prefix + "highscores")) {
         var msg = "__**Fantasy War Tactics R Trivia TOP 10**__";
         sql.all(`SELECT userID, points FROM scores ORDER BY points DESC LIMIT 10`)
@@ -975,7 +953,7 @@ bot.on("message", async (message) => {
 
                     });
             });
-    }
+    } // Finds an user's rank and score in FWT Trivia
 
     else if (message.content.startsWith(config.prefix + "sg")) {
         if (args.length >= 2) {
