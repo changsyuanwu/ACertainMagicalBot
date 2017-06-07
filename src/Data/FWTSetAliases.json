@@ -1447,7 +1447,9 @@
     {
         "name": "Explorer Captain",
         "aliases": [
-            "explorer captain"
+            "explorer captain",
+            "explorer",
+            "explorer cap"
         ]
     },
     {
@@ -1480,7 +1482,8 @@
         "aliases": [
             "tenacious explorer",
             "tenacious",
-            "te"
+            "te",
+            "texplorer"
         ]
     },
     {
