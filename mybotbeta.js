@@ -102,7 +102,9 @@ function findNameByAlias(alias, type) {
     }
     for (var i = 0; i < aliasList.length; i++) {
         for (var j = 0; j < aliasList[i]["aliases"].length; j++) {
-            if (aliasList[i]["aliases"][j] === alias) return aliasList[i]["name"];
+            if (aliasList[i]["aliases"][j] === alias) {
+                return aliasList[i]["name"];
+            }
         }
     }
     return "nosuchalias";
@@ -127,11 +129,12 @@ function findListedPropertyData(alias, type) {
 } // Finds a list of data with properties
 
 function findFeaturedSets(dateRequested) {
+    var featuredSets;
     for (var i = 0; i < featuredSetTable.length; i++) {
         var start = moment(featuredSetTable[i]["Start"], "MM-DD-YYYY");
         var end = moment(featuredSetTable[i]["End"], "MM-DD-YYYY");
         if (moment(dateRequested, "MM-DD-YYYY").isBetween(start, end, "day", "(]")) {
-            var featuredSets = featuredSetTable[i];
+            featuredSets = featuredSetTable[i];
         }
     }
     if (featuredSets === undefined) {
@@ -146,13 +149,11 @@ function findSingleData(alias, data, type) {
         var dataTable = heroDataTable;
         var name = alias;
     }
-    var dataString = "";
     for (var i = 0; i < dataTable.length; i++) {
         if (dataTable[i]["Name"] === name) {
-            dataString = dataTable[i][data];
+            return dataTable[i][data];
         }
     }
-    return dataString;
 } // Finds a single piece of data
 
 function findSets(slot, rareness) {
@@ -177,22 +178,30 @@ function findProperty(propertyRequested, effectRequested) {
 
 function findSkillData(heroAlias, skill) {
     var heroName = findNameByAlias(heroAlias, "hero");
-    var datastring = "";
     for (var i = 0; i < heroSkillTable.length; i++) {
         if (heroName === heroSkillTable[i]["Name"]) {
             if ((skill == "4") || (skill == "5")) {
-                datastring += heroSkillTable[i][skill] + "\n" + "**Total Gene Cost**: " + heroSkillTable[i][`${skill}GeneCost`];
+                return heroSkillTable[i][skill] + "\n" + "**Total Gene Cost**: " + heroSkillTable[i][`${skill}GeneCost`];
             } else {
-                datastring += heroSkillTable[i][skill] + "\n" + "**MP Cost**: " + heroSkillTable[i][`${skill}MPcost`] + "\n" + "**Total Gene Cost**: " + heroSkillTable[i][`${skill}GeneCost`];
+                return heroSkillTable[i][skill] + "\n" + "**MP Cost**: " + heroSkillTable[i][`${skill}MPcost`] + "\n" + "**Total Gene Cost**: " + heroSkillTable[i][`${skill}GeneCost`];
             }
         }
     }
-    return datastring
 } // Finds the description, MP cost, and Gene cost for a hero's skill
 
 function findSkillImage(heroAlias, skill) {
     var heroName = findNameByAlias(heroAlias, "hero");
-    return path.join(launchLocation, "src", "Images", "Hero Skills", `${heroName} ${skill}.jpg`);
+    if (skill == 5) {
+        for (var i = 0; i < heroSkillTable.length; i++) {
+            if (heroName === heroSkillTable[i]["Name"]) {
+                if (heroSkillTable[i]["5"].includes("currently has no awakening skill")) {
+                    return path.join(launchLocation, "src", "Images", "Nexon.gif");
+                }
+            }
+        }
+    } else {
+        return path.join(launchLocation, "src", "Images", "Hero Skills", `${heroName} ${skill}.jpg`);
+    }
 } // Finds a hero skill's image
 
 function findItem(item, slot, rareness) {
@@ -269,8 +278,7 @@ function findItem(item, slot, rareness) {
         if (itemDataTable[i]["Type"] === type) {
             var valueOfStat1 = itemDataTable[i][capitalize(item)][slot][stat1] * transcendence;
             var valueOfStat2 = itemDataTable[i][capitalize(item)][slot][stat2] * transcendence;
-            var dataString = `${stat1}: ${valueOfStat1.toString()}, ${stat2}: ${valueOfStat2.toString()}`;
-            return dataString;
+            return `${stat1}: ${valueOfStat1.toString()}, ${stat2}: ${valueOfStat2.toString()}`;
         }
     }
 } // Finds item max stats
