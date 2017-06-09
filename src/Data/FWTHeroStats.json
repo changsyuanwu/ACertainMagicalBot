@@ -565,7 +565,7 @@
         "instant death": "",
         "decrease crit rate": "",
         "push/pull/switch": "",
-        "passive attack": "",
+        "passive attack": "TRUE",
         "seal": "",
         "sleep": "",
         "melee": "",
