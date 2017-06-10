@@ -44,15 +44,15 @@
 	{
         "Name": "Alfred",
 
-        "1": "**Magic Burst**:\nAlfred charges his hands with magic and strikes the ground, attacking surrounding enemies at [?% ~ 134%] Attack. If 2 or more enemies are attacked, his Attack increases by 8% for 1 turn",
+        "1": "**Magic Burst**:\nAlfred charges his hands with magic and strikes the ground, attacking surrounding enemies at [98% ~ 134%] Attack. If 2 or more enemies are attacked, his Attack increases by [1.7% ~ 8%] for 1 turn",
         "1MPcost": 20,
         "1GeneCost": 18,
 
-        "2": "**Pyro Eximus**:\nUses a magic energy bomb to inflict [?% ~ 156.3%] damage and temporarily charms enemies for 1 turn with a [10% ~ 40%] chance.",
+        "2": "**Pyro Eximus**:\nUses a magic energy bomb to inflict [114% ~ 156.3%] damage and temporarily charms enemies for 1 turn with a [13% ~ 40%] chance.",
         "2MPcost": 94,
         "2GeneCost": 37,
 
-        "3": "**Elemental Circle**:\nCreates a magic sigil that inflicts [?% ~ 193.5%] damage on nearby enemies and has a [55% ~ 100%] chance to decrease their Movement by 4 for 2 turns. If 2 or more enemies are attacked, then this skill decreases their Counter Rate by [? ~ 8000] for 2 turns.",
+        "3": "**Elemental Circle**:\nCreates a magic sigil that inflicts [141% ~ 193.5%] damage on nearby enemies and has a [55% ~ 100%] chance to decrease their Movement by 4 for 2 turns. If 2 or more enemies are attacked, then this skill decreases their Counter Rate by [2600 ~ 8000] for 2 turns.",
         "3MPcost": 144,
         "3GeneCost": 74,
 
@@ -115,7 +115,7 @@
         "2MPcost": 62,
         "2GeneCost": 568,
 
-        "3": "**Advent**:\nSummons an angel inflicting damage at [164% ~ 200.9%] of Attack and healing allies by [72% ~ 88.2%] of Attack. Additionally increases their HP by [? ~ 12000] and casts [10% ~ 28%] HP drain effect for 2 turns.",
+        "3": "**Advent**:\nSummons an angel inflicting damage at [164% ~ 200.9%] of Attack and healing allies by [72% ~ 88.2%] of Attack. Additionally increases their HP by [6600 ~ 12000] and casts [10% ~ 28%] HP drain effect for 2 turns.",
         "3MPcost": 116,
         "3GeneCost": 1136,
 
@@ -279,7 +279,7 @@
         "1MPcost": 15,
         "1GeneCost": 18,
 
-        "2": "**Shield Break**:\nSmites enemies, inflicting damage at [122.81% ~ 167%] Attack and decreasing their Defense by [1500 ~ 2040] for 1 turn. Additionally creates a [32% ~ 75%] chance of Stunning enemies for 1 turn.",
+        "2": "**Shield Break**:\nSmites enemies, inflicting damage at [122% ~ 167%] Attack and decreasing their Defense by [1500 ~ 2040] for 1 turn. Additionally creates a [32% ~ 75%] chance of Stunning enemies for 1 turn.",
         "2MPcost": 56,
         "2GeneCost": 37,
 
@@ -317,41 +317,41 @@
     {
         "Name": "Deborah",
 
-        "1": "**Bomb**:\nDetonates a magic fire column that inflicts damage equal to [?% ~ 155.3%] of Attack.",
+        "1": "**Bomb**:\nDetonates a magic fire column that inflicts damage equal to [113% ~ 155.3%] of Attack.",
         "1MPcost": 15,
         "1GeneCost": 70,
 
-        "2": "**Flameburst Bomb**:\nCasts fire magic that inflicts [?% ~ 171.8%] damage and leaves burning scars, causing [?% ~ 55.5%] DoT damage for 2 turns. This skill's Final Power increases by 10% against enemies already taking DoT damage",
+        "2": "**Flameburst Bomb**:\nCasts fire magic that inflicts [125% ~ 171.8%] damage and leaves burning scars, causing [15% ~ 55.5%] DoT damage for 2 turns. This skill's Final Power increases by [5.5% ~ 10%] against enemies already taking DoT damage",
         "2MPcost": 66,
         "2GeneCost": 135,
 
-        "3": "**Rain of Fire**:\nRains fire, inflicting [?% ~ 209.7%] damage and causing [?% ~ 56%] DoT damage for 3 turns. This skill's Final Power increases by 15% against enemies already taking DoT Damage",
+        "3": "**Rain of Fire**:\nRains fire, inflicting [153% ~ 209.7%] damage and causing [20% ~ 56%] DoT damage for 3 turns. This skill's Final Power increases by [10.5% ~ 15%] against enemies already taking DoT Damage",
         "3MPcost": 120,
         "3GeneCost": 270,
 
-        "4": "**Perfect Aim**:\nEach kill increases Attack by [?% ~ 30%] and Movement by 2 for 1 turn",
+        "4": "**Perfect Aim**:\nEach kill increases Attack by [12% ~ 30%] and Movement by 2 for 1 turn",
         "4GeneCost": 135,
 		
-		"5": "**Firewall**:\nA fiery explosion sends forth fire pillars accross the ground, attacking enemies at 749.3% Attack and preventing the targets from being healed for 3 turns. Enemies under DoT receive all remaining DoT damage at once",
+		"5": "**Firewall**:\nA fiery explosion sends forth fire pillars accross the ground, attacking enemies at [545% ~ 749.3%] Attack and preventing the targets from being healed for 3 turns. Enemies under DoT receive all remaining DoT damage at once",
         "5GeneCost": 912
     },
     {
         "Name": "Deimos",
 
-        "1": "**Lagrangian Storm**:\n",
+        "1": "**Lagrangian Storm**:\nCommands a flurry of swords, attacking enemies in a set range at [96% ~ 145.5%] Attack. If there are 2 or more enemies in this skill's range, it Weakens them for 1 turn, making them susceptible to [15% ~ 24%] more damage.",
         "1MPcost": 15,
-        "1GeneCost": 0,
+        "1GeneCost": 340,
 
-        "2": "**Cursed Emperor's March**:\n",
-        "2MPcost": 0,
-        "2GeneCost": 0,
+        "2": "**Cursed Emperor's March**:\nCharges forward, attacking enemies in it's path at [118% ~ 162.1%] Attack, and moves to the farthest tile. With a [35% ~ 80%] chance, Curses enemy for 2 turns. Curse effect: skills that inflict harmful effects upon enemies will also affect the caster",
+        "2MPcost": 67,
+        "2GeneCost": 1035,
 
-        "3": "**Emperor's Roar**:\n",
-        "3MPcost": 0,
-        "3GeneCost": 0,
+        "3": "**Emperor's Roar**:\nBuilds a wall of swords, hitting all enemies in a set range at [127% ~ 173.8%] Attack and pulling them to the tile closest to Deimos. Additionally creates a [35% ~ 80%] chance of Taunting the target for 1 turn.",
+        "3MPcost": 157,
+        "3GeneCost": 1350,
 
-        "4": "**Immortal Emperor**:\n",
-        "4GeneCost": 0,
+        "4": "**Immortal Emperor**:\nIf there is 1 enemy within a 1 tile range around Deimos, the damage he receives from enemies decreases by [6.5% ~ 20%]. If there are 2 or more enemies in a 1 tile range, the damage Deimos receives further decreases by [6.5% ~ 20%].",
+        "4GeneCost": 675,
 		
 		"5": "Deimos currently has no awakening skill!",
         "5GeneCost": 0
@@ -359,20 +359,20 @@
     {
         "Name": "Dolores",
 
-        "1": "**Money Grab**:\n",
+        "1": "**Money Grab**:\nInflicts damage equal to [93% ~ 133%] of Attack to show off the power of money. If the target's HP is 50% or higher, this skill's power increases by [5% ~ 27.5%].",
         "1MPcost": 15,
-        "1GeneCost": 0,
+        "1GeneCost": 78,
 
-        "2": "**Credit Line**:\n",
-        "2MPcost": 0,
-        "2GeneCost": 0,
+        "2": "**Credit Line**:\nWant a taste of Dolores' money? Inflicts damage equal to [107 ~ 146.6%] of Attack and removes buff effects with a 100% chance.",
+        "2MPcost": 76,
+        "2GeneCost": 160,
 
-        "3": "**Class Warfare**:\n",
-        "3MPcost": 0,
-        "3GeneCost": 0,
+        "3": "**Class Warfare**:\nTopples Dolores' statue to inflict [149% ~ 204.8%] damage and burn the enemy's MP by [50 ~ 185].",
+        "3MPcost": 110,
+        "3GeneCost": 315,
 
-        "4": "**Greed is Good**:\n",
-        "4GeneCost": 0,
+        "4": "**Greed is Good**:\nIncreases the amount of gold that Dolores receives in battle by [6% ~ 7.8%].",
+        "4GeneCost": 160,
 		
 		"5": "Dolores currently has no awakening skill!",
         "5GeneCost": 0
@@ -380,20 +380,20 @@
     {
         "Name": "Dominique",
 
-        "1": "**Triple Step**:\n",
+        "1": "**Triple Step**:\nInflicts damage equal to [100% ~ 136.9%] of Attack.",
         "1MPcost": 15,
-        "1GeneCost": 0,
+        "1GeneCost": 225,
 
-        "2": "**Ravager**:\n",
-        "2MPcost": 0,
-        "2GeneCost": 0,
+        "2": "**Ravager**:\nRushes forward and inflicts damage equal to [120% ~ 165%] of Attack on enemies. Causes them to bleed and inflicts [20% ~ 46%] damage over time for 2 turns.",
+        "2MPcost": 61,
+        "2GeneCost": 405,
 
-        "3": "**Karma**:\n",
-        "3MPcost": 0,
-        "3GeneCost": 0,
+        "3": "**Karma**:\nCuts enemy to pieces, ignoring [1500 ~ 5100] Defense and inflicts damage at [188% ~ 258.2%] Attack. This skill is so straining that it drains (costs) 10% of Dominique's Max HP.",
+        "3MPcost": 92,
+        "3GeneCost": 810,
 
-        "4": "**Nimble**:\n",
-        "4GeneCost": 0,
+        "4": "**Nimble**:\nIncreases Dominique's Dodge by [6500 ~ 8840] for 1 turn when she eliminates an enemy.",
+        "4GeneCost": 405,
 		
 		"5": "Dominique currently has no awakening skill!",
         "5GeneCost": 0
@@ -401,20 +401,20 @@
     {
         "Name": "Elektra",
 
-        "1": "**Crystal Blade**:\n",
+        "1": "**Crystal Blade**:\nStabs an enemy with a Crystal Blade, inflicting damage at [97% ~ 133%] Attack and causing [10% ~ 28%] DoT damage for 1 turn.",
         "1MPcost": 15,
-        "1GeneCost": 0,
+        "1GeneCost": 264,
 
-        "2": "**Blessing**:\n",
-        "2MPcost": 0,
-        "2GeneCost": 0,
+        "2": "**Blessing**:\nThe queen’s blessing increases Attack by [275 ~ 1625] and Max HP by [3800 ~ 11000] for allies within its range for 3 turns. Also casts a Shield that decreases incoming damage once by 25%",
+        "2MPcost": 76,
+        "2GeneCost": 568,
 
-        "3": "**Mercy**:\n",
-        "3MPcost": 0,
-        "3GeneCost": 0,
+        "3": "**Mercy**:\nAttacks enemies and heals allies within its range at [147% ~ 201.9%] Attack. Creates a [45% ~ 90%] chance of Disarming Paper-type enemies for 1 turn.",
+        "3MPcost": 114,
+        "3GeneCost": 1056,
 
-        "4": "**Crystal Shard**:\n",
-        "4GeneCost": 0,
+        "4": "**Crystal Shard**:\nWhen Elektra's turn starts, she swings a blade and attacks enemies within a 1 tile range at [80% ~ 152%] Attack and removes 1 buff casted on them.",
+        "4GeneCost": 568,
 		
 		"5": "Elektra currently has no awakening skill",
         "5GeneCost": 0
@@ -422,20 +422,20 @@
     {
         "Name": "Eunwol",
 
-        "1": "**Ground Pound**:\n",
+        "1": "**Ground Pound**:\nSmashes the ground with the power of an earth spirit, attacking enemies within its range at [98% ~ 134%] Attack. Enemies on special terrain tiles have a [35% ~ 80%] chance of their Defense being decreased by [600 ~ 1500] for 1 turn.",
         "1MPcost": 15,
-        "1GeneCost": 0,
+        "1GeneCost": 340,
 
-        "2": "**Spirit Trap**:\n",
-        "2MPcost": 0,
-        "2GeneCost": 0,
+        "2": "**Spirit Trap**:\nUnleashes the power of an enemy-binding spirit, attacking enemies within its range at [112% ~ 153.4%] Attack with a [55% ~ 100%] chance of decreasing their Movement by 2 for 2 turns. If this skill's target is on a special terrain tile, then it additionally creates a [55% ~ 100%] chance of Taunting its target for 2 turns.",
+        "2MPcost": 71,
+        "2GeneCost": 1020,
 
-        "3": "**Soul Splitter**:\n",
-        "3MPcost": 0,
-        "3GeneCost": 0,
+        "3": "**Soul Splitter**:\nDelivers a soul-splitting blow, attacking enemies within his range at [147% ~ 201.9%] Attack with a [45% ~ 90%] chance of Sealing his target, blocking all buff effects for 2 turns. If the target is on a special terrain tile, then this skill decreases the target's recovery by [30% ~ 75%] for 2 turns.",
+        "3MPcost": 117,
+        "3GeneCost": 1360,
 
-        "4": "**Spirit Bond**:\n",
-        "4GeneCost": 0,
+        "4": "**Spirit Bond**:\nEunwol communicatees with nature spirits and receives [2.5% ~ 25%] less damage while on special terrain tiles. He is also immune to terrain tile damage.",
+        "4GeneCost": 680,
 		
 		"5": "Eunwol currently has no awakening skill!",
         "5GeneCost": 0
@@ -443,20 +443,20 @@
     {
         "Name": "Evan",
 
-        "1": "**Dragon Spark**:\n",
+        "1": "**Dragon Spark**:\nMir shoots a lightning orb, inflicting damage at [92% ~ 126.2%] Attack. If the enemy is at least 2 tiles away from Evan, increases final skill power by [5% ~ 14%].",
         "1MPcost": 15,
-        "1GeneCost": 0,
+        "1GeneCost": 340,
 
-        "2": "**Dragon Flash**:\n",
-        "2MPcost": 0,
-        "2GeneCost": 0,
+        "2": "**Dragon Flash**:\nMir dashes forward, attacking all enemies in his path at [118% ~ 162.1%] Attack with a [35% ~ 80%] chance of Stunning enemies that are 3 tiles away from Evan for 1 turn.",
+        "2MPcost": 78,
+        "2GeneCost": 1020,
 
-        "3": "**Dragon Dive**:\n",
-        "3MPcost": 0,
-        "3GeneCost": 0,
+        "3": "**Dragon Dive**:\nMir descends from the sky, attacking enemies in his range at [127% ~ 173.8%] Attack. If the targets are at least 3 tiles away from Evan, increases final skill power by [7% ~ 16%] and Confuses them for 1 turn with a [35% ~ 80%] chance.",
+        "3MPcost": 189,
+        "3GeneCost": 1360,
 
-        "4": "**Dragon Soul**:\n",
-        "4GeneCost": 0,
+        "4": "**Dragon Soul**:\nMakes a contract with Onyx Dragon Mir, increasing Attack by [40 ~ 400] and Defense by [40 ~ 400] with each kill. (Attack up to 3000 and Defense up to 1500)",
+        "4GeneCost": 680,
 		
 		"5": "Evan currently has no awakening skill!",
         "5GeneCost": 0
@@ -464,20 +464,20 @@
     {
         "Name": "Frankenstein",
 
-        "1": "**Dark Aura**:\n",
+        "1": "**Dark Aura**:\nThrows dark energy at enemies, inflicting damage at [97% ~ 165%] Attack with a [20% ~ 47%] chance of preventing enemies from healing for 2 turns.",
         "1MPcost": 15,
-        "1GeneCost": 0,
+        "1GeneCost": 300,
 
-        "2": "**Dark Arrow**:\n",
-        "2MPcost": 0,
-        "2GeneCost": 0,
+        "2": "**Dark Arrow**:\nShowers enemies with numerous dark arrows, inflicting damage at [114% ~ 185.4%] Attack with an [30% ~ 80%] chance of casting a debuff that decreases their healing effects by 50% for 2 turns. If the targets are already affected by the debuff, this skill decreases their Movement by 3 for 2 turns.",
+        "2MPcost": 67,
+        "2GeneCost": 500,
 
-        "3": "**Dark Spear: Penetration**:\n",
-        "3MPcost": 0,
+        "3": "**Dark Spear: Penetration**:\nCharges at enemies with a dark spear, attacking at 230% Attack, and moves to farthest cell. Afterward Frankenstein's Attack increases by 15% and Incoming Damage decreases by 15% for a turn. (Can only be used while Frankenstein's seal is broken).",
+        "3MPcost": 1000,
         "3GeneCost": 0,
 
-        "4": "**Unseal**:\n",
-        "4GeneCost": 0,
+        "4": "**Unseal**:\nAt the beginning of each turn, Frankenstein creates a [15% ~ 33%] chance of breaking its seal to increase MAX MP by 1000 for 1 turn. This bonus effect remains in effect while the character's HP becomes 30% or lower. Additionally recovers 100% MP with each kill.",
+        "4GeneCost": 1000,
 		
 		"5": "Frankenstein currently has no awakening skill!",
         "5GeneCost": 0
@@ -485,20 +485,20 @@
     {
         "Name": "Fruel",
 
-        "1": "**Alley Shot**:\n",
+        "1": "**Alley Shot**:\nInflicts damage equal to [97% ~ 133%] Attack. Cooperative attack increases this skill's damage by [10% ~ 19%].",
         "1MPcost": 15,
-        "1GeneCost": 0,
+        "1GeneCost": 270,
 
-        "2": "**Pierce of the Ancients**:\n",
-        "2MPcost": 0,
-        "2GeneCost": 0,
+        "2": "**Pierce of the Ancients**:\nInflicts damage equal to [118% ~ 162.1%] of Attack with piercing arrows. Increases Crit Rate by [500 ~ 3200] for 1 turn.",
+        "2MPcost": 65,
+        "2GeneCost": 540,
 
-        "3": "**Arrow of Myth**:\n",
-        "3MPcost": 0,
-        "3GeneCost": 0,
+        "3": "**Arrow of Myth**:\nShoots explosive arrows that ignore [1500 ~ 2400] Defense and inflict damage equal to [140% ~ 192.2%] Attack. Paper enemies receive [10% ~ 22.6%] more damage.",
+        "3MPcost": 141,
+        "3GeneCost": 1080,
 
-        "4": "**Inner**:\n",
-        "4GeneCost": 0,
+        "4": "**Inner**:\nIncreases the damage of a successful critical hit by [8% ~ 26%].",
+        "4GeneCost": 540,
 		
 		"5": "Fruel currently has no awakening skill!",
         "5GeneCost": 0
