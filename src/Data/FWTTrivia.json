@@ -68,6 +68,58 @@
         "Answer": "Raizel"
     },
     {
+        "Question": "Which hero is the following quote from? \"Spooky and Banshee lived happily ever after.\"",
+        "Answer": "Spooky"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"Beep! Beeeeep! Beep...\"",
+        "Answer": "Poni"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"...(Silent. Probably thinking about something sad.)\"",
+        "Answer": "Bearman"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"Where have you been injured, Lord?\"",
+        "Answer": "Shu-Shu"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"You want to lift my weapon? It might be too heavy for you...Yikes! Lord! Are you okay?!\"",
+        "Answer": "Shu-Shu"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"I wouldn't be here if it weren't for Spooky.\"",
+        "Answer": "Banshee"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"It's time I introduce you to Dark Spear.\"",
+        "Answer": "Frankenstein"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"Is there anyone you want killed, Lord? If so, just let me know.\"",
+        "Answer": "Zero"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"(Calmly looking at the lake. Probabaly in a good mood.)\"",
+        "Answer": "ELektra"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"Let me out before I set the lab on fire!\"",
+        "Answer": "Muang"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"Beeeeeeroooo...Beeerooo...\"",
+        "Answer": "Poni"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"Drol ym, sey!\"",
+        "Answer": "Kitty"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"Are we starting the battle? If you need me...\"",
+        "Answer": "Klein"
+    },
+    {
         "Question": "Which hero is the following quote from? \"Behold, Azure Grimoire!\"",
         "Answer": "Ragna"
     },
@@ -238,6 +290,10 @@
     {
         "Question": "Which hero is the following quote from? \"Ah! Right! I’m a cat!\"",
         "Answer": "Ian"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"Oh yeah! I forgot I was a cat!\"",
+        "Answer": "Iam"
     },
     {
         "Question": "Which hero is the following quote from? \"Ian is a Cat.\"",
