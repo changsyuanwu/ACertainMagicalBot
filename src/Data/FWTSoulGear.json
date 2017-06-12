@@ -282,7 +282,7 @@
 		"Soul Gear Weapon": "Defense: 400, Crit Rate: 200",
 		"Weapon Effect": "Increases skill damage by 18.7% for Skill 3",
 		"Soul Gear Wings": "Crit Rate: 200, Hit Rate: 200",
-		"Wings Effect": "Passive skill's activation condition changes to HP 79% or lower for Passive Skill",
+		"Wings Effect": "Passive skill's activation condition changes to HP 50% or higher for Passive Skill",
 		"2pc Effect": "Increase resistance by 5%"
 	},
 	{
