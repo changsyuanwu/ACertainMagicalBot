@@ -611,19 +611,19 @@
     {
         "Name": "Jack",
 
-        "1": "****:\n",
+        "1": "**Hahaha!**:\nInflicts damage at [?% ~ 136.9%] Attack. Casts Life-steal effect on the enemy for 1 turn which makes allies recover 23% of the damage they deal to the enemy as HP.",
         "1MPcost": 15,
         "1GeneCost": 0,
 
-        "2": "****:\n",
+        "2": "**Bite'em All!**:\nBites the enemy inflicting damage equal to [?% ~ 165%] of Attack, and continues to inflict [?% ~ 51%] DoT damage for 3 turns. Jack recovers 30% of his Max HP.",
         "2MPcost": 0,
         "2GeneCost": 0,
 
-        "3": "****:\n",
+        "3": "**Scratch Storm!**:\nSwipes multiple enemies in front of him. Inflicts [?% ~ 206.8%] of Attack damage, and deals additional damage at 19.4% of enemy's Max HP.",
         "3MPcost": 0,
         "3GeneCost": 0,
 
-        "4": "****:\n",
+        "4": "**Hideous Strength!**:\nWerewolf Jack recovers HP by 19% of the damage inflicted. If Jack has 50% or higher HP, increases chance to be attacked by 30% and Movement by 1.",
         "4GeneCost": 0,
 		
 		"5": "****:\n",
@@ -707,7 +707,7 @@
         "3MPcost": 0,
         "3GeneCost": 32,
 
-        "4": "****:\n",
+        "4": "**Making of a Hero**:\nIf HP is above 80%, increases Attack by 20% and decreases damage received by 10%",
         "4GeneCost": 16,
 		
 		"5": "****:\n",
