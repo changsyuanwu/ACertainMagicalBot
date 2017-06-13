@@ -1,3 +1,4 @@
+'use strict';
 // Modules
 const Discord = require("discord.js");
 const path = require("path");
@@ -32,16 +33,16 @@ const flagNames = ["confusion", "charm", "stun", "taunt", "disarm", "immobilize"
 sql.open(path.join(launchLocation, "src", "botdata.sqlite"));
 
 // Trivia
-var triviaChannels = new Set([]);
-var triviaLastQuestion = 0;
+let triviaChannels = new Set([]);
+let triviaLastQuestion = 0;
 
 // Logger
 const logger = new Logger(config.noLogs);
 
 //--------------------------------------------------------------------------------------------
 
-for (var i = 0; i < setDataTable.length; i++) {
-    for (var j = 0; j < featuredSetTable.length; j++) {
+for (let i = 0; i < setDataTable.length; i++) {
+    for (let j = 0; j < featuredSetTable.length; j++) {
         if ((featuredSetTable[j]["Set1"].toLowerCase() === setDataTable[i]["Name"].toLowerCase()) || (featuredSetTable[j]["Set2"].toLowerCase() === setDataTable[i]["Name"].toLowerCase())) {
             setDataTable[i]["Last Time in Rotation"] = `${featuredSetTable[j]["Start"]} ~ ${featuredSetTable[j]["End"]}`;
         }
@@ -51,7 +52,7 @@ for (var i = 0; i < setDataTable.length; i++) {
 //--------------------------------------------------------------------------------------------
 
 function coocooPull(isLast) {
-    var number = Math.random();
+    let number = Math.random();
     if (isLast) {
         var junkrate = 0;
         var brate = 0;
@@ -71,7 +72,7 @@ function coocooPull(isLast) {
 } // Processes a single coocoo pull
 
 function coocooPull10() {
-    var pull10 = new Array(10);
+    let pull10 = new Array(10);
     pull10.fill(null);
     return pull10.map((element, index, array) => coocooPull(index === array.length - 1));
 } // Pulls 10 times and returns results in an array
@@ -82,8 +83,8 @@ function coocooPull10() {
 
 
 function createListOutput(list) {
-    var dataString = "";
-    for (var property in list) {
+    let dataString = "";
+    for (let property in list) {
         if ((list.hasOwnProperty(property)) && (!flagNames.includes(property))) {
             dataString += capitalize(property) + ": " + list[property] + "\n";
         }
@@ -100,8 +101,8 @@ function findNameByAlias(alias, type) {
     } else {
         return alias;
     }
-    for (var i = 0; i < aliasList.length; i++) {
-        for (var j = 0; j < aliasList[i]["aliases"].length; j++) {
+    for (let i = 0; i < aliasList.length; i++) {
+        for (let j = 0; j < aliasList[i]["aliases"].length; j++) {
             if (aliasList[i]["aliases"][j] === alias) {
                 return aliasList[i]["name"];
             }
@@ -124,15 +125,15 @@ function findListedPropertyData(alias, type) {
     if (name === "nosuchalias") {
         return "nosuchdata";
     }
-    var data = dataTable.find(dataItem => dataItem.Name === name);
+    let data = dataTable.find(dataItem => dataItem.Name === name);
     return createListOutput(data);
 } // Finds a list of data with properties
 
 function findFeaturedSets(dateRequested) {
-    var featuredSets;
-    for (var i = 0; i < featuredSetTable.length; i++) {
-        var start = moment(featuredSetTable[i]["Start"], "MM-DD-YYYY");
-        var end = moment(featuredSetTable[i]["End"], "MM-DD-YYYY");
+    let featuredSets;
+    for (let i = 0; i < featuredSetTable.length; i++) {
+        let start = moment(featuredSetTable[i]["Start"], "MM-DD-YYYY");
+        let end = moment(featuredSetTable[i]["End"], "MM-DD-YYYY");
         if (moment(dateRequested, "MM-DD-YYYY").isBetween(start, end, "day", "(]")) {
             featuredSets = featuredSetTable[i];
         }
@@ -149,7 +150,7 @@ function findSingleData(alias, data, type) {
         var dataTable = heroDataTable;
         var name = alias;
     }
-    for (var i = 0; i < dataTable.length; i++) {
+    for (let i = 0; i < dataTable.length; i++) {
         if (dataTable[i]["Name"] === name) {
             return dataTable[i][data];
         }
@@ -157,8 +158,8 @@ function findSingleData(alias, data, type) {
 } // Finds a single piece of data
 
 function findSets(slot, rareness) {
-    var dataString = "";
-    for (var i = 0; i < setDataTable.length; i++) {
+    let dataString = "";
+    for (let i = 0; i < setDataTable.length; i++) {
         if ((setDataTable[i]["Slot"] === slot) && (setDataTable[i]["Rareness"] === rareness)) {
             dataString += "\n" + setDataTable[i]["Name"];
         }
@@ -167,8 +168,8 @@ function findSets(slot, rareness) {
 } // Finds all sets at the requested grade and tier
 
 function findProperty(propertyRequested, effectRequested) {
-    var dataString = "";
-    for (var i = 0, heronum = heroDataTable.length; i < heronum; i++) {
+    let dataString = "";
+    for (let i = 0, heronum = heroDataTable.length; i < heronum; i++) {
         if ((heroDataTable[i][propertyRequested] != undefined) && (heroDataTable[i][propertyRequested].includes(effectRequested))) {
             dataString += "\n" + heroDataTable[i]["Name"];
         }
@@ -177,8 +178,8 @@ function findProperty(propertyRequested, effectRequested) {
 } // Finds all heroes who have the requested property
 
 function findSkillData(heroAlias, skill) {
-    var heroName = findNameByAlias(heroAlias, "hero");
-    for (var i = 0; i < heroSkillTable.length; i++) {
+    let heroName = findNameByAlias(heroAlias, "hero");
+    for (let i = 0; i < heroSkillTable.length; i++) {
         if (heroName === heroSkillTable[i]["Name"]) {
             if ((skill == "4") || (skill == "5")) {
                 return heroSkillTable[i][skill] + "\n" + "**Total Gene Cost**: " + heroSkillTable[i][`${skill}GeneCost`];
@@ -190,9 +191,9 @@ function findSkillData(heroAlias, skill) {
 } // Finds the description, MP cost, and Gene cost for a hero's skill
 
 function findSkillImage(heroAlias, skill) {
-    var heroName = findNameByAlias(heroAlias, "hero");
+    let heroName = findNameByAlias(heroAlias, "hero");
     if (skill == 5) {
-        for (var i = 0; i < heroSkillTable.length; i++) {
+        for (let i = 0; i < heroSkillTable.length; i++) {
             if (heroName === heroSkillTable[i]["Name"]) {
                 if (heroSkillTable[i]["5"].includes("currently has no awakening skill")) {
                     return path.join(launchLocation, "src", "Images", "Nexon.gif");
@@ -274,15 +275,20 @@ function findItem(item, slot, rareness) {
             break;
     } // Gets type of item and stat types
 
-    for (var i = 0; i < itemDataTable.length; i++) {
+    for (let i = 0; i < itemDataTable.length; i++) {
         if (itemDataTable[i]["Type"] === type) {
-            var valueOfStat1 = itemDataTable[i][capitalize(item)][slot][stat1] * transcendence;
-            var valueOfStat2 = itemDataTable[i][capitalize(item)][slot][stat2] * transcendence;
+            const valueOfStat1 = itemDataTable[i][capitalize(item)][slot][stat1] * transcendence;
+            const valueOfStat2 = itemDataTable[i][capitalize(item)][slot][stat2] * transcendence;
             return `${stat1}: ${valueOfStat1.toString()}, ${stat2}: ${valueOfStat2.toString()}`;
         }
     }
 } // Finds item max stats
 
+function findStatRank(stat) {
+    for (let i = 0; i < heroDataTable.length; i++) {
+        //do shit
+    }
+}
 // End of database functions
 
 //--------------------------------------------------------------------------------------------
@@ -306,13 +312,13 @@ function trivia(message, isCritQuestion) {
         var question = getRandomInt(1, triviaTable.length - 1);
     } while (question === triviaLastQuestion);
     triviaLastQuestion = question;
-    var askedQuestion = triviaTable[question]["Question"];
-    var correctAnswer = triviaTable[question]["Answer"];
+    const askedQuestion = triviaTable[question]["Question"];
+    const correctAnswer = triviaTable[question]["Answer"];
 
     if (isCritQuestion) {
         var rewardPoints = 60;
     } else {
-        rewardPoints = 15;
+        var rewardPoints = 15;
     }
 
     wait(1500)
@@ -324,7 +330,7 @@ function trivia(message, isCritQuestion) {
                 errors: ["time"],
             })
                 .then((correctMessage) => {
-                    var correctUserID = correctMessage.first().author.id;
+                    const correctUserID = correctMessage.first().author.id;
                     sql.get(`SELECT * FROM scores WHERE userID = ?`, correctUserID)
                         .then(row => {
                             if (!row) {
@@ -356,15 +362,15 @@ function trivia(message, isCritQuestion) {
 //--------------------------------------------------------------------------------------------
 
 function generateRareness(rareness) {
-    var setTier = "";
-    for (var i = 0; i < rareness; i++) {
+    let setTier = "";
+    for (let i = 0; i < rareness; i++) {
         setTier = setTier + "★";
     }
     return setTier;
 } // Makes the tiers for set equipment
 
 function PullOrNot() {
-    var number = Math.random();
+    let number = Math.random();
     if (number <= 0.5) return path.join(launchLocation, "src", "Images", "Pull.png");
     else return path.join(launchLocation, "src", "Images", "Don't Pull.png");
 } // Does the 50/50 pull or not
@@ -418,7 +424,7 @@ function findEmojiFromGuildByName(guild, emoji_name) {
 } // Finds the emoji id in a guild using the emoji name
 
 function capitalize(inputString) {
-    var outputString = inputString.substr(0, 1).toUpperCase() + inputString.substr(1, inputString.length - 1).toLowerCase();
+    const outputString = inputString.substr(0, 1).toUpperCase() + inputString.substr(1, inputString.length - 1).toLowerCase();
     return outputString;
 } // Capitalizes the first letter in a string
 
@@ -436,20 +442,9 @@ function wait(time) {
     });
 } // Waits for a set amount of time
 
-function prune(message, value) {
-    value = Math.min(value, 100);
-    message.channel.fetchMessages({ limit: 100 })
-        .then(messages => {
-            const filteredMessages = messages.filter(message => message.author.id === bot.user.id);
-            var filteredArray = filteredMessages.array();
-
-            message.channel.bulkDelete(filteredArray.slice(0, value));
-        }).catch(err => console.error(err));
-} // Prunes messages from bot
-
 function status() {
-    var statusCycle = ["https://github.com/TheMasterDodo/ACertainMagicalBot", "Use !help for info", "Spamming !whale", `Serving ${bot.guilds.size} servers`, `Serving ${bot.channels.size} channels`];
-    var random = getRandomInt(0, statusCycle.length);
+    const statusCycle = ["https://github.com/TheMasterDodo/ACertainMagicalBot", "Use !help for info", "Spamming !whale", `Serving ${bot.guilds.size} servers`, `Serving ${bot.channels.size} channels`];
+    const random = getRandomInt(0, statusCycle.length);
     bot.user.setGame(statusCycle[random]);
     logger.log(2, `Set status to ${statusCycle[random]}`);
     setTimeout(status, 600000); // Cycles every 10 minutes
@@ -553,7 +548,6 @@ function clean(text) {
 // End of utility functions
 
 //--------------------------------------------------------------------------------------------
-
 bot.on("message", async (message) => {
     if (message.mentions.users.has(bot.user.id)) {
         console.log(`Message Received!\n\tSender: ${message.author.username} \n\tContent: ${message.content.slice(message.content.indexOf(" "))}`);
@@ -620,25 +614,14 @@ bot.on("message", async (message) => {
 
 
     else if (message.content.startsWith(config.prefix + "calc")) {
-        var input = message.content.replace(/[^-()\d/*+.]/g, "");
+        const input = message.content.replace(/[^-()\d/*+.]/g, "");
         if (input != "") {
-            var result = eval(input);
+            const result = eval(input);
             message.channel.send(result);
         } else {
             message.channel.send("Invalid request!");
         }
     } // Calculator function
-
-
-    else if ((message.content.startsWith(config.prefix + "prune")) && (message.author.id === config.ownerID)) {
-        if (args.length >= 2) {
-            prune(message, args[2] - 1);
-        } else if (args.length === 1) {
-            prune(message, 1 - 1);
-        } else {
-            message.channel.send("Invalid request!");
-        }
-    } // Prunes messages from bot (Prunes 1 more than the command)
 
 
     else if (message.content.startsWith(config.prefix + "id")) {
@@ -676,8 +659,8 @@ bot.on("message", async (message) => {
 
     else if (message.content.startsWith(config.prefix + "choose")) {
         if (args.length >= 2) {
-            var msg = message.content.slice(message.content.indexOf(" ") + 1);
-            var choices = msg.split("|");
+            const msg = message.content.slice(message.content.indexOf(" ") + 1);
+            const choices = msg.split("|");
             message.channel.send(choices[getRandomInt(0, choices.length)]);
         } else {
             message.channel.send("Invalid request!");
@@ -703,7 +686,7 @@ bot.on("message", async (message) => {
     else if (message.content.startsWith(config.prefix + "urban")) {
         urban(msgContent)
             .then(response => {
-                var msg = [];
+                let msg = [];
                 msg.push(`**${response.word}**`);
                 msg.push(`\`\`\`${response.definition}\`\`\``);
                 msg.push(`**Example:** ${response.example}`);
@@ -732,7 +715,7 @@ bot.on("message", async (message) => {
     } else if (message.content.startsWith(config.prefix + "moe")) {
         message.channel.send({ files: [moe[getRandomInt(0, moe.length)]] });
     } else if ((message.content.startsWith(config.prefix + "doodoo")) && (message.author.id === config.ownerID)) {
-        for (var i = 0; i < moe.length; i++) {
+        for (let i = 0; i < moe.length; i++) {
             message.channel.send({ files: [moe[i]] });
         }
     } // Custom/Anime commands
@@ -743,14 +726,14 @@ bot.on("message", async (message) => {
     } // Bot does a 50/50 pull or no
 
     else if (message.content.startsWith(config.prefix + "whale")) {
-        var pulls = "";
-        var totalPull = "";
+        let pulls = "";
+        let totalPull = "";
         if ((args[1] > 100) || ((args[1] > 10) && (message.guild.id === "164867600457662464"))) {
             message.channel.send("```OVERFLOW_ERROR```");
             return;
         }
         if (args.length > 1) {
-            for (var i = 0; i < args[1]; i++) {
+            for (let i = 0; i < args[1]; i++) {
                 pulls = coocooPull10().map((emoji_name) => findEmojiFromGuildByName(message.guild, emoji_name));
                 totalPull = pulls.join(" ") + "\n" + totalPull;
             }
@@ -763,7 +746,7 @@ bot.on("message", async (message) => {
 
     else if (message.content.startsWith(config.prefix + "sets")) {
         if (args.length >= 3) {
-            var setInfo = findSets(args[1].toUpperCase(), generateRareness(args[2]));
+            const setInfo = findSets(args[1].toUpperCase(), generateRareness(args[2]));
             message.channel.send(setInfo);
         } else {
             message.channel.send("Invalid request!");
@@ -772,7 +755,7 @@ bot.on("message", async (message) => {
 
     else if (message.content.startsWith(config.prefix + "set")) {
         if (args.length >= 2) {
-            var setInfo = findListedPropertyData(msgContent, "set");
+            const setInfo = findListedPropertyData(msgContent, "set");
             if (setInfo != "nosuchdata") {
                 message.channel.send(setInfo);
             } else {
@@ -783,9 +766,9 @@ bot.on("message", async (message) => {
         }
     } // Searches for set info
 
-    else if ((message.content.startsWith(config.prefix + "stats"))) {
+    else if (message.content.startsWith(config.prefix + "stats")) {
         if (args.length >= 2) {
-            var heroStats = findListedPropertyData(args[1], "hero");
+            const heroStats = findListedPropertyData(args[1], "hero");
             if (heroStats != "nosuchdata") {
                 message.channel.send(heroStats);
             } else {
@@ -796,11 +779,20 @@ bot.on("message", async (message) => {
         }
     } // Searches for hero stats
 
+    else if (message.content.startsWith(config.prefix + "statrank")) {
+        if (args.length >= 2) {
+            const statRankings = findStatRank(args[1]);
+            message.channel.send(statRankings);
+        } else {
+            message.channel.send("Invalid request!");
+        }
+    }
+
     else if (message.content.startsWith(config.prefix + "stat")) {
         if (args.length >= 3) {
-            var heroRequested = findNameByAlias(args[1], "hero");
-            var statRequested = args[2].toLowerCase();
-            var statData = findSingleData(heroRequested, statRequested, "stat");
+            const heroRequested = findNameByAlias(args[1], "hero");
+            const statRequested = args[2].toLowerCase();
+            const statData = findSingleData(heroRequested, statRequested, "stat");
             if (statData != "nosuchdata") {
                 message.channel.send(heroRequested + "'s " + capitalize(statRequested) + ": " + statData);
             } else {
@@ -813,11 +805,11 @@ bot.on("message", async (message) => {
 
     else if (message.content.startsWith(config.prefix + "compare")) {
         if (args.length >= 4) {
-            var statRequested = args[1].toLowerCase();
-            var dataString = "";
-            for (var i = 0; i < args.length - 2; i++) {
-                var heroRequested = findNameByAlias(args[2 + i], "hero");
-                var statData = findSingleData(heroRequested, statRequested, "stat");
+            const statRequested = args[1].toLowerCase();
+            let dataString = "";
+            for (let i = 0; i < args.length - 2; i++) {
+                const heroRequested = findNameByAlias(args[2 + i], "hero");
+                const statData = findSingleData(heroRequested, statRequested, "stat");
                 if (statData != "nosuchdata") {
                     dataString += "\n" + heroRequested + "'s " + capitalize(statRequested) + ": " + statData;
                 } else {
@@ -833,15 +825,15 @@ bot.on("message", async (message) => {
 
     else if (message.content.startsWith(config.prefix + "effect")) {
         if (args.length >= 2) {
-            var effect = msgContent.toLowerCase();
+            const effect = msgContent.toLowerCase();
             if (effect === "list") {
-                var flags = "";
-                for (var i = 0; i < flagNames.length; i++) {
+                let flags = "";
+                for (let i = 0; i < flagNames.length; i++) {
                     flags = flags + "\n" + capitalize(flagNames[i]);
                 }
                 message.channel.send(flags);
             } else if (flagNames.includes(effect)) {
-                var effectHeroes = findProperty(effect, "TRUE");
+                const effectHeroes = findProperty(effect, "TRUE");
                 message.channel.send(effectHeroes);
             } else {
                 message.channel.send("Unknown effect");
@@ -853,7 +845,7 @@ bot.on("message", async (message) => {
 
     else if (message.content.startsWith(config.prefix + "property")) {
         if (args.length >= 3) {
-            var propertyHeroes = findProperty(args[1].toLowerCase(), capitalize(args[2]));
+            const propertyHeroes = findProperty(args[1].toLowerCase(), capitalize(args[2]));
             message.channel.send(propertyHeroes);
         } else {
             message.channel.send("Invalid request!");
@@ -862,9 +854,9 @@ bot.on("message", async (message) => {
 
     else if (message.content.startsWith(config.prefix + "item")) {
         if (args.length >= 4) {
-            var slot = args[2].toUpperCase();
+            const slot = args[2].toUpperCase();
             if (((slot === "I") || (slot === "II") || (slot === "III") || (slot === "IV") || (slot === "V")) && (args[3] >= 1) && (args[3] <= 6)) {
-                var itemStats = findItem(args[1].toLowerCase(), slot, args[3]);
+                const itemStats = findItem(args[1].toLowerCase(), slot, args[3]);
                 message.channel.send(itemStats);
                 return;
             }
@@ -874,7 +866,7 @@ bot.on("message", async (message) => {
 
     else if (message.content.startsWith(config.prefix + "skills")) {
         if (args.length >= 2) {
-            for (var i = 1; i <= 5; i++) {
+            for (let i = 1; i <= 5; i++) {
                 await message.channel.send(findSkillData(args[1], i), { files: [findSkillImage(args[1], i)] });
             }
         } else {
@@ -894,7 +886,7 @@ bot.on("message", async (message) => {
         if (args.length >= 2) {
             var dateRequested = args[1];
         } else {
-            dateRequested = moment().format("MM-DD-YYYY");
+            var dateRequested = moment().format("MM-DD-YYYY");
         }
         const currentSets = findFeaturedSets(dateRequested);
         message.channel.send(currentSets);
@@ -919,10 +911,10 @@ bot.on("message", async (message) => {
     } // Starts a round of FWT trivia
 
     else if (message.content.startsWith(config.prefix + "highscores")) {
-        var msg = "__**Fantasy War Tactics R Trivia TOP 10**__";
+        let msg = "__**Fantasy War Tactics R Trivia TOP 10**__";
         sql.all(`SELECT userID, points FROM scores ORDER BY points DESC LIMIT 10`)
             .then((rows) => {
-                for (var i = 0, j = 0; i < 10; i++) {
+                for (let i = 0, j = 0; i < 10; i++) {
                     if (bot.users.get(rows[i].userID) === undefined) {
                         continue;
                     }
@@ -968,7 +960,7 @@ bot.on("message", async (message) => {
 
     else if (message.content.startsWith(config.prefix + "sg")) {
         if (args.length >= 2) {
-            var sgData = findListedPropertyData(args[1], "soulgear");
+            const sgData = findListedPropertyData(args[1], "soulgear");
             if (sgData != "nosuchdata") {
                 message.channel.send(sgData);
             } else {
@@ -980,15 +972,14 @@ bot.on("message", async (message) => {
     } // Looks up a hero's soul gear
 
     else if (message.content.startsWith(config.prefix + "news")) {
-        var limit;
         if (args.length === 2) {
-            limit = Math.min(Number.parseInt(args[1], 10), 10);
+            var limit = Math.min(Number.parseInt(args[1], 10), 10);
         } else {
-            limit = 1;
+            var limit = 1;
         }
         news(limit, message)
             .then((news) => {
-                for (var i = 0; i < limit; i++) {
+                for (let i = 0; i < limit; i++) {
                     message.channel.send({ embed: news[i]["embed"] });
                 }
             });
