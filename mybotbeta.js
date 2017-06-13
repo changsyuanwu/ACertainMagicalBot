@@ -286,7 +286,7 @@ function findItem(item, slot, rareness) {
     }
 } // Finds item max stats
 
-function findStatRank(statRequested) {
+function findStatRank(statRequested, limit) {
     if ((isNaN(heroDataTable[1][statRequested.toLowerCase()])) || (flagNames.includes(statRequested.toLowerCase()))) {
         return ["Invalid stat!"];
     }
@@ -305,6 +305,9 @@ function findStatRank(statRequested) {
                 dataArray[j + 2] = tempStat;
             }
         }
+    }
+    if (limit) {
+        dataArray.splice(limit * 2);
     }
     return dataArray;
 }
@@ -800,12 +803,16 @@ bot.on("message", async (message) => {
 
     else if (message.content.startsWith(config.prefix + "statrank")) {
         if (args.length >= 2) {
-            const statRankings = findStatRank(args[1]);
+            if (args.length === 2) {
+                var statRankings = findStatRank(args[1]);
+            } else {
+                var statRankings = findStatRank(args[1], args[2]);
+            }
             message.channel.send(statRankings.join("\n"));
         } else {
             message.channel.send("Invalid request!");
         }
-    }
+    } // Finds the heroes who have the top requested stat
 
     else if (message.content.startsWith(config.prefix + "stat")) {
         if (args.length >= 3) {

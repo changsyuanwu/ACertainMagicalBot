@@ -37,11 +37,13 @@
 
     "**!property <propertyType> <property>**: Finds all the heroes who have the requested property. (Ex. <type> <attack> finds all attack type heroes)",
 
-    "**!item <itemName> <slot> <rareness>**: Finds the max stats for the requested item at the requested slot and rareness (Ex. <bow> <V> <rareness> finds the max stats of a slot V 6* bow)",
+    "**!item <itemName> <slot> <rareness>**: Finds the max stats for the requested item at the requested slot and rareness (Ex. <bow> <V> <6> finds the max stats of a slot V 6* bow)",
 
     "**!stats <heroAlias>**: Finds all the stats for the requested heroes (Ex. <yeka> finds all the stats of Yekaterina)",
 
     "**!stat <heroAlias> <stat>**: Finds the requested stat of the hero (Ex. <yeka> <attack> finds Yekaterina's base attack)",
+
+    "**!statrank <stat> <limit>**: Finds the top <limit> heroes for the requested stat (Ex. <hp> <5> would find the top 5 highest base HP heroes",
 
     "**!compare <stat> <heroAlias> <heroAlias>**: Finds the requested stat for all requested heroes. There can be an infinite number of requested heroes. (Ex. <attack> <shushu> <krut> finds the base attack of Shu-shu and Krut)",
 
