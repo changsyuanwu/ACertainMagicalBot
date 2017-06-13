@@ -192,11 +192,13 @@ function findSkillData(heroAlias, skill) {
 
 function findSkillImage(heroAlias, skill) {
     let heroName = findNameByAlias(heroAlias, "hero");
-    if (skill == 5) {
+    if (skill == "5") {
         for (let i = 0; i < heroSkillTable.length; i++) {
             if (heroName === heroSkillTable[i]["Name"]) {
                 if (heroSkillTable[i]["5"].includes("currently has no awakening skill")) {
                     return path.join(launchLocation, "src", "Images", "Nexon.gif");
+                } else {
+                    return path.join(launchLocation, "src", "Images", "Hero Skills", `${heroName} ${skill}.jpg`);
                 }
             }
         }
