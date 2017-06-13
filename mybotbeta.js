@@ -963,7 +963,7 @@ bot.on("message", async (message) => {
                         sql.get(`SELECT COUNT(*) + 1 FROM scores WHERE Points > (SELECT Points FROM scores WHERE userID = ${user.id})`)
                             .then((rank) => {
 
-                                totalPlayers = data[0]["COUNT(*)"];
+                                const totalPlayers = data[0]["COUNT(*)"];
                                 rank = rank["COUNT(*) + 1"];
 
                                 if (message.channel.type === "dm") {
