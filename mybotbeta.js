@@ -284,10 +284,27 @@ function findItem(item, slot, rareness) {
     }
 } // Finds item max stats
 
-function findStatRank(stat) {
-    for (let i = 0; i < heroDataTable.length; i++) {
-        //do shit
+function findStatRank(statRequested) {
+    if ((isNaN(heroDataTable[1][statRequested.toLowerCase()])) || (flagNames.includes(statRequested.toLowerCase()))) {
+        return ["Invalid stat!"];
     }
+    let dataArray = [];
+    for (let i = 1; i < heroDataTable.length; i++) {
+        dataArray.push(heroDataTable[i]["Name"], heroDataTable[i][statRequested.toLowerCase()])
+    }
+    for (let i = 1; i < dataArray.length; i += 2) {
+        for (let j = 1; j < dataArray.length - 1; j += 2) {
+            if ((parseInt(dataArray[j + 2], 10) > parseInt(dataArray[j], 10)) && (i !== j) || (dataArray[j] === "") || (dataArray[j] === "N/A")) {
+                let tempName = dataArray[j - 1];
+                let tempStat = dataArray[j];
+                dataArray[j - 1] = dataArray[j + 1];
+                dataArray[j] = dataArray[j + 2];
+                dataArray[j + 1] = tempName;
+                dataArray[j + 2] = tempStat;
+            }
+        }
+    }
+    return dataArray;
 }
 // End of database functions
 
@@ -782,7 +799,7 @@ bot.on("message", async (message) => {
     else if (message.content.startsWith(config.prefix + "statrank")) {
         if (args.length >= 2) {
             const statRankings = findStatRank(args[1]);
-            message.channel.send(statRankings);
+            message.channel.send(statRankings.join("\n"));
         } else {
             message.channel.send("Invalid request!");
         }
