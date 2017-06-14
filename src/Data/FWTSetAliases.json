@@ -1494,5 +1494,12 @@
             "fake sniper",
             "fake mm"
         ]
+    },
+    {
+        "name": "Cat Sidhe Got You!",
+        "aliases": [
+            "cat sidhe",
+            "cat sidhe got you"
+        ]
     }
 ]

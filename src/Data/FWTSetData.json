@@ -1680,7 +1680,7 @@
         "Accessory": "Ring",
         "2pc": "Increases Resistance by 30% when HP falls below 80%",
         "3pc": "Increases Attack by 60% and Max HP by 25% for 3 turns",
-        "Restrictions": "Exclusive to Ildo (Season 2 Hero)"
+        "Restrictions": "Exclusive to Ildo (Sia 2 Hero)"
     },
     {
         "Name": "Finishing Touch",
@@ -1691,7 +1691,7 @@
         "Accessory": "Brooch",
         "2pc": "Increases Attack by 10% for every enemy attacked",
         "3pc": "Increases Attack by 60% and decrease skill MP cost by 30% for 3 turns",
-        "Restrictions": "Exclusive to Taehwa (Season 2 Hero)"
+        "Restrictions": "Exclusive to Taehwa (Sia 2 Hero)"
     },
     {
         "Name": "Fiery Dancer",
@@ -1702,7 +1702,7 @@
         "Accessory": "Brooch",
         "2pc": "Decrease incoming damage by 10% while on Lava terrain",
         "3pc": "Increases Attack by 60% and Critical Damage by 10% for 3 turns",
-        "Restrictions": "Exclusive to Hongyeom (Season 2 Hero)"
+        "Restrictions": "Exclusive to Hongyeom (Sia 2 Hero)"
     },
     {
         "Name": "Black Dragon's Armament I",
@@ -2000,5 +2000,16 @@
         "2pc": "Increases Crit Rate by 800",
         "3pc": "Increases Attack by 10% when attack enemies more than 3 tiles away",
         "Restrictions": "None"
+    },
+    {
+        "Name": "Cat Sidhe Got You!",
+        "Slot": "III",
+        "Rareness": "★★★★★★",
+        "Weapon": "Mace",
+        "Armor": "Shield",
+        "Accessory": "Necklace",
+        "2pc": "Ignores enemy Defense by 1000",
+        "3pc": "Increases Attack by 30% and Dodge by 1600 for 4 turns",
+        "Restrictions": "Exclusive to Cat Sidhe (Limited Lost Island Hero)"
     }
 ]
