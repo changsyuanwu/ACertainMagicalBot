@@ -527,82 +527,103 @@
     {
         "Name": "Hella",
 
-        "1": "****:\n",
+        "1": "**Scold**:\n",
         "1MPcost": 15,
         "1GeneCost": 0,
 
-        "2": "****:\n",
+        "2": "**You're Fired!**:\n",
         "2MPcost": 0,
         "2GeneCost": 0,
 
-        "3": "****:\n",
+        "3": "**Promotion**:\n",
         "3MPcost": 0,
         "3GeneCost": 0,
 
-        "4": "****:\n",
+        "4": "**Archmage's Assistant**:\n",
         "4GeneCost": 0,
 		
-		"5": "****:\n",
+		"5": "Hella currently has no awakening skill!",
+        "5GeneCost": 0
+    },
+    {
+        "Name": "Henry",
+
+        "1": "**Gatling Gun**:\n",
+        "1MPcost": 15,
+        "1GeneCost": 0,
+
+        "2": "**Genocidal Blow**:\n",
+        "2MPcost": 0,
+        "2GeneCost": 0,
+
+        "3": "**Drill Dash**:\n",
+        "3MPcost": 0,
+        "3GeneCost": 0,
+
+        "4": "**Hawk Eye**:\n",
+        "4GeneCost": 0,
+		
+		"5": "Henry currently has no awakening skill!",
         "5GeneCost": 0
     },
     {
         "Name": "Hongyeom",
 
-        "1": "****:\n",
+        "1": "**Double Strike**:\n",
         "1MPcost": 15,
         "1GeneCost": 0,
 
-        "2": "****:\n",
+        "2": "**Fiery Wind**:\n",
         "2MPcost": 0,
         "2GeneCost": 0,
 
-        "3": "****:\n",
+        "3": "**Rising Pheonix Slash**:\n",
         "3MPcost": 0,
         "3GeneCost": 0,
 
-        "4": "****:\n",
+        "4": "**Vermillion Energy**:\n",
         "4GeneCost": 0,
 		
-		"5": "****:\n",
+		"5": "**Full Moon Javelins**:\n",
         "5GeneCost": 0
     },
     {
         "Name": "Ian",
 
-        "1": "****:\n",
+        "1": "**Kitty Hunt!**:\n",
         "1MPcost": 15,
         "1GeneCost": 18,
 
-        "2": "****:\n",
+        "2": "**Cat-and-mouse!**:\n",
         "2MPcost": 0,
         "2GeneCost": 37,
 
-        "3": "****:\n",
+        "3": "**Shark Bullet!**:\n",
         "3MPcost": 0,
         "3GeneCost": 74,
 
-        "4": "****:\n",
+        "4": "**Multi-kill!**:\n",
         "4GeneCost": 45,
 		
-		"5": "****:\n",
+		"5": "Ian currently has no awakening skill!",
         "5GeneCost": 0
     },
     {
         "Name": "Ildo",
 
-        "1": "****:\n",
+        "1": "**Aerial Slash**:\n",
         "1MPcost": 15,
         "1GeneCost": 0,
 
-        "2": "****:\n",
+        "2": "**Flying Sword: Butterfly**:\n",
         "2MPcost": 0,
         "2GeneCost": 0,
 
-        "3": "****:\n",
+        "3": "**Last Resort**:\n",
         "3MPcost": 0,
         "3GeneCost": 0,
 
-        "4": "****:\n",
+        "4": "**Art of Endurance**:\n",
         "4GeneCost": 0,
 		
 		"5": "**Flash Sword**:\nAttacks enemies in a straight line at [535% ~ ?%] Attack and causes Lethal Wound for 2 turns. Lethal Wound inflicts as much damage as [55% ~ ?%] Attack for every tile that it's target moved at the end of the turn. (Note that this skill's target range is 5 tiles, but it's effect range is 20 tiles)",
@@ -632,166 +653,166 @@
     {
         "Name": "Jenny",
 
-        "1": "****:\n",
+        "1": "**Wild Slug**:\n",
         "1MPcost": 15,
         "1GeneCost": 0,
 
-        "2": "****:\n",
+        "2": "**Straight Chew**:\n",
         "2MPcost": 0,
         "2GeneCost": 0,
 
-        "3": "****:\n",
+        "3": "**Tainted Love**:\n",
         "3MPcost": 0,
         "3GeneCost": 0,
 
-        "4": "****:\n",
+        "4": "**Cowgirl**:\n",
         "4GeneCost": 0,
 		
-		"5": "****:\n",
+		"5": "**Super Straight Chu~**:\n",
         "5GeneCost": 0
     },
     {
         "Name": "Jin",
 
-        "1": "****:\n",
+        "1": "**Fist**:\n",
         "1MPcost": 15,
         "1GeneCost": 0,
 
-        "2": "****:\n",
+        "2": "**Punt**:\n",
         "2MPcost": 0,
         "2GeneCost": 0,
 
-        "3": "****:\n",
+        "3": "**Cruelty**:\n",
         "3MPcost": 0,
         "3GeneCost": 0,
 
-        "4": "****:\n",
+        "4": "**Sharpness**:\n",
         "4GeneCost": 0,
 		
-		"5": "****:\n",
+		"5": "Jin currently has no awakening skill!",
         "5GeneCost": 0
     },
     {
         "Name": "Jin Kisaragi",
 
-        "1": "****:\n",
+        "1": "**Dual Ice Strike**:\n",
         "1MPcost": 15,
         "1GeneCost": 0,
 
-        "2": "****:\n",
+        "2": "**Frost Fang**:\n",
         "2MPcost": 0,
         "2GeneCost": 0,
 
-        "3": "****:\n",
+        "3": "**Arctic Dungeon**:\n",
         "3MPcost": 0,
         "3GeneCost": 0,
 
-        "4": "****:\n",
+        "4": "**Snow Flower Storm**:\n",
         "4GeneCost": 0,
 		
-		"5": "****:\n",
+		"5": "Jin Kisaragi currently has no awakening skill!",
         "5GeneCost": 0
     },
     {
         "Name": "Kai",
 
-        "1": "****:\n",
+        "1": "**Power Slash**:\n",
         "1MPcost": 15,
         "1GeneCost": 10,
 
-        "2": "****:\n",
+        "2": "**Flame Burst**:\n",
         "2MPcost": 0,
         "2GeneCost": 12,
 
-        "3": "****:\n",
+        "3": "**Battle Cry**:\n",
         "3MPcost": 0,
         "3GeneCost": 32,
 
         "4": "**Making of a Hero**:\nIf HP is above 80%, increases Attack by 20% and decreases damage received by 10%",
         "4GeneCost": 16,
 		
-		"5": "****:\n",
+		"5": "**Wrath of Mother Nature**:\n",
         "5GeneCost": 0
     },
     {
         "Name": "Kitty",
 
-        "1": "****:\n",
+        "1": "**TX-01**:\n",
         "1MPcost": 15,
         "1GeneCost": 0,
 
-        "2": "****:\n",
+        "2": "**Cannon**:\n",
         "2MPcost": 0,
         "2GeneCost": 0,
 
-        "3": "****:\n",
+        "3": "**Napalm**:\n",
         "3MPcost": 0,
         "3GeneCost": 0,
 
-        "4": "****:\n",
+        "4": "**Master of Mechanics**:\n",
         "4GeneCost": 0,
 		
-		"5": "****:\n",
+		"5": "Kitty currently has no awakening skill!",
         "5GeneCost": 0
     },
     {
         "Name": "Klein",
 
-        "1": "****:\n",
+        "1": "**Dark Matter**:\n",
         "1MPcost": 15,
         "1GeneCost": 0,
 
-        "2": "****:\n",
+        "2": "**Frigid Twister**:\n",
         "2MPcost": 0,
         "2GeneCost": 0,
 
-        "3": "****:\n",
+        "3": "**Eater of Souls**:\n",
         "3MPcost": 0,
         "3GeneCost": 0,
 
-        "4": "****:\n",
+        "4": "**Berserker**:\n",
         "4GeneCost": 0,
 		
-		"5": "****:\n",
+		"5": "Klein currently has no awakening skill!",
         "5GeneCost": 0
     },
     {
         "Name": "Krut",
 
-        "1": "****:\n",
+        "1": "**Sweep**:\n",
         "1MPcost": 15,
         "1GeneCost": 0,
 
-        "2": "****:\n",
+        "2": "**Boil Blood**:\n",
         "2MPcost": 0,
         "2GeneCost": 0,
 
-        "3": "****:\n",
+        "3": "**Destructive Storm**:\n",
         "3MPcost": 0,
         "3GeneCost": 0,
 
-        "4": "****:\n",
+        "4": "**Two-faced Berserker**:\n",
         "4GeneCost": 0,
 		
-		"5": "****:\n",
+		"5": "Krut currently has no awakening skill!",
         "5GeneCost": 0
     },
     {
         "Name": "Lance",
 
-        "1": "****:\n",
+        "1": "**Boulder Drop**:\n",
         "1MPcost": 15,
         "1GeneCost": 0,
 
-        "2": "****:\n",
+        "2": "**Earthquake**:\n",
         "2MPcost": 0,
         "2GeneCost": 0,
 
-        "3": "****:\n",
+        "3": "**Chain Up**:\n",
         "3MPcost": 0,
         "3GeneCost": 0,
 
-        "4": "****:\n",
+        "4": "**Strong Like Boulder**:\n",
         "4GeneCost": 0,
 		
 		"5": "****:\n",
@@ -800,379 +821,379 @@
     {
         "Name": "Lee",
 
-        "1": "****:\n",
+        "1": "**Bang**:\n",
         "1MPcost": 15,
         "1GeneCost": 0,
 
-        "2": "****:\n",
+        "2": "**Psychic Smash**:\n",
         "2MPcost": 0,
         "2GeneCost": 0,
 
-        "3": "****:\n",
+        "3": "**Ruin**:\n",
         "3MPcost": 0,
         "3GeneCost": 0,
 
-        "4": "****:\n",
+        "4": "**Invincible Lee**:\n",
         "4GeneCost": 0,
 		
-		"5": "****:\n",
+		"5": "Lee currently has no awakening skill!",
         "5GeneCost": 0
     },
     {
         "Name": "Lena",
 
-        "1": "****:\n",
+        "1": "**Hypersonic Wave**:\n",
         "1MPcost": 15,
         "1GeneCost": 0,
 
-        "2": "****:\n",
+        "2": "**Shout**:\n",
         "2MPcost": 0,
         "2GeneCost": 0,
 
-        "3": "****:\n",
+        "3": "**Head voice**:\n",
         "3MPcost": 0,
         "3GeneCost": 0,
 
-        "4": "****:\n",
+        "4": "**Fan Service**:\n",
         "4GeneCost": 0,
 		
-		"5": "****:\n",
+		"5": "Lena currently has no awakening skill!",
         "5GeneCost": 0
     },
     {
         "Name": "Lilid",
 
-        "1": "****:\n",
+        "1": "**Trash**:\n",
         "1MPcost": 15,
         "1GeneCost": 0,
 
-        "2": "****:\n",
+        "2": "**Lilid's Scent**:\n",
         "2MPcost": 0,
         "2GeneCost": 0,
 
-        "3": "****:\n",
+        "3": "**Capture Prey**:\n",
         "3MPcost": 0,
         "3GeneCost": 0,
 
-        "4": "****:\n",
+        "4": "**Natural Healing**:\n",
         "4GeneCost": 0,
 		
-		"5": "****:\n",
+		"5": "Lilid currently has no awakening skill!",
         "5GeneCost": 0
     },
     {
         "Name": "Lily",
 
-        "1": "****:\n",
+        "1": "**Take Off Your Shoes!**:\n",
         "1MPcost": 15,
         "1GeneCost": 0,
 
-        "2": "****:\n",
+        "2": "**Quick Clean-Up**:\n",
         "2MPcost": 0,
         "2GeneCost": 0,
 
-        "3": "****:\n",
+        "3": "**Dusting**:\n",
         "3MPcost": 0,
         "3GeneCost": 0,
 
-        "4": "****:\n",
+        "4": "***Nasty!*:\n",
         "4GeneCost": 0,
 		
-		"5": "****:\n",
+		"5": "Lily currently has no awakening skill!",
         "5GeneCost": 0
     },
     {
         "Name": "Lucas",
 
-        "1": "****:\n",
+        "1": "**Kweekk**:\n",
         "1MPcost": 15,
         "1GeneCost": 0,
 
-        "2": "****:\n",
+        "2": "**Kahakahaak**:\n",
         "2MPcost": 0,
         "2GeneCost": 0,
 
-        "3": "****:\n",
+        "3": "**Pwaaaaaakkk**:\n",
         "3MPcost": 0,
         "3GeneCost": 0,
 
-        "4": "****:\n",
+        "4": "**Woowaawwkk**:\n",
         "4GeneCost": 0,
 		
-		"5": "****:\n",
+		"5": "Lucas currently has no awakening skill!",
         "5GeneCost": 0
     },
     {
         "Name": "Luminous",
 
-        "1": "****:\n",
+        "1": "**Pressure Void**:\n",
         "1MPcost": 15,
         "1GeneCost": 0,
 
-        "2": "****:\n",
+        "2": "**Ray of Redemption**:\n",
         "2MPcost": 0,
         "2GeneCost": 0,
 
-        "3": "****:\n",
+        "3": "**Armageddon**:\n",
         "3MPcost": 0,
         "3GeneCost": 0,
 
-        "4": "****:\n",
+        "4": "**Equilibrium**:\n",
         "4GeneCost": 0,
 		
-		"5": "****:\n",
+		"5": "Luminous currently has no awakening skill!",
         "5GeneCost": 0
     },
     {
         "Name": "Mas",
 
-        "1": "****:\n",
+        "1": "**Hymn for Agnes**:\n",
         "1MPcost": 15,
         "1GeneCost": 0,
 
-        "2": "****:\n",
+        "2": "**Hymn for Zephyrus**:\n",
         "2MPcost": 0,
         "2GeneCost": 0,
 
-        "3": "****:\n",
+        "3": "**Hymn for Demeter**:\n",
         "3MPcost": 0,
         "3GeneCost": 0,
 
-        "4": "****:\n",
+        "4": "**Hymn for Ares**:\n",
         "4GeneCost": 0,
 		
-		"5": "****:\n",
+		"5": "Mas currently has no awakening skill!",
         "5GeneCost": 0
     },
     {
         "Name": "Mercedes",
 
-        "1": "****:\n",
+        "1": "**Swift Dual Shot**:\n",
         "1MPcost": 15,
         "1GeneCost": 0,
 
-        "2": "****:\n",
+        "2": "**Spikes Royale**:\n",
         "2MPcost": 0,
         "2GeneCost": 0,
 
-        "3": "****:\n",
+        "3": "**Enlil's Wrath**:\n",
         "3MPcost": 0,
         "3GeneCost": 0,
 
-        "4": "****:\n",
+        "4": "**Updraft**:\n",
         "4GeneCost": 0,
 		
-		"5": "****:\n",
+		"5": "Mercedes currently has no awakening skill!",
         "5GeneCost": 0
     },
     {
-        "Name": "Moe",
+        "Name": "Moa",
 
-        "1": "****:\n",
+        "1": "**Ignition**:\n",
         "1MPcost": 15,
         "1GeneCost": 0,
 
-        "2": "****:\n",
+        "2": "**Scorching Mist**:\n",
         "2MPcost": 0,
         "2GeneCost": 0,
 
-        "3": "****:\n",
+        "3": "**Shadowburn**:\n",
         "3MPcost": 0,
         "3GeneCost": 0,
 
-        "4": "****:\n",
+        "4": "**Essence of Shadow**:\n",
         "4GeneCost": 0,
 		
-		"5": "****:\n",
+		"5": "Moa currently has no awakening skill!",
         "5GeneCost": 0
     },
     {
         "Name": "Momo",
 
-        "1": "****:\n",
+        "1": "**Momo-fire!**:\n",
         "1MPcost": 15,
         "1GeneCost": 0,
 
-        "2": "****:\n",
+        "2": "**Momo-shot!**:\n",
         "2MPcost": 0,
         "2GeneCost": 0,
 
-        "3": "****:\n",
+        "3": "**Momo-bomb!**:\n",
         "3MPcost": 0,
         "3GeneCost": 0,
 
-        "4": "****:\n",
+        "4": "**Berserk Momo**:\n",
         "4GeneCost": 0,
 		
-		"5": "****:\n",
+		"5": "**Momo's Reinforced Bomb!**:\n",
         "5GeneCost": 0
     },
     {
         "Name": "Mu",
 
-        "1": "****:\n",
+        "1": "**Doom**:\n",
         "1MPcost": 15,
         "1GeneCost": 0,
 
-        "2": "****:\n",
+        "2": "**Cursed Talisman**:\n",
         "2MPcost": 0,
         "2GeneCost": 0,
 
-        "3": "****:\n",
+        "3": "**Yin Yang & Five Elements**:\n",
         "3MPcost": 0,
         "3GeneCost": 0,
 
-        "4": "****:\n",
+        "4": "**Summon Spirit**:\n",
         "4GeneCost": 0,
 		
-		"5": "****:\n",
+		"5": "Mu currently has no awakening skill!",
         "5GeneCost": 0
     },
     {
         "Name": "Muang",
 
-        "1": "****:\n",
+        "1": "**Detonation**:\n",
         "1MPcost": 15,
         "1GeneCost": 0,
 
-        "2": "****:\n",
+        "2": "**Flaming Jewel**:\n",
         "2MPcost": 0,
         "2GeneCost": 0,
 
-        "3": "****:\n",
+        "3": "**Explosive Gas**:\n",
         "3MPcost": 0,
         "3GeneCost": 0,
 
-        "4": "****:\n",
+        "4": "**Melt Armor**:\n",
         "4GeneCost": 0,
 		
-		"5": "****:\n",
+		"5": "Muang currently has no awakening skill!",
         "5GeneCost": 0
     },
     {
         "Name": "Muzaka",
 
-        "1": "****:\n",
+        "1": "**Sharp Claw**:\n",
         "1MPcost": 15,
         "1GeneCost": 0,
 
-        "2": "****:\n",
+        "2": "**Desolate Rift**:\n",
         "2MPcost": 0,
         "2GeneCost": 0,
 
-        "3": "****:\n",
+        "3": "**Wolf-king's Roar**:\n",
         "3MPcost": 0,
         "3GeneCost": 0,
 
-        "4": "****:\n",
+        "4": "**Ruthless**:\n",
         "4GeneCost": 0,
 		
-		"5": "****:\n",
+		"5": "Muzaka currently has no awakening skill!",
         "5GeneCost": 0
     },
     {
         "Name": "Nirvana",
 
-        "1": "****:\n",
+        "1": "**Take This!**:\n",
         "1MPcost": 15,
         "1GeneCost": 0,
 
-        "2": "****:\n",
+        "2": "**Vengeance**:\n",
         "2MPcost": 0,
         "2GeneCost": 0,
 
-        "3": "****:\n",
+        "3": "**Nirvana's Power**:\n",
         "3MPcost": 0,
         "3GeneCost": 0,
 
-        "4": "****:\n",
+        "4": "**Accursed**:\n",
         "4GeneCost": 0,
 		
-		"5": "****:\n",
+		"5": "Nirvana currently has no awakening skill!",
         "5GeneCost": 0
     },
     {
         "Name": "Noel",
 
-        "1": "****:\n",
+        "1": "**Type XI: Optic Barrel**:\n",
         "1MPcost": 15,
         "1GeneCost": 0,
 
-        "2": "****:\n",
+        "2": "**Zero-Gun: Fennir**:\n",
         "2MPcost": 0,
         "2GeneCost": 0,
 
-        "3": "****:\n",
+        "3": "**Valkyrie Veil**:\n",
         "3MPcost": 0,
         "3GeneCost": 0,
 
-        "4": "****:\n",
+        "4": "**Arcus Diabolus: Bolverk**:\n",
         "4GeneCost": 0,
 		
-		"5": "****:\n",
+		"5": "Noel currently has no awakening skill!",
         "5GeneCost": 0
     },
     {
         "Name": "Nox",
 
-        "1": "****:\n",
+        "1": "**Bloody Shot**:\n",
         "1MPcost": 15,
         "1GeneCost": 0,
 
-        "2": "****:\n",
+        "2": "**Boil Blood**:\n",
         "2MPcost": 0,
         "2GeneCost": 0,
 
-        "3": "****:\n",
+        "3": "**Spell Boost**:\n",
         "3MPcost": 0,
         "3GeneCost": 0,
 
-        "4": "****:\n",
+        "4": "**Bloodthirst**:\n",
         "4GeneCost": 0,
 		
-		"5": "****:\n",
+		"5": "Nox currently has no awakening skill!",
         "5GeneCost": 0
     },
     {
         "Name": "Persona",
 
-        "1": "****:\n",
+        "1": "**Phantom Thief's Invitation**:\n",
         "1MPcost": 15,
         "1GeneCost": 0,
 
-        "2": "****:\n",
+        "2": "**Elusive**:\n",
         "2MPcost": 0,
         "2GeneCost": 0,
 
-        "3": "****:\n",
+        "3": "**Scatter Cards**:\n",
         "3MPcost": 0,
         "3GeneCost": 0,
 
-        "4": "****:\n",
+        "4": "**Fate**:\n",
         "4GeneCost": 0,
 		
-		"5": "****:\n",
+		"5": "Persona currently has no awakening skill!",
         "5GeneCost": 0
     },
     {
         "Name": "Phantom",
 
-        "1": "****:\n",
+        "1": "**Double Entendre**:\n",
         "1MPcost": 15,
         "1GeneCost": 0,
 
-        "2": "****:\n",
+        "2": "**Skill Swipe**:\n",
         "2MPcost": 0,
         "2GeneCost": 0,
 
-        "3": "****:\n",
+        "3": "**Carte Rose Finale**:\n",
         "3MPcost": 0,
         "3GeneCost": 0,
 
-        "4": "****:\n",
+        "4": "**Skill Management**:\n",
         "4GeneCost": 0,
 		
-		"5": "****:\n",
+		"5": "Phantom currently has no awakening skill!",
         "5GeneCost": 0
     },
     {
