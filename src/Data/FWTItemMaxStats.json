@@ -77,19 +77,19 @@
             },
             "II": {
                 "HP": 2929,
-                "Defense": 320
+                "Defense": 399
             },
             "III": {
                 "HP": 5106,
-                "Defense": 320
+                "Defense": 484
             },
             "IV": {
                 "HP": 7930,
-                "Defense": 320
+                "Defense": 575
             },
             "V": {
                 "HP": 11740,
-                "Defense": 320
+                "Defense": 672
             }
         },
         "Boots": {
@@ -99,19 +99,19 @@
             },
             "II": {
                 "HP": 2695,
-                "Dodge": 320
+                "Dodge": 399
             },
             "III": {
                 "HP": 4697,
-                "Dodge": 320
+                "Dodge": 484
             },
             "IV": {
                 "HP": 7296,
-                "Dodge": 320
+                "Dodge": 575
             },
             "V": {
                 "HP": 10801,
-                "Dodge": 320
+                "Dodge": 672
             }
         },
         "Shield": {
