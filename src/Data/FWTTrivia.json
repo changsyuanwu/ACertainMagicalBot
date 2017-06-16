@@ -36,6 +36,10 @@
         "Answer": "The Crimson Templars"
     },
     {
+        "Question": "What is the name of Taehwa's Brush?",
+        "Answer": "Chuupong"
+    },
+    {
         "Question": "Which unit of the Crimson Templars is Taehwa the leader of?",
         "Answer": "Man"
     },
@@ -66,6 +70,14 @@
     {
         "Question": "Which hero has the title of \"Noblesse\"?",
         "Answer": "Raizel"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"I'm the Principal of Ye Ran Highschool\"",
+        "Answer": "Frankenstein"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"Who killed Cock Robin? What did he feel before he died?\"",
+        "Answer": "Banshee"
     },
     {
         "Question": "Which hero is the following quote from? \"Rawr!\"",
