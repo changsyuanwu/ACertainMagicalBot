@@ -72,6 +72,42 @@
         "Answer": "Raizel"
     },
     {
+        "Question": "Which hero is the following quote from? \"This is easy! Haha! Anyone can do this.\"",
+        "Answer": "Nirvana"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"Hunting?...I don't feel like it either. Is there anyone who can donate blood?\"",
+        "Answer": "Nox"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"Got fat? Who are  you talking about? I am average weight!\"",
+        "Answer": "Dolores"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"(Staring quietly at the companions who have gathered to play. Perhaps she wants to join them.)\"",
+        "Answer": "Elektra"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"Haha..Even the golem is ticklish. Don't bother it too much.\"",
+        "Answer": "Lance"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"Why are you staring at me? Did I drop something again?\"",
+        "Answer": "Yekaterina"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"E...Everyone...I hope everyone is f-f-fine...\"",
+        "Answer": "Moa"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"I really enjoy the way things are now. I can learn new things!\"",
+        "Answer": "Tao"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"How long do I have to wait? Let's get on with it.\"",
+        "Answer": "Seira"
+    },
+    {
         "Question": "Which hero is the following quote from? \"I'm the Principal of Ye Ran Highschool\"",
         "Answer": "Frankenstein"
     },
@@ -94,6 +130,10 @@
     {
         "Question": "Which hero is the following quote from? \"Spooky and Banshee lived happily ever after.\"",
         "Answer": "Spooky"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"Beep? Beeeeep? Beep?\"",
+        "Answer": "Poni"
     },
     {
         "Question": "Which hero is the following quote from? \"Beep! Beeeeep! Beep...\"",
