@@ -101,14 +101,12 @@ function findNameByAlias(alias, type) {
     } else {
         return alias;
     }
-    for (let i = 0; i < aliasList.length; i++) {
-        for (let j = 0; j < aliasList[i]["aliases"].length; j++) {
-            if (aliasList[i]["aliases"][j] === alias) {
-                return aliasList[i]["name"];
-            }
-        }
+    const data = aliasList.find(dataItem => dataItem.aliases.includes(alias));
+    if (data !== undefined) {
+        return data.name;
+    } else {
+        return "nosuchalias";
     }
-    return "nosuchalias";
 } // Finds the correct name from the alias
 
 function findListedPropertyData(alias, type) {
@@ -125,17 +123,16 @@ function findListedPropertyData(alias, type) {
     if (name === "nosuchalias") {
         return "nosuchdata";
     }
-    let data = dataTable.find(dataItem => dataItem.Name === name);
+    const data = dataTable.find(dataItem => dataItem.Name === name);
     return createListOutput(data);
 } // Finds a list of data with properties
 
 function findFeaturedSets(dateRequested) {
-    let featuredSets;
     for (let i = 0; i < featuredSetTable.length; i++) {
         let start = moment(featuredSetTable[i]["Start"], "MM-DD-YYYY");
         let end = moment(featuredSetTable[i]["End"], "MM-DD-YYYY");
         if (moment(dateRequested, "MM-DD-YYYY").isBetween(start, end, "day", "(]")) {
-            featuredSets = featuredSetTable[i];
+            var featuredSets = featuredSetTable[i];
         }
     }
     if (featuredSets === undefined) {
@@ -150,10 +147,11 @@ function findSingleData(alias, data, type) {
         var dataTable = heroDataTable;
         var name = alias;
     }
-    for (let i = 0; i < dataTable.length; i++) {
-        if (dataTable[i]["Name"] === name) {
-            return dataTable[i][data];
-        }
+    const results = dataTable.find(dataItem => dataItem.Name === name);
+    if (results !== undefined) {
+        return results[data];
+    } else {
+        return undefined;
     }
 } // Finds a single piece of data
 
@@ -178,32 +176,36 @@ function findProperty(propertyRequested, effectRequested) {
 } // Finds all heroes who have the requested property
 
 function findSkillData(heroAlias, skill) {
-    let heroName = findNameByAlias(heroAlias, "hero");
-    for (let i = 0; i < heroSkillTable.length; i++) {
-        if (heroName === heroSkillTable[i]["Name"]) {
-            if ((skill == "4") || (skill == "5")) {
-                return heroSkillTable[i][skill] + "\n" + "**Total Gene Cost**: " + heroSkillTable[i][`${skill}GeneCost`];
-            } else {
-                return heroSkillTable[i][skill] + "\n" + "**MP Cost**: " + heroSkillTable[i][`${skill}MPcost`] + "\n" + "**Total Gene Cost**: " + heroSkillTable[i][`${skill}GeneCost`];
-            }
-        }
+    const heroName = findNameByAlias(heroAlias, "hero");
+    if (heroName === "nosuchalias") {
+        return "nosuchdata";
+    }
+    const heroData = heroSkillTable.find(hero => hero.Name === heroName);
+    switch (skill) {
+        case 4:
+        case 5:
+        case "4":
+        case "5":
+            return `${heroData[skill]}\n**Total Gene Cost**: ${heroData[`${skill}GeneCost`]}`;
+        default:
+            return `${heroData[skill]}\n**MP Cost**: ${heroData[`${skill}MPcost`]}\n**Total Gene Cost**: ${heroData[`${skill}GeneCost`]}`;
     }
 } // Finds the description, MP cost, and Gene cost for a hero's skill
 
 function findSkillImage(heroAlias, skill) {
-    let heroName = findNameByAlias(heroAlias, "hero");
-    if (skill == "5") {
-        for (let i = 0; i < heroSkillTable.length; i++) {
-            if (heroName === heroSkillTable[i]["Name"]) {
-                if (heroSkillTable[i]["5"].includes("currently has no awakening skill")) {
-                    return path.join(launchLocation, "src", "Images", "Nexon.gif");
-                } else {
-                    return path.join(launchLocation, "src", "Images", "Hero Skills", `${heroName} ${skill}.jpg`);
-                }
-            }
-        }
-    } else {
-        return path.join(launchLocation, "src", "Images", "Hero Skills", `${heroName} ${skill}.jpg`);
+    const heroName = findNameByAlias(heroAlias, "hero");
+    if (heroName === "nosuchalias") {
+        return "nosuchdata";
+    }
+    switch (skill) {
+        case 5:
+        case "5":
+            const heroData = heroSkillTable.find(hero => hero.Name === heroName);
+            if (heroData["5"].includes("currently has no awakening skill")) {
+                return path.join(launchLocation, "src", "Images", "Nexon.gif");
+            } // If the hero has an awakening skill, the case falls to the default one
+        default:
+            return path.join(launchLocation, "src", "Images", "Hero Skills", `${heroName} ${skill}.jpg`);
     }
 } // Finds a hero skill's image
 
@@ -595,7 +597,7 @@ bot.on("message", async (message) => {
     logger.logFrom(message.channel, 1, `[command: ${args[0]}]`);
 
     if (message.content.startsWith(config.prefix + "ping")) {
-        message.channel.send("pong! [Response time: " + bot.ping + "ms]");
+        message.channel.send(`pong! [Response time: ${bot.ping}"ms]`);
     } // Bot testing
 
 
@@ -683,7 +685,8 @@ bot.on("message", async (message) => {
         if (args.length >= 2) {
             const msg = message.content.slice(message.content.indexOf(" ") + 1);
             const choices = msg.split("|");
-            message.channel.send(choices[getRandomInt(0, choices.length)]);
+            const randomChoice = choices[getRandomInt(0, choices.length)];
+            message.channel.send(randomChoice);
         } else {
             message.channel.send("Invalid request!");
         }
@@ -735,16 +738,14 @@ bot.on("message", async (message) => {
     } else if (message.content.startsWith(config.prefix + "tyrant")) {
         message.channel.send({ files: [path.join(launchLocation, "src", "Images", "Tyrant.png")] });
     } else if (message.content.startsWith(config.prefix + "moe")) {
-        message.channel.send({ files: [moe[getRandomInt(0, moe.length)]] });
-    } else if ((message.content.startsWith(config.prefix + "doodoo")) && (message.author.id === config.ownerID)) {
-        for (let i = 0; i < moe.length; i++) {
-            message.channel.send({ files: [moe[i]] });
-        }
+        const randomMoeImageLink = moe[getRandomInt(0, moe.length)];
+        message.channel.send({ files: [randomMoeImageLink] });
     } // Custom/Anime commands
 
 
     else if (message.content.startsWith(config.prefix + "pull")) {
-        message.channel.send({ files: [PullOrNot()] });
+        const pullOrNot = PullOrNot();
+        message.channel.send({ files: [pullOrNot] });
     } // Bot does a 50/50 pull or no
 
     else if (message.content.startsWith(config.prefix + "whale")) {
@@ -768,8 +769,8 @@ bot.on("message", async (message) => {
 
     else if (message.content.startsWith(config.prefix + "sets")) {
         if (args.length >= 3) {
-            const setInfo = findSets(args[1].toUpperCase(), generateRareness(args[2]));
-            message.channel.send(setInfo);
+            const setsInfo = findSets(args[1].toUpperCase(), generateRareness(args[2]));
+            message.channel.send(setsInfo);
         } else {
             message.channel.send("Invalid request!");
         }
@@ -819,10 +820,10 @@ bot.on("message", async (message) => {
             const heroRequested = findNameByAlias(args[1], "hero");
             const statRequested = args[2].toLowerCase();
             const statData = findSingleData(heroRequested, statRequested, "stat");
-            if (statData != "nosuchdata") {
-                message.channel.send(heroRequested + "'s " + capitalize(statRequested) + ": " + statData);
+            if ((heroRequested !== "nosuchalias") && (statData !== undefined)) {
+                message.channel.send(`${heroRequested}'s ${capitalize(statRequested)}: ${statData}`);
             } else {
-                message.channel.send("Unknown Hero!");
+                message.channel.send("Unknown Hero/Stat!");
             }
         } else {
             message.channel.send("Invalid request!");
@@ -837,9 +838,9 @@ bot.on("message", async (message) => {
                 const heroRequested = findNameByAlias(args[2 + i], "hero");
                 const statData = findSingleData(heroRequested, statRequested, "stat");
                 if (statData != "nosuchdata") {
-                    dataString += "\n" + heroRequested + "'s " + capitalize(statRequested) + ": " + statData;
+                    dataString += `\n${heroRequested}'s ${capitalize(statRequested)}: ${statData}`;
                 } else {
-                    dataString += "\n" + "Unknown Hero!";
+                    dataString += "\nUnknown Hero!";
                 }
             }
 
@@ -893,7 +894,14 @@ bot.on("message", async (message) => {
     else if (message.content.startsWith(config.prefix + "skills")) {
         if (args.length >= 2) {
             for (let i = 1; i <= 5; i++) {
-                await message.channel.send(findSkillData(args[1], i), { files: [findSkillImage(args[1], i)] });
+                const heroSkillDescription = findSkillData(args[1], i);
+                const heroSkillImage = findSkillImage(args[1], i);
+                if ((heroSkillDescription !== "nosuchdata") && (heroSkillImage !== "nosuchdata")) {
+                    await message.channel.send(heroSkillDescription, { files: [heroSkillImage] });
+                } else {
+                    message.channel.send("Invalid request!");
+                    break;
+                }
             }
         } else {
             message.channel.send("Invalid request!");
@@ -902,7 +910,13 @@ bot.on("message", async (message) => {
 
     else if (message.content.startsWith(config.prefix + "skill")) {
         if (args.length >= 3) {
-            message.channel.send(findSkillData(args[1], args[2]), { files: [findSkillImage(args[1], args[2])] });
+            const heroSkillDescription = findSkillData(args[1], args[2]);
+            const heroSkillImage = findSkillImage(args[1], args[2]);
+            if ((heroSkillDescription !== "nosuchdata") && (heroSkillImage !== "nosuchdata")) {
+                await message.channel.send(heroSkillDescription, { files: [heroSkillImage] });
+            } else {
+                message.channel.send("Unknown hero!");
+            }
         } else {
             message.channel.send("Invalid request!");
         }
@@ -917,10 +931,6 @@ bot.on("message", async (message) => {
         const currentSets = findFeaturedSets(dateRequested);
         message.channel.send(currentSets);
     } // Searches for current set rotation
-
-    else if (message.content.startsWith(config.prefix + "triviaquestions")) {
-        message.channel.send(`There are currently ${triviaTable.length - 1} trivia questions available`);
-    } // Finds number of trivia questions
 
     else if ((message.content.startsWith(config.prefix + "trivia")) && (!triviaChannels.has(message.channel.id))) {
         if (message.channel.type === "dm") {
