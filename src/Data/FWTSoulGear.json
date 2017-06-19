@@ -210,7 +210,7 @@
 	{
 		"Name": "Fruel",
 		"Soul Gear Weapon": "Attack: 380, Counter Damage: 600",
-		"Weapon Effect": "Additional skill effect: decreases damage taken by 50% for 1 turn for Skill 3",
+		"Weapon Effect": "Decreases skill MP cost by 14. Increases skill damage by 9.6% for Skill 3 for Skill 3",
 		"Soul Gear Wings": "Defense: 400, Counter Rate: 200",
 		"Wings Effect": "Increases skill damage by 40% for Skill 1",
 		"2pc Effect": "Increase resistance by 5%"
