@@ -72,8 +72,76 @@
         "Answer": "Raizel"
     },
     {
-        "Question": "Which hero is the following quote from? \"This is easy! Haha! Anyone can do this.\"",
+        "Question": "Which hero is the following quote from? \"My brethren...They are asleep now, but they will awaken some day...\"",
+        "Answer": "Serendi"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"Ehh...I want a girlfriend too...\"",
+        "Answer": "Rage"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"Did you see that, Serendi? What do you think? Don't you think my shooting stance is awesome?\"",
+        "Answer": "Rage"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"When we dragons make a vow, we never break it. Ever.\"",
+        "Answer": "Celestial"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"Lord, how do you like your portrait?\"",
+        "Answer": "Taehwa"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"Marriage? Ha...That was the biggest mistake of my life.\"",
         "Answer": "Nirvana"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"Don't worry! I will protect you with my life!\"",
+        "Answer": "Chris"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"An elf? Here? Who's she? Does she also use bows?\"",
+        "Answer": "Mercedes"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"Will I be able to go back to my old self?\"",
+        "Answer": "Jack"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"Let's settle this, brother.\"",
+        "Answer": "Jin Kisaragi"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"It's about time for tea.\"",
+        "Answer": "Rachel"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"It's inconvenient not to have the Crystal Garden. Maybe I should modify the expedition's airship...\"",
+        "Answer": "Phantom"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"Hehehe...Proper specimens for proper experimants...\"",
+        "Answer": "Gillan"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"If something has to be done, then I'd rather do it myself than wait for someone else.\"",
+        "Answer": "Eunwol"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"Don't look for me when the sun's still up...I can't stand sunlight...\"",
+        "Answer": "Nox"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"I don't have time for you.\"",
+        "Answer": "Jin Kisaragi"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"Money! Power! Don't all human beings desire them? Hehehehe.\"",
+        "Answer": "Dolores"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"Hmpf, I'm not fooling around.\"",
+        "Answer": "Ragna"
     },
     {
         "Question": "Which hero is the following quote from? \"Hunting?...I don't feel like it either. Is there anyone who can donate blood?\"",
