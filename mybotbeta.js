@@ -597,7 +597,7 @@ bot.on("message", async (message) => {
     logger.logFrom(message.channel, 1, `[command: ${args[0]}]`);
 
     if (message.content.startsWith(config.prefix + "ping")) {
-        message.channel.send(`pong! [Response time: ${bot.ping}"ms]`);
+        message.channel.send(`pong! [Response time: ${bot.ping}ms]`);
     } // Bot testing
 
 
