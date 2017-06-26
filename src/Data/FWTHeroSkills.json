@@ -132,11 +132,11 @@
         "1MPcost": 15,
         "1GeneCost": 340,
 
-        "2": "**Who Am I?**:\nPunishes enemies in range for not answering her riddle correctly. Deals damage at [114% ~ 156.3%] Attack with a [15% ~ 60%] chance of Confusion for 1 turns If ally Spooky is on the battlefield, [1000 ~ 2080] enemy Defense is ignored.",
+        "2": "**Who Am I?**:\nPunishes enemies in range for not answering her riddle correctly. Deals damage at [114% ~ 156.3%] Attack with a [15% ~ 60%] chance of Confusion for 1 turn If ally Spooky is on the battlefield, [1000 ~ 2080] enemy Defense is ignored.",
         "2MPcost": 73,
         "2GeneCost": 1020,
 
-        "3": "**A Punishment for Bad Children**:\nA detonation of cold energy that hits enemies in its range at [141% ~ 193.2%] Attack. This skil's Final Power increases by [6% ~ 24%] against Paper-type enemies. If ally Spooky is on the battlefield, this skill creates a [35% ~ 80%] chance of Stunning enemies in range for 1 turns.",
+        "3": "**A Punishment for Bad Children**:\nA detonation of cold energy that hits enemies in its range at [141% ~ 193.2%] Attack. This skil's Final Power increases by [6% ~ 24%] against Paper-type enemies. If ally Spooky is on the battlefield, this skill creates a [35% ~ 80%] chance of Stunning enemies in range for 1 turn.",
         "3MPcost": 152,
         "3GeneCost": 1360,
 
@@ -506,20 +506,20 @@
     {
         "Name": "Gillan",
 
-        "1": "**Lilid's Pheromone**:\n",
+        "1": "**Lilid's Pheromone**:\nThrows a potion made of Lilid's Pheromone, frogs, and centipedes. Inflicts damage equal to [97% ~ 133%] of Attack and heals oneself by [25% ~ 34%] of Attack.",
         "1MPcost": 15,
-        "1GeneCost": 0,
+        "1GeneCost": 180,
 
-        "2": "**Hero's Essence**:\n",
-        "2MPcost": 0,
-        "2GeneCost": 0,
+        "2": "**Hero's Essence**:\nThrows a potion full of ancient energy to restore HP equal to [124% ~ 169.9%] of attack damage to allies other than the user. For 2 turns, increases Crit Rate by [600 ~ 1500] and Attack by [150 ~ 825].",
+        "2MPcost": 86,
+        "2GeneCost": 360,
 
-        "3": "**Poisonous Madrake**:\n",
-        "3MPcost": 0,
-        "3GeneCost": 0,
+        "3": "**Poisonous Madrake**:\nThrows a potion made of ground mandrake. The target takes [145% ~ 199%] damage of Attack and has [30% ~ 75%] chance to be Disarmed for 1 turn.",
+        "3MPcost": 134,
+        "3GeneCost": 720,
 
-        "4": "**Doping**:\n",
-        "4GeneCost": 0,
+        "4": "**Doping**:\nTakes drugs to increase Defense by [2500 ~ 3400] when HP falls to 25% or below.",
+        "4GeneCost": 360,
 		
 		"5": "Gillan currently has no awakening skill!",
         "5GeneCost": 0
@@ -527,19 +527,19 @@
     {
         "Name": "Hella",
 
-        "1": "**Scold**:\n",
+        "1": "**Scold**:\nInflicts damage equal to [95% ~ 130.1%] of Attack on enemies in set range.",
         "1MPcost": 15,
         "1GeneCost": 0,
 
-        "2": "**You're Fired!**:\n",
+        "2": "**You're Fired!**:\nInflicts damage equal to [114% ~ 156.3%] of Attack on enemies in a set range, and stuns then for 1 turn with a [30% ~ 75%] chance.",
         "2MPcost": 0,
         "2GeneCost": 0,
 
-        "3": "**Promotion**:\n",
+        "3": "**Promotion**:\nRecovers the MP of one ally by [10 ~ 28]. For 2 turns, increases the ally's Defense by [2000 ~ 2720], their Attack by [300 ~ 1650], and Movement by 2.",
         "3MPcost": 0,
         "3GeneCost": 0,
 
-        "4": "**Archmage's Assistant**:\n",
+        "4": "**Archmage's Assistant**:\nPower received from an archmage. It recovers the MP of allies by [5 ~ 18] every turn.",
         "4GeneCost": 0,
 		
 		"5": "Hella currently has no awakening skill!",
@@ -548,20 +548,20 @@
     {
         "Name": "Henry",
 
-        "1": "**Gatling Gun**:\n",
+        "1": "**Gatling Gun**:\nShoots a Gatling gun at [99% ~ 135.9%] Attack. Each enemy hit temporarily increases the character's Attack by [3% ~ 7.5%].",
         "1MPcost": 15,
-        "1GeneCost": 0,
+        "1GeneCost": 243,
 
-        "2": "**Genocidal Blow**:\n",
+        "2": "**Genocidal Blow**:\nHits enemies in front at [119% ~ 163.1%] Attack. If there are 2 or more enemies in a 1-tile range around Henry, this skill inflicts [15% ~ 24%] more damage.",
         "2MPcost": 0,
-        "2GeneCost": 0,
+        "2GeneCost": 495,
 
-        "3": "**Drill Dash**:\n",
+        "3": "**Drill Dash**:\nDrills into enemies, inflicts damage at [151% ~ 206.8%] Attack, and sends Henry to the farthest tile in range.",
         "3MPcost": 0,
-        "3GeneCost": 0,
+        "3GeneCost": 990,
 
-        "4": "**Hawk Eye**:\n",
-        "4GeneCost": 0,
+        "4": "**Hawk Eye**:\nIf there are 2 or more enemies in a 1-tile range around Henry, his Defense Increases by [1500 ~ 3750] and Attack by [10% ~ 19%].",
+        "4GeneCost": 495,
 		
 		"5": "Henry currently has no awakening skill!",
         "5GeneCost": 0
@@ -569,40 +569,40 @@
     {
         "Name": "Hongyeom",
 
-        "1": "**Double Strike**:\n",
+        "1": "**Double Strike**:\nSwings fiery red cherry blossoms and camelias, attacking enemies at [98% ~ 134%] Attack. Also causes DoT damage if she (Hongyeom) started the turn on Lava terrain, attacking them at [40% ~ 58.9%] for 2 turns.",
         "1MPcost": 15,
-        "1GeneCost": 0,
+        "1GeneCost": 340,
 
-        "2": "**Fiery Wind**:\n",
-        "2MPcost": 0,
-        "2GeneCost": 0,
+        "2": "**Fiery Wind**:\nGenerates heat, attacking enemies at [106% ~ 145.6%] Attack and ignoring [1250 ~ 3500] Defense. This skill's Final Power increases by [8% ~ 17%] if Hongyeom is on Lava terrain.",
+        "2MPcost": 76,
+        "2GeneCost": 680,
 
-        "3": "**Rising Pheonix Slash**:\n",
-        "3MPcost": 0,
-        "3GeneCost": 0,
+        "3": "**Rising Pheonix Slash**:\nA pillar of hellfire slams into the ground, attacking enemies at [130% ~ 178.6%] Attack and turning where its heat reaches (All tiles in this skill's range) into Lava terrain for 2 turns. Additionally Hongyeom inflicts [11% ~ 20%] higher Critical Damage while on Lava terrain for 2 turns.",
+        "3MPcost": 150,
+        "3GeneCost": 1360,
 
-        "4": "**Vermillion Energy**:\n",
-        "4GeneCost": 0,
+        "4": "**Vermillion Energy**:\nHongyeom achieves [2800 ~ 4600] higher Crit Rate and [13% ~ 40%] more Critical Damage while on a Lava terrain. Also, she recovers [7.5% ~ 12%] Max HP if she starts a turn on Lava terrain.",
+        "4GeneCost": 680,
 		
-		"5": "**Full Moon Javelins**:\n",
-        "5GeneCost": 0
+		"5": "**Full Moon Javelins**:\nDrops moon-kissed red cherry blossoms and camelias, attacking enemies at [546% ~ 750.3%] Attack and Burning on them for 2 turns. Burned targets inflict damage on all allies in a 1-tile range at [143% ~ 196.1%] Attack at the beginning of each turn.",
+        "5GeneCost": 5100
     },
     {
         "Name": "Ian",
 
-        "1": "**Kitty Hunt!**:\n",
+        "1": "**Kitty Hunt!**:\nShoots a fishing arrow and inflicts damage equal to [97% ~ 133%] of Attack. If Ian cooperates with allies, this skill's Final Power increases by [?% ~ 10%].",
         "1MPcost": 15,
         "1GeneCost": 18,
 
-        "2": "**Cat-and-mouse!**:\n",
-        "2MPcost": 0,
+        "2": "**Cat-and-mouse!**:\nInflicts [119% ~ 163.1%] damage of Attack with multi-shot. Inflicts additional damage of [5% ~ 32%] if target is Scissor-Type.",
+        "2MPcost": 62,
         "2GeneCost": 37,
 
-        "3": "**Shark Bullet!**:\n",
-        "3MPcost": 0,
+        "3": "**Shark Bullet!**:\nIan rides a shark and penetrates enemies, inflicting damage at [147% ~ 201.9%] Attack and decreasing their Defense by [3000 ~ 4080] for 2 turns. Also casts Weakening, making the enemies susceptible to [5% ~ 14%] more damage.",
+        "3MPcost": 117,
         "3GeneCost": 74,
 
-        "4": "**Multi-kill!**:\n",
+        "4": "**Multi-kill!**:\nCats are agile. Dodge increases by [800 ~ 3200]. Also, if there are no enemies within a 1-tile range at the beginning of his turn,  Ian's Attack increases by 10% and Movement by 1 for 1 turn.",
         "4GeneCost": 45,
 		
 		"5": "Ian currently has no awakening skill!",
@@ -611,41 +611,41 @@
     {
         "Name": "Ildo",
 
-        "1": "**Aerial Slash**:\n",
+        "1": "**Aerial Slash**:\nQuickly draws sword, attacking an enemy at [101% ~ 138.8%] Attack and decreasing its Attack by [550 ~ 1000] for 1 turn.",
         "1MPcost": 15,
-        "1GeneCost": 0,
+        "1GeneCost": 340,
 
-        "2": "**Flying Sword: Butterfly**:\n",
-        "2MPcost": 0,
-        "2GeneCost": 0,
+        "2": "**Flying Sword: Butterfly**:\nThe energy of the abyss rolls in, attacking enemies at [114% ~ 156.3%] Attack and causing additional [2200 ~ 13000] Defense-ignoring damage per Ildo's Charge buff. this skill consumes all of Ildo's Charge buffs.",
+        "2MPcost": 66,
+        "2GeneCost": 680,
 
-        "3": "**Last Resort**:\n",
-        "3MPcost": 0,
-        "3GeneCost": 0,
+        "3": "**Last Resort**:\nInflicts [131% ~ 176%] of Attack damage on enemies and creates a protective pentacle, increasing the character's Defense by [1300 ~ 4000], and allowing it to take [30% ~ 39%] damage for allies within this skill's range for 2 turns.",
+        "3MPcost": 134,
+        "3GeneCost": 1360,
 
-        "4": "**Art of Endurance**:\n",
-        "4GeneCost": 0,
+        "4": "**Art of Endurance**:\nIldo gains 1 Charge buff every time he is attacked. This Charge buff lasts for 2 turns and stacks up to 10 times. Every time an ally dies, the maximum amount of damage Ildo can take from enemy attacks is set to [90000 ~ 81000] for 1 turn.",
+        "4GeneCost": 680,
 		
-		"5": "**Flash Sword**:\nAttacks enemies in a straight line at [535% ~ ?%] Attack and causes Lethal Wound for 2 turns. Lethal Wound inflicts as much damage as [55% ~ ?%] Attack for every tile that it's target moved at the end of the turn. (Note that this skill's target range is 5 tiles, but it's effect range is 20 tiles)",
+		"5": "**Flash Sword**:\nAttacks enemies in a straight line at [535% ~ 734.8%%] Attack and causes Lethal Wound for 2 turns. Lethal Wound inflicts as much damage as [55% ~ 79%] Attack for every tile that it's target moved at the end of the turn. (Note that this skill's target range is 5 tiles, but it's effect range is 20 tiles)",
         "5GeneCost": 5100
     },
     {
         "Name": "Jack",
 
-        "1": "**Hahaha!**:\nInflicts damage at [?% ~ 136.9%] Attack. Casts Life-steal effect on the enemy for 1 turn which makes allies recover 23% of the damage they deal to the enemy as HP.",
+        "1": "**Hahaha!**:\nInflicts damage at [100% ~ 136.9%] Attack. Casts Life-steal effect on the enemy for 1 turn which makes allies recover 23% of the damage they deal to the enemy as HP.",
         "1MPcost": 15,
-        "1GeneCost": 0,
+        "1GeneCost": 90,
 
-        "2": "**Bite'em All!**:\nBites the enemy inflicting damage equal to [?% ~ 165%] of Attack, and continues to inflict [?% ~ 51%] DoT damage for 3 turns. Jack recovers 30% of his Max HP.",
+        "2": "**Bite'em All!**:\nBites the enemy inflicting damage equal to [120% ~ 165%] of Attack, and continues to inflict [15% ~ 51%] DoT damage for 3 turns. Jack recovers 30% of his Max HP.",
         "2MPcost": 0,
-        "2GeneCost": 0,
+        "2GeneCost": 180,
 
-        "3": "**Scratch Storm!**:\nSwipes multiple enemies in front of him. Inflicts [?% ~ 206.8%] of Attack damage, and deals additional damage at 19.4% of enemy's Max HP.",
+        "3": "**Scratch Storm!**:\nSwipes multiple enemies in front of him. Inflicts [151% ~ 206.8%] of Attack damage, and deals additional damage at 19.4% of enemy's Max HP.",
         "3MPcost": 0,
-        "3GeneCost": 0,
+        "3GeneCost": 360,
 
-        "4": "**Hideous Strength!**:\nWerewolf Jack recovers HP by 19% of the damage inflicted. If Jack has 50% or higher HP, increases chance to be attacked by 30% and Movement by 1.",
-        "4GeneCost": 0,
+        "4": "**Hideous Strength!**:\nWerewolf Jack recovers HP by [10% ~ 19%] of the damage inflicted. If Jack has 50% or higher HP, increases chance to be attacked by [12% ~ 30%] and Movement by 1.",
+        "4GeneCost": 180,
 		
 		"5": "**GRRR!**:\nJack, having awakened to the power of the full moon, attacks enemies in his range at [546% ~ 750.3%] Attack with a [55% ~ 100%] chance of Confusing them for 2 turns. Also, decreases healing effects for his target for 2 turns.",
         "5GeneCost": 0
@@ -653,23 +653,23 @@
     {
         "Name": "Jenny",
 
-        "1": "**Wild Slug**:\n",
+        "1": "**Wild Slug**:\nShoots a shotgun blast that deals damage equal to [97% ~ 133%] of Attack, and inflicts additional DoTdamage equal to [10% ~ 41.5%] of Attack for 2 turns with a [20% ~ 47%] chance.",
         "1MPcost": 15,
-        "1GeneCost": 0,
+        "1GeneCost": 78,
 
-        "2": "**Straight Chew**:\n",
-        "2MPcost": 0,
-        "2GeneCost": 0,
+        "2": "**Straight Chew**:\nJenny inflicts damage equal to [118% ~ 162.1%] of her Attack with her signature skill and straight line shot, and stuns the enemy with a [30% ~ 40.8%] chance for 1 turn.",
+        "2MPcost": 78,
+        "2GeneCost": 160,
 
-        "3": "**Tainted Love**:\n",
-        "3MPcost": 0,
-        "3GeneCost": 0,
+        "3": "**Tainted Love**:\nDetonates an air burst of special dynamite and inflicts [124% ~ 169.9%] damage of Attack. Increases Jenny's Crit Rate by [4000 ~ 7600] for 1 turn.",
+        "3MPcost": 176,
+        "3GeneCost": 315,
 
-        "4": "**Cowgirl**:\n",
-        "4GeneCost": 0,
+        "4": "**Cowgirl**:\nWhen there are 2 or more Paper-type members in the party (Jenny counts as one), Jenny's HP and Critical Damage increase by [5% ~ 9.5%] and [5% ~ 50%].",
+        "4GeneCost": 160,
 		
-		"5": "**Super Straight Chu~**:\n",
-        "5GeneCost": 0
+		"5": "**Super Straight Chu~**:\nJenny shoots a special piercing bullet, attacking enemies in a straight line at [?% ~ ?%] Attack and inflicting [? ~ ?] Defense-ignoring damage. If 2 or more enemies are hit, this skill additionally inflicts [? ~ ?] damage, if 4 or more enemies are hit, another [? ~ ?] damage is added to the damage bonus.",
+        "5GeneCost": 1065
     },
     {
         "Name": "Jin",
@@ -721,18 +721,18 @@
         "1GeneCost": 10,
 
         "2": "**Flame Burst**:\n",
-        "2MPcost": 0,
+        "2MPcost": 55,
         "2GeneCost": 12,
 
         "3": "**Battle Cry**:\n",
-        "3MPcost": 0,
+        "3MPcost": 114,
         "3GeneCost": 32,
 
         "4": "**Making of a Hero**:\nIf HP is above 80%, increases Attack by 20% and decreases damage received by 10%",
         "4GeneCost": 16,
 		
 		"5": "**Wrath of Mother Nature**:\n",
-        "5GeneCost": 0
+        "5GeneCost": 70
     },
     {
         "Name": "Kitty",
@@ -763,11 +763,11 @@
         "1GeneCost": 0,
 
         "2": "**Frigid Twister**:\n",
-        "2MPcost": 0,
+        "2MPcost": 80,
         "2GeneCost": 0,
 
         "3": "**Eater of Souls**:\n",
-        "3MPcost": 0,
+        "3MPcost": 180,
         "3GeneCost": 0,
 
         "4": "**Berserker**:\n",
@@ -784,11 +784,11 @@
         "1GeneCost": 0,
 
         "2": "**Boil Blood**:\n",
-        "2MPcost": 0,
+        "2MPcost": 62,
         "2GeneCost": 0,
 
         "3": "**Destructive Storm**:\n",
-        "3MPcost": 0,
+        "3MPcost": 130,
         "3GeneCost": 0,
 
         "4": "**Two-faced Berserker**:\n",
@@ -826,11 +826,11 @@
         "1GeneCost": 0,
 
         "2": "**Psychic Smash**:\n",
-        "2MPcost": 0,
+        "2MPcost": 84,
         "2GeneCost": 0,
 
         "3": "**Ruin**:\n",
-        "3MPcost": 0,
+        "3MPcost": 154,
         "3GeneCost": 0,
 
         "4": "**Invincible Lee**:\n",
@@ -851,7 +851,7 @@
         "2GeneCost": 0,
 
         "3": "**Head voice**:\n",
-        "3MPcost": 0,
+        "3MPcost": 116,
         "3GeneCost": 0,
 
         "4": "**Fan Service**:\n",
@@ -893,7 +893,7 @@
         "2GeneCost": 0,
 
         "3": "**Dusting**:\n",
-        "3MPcost": 0,
+        "3MPcost": 106,
         "3GeneCost": 0,
 
         "4": "**Nasty!**:\n",
@@ -914,7 +914,7 @@
         "2GeneCost": 0,
 
         "3": "**Pwaaaaaakkk**:\n",
-        "3MPcost": 0,
+        "3MPcost": 128,
         "3GeneCost": 0,
 
         "4": "**Woowaawwkk**:\n",
@@ -931,11 +931,11 @@
         "1GeneCost": 0,
 
         "2": "**Ray of Redemption**:\n",
-        "2MPcost": 0,
+        "2MPcost": 62,
         "2GeneCost": 0,
 
         "3": "**Armageddon**:\n",
-        "3MPcost": 0,
+        "3MPcost": 128,
         "3GeneCost": 0,
 
         "4": "**Equilibrium**:\n",
@@ -952,11 +952,11 @@
         "1GeneCost": 0,
 
         "2": "**Hymn for Zephyrus**:\n",
-        "2MPcost": 0,
+        "2MPcost": 70,
         "2GeneCost": 0,
 
         "3": "**Hymn for Demeter**:\n",
-        "3MPcost": 0,
+        "3MPcost": 126,
         "3GeneCost": 0,
 
         "4": "**Hymn for Ares**:\n",
@@ -973,11 +973,11 @@
         "1GeneCost": 0,
 
         "2": "**Spikes Royale**:\n",
-        "2MPcost": 0,
+        "2MPcost": 68,
         "2GeneCost": 0,
 
         "3": "**Enlil's Wrath**:\n",
-        "3MPcost": 0,
+        "3MPcost": 138,
         "3GeneCost": 0,
 
         "4": "**Updraft**:\n",
@@ -1040,7 +1040,7 @@
         "2GeneCost": 0,
 
         "3": "**Yin Yang & Five Elements**:\n",
-        "3MPcost": 0,
+        "3MPcost": 129,
         "3GeneCost": 0,
 
         "4": "**Summon Spirit**:\n",
@@ -1099,7 +1099,7 @@
         "1GeneCost": 0,
 
         "2": "**Vengeance**:\n",
-        "2MPcost": 0,
+        "2MPcost": 72,
         "2GeneCost": 0,
 
         "3": "**Nirvana's Power**:\n",
@@ -1120,11 +1120,11 @@
         "1GeneCost": 0,
 
         "2": "**Zero-Gun: Fennir**:\n",
-        "2MPcost": 0,
+        "2MPcost": 65,
         "2GeneCost": 0,
 
         "3": "**Valkyrie Veil**:\n",
-        "3MPcost": 0,
+        "3MPcost": 118,
         "3GeneCost": 0,
 
         "4": "**Arcus Diabolus: Bolverk**:\n",
@@ -1162,7 +1162,7 @@
         "1GeneCost": 0,
 
         "2": "**Elusive**:\n",
-        "2MPcost": 0,
+        "2MPcost": 72,
         "2GeneCost": 0,
 
         "3": "**Scatter Cards**:\n",
@@ -1183,11 +1183,11 @@
         "1GeneCost": 0,
 
         "2": "**Skill Swipe**:\n",
-        "2MPcost": 0,
+        "2MPcost": 66,
         "2GeneCost": 0,
 
         "3": "**Carte Rose Finale**:\n",
-        "3MPcost": 0,
+        "3MPcost": 98,
         "3GeneCost": 0,
 
         "4": "**Skill Management**:\n",
@@ -1229,7 +1229,7 @@
         "2GeneCost": 0,
 
         "3": "**Panic**:\n",
-        "3MPcost": 0,
+        "3MPcost": 116,
         "3GeneCost": 0,
 
         "4": "**Iron Will**:\n",
@@ -1246,11 +1246,11 @@
         "1GeneCost": 0,
 
         "2": "**Tiny-Lobella**:\n",
-        "2MPcost": 0,
+        "2MPcost": 71,
         "2GeneCost": 0,
 
         "3": "**Baden-Baden Lily**:\n",
-        "3MPcost": 0,
+        "3MPcost": 146,
         "3GeneCost": 0,
 
         "4": "**Slipheed**:\n",
@@ -1288,11 +1288,11 @@
         "1GeneCost": 0,
 
         "2": "**Carnage Scissors**:\n",
-        "2MPcost": 0,
+        "2MPcost": 59,
         "2GeneCost": 0,
 
         "3": "**Devoured by Darkness**:\n",
-        "3MPcost": 0,
+        "3MPcost": 105,
         "3GeneCost": 0,
 
         "4": "**Eater of Souls**:\n",
@@ -1351,11 +1351,11 @@
         "1GeneCost": 0,
 
         "2": "**Dog Eat Dog**:\n",
-        "2MPcost": 0,
+        "2MPcost": 98,
         "2GeneCost": 0,
 
         "3": "**Let's Fight!**:\n",
-        "3MPcost": 0,
+        "3MPcost": 149,
         "3GeneCost": 0,
 
         "4": "**Survival of the Fittest**:\n",
@@ -1372,11 +1372,11 @@
         "1GeneCost": 0,
 
         "2": "**I Am Smart!**:\n",
-        "2MPcost": 0,
+        "2MPcost": 71,
         "2GeneCost": 0,
 
         "3": "**Pick Your Destiny!**:\n",
-        "3MPcost": 0,
+        "3MPcost": 120,
         "3GeneCost": 0,
 
         "4": "**I Feel So Lucky Today!**:\n",
@@ -1393,11 +1393,11 @@
         "1GeneCost": 0,
 
         "2": "**Thorn Armor**:\n",
-        "2MPcost": 0,
+        "2MPcost": 77,
         "2GeneCost": 0,
 
         "3": "**Pretty Deadly**:\n",
-        "3MPcost": 0,
+        "3MPcost": 125,
         "3GeneCost": 0,
 
         "4": "**Natural Affinity**:\n",
@@ -1414,11 +1414,11 @@
         "1GeneCost": 0,
 
         "2": "**Aqua Blast**:\n",
-        "2MPcost": 0,
+        "2MPcost": 71,
         "2GeneCost": 0,
 
         "3": "**Circling Storm**:\n",
-        "3MPcost": 0,
+        "3MPcost": 154,
         "3GeneCost": 0,
 
         "4": "**Elemental Purification**:\n",
