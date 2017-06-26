@@ -674,20 +674,20 @@
     {
         "Name": "Jin",
 
-        "1": "**Fist**:\n",
+        "1": "**Fist**:\nAttacks the enemy to inflict damage equal to [100% ~ 136.9%] of Attack and Increase movement by 1 for 2 turn(s). Up to 3 effects can be cumulated.",
         "1MPcost": 15,
-        "1GeneCost": 0,
+        "1GeneCost": 225,
 
-        "2": "**Punt**:\n",
+        "2": "**Punt**:\nInflicts damage equal to [124% ~ 169.9%] of Attack with a drop kick. Also casts Weakening for 2 turns, causing the affected enemy to take [5% ~ 27.5%] additional damage.",
         "2MPcost": 0,
-        "2GeneCost": 0,
+        "2GeneCost": 450,
 
-        "3": "**Cruelty**:\n",
+        "3": "**Cruelty**:\nAssaults a target and surrounding enemies, inflicting damage at [151% ~ 206.8%] Attack and temporarily achieving a [1000 ~ 4600] higher Crit Rate. Cooperative attacks increase this skill's damage by [10% ~ 28%].",
         "3MPcost": 0,
-        "3GeneCost": 0,
+        "3GeneCost": 900,
 
-        "4": "**Sharpness**:\n",
-        "4GeneCost": 0,
+        "4": "**Sharpness**:\nEach time Jin cooperatives with allies, her Crit Rate increases by [500 ~ 1400] and Critical Damage by [4% ~ 8.5%]. Increases Crit Rate by up to 7000 and Critical Damage by up to 30%.",
+        "4GeneCost": 225,
 		
 		"5": "Jin currently has no awakening skill!",
         "5GeneCost": 0
@@ -695,20 +695,20 @@
     {
         "Name": "Jin Kisaragi",
 
-        "1": "**Dual Ice Strike**:\n",
+        "1": "**Dual Ice Strike**:\nQuickly draws his sword, attacking enemies in his range at [102% ~ 139.8%] Attack. This skill has a [35% ~ 80%] chance to Stun enemies with reduced Movement for 1 turn.",
         "1MPcost": 15,
-        "1GeneCost": 0,
+        "1GeneCost": 270,
 
-        "2": "**Frost Fang**:\n",
+        "2": "**Frost Fang**:\nShoots frigid spirit swords at enemies in a straight line, attacking at [118% ~ 162.1%] Attack with a [35% ~ 80%] chance of decreasing their recovery by 50% for 1 turn.",
         "2MPcost": 0,
-        "2GeneCost": 0,
+        "2GeneCost": 540,
 
         "3": "**Arctic Dungeon**:\n",
         "3MPcost": 0,
-        "3GeneCost": 0,
+        "3GeneCost": 1080,
 
-        "4": "**Snow Flower Storm**:\n",
-        "4GeneCost": 0,
+        "4": "**Snow Flower Storm**:\nAt the beginning of each turn, rapidly slashes with his sword, attacking enemies in a 1-tile (2-tile with SG)range at [74% ~ 101%] Attack, with a [35% ~ 80%] chance of decreasing their Movement by 1 for 1 turn.",
+        "4GeneCost": 540,
 		
 		"5": "Jin Kisaragi currently has no awakening skill!",
         "5GeneCost": 0
@@ -716,41 +716,41 @@
     {
         "Name": "Kai",
 
-        "1": "**Power Slash**:\n",
+        "1": "**Power Slash**:\nSlashes at an enemy, inflicting damage equal to [103% ~ 148%] Attack, with a [35% ~ 75%] chance of Weakening the enemy for 1 turn, making it susceptible to [4% ~ 12%] more damage.",
         "1MPcost": 15,
         "1GeneCost": 10,
 
-        "2": "**Flame Burst**:\n",
+        "2": "**Flame Burst**:\nAttacks enemies with the force of a fire dragon at [121% ~ 166%] Attack and Weakens the selected target for 2 turns, making it susceptible to [6% ~ 24%] more damage.",
         "2MPcost": 55,
         "2GeneCost": 12,
 
-        "3": "**Battle Cry**:\n",
+        "3": "**Battle Cry**:\nIgnores enemies' Defense by [1500 ~ 4200] and hits them at [146% ~ 200%] Attack with the force of thunder. Using this skill on Lava tile restore [6.5% ~ 20%] of Kai's Max HP.",
         "3MPcost": 114,
         "3GeneCost": 32,
 
         "4": "**Making of a Hero**:\nIf HP is above 80%, increases Attack by 20% and decreases damage received by 10%",
         "4GeneCost": 16,
 		
-		"5": "**Wrath of Mother Nature**:\n",
+		"5": "**Wrath of Mother Nature**:\nThe energy of thunder and lava ignores [3300 ~ 6000] Defense of enemies within its range and attacks them at [524% ~ 720.2%] Attack. Additionally creates a chance of Stunning them for 1 turn ([55% ~ 100%] chance for its target and [35% ~ 80%] for all the others within its range).",
         "5GeneCost": 70
     },
     {
         "Name": "Kitty",
 
-        "1": "**TX-01**:\n",
+        "1": "**TX-01**:\nDeals damage at [99% ~ 135.9%] of attack on enemies and additionally decreases enemies' Movement by 2 if they are under DoT effect at a [46% ~ 100%] chance for 1 turn.",
         "1MPcost": 15,
-        "1GeneCost": 0,
+        "1GeneCost": 243,
 
-        "2": "**Cannon**:\n",
+        "2": "**Cannon**:\nSummons a laser cannon and deals damage equal to [116% ~ 159.2%] of Attack and Stuns enemies that are under DoT effect for 1 turn at a [35% ~ 80%] chance.",
         "2MPcost": 0,
-        "2GeneCost": 0,
+        "2GeneCost": 486,
 
-        "3": "**Napalm**:\n",
+        "3": "**Napalm**:\nSummons a rocket cannon and launches a napalm rocket dealing damage at [130% ~ 178.6%] of Attack and inflicts [20% ~ 60.5%] DoT damage for 2 turns. Also inflicts Weakening, causing enemies to take [6% ~ 19.5%] additional damage.",
         "3MPcost": 0,
-        "3GeneCost": 0,
+        "3GeneCost": 972,
 
-        "4": "**Master of Mechanics**:\n",
-        "4GeneCost": 0,
+        "4": "**Master of Mechanics**:\nKitty's skill damage increases by [1% ~ 5.5%] for every enemy in range. Additionally, Kitty recovers [6.5% ~ 20%] of its max HP every odd-number turn through auto-fix.",
+        "4GeneCost": 486,
 		
 		"5": "Kitty currently has no awakening skill!",
         "5GeneCost": 0
