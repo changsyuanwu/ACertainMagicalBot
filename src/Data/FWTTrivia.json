@@ -60,6 +60,10 @@
         "Answer": "2"
     },
     {
+        "Question": "How many Princesses are there in the New Elian Kingdom?",
+        "Answer": "2"
+    },
+    {
         "Question": "Which animal is Hongyeom the symbol for?",
         "Answer": "Bird"
     },
@@ -425,7 +429,7 @@
     },
     {
         "Question": "Which hero is the following quote from? \"Oh yeah! I forgot I was a cat!\"",
-        "Answer": "Iam"
+        "Answer": "Ian"
     },
     {
         "Question": "Which hero is the following quote from? \"Ian is a Cat.\"",
