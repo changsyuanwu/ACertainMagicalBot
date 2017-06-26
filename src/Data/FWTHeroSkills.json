@@ -647,7 +647,7 @@
         "4": "**Hideous Strength!**:\nWerewolf Jack recovers HP by 19% of the damage inflicted. If Jack has 50% or higher HP, increases chance to be attacked by 30% and Movement by 1.",
         "4GeneCost": 0,
 		
-		"5": "**Grrrr!!!!**:\n",
+		"5": "**GRRR!**:\nJack, having awakened to the power of the full moon, attacks enemies in his range at [546% ~ 750.3%] Attack with a [55% ~ 100%] chance of Confusing them for 2 turns. Also, decreases healing effects for his target for 2 turns.",
         "5GeneCost": 0
     },
     {
@@ -1199,526 +1199,526 @@
     {
         "Name": "Poni",
 
-        "1": "****:\n",
+        "1": "**Takedown**:\n",
         "1MPcost": 15,
         "1GeneCost": 0,
 
-        "2": "****:\n",
+        "2": "**Phoenix Breath**:\n",
         "2MPcost": 0,
         "2GeneCost": 0,
 
-        "3": "****:\n",
+        "3": "**Ascension**:\n",
         "3MPcost": 0,
         "3GeneCost": 0,
 
-        "4": "****:\n",
+        "4": "**Undying Flame**:\n",
         "4GeneCost": 0,
 		
-		"5": "****:\n",
+		"5": "Poni currently has no awakening skill!",
         "5GeneCost": 0
     },
     {
         "Name": "Raboff",
 
-        "1": "****:\n",
+        "1": "**Stomp**:\n",
         "1MPcost": 15,
         "1GeneCost": 0,
 
-        "2": "****:\n",
+        "2": "**Morale**:\n",
         "2MPcost": 0,
         "2GeneCost": 0,
 
-        "3": "****:\n",
+        "3": "**Panic**:\n",
         "3MPcost": 0,
         "3GeneCost": 0,
 
-        "4": "****:\n",
+        "4": "**Iron Will**:\n",
         "4GeneCost": 0,
 		
-		"5": "****:\n",
+		"5": "Raboff currently has no awakening skill!",
         "5GeneCost": 0
     },
     {
         "Name": "Rachel",
 
-        "1": "****:\n",
+        "1": "**George XIII**:\n",
         "1MPcost": 15,
         "1GeneCost": 0,
 
-        "2": "****:\n",
+        "2": "**Tiny-Lobella**:\n",
         "2MPcost": 0,
         "2GeneCost": 0,
 
-        "3": "****:\n",
+        "3": "**Baden-Baden Lily**:\n",
         "3MPcost": 0,
         "3GeneCost": 0,
 
-        "4": "****:\n",
+        "4": "**Slipheed**:\n",
         "4GeneCost": 0,
 		
-		"5": "****:\n",
+		"5": "Rachel currently has no awakening skill!",
         "5GeneCost": 0
     },
     {
         "Name": "Rage",
 
-        "1": "****:\n",
+        "1": "**Rising Shot**:\n",
         "1MPcost": 15,
         "1GeneCost": 0,
 
-        "2": "****:\n",
+        "2": "**Show Time**:\n",
         "2MPcost": 0,
         "2GeneCost": 0,
 
-        "3": "****:\n",
+        "3": "**Rapid Fire**:\n",
         "3MPcost": 0,
         "3GeneCost": 0,
 
-        "4": "****:\n",
+        "4": "**Blitz**:\n",
         "4GeneCost": 0,
 		
-		"5": "****:\n",
+		"5": "Rage currently has no awakening skill!",
         "5GeneCost": 0
     },
     {
         "Name": "Ragna",
 
-        "1": "****:\n",
+        "1": "**Nightmare Edge**:\n",
         "1MPcost": 15,
         "1GeneCost": 0,
 
-        "2": "****:\n",
+        "2": "**Carnage Scissors**:\n",
         "2MPcost": 0,
         "2GeneCost": 0,
 
-        "3": "****:\n",
+        "3": "**Devoured by Darkness**:\n",
         "3MPcost": 0,
         "3GeneCost": 0,
 
-        "4": "****:\n",
+        "4": "**Eater of Souls**:\n",
         "4GeneCost": 0,
 		
-		"5": "****:\n",
+		"5": "Ragna currently has no awakening skill!",
         "5GeneCost": 0
     },
     {
         "Name": "Raizel",
 
-        "1": "****:\n",
+        "1": "**Mind Control - Compulsion**:\n",
         "1MPcost": 15,
         "1GeneCost": 0,
 
-        "2": "****:\n",
+        "2": "**Blood Field**:\n",
         "2MPcost": 0,
         "2GeneCost": 0,
 
-        "3": "****:\n",
+        "3": "**Bloody Wings**:\n",
         "3MPcost": 0,
         "3GeneCost": 0,
 
-        "4": "****:\n",
+        "4": "**Noblesse's Judgment**:\n",
         "4GeneCost": 0,
 		
-		"5": "****:\n",
+		"5": "Raizel currently has no awakening skill!",
         "5GeneCost": 0
     },
     {
         "Name": "Raskreia",
 
-        "1": "****:\n",
+        "1": "**Ragnarok**:\n",
         "1MPcost": 15,
         "1GeneCost": 0,
 
-        "2": "****:\n",
+        "2": "**Blood Tornado**:\n",
         "2MPcost": 0,
         "2GeneCost": 0,
 
-        "3": "****:\n",
+        "3": "**Blood Field**:\n",
         "3MPcost": 0,
         "3GeneCost": 0,
 
-        "4": "****:\n",
+        "4": "***Lord's Authority*:\n",
         "4GeneCost": 0,
 		
-		"5": "****:\n",
+		"5": "Raskreia currently has no awakening skill!",
         "5GeneCost": 0
     },
     {
         "Name": "Reina",
 
-        "1": "****:\n",
+        "1": "**I'll Teach You a Lesson!**:\n",
         "1MPcost": 15,
         "1GeneCost": 0,
 
-        "2": "****:\n",
+        "2": "**Dog Eat Dog**:\n",
         "2MPcost": 0,
         "2GeneCost": 0,
 
-        "3": "****:\n",
+        "3": "**Let's Fight!**:\n",
         "3MPcost": 0,
         "3GeneCost": 0,
 
-        "4": "****:\n",
+        "4": "**Survival of the Fittest**:\n",
         "4GeneCost": 0,
 		
-		"5": "****:\n",
+		"5": "Jin currently has no awakening skill!",
         "5GeneCost": 0
     },
     {
         "Name": "Ryeogang",
 
-        "1": "****:\n",
+        "1": "**Ancestor's Blessing**:\n",
         "1MPcost": 15,
         "1GeneCost": 0,
 
-        "2": "****:\n",
+        "2": "**I Am Smart!**:\n",
         "2MPcost": 0,
         "2GeneCost": 0,
 
-        "3": "****:\n",
+        "3": "**Pick Your Destiny!**:\n",
         "3MPcost": 0,
         "3GeneCost": 0,
 
-        "4": "****:\n",
+        "4": "**I Feel So Lucky Today!**:\n",
         "4GeneCost": 0,
 		
-		"5": "****:\n",
+		"5": "**It's All Heaven's Will**:\n",
         "5GeneCost": 0
     },
     {
         "Name": "Serendi",
 
-        "1": "****:\n",
+        "1": "**Entangle**:\n",
         "1MPcost": 15,
         "1GeneCost": 0,
 
-        "2": "****:\n",
+        "2": "**Thorn Armor**:\n",
         "2MPcost": 0,
         "2GeneCost": 0,
 
-        "3": "****:\n",
+        "3": "**Pretty Deadly**:\n",
         "3MPcost": 0,
         "3GeneCost": 0,
 
-        "4": "****:\n",
+        "4": "**Natural Affinity**:\n",
         "4GeneCost": 0,
 		
-		"5": "****:\n",
+		"5": "Serendi currently has no awakening skill!",
         "5GeneCost": 0
     },
     {
         "Name": "Serphina",
 
-        "1": "****:\n",
+        "1": "**Treasure Aquarius**:\n",
         "1MPcost": 15,
         "1GeneCost": 0,
 
-        "2": "****:\n",
+        "2": "**Aqua Blast**:\n",
         "2MPcost": 0,
         "2GeneCost": 0,
 
-        "3": "****:\n",
+        "3": "**Circling Storm**:\n",
         "3MPcost": 0,
         "3GeneCost": 0,
 
-        "4": "****:\n",
+        "4": "**Elemental Purification**:\n",
         "4GeneCost": 0,
 		
-		"5": "****:\n",
+		"5": "Serphina currently has no awakening skill!",
         "5GeneCost": 0
     },
     {
         "Name": "Seira",
 
-        "1": "****:\n",
+        "1": "**Death Scythe**:\n",
         "1MPcost": 15,
         "1GeneCost": 0,
 
-        "2": "****:\n",
+        "2": "**Moonlight Slash**:\n",
         "2MPcost": 0,
         "2GeneCost": 0,
 
-        "3": "****:\n",
+        "3": "**Grim Reaper**:\n",
         "3MPcost": 0,
         "3GeneCost": 0,
 
-        "4": "****:\n",
+        "4": "**Death Sentence**:\n",
         "4GeneCost": 0,
 		
-		"5": "****:\n",
+		"5": "Seira currently has no awakening skill!",
         "5GeneCost": 0
     },
     {
         "Name": "Shark",
 
-        "1": "****:\n",
+        "1": "**Up the Anchor**:\n",
         "1MPcost": 15,
         "1GeneCost": 0,
 
-        "2": "****:\n",
+        "2": "**Hard Heart**:\n",
         "2MPcost": 0,
         "2GeneCost": 0,
 
-        "3": "****:\n",
+        "3": "**Shark-nado**:\n",
         "3MPcost": 0,
         "3GeneCost": 0,
 
-        "4": "****:\n",
+        "4": "**Pirate Freedom**:\n",
         "4GeneCost": 0,
 		
-		"5": "****:\n",
+		"5": "Shark currently has no awakening skill!",
         "5GeneCost": 0
     },
     {
         "Name": "Shu-Shu",
 
-        "1": "****:\n",
+        "1": "**First Aid**:\nInflicts damage at [89% ~ 122.3%] of Attack on enemies and heals allies for the same amount.",
         "1MPcost": 15,
-        "1GeneCost": 0,
+        "1GeneCost": 225,
 
-        "2": "****:\n",
-        "2MPcost": 0,
-        "2GeneCost": 0,
+        "2": "**Heart Attack**:\nUses a medical technique to penetrate the heart, attacking enemies at [102% ~ 139.8%] Attack and healing allies by [61% ~ 83.5%]. Increases Defense of affected allies by [1500 ~ 2040] for 2 turns.",
+        "2MPcost": 64,
+        "2GeneCost": 446,
 
-        "3": "****:\n",
-        "3MPcost": 0,
-        "3GeneCost": 0,
+        "3": "**Adrenaline**:\nExplodes adrenaline, attacking enemies at [136% ~ 186.4%] Attack and healing allies by [78% ~ 106.8%]. Increases ally Movement by 2 for 1 turn. Also creates an [35% ~ 80%] chance of additionally filling your Lord gauge by 1.",
+        "3MPcost": 125,
+        "3GeneCost": 893,
 
-        "4": "****:\n",
-        "4GeneCost": 0,
+        "4": "**Spirit Booster**:\nWhen Shu-Shu is near an ally, her Attack increases by [3% ~ 12%] and her healing skill effects by [6% ~ 24%].",
+        "4GeneCost": 446,
 		
-		"5": "****:\n",
-        "5GeneCost": 0
+		"5": "**Legendary Elixir**:\nFills your Lord Gauge by [1 ~ 10] blocks and heals all allies on the map by [353% ~ 485.3%] Attack.",
+        "5GeneCost": 3342
     },
     {
         "Name": "Sione",
 
-        "1": "****:\n",
+        "1": "**To You**:\n",
         "1MPcost": 15,
         "1GeneCost": 0,
 
-        "2": "****:\n",
+        "2": "**Bad Omen**:\n",
         "2MPcost": 0,
         "2GeneCost": 0,
 
-        "3": "****:\n",
-        "3MPcost": 0,
+        "3": "**Memories of You**:\n",
+        "3MPcost": 122,
         "3GeneCost": 0,
 
-        "4": "****:\n",
+        "4": "**From Death**:\n",
         "4GeneCost": 0,
 		
-		"5": "****:\n",
+		"5": "Sione currently has no awakening skill!",
         "5GeneCost": 0
     },
     {
         "Name": "Sonic Boom",
 
-        "1": "****:\n",
+        "1": "**Ninjutsu: Return**:\n",
         "1MPcost": 15,
         "1GeneCost": 0,
 
-        "2": "****:\n",
+        "2": "**Ninjutsu: Cleave the Fog**:\n",
         "2MPcost": 0,
         "2GeneCost": 0,
 
-        "3": "****:\n",
+        "3": "**Ninja Secret: Blood Ritual**:\n",
         "3MPcost": 0,
         "3GeneCost": 0,
 
-        "4": "****:\n",
+        "4": "**Ninja Skill: Train Ninjutsu**:\n",
         "4GeneCost": 0,
 		
-		"5": "****:\n",
+		"5": "Sonic Boom currently has no awakening skill!",
         "5GeneCost": 0
     },
     {
         "Name": "Spooky",
 
-        "1": "****:\n",
+        "1": "**Burn, Burn**:\n",
         "1MPcost": 15,
         "1GeneCost": 0,
 
-        "2": "****:\n",
-        "2MPcost": 0,
+        "2": "**Burnt EYe**:\n",
+        "2MPcost": 72,
         "2GeneCost": 0,
 
-        "3": "****:\n",
-        "3MPcost": 0,
+        "3": "**A Punishment for Bad Children**:\n",
+        "3MPcost": 149,
         "3GeneCost": 0,
 
-        "4": "****:\n",
+        "4": "**Red Witch of the Black Forest**:\n",
         "4GeneCost": 0,
 		
-		"5": "****:\n",
+		"5": "Spooky currently has no awakening skill!",
         "5GeneCost": 0
     },
     {
         "Name": "Sraka",
 
-        "1": "****:\n",
+        "1": "**Pressure**:\n",
         "1MPcost": 15,
         "1GeneCost": 0,
 
-        "2": "****:\n",
-        "2MPcost": 0,
+        "2": "**Maelstorm**:\n",
+        "2MPcost": 59,
         "2GeneCost": 0,
 
-        "3": "****:\n",
-        "3MPcost": 0,
+        "3": "**Fury**:\n",
+        "3MPcost": 104,
         "3GeneCost": 0,
 
-        "4": "****:\n",
+        "4": "**Berserker**:\n",
         "4GeneCost": 0,
 		
-		"5": "****:\n",
+		"5": "**Brotherhood**:\n",
         "5GeneCost": 0
     },
     {
         "Name": "Taehwa",
 
-        "1": "****:\n",
+        "1": "**Draw a Big Line**:\n",
         "1MPcost": 15,
         "1GeneCost": 0,
 
-        "2": "****:\n",
+        "2": "**Draw a Side Dot**:\n",
         "2MPcost": 0,
         "2GeneCost": 0,
 
-        "3": "****:\n",
-        "3MPcost": 0,
+        "3": "**Ink Over**:\n",
+        "3MPcost": 128,
         "3GeneCost": 0,
 
-        "4": "****:\n",
+        "4": "**Self-portrait**:\n",
         "4GeneCost": 0,
 		
-		"5": "****:\n",
+		"5": "**Finishing Touch**:\n",
         "5GeneCost": 0
     },
     {
         "Name": "Tao",
 
-        "1": "****:\n",
+        "1": "**Kick**:\n",
         "1MPcost": 15,
         "1GeneCost": 0,
 
-        "2": "****:\n",
+        "2": "**Earth, Water, Fire, Air**:\n",
         "2MPcost": 0,
         "2GeneCost": 0,
 
-        "3": "****:\n",
+        "3": "**Shadowless Kick**:\n",
         "3MPcost": 0,
         "3GeneCost": 0,
 
-        "4": "****:\n",
+        "4": "**Winner Takes All**:\n",
         "4GeneCost": 0,
 		
-		"5": "****:\n",
+		"5": "Tao currently has no awakening skill!",
         "5GeneCost": 0
     },
     {
         "Name": "Thanatos",
 
-        "1": "****:\n",
+        "1": "**Execution**:\n",
         "1MPcost": 15,
         "1GeneCost": 0,
 
-        "2": "****:\n",
-        "2MPcost": 0,
+        "2": "**Mind Breaker**:\n",
+        "2MPcost": 67,
         "2GeneCost": 0,
 
-        "3": "****:\n",
-        "3MPcost": 0,
+        "3": "**Doom Caller**:\n",
+        "3MPcost": 120,
         "3GeneCost": 0,
 
-        "4": "****:\n",
+        "4": "**Doomsday Watcher**:\n",
         "4GeneCost": 0,
 		
-		"5": "****:\n",
+		"5": "**Extinguisher's Authority**:\n",
         "5GeneCost": 0
     },
     {
         "Name": "Unknown",
 
-        "1": "****:\n",
+        "1": "**Chain Punch**:\n",
         "1MPcost": 15,
         "1GeneCost": 0,
 
-        "2": "****:\n",
-        "2MPcost": 0,
+        "2": "**Explosive Punch**:\n",
+        "2MPcost": 60,
         "2GeneCost": 0,
 
-        "3": "****:\n",
-        "3MPcost": 0,
+        "3": "**Thunder Stomp**:\n",
+        "3MPcost": 116,
         "3GeneCost": 0,
 
-        "4": "****:\n",
+        "4": "**Leech Energy**:\n",
         "4GeneCost": 0,
 		
-		"5": "****:\n",
+		"5": "Unknown currently has no awakening skill!",
         "5GeneCost": 0
     },
     {
         "Name": "Valkyrie",
 
-        "1": "****:\n",
+        "1": "**Healing Blade**:\n",
         "1MPcost": 15,
         "1GeneCost": 0,
 
-        "2": "****:\n",
-        "2MPcost": 0,
+        "2": "**Demolish**:\n",
+        "2MPcost": 68,
         "2GeneCost": 0,
 
-        "3": "****:\n",
-        "3MPcost": 0,
+        "3": "**Epsilon's Shield**:\n",
+        "3MPcost": 122,
         "3GeneCost": 0,
 
-        "4": "****:\n",
+        "4": "**Ancient Imperial Guardian**:\n",
         "4GeneCost": 0,
 		
-		"5": "****:\n",
+		"5": "Valkyrie currently has no awakening skill!",
         "5GeneCost": 0
     },
     {
         "Name": "Yekaterina",
 
-        "1": "****:\n",
+        "1": "**Eye of the Beholder**:\n",
         "1MPcost": 15,
         "1GeneCost": 0,
 
-        "2": "****:\n",
-        "2MPcost": 0,
+        "2": "**Hypnotic Rhythm**:\n",
+        "2MPcost": 73,
         "2GeneCost": 0,
 
-        "3": "****:\n",
-        "3MPcost": 0,
+        "3": "**Big Bang**:\n",
+        "3MPcost": 161,
         "3GeneCost": 0,
 
-        "4": "****:\n",
+        "4": "**Call of the Void**:\n",
         "4GeneCost": 0,
 		
-		"5": "****:\n",
+		"5": "Yekaterina currently has no awakening skill!",
         "5GeneCost": 0
     },
     {
         "Name": "Zero",
 
-        "1": "****:\n",
+        "1": "**Shadow Strike**:\n",
         "1MPcost": 15,
         "1GeneCost": 0,
 
-        "2": "****:\n",
+        "2": "**Eclipse**:\n",
         "2MPcost": 0,
         "2GeneCost": 0,
 
-        "3": "****:\n",
+        "3": "**Leg Down**:\n",
         "3MPcost": 0,
         "3GeneCost": 0,
 
-        "4": "****:\n",
+        "4": "**Burning**:\n",
         "4GeneCost": 0,
 		
-		"5": "****:\n",
+		"5": "Zero currently has no awakening skill!",
         "5GeneCost": 0
     }
 ]
