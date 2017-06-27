@@ -76,8 +76,164 @@
         "Answer": "Raizel"
     },
     {
+        "Question": "What is the name of Ildo's sword?",
+        "Answer": "Blue Steel"
+    },
+    {
         "Question": "Which hero is the following quote from? \"My brethren...They are asleep now, but they will awaken some day...\"",
         "Answer": "Serendi"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"This sword is called Blue Steel\"",
+        "Answer": "Ildo"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"What are you looking at? Do you want to get out? Shoot, you could've just said so!\"",
+        "Answer": "Henry"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"Hahaha...That tickles! That tickles! Stop it! I am ticklish!\"",
+        "Answer": "Lilid"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"This sword is called Blue Steel. The Vermillion Bird gave it to me a long time ago.\"",
+        "Answer": "Ildo"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"How I ended up as a maid...? Well, it was to protect someone...That's all I can say.\"",
+        "Answer": "Lily"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"H...Hey, wait a minute! Are...Are you going to go fight? I...I'm not ready yet!\"",
+        "Answer": "Moa"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"This era? Doesn't it feel more peaceful than before? No war anywhere!\"",
+        "Answer": "Rage"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"This island is my territory. I'll protect all of you, meow!\"",
+        "Answer": "Cat Sidhe"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"My turn? Is it my turn now? Yay! I'm excited!\"",
+        "Answer": "Carrot"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"Even the trees want to move around sometimes! Um...Quite often, actually...\"",
+        "Answer": "Serendi"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"This world is not as peaceful as I thought. Maybe I'm not allowed to enjoy peace...\"",
+        "Answer": "Luminous"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"Attack weapon? No way...You are not talking about my performance, are you?\"",
+        "Answer": "Mas"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"If you need information, let me know. I will bring every piece of information you will ever need.\"",
+        "Answer": "Cleo"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"...(He's quiet as if he's lost in thought. I'd better not bother him.)\"",
+        "Answer": "Lucas"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"Broiled fish? I can eat almost anything. I'm not a picky eater.\"",
+        "Answer": "Luminous"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"Other Symbols? One of them is especially not fond of me, but I don't care.\"",
+        "Answer": "Hongyeom"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"I-I'm not weak! I love to eat vegetables! I'm going to be stronger!\"",
+        "Answer": "Ryeogang"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"I want to know who you really are. Let's fight!\"",
+        "Answer": "Krut"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"Someone I can trust with my life. That's my definition of a companion.\"",
+        "Answer": "Aran"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"Heh. The past is the past. What's the point of remembering it?\"",
+        "Answer": "Zero"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"Take off my mask? W...Why do you want me to do that all of a sudden? You know I won't do it...\"",
+        "Answer": "Zero"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"Huh? You can also cast magic in that way? That's amazing!\"",
+        "Answer": "Deborah"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"Strength is a very good thing. It lets you do anything you want.\"",
+        "Answer": "Henry"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"Pain is inevitable when you let yourself get tangled up with someone...or something.\"",
+        "Answer": "Taehwa"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"Why are there so many dirty guys here?! Teach them some manners!\"",
+        "Answer": "Fruel"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"Wo...Wo...World conquest? Lo, Lord is too bold...\"",
+        "Answer": "Moa"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"Whew...I am starting to miss my former ranger corps.\"",
+        "Answer": "Fruel"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"Life is unpredictable and meaningless for humans...Hehe...But that's what makes it interesting.\"",
+        "Answer": "Sione"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"I can't believe it's been this long since my country fell...Who dared to...\"",
+        "Answer": "Raboff"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"World conquest...if we conquer the world, which region will you give me? I am thinking about Glory. Hehe.\"",
+        "Answer": "Deborah"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"Thank the gods, I'm not the real me, and the real me in my own world is not forgotten.\"",
+        "Answer": "Eunwol"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"This is not Lukedonia.\"",
+        "Answer": "Raskreia"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"Rules and regulations protect us.\"",
+        "Answer": "Serphina"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"I'm no dog! Don't order me around! I'm a wolf!\"",
+        "Answer": "Jack"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"My name?...A friend of mine gave it to me.\"",
+        "Answer": "Eunwol"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"Who knew I would be travelling with you, lab demon...I mean...Lord!\"",
+        "Answer": "Deborah"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"(Checking the gun. Maybe planning a fight?)\"",
+        "Answer": "Momo"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"My cat Elastin seems to be in a good mood today! She must have liked my morning performance.\"",
+        "Answer": "Mas"
     },
     {
         "Question": "Which hero is the following quote from? \"I hate my name, so don't call me that.\"",
@@ -214,6 +370,10 @@
     {
         "Question": "Which hero is the following quote from? \"Beep! Beeeeep! Beep...\"",
         "Answer": "Poni"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"...(Silent. Thinking about something particular?)\"",
+        "Answer": "Bearman"
     },
     {
         "Question": "Which hero is the following quote from? \"...(Silent. Probably thinking about something sad.)\"",
