@@ -4,6 +4,334 @@
         "Answer": ""
     },
     {
+        "Question": "What is the title of Alex?",
+        "Answer": "Lancer"
+    },
+    {
+        "Question": "What is the title of Alfred?",
+        "Answer": "Professor"
+    },
+    {
+        "Question": "What is the title of Angela?",
+        "Answer": "Iron Princess"
+    },
+    {
+        "Question": "What is the title of Aran?",
+        "Answer": "Conqueror of Battlefield"
+    },
+    {
+        "Question": "What is the title of Azrael?",
+        "Answer": "Artificial Angel"
+    },
+    {
+        "Question": "What is the title of Banshee?",
+        "Answer": "Witch"
+    },
+    {
+        "Question": "What is the title of Bearman?",
+        "Answer": "Reinforced Human"
+    },
+    {
+        "Question": "What is the title of Belle?",
+        "Answer": "Healer"
+    },
+    {
+        "Question": "What is the title of Carrot?",
+        "Answer": "Big Shot"
+    },
+    {
+        "Question": "What is the title of Cat Sidhe?",
+        "Answer": "Wildcat"
+    },
+    {
+        "Question": "What is the title of Celestial?",
+        "Answer": "Dragon"
+    },
+    {
+        "Question": "What is the title of Chenny?",
+        "Answer": "Magician"
+    },
+    {
+        "Question": "What is the title of Chris?",
+        "Answer": "White Knight"
+    },
+    {
+        "Question": "What is the title of Cleo?",
+        "Answer": "Succubus"
+    },
+    {
+        "Question": "What is the title of Deborah?",
+        "Answer": "Magician"
+    },
+    {
+        "Question": "What is the title of Deimos?",
+        "Answer": "Tyrant"
+    },
+    {
+        "Question": "What is the title of Dolores?",
+        "Answer": "Nouveau Riche"
+    },
+    {
+        "Question": "What is the title of Dominique?",
+        "Answer": "Resistance"
+    },
+    {
+        "Question": "What is the title of Elektra?",
+        "Answer": "Fonea Queen"
+    },
+    {
+        "Question": "What is the title of Evan?",
+        "Answer": "Dragon Master"
+    },
+    {
+        "Question": "What is the title of Eunwol?",
+        "Answer": "Forgotten Hero"
+    },
+    {
+        "Question": "What is the title of Frankenstein?",
+        "Answer": "Butler"
+    },
+    {
+        "Question": "What is the title of Fruel?",
+        "Answer": "Combat Ranger"
+    },
+    {
+        "Question": "What is the title of Gillan?",
+        "Answer": "Drug Master"
+    },
+    {
+        "Question": "What is the title of Hella?",
+        "Answer": "Aide"
+    },
+    {
+        "Question": "What is the title of Henry?",
+        "Answer": "Killing Machine"
+    },
+    {
+        "Question": "What is the title of Ian?",
+        "Answer": "Black Cat"
+    },
+    {
+        "Question": "What is the title of Jack?",
+        "Answer": "Werewolf"
+    },
+    {
+        "Question": "What is the title of Jenny?",
+        "Answer": "Cowgirl"
+    },
+    {
+        "Question": "What is the title of Jin?",
+        "Answer": "Mercenary Captain"
+    },
+    {
+        "Question": "What is the title of Jin Kisaragi?",
+        "Answer": "Hero"
+    },
+    {
+        "Question": "What is the title of Kai?",
+        "Answer": "Hero"
+    },
+    {
+        "Question": "What is the title of Kitty?",
+        "Answer": "Android"
+    },
+    {
+        "Question": "What is the title of Klein?",
+        "Answer": "Archmage"
+    },
+    {
+        "Question": "What is the title of Krut?",
+        "Answer": "Orc Warrior"
+    },
+    {
+        "Question": "What is the title of Lance?",
+        "Answer": "Golem"
+    },
+    {
+        "Question": "What is the title of Lee?",
+        "Answer": "Psychokinetic"
+    },
+    {
+        "Question": "What is the title of Lena?",
+        "Answer": "Diva"
+    },
+    {
+        "Question": "What is the title of Lilid?",
+        "Answer": "Wild Boy"
+    },
+    {
+        "Question": "What is the title of Lily?",
+        "Answer": "Maid"
+    },
+    {
+        "Question": "What is the title of Lucas?",
+        "Answer": "Zombie"
+    },
+    {
+        "Question": "What is the title of Luminous?",
+        "Answer": "Guardian of Light"
+    },
+    {
+        "Question": "What is the title of Mas?",
+        "Answer": "Bard"
+    },
+    {
+        "Question": "What is the title of Mercedes?",
+        "Answer": "Elf Queen"
+    },
+    {
+        "Question": "What is the title of Moa?",
+        "Answer": "Black Wizard"
+    },
+    {
+        "Question": "What is the title of Momo?",
+        "Answer": "White Rabbit"
+    },
+    {
+        "Question": "What is the title of Mu?",
+        "Answer": "Exorcist"
+    },
+    {
+        "Question": "What is the title of Muang?",
+        "Answer": "Pyromaniac"
+    },
+    {
+        "Question": "What is the title of Muzaka?",
+        "Answer": "Werewolf"
+    },
+    {
+        "Question": "What is the title of Nirvana?",
+        "Answer": "Healer"
+    },
+    {
+        "Question": "What is the title of Noel?",
+        "Answer": "Successor"
+    },
+    {
+        "Question": "What is the title of Nox?",
+        "Answer": "Vampire"
+    },
+    {
+        "Question": "What is the title of Persona?",
+        "Answer": "Phantom Thief"
+    },
+    {
+        "Question": "What is the title of Phantom?",
+        "Answer": "Thief"
+    },
+    {
+        "Question": "What is the title of Poni?",
+        "Answer": "Phoenix"
+    },
+    {
+        "Question": "What is the title of Rachel?",
+        "Answer": "Vampire"
+    },
+    {
+        "Question": "What is the title of Raboff?",
+        "Answer": "General"
+    },
+    {
+        "Question": "What is the title of Rage?",
+        "Answer": "Gunner"
+    },
+    {
+        "Question": "What is the title of Ragna?",
+        "Answer": "Reaper"
+    },
+    {
+        "Question": "What is the title of Raizel?",
+        "Answer": "Noblesse"
+    },
+    {
+        "Question": "What is the title of Raskreia?",
+        "Answer": "Lord"
+    },
+    {
+        "Question": "What is the title of Reina?",
+        "Answer": "Wolf Hunter"
+    },
+    {
+        "Question": "What is the title of Seira?",
+        "Answer": "Reaper"
+    },
+    {
+        "Question": "What is the title of Serendi?",
+        "Answer": "Dryad"
+    },
+    {
+        "Question": "What is the title of Aran?",
+        "Answer": "Conqueror of Battlefield"
+    },
+    {
+        "Question": "What is the title of Serphina?",
+        "Answer": "Magic Knight"
+    },
+    {
+        "Question": "What is the title of Shark?",
+        "Answer": "Pirate"
+    },
+    {
+        "Question": "What is the title of Shu-Shu?",
+        "Answer": "Little Angel"
+    },
+    {
+        "Question": "What is the title of Sione?",
+        "Answer": "Black Bride"
+    },
+    {
+        "Question": "What is the title of Sonic Boom?",
+        "Answer": "Ninja"
+    },
+    {
+        "Question": "What is the title of Spooky?",
+        "Answer": "Witch"
+    },
+    {
+        "Question": "What is the title of Sraka?",
+        "Answer": "Orc Warrior"
+    },
+    {
+        "Question": "What is the title of Tao?",
+        "Answer": "Kung Fu Girl"
+    },
+    {
+        "Question": "What is the title of Unknown?",
+        "Answer": "Wanderer"
+    },
+    {
+        "Question": "What is the title of Valkyrie?",
+        "Answer": "Soul Gear"
+    },
+    {
+        "Question": "What is the title of Yekaterina?",
+        "Answer": "Magician"
+    },
+    {
+        "Question": "What is the title of Zero?",
+        "Answer": "Assassin"
+    },
+    {
+        "Question": "What is the title of Thanatos?",
+        "Answer": "Dragon"
+    },
+    {
+        "Question": "What is the title of Ildo?",
+        "Answer": "Escort"
+    },
+    {
+        "Question": "What is the title of Taehwa?",
+        "Answer": "Painter"
+    },
+    {
+        "Question": "What is the title of Hongyeom?",
+        "Answer": "Vermillion Bird"
+    },
+    {
+        "Question": "What is the title of Ryeogang?",
+        "Answer": "Fortune-teller"
+    },
+    {
         "Question": "Which hero has the title of \"Lancer\"?",
         "Answer": "Alex"
     },
@@ -1370,10 +1698,6 @@
     {
         "Question": "How many costumes does Krut have?",
         "Answer": "3"
-    },
-    {
-        "Question": "What is the title of Deimos?",
-        "Answer": "Tyrant"
     },
     {
         "Question": "Which country is Angela the princess of?",
