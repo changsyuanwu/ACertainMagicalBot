@@ -1,0 +1,247 @@
+{
+	"Question": "Which hero has the title of \"Lancer\"?",
+	"Answer": "Alex"
+},{
+	"Question": "Which hero has the title of \"Professor\"?",
+	"Answer": "Alfred"
+},{
+	"Question": "Which hero has the title of \"Iron Princess\"?",
+	"Answer": "Angela"
+},{
+	"Question": "Which hero has the title of \"Conqueror of Battlefield\"?",
+	"Answer": "Aran"
+},{
+	"Question": "Which hero has the title of \"Artificial Angel\"?",
+	"Answer": "Azrael"
+},{
+	"Question": "Which hero has the title of \"Witch\"?",
+	"Answer": "Banshee"
+},{
+	"Question": "Which hero has the title of \"Reinforced Human\"?",
+	"Answer": "Bearman"
+},{
+	"Question": "Which hero has the title of \"Healer\"?",
+	"Answer": "Belle"
+},{
+	"Question": "Which hero has the title of \"Big Shot\"?",
+	"Answer": "Carrot"
+},{
+	"Question": "Which hero has the title of \"Wildcat\"?",
+	"Answer": "Cat Sidhe"
+},{
+	"Question": "Which hero has the title of \"Dragon\"?",
+	"Answer": "Celestial"
+},{
+	"Question": "Which hero has the title of \"Magician\"?",
+	"Answer": "Chenny"
+},{
+	"Question": "Which hero has the title of \"White Knight\"?",
+	"Answer": "Chris"
+},{
+	"Question": "Which hero has the title of \"Succubus\"?",
+	"Answer": "Cleo"
+},{
+	"Question": "Which hero has the title of \"Magician\"?",
+	"Answer": "Deborah"
+},{
+	"Question": "Which hero has the title of \"Tyrant\"?",
+	"Answer": "Deimos"
+},{
+	"Question": "Which hero has the title of \"Nouveau Riche\"?",
+	"Answer": "Dolores"
+},{
+	"Question": "Which hero has the title of \"Resistance\"?",
+	"Answer": "Dominique"
+},{
+	"Question": "Which hero has the title of \"Fonea Queen\"?",
+	"Answer": "Elektra"
+},{
+	"Question": "Which hero has the title of \"Dragon Master\"?",
+	"Answer": "Evan"
+},{
+	"Question": "Which hero has the title of \"Forgotten Hero\"?",
+	"Answer": "Eunwol"
+},{
+	"Question": "Which hero has the title of \"Butler\"?",
+	"Answer": "Frankenstein"
+},{
+	"Question": "Which hero has the title of \"Combat Ranger\"?",
+	"Answer": "Fruel"
+},{
+	"Question": "Which hero has the title of \"Drug Master\"?",
+	"Answer": "Gillan"
+},{
+	"Question": "Which hero has the title of \"Aide\"?",
+	"Answer": "Hella"
+},{
+	"Question": "Which hero has the title of \"Killing Machine\"?",
+	"Answer": "Henry"
+},{
+	"Question": "Which hero has the title of \"Black Cat\"?",
+	"Answer": "Ian"
+},{
+	"Question": "Which hero has the title of \"Werewolf\"?",
+	"Answer": "Jack"
+},{
+	"Question": "Which hero has the title of \"Cowgirl\"?",
+	"Answer": "Jenny"
+},{
+	"Question": "Which hero has the title of \"Mercenary Captain\"?",
+	"Answer": "Jin"
+},{
+	"Question": "Which hero has the title of \"Hero\"?",
+	"Answer": "Jin Kisaragi"
+},{
+	"Question": "Which hero has the title of \"Hero\"?",
+	"Answer": "Kai"
+},{
+	"Question": "Which hero has the title of \"Android\"?",
+	"Answer": "Kitty"
+},{
+	"Question": "Which hero has the title of \"Archmage\"?",
+	"Answer": "Klein"
+},{
+	"Question": "Which hero has the title of \"Orc Warrior\"?",
+	"Answer": "Krut"
+},{
+	"Question": "Which hero has the title of \"Golem\"?",
+	"Answer": "Lance"
+},{
+	"Question": "Which hero has the title of \"Psychokinetic\"?",
+	"Answer": "Lee"
+},{
+	"Question": "Which hero has the title of \"Diva\"?",
+	"Answer": "Lena"
+},{
+	"Question": "Which hero has the title of \"Wild Boy\"?",
+	"Answer": "Lilid"
+},{
+	"Question": "Which hero has the title of \"Maid\"?",
+	"Answer": "Lily"
+},{
+	"Question": "Which hero has the title of \"Zombie\"?",
+	"Answer": "Lucas"
+},{
+	"Question": "Which hero has the title of \"Guardian of Light\"?",
+	"Answer": "Luminous"
+},{
+	"Question": "Which hero has the title of \"Bard\"?",
+	"Answer": "Mas"
+},{
+	"Question": "Which hero has the title of \"Elf Queen\"?",
+	"Answer": "Mercedes"
+},{
+	"Question": "Which hero has the title of \"Black Wizard\"?",
+	"Answer": "Moa"
+},{
+	"Question": "Which hero has the title of \"White Rabbit\"?",
+	"Answer": "Momo"
+},{
+	"Question": "Which hero has the title of \"Exorcist\"?",
+	"Answer": "Mu"
+},{
+	"Question": "Which hero has the title of \"Pyromaniac\"?",
+	"Answer": "Muang"
+},{
+	"Question": "Which hero has the title of \"Werewolf\"?",
+	"Answer": "Muzaka"
+},{
+	"Question": "Which hero has the title of \"Healer\"?",
+	"Answer": "Nirvana"
+},{
+	"Question": "Which hero has the title of \"Successor\"?",
+	"Answer": "Noel"
+},{
+	"Question": "Which hero has the title of \"Vampire\"?",
+	"Answer": "Nox"
+},{
+	"Question": "Which hero has the title of \"Phantom Thief\"?",
+	"Answer": "Persona"
+},{
+	"Question": "Which hero has the title of \"Thief\"?",
+	"Answer": "Phantom"
+},{
+	"Question": "Which hero has the title of \"Phoenix\"?",
+	"Answer": "Poni"
+},{
+	"Question": "Which hero has the title of \"Vampire\"?",
+	"Answer": "Rachel"
+},{
+	"Question": "Which hero has the title of \"General\"?",
+	"Answer": "Raboff"
+},{
+	"Question": "Which hero has the title of \"Gunner\"?",
+	"Answer": "Rage"
+},{
+	"Question": "Which hero has the title of \"Reaper\"?",
+	"Answer": "Ragna"
+},{
+	"Question": "Which hero has the title of \"Noblesse\"?",
+	"Answer": "Raizel"
+},{
+	"Question": "Which hero has the title of \"Lord\"?",
+	"Answer": "Raskreia"
+},{
+	"Question": "Which hero has the title of \"Wolf Hunter\"?",
+	"Answer": "Reina"
+},{
+	"Question": "Which hero has the title of \"Reaper\"?",
+	"Answer": "Seira"
+},{
+	"Question": "Which hero has the title of \"Dryad\"?",
+	"Answer": "Serendi"
+},{
+	"Question": "Which hero has the title of \"Conqueror of Battlefield\"?",
+	"Answer": "Aran"
+},{
+	"Question": "Which hero has the title of \"Magic Knight\"?",
+	"Answer": "Serphina"
+},{
+	"Question": "Which hero has the title of \"Pirate\"?",
+	"Answer": "Shark"
+},{
+	"Question": "Which hero has the title of \"Little Angel\"?",
+	"Answer": "Shu-Shu"
+},{
+	"Question": "Which hero has the title of \"Black Bride\"?",
+	"Answer": "Sione"
+},{
+	"Question": "Which hero has the title of \"Ninja\"?",
+	"Answer": "Sonic Boom"
+},{
+	"Question": "Which hero has the title of \"Witch\"?",
+	"Answer": "Spooky"
+},{
+	"Question": "Which hero has the title of \"Orc Warrior\"?",
+	"Answer": "Sraka"
+},{
+	"Question": "Which hero has the title of \"Kung Fu Girl\"?",
+	"Answer": "Tao"
+},{
+	"Question": "Which hero has the title of \"Wanderer\"?",
+	"Answer": "Unknown"
+},{
+	"Question": "Which hero has the title of \"Soul Gear\"?",
+	"Answer": "Valkyrie"
+},{
+	"Question": "Which hero has the title of \"Magician\"?",
+	"Answer": "Yekaterina"
+},{
+	"Question": "Which hero has the title of \"Assassin\"?",
+	"Answer": "Zero"
+},{
+	"Question": "Which hero has the title of \"Dragon\"?",
+	"Answer": "Thanatos"
+},{
+	"Question": "Which hero has the title of \"Escort\"?",
+	"Answer": "Ildo"
+},{
+	"Question": "Which hero has the title of \"Painter\"?",
+	"Answer": "Taehwa"
+},{
+	"Question": "Which hero has the title of \"Vermillion Bird\"?",
+	"Answer": "Hongyeom"
+},{
+	"Question": "Which hero has the title of \"Fortune-teller\"?",
+	"Answer": "Ryeogang"
+},
