@@ -725,7 +725,7 @@ bot.on("message", async (message) => {
 
 
     else if (message.content.startsWith(config.prefix + "add")) {
-        if (args.length === 2) {
+        if (args.length >= 2) {
             const requestedRole = message.guild.roles.find(role => role.name.toLowerCase() === msgContent.toLowerCase());
             if (requestedRole !== undefined) {
                 message.member.addRole(requestedRole);
