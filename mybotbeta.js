@@ -724,6 +724,20 @@ bot.on("message", async (message) => {
     } // Searches Urban Dictionary for the requested phrase
 
 
+    else if (message.content.startsWith(config.prefix + "add")) {
+        if (args.length === 2) {
+            const requestedRole = message.guild.roles.find(role => role.name.toLowerCase() === args[1].toLowerCase());
+            if (requestedRole !== undefined) {
+                message.member.addRole(requestedRole);
+            } else {
+                message.reply(", either this Role does not exist or I do not have permission to access it.");
+            }
+        } else {
+            message.channel.send("Invalid request!");
+        }
+    }
+
+
     else if (message.content.startsWith(config.prefix + "tadaima") && (message.content.includes("maid"))) {
         message.channel.send("おかえりなさいませ！ご主人様♥, \nDo you want dinner or a shower or \*blushes\* me?");
     } else if (message.content.startsWith(config.prefix + "tadaima")) {
