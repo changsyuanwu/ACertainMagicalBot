@@ -1692,7 +1692,7 @@
         "Answer": "Mu"
     },
     {
-        "Question": "Which hero is the following quote from? \"How are you? Exorcist Mu at your service!\"",
+        "Question": "Which hero is the following quote from? \"How are you? Exorcist \\_\\_ at your service!\"",
         "Answer": "Mu"
     },
     {
