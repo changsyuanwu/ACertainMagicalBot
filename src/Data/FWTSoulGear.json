@@ -374,7 +374,7 @@
 	{
 		"Name": "Mas",
 		"Soul Gear Weapon": "Dodge: 200, MP Recovery: 4",
-		"Weapon Effect": "Increases Max HP by 5000 for Skill 3",
+		"Weapon Effect": "Increases Max HP by 8% for Skill 3",
 		"Soul Gear Wings": "Dodge: 200, Counter Damage: 600",
 		"Wings Effect": "Increases allies' Attack by 450 for Passive Skill",
 		"2pc Effect": "Increase resistance by 5%"
