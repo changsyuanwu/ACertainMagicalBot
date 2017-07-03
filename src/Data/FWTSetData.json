@@ -1416,7 +1416,7 @@
         "Accessory": "Brooch",
         "2pc": "Increases Critical by 1000",
         "3pc": "Increase HP by 7800",
-        "Restrictions": "Exclusive to Deimos (Limited Library in the Sky Hero)"
+        "Restrictions": "Exclusive to Deimos (Skybrary Hero)"
     },
     {
         "Name": "Dragon's Collection",
@@ -1427,7 +1427,7 @@
         "Accessory": "Necklace",
         "2pc": "Increases Defense by 1200",
         "3pc": "Increases Movement by 1",
-        "Restrictions": "Exclusive to Celestial (Library in the Sky Hero)"
+        "Restrictions": "Exclusive to Celestial (Skrybrary Hero)"
     },
     {
         "Name": "Heir of Flesh and Blood",
@@ -1482,7 +1482,7 @@
         "Accessory": "Ring",
         "2pc": "Increases Attack by 2318",
         "3pc": "Increases HP by 9710. If 3 or more status effects are on the character, increase Movement by 1",
-        "Restrictions": "Exclusive to Reina (Limited Lost Island Hero)"
+        "Restrictions": "Exclusive to Reina (Lost Island Hero)"
     },
     {
         "Name": "Kneel",
@@ -1504,7 +1504,7 @@
         "Accessory": "Necklace",
         "2pc": "Increase Crit Rate by 180 every time the wearer loses 10% of his HP (max 1620)",
         "3pc": "Increase Defense by 1500 at the beginning of wearer’sodd-number turn and Attack by 2608 at the beginning of wearer’s even-number turn",
-        "Restrictions": "Exclusive to Krut (Limited Lost Island Hero)"
+        "Restrictions": "Exclusive to Krut (Lost Island Hero)"
     },
     {
         "Name": "Dragon Incarnate",
@@ -1515,7 +1515,7 @@
         "Accessory": "Brooch",
         "2pc": "Restores 5% HP every turn",
         "3pc": "Increases Attack of the wearer by 30% for 4 turns and decreases incoming Damage of the wearer by 10% for 3 turns.",
-        "Restrictions": "Exclusive to Celestial (Library in the Sky Hero)"
+        "Restrictions": "Exclusive to Celestial (Skybrary Hero)"
     },
     {
         "Name": "Song of Death",
@@ -1537,7 +1537,7 @@
         "Accessory": "Ring",
         "2pc": "Increases Dodge by 800 for every enemy in a 1 tile range(up to 3200).",
         "3pc": "Increases Attack by 2510, and by an additional 1010 if there are 2 or more enemies in a 1 tile range.",
-        "Restrictions": "Exclusive to Deimos (Limited Library in the Sky Hero)"
+        "Restrictions": "Exclusive to Deimos (Skybrary Hero)"
     },
     {
         "Name": "Separation Anxiety",
@@ -1559,7 +1559,7 @@
         "Accessory": "Brooch",
         "2pc": "Recovers 6% HP Every Turn",
         "3pc": "Increases the Wearer's Attack by 40% for 3 turns and decreases the incoming Damage of the wearer by 15% for 2 turns.",
-        "Restrictions": "Exclusive to Lucas (Limited Lost Island Hero)"
+        "Restrictions": "Exclusive to Lucas (Lost Island Hero)"
     },
     {
         "Name": "Wanted Reaper",
@@ -1680,7 +1680,7 @@
         "Accessory": "Ring",
         "2pc": "Increases Resistance by 30% when HP falls below 80%",
         "3pc": "Increases Attack by 60% and Max HP by 25% for 3 turns",
-        "Restrictions": "Exclusive to Ildo (Sia 2 Hero)"
+        "Restrictions": "Exclusive to Ildo (Sia Hero)"
     },
     {
         "Name": "Finishing Touch",
@@ -1691,7 +1691,7 @@
         "Accessory": "Brooch",
         "2pc": "Increases Attack by 10% for every enemy attacked",
         "3pc": "Increases Attack by 60% and decrease skill MP cost by 30% for 3 turns",
-        "Restrictions": "Exclusive to Taehwa (Sia 2 Hero)"
+        "Restrictions": "Exclusive to Taehwa (Sia Hero)"
     },
     {
         "Name": "Fiery Dancer",
@@ -1702,7 +1702,7 @@
         "Accessory": "Brooch",
         "2pc": "Decrease incoming damage by 10% while on Lava terrain",
         "3pc": "Increases Attack by 60% and Critical Damage by 10% for 3 turns",
-        "Restrictions": "Exclusive to Hongyeom (Sia 2 Hero)"
+        "Restrictions": "Exclusive to Hongyeom (Sia Hero)"
     },
     {
         "Name": "Black Dragon's Armament I",
@@ -2011,5 +2011,38 @@
         "2pc": "Ignores enemy Defense by 1000",
         "3pc": "Increases Attack by 30% and Dodge by 1600 for 4 turns",
         "Restrictions": "Exclusive to Cat Sidhe (Limited Lost Island Hero)"
+    },
+    {
+        "Name": "Young, But Not to Be Underestimated",
+        "Slot": "III",
+        "Rareness": "★★★★★★",
+        "Weapon": "Bow",
+        "Armor": "Armor",
+        "Accessory": "Ring",
+        "2pc": "Decreases incoming damage from Rock enemies by 8%",
+        "3pc": "Increases Attack by 60% and ignores enemy Defense by 1200 for the first 3 turns in battle",
+        "Restrictions": "Exclusive to Ryeogang (Sia Hero)"
+    },
+    {
+        "Name": "Gold Dragon's Protection",
+        "Slot": "III",
+        "Rareness": "★★★★★★",
+        "Weapon": "Bow",
+        "Armor": "Armor",
+        "Accessory": "Ring",
+        "2pc": "Removes 1 debuff cast on self every turn if there is an ally Celestial in the battlefield",
+        "3pc": "Increases Attack by 60% and decreases incoming Critical Damage by 20% for the first 3 turns in battle",
+        "Restrictions": "Exclusive to Yeka (Limited Skybrary Hero)"
+    },
+    {
+        "Name": "Arrogant Calculation",
+        "Slot": "III",
+        "Rareness": "★★★★★★",
+        "Weapon": "Bow",
+        "Armor": "Armor",
+        "Accessory": "Necklace",
+        "2pc": "Increases Final Skill Power by 10%",
+        "3pc": "Increases Attack by 60% and all allies HP by 10% for the first 3 turns in battle",
+        "Restrictions": "Exclusive to Camelia (Battle Arena Hero)"
     }
 ]
