@@ -342,7 +342,7 @@
         "1MPcost": 15,
         "1GeneCost": 340,
 
-        "2": "**Cursed Emperor's March**:\nCharges forward, attacking enemies in it's path at [118% ~ 162.1%] Attack, and moves to the farthest tile. With a [35% ~ 80%] chance, Curses enemy for 2 turns. Curse effect: skills that inflict harmful effects upon enemies will also affect the caster",
+        "2": "**Cursed Emperor's March**:\nCharges forward, attacking enemies in it's path at [118% ~ 162.1%] Attack, and moves to the farthest tile. With a [35% ~ 80%] chance, Curses enemy for 2 turns. Curse effect: Skills that inflict harmful effects upon enemies will also affect the caster.",
         "2MPcost": 67,
         "2GeneCost": 1035,
 
@@ -1369,21 +1369,21 @@
 
         "1": "**Ancestor's Blessing**:\n",
         "1MPcost": 15,
-        "1GeneCost": 0,
+        "1GeneCost": 340,
 
         "2": "**I Am Smart!**:\n",
         "2MPcost": 71,
-        "2GeneCost": 0,
+        "2GeneCost": 680,
 
         "3": "**Pick Your Destiny!**:\n",
         "3MPcost": 120,
-        "3GeneCost": 0,
+        "3GeneCost": 1360,
 
         "4": "**I Feel So Lucky Today!**:\n",
-        "4GeneCost": 0,
+        "4GeneCost": 680,
 		
 		"5": "**It's All Heaven's Will**:\n",
-        "5GeneCost": 0
+        "5GeneCost": 5100
     },
     {
         "Name": "Serendi",
@@ -1577,23 +1577,23 @@
     {
         "Name": "Taehwa",
 
-        "1": "**Draw a Big Line**:\n",
+        "1": "**Draw a Big Line**:\nDraws a big line, inflicting [96% ~ 132%] damage on enemies. If the enemy has its Attack decreased, their Mastery is decreased by [1000 ~ 2800] for 3 turns. If the enemy has its Defense decreased, their Dodge is decreased by [800 ~ 1700] for 3 turns.",
         "1MPcost": 15,
-        "1GeneCost": 0,
+        "1GeneCost": 340,
 
-        "2": "**Draw a Side Dot**:\n",
+        "2": "**Draw a Side Dot**:\nStamps down an enemy with his brush, attacking at [114% ~ 150%] Attack and decreasing its Attack by [1250 ~ 8000] for 3 turns. This Attack Decrease effect cannot be canceled. If the enemy has its Defense decreased, their Movement is decreased by 3 and decreases their healing by [33% ~ 60%] for 3 turns.",
         "2MPcost": 0,
-        "2GeneCost": 0,
+        "2GeneCost": 680,
 
-        "3": "**Ink Over**:\n",
+        "3": "**Ink Over**:\nPaints over an enemy repeatedly, attacking it at [139% ~ 190.3%] Attack and decreasing its Defense by [1500 ~ 4200] for 3 turns. This Defense Reduction effect cannot be canceled. If the enemy has its Attack decreased, this skill Weakens it, making it take [5% ~ 23%] more damage for 3 turns and also Curses it for 3 turns. Curse effect: Skills that inflict harmful effects upon enemies will also affect the caster",
         "3MPcost": 128,
-        "3GeneCost": 0,
+        "3GeneCost": 1360,
 
-        "4": "**Self-portrait**:\n",
-        "4GeneCost": 0,
+        "4": "**Self-portrait**:\nWhen Taehwa takes lethal damage, he draws a self-portrait that takes damage for him and revives with [5% ~ 9.5%] Max HP. This effect can only be activated once during a battle.",
+        "4GeneCost": 680,
 		
-		"5": "**Finishing Touch**:\n",
-        "5GeneCost": 0
+		"5": "**Finishing Touch**:\nTraps an enemy in ink, attacking it at [535% ~ 734.8%] Attack, If the enemy has its Attack decreased, this skill inflicts additional damage that equals [5% ~ 18.5%] of its current HP. If enemy has its Defense decreased, then it inflicts additional [26000 ~ 44000] Defense-ignoring damage.",
+        "5GeneCost": 5100
     },
     {
         "Name": "Tao",
@@ -1719,6 +1719,48 @@
         "4GeneCost": 0,
 		
 		"5": "Zero currently has no awakening skill!",
+        "5GeneCost": 0
+    },
+    {
+        "Name": "Yeka",
+
+        "1": "**Petals' Lullaby**:",
+        "1MPcost": 15,
+        "1GeneCost": 340,
+
+        "2": "**Weakness, Maybe**:",
+        "2MPcost": 0,
+        "2GeneCost": 680,
+
+        "3": "**Immature Energy Wave**:",
+        "3MPcost": 0,
+        "3GeneCost": 1360,
+
+        "4": "**Dragon's Protection**:",
+        "4GeneCost": 680,
+		
+		"5": "**Help Me, Cel!**:",
+        "5GeneCost": 5100
+    },
+    {
+        "Name": "Camelia",
+
+        "1": "**Economic Pressure**:",
+        "1MPcost": 15,
+        "1GeneCost": 0,
+
+        "2": "**Loyal Hounds**:",
+        "2MPcost": 0,
+        "2GeneCost": 0,
+
+        "3": "**Constricting Collapse**:",
+        "3MPcost": 0,
+        "3GeneCost": 0,
+
+        "4": "**Dark Merchant's Calculation**:",
+        "4GeneCost": 0,
+		
+		"5": "**Mare Chess Pieces for the Better**:",
         "5GeneCost": 0
     }
 ]
