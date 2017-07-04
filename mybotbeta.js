@@ -704,7 +704,7 @@ bot.on("message", async (message) => {
 
 
     else if (message.content.startsWith(config.prefix + "google")) {
-        message.channel.send(`https://www.google.com/#q=${msgContent.replace(" ", "+")}`);
+        message.channel.send(`https://www.google.com/#q=${msgContent.replace(/\s/g, "+")}`);
     } // Sends the Google search link
 
 
