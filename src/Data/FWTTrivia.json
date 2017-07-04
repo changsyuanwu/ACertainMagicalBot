@@ -2064,94 +2064,6 @@
         "Answer": "Women"
     },
     {
-        "Question": "When is Lee's birthday?\n1. May 4th\n2. March 2nd\n3. February 5th\n4. April 7th",
-        "Answer": "February 5th"
-    },
-    {
-        "Question": "When is Jenny's birthday?\n1. February 5th\n2. February 6th\n3. February 12th\n4. February 23rd",
-        "Answer": "February 6th"
-    },
-    {
-        "Question": "When is Shu-Shu's birthday?\n1. March 18th\n2. April 3rd\n3. February 12th\n4. June 2nd",
-        "Answer": "February 12th"
-    },
-    {
-        "Question": "When is Spooky and Banshee's birthday?\n1. April 15th\n2. March 14th\n3. February 23rd\n4. January 27th",
-        "Answer": "February 23rd"
-    },
-    {
-        "Question": "When is Mu's birthday?\n1. May 4th\n2. February 25th\n3. April 20th\n4. February 5th",
-        "Answer": "February 25th"
-    },
-    {
-        "Question": "When is Momo's birthday?\n1. February 25th\n2. May 6th\n3. March 14th\n4. April 28th",
-        "Answer": "March 14th"
-    },
-    {
-        "Question": "When is Lilid's birthday?\n1. May 11th\n2. May 30th\n3. March 28th\n4. March 2nd",
-        "Answer": "March 28th"
-    },
-    {
-        "Question": "When is Jack's birthday?\n1. March 28th\n2. February 25th\n3. April 13th\n4. May 4th",
-        "Answer": "April 13th"
-    },
-    {
-        "Question": "When is Fruel's birthday?\n1. April 15th\n2. April 20th\n3. May 10th\n4. February 7th",
-        "Answer": "April 15th"
-    },
-    {
-        "Question": "When is Mas' birthday?\n1. March 29th\n2. May 6th\n3. April th\n4. April 20th",
-        "Answer": "April 20th"
-    },
-    {
-        "Question": "When is Poni's birthday?\n1. January 1st\n2. February 8th\n3. March 24th\n4. April 28th",
-        "Answer": "April 28th"
-    },
-    {
-        "Question": "When is Gillan's birthday?\n1. March 23rd\n2. May 4th\n3. June 8th\n4. July 12th",
-        "Answer": "May 4th"
-    },
-    {
-        "Question": "When is Tao's birthday?\n1. May 4th\n2. May 20th\n3. April 21st\n4. May 11th",
-        "Answer": "May 4th"
-    },
-    {
-        "Question": "When is Klein's birthday?\n1. February 2nd\n2. March 3rd\n3. April 4th\n4. May 5th",
-        "Answer": "May 5th"
-    },
-    {
-        "Question": "When is Alfred's birthday?\n1. May 28th\n2. April 15th\n3. May 6th\n4. March 2nd",
-        "Answer": "May 6th"
-    },
-    {
-        "Question": "When is Yekaterina's birthday?\n1. May 11th\n2. July 7th\n3. April 12th\n4. May 17th",
-        "Answer": "May 11th"
-    },
-    {
-        "Question": "When is Dominique's birthday?\n1. February 4th\n2. June 5th\n3. March 16th\n4. May 17th",
-        "Answer": "May 17th"
-    },
-    {
-        "Question": "When is Unknown's birthday?\n1. March 26th\n2. April 14th\n3. May 18th\n4. June 9th",
-        "Answer": "May 18th"
-    },
-    {
-        "Question": "When is Bearman's birthday?\n1. May 18th\n2. May 28th\n3. May 17th\n4. May 11th",
-        "Answer": "May 28th"
-    },
-    {
-        "Question": "When is Lucas's birthday?\n1. March 17th\n2. May 22nd\n3. April 11th\n4. June 2nd",
-        "Answer": "June 2nd"
-    },
-    {
-        "Question": "When is Belle's birthday?\n1. April 14th\n2. May 14th\n3. June 14th\n4. July 14th",
-        "Answer": "June 14th"
-    },
-    {
-        "Question": "When is Shark's birthday?\n1. June 28th\n2. May 23rd\n3. March 17th\n4. February 28th",
-        "Answer": "June 28th"
-    },
-    {
         "Question": "Who is Angela's sister?",
         "Answer": "Dominique"
     },
@@ -2628,15 +2540,15 @@
         "Answer": "Zero"
     },
     {
-        "Question": "What is the name of this hero? https://pbs.twimg.com/media/C5T7wxYWIAAHWUK.jpg",
+        "Question": "What is the name of this hero? http://i.imgur.com/r4Yx3Mp.png",
         "Answer": "Aran"
     },
     {
-        "Question": "What is the name of this hero? https://pbs.twimg.com/media/C5T7xOVWMAA-oEd.jpg",
+        "Question": "What is the name of this hero? http://i.imgur.com/faCPopc.png",
         "Answer": "Eunwol"
     },
     {
-        "Question": "What is the name of this hero? https://pbs.twimg.com/media/C5T7wUCWEAEGdZF.jpg",
+        "Question": "What is the name of this hero? http://i.imgur.com/2yUImOb.png",
         "Answer": "Luminous"
     },
     {
