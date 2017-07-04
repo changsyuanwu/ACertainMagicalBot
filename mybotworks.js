@@ -597,7 +597,7 @@ bot.on("message", async (message) => {
     logger.logFrom(message.channel, 1, `[command: ${args[0]}]`);
 
     if (message.content.startsWith(config.prefix + "ping")) {
-        message.channel.send(`pong! [Response time: ${bot.ping}"ms]`);
+        message.channel.send(`pong! [Response time: ${bot.ping}ms]`);
     } // Bot testing
 
 
@@ -704,7 +704,7 @@ bot.on("message", async (message) => {
 
 
     else if (message.content.startsWith(config.prefix + "google")) {
-        message.channel.send(`https://www.google.com/#q=${msgContent.replace(" ", "+")}`);
+        message.channel.send(`https://www.google.com/#q=${msgContent.replace(/\s/g, "+")}`);
     } // Sends the Google search link
 
 
@@ -722,6 +722,23 @@ bot.on("message", async (message) => {
                 message.channel.send("An error occured");
             });
     } // Searches Urban Dictionary for the requested phrase
+
+
+    else if (message.content.startsWith(config.prefix + "add")) {
+        if (args.length >= 2) {
+            const requestedRole = message.guild.roles.find(role => role.name.toLowerCase() === msgContent.toLowerCase());
+            if (requestedRole !== null) {
+                message.member.addRole(requestedRole)
+                    .then(() => {
+                        message.reply(" this role was successfully added to you.")
+                    })
+            } else {
+                message.reply(" either this Role does not exist or I do not have permission to access it.");
+            }
+        } else {
+            message.channel.send("Invalid request!");
+        }
+    }
 
 
     else if (message.content.startsWith(config.prefix + "tadaima") && (message.content.includes("maid"))) {
