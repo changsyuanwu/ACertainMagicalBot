@@ -605,8 +605,8 @@
         "4": "**Multi-kill!**:\nCats are agile. Dodge increases by [800 ~ 3200]. Also, if there are no enemies within a 1-tile range at the beginning of his turn,  Ian's Attack increases by 10% and Movement by 1 for 1 turn.",
         "4GeneCost": 45,
 		
-		"5": "Ian currently has no awakening skill!",
-        "5GeneCost": 0
+		"5": "**Bomb, Meow!**:\nThrusts a giant shark into the ground, attacking enemies in his range at [541% ~ ?%] Attack and decreasing their Defense by [1200 ~ ?] for 2 turns. Enemies at least 3 tiles away from Ian have their Defense decreased by [2200 ~ ?] for 2 turns and additionally receive [45000 ~ ?] Defense-ignoring damage.",
+        "5GeneCost": 70
     },
     {
         "Name": "Ildo",
