@@ -637,11 +637,11 @@
         "1GeneCost": 90,
 
         "2": "**Bite'em All!**:\nBites the enemy inflicting damage equal to [120% ~ 165%] of Attack, and continues to inflict [15% ~ 51%] DoT damage for 3 turns. Jack recovers 30% of his Max HP.",
-        "2MPcost": 0,
+        "2MPcost": 58,
         "2GeneCost": 180,
 
-        "3": "**Scratch Storm!**:\nSwipes multiple enemies in front of him. Inflicts [151% ~ 206.8%] of Attack damage, and deals additional damage at 19.4% of enemy's Max HP.",
-        "3MPcost": 0,
+        "3": "**Scratch Storm!**:\nSwipes multiple enemies in front of him. Inflicts [151% ~ 206.8%] of Attack damage, and deals additional damage at [5% ~ 19.4%] of the enemy's Max HP.",
+        "3MPcost": 96,
         "3GeneCost": 360,
 
         "4": "**Hideous Strength!**:\nWerewolf Jack recovers HP by [10% ~ 19%] of the damage inflicted. If Jack has 50% or higher HP, increases chance to be attacked by [12% ~ 30%] and Movement by 1.",
@@ -758,20 +758,20 @@
     {
         "Name": "Klein",
 
-        "1": "**Dark Matter**:\n",
+        "1": "**Dark Matter**:\nSummons a Shadow Ball to inflict damage equal to [100% ~ 136.9%] of Attack in a certain range and remove buffs.",
         "1MPcost": 15,
-        "1GeneCost": 0,
+        "1GeneCost": 315,
 
-        "2": "**Frigid Twister**:\n",
+        "2": "**Frigid Twister**:\nCreates an icy whirlwind that inflicts damage at [110% ~ 150.5%] of Attack on enemies in range. With a 100% chance, decreases their Movement by 2 and Defense by [500 ~ 1400] for 2 turns. Icy whirlwind also inflicts 25% damage to self.",
         "2MPcost": 80,
-        "2GeneCost": 0,
+        "2GeneCost": 630,
 
-        "3": "**Eater of Souls**:\n",
+        "3": "**Eater of Souls**:\nInvokes a dimensional explosion which shreds apart souls, inflicting damage at [124% ~ 169.9%] of Attack on enemies within range and with a [10% ~ 55%] chance, confuses them for 1 turn. Recoil from the dimensional explosion causes self-damage equal to 15% of current HP.",
         "3MPcost": 180,
-        "3GeneCost": 0,
+        "3GeneCost": 1260,
 
-        "4": "**Berserker**:\n",
-        "4GeneCost": 0,
+        "4": "**Berserker**:\nWhenever Klein's HP drops by 10%, increases Crit Rate by [400 ~ 1300] and Crit Damage by [5% ~ 6.8%].",
+        "4GeneCost": 630,
 		
 		"5": "Klein currently has no awakening skill!",
         "5GeneCost": 0
@@ -779,20 +779,20 @@
     {
         "Name": "Krut",
 
-        "1": "**Sweep**:\n",
+        "1": "**Sweep**:\nInflicts damage to all enemies in the area at [144% ~ 198%] of attack,with a [15% ~ 60%] chance of decreasing their Movement by 2 for 1 turn.",
         "1MPcost": 15,
-        "1GeneCost": 0,
+        "1GeneCost": 270,
 
-        "2": "**Boil Blood**:\n",
+        "2": "**Boil Blood**:\nInflicts damage to all enemies in the area at [120% ~ 165%] Attack and increases Krut's Attack by [5.5% ~ 10%] for 1 turn. Also restores his HP by [12% ~ 30%] Max HP.",
         "2MPcost": 62,
-        "2GeneCost": 0,
+        "2GeneCost": 810,
 
-        "3": "**Destructive Storm**:\n",
+        "3": "**Destructive Storm**:\nInflicts damage to all enemies in range at [139% ~ 190.3%] Attack, ignoring [600 ~ 2400] Defense. If Krut's Movement is 5 or more, all enemies are Immobilized for 2 turns. The skill's Final Power is increased by [9% ~ 24%] on Immobilized enemies.",
         "3MPcost": 130,
-        "3GeneCost": 0,
+        "3GeneCost": 1080,
 
-        "4": "**Two-faced Berserker**:\n",
-        "4GeneCost": 0,
+        "4": "**Two-faced Berserker**:\nDecreases all incoming damage by [12% ~ 34.5%] and increase Movement by 1 (2 at skill level 10) at the beginning of his odd number turn. Increases Krut's Attack by [12% ~ 34.5%] and Crit Damage by [11% ~ 20%] at the beginning of his even number turn.",
+        "4GeneCost": 540,
 		
 		"5": "Krut currently has no awakening skill!",
         "5GeneCost": 0
@@ -800,41 +800,41 @@
     {
         "Name": "Lance",
 
-        "1": "**Boulder Drop**:\n",
+        "1": "**Boulder Drop**:\nLance strikes the ground, attacking enemies at [98% ~ 134%] Attack. Creates a [35% ~ 80%] chance of Taunting Paper-type enemies for 1 turn",
         "1MPcost": 15,
-        "1GeneCost": 0,
+        "1GeneCost": 70,
 
-        "2": "**Earthquake**:\n",
+        "2": "**Earthquake**:\nCauses an earthquake that attacks enemies in its path at [116% ~ 159.2%] Attack. If Lance is in Movement Reduction mode, this skill decreases enemies' Defense by [1500 ~ 2400] for 1 turn with a [55% ~100%] chance of Taunting them for 1 turn.",
         "2MPcost": 0,
-        "2GeneCost": 0,
+        "2GeneCost": 135,
 
-        "3": "**Chain Up**:\n",
+        "3": "**Chain Up**:\nLance pounces on an enemy and attacks all other enemies in his range at [139% ~ 190.3%] Attack along the way. This skill increases Lance's Defense by [1000 ~ 3250] for 2 turns but decreases his Movement along with all the enemies' Movement in his range by 3 for the same duration. This Movement Reduction effect cannot be canceled.",
         "3MPcost": 0,
-        "3GeneCost": 0,
+        "3GeneCost": 270,
 
-        "4": "**Strong Like Boulder**:\n",
-        "4GeneCost": 0,
+        "4": "**Strong Like Boulder**:\nLance achieves 2 higher Movement and [800 ~ 1070] higher Mastery if his party includes 2 or more Swamp-type heroes. If he is in Movement Reduction mode, his damage from Paper-type enemies decreases by 15%.",
+        "4GeneCost": 135,
 		
-		"5": "**Last Fusion**:\n",
-        "5GeneCost": 0
+		"5": "**Last Fusion**:\nSummons and rides an ancient golem, attacking all enemies in his range at [519% ~ 635.1%] Attack. Lance cannot receive more than 3000 damage for 2 turns. If Lance is in Movement Reduction mode, this skill's Final Power increases by [16% ~ 25%].",
+        "5GeneCost": 912
     },
     {
         "Name": "Lee",
 
-        "1": "**Bang**:\n",
+        "1": "**Bang**:\nThrows concentrated energy at an enemy and inflicts damage equal to [97% ~ 133%] of Attack.",
         "1MPcost": 15,
-        "1GeneCost": 0,
+        "1GeneCost": 284,
 
-        "2": "**Psychic Smash**:\n",
+        "2": "**Psychic Smash**:\nCreates a gigantic energy sphere where the enemy is located and inflicts damage equal to [112% ~ 153.4%] of Attack. Increases the damage caused by critical hits by [10% ~ 32.5%] for 2 turns.",
         "2MPcost": 84,
-        "2GeneCost": 0,
+        "2GeneCost": 568,
 
-        "3": "**Ruin**:\n",
+        "3": "**Ruin**:\nThrows multiple energy balls at an enemy. Ignores [1500 ~ 3570] of his Defense and inflicts damage equal to [157% ~ 215.5%] of Attack.",
         "3MPcost": 154,
-        "3GeneCost": 0,
+        "3GeneCost": 1136,
 
-        "4": "**Invincible Lee**:\n",
-        "4GeneCost": 0,
+        "4": "**Invincible Lee**:\nWhen under the number of buffs from active skills is 2 or more, Crit Rate increases by [500 ~ 3200] and Attack by [4% ~ 16.6%].",
+        "4GeneCost": 568,
 		
 		"5": "Lee currently has no awakening skill!",
         "5GeneCost": 0
@@ -842,20 +842,20 @@
     {
         "Name": "Lena",
 
-        "1": "**Hypersonic Wave**:\n",
+        "1": "**Hypersonic Wave**:\nSings a song for an enemy to inflict damage equal to [97% ~ 133%] of Attack. The enemy will be charmed for 1 turn with a [25% ~ 56.5%] chance.",
         "1MPcost": 15,
-        "1GeneCost": 0,
+        "1GeneCost": 270,
 
-        "2": "**Shout**:\n",
+        "2": "**Shout**:\nLena shouts at enemies to inflict damage equal to [106% ~ 145.6%] of her Attack. The enemies will be immobilized for 2 turns with a 100% chance.",
         "2MPcost": 0,
-        "2GeneCost": 0,
+        "2GeneCost": 540,
 
-        "3": "**Head voice**:\n",
+        "3": "**Head Voice**:\nInflicts damage equal to [146% ~ 200%] of Attack, and increases the damage they take by [5% ~ 27.5%] by using Weakening for 2 turns. If Lena's Crit Rate is 3000 or above, she inflicts additional damage equal to [3% ~ 16.5%] of the enemy's Max HP.",
         "3MPcost": 116,
-        "3GeneCost": 0,
+        "3GeneCost": 1080,
 
-        "4": "**Fan Service**:\n",
-        "4GeneCost": 0,
+        "4": "**Fan Service**:\nIncreases Attack by [200 ~ 875] and Crit Rate by [500 ~ 1400] when Lena's fan (ally) is right next to her.",
+        "4GeneCost": 540,
 		
 		"5": "Lena currently has no awakening skill!",
         "5GeneCost": 0
@@ -863,20 +863,20 @@
     {
         "Name": "Lilid",
 
-        "1": "**Trash**:\n",
+        "1": "**Thrash**:\nWields gigantic claws to inflict damage equal to [100% ~ 136.9%] of Attack and decreases enemy's Movement by 1 for 2 turns. Up to 3 effects are cumulated.",
         "1MPcost": 15,
-        "1GeneCost": 0,
+        "1GeneCost": 225,
 
-        "2": "**Lilid's Scent**:\n",
+        "2": "**Lilid's Scent**:\nReleases fragrance to inflict damage equal to [115% ~ 157.3%] of Attack and decrease Defense by [1500 ~ 2040] for 2 turns.",
         "2MPcost": 0,
-        "2GeneCost": 0,
+        "2GeneCost": 495,
 
-        "3": "**Capture Prey**:\n",
+        "3": "**Capture Prey**:\nQuickly snatches an enemy, inflicting damage at [148% ~ 202.9%] Attack, with a [55% ~ 100%] chance of Immobilizing all enemies in its range for 1 turn. This skill's target is pulled to the nearest tile to Lilid.",
         "3MPcost": 0,
-        "3GeneCost": 0,
+        "3GeneCost": 990,
 
-        "4": "**Natural Healing**:\n",
-        "4GeneCost": 0,
+        "4": "**Natural Healing**:\nThe natural healing power unique to parahumans recovers [5% ~ 14%] of Maximum HP per turn.",
+        "4GeneCost": 450,
 		
 		"5": "Lilid currently has no awakening skill!",
         "5GeneCost": 0
@@ -884,20 +884,20 @@
     {
         "Name": "Lily",
 
-        "1": "**Take Off Your Shoes!**:\n",
+        "1": "**Take Off Your Shoes!**:\nAttacks an enemy at [100% ~ 136.9%] Attack and decreases its Movement by 1 for 2 turns.",
         "1MPcost": 15,
-        "1GeneCost": 0,
+        "1GeneCost": 180,
 
-        "2": "**Quick Clean-Up**:\n",
+        "2": "**Quick Clean-Up**:\nInflicts damage at [120% ~ 165%] of Attack on enemies and increases Lily's Movement by 2 for 2 turns.",
         "2MPcost": 0,
-        "2GeneCost": 0,
+        "2GeneCost": 360,
 
-        "3": "**Dusting**:\n",
+        "3": "**Dusting**:\nViolently shakes enemies, inflicting damage at [150% ~ 205.8%] Attack, with a [55% ~ 100%] chance of pushing then away by 2 to tiles that are farthest from Lily. Additionally Stuns slowed enemies for 2 turns.",
         "3MPcost": 106,
-        "3GeneCost": 0,
+        "3GeneCost": 720,
 
-        "4": "**Nasty!**:\n",
-        "4GeneCost": 0,
+        "4": "**Nasty!**:\nIncreases Attack by [5% ~ 23%] when using Direction Strategy.",
+        "4GeneCost": 360,
 		
 		"5": "Lily currently has no awakening skill!",
         "5GeneCost": 0
