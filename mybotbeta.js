@@ -581,7 +581,7 @@ bot.on("message", async (message) => {
         incrementUses();
     } // Increments whenever the bot sends a message (bot is "used")
 
-    if (message.content.includes("gimme") && (message.guild.id != 188363158107324400)) {
+    if (message.content.includes("gimme") && (message.guild.id != 188363158107324400) && (message.guild.id != 164867600457662460)) {
         message.channel.send({ files: [path.join(launchLocation, "src", "Images", "Gimme.gif")] })
     } // Sends Shu-shu gimme gif when message contains "gimme"
 
