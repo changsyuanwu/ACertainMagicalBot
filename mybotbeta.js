@@ -730,10 +730,27 @@ bot.on("message", async (message) => {
             if (requestedRole !== null) {
                 message.member.addRole(requestedRole)
                     .then(() => {
-                        message.reply(" this role was successfully added to you.")
+                        message.reply("this role was successfully added to you.")
                     })
             } else {
-                message.reply(" either this Role does not exist or I do not have permission to access it.");
+                message.reply("either this Role does not exist or I do not have permission to access it.");
+            }
+        } else {
+            message.channel.send("Invalid request!");
+        }
+    } // Adds a Role to an user
+
+
+    else if (message.content.startsWith(config.prefix + "remove")) {
+        if (args.length >= 2) {
+            const requestedRole = message.guild.roles.find(role => role.name.toLowerCase() === msgContent.toLowerCase());
+            if (requestedRole !== null) {
+                message.member.removeRole(requestedRole)
+                    .then(() => {
+                        message.reply("this role was successfully removed from you.")
+                    })
+            } else {
+                message.reply("either this Role does not exist or I do not have permission to access it.");
             }
         } else {
             message.channel.send("Invalid request!");
