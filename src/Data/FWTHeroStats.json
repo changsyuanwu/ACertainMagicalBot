@@ -829,7 +829,8 @@
         "seal": "",
         "sleep": "",
         "melee": "",
-        "ranged": ""
+        "ranged": "",
+        "decrease healing": "TRUE"
     },
     {
         "Name": "Deimos",
@@ -1507,7 +1508,8 @@
         "seal": "",
         "sleep": "",
         "melee": "TRUE",
-        "ranged": ""
+        "ranged": "",
+        "decrease healing": "TRUE"
     },
     {
         "Name": "Jenny",
