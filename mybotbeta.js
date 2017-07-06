@@ -741,7 +741,7 @@ bot.on("message", async (message) => {
     } // Adds a Role to an user
 
 
-    else if (message.content.startsWith(config.prefix + "remove")) {
+    else if (message.content.startsWith(config.prefix + "!remove")) {
         if (args.length >= 2) {
             const requestedRole = message.guild.roles.find(role => role.name.toLowerCase() === msgContent.toLowerCase());
             if (requestedRole !== null) {
