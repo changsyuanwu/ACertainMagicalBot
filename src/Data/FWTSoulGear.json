@@ -696,5 +696,37 @@
 		"Soul Gear Wings": "Crit Rate: 200, Hit Rate: 200",
 		"Wings Effect": "Passively ignores 2200 Defense and increases Movement by 1 for Passive Skill",
 		"2pc Effect": "Increase resistance by 5%"
+	},
+    {
+		"Name": "Ildo",
+		"Soul Gear Weapon": "Defense: 400, Crit Rate: 200",
+		"Weapon Effect": "Increases Skill Damage by 13.65% and Defense ignoring damage by 2600 for Skill 2",
+		"Soul Gear Wings": "Defense: 400, Crit Rate: 200",
+		"Wings Effect": "Increases Skill Damage by 8.3% and Defense by 1200 for Skill 3",
+		"2pc Effect": "Increase resistance by 5%"
+	},
+    {
+		"Name": "Taehwa",
+		"Soul Gear Weapon": "HP: 1200, Counter Rate: 200",
+		"Weapon Effect": "Increases Skill Damage by 9.55% and reduce healing effect by 25% for Skill 2",
+		"Soul Gear Wings": "Crit Rate: 200, Hit Rate: 200",
+		"Wings Effect": "Increases HP upon revival by 5.5% for Skill 3",
+		"2pc Effect": "Increase resistance by 5%"
+	},
+    {
+		"Name": "Hongyeom",
+		"Soul Gear Weapon": "Attack: 380, Counter Damage: 600",
+		"Weapon Effect": "Increases Skill Damage by 7.5% and Crit Damage by 10% for Skill 3",
+		"Soul Gear Wings": "Crit Rate: 200, Hit Rate: 200",
+		"Wings Effect": "Increases Crit Rate by 1000 and HP recovery by 7% for Passive Skill",
+		"2pc Effect": "Increase resistance by 5%"
+	},
+    {
+		"Name": "Ryeogang",
+		"Soul Gear Weapon": "MP: 32, Hit Rate: 200",
+		"Weapon Effect": "Increases Skill Damage by 14.55% and Movement required to cast Sleep by 2 for Skill 2",
+		"Soul Gear Wings": "Dodge: 200, Counter Damage: 600",
+		"Wings Effect": "Increase Skill Damage by 8.7% and Skill effects' activation chance by 10% for Skill 3",
+		"2pc Effect": "Increase resistance by 5%"
 	}
 ]
