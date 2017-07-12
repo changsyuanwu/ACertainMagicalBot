@@ -363,15 +363,15 @@
         "1MPcost": 15,
         "1GeneCost": 78,
 
-        "2": "**Credit Line**:\nWant a taste of Dolores' money? Inflicts damage equal to [107 ~ 146.6%] of Attack and removes buff effects with a 100% chance.",
+        "2": "**Credit Line**:\nWant a taste of Dolores' money? Inflicts damage equal to [107 ~ 146.6%] of Attack and removes buff effects with a 100% chance. Also increases Dolores' Max HP by [?% ~ 15%] for two turns.",
         "2MPcost": 76,
         "2GeneCost": 160,
 
-        "3": "**Class Warfare**:\nTopples Dolores' statue to inflict [149% ~ 204.8%] damage and burn the enemy's MP by [50 ~ 185].",
+        "3": "**Class Warfare**:\nTopples Dolores' statue to inflict [149% ~ 204.8%] damage and burn the enemy's MP by [50 ~ 185]. Also decreases it's Attack by [?% ~ 18%] with a [?% ~ 100%] chance.",
         "3MPcost": 110,
         "3GeneCost": 315,
 
-        "4": "**Greed is Good**:\nIncreases the amount of gold that Dolores receives in battle by [6% ~ 7.8%].",
+        "4": "**Greed is Good**:\nIncreases the amount of gold that Dolores receives in battle by [6% ~ 7.8%]. Also increases Attack by 800 and Defense by 400 at the beginning of each turn. (Up to 4000 Attack and 2000 Defense)",
         "4GeneCost": 160,
 		
 		"5": "Dolores currently has no awakening skill!",
