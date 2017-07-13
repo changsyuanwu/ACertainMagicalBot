@@ -371,10 +371,10 @@
         "3MPcost": 110,
         "3GeneCost": 315,
 
-        "4": "**Greed is Good**:\nIncreases the amount of gold that Dolores receives in battle by [6% ~ 7.8%]. Also increases Attack by 800 and Defense by 400 at the beginning of each turn. (Up to 4000 Attack and 2000 Defense)",
+        "4": "**Greed is Good**:\nIncreases the amount of gold that Dolores receives in battle by [6% ~ 7.8%]. Also increases Attack by [? ~ 800] and Defense by [? ~ 400] at the beginning of each turn. (Up to 4000 Attack and 2000 Defense)",
         "4GeneCost": 160,
 		
-		"5": "Dolores currently has no awakening skill!",
+		"5": "**Power of Money**:\nInflicts damage to enemies in range with [532% ~ 651.7%] Attack and increase their MP cost by [55% ~ 100%] for 1 turn. Also, Copy enemies' buffs randomly up to 5 and keep them for 1 turn. Removes enemies' buffs.",
         "5GeneCost": 0
     },
     {
@@ -962,7 +962,7 @@
         "4": "**Hymn for Ares**:\n",
         "4GeneCost": 0,
 		
-		"5": "Mas currently has no awakening skill!",
+		"5": "**Hymn to Hermes**:\n",
         "5GeneCost": 0
     },
     {
@@ -1151,7 +1151,7 @@
         "4": "**Bloodthirst**:\n",
         "4GeneCost": 0,
 		
-		"5": "Nox currently has no awakening skill!",
+		"5": "**Oblivion**:\n",
         "5GeneCost": 0
     },
     {
@@ -1214,7 +1214,7 @@
         "4": "**Undying Flame**:\n",
         "4GeneCost": 0,
 		
-		"5": "Poni currently has no awakening skill!",
+		"5": "**Phoenix's Feather**\n",
         "5GeneCost": 0
     },
     {
@@ -1529,7 +1529,7 @@
         "4": "**Ninja Skill: Train Ninjutsu**:\n",
         "4GeneCost": 0,
 		
-		"5": "Sonic Boom currently has no awakening skill!",
+		"5": "**Ninjutsu: Space Inferno**:\n",
         "5GeneCost": 0
     },
     {
@@ -1718,7 +1718,7 @@
         "4": "**Burning**:\n",
         "4GeneCost": 0,
 		
-		"5": "Zero currently has no awakening skill!",
+		"5": "**Final Blade**:\n",
         "5GeneCost": 0
     },
     {
