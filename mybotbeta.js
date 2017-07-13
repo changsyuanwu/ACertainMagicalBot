@@ -414,7 +414,6 @@ function news(newsLimit, message) {
                 reject(error);
             } else {
                 resolve(response.data.map(postData => {
-                    const attachments = postData.attachments.data[0];
                     if (message.channel.type === "dm") {
                         var color = "#4F545C";
                     } else {
@@ -426,12 +425,15 @@ function news(newsLimit, message) {
                         .setAuthor(postData.from.name, null, "https://www.facebook.com/" + facebookEntityName)
                         .setColor(color)
                         .setURL(postData.permalink_url);
-                    if (attachments.type !== "album") {
-                        embed.setImage(attachments.media.image.src);
+                    if (postData.attachments !== undefined) {
+                        var attachments = postData.attachments.data[0];
+                        if (attachments.type !== "album") {
+                            embed.setImage(attachments.media.image.src);
+                        }
                     }
                     return {
                         embed
-                    }
+                    };
                 }).filter(data => data !== null));
             }
         });
@@ -519,42 +521,46 @@ function setupFacebookAccessToken() {
 } // Gets a Facebook access token 
 
 function getNewsTitle(data) {
-    const attachments = data.attachments.data[0];
-    let title;
-    switch (attachments.type) {
-        case "note":
-            title = data.message;
-            break;
-        case "album":
-            title = data.message.substring(0, data.message.indexOf("\n"));
-            break;
-        case "video_inline":
-            title = `${attachments.title}: ${data.message.substring(0, data.message.indexOf("\n"))}`;
-            break;
-        case "cover_photo":
-            title = attachments.title;
-            break;
-        default:
-            title = data.message.substring(0, data.message.indexOf("\n"));
-            break;
+    let title = data.message.substring(0, data.message.indexOf("\n"));
+    if (data.attachments !== undefined) {
+        var attachments = data.attachments.data[0];
+        switch (attachments.type) {
+            case "note":
+                title = data.message;
+                break;
+            case "album":
+                title = data.message.substring(0, data.message.indexOf("\n"));
+                break;
+            case "video_inline":
+                title = `${attachments.title}: ${data.message.substring(0, data.message.indexOf("\n"))}`;
+                break;
+            case "cover_photo":
+                title = attachments.title;
+                break;
+            default:
+                title = data.message.substring(0, data.message.indexOf("\n"));
+                break;
+        }
     }
     return title;
 } // Gets the title of a Facebook post
 
 function getNewsDescription(data) {
-    const attachments = data.attachments.data[0];
-    let description;
-    switch (attachments.type) {
-        case "note":
-            description = attachments.description;
-            break;
-        case "cover_photo":
-            description = " ";
-            break;
-        case "album":
-        case "video_inline":
-        default:
-            description = data.message.substring(data.message.indexOf("\n"));
+    let description = data.message.substring(data.message.indexOf("\n"));
+    if (data.attachments !== undefined) {
+        var attachments = data.attachments.data[0];
+        switch (attachments.type) {
+            case "note":
+                description = attachments.description;
+                break;
+            case "cover_photo":
+                description = " ";
+                break;
+            case "album":
+            case "video_inline":
+            default:
+                description = data.message.substring(data.message.indexOf("\n"));
+        }
     }
     if (description.length > 2048) {
         description = description.substring(0, 2048);
