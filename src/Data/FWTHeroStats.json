@@ -4226,7 +4226,7 @@
         "advantage": "Rock",
         "hp": "54226",
         "mp": "330",
-        "mpregen": "",
+        "mpregen": "32",
         "attack": "16796",
         "defense": "3124",
         "critrate": "781",
