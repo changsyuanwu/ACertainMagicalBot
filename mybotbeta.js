@@ -722,7 +722,7 @@ bot.on("message", async (message) => {
                 msg.push(`\`\`\`${response.definition}\`\`\``);
                 msg.push(`**Example:** ${response.example}`);
                 msg.push(response.urbanURL);
-                message.channel.send(msg.join("\n"))
+                message.channel.send(msg.join("\n"), {split: true})
             })
             .catch(error => {
                 message.channel.send("An error occured");
