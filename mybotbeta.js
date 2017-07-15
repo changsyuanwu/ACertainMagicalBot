@@ -15,17 +15,18 @@ const help = require(path.join(launchLocation, "help.json"));
 const Logger = require(path.join(launchLocation, "src", "Utilities", "Logger.js"));
 const moe = require(path.join(launchLocation, "src", "Moe.json"));
 const credits = require(path.join(launchLocation, "credits.json"));
+const dictionary = require(path.join(launchLocation, "src", "Utilities", "dictionary.json"));
 
 // Datatables
-const setDataTable = require(path.join(launchLocation, "src", "Data", "FWTSetData.json"));
-const aliasListSets = require(path.join(launchLocation, "src", "Data", "FWTSetAliases.json"));
-const aliasListHeroes = require(path.join(launchLocation, "src", "Data", "FWTHeroAliases.json"));
-const heroDataTable = require(path.join(launchLocation, "src", "Data", "FWTHeroStats.json"));
-const itemDataTable = require(path.join(launchLocation, "src", "Data", "FWTItemMaxStats.json"));
-const triviaTable = require(path.join(launchLocation, "src", "Data", "FWTTrivia.json"));
-const soulGearTable = require(path.join(launchLocation, "src", "Data", "FWTSoulGear.json"));
-const featuredSetTable = require(path.join(launchLocation, "src", "Data", "FWTFeaturedSets.json"));
-const heroSkillTable = require(path.join(launchLocation, "src", "Data", "FWTHeroSkills.json"))
+const setDataTable = require(path.join(launchLocation, "src", "FWTData", "FWTSetData.json"));
+const aliasListSets = require(path.join(launchLocation, "src", "FWTData", "FWTSetAliases.json"));
+const aliasListHeroes = require(path.join(launchLocation, "src", "FWTData", "FWTHeroAliases.json"));
+const heroDataTable = require(path.join(launchLocation, "src", "FWTData", "FWTHeroStats.json"));
+const itemDataTable = require(path.join(launchLocation, "src", "FWTData", "FWTItemMaxStats.json"));
+const triviaTable = require(path.join(launchLocation, "src", "FWTData", "FWTTrivia.json"));
+const soulGearTable = require(path.join(launchLocation, "src", "FWTData", "FWTSoulGear.json"));
+const featuredSetTable = require(path.join(launchLocation, "src", "FWTData", "FWTFeaturedSets.json"));
+const heroSkillTable = require(path.join(launchLocation, "src", "FWTData", "FWTHeroSkills.json"))
 
 // Effects
 const flagNames = ["confusion", "charm", "stun", "taunt", "disarm", "immobilize", "decrease movement", "dot", "mp burn", "skill cost", "defense ignore", "defense ignoring damage", "weakening", "buff removal", "hp% damage", "defense decrease", "attack decrease", "hp drain", "mastery decrease", "instant death", "decrease crit rate", "push/pull/switch", "passive attack", "seal", "sleep", "melee", "ranged", "overload", "terrain change", "dodge decrease", "decrease healing"];
