@@ -771,7 +771,7 @@ bot.on("message", async (message) => {
             const startingLetterAlphaCode = word.slice(0, 1).charCodeAt(0) - 97;
             const definition = dictionary[startingLetterAlphaCode][word];
             if (definition !== undefined) {
-                message.channel.send(`Definition for ${word}:\n\t${definition}`, { split: true })
+                message.channel.send(`Definition for ${word}:\n\t${definition}`, { split: { char: " " } })
             } else {
                 message.channel.send("Could not find a definition for your query. Please check your spelling and remember that !define uses a real dictionary, and not UrbanDictionary (Use !urban for the UrbanDictionary).")
             }
