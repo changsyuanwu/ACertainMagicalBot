@@ -17,6 +17,10 @@
 
     "**!moe:** Bot sends a moe picture",
 
+    "**!add <role>**: Adds the requested role to the user. (Ex. <Global> would add the \"Global\" role to you)",
+
+    "**!remove <role>**: Removes the requested role from the user. (Ex. <Global> would remove the \"Global\" role from you)",
+
     "**!trivia**: Starts a fun round of Fantasy War Tactics R Trivia",
 
     "**!rank <@user>**: Finds the trivia score and rank of the mentioned user. If no user is mentioned, the user who used the command's score and rank are returned",
