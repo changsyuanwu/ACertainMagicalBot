@@ -723,7 +723,7 @@ bot.on("message", async (message) => {
                 msg.push(`\`\`\`${response.definition}\`\`\``);
                 msg.push(`**Example:** ${response.example}`);
                 msg.push(response.urbanURL);
-                message.channel.send(msg.join("\n"), {split: true})
+                message.channel.send(msg.join("\n"), { split: true })
             })
             .catch(error => {
                 message.channel.send("An error occured");
@@ -748,7 +748,7 @@ bot.on("message", async (message) => {
     } // Adds a Role to an user
 
 
-    else if (message.content.startsWith(config.prefix + "!remove")) {
+    else if (message.content.startsWith(config.prefix + "remove")) {
         if (args.length >= 2) {
             const requestedRole = message.guild.roles.find(role => role.name.toLowerCase() === msgContent.toLowerCase());
             if (requestedRole !== null) {
@@ -758,6 +758,22 @@ bot.on("message", async (message) => {
                     })
             } else {
                 message.reply("either this Role does not exist or I do not have permission to access it.");
+            }
+        } else {
+            message.channel.send("Invalid request!");
+        }
+    } // Removes a Role from an user
+
+
+    else if (message.content.startsWith(config.prefix + "define")) {
+        if (args.length >= 2) {
+            const word = msgContent.toLowerCase();
+            const startingLetterAlphaCode = word.slice(0, 1).charCodeAt(0) - 97;
+            const definition = dictionary[startingLetterAlphaCode][word];
+            if (definition !== undefined) {
+                message.channel.send(`Definition for ${word}:\n\t${definition}`, { split: true })
+            } else {
+                message.channel.send("Could not find a definition for your query. Please check your spelling and remember that !define uses a real dictionary, and not UrbanDictionary (Use !urban for the UrbanDictionary).")
             }
         } else {
             message.channel.send("Invalid request!");
