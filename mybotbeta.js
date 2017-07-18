@@ -10,7 +10,8 @@ const bot = new Discord.Client();
 
 // Utils
 const launchLocation = __dirname;
-const config = require(path.join(launchLocation, "config.json"));
+//const config = require(path.join(launchLocation, "config.json"));
+const config = require("./src/data/config.json")
 const help = require(path.join(launchLocation, "help.json"));
 const Logger = require(path.join(launchLocation, "src", "Utilities", "Logger.js"));
 const moe = require(path.join(launchLocation, "src", "Moe.json"));
