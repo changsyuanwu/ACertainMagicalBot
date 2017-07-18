@@ -992,30 +992,6 @@
         "Answer": "Mas"
     },
     {
-        "Question": "What is the name of this costume? http://i.imgur.com/wJL65qj.png",
-        "Answer": "Devil's Man Shark"
-    },
-    {
-        "Question": "What is the name of this costume? http://i.imgur.com/l7hGYbp.png",
-        "Answer": "Night and Sakura Sione"
-    },
-    {
-        "Question": "What is the name of this costume? http://i.imgur.com/TCJo7Bt.png",
-        "Answer": "SWAT Team Rage"
-    },
-    {
-        "Question": "What is the name of this costume? http://i.imgur.com/hpo8WdM.png",
-        "Answer": "Summer Concert Lena"
-    },
-    {
-        "Question": "What is the name of this costume? http://i.imgur.com/2MqYYKH.png",
-        "Answer": "Skull King Sonic Boom"
-    },
-    {
-        "Question": "What is the name of this costume? http://i.imgur.com/auSrPUq.png",
-        "Answer": "Summer Beach Yekaterina"
-    },
-    {
         "Question": "Who are the elite guards of the Sibyls of the Dohwa Dynasty?",
         "Answer": "The Crimson Templars"
     },
@@ -1058,6 +1034,54 @@
     {
         "Question": "What is the name of Ildo's sword?",
         "Answer": "Blue Steel"
+    },
+    {
+        "Question": "What is the name of Evan's Dragon?",
+        "Answer": "Mir"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"If fighting is my duty, I'll never back down from it.\"",
+        "Answer": "Serphina"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"Ketarh Magic School...A nostalgic name.\"",
+        "Answer": "Klein"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"I think Lord and I have the same taste in music. Hahaha!\"",
+        "Answer": "Sonic Boom"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"Want some fish cookies? Cel gave them to me.\"",
+        "Answer": "Yeka"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"I've never failed to steal anything I want. Some people knew that and tried to take advantage of me.\"",
+        "Answer": "Phantom"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"A spring breeze is blowing. Petals, flutter!\"",
+        "Answer": "Taehwa"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"My brethren...They are asleep now, but they will awaken some day...\"",
+        "Answer": "Serendi"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"We have no cheesecake. This is not good. Mir, do you want some broiled fish instead?\"",
+        "Answer": "Evan"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"Argh, my level has dropped again!\"",
+        "Answer": "Mercedes"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"Hahaha! It truly is a great joy to meet so many people!\"",
+        "Answer": "Serendi"
+    },
+    {
+        "Question": "Which hero is the following quote from? \"This place is interesting. If I'm honest with myself, it's growing on me.\"",
+        "Answer": "Banshee"
     },
     {
         "Question": "Which hero is the following quote from? \"My brethren...They are asleep now, but they will awaken some day...\"",
