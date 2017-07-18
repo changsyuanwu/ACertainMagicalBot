@@ -1,7 +1,6 @@
 'use strict';
 // Modules
 const Discord = require("discord.js");
-const path = require("path");
 const sql = require("sqlite");
 const moment = require("moment");
 const FB = require("fb");
@@ -10,29 +9,28 @@ const bot = new Discord.Client();
 
 // Utils
 const launchLocation = __dirname;
-//const config = require(path.join(launchLocation, "config.json"));
-const config = require("./src/data/config.json")
-const help = require(path.join(launchLocation, "help.json"));
-const Logger = require(path.join(launchLocation, "src", "Utilities", "Logger.js"));
-const moe = require(path.join(launchLocation, "src", "Moe.json"));
-const credits = require(path.join(launchLocation, "credits.json"));
-const dictionary = require(path.join(launchLocation, "src", "Utilities", "dictionary.json"));
+const config = require("./src/Data/config.json")
+const help = require("./src/Data/help.json");
+const Logger = require("./src/Utilities/Logger.js");
+const moe = require("./src/Data/Moe.json");
+const credits = require("./src/Data/credits.json");
+const dictionary = require("./src/Utilities/dictionary.json");
 
 // Datatables
-const setDataTable = require(path.join(launchLocation, "src", "FWTData", "FWTSetData.json"));
-const aliasListSets = require(path.join(launchLocation, "src", "FWTData", "FWTSetAliases.json"));
-const aliasListHeroes = require(path.join(launchLocation, "src", "FWTData", "FWTHeroAliases.json"));
-const heroDataTable = require(path.join(launchLocation, "src", "FWTData", "FWTHeroStats.json"));
-const itemDataTable = require(path.join(launchLocation, "src", "FWTData", "FWTItemMaxStats.json"));
-const triviaTable = require(path.join(launchLocation, "src", "FWTData", "FWTTrivia.json"));
-const soulGearTable = require(path.join(launchLocation, "src", "FWTData", "FWTSoulGear.json"));
-const featuredSetTable = require(path.join(launchLocation, "src", "FWTData", "FWTFeaturedSets.json"));
-const heroSkillTable = require(path.join(launchLocation, "src", "FWTData", "FWTHeroSkills.json"))
+const setDataTable = require("./src/Data/FWTData/FWTSetData.json");
+const aliasListSets = require("./src/Data/FWTData/FWTSetAliases.json");
+const aliasListHeroes = require("./src/Data/FWTData/FWTHeroAliases.json");
+const heroDataTable = require("./src/Data/FWTData/FWTHeroStats.json");
+const itemDataTable = require("./src/Data/FWTData/FWTItemMaxStats.json");
+const triviaTable = require("./src/Data/FWTData/FWTTrivia.json");
+const soulGearTable = require("./src/Data/FWTData/FWTSoulGear.json");
+const featuredSetTable = require("./src/Data/FWTData/FWTFeaturedSets.json");
+const heroSkillTable = require("./src/Data/FWTData/FWTHeroSkills.json")
 
 // Effects
 const flagNames = ["confusion", "charm", "stun", "taunt", "disarm", "immobilize", "decrease movement", "dot", "mp burn", "skill cost", "defense ignore", "defense ignoring damage", "weakening", "buff removal", "hp% damage", "defense decrease", "attack decrease", "hp drain", "mastery decrease", "instant death", "decrease crit rate", "push/pull/switch", "passive attack", "seal", "sleep", "melee", "ranged", "overload", "terrain change", "dodge decrease", "decrease healing"];
 
-sql.open(path.join(launchLocation, "src", "botdata.sqlite"));
+sql.open("./src/Data/botdata.sqlite");
 
 // Trivia
 let triviaChannels = new Set([]);
@@ -204,10 +202,10 @@ function findSkillImage(heroAlias, skill) {
         case "5":
             const heroData = heroSkillTable.find(hero => hero.Name === heroName);
             if (heroData["5"].includes("currently has no awakening skill")) {
-                return path.join(launchLocation, "src", "Images", "Nexon.gif");
+                return "./src/Images/Nexon.gif";
             } // If the hero has an awakening skill, the case falls to the default one
         default:
-            return path.join(launchLocation, "src", "Images", "Hero Skills", `${heroName} ${skill}.jpg`);
+            return `./src/Images/Hero Skills/${heroName} ${skill}.jpg`;
     }
 } // Finds a hero skill's image
 
@@ -397,8 +395,8 @@ function generateRareness(rareness) {
 
 function PullOrNot() {
     let number = Math.random();
-    if (number <= 0.5) return path.join(launchLocation, "src", "Images", "Pull.png");
-    else return path.join(launchLocation, "src", "Images", "Don't Pull.png");
+    if (number <= 0.5) return "./src/Images/Pull.png";
+    else return "./src/Images/Don't Pull.png";
 } // Does the 50/50 pull or not
 
 function news(newsLimit, message) {
@@ -590,7 +588,7 @@ bot.on("message", async (message) => {
     } // Increments whenever the bot sends a message (bot is "used")
 
     if (message.content.includes("gimme") && (message.guild.id != 188363158107324400) && (message.guild.id != 164867600457662460)) {
-        message.channel.send({ files: [path.join(launchLocation, "src", "Images", "Gimme.gif")] })
+        message.channel.send({ files: ["./src/Images/Gimme.gif"] })
     } // Sends Shu-shu gimme gif when message contains "gimme"
 
     if (!message.content.startsWith(config.prefix)) return;
@@ -790,11 +788,13 @@ bot.on("message", async (message) => {
 
 
     else if (message.content.startsWith(config.prefix + "tuturu")) {
-        message.channel.send({ files: [path.join(launchLocation, "src", "Images", "Tuturu.png")] });
+        message.channel.send({ files: ["./src/Images/Tuturu.png"] });
     } else if (message.content.startsWith(config.prefix + "moa")) {
-        message.channel.send({ files: [path.join(launchLocation, "src", "Images", "Moa.png")] });
+        message.channel.send({ files: ["./src/Images/Moa.png"] });
     } else if (message.content.startsWith(config.prefix + "tyrant")) {
-        message.channel.send({ files: [path.join(launchLocation, "src", "Images", "Tyrant.png")] });
+        message.channel.send({ files: ["./src/Images/Tyrant.png"] });
+    } else if (message.content.startsWith(config.prefix + "atyrant")) {
+        message.channel.send({ files: ["./src/Images/ATyrant.png"] });
     } else if (message.content.startsWith(config.prefix + "moe")) {
         const randomMoeImageLink = moe[getRandomInt(0, moe.length)];
         message.channel.send({ files: [randomMoeImageLink] });
