@@ -1141,7 +1141,7 @@
         "1GeneCost": 270,
 
         "2": "**Boil Blood**:\nMake the blood of the enemies in a straight line boil. Inflicts damage equal to [118% ~ 162.1%] of Attack on the enemies and Immobilizes them for 1 turns.",
-        "2MPcost": 0,
+        "2MPcost": 66,
         "2GeneCost": 540,
 
         "3": "**Spell Boost**:\nDischarges mana, attacking enemies in its range at [?% ~ 190.3%] Attack with a [35% ~ 80%] chance of Confusing them for 1 turn. If Nox has 50% or more HP at the time that he uses this skill, his Attack increases by [1% ~ 10%] for 1 turn",
@@ -1262,20 +1262,20 @@
     {
         "Name": "Rage",
 
-        "1": "**Rising Shot**:\n",
+        "1": "**Rising Shot**:\nRage shoots his pistol, inflicting [97% ~ 133%] damage of Attack and increases enemy skill cost by [17% ~ 35%] for 1 turn.",
         "1MPcost": 15,
-        "1GeneCost": 0,
+        "1GeneCost": 225,
 
-        "2": "**Show Time**:\n",
+        "2": "**Show Time**:\nRandomly shoots at the surrounding enemies and inflicts damage equal to [112% ~ 153.4%] of Attack. For 1 turn, Rage's Crit Rate increases by [500 ~ 2750] and Dodge by [2500 ~ 4750].",
         "2MPcost": 41,
-        "2GeneCost": 0,
+        "2GeneCost": 446,
 
-        "3": "**Rapid Fire**:\n",
+        "3": "**Rapid Fire**:\nRapid pistol shot inflicting [143% ~ 196.1%] damage of Attack and Rage's MP recovers by [20 ~ 29]. This skill ignores [1780 ~ 3040] Defense of Scissors-type enemies.",
         "3MPcost": 94,
-        "3GeneCost": 0,
+        "3GeneCost": 891,
 
-        "4": "**Blitz**:\n",
-        "4GeneCost": 0,
+        "4": "**Blitz**:\nInflicts 15% more damage on Scissors-type enemies. When an enemy is eliminated by Rage, Attack increases by [5% ~ 14%] and Critical Damage by [5% ~ 32%] for 1 turn.",
+        "4GeneCost": 446,
 		
 		"5": "Rage currently has no awakening skill!",
         "5GeneCost": 0
@@ -1283,20 +1283,20 @@
     {
         "Name": "Ragna",
 
-        "1": "**Nightmare Edge**:\n",
+        "1": "**Nightmare Edge**:\nAttacks all enemies in his range at [101% ~ 138.8%] Attack. Decrease enemies' Attack by [190 ~ 1000] and increases Ragna's Defense by [450 ~ 810] for 2 turns.",
         "1MPcost": 15,
-        "1GeneCost": 0,
+        "1GeneCost": 270,
 
-        "2": "**Carnage Scissors**:\n",
+        "2": "**Carnage Scissors**:\nForcefully attacks enemies at [120% ~ 165%] Attack with a [15% ~ 60%] chance of pushing them 2 tiles away.",
         "2MPcost": 59,
-        "2GeneCost": 0,
+        "2GeneCost": 810,
 
-        "3": "**Devoured by Darkness**:\n",
+        "3": "**Devoured by Darkness**:\nGrabs enemies with his claw, dealing damage equal to [148% ~ 202.9%] of Attack and also dealing [5000 ~ 14000] additional Defense-ignoring damage.",
         "3MPcost": 105,
-        "3GeneCost": 0,
+        "3GeneCost": 1080,
 
-        "4": "**Eater of Souls**:\n",
-        "4GeneCost": 0,
+        "4": "**Eater of Souls**:\nThe power of Soul Eater restores as much HP as [15% ~ 33%] of the damage inflicted on enemies.",
+        "4GeneCost": 540,
 		
 		"5": "Ragna currently has no awakening skill!",
         "5GeneCost": 0
@@ -1304,20 +1304,20 @@
     {
         "Name": "Raizel",
 
-        "1": "**Mind Control - Compulsion**:\n",
+        "1": "**Mind Control - Compulsion**:\nAttacks an enemy at [110% ~ 140.5%] Attack with a [24% ~ 60%] chance of Charming it for 1 turn. If the target's HP is below 55%, then Raizel's HP increased by [2% ~ 6.5%].",
         "1MPcost": 15,
-        "1GeneCost": 0,
+        "1GeneCost": 270,
 
-        "2": "**Blood Field**:\n",
+        "2": "**Blood Field**:\nSummons a crimson field that attacks enemies within it's range at [130% ~ 178.6%] Attack and burns [30 ~ 120] MP. Additionally creates a [25% ~ 70%] chance of decreasing their Attack by [5% ~ 14%] for 2 turns.",
         "2MPcost": 74,
-        "2GeneCost": 0,
+        "2GeneCost": 810,
 
-        "3": "**Bloody Wings**:\n",
+        "3": "**Bloody Wings**:\nSpreads crimson wings, attacking enemies straight ahead at [150% ~ 205.8%] Attack. Pierced enemies recieve [5000 ~ 23000] additional fixed damage. Additionally increases the selected target's skill MP cost by [45% ~ 90%] for 2 turns, but at the cost of 10% of Raizel's reamaining HP.",
         "3MPcost": 152,
-        "3GeneCost": 0,
+        "3GeneCost": 1080,
 
-        "4": "**Noblesse's Judgment**:\n",
-        "4GeneCost": 0,
+        "4": "**Noblesse's Judgment**:\nRaizel gives his Noblesse's Judgement, developing a resistance that creates a [1% ~ 10%] chance of ignoring Abnormal Status effects. Also achieves [3% ~ 13.8%] higher Attack when his HP is 50% or more.",
+        "4GeneCost": 540,
 		
 		"5": "Raizel currently has no awakening skill!",
         "5GeneCost": 0
@@ -1435,11 +1435,11 @@
         "1GeneCost": 0,
 
         "2": "**Moonlight Slash**:\n",
-        "2MPcost": 0,
+        "2MPcost": 66,
         "2GeneCost": 0,
 
         "3": "**Grim Reaper**:\n",
-        "3MPcost": 0,
+        "3MPcost": 105,
         "3GeneCost": 0,
 
         "4": "**Death Sentence**:\n",
@@ -1729,7 +1729,7 @@
         "1GeneCost": 340,
 
         "2": "**Weakness, Maybe**:",
-        "2MPcost": 0,
+        "2MPcost": 68,
         "2GeneCost": 680,
 
         "3": "**Immature Energy Wave**:",
@@ -1750,7 +1750,7 @@
         "1GeneCost": 340,
 
         "2": "**Loyal Hounds**:",
-        "2MPcost": 0,
+        "2MPcost": 71,
         "2GeneCost": 680,
 
         "3": "**Constricting Collapse**:",
