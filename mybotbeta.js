@@ -583,7 +583,7 @@ bot.on("message", async (message) => {
         console.log(`Message Received!\n\tSender: ${message.author.username} \n\tContent: ${message.content.slice(message.content.indexOf(" "))}`);
     } // Logs messages that mention the bot
 
-    if ((config.selfBot) && (message.author !== client.user)) {
+    if ((config.selfBot) && (message.author.id !== config.ownerID)) {
         return;
     } // If selfbot option is on and the message was not used by the owner, do not respond
 
