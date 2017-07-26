@@ -1,7 +1,6 @@
 'use strict';
 // Modules
 const Discord = require("discord.js");
-const path = require("path");
 const sql = require("sqlite");
 const moment = require("moment");
 const FB = require("fb");
@@ -10,27 +9,28 @@ const bot = new Discord.Client();
 
 // Utils
 const launchLocation = __dirname;
-const config = require(path.join(launchLocation, "config.json"));
-const help = require(path.join(launchLocation, "help.json"));
-const Logger = require(path.join(launchLocation, "src", "Utilities", "Logger.js"));
-const moe = require(path.join(launchLocation, "src", "Moe.json"));
-const credits = require(path.join(launchLocation, "credits.json"));
+const config = require("./src/Data/config.json")
+const help = require("./src/Data/help.json");
+const Logger = require("./src/Utilities/Logger.js");
+const moe = require("./src/Data/Moe.json");
+const credits = require("./src/Data/credits.json");
+const dictionary = require("./src/Utilities/dictionary.json");
 
 // Datatables
-const setDataTable = require(path.join(launchLocation, "src", "Data", "FWTSetData.json"));
-const aliasListSets = require(path.join(launchLocation, "src", "Data", "FWTSetAliases.json"));
-const aliasListHeroes = require(path.join(launchLocation, "src", "Data", "FWTHeroAliases.json"));
-const heroDataTable = require(path.join(launchLocation, "src", "Data", "FWTHeroStats.json"));
-const itemDataTable = require(path.join(launchLocation, "src", "Data", "FWTItemMaxStats.json"));
-const triviaTable = require(path.join(launchLocation, "src", "Data", "FWTTrivia.json"));
-const soulGearTable = require(path.join(launchLocation, "src", "Data", "FWTSoulGear.json"));
-const featuredSetTable = require(path.join(launchLocation, "src", "Data", "FWTFeaturedSets.json"));
-const heroSkillTable = require(path.join(launchLocation, "src", "Data", "FWTHeroSkills.json"))
+const setDataTable = require("./src/Data/FWTData/FWTSetData.json");
+const aliasListSets = require("./src/Data/FWTData/FWTSetAliases.json");
+const aliasListHeroes = require("./src/Data/FWTData/FWTHeroAliases.json");
+const heroDataTable = require("./src/Data/FWTData/FWTHeroStats.json");
+const itemDataTable = require("./src/Data/FWTData/FWTItemMaxStats.json");
+const triviaTable = require("./src/Data/FWTData/FWTTrivia.json");
+const soulGearTable = require("./src/Data/FWTData/FWTSoulGear.json");
+const featuredSetTable = require("./src/Data/FWTData/FWTFeaturedSets.json");
+const heroSkillTable = require("./src/Data/FWTData/FWTHeroSkills.json")
 
 // Effects
 const flagNames = ["confusion", "charm", "stun", "taunt", "disarm", "immobilize", "decrease movement", "dot", "mp burn", "skill cost", "defense ignore", "defense ignoring damage", "weakening", "buff removal", "hp% damage", "defense decrease", "attack decrease", "hp drain", "mastery decrease", "instant death", "decrease crit rate", "push/pull/switch", "passive attack", "seal", "sleep", "melee", "ranged", "overload", "terrain change", "dodge decrease", "decrease healing"];
 
-sql.open(path.join(launchLocation, "src", "botdata.sqlite"));
+sql.open("./src/Data/botdata.sqlite");
 
 // Trivia
 let triviaChannels = new Set([]);
@@ -202,10 +202,10 @@ function findSkillImage(heroAlias, skill) {
         case "5":
             const heroData = heroSkillTable.find(hero => hero.Name === heroName);
             if (heroData["5"].includes("currently has no awakening skill")) {
-                return path.join(launchLocation, "src", "Images", "Nexon.gif");
+                return "./src/Images/Nexon.gif";
             } // If the hero has an awakening skill, the case falls to the default one
         default:
-            return path.join(launchLocation, "src", "Images", "Hero Skills", `${heroName} ${skill}.jpg`);
+            return `./src/Images/Hero Skills/${heroName} ${skill}.jpg`;
     }
 } // Finds a hero skill's image
 
@@ -395,8 +395,8 @@ function generateRareness(rareness) {
 
 function PullOrNot() {
     let number = Math.random();
-    if (number <= 0.5) return path.join(launchLocation, "src", "Images", "Pull.png");
-    else return path.join(launchLocation, "src", "Images", "Don't Pull.png");
+    if (number <= 0.5) return "./src/Images/Pull.png";
+    else return "./src/Images/Don't Pull.png";
 } // Does the 50/50 pull or not
 
 function news(newsLimit, message) {
@@ -414,7 +414,6 @@ function news(newsLimit, message) {
                 reject(error);
             } else {
                 resolve(response.data.map(postData => {
-                    const attachments = postData.attachments.data[0];
                     if (message.channel.type === "dm") {
                         var color = "#4F545C";
                     } else {
@@ -426,12 +425,15 @@ function news(newsLimit, message) {
                         .setAuthor(postData.from.name, null, "https://www.facebook.com/" + facebookEntityName)
                         .setColor(color)
                         .setURL(postData.permalink_url);
-                    if (attachments.type !== "album") {
-                        embed.setImage(attachments.media.image.src);
+                    if (postData.attachments !== undefined) {
+                        var attachments = postData.attachments.data[0];
+                        if (attachments.type !== "album") {
+                            embed.setImage(attachments.media.image.src);
+                        }
                     }
                     return {
                         embed
-                    }
+                    };
                 }).filter(data => data !== null));
             }
         });
@@ -519,42 +521,46 @@ function setupFacebookAccessToken() {
 } // Gets a Facebook access token 
 
 function getNewsTitle(data) {
-    const attachments = data.attachments.data[0];
-    let title;
-    switch (attachments.type) {
-        case "note":
-            title = data.message;
-            break;
-        case "album":
-            title = data.message.substring(0, data.message.indexOf("\n"));
-            break;
-        case "video_inline":
-            title = `${attachments.title}: ${data.message.substring(0, data.message.indexOf("\n"))}`;
-            break;
-        case "cover_photo":
-            title = attachments.title;
-            break;
-        default:
-            title = data.message.substring(0, data.message.indexOf("\n"));
-            break;
+    let title = data.message.substring(0, data.message.indexOf("\n"));
+    if (data.attachments !== undefined) {
+        var attachments = data.attachments.data[0];
+        switch (attachments.type) {
+            case "note":
+                title = data.message;
+                break;
+            case "album":
+                title = data.message.substring(0, data.message.indexOf("\n"));
+                break;
+            case "video_inline":
+                title = `${attachments.title}: ${data.message.substring(0, data.message.indexOf("\n"))}`;
+                break;
+            case "cover_photo":
+                title = attachments.title;
+                break;
+            default:
+                title = data.message.substring(0, data.message.indexOf("\n"));
+                break;
+        }
     }
     return title;
 } // Gets the title of a Facebook post
 
 function getNewsDescription(data) {
-    const attachments = data.attachments.data[0];
-    let description;
-    switch (attachments.type) {
-        case "note":
-            description = attachments.description;
-            break;
-        case "cover_photo":
-            description = " ";
-            break;
-        case "album":
-        case "video_inline":
-        default:
-            description = data.message.substring(data.message.indexOf("\n"));
+    let description = data.message.substring(data.message.indexOf("\n"));
+    if (data.attachments !== undefined) {
+        var attachments = data.attachments.data[0];
+        switch (attachments.type) {
+            case "note":
+                description = attachments.description;
+                break;
+            case "cover_photo":
+                description = " ";
+                break;
+            case "album":
+            case "video_inline":
+            default:
+                description = data.message.substring(data.message.indexOf("\n"));
+        }
     }
     if (description.length > 2048) {
         description = description.substring(0, 2048);
@@ -577,12 +583,16 @@ bot.on("message", async (message) => {
         console.log(`Message Received!\n\tSender: ${message.author.username} \n\tContent: ${message.content.slice(message.content.indexOf(" "))}`);
     } // Logs messages that mention the bot
 
+    if ((config.selfBot) && (message.author.id !== config.ownerID)) {
+        return;
+    } // If selfbot option is on and the message was not used by the owner, do not respond
+
     if (message.author.id === bot.user.id) {
         incrementUses();
     } // Increments whenever the bot sends a message (bot is "used")
 
-    if (message.content.includes("gimme") && (message.guild.id != 188363158107324400)) {
-        message.channel.send({ files: [path.join(launchLocation, "src", "Images", "Gimme.gif")] })
+    if (message.content.includes("gimme") && (message.guild.id != 188363158107324400) && (message.guild.id != 164867600457662460)) {
+        message.channel.send({ files: ["./src/Images/Gimme.gif"] })
     } // Sends Shu-shu gimme gif when message contains "gimme"
 
     if (!message.content.startsWith(config.prefix)) return;
@@ -716,7 +726,7 @@ bot.on("message", async (message) => {
                 msg.push(`\`\`\`${response.definition}\`\`\``);
                 msg.push(`**Example:** ${response.example}`);
                 msg.push(response.urbanURL);
-                message.channel.send(msg.join("\n"))
+                message.channel.send(msg.join("\n"), { split: true })
             })
             .catch(error => {
                 message.channel.send("An error occured");
@@ -730,10 +740,43 @@ bot.on("message", async (message) => {
             if (requestedRole !== null) {
                 message.member.addRole(requestedRole)
                     .then(() => {
-                        message.reply(" this role was successfully added to you.")
+                        message.reply("this role was successfully added to you.")
                     })
             } else {
-                message.reply(" either this Role does not exist or I do not have permission to access it.");
+                message.reply("either this Role does not exist or I do not have permission to access it.");
+            }
+        } else {
+            message.channel.send("Invalid request!");
+        }
+    } // Adds a Role to an user
+
+
+    else if (message.content.startsWith(config.prefix + "remove")) {
+        if (args.length >= 2) {
+            const requestedRole = message.guild.roles.find(role => role.name.toLowerCase() === msgContent.toLowerCase());
+            if (requestedRole !== null) {
+                message.member.removeRole(requestedRole)
+                    .then(() => {
+                        message.reply("this role was successfully removed from you.")
+                    })
+            } else {
+                message.reply("either this Role does not exist or I do not have permission to access it.");
+            }
+        } else {
+            message.channel.send("Invalid request!");
+        }
+    } // Removes a Role from an user
+
+
+    else if (message.content.startsWith(config.prefix + "define")) {
+        if (args.length >= 2) {
+            const word = msgContent.toLowerCase();
+            const startingLetterAlphaCode = word.slice(0, 1).charCodeAt(0) - 97;
+            const definition = dictionary[startingLetterAlphaCode][word];
+            if (definition !== undefined) {
+                message.channel.send(`Definition for ${word}:\n\t${definition}`, { split: { char: " " } })
+            } else {
+                message.channel.send("Could not find a definition for your query. Please check your spelling and remember that !define uses a real dictionary, and not UrbanDictionary (Use !urban for the UrbanDictionary).")
             }
         } else {
             message.channel.send("Invalid request!");
@@ -749,11 +792,13 @@ bot.on("message", async (message) => {
 
 
     else if (message.content.startsWith(config.prefix + "tuturu")) {
-        message.channel.send({ files: [path.join(launchLocation, "src", "Images", "Tuturu.png")] });
+        message.channel.send({ files: ["./src/Images/Tuturu.png"] });
     } else if (message.content.startsWith(config.prefix + "moa")) {
-        message.channel.send({ files: [path.join(launchLocation, "src", "Images", "Moa.png")] });
+        message.channel.send({ files: ["./src/Images/Moa.png"] });
     } else if (message.content.startsWith(config.prefix + "tyrant")) {
-        message.channel.send({ files: [path.join(launchLocation, "src", "Images", "Tyrant.png")] });
+        message.channel.send({ files: ["./src/Images/Tyrant.png"] });
+    } else if (message.content.startsWith(config.prefix + "atyrant")) {
+        message.channel.send({ files: ["./src/Images/ATyrant.png"] });
     } else if (message.content.startsWith(config.prefix + "moe")) {
         const randomMoeImageLink = moe[getRandomInt(0, moe.length)];
         message.channel.send({ files: [randomMoeImageLink] });
