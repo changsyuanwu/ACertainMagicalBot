@@ -1095,8 +1095,8 @@
         "4": "**Summon Spirit**:\nWhenever an ally dies, Mu calls up a ghost to increase her Attack by [1% ~ 10%], Crit Rate by [5% ~ 11%], and HP by [? ~ 15000].",
         "4GeneCost": 162,
 		
-		"5": "Mu currently has no awakening skill!",
-        "5ChargeTurns": 0,
+		"5": "**Exorcism**:\nFrees the power sealed in the talisman, attacking enemies at [?% ~ 220%] Attack and prevents targets from being healed for 2 turns. Also plunders the enemy's soul to increase Mu's Attack by [? ~ 4500] and Defense by [? ~ 2500] for 2 turns.",
+        "5ChargeTurns": 1,
 		"5GeneCost": 0
     },
     {
