@@ -588,5 +588,19 @@
             "camellia",
             "camilia"
         ]
+    },
+    {
+        "name": "Sogoon",
+        "aliases": [
+            "sogoon",
+            "sogo"
+        ]
+    },
+    {
+        "name": "Churyeok",
+        "aliases": [
+            "churyeok",
+            "chur"
+        ]
     }
 ]
