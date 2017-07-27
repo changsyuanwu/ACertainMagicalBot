@@ -414,7 +414,7 @@
 		"Soul Gear Weapon": "Defense: 400, Crit Rate: 200",
 		"Weapon Effect": "Increases Skill Damage by 18.7% and ally recovery by 18.7% for Skill 3",
 		"Soul Gear Wings": "Dodge: 200, Counter Damage: 600",
-		"Wings Effect": "Increases Attack by 825 and HP by 4000 when an ally dies for Passive Skill",
+		"Wings Effect": "Increases Attack by 10% and HP by 4000 when an ally dies for Passive Skill",
 		"2pc Effect": "Increase Resistance by 5%"
 	},
 	{
