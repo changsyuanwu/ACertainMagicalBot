@@ -18,7 +18,8 @@
         "4GeneCost": 0,
 		
 		"5": "****:",
-        "5GeneCost": 0
+        "5ChargeTurns": 0,
+		"5GeneCost": 0
     },
     {
         "Name": "Alex",
@@ -39,7 +40,8 @@
         "4GeneCost": 450,
 		
 		"5": "Alex currently has no awakening skill!",
-        "5GeneCost": 0
+        "5ChargeTurns": 0,
+		"5GeneCost": 0
     },
 	{
         "Name": "Alfred",
@@ -59,8 +61,9 @@
         "4": "**Lesson**:\nWhen Alfred, a former magic School principal, uses this skill, his Attack instantly increases by [2.5% ~ 7%] for each student (enemy) that he taught.",
         "4GeneCost": 45,
 		
-		"5": "**Earth Crash**:\nExplodes inner energy, attacking enemies within its range at [535% ~ ?%] Attack, and ignoring [1500 ~ 4200] Defense. Also decreases their movement by 4 for 2 turns.",
-        "5GeneCost": 70
+		"5": "**Earth Crash**:\nExplodes inner energy, attacking enemies within its range at [?% ~ 1441%] Attack, and ignoring [1500 ~ 4200] Defense. Also decreases their movement by 4 for 2 turns.",
+        "5ChargeTurns": 8,
+		"5GeneCost": 70
     },
     {
         "Name": "Angela",
@@ -81,7 +84,8 @@
         "4GeneCost": 568,
 		
 		"5": "Angela currently has no awakening skill!",
-        "5GeneCost": 0
+        "5ChargeTurns": 0,
+		"5GeneCost": 0
     },
     {
         "Name": "Aran",
@@ -102,7 +106,8 @@
         "4GeneCost": 680,
 		
 		"5": "Aran currently has no awakening skill!",
-        "5GeneCost": 0
+        "5ChargeTurns": 0,
+		"5GeneCost": 0
     },
     {
         "Name": "Azrael",
@@ -123,7 +128,8 @@
         "4GeneCost": 568,
 		
 		"5": "Azrael currently has no awakening skill!",
-        "5GeneCost": 0
+        "5ChargeTurns": 0,
+		"5GeneCost": 0
     },
     {
         "Name": "Banshee",
@@ -144,7 +150,8 @@
         "4GeneCost": 680,
 		
 		"5": "Banshee currently has no awakening skill!",
-        "5GeneCost": 0
+        "5ChargeTurns": 0,
+		"5GeneCost": 0
     },
     {
         "Name": "Bearman",
@@ -165,7 +172,8 @@
         "4GeneCost": 450,
 		
 		"5": "Bearman currently has no awakening skill!",
-        "5GeneCost": 0
+        "5ChargeTurns": 0,
+		"5GeneCost": 0
     },
     {
         "Name": "Belle",
@@ -186,7 +194,8 @@
 		"4GeneCost": 567,
 
 		"5": "Belle currently has no awakening skill!",
-        "5GeneCost": 0
+        "5ChargeTurns": 0,
+		"5GeneCost": 0
     },
     {
         "Name": "Carrot",
@@ -206,8 +215,9 @@
         "4": "**Have a Taste!**:\nIncreaes damaghe by [2.8% ~ 10%] on targets that are at least 3 tiles away from Carrot.",
         "4GeneCost": 135,
 		
-		"5": "**Beat and Steal**:\nIts (Carrot's) companions come out of hiding and Attack enemies at [540% ~ 742.5%] Attack with a [55% ~ 100%] chance of confusing them for 2 turns. Also restores [120 ~ 300] MP.",
-        "5GeneCost": 912
+		"5": "**Beat and Steal**:\nIts (Carrot's) companions come out of hiding and Attack enemies at [?% ~ 462%] Attack with a [55% ~ 100%] chance of confusing them for 2 turns. Also restores [120 ~ 300] MP.",
+        "5ChargeTurns": 4,
+		"5GeneCost": 912
     },
     {
         "Name": "Cat Sidhe",
@@ -228,7 +238,8 @@
         "4GeneCost": 680,
 		
 		"5": "Cat Sidhe currently has no awakening skill!",
-        "5GeneCost": 0
+        "5ChargeTurns": 0,
+		"5GeneCost": 0
     },
     {
         "Name": "Celestial",
@@ -249,7 +260,8 @@
         "4GeneCost": 675,
 		
 		"5": "Celestial currently has no awakening skill!",
-        "5GeneCost": 0
+        "5ChargeTurns": 0,
+		"5GeneCost": 0
     },
     {
         "Name": "Chenny",
@@ -270,7 +282,8 @@
         "4GeneCost": 540,
 		
 		"5": "Chenny currently has no awakening skill!",
-        "5GeneCost": 0
+        "5ChargeTurns": 0,
+		"5GeneCost": 0
     },
     {
         "Name": "Chris",
@@ -291,7 +304,8 @@
         "4GeneCost": 45,
 		
 		"5": "**Lagrangian Technique**:\nPerforms a secret Lagrangian technique, attacking enemies within its range at [545% ~ 749.3%] Attack, and increase (Chris's) Defense by [2300 ~ 5000] for 2 turns. Also creates a [55% ~ 100%] chance of resisting Abnormal Status effects.",
-        "5GeneCost": 70
+        "5ChargeTurns": 4,
+		"5GeneCost": 70
     },
     {
         "Name": "Cleo",
@@ -312,7 +326,8 @@
         "4GeneCost": 405,
 		
 		"5": "Cleo currently has no awakening skill!",
-        "5GeneCost": 0
+        "5ChargeTurns": 0,
+		"5GeneCost": 0
     },
     {
         "Name": "Deborah",
@@ -333,7 +348,8 @@
         "4GeneCost": 135,
 		
 		"5": "**Firewall**:\nA fiery explosion sends forth fire pillars accross the ground, attacking enemies at [545% ~ 749.3%] Attack and preventing the targets from being healed for 3 turns. Enemies under DoT receive all remaining DoT damage at once",
-        "5GeneCost": 912
+        "5ChargeTurns": 4,
+		"5GeneCost": 912
     },
     {
         "Name": "Deimos",
@@ -354,7 +370,8 @@
         "4GeneCost": 675,
 		
 		"5": "Deimos currently has no awakening skill!",
-        "5GeneCost": 0
+        "5ChargeTurns": 0,
+		"5GeneCost": 0
     },
     {
         "Name": "Dolores",
@@ -375,7 +392,8 @@
         "4GeneCost": 160,
 		
 		"5": "**Power of Money**:\nInflicts damage to enemies in range with [532% ~ 651.7%] Attack and increase their MP cost by [55% ~ 100%] for 1 turn. Also, Copy enemies' buffs randomly up to 5 and keep them for 1 turn. Removes enemies' buffs.",
-        "5GeneCost": 0
+        "5ChargeTurns": 2,
+		"5GeneCost": 0
     },
     {
         "Name": "Dominique",
@@ -396,7 +414,8 @@
         "4GeneCost": 405,
 		
 		"5": "Dominique currently has no awakening skill!",
-        "5GeneCost": 0
+        "5ChargeTurns": 0,
+		"5GeneCost": 0
     },
     {
         "Name": "Elektra",
@@ -417,7 +436,8 @@
         "4GeneCost": 568,
 		
 		"5": "Elektra currently has no awakening skill",
-        "5GeneCost": 0
+        "5ChargeTurns": 0,
+		"5GeneCost": 0
     },
     {
         "Name": "Eunwol",
@@ -438,7 +458,8 @@
         "4GeneCost": 680,
 		
 		"5": "Eunwol currently has no awakening skill!",
-        "5GeneCost": 0
+        "5ChargeTurns": 0,
+		"5GeneCost": 0
     },
     {
         "Name": "Evan",
@@ -459,7 +480,8 @@
         "4GeneCost": 680,
 		
 		"5": "Evan currently has no awakening skill!",
-        "5GeneCost": 0
+        "5ChargeTurns": 0,
+		"5GeneCost": 0
     },
     {
         "Name": "Frankenstein",
@@ -480,7 +502,8 @@
         "4GeneCost": 1000,
 		
 		"5": "Frankenstein currently has no awakening skill!",
-        "5GeneCost": 0
+        "5ChargeTurns": 0,
+		"5GeneCost": 0
     },
     {
         "Name": "Fruel",
@@ -501,7 +524,8 @@
         "4GeneCost": 540,
 		
 		"5": "Fruel currently has no awakening skill!",
-        "5GeneCost": 0
+        "5ChargeTurns": 0,
+		"5GeneCost": 0
     },
     {
         "Name": "Gillan",
@@ -522,7 +546,8 @@
         "4GeneCost": 360,
 		
 		"5": "Gillan currently has no awakening skill!",
-        "5GeneCost": 0
+        "5ChargeTurns": 0,
+		"5GeneCost": 0
     },
     {
         "Name": "Hella",
@@ -543,7 +568,8 @@
         "4GeneCost": 0,
 		
 		"5": "Hella currently has no awakening skill!",
-        "5GeneCost": 0
+        "5ChargeTurns": 0,
+		"5GeneCost": 0
     },
     {
         "Name": "Henry",
@@ -564,7 +590,8 @@
         "4GeneCost": 495,
 		
 		"5": "Henry currently has no awakening skill!",
-        "5GeneCost": 0
+        "5ChargeTurns": 0,
+		"5GeneCost": 0
     },
     {
         "Name": "Hongyeom",
@@ -585,7 +612,8 @@
         "4GeneCost": 680,
 		
 		"5": "**Full Moon Javelins**:\nDrops moon-kissed red cherry blossoms and camelias, attacking enemies at [546% ~ 750.3%] Attack and Burning on them for 2 turns. Burned targets inflict damage on all allies in a 1-tile range at [143% ~ 196.1%] Attack at the beginning of each turn.",
-        "5GeneCost": 5100
+        "5ChargeTurns": 4,
+		"5GeneCost": 5100
     },
     {
         "Name": "Ian",
@@ -606,7 +634,8 @@
         "4GeneCost": 45,
 		
 		"5": "**Bomb, Meow!**:\nThrusts a giant shark into the ground, attacking enemies in his range at [541% ~ ?%] Attack and decreasing their Defense by [1200 ~ ?] for 2 turns. Enemies at least 3 tiles away from Ian have their Defense decreased by [2200 ~ ?] for 2 turns and additionally receive [45000 ~ ?] Defense-ignoring damage.",
-        "5GeneCost": 70
+        "5ChargeTurns": 1,
+		"5GeneCost": 70
     },
     {
         "Name": "Ildo",
@@ -627,7 +656,8 @@
         "4GeneCost": 680,
 		
 		"5": "**Flash Sword**:\nAttacks enemies in a straight line at [535% ~ 734.8%%] Attack and causes Lethal Wound for 2 turns. Lethal Wound inflicts as much damage as [55% ~ 79%] Attack for every tile that it's target moved at the end of the turn. (Note that this skill's target range is 5 tiles, but it's effect range is 20 tiles)",
-        "5GeneCost": 5100
+        "5ChargeTurns": 3,
+		"5GeneCost": 5100
     },
     {
         "Name": "Jack",
@@ -648,7 +678,8 @@
         "4GeneCost": 180,
 		
 		"5": "**GRRR!**:\nJack, having awakened to the power of the full moon, attacks enemies in his range at [546% ~ 750.3%] Attack with a [55% ~ 100%] chance of Confusing them for 2 turns. Also, decreases healing effects for his target for 2 turns.",
-        "5GeneCost": 0
+        "5ChargeTurns": 3,
+		"5GeneCost": 0
     },
     {
         "Name": "Jenny",
@@ -669,7 +700,8 @@
         "4GeneCost": 160,
 		
 		"5": "**Super Straight Chu~**:\nJenny shoots a special piercing bullet, attacking enemies in a straight line at [?% ~ ?%] Attack and inflicting [? ~ ?] Defense-ignoring damage. If 2 or more enemies are hit, this skill additionally inflicts [? ~ ?] damage, if 4 or more enemies are hit, another [? ~ ?] damage is added to the damage bonus.",
-        "5GeneCost": 1065
+        "5ChargeTurns": 8,
+		"5GeneCost": 1065
     },
     {
         "Name": "Jin",
@@ -690,7 +722,8 @@
         "4GeneCost": 225,
 		
 		"5": "Jin currently has no awakening skill!",
-        "5GeneCost": 0
+        "5ChargeTurns": 0,
+		"5GeneCost": 0
     },
     {
         "Name": "Jin Kisaragi",
@@ -711,7 +744,8 @@
         "4GeneCost": 540,
 		
 		"5": "Jin Kisaragi currently has no awakening skill!",
-        "5GeneCost": 0
+        "5ChargeTurns": 0,
+		"5GeneCost": 0
     },
     {
         "Name": "Kai",
@@ -732,7 +766,8 @@
         "4GeneCost": 16,
 		
 		"5": "**Wrath of Mother Nature**:\nThe energy of thunder and lava ignores [3300 ~ 6000] Defense of enemies within its range and attacks them at [524% ~ 720.2%] Attack. Additionally creates a chance of Stunning them for 1 turn ([55% ~ 100%] chance for its target and [35% ~ 80%] for all the others within its range).",
-        "5GeneCost": 70
+        "5ChargeTurns": 2,
+		"5GeneCost": 70
     },
     {
         "Name": "Kitty",
@@ -753,7 +788,8 @@
         "4GeneCost": 486,
 		
 		"5": "Kitty currently has no awakening skill!",
-        "5GeneCost": 0
+        "5ChargeTurns": 0,
+		"5GeneCost": 0
     },
     {
         "Name": "Klein",
@@ -774,7 +810,8 @@
         "4GeneCost": 630,
 		
 		"5": "Klein currently has no awakening skill!",
-        "5GeneCost": 0
+        "5ChargeTurns": 0,
+		"5GeneCost": 0
     },
     {
         "Name": "Krut",
@@ -795,7 +832,8 @@
         "4GeneCost": 540,
 		
 		"5": "Krut currently has no awakening skill!",
-        "5GeneCost": 0
+        "5ChargeTurns": 0,
+		"5GeneCost": 0
     },
     {
         "Name": "Lance",
@@ -815,8 +853,9 @@
         "4": "**Strong Like Boulder**:\nLance achieves 2 higher Movement and [800 ~ 1070] higher Mastery if his party includes 2 or more Swamp-type heroes. If he is in Movement Reduction mode, his damage from Paper-type enemies decreases by 15%.",
         "4GeneCost": 135,
 		
-		"5": "**Last Fusion**:\nSummons and rides an ancient golem, attacking all enemies in his range at [519% ~ 635.1%] Attack. Lance cannot receive more than 3000 damage for 2 turns. If Lance is in Movement Reduction mode, this skill's Final Power increases by [16% ~ 25%].",
-        "5GeneCost": 912
+		"5": "**Last Fusion**:\nSummons and rides an ancient golem, attacking all enemies in his range at [519% ~ 635.1%] Attack. Lance cannot receive more than 35000 damage for 2 turns. If Lance is in Movement Reduction mode, this skill's Final Power increases by [16% ~ 25%].",
+        "5ChargeTurns": 2,
+		"5GeneCost": 912
     },
     {
         "Name": "Lee",
@@ -837,7 +876,8 @@
         "4GeneCost": 568,
 		
 		"5": "Lee currently has no awakening skill!",
-        "5GeneCost": 0
+        "5ChargeTurns": 0,
+		"5GeneCost": 0
     },
     {
         "Name": "Lena",
@@ -858,7 +898,8 @@
         "4GeneCost": 540,
 		
 		"5": "Lena currently has no awakening skill!",
-        "5GeneCost": 0
+        "5ChargeTurns": 0,
+		"5GeneCost": 0
     },
     {
         "Name": "Lilid",
@@ -879,7 +920,8 @@
         "4GeneCost": 450,
 		
 		"5": "Lilid currently has no awakening skill!",
-        "5GeneCost": 0
+        "5ChargeTurns": 0,
+		"5GeneCost": 0
     },
     {
         "Name": "Lily",
@@ -900,7 +942,8 @@
         "4GeneCost": 360,
 		
 		"5": "Lily currently has no awakening skill!",
-        "5GeneCost": 0
+        "5ChargeTurns": 0,
+		"5GeneCost": 0
     },
     {
         "Name": "Lucas",
@@ -921,7 +964,8 @@
         "4GeneCost": 675,
 		
 		"5": "Lucas currently has no awakening skill!",
-        "5GeneCost": 0
+        "5ChargeTurns": 0,
+		"5GeneCost": 0
     },
     {
         "Name": "Luminous",
@@ -942,7 +986,8 @@
         "4GeneCost": 680,
 		
 		"5": "Luminous currently has no awakening skill!",
-        "5GeneCost": 0
+        "5ChargeTurns": 0,
+		"5GeneCost": 0
     },
     {
         "Name": "Mas",
@@ -963,7 +1008,8 @@
         "4GeneCost": 160,
 		
 		"5": "**Hymn to Hermes**:\nMas's musical talent explodes, restoring HP at [384% ~ 528%] Attack for allies within his range and removes all debuffs cast on them. Also increases all allies' Movement by 3 for 2 turns.",
-        "5GeneCost": 1065
+        "5ChargeTurns": 2,
+		"5GeneCost": 1065
     },
     {
         "Name": "Mercedes",
@@ -984,7 +1030,8 @@
         "4GeneCost": 680,
 		
 		"5": "Mercedes currently has no awakening skill!",
-        "5GeneCost": 0
+        "5ChargeTurns": 0,
+		"5GeneCost": 0
     },
     {
         "Name": "Moa",
@@ -1005,7 +1052,8 @@
         "4GeneCost": 450,
 		
 		"5": "Moa currently has no awakening skill!",
-        "5GeneCost": 0
+        "5ChargeTurns": 0,
+		"5GeneCost": 0
     },
     {
         "Name": "Momo",
@@ -1026,7 +1074,8 @@
         "4GeneCost": 144,
 		
 		"5": "**Momo's Reinforced Bomb!**:\nDrops onto the enemy camp riding a reinforced bomb, attacking at [524% ~ 720.2%] Attack and causing additional [44000 ~ 80000] Defense-ignoring damage. Resets Momo's Passive effects.",
-        "5GeneCost": 972
+        "5ChargeTurns": 8,
+		"5GeneCost": 972
     },
     {
         "Name": "Mu",
@@ -1039,15 +1088,16 @@
         "2MPcost": 98,
         "2GeneCost": 162,
 
-        "3": "**Yin Yang & Five Elements**:\nInflicts damage at [129% ~ 176.7%] of Attack on nearby enemies, and heals allies apart from Mu by [70% ~ 96.1%] of Attack. Also increases Mu’s Crit Rate by [1500 ~ 7800] for 1 turn.",
+        "3": "**Yin Yang & Five Elements**:\nInflicts damage at [?% ~ 182.5%] of Attack on nearby enemies, heals allies apart from Mu by [70% ~ 96.1%] of Attack, and heals Mu at [?% ~ 45%] of Attack. Also increases Mu’s Crit Rate by [1500 ~ 7800] for 1 turn.",
         "3MPcost": 129,
         "3GeneCost": 326,
 
-        "4": "**Summon Spirit**:\nWhen her ally dies, Mu calls up a ghost to increase her Attack by [100 ~ 1640], Crit Damage by [5% ~ 11%], and HP by [3600 ~ 8400].",
+        "4": "**Summon Spirit**:\nWhenever an ally dies, Mu calls up a ghost to increase her Attack by [1% ~ 10%], Crit Rate by [5% ~ 11%], and HP by [? ~ 15000].",
         "4GeneCost": 162,
 		
 		"5": "Mu currently has no awakening skill!",
-        "5GeneCost": 0
+        "5ChargeTurns": 0,
+		"5GeneCost": 0
     },
     {
         "Name": "Muang",
@@ -1068,7 +1118,8 @@
         "4GeneCost": 540,
 		
 		"5": "Muang currently has no awakening skill!",
-        "5GeneCost": 0
+        "5ChargeTurns": 0,
+		"5GeneCost": 0
     },
     {
         "Name": "Muzaka",
@@ -1089,7 +1140,8 @@
         "4GeneCost": 715,
 		
 		"5": "Muzaka currently has no awakening skill!",
-        "5GeneCost": 0
+        "5ChargeTurns": 0,
+		"5GeneCost": 0
     },
     {
         "Name": "Nirvana",
@@ -1110,7 +1162,8 @@
         "4GeneCost": 540,
 		
 		"5": "Nirvana currently has no awakening skill!",
-        "5GeneCost": 0
+        "5ChargeTurns": 0,
+		"5GeneCost": 0
     },
     {
         "Name": "Noel",
@@ -1131,7 +1184,8 @@
         "4GeneCost": 540,
 		
 		"5": "Noel currently has no awakening skill!",
-        "5GeneCost": 0
+        "5ChargeTurns": 0,
+		"5GeneCost": 0
     },
     {
         "Name": "Nox",
@@ -1152,7 +1206,8 @@
         "4GeneCost": 540,
 		
 		"5": "**Oblivion**:\nStrikes terror into enemies in its range, inflicting damage at [521% ~ 638%] Attack with a [35% ~ 80%] chance of Cursing and Confusing them for 2 turns.",
-        "5GeneCost": 0
+        "5ChargeTurns": 3,
+		"5GeneCost": 0
     },
     {
         "Name": "Persona",
@@ -1173,7 +1228,8 @@
         "4GeneCost": 540,
 		
 		"5": "Persona currently has no awakening skill!",
-        "5GeneCost": 0
+        "5ChargeTurns": 0,
+		"5GeneCost": 0
     },
     {
         "Name": "Phantom",
@@ -1194,7 +1250,8 @@
         "4GeneCost": 680,
 		
 		"5": "Phantom currently has no awakening skill!",
-        "5GeneCost": 0
+        "5ChargeTurns": 0,
+		"5GeneCost": 0
     },
     {
         "Name": "Poni",
@@ -1215,7 +1272,8 @@
         "4GeneCost": 180,
 		
 		"5": "**Phoenix's Feather**\nTransmits the phoenix's energy, attacking enemies in its range at [535% ~ 658.3%] Attack. Also casts the Revival effect on allies in its range for 2 turns that immediately restores [1% ~ 14.5%] Max HP when they take lethal damage.",
-        "5GeneCost": 1215
+        "5ChargeTurns": 8,
+		"5GeneCost": 1215
     },
     {
         "Name": "Raboff",
@@ -1236,7 +1294,8 @@
         "4GeneCost": 405,
 		
 		"5": "Raboff currently has no awakening skill!",
-        "5GeneCost": 0
+        "5ChargeTurns": 0,
+		"5GeneCost": 0
     },
     {
         "Name": "Rachel",
@@ -1257,7 +1316,8 @@
         "4GeneCost": 540,
 		
 		"5": "Rachel currently has no awakening skill!",
-        "5GeneCost": 0
+        "5ChargeTurns": 0,
+		"5GeneCost": 0
     },
     {
         "Name": "Rage",
@@ -1278,7 +1338,8 @@
         "4GeneCost": 446,
 		
 		"5": "Rage currently has no awakening skill!",
-        "5GeneCost": 0
+        "5ChargeTurns": 0,
+		"5GeneCost": 0
     },
     {
         "Name": "Ragna",
@@ -1299,7 +1360,8 @@
         "4GeneCost": 540,
 		
 		"5": "Ragna currently has no awakening skill!",
-        "5GeneCost": 0
+        "5ChargeTurns": 0,
+		"5GeneCost": 0
     },
     {
         "Name": "Raizel",
@@ -1320,7 +1382,8 @@
         "4GeneCost": 540,
 		
 		"5": "Raizel currently has no awakening skill!",
-        "5GeneCost": 0
+        "5ChargeTurns": 0,
+		"5GeneCost": 0
     },
     {
         "Name": "Raskreia",
@@ -1341,7 +1404,8 @@
         "4GeneCost": 0,
 		
 		"5": "Raskreia currently has no awakening skill!",
-        "5GeneCost": 0
+        "5ChargeTurns": 0,
+		"5GeneCost": 0
     },
     {
         "Name": "Reina",
@@ -1362,7 +1426,8 @@
         "4GeneCost": 0,
 		
 		"5": "Jin currently has no awakening skill!",
-        "5GeneCost": 0
+        "5ChargeTurns": 0,
+		"5GeneCost": 0
     },
     {
         "Name": "Ryeogang",
@@ -1383,7 +1448,8 @@
         "4GeneCost": 680,
 		
 		"5": "**It's All Heaven's Will**:\n",
-        "5GeneCost": 5100
+        "5ChargeTurns": 4,
+		"5GeneCost": 5100
     },
     {
         "Name": "Serendi",
@@ -1404,7 +1470,8 @@
         "4GeneCost": 0,
 		
 		"5": "Serendi currently has no awakening skill!",
-        "5GeneCost": 0
+        "5ChargeTurns": 0,
+		"5GeneCost": 0
     },
     {
         "Name": "Serphina",
@@ -1425,7 +1492,8 @@
         "4GeneCost": 0,
 		
 		"5": "Serphina currently has no awakening skill!",
-        "5GeneCost": 0
+        "5ChargeTurns": 0,
+		"5GeneCost": 0
     },
     {
         "Name": "Seira",
@@ -1446,7 +1514,8 @@
         "4GeneCost": 0,
 		
 		"5": "Seira currently has no awakening skill!",
-        "5GeneCost": 0
+        "5ChargeTurns": 0,
+		"5GeneCost": 0
     },
     {
         "Name": "Shark",
@@ -1467,7 +1536,8 @@
         "4GeneCost": 0,
 		
 		"5": "Shark currently has no awakening skill!",
-        "5GeneCost": 0
+        "5ChargeTurns": 0,
+		"5GeneCost": 0
     },
     {
         "Name": "Shu-Shu",
@@ -1488,7 +1558,8 @@
         "4GeneCost": 446,
 		
 		"5": "**Legendary Elixir**:\nFills your Lord Gauge by [1 ~ 10] blocks and heals all allies on the map by [353% ~ 485.3%] Attack.",
-        "5GeneCost": 3342
+        "5ChargeTurns": 2,
+		"5GeneCost": 3342
     },
     {
         "Name": "Sione",
@@ -1509,7 +1580,8 @@
         "4GeneCost": 0,
 		
 		"5": "Sione currently has no awakening skill!",
-        "5GeneCost": 0
+        "5ChargeTurns": 0,
+		"5GeneCost": 0
     },
     {
         "Name": "Sonic Boom",
@@ -1530,7 +1602,8 @@
         "4GeneCost": 0,
 		
 		"5": "**Ninjutsu: Space Inferno**:\n",
-        "5GeneCost": 0
+        "5ChargeTurns": 3,
+		"5GeneCost": 0
     },
     {
         "Name": "Spooky",
@@ -1551,7 +1624,8 @@
         "4GeneCost": 0,
 		
 		"5": "Spooky currently has no awakening skill!",
-        "5GeneCost": 0
+        "5ChargeTurns": 0,
+		"5GeneCost": 0
     },
     {
         "Name": "Sraka",
@@ -1572,7 +1646,8 @@
         "4GeneCost": 0,
 		
 		"5": "**Brotherhood**:\n",
-        "5GeneCost": 0
+        "5ChargeTurns": 6,
+		"5GeneCost": 0
     },
     {
         "Name": "Taehwa",
@@ -1593,7 +1668,8 @@
         "4GeneCost": 680,
 		
 		"5": "**Finishing Touch**:\nTraps an enemy in ink, attacking it at [535% ~ 734.8%] Attack, If the enemy has its Attack decreased, this skill inflicts additional damage that equals [5% ~ 18.5%] of its current HP. If enemy has its Defense decreased, then it inflicts additional [26000 ~ 44000] Defense-ignoring damage.",
-        "5GeneCost": 5100
+        "5ChargeTurns": 4,
+		"5GeneCost": 5100
     },
     {
         "Name": "Tao",
@@ -1614,7 +1690,8 @@
         "4GeneCost": 0,
 		
 		"5": "Tao currently has no awakening skill!",
-        "5GeneCost": 0
+        "5ChargeTurns": 0,
+		"5GeneCost": 0
     },
     {
         "Name": "Thanatos",
@@ -1635,7 +1712,8 @@
         "4GeneCost": 0,
 		
 		"5": "**Extinguisher's Authority**:\n",
-        "5GeneCost": 0
+        "5ChargeTurns": 8,
+		"5GeneCost": 0
     },
     {
         "Name": "Unknown",
@@ -1656,7 +1734,8 @@
         "4GeneCost": 0,
 		
 		"5": "Unknown currently has no awakening skill!",
-        "5GeneCost": 0
+        "5ChargeTurns": 0,
+		"5GeneCost": 0
     },
     {
         "Name": "Valkyrie",
@@ -1677,7 +1756,8 @@
         "4GeneCost": 0,
 		
 		"5": "Valkyrie currently has no awakening skill!",
-        "5GeneCost": 0
+        "5ChargeTurns": 0,
+		"5GeneCost": 0
     },
     {
         "Name": "Yekaterina",
@@ -1698,7 +1778,8 @@
         "4GeneCost": 0,
 		
 		"5": "Yekaterina currently has no awakening skill!",
-        "5GeneCost": 0
+        "5ChargeTurns": 0,
+		"5GeneCost": 0
     },
     {
         "Name": "Zero",
@@ -1719,7 +1800,8 @@
         "4GeneCost": 0,
 		
 		"5": "**Final Blade**:\n",
-        "5GeneCost": 0
+        "5ChargeTurns": 2,
+		"5GeneCost": 0
     },
     {
         "Name": "Yeka",
@@ -1740,7 +1822,8 @@
         "4GeneCost": 680,
 		
 		"5": "**Help Me, Cel!**:",
-        "5GeneCost": 5100
+        "5ChargeTurns": 1,
+		"5GeneCost": 5100
     },
     {
         "Name": "Camelia",
@@ -1760,7 +1843,52 @@
         "4": "**Dark Merchant's Calculation**:",
         "4GeneCost": 680,
 		
-		"5": "**Mare Chess Pieces for the Better**:",
-        "5GeneCost": 5100
+		"5": "**More Chess Pieces for the Better**:",
+        "5ChargeTurns": 3,
+		"5GeneCost": 5100
+    },
+    {
+        "Name": "Churyeok",
+
+        "1": "**Ferocious Pounding**:",
+        "1MPcost": 15,
+        "1GeneCost": 340,
+
+        "2": "**Adamantine Energy**:",
+        "2MPcost": 0,
+        "2GeneCost": 680,
+
+        "3": "**Asura's Energy**:",
+        "3MPcost": 0,
+        "3GeneCost": 1360,
+
+        "4": "**Flow of the Universe**:",
+        "4GeneCost": 680,
+		
+		"5": "**Gusting Heaven's Wrath**:",
+        "5ChargeTurns": 6,
+		"5GeneCost": 5100
+    },
+    {
+        "Name": "Sogoon",
+
+        "1": "**Cold Grudge**:",
+        "1MPcost": 15,
+        "1GeneCost": 340,
+
+        "2": "**White Tiger's Fangs**:",
+        "2MPcost": 0,
+        "2GeneCost": 680,
+
+        "3": "**Freezing Shackles**:",
+        "3MPcost": 0,
+        "3GeneCost": 1360,
+
+        "4": "**White Tiger's Energy**:",
+        "4GeneCost": 680,
+		
+		"5": "**Glacier Hell**:",
+		"5ChargeTurns": 8,
+		"5GeneCost": 5100
     }
 ]
