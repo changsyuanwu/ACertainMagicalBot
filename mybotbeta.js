@@ -183,10 +183,12 @@ function findSkillData(heroAlias, skill) {
     const heroData = heroSkillTable.find(hero => hero.Name === heroName);
     switch (skill) {
         case 4:
-        case 5:
         case "4":
-        case "5":
             return `${heroData[skill]}\n**Total Gene Cost**: ${heroData[`${skill}GeneCost`]}`;
+            break;
+        case 5:
+        case "5":
+            return `${heroData[skill]}\n**Charge Turns**: ${heroData[`${skill}ChargeTurns`]}\n**Total Gene Cost**: ${heroData[`${skill}GeneCost`]}`;
         default:
             return `${heroData[skill]}\n**MP Cost**: ${heroData[`${skill}MPcost`]}\n**Total Gene Cost**: ${heroData[`${skill}GeneCost`]}`;
     }
