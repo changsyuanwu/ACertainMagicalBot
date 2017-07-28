@@ -699,7 +699,7 @@
         "4": "**Cowgirl**:\nWhen there are 2 or more Paper-type members in the party (Jenny counts as one), Jenny's HP and Critical Damage increase by [5% ~ 9.5%] and [5% ~ 50%].",
         "4GeneCost": 160,
 		
-		"5": "**Super Straight Chu~**:\nJenny shoots a special piercing bullet, attacking enemies in a straight line at [?% ~ ?%] Attack and inflicting [? ~ ?] Defense-ignoring damage. If 2 or more enemies are hit, this skill additionally inflicts [? ~ ?] damage, if 4 or more enemies are hit, another [? ~ ?] damage is added to the damage bonus.",
+		"5": "**Super Straight Chu~**:\nJenny shoots a special piercing bullet, attacking enemies in a straight line at [?% ~ 1440.4%] Attack and inflicting [? ~ 50500] Defense-ignoring damage. If 2 or more enemies are hit, this skill additionally inflicts [? ~ 33100] damage, if 4 or more enemies are hit, another [? ~ 33100] damage is added to the damage bonus.",
         "5ChargeTurns": 8,
 		"5GeneCost": 1065
     },
