@@ -593,14 +593,16 @@
         "name": "Sogoon",
         "aliases": [
             "sogoon",
-            "sogo"
+            "sogo",
+            "sog"
         ]
     },
     {
         "name": "Churyeok",
         "aliases": [
             "churyeok",
-            "chur"
+            "chur",
+            "monk"
         ]
     }
 ]
