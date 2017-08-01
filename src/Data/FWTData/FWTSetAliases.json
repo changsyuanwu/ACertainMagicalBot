@@ -1,5 +1,11 @@
 [
     {
+        "name": "",
+        "aliases": [
+            ""
+        ]
+    },
+    {
         "name": "Hot-blooded Fighter Boy",
         "aliases": [
             "hot-blooded fighter boy",
@@ -1555,6 +1561,177 @@
             "byeka",
             "gold dragons protection",
             "gold dragon's protection"
+        ]
+    },
+    {
+        "name": "Battle Priest",
+        "aliases": [
+            "battle priest"
+        ]
+    },
+    {
+        "name": "Bloody Melee",
+        "aliases": [
+            "bloody melee",
+            "melee"
+        ]
+    },
+    {
+        "name": "Kingdom's Tailor",
+        "aliases": [
+            "kingdom's tailor",
+            "kingdoms tailor",
+            "kingdom tailor",
+            "tailor"
+        ]
+    },
+    {
+        "name": "Oath of Flame",
+        "aliases": [
+            "oath of flame",
+            "oof"
+        ]
+    },
+    {
+        "name": "Redemption of Darkness",
+        "aliases": [
+            "redemption of darkness",
+            "redemption",
+            "rod"
+        ]
+    },
+    {
+        "name": "Sense of Inferiority",
+        "aliases": [
+            "sense of inferiority",
+            "inferior",
+            "inferiority",
+            "soi"
+        ]
+    },
+    {
+        "name": "Nomad's Rest",
+        "aliases": [
+            "nomad's rest",
+            "nomads rest",
+            "nomad",
+            "nomads"
+        ]
+    },
+    {
+        "name": "Hungry Predator",
+        "aliases": [
+            "hungry predator",
+            "predator",
+            "hungry"
+        ]
+    },
+    {
+        "name": "Fair Play",
+        "aliases": [
+            "fair play",
+            "fair"
+        ]
+    },
+    {
+        "name": "Mana Storage",
+        "aliases": [
+            "mana storage",
+            "mana"
+        ]
+    },
+    {
+        "name": "King's Arrogance",
+        "aliases": [
+            "king's arrogance",
+            "kings arrogance",
+            "arrogance"
+        ]
+    },
+    {
+        "name": "Lightning Guardian",
+        "aliases": [
+            "lightning guardian",
+            "lightning",
+            "lg"
+        ]
+    },
+    {
+        "name": "Sharp Advance",
+        "aliases": [
+            "sharp advance"
+        ]
+    },
+    {
+        "name": "Blood Seduction",
+        "aliases": [
+            "blood seduction",
+            "seduction"
+        ]
+    },
+    {
+        "name": "Pioneer of Power",
+        "aliases": [
+            "pioneer of power",
+            "pioneer",
+            "pop"
+        ]
+    },
+    {
+        "name": "Master of Strategy",
+        "aliases": [
+            "master of strategy",
+            "master strategy"
+        ]
+    },
+    {
+        "name": "Double Spy",
+        "aliases": [
+            "double spy",
+            "spy"
+        ]
+    },
+    {
+        "name": "Hot Hot Summer",
+        "aliases": [
+            "hot hot summer",
+            "summer"
+        ]
+    },
+    {
+        "name": "Imperfect Test Subject",
+        "aliases": [
+            "imperfect test subject",
+            "test subject"
+        ]
+    },
+    {
+        "name": "Part-time Lifeguard",
+        "aliases": [
+            "part time lifeguard",
+            "part-time lifeguard",
+            "lifeguard"
+        ]
+    },
+    {
+        "name": "Secret Experiment",
+        "aliases": [
+            "secret experiment",
+            "experiment"
+        ]
+    },
+    {
+        "name": "Gloomy Shaman",
+        "aliases": [
+            "gloomy shaman",
+            "shaman"
+        ]
+    },
+    {
+        "name": "End of Passion",
+        "aliases": [
+            "end of passion",
+            "passion"
         ]
     }
 ]
