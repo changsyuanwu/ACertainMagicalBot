@@ -28,7 +28,7 @@
         "1MPcost": 15,
         "1GeneCost": 225,
 
-        "2": "**Absolute Charge**:\n159.2% Attack\nDecreases Attack by 1430 for 2 turns\n73.7% Attack DoT",
+        "2": "**Absolute Charge**:\n159.2% Attack\nDecreases Attack by 1430 for 2 turns\n73.7% Attack DoT for 2 turns",
         "2MPcost": 70,
         "2GeneCost": 450,
 
@@ -288,22 +288,22 @@
     {
         "Name": "Chris",
 
-        "1": "**Brandish**:\nSlashes at an enemy, inflicting damage at [105.4% ~ 145%] Attack, with a [15% ~ 60%] chance of Stunning the enemy for 1 turn.",
+        "1": "**Brandish**:\n145% Attack\n60% chance to Stun for 1 turn",
         "1MPcost": 15,
         "1GeneCost": 18,
 
-        "2": "**Shield Break**:\nSmites enemies, inflicting damage at [122% ~ 167%] Attack and decreasing their Defense by [1500 ~ 2040] for 1 turn. Additionally creates a [32% ~ 75%] chance of Stunning enemies for 1 turn.",
+        "2": "**Shield Break**:\n167% Attack\nDecreases Defense by 2040 for 1 turn\n75% chance to Stun for 1 turn",
         "2MPcost": 56,
         "2GeneCost": 37,
 
-        "3": "**Knight's Will**:\nAttacks enemies at [151% ~ 206.8%] Attack and decreases their Defense by [3000 ~ 4080] for 2 turns. Chris also takes [10% ~ 29.8%] of damage from enemy Attacks for allies in this skill's range for 2 turns.",
+        "3": "**Knight's Will**:\n206.8% Attack\nDecreases Defense by 4080 for 2 turns\n29.8% Damage Transfer for allies in attack range for 2 turns",
         "3MPcost": 96,
         "3GeneCost": 74,
 
-        "4": "**Tactical Defense**:\nChris provokes enemies, increasing her chance of being Attacked by [10% ~ 23.5%] and decreasing the damage she receives by [6% ~ 15%].",
+        "4": "**Tactical Defense**:\n23.5% Aggro\n15% Damage Reduction",
         "4GeneCost": 45,
 		
-		"5": "**Lagrangian Technique**:\nPerforms a secret Lagrangian technique, Attacking enemies within its range at [545% ~ 749.3%] Attack, and increase (Chris's) Defense by [2300 ~ 5000] for 2 turns. Also creates a [55% ~ 100%] chance of resisting Abnormal Status effects.",
+		"5": "**Lagrangian Technique**:\n464% Attack\n5000 Defense Increase for 2 turns\n100% Resistance for 2 turns",
         "5ChargeTurns": 4,
 		"5GeneCost": 70
     },
@@ -618,22 +618,22 @@
     {
         "Name": "Ian",
 
-        "1": "**Kitty Hunt!**:\nShoots a fishing arrow and inflicts damage equal to [97% ~ 133%] of Attack. If Ian cooperates with allies, this skill's Final Power increases by [?% ~ 10%].",
+        "1": "**Kitty Hunt!**:\n133% Attack\n10% Final Skill Power if Ian cooperates with allies",
         "1MPcost": 15,
         "1GeneCost": 18,
 
-        "2": "**Cat-and-mouse!**:\nInflicts [119% ~ 163.1%] damage of Attack with multi-shot. Inflicts additional damage of [5% ~ 32%] if target is Scissor-Type.",
+        "2": "**Cat-and-mouse!**:\n163.1% Attack\n32% Damage increase if target is Scissors",
         "2MPcost": 62,
         "2GeneCost": 37,
 
-        "3": "**Shark Bullet!**:\nIan rides a shark and penetrates enemies, inflicting damage at [147% ~ 201.9%] Attack and decreasing their Defense by [3000 ~ 4080] for 2 turns. Also casts Weakening, making the enemies susceptible to [5% ~ 14%] more damage.",
+        "3": "**Shark Bullet!**:\n201.9% Attack\nDecreases Defense by 4080 for 2 turns\n14% Weakening for 2 turns",
         "3MPcost": 117,
         "3GeneCost": 74,
 
-        "4": "**Multi-kill!**:\nCats are agile. Dodge increases by [800 ~ 3200]. Also, if there are no enemies within a 1-tile range at the beginning of his turn,  Ian's Attack increases by 10% and Movement by 1 for 1 turn.",
+        "4": "**Multi-kill!**:\n3200 Dodge\n10% Attack and increases Movement by 1 if there are no enemies within a 1-tile range",
         "4GeneCost": 45,
 		
-		"5": "**Bomb, Meow!**:\nThrusts a giant shark into the ground, Attacking enemies in his range at [541% ~ ?%] Attack and decreasing their Defense by [1200 ~ ?] for 2 turns. Enemies at least 3 tiles away from Ian have their Defense decreased by [2200 ~ ?] for 2 turns and additionally receive [45000 ~ ?] Defense-ignoring damage.",
+		"5": "**Bomb, Meow!**:\n218% Attack\nDecreases Defense by 3000 for 2 turns\nDecreases Defense by 4000 for 3 turns and 54000 Defense-ignoring Damage on enemies 3 or more tiles away",
         "5ChargeTurns": 1,
 		"5GeneCost": 70
     },
@@ -662,44 +662,44 @@
     {
         "Name": "Jack",
 
-        "1": "**Hahaha!**:\nInflicts damage at [100% ~ 136.9%] Attack and casts the Drain Target's HP effect on the enemy for 1 turn which makes allies recover [?% ~ 23%] of the damage they deal to the enemy as HP.",
+        "1": "**Hahaha!**:\n136.9% Attack\n23% Drain Life debuff on target for 2 turns",
         "1MPcost": 15,
         "1GeneCost": 90,
 
-        "2": "**Bite'em All!**:\nBites the enemy inflicting damage equal to [120% ~ 165%] of Attack, and continues to inflict [15% ~ 51%] DoT damage for 3 turns. Jack recovers [?% ~ 30%] of his Max HP.",
+        "2": "**Bite'em All!**:\n165% of Attack\n51% Attack DoT for 3 turns\n30% Max HP Heal",
         "2MPcost": 58,
         "2GeneCost": 180,
 
-        "3": "**Scratch Storm!**:\nSwipes multiple enemies in front of him. Inflicts [151% ~ 206.8%] of Attack damage, and deals additional damage at [5% ~ 19.4%] of the enemy's Max HP.",
+        "3": "**Scratch Storm!**:\n206.8% Attack\n19.4% Max HP Damage",
         "3MPcost": 96,
         "3GeneCost": 360,
 
-        "4": "**Hideous Strength!**:\nWerewolf Jack recovers HP by [10% ~ 19%] of the damage inflicted. If Jack has 50% or higher HP, increases chance to be Attacked by [12% ~ 30%] and Movement by 1.",
+        "4": "**Hideous Strength!**:\nHeals for 19% of damage dealt\n30% Aggro and increases Movement by 1 if Jack has 50% or more HP",
         "4GeneCost": 180,
 		
-		"5": "**GRRR!**:\nJack, having awakened to the power of the full moon, Attacks enemies in his range at [546% ~ 750.3%] Attack with a [55% ~ 100%] chance of Confusing them for 2 turns. Also, decreases healing effects for his target for 2 turns.",
+		"5": "**GRRR!**:\n382% Attack\n100% chance to Confuse for 2 turns\nHeal Block for 2 turns",
         "5ChargeTurns": 3,
-		"5GeneCost": 0
+		"5GeneCost": 1215
     },
     {
         "Name": "Jenny",
 
-        "1": "**Wild Slug**:\nShoots a shotgun blast that deals damage equal to [97% ~ 133%] of Attack, and inflicts additional DoTdamage equal to [10% ~ 41.5%] of Attack for 2 turns with a [20% ~ 47%] chance.",
+        "1": "**Wild Slug**:\n133% Attack\n47% chance to apply 41.5% Attack DoT Damage for 2 turns",
         "1MPcost": 15,
         "1GeneCost": 78,
 
-        "2": "**Straight Chew**:\nJenny inflicts damage equal to [118% ~ 162.1%] of her Attack with her signature skill and straight line shot, and stuns the enemy with a [30% ~ 40.8%] chance for 1 turn.",
+        "2": "**Straight Chew**:\n162.1% Attack\n40.8% chance to Stun for 1 turn",
         "2MPcost": 78,
         "2GeneCost": 160,
 
-        "3": "**Tainted Love**:\nDetonates an air burst of special dynamite and inflicts [124% ~ 169.9%] damage of Attack. Increases Jenny's Crit Rate by [4000 ~ 7600] for 1 turn.",
+        "3": "**Tainted Love**:\n169.9% Attack\n7600 Crit Rate Increase for 1 turn",
         "3MPcost": 176,
         "3GeneCost": 315,
 
-        "4": "**Cowgirl**:\nWhen there are 2 or more Paper-type members in the party (Jenny counts as one), Jenny's HP and Critical Damage increase by [5% ~ 9.5%] and [5% ~ 50%].",
+        "4": "**Cowgirl**:\n9.5% HP Increase and 50% Crit Damage Increase if 2 or more Paper heroes in the party (including herself)",
         "4GeneCost": 160,
 		
-		"5": "**Super Straight Chu~**:\nJenny shoots a special piercing bullet, Attacking enemies in a straight line at [?% ~ 1440.4%] Attack and inflicting [? ~ 50500] Defense-ignoring damage. If 2 or more enemies are hit, this skill additionally inflicts [? ~ 33100] damage, if 4 or more enemies are hit, another [? ~ 33100] damage is added to the damage bonus.",
+		"5": "**Super Straight Chu~**:\n1440.4% Attack\n50500 Defense-ignoring Damage\n33100 Defense-ignoring Damage if 2 enemies are attacked\n33100 Defense-ignoring Damage if 4 enemies are attacked",
         "5ChargeTurns": 8,
 		"5GeneCost": 1065
     },
@@ -750,22 +750,22 @@
     {
         "Name": "Kai",
 
-        "1": "**Power Slash**:\nSlashes at an enemy, inflicting damage equal to [103% ~ 148%] Attack, with a [35% ~ 75%] chance of Weakening the enemy for 1 turn, making it susceptible to [4% ~ 12%] more damage.",
+        "1": "**Power Slash**:\n148% Attack\n75% chance to Weaken by 12% for 1 turn",
         "1MPcost": 15,
         "1GeneCost": 10,
 
-        "2": "**Flame Burst**:\nAttacks enemies with the force of a fire dragon at [121% ~ 166%] Attack and Weakens the selected target for 2 turns, making it susceptible to [6% ~ 24%] more damage.",
+        "2": "**Flame Burst**:\n166% Attack\n24% Weakening for 2 turns",
         "2MPcost": 55,
         "2GeneCost": 12,
 
-        "3": "**Battle Cry**:\nIgnores enemies' Defense by [1500 ~ 4200] and hits them at [146% ~ 200%] Attack with the force of thunder. Using this skill on Lava tile restore [6.5% ~ 20%] of Kai's Max HP.",
+        "3": "**Battle Cry**:\n200% Attack\n4200 Defense Ignore\n20% Max HP Heal if used on Lava",
         "3MPcost": 114,
         "3GeneCost": 32,
 
-        "4": "**Making of a Hero**:\nIf HP is above 80%, increases Attack by 20% and decreases damage received by 10%",
+        "4": "**Making of a Hero**:\n20% Attack and 10% Damage Reduction if above 80% HP",
         "4GeneCost": 16,
 		
-		"5": "**Wrath of Mother Nature**:\nThe energy of thunder and lava ignores [3300 ~ 6000] Defense of enemies within its range and Attacks them at [524% ~ 720.2%] Attack. Additionally creates a chance of Stunning them for 1 turn ([55% ~ 100%] chance for its target and [35% ~ 80%] for all the others within its range).",
+		"5": "**Wrath of Mother Nature**:\n294% Attack\n6000 Defense Ignore\n100% chance to Stun main target\n80% chance to Stun other targets",
         "5ChargeTurns": 2,
 		"5GeneCost": 70
     },
@@ -992,7 +992,7 @@
     {
         "Name": "Mas",
 
-        "1": "**Hymn for Agnes**:\nPerforms the hymn of the fire god Agnes, inflicting [97% ~ 133%] damage and casts the Drain Target's HP effect on them,  which makes allies recover [10% ~ 28%] of the damage they deal to the enemy as HP.",
+        "1": "**Hymn for Agnes**:\n133%] damage and casts the Drain Target's HP effect on them,  which makes allies recover [10% ~ 28%] of the damage they deal to the enemy as HP.",
         "1MPcost": 15,
         "1GeneCost": 78,
 
