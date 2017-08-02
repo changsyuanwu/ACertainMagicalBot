@@ -393,7 +393,7 @@
 		
 		"5": "**Power of Money**:\nInflicts damage to enemies in range with [532% ~ 651.7%] Attack and increase their MP cost by [55% ~ 100%] for 1 turn. Also, Copy enemies' buffs randomly up to 5 and keep them for 1 turn. Removes enemies' buffs.",
         "5ChargeTurns": 2,
-		"5GeneCost": 0
+		"5GeneCost": 1065
     },
     {
         "Name": "Dominique",
@@ -1097,7 +1097,7 @@
 		
 		"5": "**Exorcism**:\nFrees the power sealed in the talisman, Attacking enemies at [?% ~ 220%] Attack and prevents targets from being healed for 2 turns. Also plunders the enemy's soul to increase Mu's Attack by [? ~ 4500] and Defense by [? ~ 2500] for 2 turns.",
         "5ChargeTurns": 1,
-		"5GeneCost": 0
+		"5GeneCost": 1093
     },
     {
         "Name": "Muang",
@@ -1207,7 +1207,7 @@
 		
 		"5": "**Oblivion**:\nStrikes terror into enemies in its range, inflicting damage at [521% ~ 638%] Attack with a [35% ~ 80%] chance of Cursing and Confusing them for 2 turns.",
         "5ChargeTurns": 3,
-		"5GeneCost": 0
+		"5GeneCost": 3645
     },
     {
         "Name": "Persona",
@@ -1603,7 +1603,7 @@
 		
 		"5": "**Ninjutsu: Space Inferno**:\n",
         "5ChargeTurns": 3,
-		"5GeneCost": 0
+		"5GeneCost": 1215
     },
     {
         "Name": "Spooky",
@@ -1801,7 +1801,7 @@
 		
 		"5": "**Final Blade**:\n",
         "5ChargeTurns": 2,
-		"5GeneCost": 0
+		"5GeneCost": 3342
     },
     {
         "Name": "Yeka",
