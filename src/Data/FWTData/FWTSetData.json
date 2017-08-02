@@ -2266,15 +2266,15 @@
         "Restrictions": "None"
     },
     {
-        "Name": "",
-        "Slot": "",
+        "Name": "Hungry Predator",
+        "Slot": "II",
         "Rareness": "★★★★★★",
-        "Weapon": "",
-        "Armor": "",
-        "Accessory": "",
-        "2pc": "",
-        "3pc": "",
-        "Restrictions": ""
+        "Weapon": "Sword",
+        "Armor": "Armor",
+        "Accessory": "Ring",
+        "2pc": "Recovers 15% HP when defeating enemy",
+        "3pc": "Increases Attack by 12% for 3 turns when attacking enemies (Stacks up to 36%)",
+        "Restrictions": "None"
     },
     {
         "Name": "",
