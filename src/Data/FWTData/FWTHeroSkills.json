@@ -640,7 +640,7 @@
     {
         "Name": "Ildo",
 
-        "1": "**Aerial Slash**:\nQuickly draws sword, Attacking an enemy at [101% ~ 138.8%] Attack and decreasing its Attack by [550 ~ 1000] for 1 turn.",
+        "1": "**Aerial Slash**:\n138.8% Attack\nDecreases Attack by 1000 for 1 turn",
         "1MPcost": 15,
         "1GeneCost": 340,
 
@@ -1080,22 +1080,22 @@
     {
         "Name": "Mu",
 
-        "1": "**Doom**:\nInflicts damage equal to [103% ~ 140.8%] of Attack on enemies. Recovers Mu's MP by [3% ~ 5.7%].",
+        "1": "**Doom**:\n140.8% Attack\n5.7% Max MP restore",
         "1MPcost": 15,
         "1GeneCost": 81,
 
-        "2": "**Cursed Talisman**:\nAttack enemies in this skill's range at [119% ~ 163.1%] Attack and decreases their Attack by [350 ~ 1925] and Defense by [1200 ~ 1560] for 1 turn. Also Stuns the selected target.",
+        "2": "**Cursed Talisman**:\n163.1% Attack\nDecreases Attack by 1925 and Defense by 1560 for 1 turn\nStuns the main target for 1 turn",
         "2MPcost": 98,
         "2GeneCost": 162,
 
-        "3": "**Yin Yang & Five Elements**:\nInflicts damage at [?% ~ 182.5%] of Attack on nearby enemies, heals allies apart from Mu by [70% ~ 96.1%] of Attack, and heals Mu at [?% ~ 45%] of Attack. Also increases Mu’s Crit Rate by [1500 ~ 7800] for 1 turn.",
+        "3": "**Yin Yang & Five Elements**:\n182.5% Attack\nHeals allies apart from Mu by 96.1% Attack\nHeals Mu by 45% Attack\nIncreases Crit Rate by 7800 for 1 turn",
         "3MPcost": 129,
         "3GeneCost": 326,
 
-        "4": "**Summon Spirit**:\nWhenever an ally dies, Mu calls up a ghost to increase her Attack by [1% ~ 10%], Crit Rate by [5% ~ 11%], and HP by [? ~ 15000].",
+        "4": "**Summon Spirit**:\n10% Attack, 11% Crit Rate, and 15000 HP for every ally death",
         "4GeneCost": 162,
 		
-		"5": "**Exorcism**:\nFrees the power sealed in the talisman, Attacking enemies at [?% ~ 220%] Attack and prevents targets from being healed for 2 turns. Also plunders the enemy's soul to increase Mu's Attack by [? ~ 4500] and Defense by [? ~ 2500] for 2 turns.",
+		"5": "**Exorcism**:\n219.4% Attack\nHeal Block for 2 turns\nIncreases Attack by 4500 and Defense by 2500 for 2 turns",
         "5ChargeTurns": 1,
 		"5GeneCost": 1093
     },
@@ -1388,20 +1388,20 @@
     {
         "Name": "Raskreia",
 
-        "1": "**Ragnarok**:\n",
+        "1": "**Ragnarok**:\n133% Attack\nIncreases Defense by 1200 for 1 turn",
         "1MPcost": 15,
-        "1GeneCost": 0,
+        "1GeneCost": 200,
 
-        "2": "**Blood Tornado**:\n",
+        "2": "**Blood Tornado**:\n145.65% Attack\n41% DoT for 2 turns",
         "2MPcost": 74,
-        "2GeneCost": 0,
+        "2GeneCost": 400,
 
-        "3": "**Blood Field**:\n",
+        "3": "**Blood Field**:\n178.6% Attack\nDecreases Defense by 2720 if enemies have 50% or more HP\n28% Final Skill Power if enemies have below 50% HP\n14% Weakening for 2 turns if enemy is taking DoT damage",
         "3MPcost": 152,
-        "3GeneCost": 0,
+        "3GeneCost": 800,
 
-        "4": "***Lord's Authority*:\n",
-        "4GeneCost": 0,
+        "4": "***Lord's Authority*:\n14% Resistance",
+        "4GeneCost": 400,
 		
 		"5": "Raskreia currently has no awakening skill!",
         "5ChargeTurns": 0,
@@ -1410,7 +1410,7 @@
     {
         "Name": "Reina",
 
-        "1": "**I'll Teach You a Lesson!**:\n",
+        "1": "**I'll Teach You a Lesson!**:\n157.3% Attack\n",
         "1MPcost": 15,
         "1GeneCost": 0,
 
@@ -1425,7 +1425,7 @@
         "4": "**Survival of the Fittest**:\n",
         "4GeneCost": 0,
 		
-		"5": "Jin currently has no awakening skill!",
+		"5": "Reina currently has no awakening skill!",
         "5ChargeTurns": 0,
 		"5GeneCost": 0
     },
