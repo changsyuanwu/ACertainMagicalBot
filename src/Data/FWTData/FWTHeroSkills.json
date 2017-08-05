@@ -1396,7 +1396,7 @@
         "2MPcost": 74,
         "2GeneCost": 400,
 
-        "3": "**Blood Field**:\n178.6% Attack\nDecreases Defense by 2720 if enemies have 50% or more HP\n28% Final Skill Power if enemies have below 50% HP\n14% Weakening for 2 turns if enemy is taking DoT damage",
+        "3": "**Blood Field**:\n178.6% Attack\nDecreases Defense by 2720 if enemies have 50% or more HP\n28% Final Skill Power if enemies are below 50% HP\n14% Weakening for 2 turns if enemy is taking DoT damage",
         "3MPcost": 152,
         "3GeneCost": 800,
 
@@ -1410,20 +1410,20 @@
     {
         "Name": "Reina",
 
-        "1": "**I'll Teach You a Lesson!**:\n157.3% Attack\n",
+        "1": "**I'll Teach You a Lesson!**:\n157.3% Attack\nDecreases Mastery by 1720 for 2 turns",
         "1MPcost": 15,
-        "1GeneCost": 0,
+        "1GeneCost": 270,
 
-        "2": "**Dog Eat Dog**:\n",
+        "2": "**Dog Eat Dog**:\n185.4% Attack\n19% Final Skill Power and 1400 Crit Rate and 10% Crit Damage increase for 2 turns if the target is below 50% HP",
         "2MPcost": 98,
-        "2GeneCost": 0,
+        "2GeneCost": 810,
 
-        "3": "**Let's Fight!**:\n",
+        "3": "**Let's Fight!**:\n200% Attack\n22% Max HP Damage if enemies are above 90% HP\n50% Resistance if 2 or more enemies are attacked",
         "3MPcost": 149,
-        "3GeneCost": 0,
+        "3GeneCost": 1080,
 
-        "4": "**Survival of the Fittest**:\n",
-        "4GeneCost": 0,
+        "4": "**Survival of the Fittest**:\nIncreases Attack by 15.7% and Movement by 1 as well as recovers 19% Max HP per turn if there is more than 1 buff/debuff on Reina",
+        "4GeneCost": 540,
 		
 		"5": "Reina currently has no awakening skill!",
         "5ChargeTurns": 0,
@@ -1432,7 +1432,7 @@
     {
         "Name": "Ryeogang",
 
-        "1": "**Ancestor's Blessing**:\n",
+        "1": "**Ancestor's Blessing**:\n120.6% Attack\n",
         "1MPcost": 15,
         "1GeneCost": 340,
 
