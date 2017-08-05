@@ -312,10 +312,22 @@
         "Set2": "Double Spy"
     },
     {
-        "Start": "",
-        "End": "",
-        "Set1": "",
-        "Set2": ""
+        "Start": "08-04-2017",
+        "End": "08-07-2017",
+        "Set1": "Nomad's Rest",
+        "Set2": "Pioneer of Power"
+    },
+    {
+        "Start": "08-07-2017",
+        "End": "08-09-2017",
+        "Set1": "Mana Storage",
+        "Set2": "Blood Seduction"
+    },
+    {
+        "Start": "08-09-2017",
+        "End": "08-11-2017",
+        "Set1": "Oath of Flame",
+        "Set2": "Master of Strategy"
     },
     {
         "Start": "",
