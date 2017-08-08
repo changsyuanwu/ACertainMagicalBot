@@ -68,19 +68,19 @@
     {
         "Name": "Angela",
 
-        "1": "**Hey, You!**:\nInflicts damage equal to [97% ~ 133%] of Attack on one enemy and increases Attack by [300 ~ 750] for 3 turns. Up to 4 effects are cumulative.",
+        "1": "**Hey, You!**:\n133% Attack\nIncreases Attack by 750 for 3 turns\nUp to 4 effects are cumulative.",
         "1MPcost": 15,
         "1GeneCost": 284,
 
-        "2": "**How Dare You!**:\nAngela unleashes her anger, inflicting damage at [116 ~ 159.2%] of Attack and creating a [55% ~ 100%] chance of removing all debuff effects cast on her.",
+        "2": "**How Dare You!**:\n159.2% Attack\n100% chance to remove all debuffs",
         "2MPcost": 64,
         "2GeneCost": 568,
 
-        "3": "**Kill 'Em All!**:\nThis powerful skill inflicts damage at [160% ~ 219.4%] of Attack on all enemies and allies and removes all buff/debuff effects.",
+        "3": "**Kill 'Em All!**:\n219.4% Attack\nAttacks enemies and allies and removes all buffs/debuffs",
         "3MPcost": 121,
         "3GeneCost": 1136,
 
-        "4": "**Discipline of a King**:\nIncreases Attack by [4% ~ 10.3%] and Defense by [1000 ~ 1900] when the offensive line has 2 or more Paper-type fighers.",
+        "4": "**Discipline of a King**:\nIncreases Attack by 10.3% and Defense by 1900 when there 2 or more Paper heroes in the party",
         "4GeneCost": 568,
 		
 		"5": "Angela currently has no awakening skill!",
@@ -90,19 +90,19 @@
     {
         "Name": "Aran",
 
-        "1": "**Smash Swing**:\nSwings her polearm 3 times, Attacking enemies within range at [101% ~ 138.8%] Attack and gaining 1 stacks of charge buff. The charge buff lasts for 3 turns and stacks up to 3 times.",
+        "1": "**Smash Swing**:\n138.8% Attack\nGains 1 Charge which lasts for 3 turns and stacks up to 3 times",
         "1MPcost": 15,
         "1GeneCost": 340,
 
-        "2": "**Hunter's Prey**:\nConcentrates the power of her polearm, Attacking enemies at [118% ~ 162.1%] Attack as she dashes to the farthest tile within her range. Adds 1 stack of charge buff. The charge buff lasts for 3 turns and stacks up to 3 timnes. If Aran has 2 or more stacks of charge buff, this skill decreases Defense for all enemies within its range by [600 ~ 2400] for 3 turns.",
+        "2": "**Hunter's Prey**:\n162.1% Attack\nDashes to furthest tile\nGains 1 Charge which lasts for 3 turns and stacks up to 3 times\nDecreases Defense by 2400 for 3 turns if Aran has 2 or more Charges",
         "2MPcost": 68,
         "2GeneCost": 1020,
 
-        "3": "**Smash Swing - Final Blow**:\nAran concentrates her power, Attacking enemies within range at [144% ~ 198%] Attack and gaining 1 stacks of the charge buff. The charge buff lasts for 3 turns and stacks up to 3 times. If Aran has 3 or more stacks of charge buff, this skill casts Double Attack, additionally inflicting [24% ~ 60%] of its basic damage on enemies within its range.",
+        "3": "**Smash Swing - Final Blow**:\n198% Attack\nGains 1 Charge which lasts for 3 turns and stacks up to 3 times\nDouble Attack for 60% Damage if Aran has 3 or more Charges",
         "3MPcost": 112,
         "3GeneCost": 1360,
 
-        "4": "**Adrenaline Rush**:\nA rush of Adrenaline improves Aran's combat power, increasing her Attack by [100 ~ 1000] and Max HP by [5.5% ~ 10%] for every stack of charge buffs she has. (The charge buff stacks up to 3 times.)",
+        "4": "**Adrenaline Rush**:\n1000 Attack and 10% Max HP for every Charge Aran has (Stacks up to 3 times)",
         "4GeneCost": 680,
 		
 		"5": "Aran currently has no awakening skill!",
@@ -112,19 +112,19 @@
     {
         "Name": "Azrael",
 
-        "1": "**Holy Spear**:\nInflicts damage equal to [102% ~ 139.8%] of Attack on enemies in a certain range, and burns [20 ~ 110] MP.",
+        "1": "**Holy Spear**:\n139.8% Attack\n110 MP Burn",
         "1MPcost": 15,
         "1GeneCost": 284,
 
-        "2": "**Holy Cross**:\nInflicts damage equal to [138% ~ 189.3%] of Attack, and removes 1 buffs cast on the enemies. Additionally, this skill's Final Power increases by [13% ~ 22%] against enemies with 50% or more HP.", 
+        "2": "**Holy Cross**:\n189.3% Attack\nRemoves 1 buff on enemies\n22% Final Skill Power if enemies have 50% or more HP", 
         "2MPcost": 62,
         "2GeneCost": 568,
 
-        "3": "**Advent**:\nSummons an angel inflicting damage at [164% ~ 200.9%] of Attack and healing allies by [72% ~ 88.2%] of Attack. Additionally increases their HP by [6600 ~ 12000] and casts [10% ~ 28%] HP drain effect for 2 turns.",
+        "3": "**Advent**:\n200.9% Attack\nHeals allies by 88.2% Attack, Increases their HP by 12000, and gives them 28% Lifesteal for 2 turns",
         "3MPcost": 116,
         "3GeneCost": 1136,
 
-        "4": "Angel's Judgement:\nThe extent of an Angel's Judgement. Ignores all terrain damage and recovers HP by 16.5% every turn.",
+        "4": "Angel's Judgement:\n16.5% Max HP recovery every turn\nImmune to terrain damage",
         "4GeneCost": 568,
 		
 		"5": "Azrael currently has no awakening skill!",
@@ -1432,22 +1432,22 @@
     {
         "Name": "Ryeogang",
 
-        "1": "**Ancestor's Blessing**:\n120.6% Attack\n",
+        "1": "**Ancestor's Blessing**:\n120.6% Attack\n30% chance to restore 50% Max HP",
         "1MPcost": 15,
         "1GeneCost": 340,
 
-        "2": "**I Am Smart!**:\n",
+        "2": "**I Am Smart!**:\n140.2% Attack\n100% chance to Immobilize for 1 turn if targets have 40% or more Defense\n100% chance to Sleep for 1 turn if target has 5 or more Movement",
         "2MPcost": 71,
         "2GeneCost": 680,
 
-        "3": "**Pick Your Destiny!**:\n",
+        "3": "**Pick Your Destiny!**:\n167.6% Attack\n40% chance to deal 40000 Defense-ignoring Damage on the targets' next turn\n40% chance to\n40% chance to Disarm for 2 turns on the targets' next turn\n40% chance to Seal for 2 turns on the targets' next turn",
         "3MPcost": 120,
         "3GeneCost": 1360,
 
-        "4": "**I Feel So Lucky Today!**:\n",
+        "4": "**I Feel So Lucky Today!**:\n30% chance to gain a Shield for 1 Attack that reduces the Attack Damage by 50%\n30% chance to increase Attack by 20%\n30% chance to remove 1 debuff",
         "4GeneCost": 680,
 		
-		"5": "**It's All Heaven's Will**:\n",
+		"5": "**It's All Heaven's Will**:\n449% Attack\n100%/80%/40% chance to deal 50000 Defense-ignoring Damage on targets' next turn",
         "5ChargeTurns": 4,
 		"5GeneCost": 5100
     },
@@ -1850,22 +1850,22 @@
     {
         "Name": "Churyeok",
 
-        "1": "**Ferocious Pounding**:\n126.8% Attack, 152.16% on double Attack\nDouble Attack if there are 3 or more energy marks",
+        "1": "**Ferocious Pounding**:\n126.8% Attack, 152.16% on double Attack\nDouble Attack if there are 3 or more Energy Marks",
         "1MPcost": 15,
         "1GeneCost": 340,
 
-        "2": "**Adamantine Energy**:\n145.3% Attack\n30% threat for 3 turns\nApplies energy marks on allies within range(max 3)\n25% damage reducing shield to allies already with a mark(1 hit)",
+        "2": "**Adamantine Energy**:\n145.3% Attack\n30% Aggro for 3 turns\nApplies Energy Marks on allies within range (Max 3)\n25% Damage Reducing Shield for 1 hit on allies already with a mark",
         "2MPcost": 0,
         "2GeneCost": 680,
 
-        "3": "**Asura's Energy**:\n176.5% Attack\nApplies energy marks on allies within range\nDeal 10% max HP damage to enemies if 4 or more energy marks are on the map",
+        "3": "**Asura's Energy**:\n176.5% Attack\nApplies Energy Marks on allies within range\n10% Max HP Damage to enemies if 4 or more Energy Marks",
         "3MPcost": 0,
         "3GeneCost": 1360,
 
-        "4": "**Flow of the Universe**:\n15% max HP for every energy mark on the map(max 60%)\n8% resistance if there are 3 energy marks on the map\n2040 defense if there are 4 or more energy marks on the map",
+        "4": "**Flow of the Universe**:\n15% Max HP for every Energy Mark (Max 60%)\n8% Resistance if there are 3 Energy Marks\n2040 Defense if there are 4 or more Energy Marks",
         "4GeneCost": 680,
 		
-		"5": "**Gusting Heaven's Wrath**:\n858% Attack\n100% damage reducing shield for 3 turns(1 hit)\n10,000 defense ignoring damage for every energy mark on the map\nApplies energy marks on allies within range",
+		"5": "**Gusting Heaven's Wrath**:\n858% Attack\n100% Damage Reducing Shield for 1 hit that lasts for 3 turns\n10000 Defense-ignoring Damage for every Energy Mark\nApplies Energy Marks on allies within range",
         "5ChargeTurns": 6,
 		"5GeneCost": 5100
     },
