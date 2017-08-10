@@ -61,8 +61,8 @@
         "4": "**Lesson**:\n7% instant Attack increase for each enemy attacked",
         "4GeneCost": 45,
 		
-		"5": "**Earth Crash**:\n1441% Attack\n4200 Defense Ignore\nDecreases Movement by 4 for 2 turns.",
-        "5ChargeTurns": 8,
+		"5": "**Earth Crash**:\n817% Attack\n4200 Defense Ignore\nDecreases Movement by 4 for 2 turns.",
+        "5ChargeTurns": 4,
 		"5GeneCost": 70
     },
     {
@@ -215,7 +215,7 @@
         "4": "**Have a Taste!**:\nIncreaes damaghe by [2.8% ~ 10%] on targets that are at least 3 tiles away from Carrot.",
         "4GeneCost": 135,
 		
-		"5": "**Beat and Steal**:\nIts (Carrot's) companions come out of hiding and Attack enemies at [?% ~ 462%] Attack with a [55% ~ 100%] chance of confusing them for 2 turns. Also restores [120 ~ 300] MP.",
+		"5": "**Beat and Steal**:\n819% Attack\n100% chance to Confuse enemies for 2 turns\nRestores 300 MP.",
         "5ChargeTurns": 4,
 		"5GeneCost": 912
     },
@@ -303,7 +303,7 @@
         "4": "**Tactical Defense**:\n23.5% Aggro\n15% Damage Reduction",
         "4GeneCost": 45,
 		
-		"5": "**Lagrangian Technique**:\n464% Attack\n5000 Defense Increase for 2 turns\n100% Resistance for 2 turns",
+		"5": "**Lagrangian Technique**:\n822% Attack\n5000 Defense Increase for 2 turns\n100% Resistance for 2 turns",
         "5ChargeTurns": 4,
 		"5GeneCost": 70
     },
@@ -347,7 +347,7 @@
         "4": "**Perfect Aim**:\nEach kill increases Attack by [12% ~ 30%] and Movement by 2 for 1 turn",
         "4GeneCost": 135,
 		
-		"5": "**Firewall**:\nA fiery explosion sends forth fire pillars accross the ground, Attacking enemies at [545% ~ 749.3%] Attack and preventing the targets from being healed for 3 turns. Enemies under DoT receive all remaining DoT damage at once",
+		"5": "**Firewall**:\n822% Attack\nPrevents enemies from being healed for 3 turns\nForces all DoT effects to deal their total damage at once instead of over time. This also consumes them.",
         "5ChargeTurns": 4,
 		"5GeneCost": 912
     },
@@ -391,7 +391,7 @@
         "4": "**Greed is Good**:\nIncreases the amount of gold that Dolores receives in battle by [6% ~ 7.8%]. Also increases Attack by [? ~ 800] and Defense by [? ~ 400] at the beginning of each turn. (Up to 4000 Attack and 2000 Defense)",
         "4GeneCost": 160,
 		
-		"5": "**Power of Money**:\nInflicts damage to enemies in range with [532% ~ 651.7%] Attack and increase their MP cost by [55% ~ 100%] for 1 turn. Also, Copy enemies' buffs randomly up to 5 and keep them for 1 turn. Removes enemies' buffs.",
+		"5": "**Power of Money**:\n338% Attack\nIncreases enemies' MP cost by 100% for 1 turn\nCopies up to 5 enemy buffs and keeps them for 1 turn\n Removes enemies' buffs",
         "5ChargeTurns": 2,
 		"5GeneCost": 1065
     },
@@ -611,7 +611,7 @@
         "4": "**Vermillion Energy**:\nHongyeom achieves [2800 ~ 4600] higher Crit Rate and [13% ~ 40%] more Critical Damage while on a Lava terrain. Also, she recovers [7.5% ~ 12%] Max HP if she starts a turn on Lava terrain.",
         "4GeneCost": 680,
 		
-		"5": "**Full Moon Javelins**:\nDrops moon-kissed red cherry blossoms and camelias, Attacking enemies at [546% ~ 750.3%] Attack and Burning on them for 2 turns. Burned targets inflict damage on all allies in a 1-tile range at [143% ~ 196.1%] Attack at the beginning of each turn.",
+		"5": "**Full Moon Javelins**:\n822% Attack\nBurns them for 2 turns\nBurned targets deal damamge equal to 196.1% Attack on all allies in a 1-tile range",
         "5ChargeTurns": 4,
 		"5GeneCost": 5100
     },
@@ -633,7 +633,7 @@
         "4": "**Multi-kill!**:\n3200 Dodge\n10% Attack and increases Movement by 1 if there are no enemies within a 1-tile range",
         "4GeneCost": 45,
 		
-		"5": "**Bomb, Meow!**:\n218% Attack\nDecreases Defense by 3000 for 2 turns\nDecreases Defense by 4000 for 3 turns and 54000 Defense-ignoring Damage on enemies 3 or more tiles away",
+		"5": "**Bomb, Meow!**:\n239% Attack\nDecreases Defense by 3000 for 2 turns\nDecreases Defense by 4000 for 3 turns and 54000 Defense-ignoring Damage on enemies 3 or more tiles away",
         "5ChargeTurns": 1,
 		"5GeneCost": 70
     },
@@ -655,7 +655,7 @@
         "4": "**Art of Endurance**:\nIldo gains 1 Charge buff every time he is Attacked. This Charge buff lasts for 2 turns and stacks up to 10 times. Every time an ally dies, the maximum amount of damage Ildo can take from enemy Attacks is set to [90000 ~ 81000] for 1 turn.",
         "4GeneCost": 680,
 		
-		"5": "**Flash Sword**:\nAttacks enemies in a straight line at [535% ~ 734.8%%] Attack and causes Lethal Wound for 2 turns. Lethal Wound inflicts as much damage as [55% ~ 79%] Attack for every tile that it's target moved at the end of the turn. (Note that this skill's target range is 5 tiles, but it's effect range is 20 tiles)",
+		"5": "**Flash Sword**:\n439% Attack\nInflicts Lethal Wound\nLethal Wound deals damage equal to 79% Attack for every tile that the target moves",
         "5ChargeTurns": 3,
 		"5GeneCost": 5100
     },
@@ -677,7 +677,7 @@
         "4": "**Hideous Strength!**:\nHeals for 19% of damage dealt\n30% Aggro and increases Movement by 1 if Jack has 50% or more HP",
         "4GeneCost": 180,
 		
-		"5": "**GRRR!**:\n382% Attack\n100% chance to Confuse for 2 turns\nHeal Block for 2 turns",
+		"5": "**GRRR!**:\n444% Attack\n100% chance to Confuse for 2 turns\nHeal Block for 2 turns",
         "5ChargeTurns": 3,
 		"5GeneCost": 1215
     },
@@ -699,8 +699,8 @@
         "4": "**Cowgirl**:\n9.5% HP Increase and 50% Crit Damage Increase if 2 or more Paper heroes in the party (including herself)",
         "4GeneCost": 160,
 		
-		"5": "**Super Straight Chu~**:\n1440.4% Attack\n50500 Defense-ignoring Damage\n33100 Defense-ignoring Damage if 2 enemies are attacked\n33100 Defense-ignoring Damage if 4 enemies are attacked",
-        "5ChargeTurns": 8,
+		"5": "**Super Straight Chu~**:\n817% Attack\n50500 Defense-ignoring Damage\n33100 Defense-ignoring Damage if 2 enemies are attacked\n33100 Defense-ignoring Damage if 4 enemies are attacked",
+        "5ChargeTurns": 4,
 		"5GeneCost": 1065
     },
     {
@@ -765,7 +765,7 @@
         "4": "**Making of a Hero**:\n20% Attack and 10% Damage Reduction if above 80% HP",
         "4GeneCost": 16,
 		
-		"5": "**Wrath of Mother Nature**:\n294% Attack\n6000 Defense Ignore\n100% chance to Stun main target\n80% chance to Stun other targets",
+		"5": "**Wrath of Mother Nature**:\n335% Attack\n6000 Defense Ignore\n100% chance to Stun main target\n80% chance to Stun other targets",
         "5ChargeTurns": 2,
 		"5GeneCost": 70
     },
@@ -853,8 +853,8 @@
         "4": "**Strong Like Boulder**:\nLance achieves 2 higher Movement and [800 ~ 1070] higher Mastery if his party includes 2 or more Swamp-type heroes. If he is in Movement Reduction mode, his damage from Paper-type enemies decreases by 15%.",
         "4GeneCost": 135,
 		
-		"5": "**Last Fusion**:\nSummons and rides an ancient golem, Attacking all enemies in his range at [519% ~ 635.1%] Attack. Lance cannot receive more than 35000 damage for 2 turns. If Lance is in Movement Reduction mode, this skill's Final Power increases by [16% ~ 25%].",
-        "5ChargeTurns": 2,
+		"5": "**Last Fusion**:\n234% Attack\nCannot receive more than 35000 damage for 2 turns\n25% Final Skill Power if Lance's Movement is decreased",
+        "5ChargeTurns": 1,
 		"5GeneCost": 912
     },
     {
@@ -1007,7 +1007,7 @@
         "4": "**Hymn for Ares**:\nIncreases nearby allies' Attack by [150 ~ 825] with the power of the war god Ares.",
         "4GeneCost": 160,
 		
-		"5": "**Hymn to Hermes**:\nMas's musical talent explodes, restoring HP at [384% ~ 528%] Attack for allies within his range and removes all debuffs cast on them. Also increases all allies' Movement by 3 for 2 turns.",
+		"5": "**Hymn to Hermes**:\nHeals at 528% Attack\nRemoves all debuffs\nIncreases all allies' Movement by 3 for 2 turns.",
         "5ChargeTurns": 2,
 		"5GeneCost": 1065
     },
@@ -1073,8 +1073,8 @@
         "4": "**Berserk Momo**:\nIncreases Attack by [12% ~ 30%] and Crit rate by [700 ~ 2500] for 2 turns at the start of battle.",
         "4GeneCost": 144,
 		
-		"5": "**Momo's Reinforced Bomb!**:\nDrops onto the enemy camp riding a reinforced bomb, Attacking at [524% ~ 720.2%] Attack and causing additional [44000 ~ 80000] Defense-ignoring damage. Resets Momo's Passive effects.",
-        "5ChargeTurns": 8,
+		"5": "**Momo's Reinforced Bomb!**:\n809% Attack\n80000 Defense-ignoring Damage\nResets Momo's Passive",
+        "5ChargeTurns": 4,
 		"5GeneCost": 972
     },
     {
@@ -1095,7 +1095,7 @@
         "4": "**Summon Spirit**:\n10% Attack, 11% Crit Rate, and 15000 HP for every ally death",
         "4GeneCost": 162,
 		
-		"5": "**Exorcism**:\n219.4% Attack\nHeal Block for 2 turns\nIncreases Attack by 4500 and Defense by 2500 for 2 turns",
+		"5": "**Exorcism**:\n240% Attack\nHeal Block for 2 turns\nIncreases Attack by 4500 and Defense by 2500 for 2 turns",
         "5ChargeTurns": 1,
 		"5GeneCost": 1093
     },
@@ -1205,7 +1205,7 @@
         "4": "**Bloodthirst**:\nAbsorbs [10% ~ 37%] of dealt damage as HP. This skill's power increases by [5% ~ 18.5%] against enemies with less than 50% HP, and ignores [? ~ 2800] for enemies with 50% or more HP.",
         "4GeneCost": 540,
 		
-		"5": "**Oblivion**:\nStrikes terror into enemies in its range, inflicting damage at [521% ~ 638%] Attack with a [35% ~ 80%] chance of Cursing and Confusing them for 2 turns.",
+		"5": "**Oblivion**:\n434% Attack\n80% chance to Curse and Confuse enemies for 2 turns",
         "5ChargeTurns": 3,
 		"5GeneCost": 3645
     },
@@ -1271,8 +1271,8 @@
         "4": "**Undying Flame**:\nRestores [10% ~ 46%] Max HP when HP reaches 30% or lower. Recovery rate increases by [10% ~ 19%] if the character has 1 or more buffs from Active skills at the beginning of each turn.",
         "4GeneCost": 180,
 		
-		"5": "**Phoenix's Feather**\nTransmits the phoenix's energy, Attacking enemies in its range at [535% ~ 658.3%] Attack. Also casts the Revival effect on allies in its range for 2 turns that immediately restores [1% ~ 14.5%] Max HP when they take lethal damage.",
-        "5ChargeTurns": 8,
+		"5": "**Phoenix's Feather**\n817% Attack\n14.5% Max HP revive for 2 turns on all allies within range",
+        "5ChargeTurns": 4,
 		"5GeneCost": 1215
     },
     {
@@ -1447,7 +1447,7 @@
         "4": "**I Feel So Lucky Today!**:\n30% chance to gain a Shield for 1 Attack that reduces the Attack Damage by 50%\n30% chance to increase Attack by 20%\n30% chance to remove 1 debuff",
         "4GeneCost": 680,
 		
-		"5": "**It's All Heaven's Will**:\n449% Attack\n100%/80%/40% chance to deal 50000 Defense-ignoring Damage on targets' next turn",
+		"5": "**It's All Heaven's Will**:\n807% Attack\n100%/80%/40% chance to deal 50000 Defense-ignoring Damage on the target's next turn",
         "5ChargeTurns": 4,
 		"5GeneCost": 5100
     },
@@ -1557,7 +1557,7 @@
         "4": "**Spirit Booster**:\nWhen Shu-Shu is near an ally, her Attack increases by [3% ~ 12%] and her healing skill effects by [6% ~ 24%].",
         "4GeneCost": 446,
 		
-		"5": "**Legendary Elixir**:\nFills your Lord Gauge by [1 ~ 10] blocks and heals all allies on the map by [353% ~ 485.3%] Attack.",
+		"5": "**Legendary Elixir**:\nFills Lord Gauge by 10 blocks\nHeals all allies by 485.3% Attack",
         "5ChargeTurns": 2,
 		"5GeneCost": 3342
     },
@@ -1601,7 +1601,7 @@
         "4": "**Ninja Skill: Train Ninjutsu**:\n",
         "4GeneCost": 0,
 		
-		"5": "**Ninjutsu: Space Inferno**:\n",
+		"5": "**Ninjutsu: Space Inferno**:\n444% Attack\nIgnores 5100 Defense\nEnables Sonic Boom to walk through enemies for 2 turns",
         "5ChargeTurns": 3,
 		"5GeneCost": 1215
     },
@@ -1645,7 +1645,7 @@
         "4": "**Berserker**:\n",
         "4GeneCost": 0,
 		
-		"5": "**Brotherhood**:\n",
+		"5": "**Brotherhood**:\n807% Attack\nIgnores 5100 Defense\nImmobilizes enemies for 1 turn\n31% Final Skill Power if enemies have their Defense decreased",
         "5ChargeTurns": 6,
 		"5GeneCost": 0
     },
@@ -1667,7 +1667,7 @@
         "4": "**Self-portrait**:\nWhen Taehwa takes lethal damage, he draws a self-portrait that takes damage for him and revives with [5% ~ 9.5%] Max HP. This effect can only be activated once during a battle.",
         "4GeneCost": 680,
 		
-		"5": "**Finishing Touch**:\nTraps an enemy in ink, Attacking it at [535% ~ 734.8%] Attack, If the enemy has its Attack decreased, this skill inflicts additional damage that equals [5% ~ 18.5%] of its current HP. If enemy has its Defense decreased, then it inflicts additional [26000 ~ 44000] Defense-ignoring damage.",
+		"5": "**Finishing Touch**:\n817% Attack\n18.5% Current HP Damage if the target has its Attack decreased\n44000 Defense-ignoring Damage if the target has its Defense decreased",
         "5ChargeTurns": 4,
 		"5GeneCost": 5100
     },
@@ -1711,8 +1711,8 @@
         "4": "**Doomsday Watcher**:\n",
         "4GeneCost": 0,
 		
-		"5": "**Extinguisher's Authority**:\n",
-        "5ChargeTurns": 8,
+		"5": "**Extinguisher's Authority**:\n817% Attack\n4000 Defense-ignoring Damage\n33% Attack and 33% Resistance for 2 turns",
+        "5ChargeTurns": 4,
 		"5GeneCost": 0
     },
     {
@@ -1799,7 +1799,7 @@
         "4": "**Burning**:\n",
         "4GeneCost": 0,
 		
-		"5": "**Final Blade**:\n",
+		"5": "**Final Blade**:\n342% Attack\n100% chance to Instantly Kill the target",
         "5ChargeTurns": 2,
 		"5GeneCost": 3342
     },
@@ -1821,7 +1821,7 @@
         "4": "**Dragon's Protection**:",
         "4GeneCost": 680,
 		
-		"5": "**Help Me, Cel!**:",
+		"5": "**Help Me, Cel!**:\n236% Attack\nPushes enemies 4 tiles away\n100% Max HP Restore\nRemoves all debuffs on Yeka",
         "5ChargeTurns": 1,
 		"5GeneCost": 5100
     },
@@ -1843,7 +1843,7 @@
         "4": "**Dark Merchant's Calculation**:",
         "4GeneCost": 680,
 		
-		"5": "**More Chess Pieces for the Better**:",
+		"5": "**More Chess Pieces for the Better**:\nAttacks at 432% Attack\nHeals at 519.3% Attack\nIncreases allies' Crit Damage by 15% and Movement by 1 for 2 turns",
         "5ChargeTurns": 3,
 		"5GeneCost": 5100
     },
@@ -1854,18 +1854,18 @@
         "1MPcost": 15,
         "1GeneCost": 340,
 
-        "2": "**Adamantine Energy**:\n145.3% Attack\n30% Aggro for 3 turns\nApplies Energy Marks on allies within range (Max 3)\n25% Damage Reducing Shield for 1 hit on allies already with a mark",
+        "2": "**Adamantine Energy**:\n145.3% Attack\n30% Aggro for 3 turns\nApplies Energy Marks on allies and enemies within range (Max 3)\n25% Damage Reducing Shield for 1 hit on allies already with a mark",
         "2MPcost": 0,
         "2GeneCost": 680,
 
-        "3": "**Asura's Energy**:\n176.5% Attack\nApplies Energy Marks on allies within range\n10% Max HP Damage to enemies if 4 or more Energy Marks",
+        "3": "**Asura's Energy**:\n176.5% Attack\nApplies Energy Marks on allies and enemies within range\n10% Max HP Damage to enemies if 4 or more Energy Marks",
         "3MPcost": 0,
         "3GeneCost": 1360,
 
         "4": "**Flow of the Universe**:\n15% Max HP for every Energy Mark (Max 60%)\n8% Resistance if there are 3 Energy Marks\n2040 Defense if there are 4 or more Energy Marks",
         "4GeneCost": 680,
 		
-		"5": "**Gusting Heaven's Wrath**:\n858% Attack\n100% Damage Reducing Shield for 1 hit that lasts for 3 turns\n10000 Defense-ignoring Damage for every Energy Mark\nApplies Energy Marks on allies within range",
+		"5": "**Gusting Heaven's Wrath**:\n858% Attack\n100% Damage Reducing Shield for 1 hit that lasts for 3 turns\n10000 Defense-ignoring Damage for every Energy Mark (Max 100000)\nApplies Energy Marks on allies and enemies within range",
         "5ChargeTurns": 6,
 		"5GeneCost": 5100
     },
@@ -1876,15 +1876,15 @@
         "1MPcost": 15,
         "1GeneCost": 340,
 
-        "2": "**White Tiger's Fangs**:\n156.3% Attack\n16% Final Skill Power increase if Sogoon is on Ice\n19% Final Skill Power increase if enemy is on Ice",
+        "2": "**White Tiger's Fangs**:\n175.7% Attack\n16% Final Skill Power increase if Sogoon is on Ice\n19% Final Skill Power increase if enemy is on Ice",
         "2MPcost": 0,
         "2GeneCost": 680,
 
-        "3": "**Freezing Shackles**:\n188.3% Attack\n100% chance to Immoblize for 1 turn if enemy is on Ice\n90% chance to create Ice with a 1 tile radius around the enemy for 1 turn (Delay Effect)",
+        "3": "**Freezing Shackles**:\n195.1% Attack\n90% chance to Immoblize for 1 turn if enemy is on Ice\n100% chance to turns tiles in a 1 tile range around enemy to Ice for for 1 turn (Delay Effect)",
         "3MPcost": 0,
         "3GeneCost": 1360,
 
-        "4": "**White Tiger's Energy**:\nTurns tile Sogoon stands on to Ice for 2 turns\n15% Attack when on Ice\n20% Damage Reduction from skills with 3 or smaller range when on Ice",
+        "4": "**White Tiger's Energy**:\nTurns tiles in a 1 tile range around Sogoon to Ice for 2 turns\n20% Attack when on Ice\n13% Damage Reduction from skills with 3 or smaller range when on Ice",
         "4GeneCost": 680,
 		
 		"5": "**Glacier Hell**:\n1427.8% Attack\nTurns all tiles in effect range to Ice for 2 turns\nEnemies attacked take 10% more Terrain Damage from Ice",
