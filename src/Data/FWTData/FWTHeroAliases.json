@@ -602,7 +602,41 @@
         "aliases": [
             "churyeok",
             "chur",
-            "monk"
+            "monk",
+            "chuck",
+            "chuk"
+        ]
+    },
+    {
+        "name": "Sol Badguy",
+        "aliases": [
+            "sol",
+            "sol badguy",
+            "badguy"
+        ]
+    },
+    {
+        "name": "Ky Kiske",
+        "aliases": [
+            "ky kiske",
+            "ky",
+            "kiske",
+            "kikse"
+        ]
+    },
+    {
+        "name": "May",
+        "aliases": [
+            "may",
+            "jellyfish"
+        ]
+    },
+    {
+        "name": "Ramlethal Valentine",
+        "aliases": [
+            "ram",
+            "ramlethal valentine",
+            "ramlethal"
         ]
     }
 ]
