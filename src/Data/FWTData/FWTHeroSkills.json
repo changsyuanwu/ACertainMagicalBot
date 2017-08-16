@@ -1943,11 +1943,11 @@
         "1GeneCost": 270,
 
         "2": "**Hop on Dolphin**:",
-        "2MPcost": 0,
+        "2MPcost": 67,
         "2GeneCost": 810,
 
         "3": "**Ultimate Whiner**:",
-        "3MPcost": 0,
+        "3MPcost": 122,
         "3GeneCost": 1080,
 
         "4": "**Applause for the Victim**:",
@@ -1958,7 +1958,7 @@
 		"5GeneCost": 1000
     },
     {
-        "Name": "Ramlethal Valatine",
+        "Name": "Ramlethal Valentine",
 
         "1": "**Deploy Giant Sword**:",
         "1MPcost": 15,
