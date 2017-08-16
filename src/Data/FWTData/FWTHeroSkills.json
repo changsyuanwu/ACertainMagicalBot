@@ -1938,44 +1938,44 @@
     {
         "Name": "May",
 
-        "1": "****:",
+        "1": "**Dead Angle Attack**:",
         "1MPcost": 15,
         "1GeneCost": 270,
 
-        "2": "****:",
+        "2": "**Hop on Dolphin**:",
         "2MPcost": 0,
         "2GeneCost": 810,
 
-        "3": "****:",
+        "3": "**Ultimate Whiner**:",
         "3MPcost": 0,
         "3GeneCost": 1080,
 
-        "4": "****:",
+        "4": "**Applause for the Victim**:",
         "4GeneCost": 540,
 		
-		"5": "****:",
+		"5": "**Ultimate Spinning Whirlwind**:",
         "5ChargeTurns": 1,
 		"5GeneCost": 1000
     },
     {
         "Name": "Ramlethal Valatine",
 
-        "1": "****:",
+        "1": "**Deploy Giant Sword**:",
         "1MPcost": 15,
         "1GeneCost": 270,
 
-        "2": "****:",
+        "2": "**Furama Kaago**:",
         "2MPcost": 0,
         "2GeneCost": 810,
 
-        "3": "****:",
+        "3": "**Calvados**:",
         "3MPcost": 0,
         "3GeneCost": 1080,
 
-        "4": "****:",
+        "4": "**Commence Subdual**:",
         "4GeneCost": 540,
 		
-		"5": "****:",
+		"5": "**Trance**:",
         "5ChargeTurns": 4,
 		"5GeneCost": 1000
     },
