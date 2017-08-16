@@ -2,22 +2,22 @@
     {
         "Name": "",
 
-        "1": "****:",
+        "1": "****:\n% Attack",
         "1MPcost": 15,
         "1GeneCost": 0,
 
-        "2": "****:",
+        "2": "****:\n% Attack",
         "2MPcost": 0,
         "2GeneCost": 0,
 
-        "3": "****:",
+        "3": "****:\n% Attack",
         "3MPcost": 0,
         "3GeneCost": 0,
 
-        "4": "****:",
+        "4": "****:\n",
         "4GeneCost": 0,
 		
-		"5": "****:",
+		"5": "****:\n% Attack",
         "5ChargeTurns": 0,
 		"5GeneCost": 0
     },
@@ -1877,11 +1877,11 @@
         "1GeneCost": 340,
 
         "2": "**White Tiger's Fangs**:\n175.7% Attack\n16% Final Skill Power increase if Sogoon is on Ice\n19% Final Skill Power increase if enemy is on Ice",
-        "2MPcost": 0,
+        "2MPcost": 67,
         "2GeneCost": 680,
 
         "3": "**Freezing Shackles**:\n195.1% Attack\n90% chance to Immoblize for 1 turn if enemy is on Ice\n100% chance to turns tiles in a 1 tile range around enemy to Ice for for 1 turn (Delay Effect)",
-        "3MPcost": 0,
+        "3MPcost": 126,
         "3GeneCost": 1360,
 
         "4": "**White Tiger's Energy**:\nTurns tiles in a 1 tile range around Sogoon to Ice for 2 turns\n20% Attack when on Ice\n13% Damage Reduction from skills with 3 or smaller range when on Ice",
@@ -1890,5 +1890,115 @@
 		"5": "**Glacier Hell**:\n300% Attack\nTurns all tiles in effect range to Ice for 2 turns\nEnemies attacked take 10% more Terrain Damage from Ice",
 		"5ChargeTurns": 1,
 		"5GeneCost": 5100
+    },
+    {
+        "Name": "Ky Kiske",
+
+        "1": "**Split Ceil**:\n132% Attack\nDecreases Hit Rate by 3200 for 2 turns",
+        "1MPcost": 15,
+        "1GeneCost": 270,
+
+        "2": "**Greed Saber**:\n152.4% Attack\nIncrease Directional Strategy Power by 12% for 2 turns",
+        "2MPcost": 0,
+        "2GeneCost": 810,
+
+        "3": "**Sacred Edge**:\n175.7% Attack\n30% Final Skill Power and 4000 Defense Ignore if enemies are 3 or more tiles away",
+        "3MPcost": 0,
+        "3GeneCost": 1080,
+
+        "4": "**Talented Swordsman**:\n20% Attack and 10% Crit Damage for 1 turn if there is an enemy within 1 tile\nIncreases Movement by 1 and Restores 14% Max HP if there are no enemies within 1 tile",
+        "4GeneCost": 540,
+		
+		"5": "**Ride the Lightning**:\n446.5% Attack\nPushes enemies 2 tiles back\n68% Lethal Wound for 2 turns",
+        "5ChargeTurns": 0,
+		"5GeneCost": 1000
+    },
+    {
+        "Name": "Sol Badguy",
+
+        "1": "**Volcanic Viper**:\n133% Attack\nIncreases Counter Damage by 10% for 1 turn",
+        "1MPcost": 15,
+        "1GeneCost": 270,
+
+        "2": "**Bandit Bringer**:\n162.1% Attack\n30% Weakening for 2 turns\nIncreases Attack by 40% for 2 turns if Sol is in \"cannot be healed\" mode",
+        "2MPcost": 65,
+        "2GeneCost": 810,
+
+        "3": "**Riot Stamp**:\n185.4% Attack\n6000 Defense Ignore\n100% chance to Disarm if Sol is in \"cannot be healed\" mode",
+        "3MPcost": 0,
+        "3GeneCost": 1080,
+
+        "4": "**Flame of Corruption**:\nIf Sol's HP is below 50%, he enters \"cannot be healed\" mode\n20% Final Skill Power, 20% Counter Damage, and 30% Damage Reduction if Sol is in \"cannot be healed\" mode",
+        "4GeneCost": 540,
+		
+		"5": "**Tyrant Rave**:\n336.8% Attack\n6000 Defense Ignore\n182.5% Attack Burn for 2 turns if Sol is in \"cannot be healed\" mode",
+        "5ChargeTurns": 0,
+		"5GeneCost": 1000
+    },
+    {
+        "Name": "May",
+
+        "1": "****:",
+        "1MPcost": 15,
+        "1GeneCost": 270,
+
+        "2": "****:",
+        "2MPcost": 0,
+        "2GeneCost": 810,
+
+        "3": "****:",
+        "3MPcost": 0,
+        "3GeneCost": 1080,
+
+        "4": "****:",
+        "4GeneCost": 540,
+		
+		"5": "****:",
+        "5ChargeTurns": 1,
+		"5GeneCost": 1000
+    },
+    {
+        "Name": "Ramlethal Valatine",
+
+        "1": "****:",
+        "1MPcost": 15,
+        "1GeneCost": 270,
+
+        "2": "****:",
+        "2MPcost": 0,
+        "2GeneCost": 810,
+
+        "3": "****:",
+        "3MPcost": 0,
+        "3GeneCost": 1080,
+
+        "4": "****:",
+        "4GeneCost": 540,
+		
+		"5": "****:",
+        "5ChargeTurns": 4,
+		"5GeneCost": 1000
+    },
+    {
+        "Name": "",
+
+        "1": "****:\n% Attack",
+        "1MPcost": 15,
+        "1GeneCost": 0,
+
+        "2": "****:\n% Attack",
+        "2MPcost": 0,
+        "2GeneCost": 0,
+
+        "3": "****:\n% Attack",
+        "3MPcost": 0,
+        "3GeneCost": 0,
+
+        "4": "****:\n",
+        "4GeneCost": 0,
+		
+		"5": "****:\n% Attack",
+        "5ChargeTurns": 0,
+		"5GeneCost": 0
     }
 ]
