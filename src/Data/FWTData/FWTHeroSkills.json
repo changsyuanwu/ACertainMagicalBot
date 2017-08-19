@@ -602,7 +602,7 @@
 
         "2": "**Fiery Wind**:\nGenerates heat, Attacking enemies at [106% ~ 145.6%] Attack and ignoring [1250 ~ 3500] Defense. This skill's Final Power increases by [8% ~ 17%] if Hongyeom is on Lava terrain.",
         "2MPcost": 76,
-        "2GeneCost": 680,
+        "2GeneCost": 1020,
 
         "3": "**Rising Pheonix Slash**:\nA pillar of hellfire slams into the ground, Attacking enemies at [130% ~ 178.6%] Attack and turning where its heat reaches (All tiles in this skill's range) into Lava terrain for 2 turns. Additionally Hongyeom inflicts [11% ~ 20%] higher Critical Damage while on Lava terrain for 2 turns.",
         "3MPcost": 150,
@@ -646,7 +646,7 @@
 
         "2": "**Flying Sword: Butterfly**:\nThe energy of the abyss rolls in, Attacking enemies at [114% ~ 156.3%] Attack and causing additional [2200 ~ 13000] Defense-ignoring damage per Ildo's Charge buff. this skill consumes all of Ildo's Charge buffs.",
         "2MPcost": 66,
-        "2GeneCost": 680,
+        "2GeneCost": 1020,
 
         "3": "**Last Resort**:\nInflicts [131% ~ 176%] of Attack damage on enemies and creates a protective pentacle, increasing the character's Defense by [1300 ~ 4000], and allowing it to take [30% ~ 39%] damage for allies within this skill's range for 2 turns.",
         "3MPcost": 134,
@@ -1438,7 +1438,7 @@
 
         "2": "**I Am Smart!**:\n140.2% Attack\n100% chance to Immobilize for 1 turn if targets have 40% or more Defense\n100% chance to Sleep for 1 turn if target has 5 or more Movement",
         "2MPcost": 71,
-        "2GeneCost": 680,
+        "2GeneCost": 1020,
 
         "3": "**Pick Your Destiny!**:\n167.6% Attack\n40% chance to deal 40000 Defense-ignoring Damage on the targets' next turn\n40% chance to\n40% chance to Disarm for 2 turns on the targets' next turn\n40% chance to Seal for 2 turns on the targets' next turn",
         "3MPcost": 120,
@@ -1500,18 +1500,18 @@
 
         "1": "**Death Scythe**:\n",
         "1MPcost": 15,
-        "1GeneCost": 0,
+        "1GeneCost": 244,
 
         "2": "**Moonlight Slash**:\n",
         "2MPcost": 66,
-        "2GeneCost": 0,
+        "2GeneCost": 489,
 
         "3": "**Grim Reaper**:\n",
         "3MPcost": 105,
-        "3GeneCost": 0,
+        "3GeneCost": 979,
 
         "4": "**Death Sentence**:\n",
-        "4GeneCost": 0,
+        "4GeneCost": 489,
 		
 		"5": "Seira currently has no awakening skill!",
         "5ChargeTurns": 0,
@@ -1586,20 +1586,20 @@
     {
         "Name": "Sonic Boom",
 
-        "1": "**Ninjutsu: Return**:\n",
+        "1": "**Ninjutsu: Return**:\n130.1% Attack\n2.8% chance to Instantly Kill enemies",
         "1MPcost": 15,
-        "1GeneCost": 0,
+        "1GeneCost": 90,
 
-        "2": "**Ninjutsu: Cleave the Fog**:\n",
+        "2": "**Ninjutsu: Cleave the Fog**:\n181.5% Attack\nIncreases Movement by 3 for 1 turn",
         "2MPcost": 66,
-        "2GeneCost": 0,
+        "2GeneCost": 180,
 
-        "3": "**Ninja Secret: Blood Ritual**:\n",
+        "3": "**Ninja Secret: Blood Ritual**:\n199% Attack\n14% Final Skill Power if Sonic has travelled 4 or more tiles\n7.5% chance to Instantly Kill enemies",
         "3MPcost": 121,
-        "3GeneCost": 0,
+        "3GeneCost": 360,
 
-        "4": "**Ninja Skill: Train Ninjutsu**:\n",
-        "4GeneCost": 0,
+        "4": "**Ninja Skill: Train Ninjutsu**:\n650 Crit Rate, 3.25% Crit Damage, and 600 Attack for every tile moved",
+        "4GeneCost": 180,
 		
 		"5": "**Ninjutsu: Space Inferno**:\n444% Attack\nIgnores 5100 Defense\nEnables Sonic Boom to walk through enemies for 2 turns",
         "5ChargeTurns": 3,
@@ -1630,24 +1630,24 @@
     {
         "Name": "Sraka",
 
-        "1": "**Pressure**:\n",
+        "1": "**Pressure**:\n143.7% Attack\n41.5% chance to Stun for 1 turn",
         "1MPcost": 15,
-        "1GeneCost": 0,
+        "1GeneCost": 19,
 
-        "2": "**Maelstorm**:\n",
+        "2": "**Maelstorm**:\n175.7% Attack\n2800 Defense Ignore if target has 50% or more HP\nDecreases Defense by 4400 for 2 turns if target has less than 50% HP",
         "2MPcost": 59,
-        "2GeneCost": 0,
+        "2GeneCost": 39,
 
-        "3": "**Fury**:\n",
+        "3": "**Fury**:\n205.8% Attack\n7.5% chance to Instantly Kill\n5800 Defense Ignore if Sraka moved 3 or more tiles",
         "3MPcost": 104,
-        "3GeneCost": 0,
+        "3GeneCost": 74,
 
-        "4": "**Berserker**:\n",
-        "4GeneCost": 0,
+        "4": "**Berserker**:\nRestores 85% Max MP, Increases Attack by 24%, and Decreases damage from skills with 2 or more range by 30% whenever Sraka kills an enemy",
+        "4GeneCost": 45,
 		
 		"5": "**Brotherhood**:\n807% Attack\nIgnores 5100 Defense\nImmobilizes enemies for 1 turn\n31% Final Skill Power if enemies have their Defense decreased",
         "5ChargeTurns": 4,
-		"5GeneCost": 0
+		"5GeneCost": 70
     },
     {
         "Name": "Taehwa",
@@ -1658,7 +1658,7 @@
 
         "2": "**Draw a Side Dot**:\nStamps down an enemy with his brush, Attacking at [114% ~ 150%] Attack and decreasing its Attack by [1250 ~ 8000] for 3 turns. This Attack Decrease effect cannot be canceled. If the enemy has its Defense decreased, their Movement is decreased by 3 and decreases their healing by [33% ~ 60%] for 3 turns.",
         "2MPcost": 70,
-        "2GeneCost": 680,
+        "2GeneCost": 1020,
 
         "3": "**Ink Over**:\nPaints over an enemy repeatedly, Attacking it at [139% ~ 190.3%] Attack and decreasing its Defense by [1500 ~ 4200] for 3 turns. This Defense Reduction effect cannot be canceled. If the enemy has its Attack decreased, this skill Weakens it, making it take [5% ~ 23%] more damage for 3 turns and also Curses it for 3 turns. Curse effect: Skills that inflict harmful effects upon enemies will also affect the caster",
         "3MPcost": 128,
@@ -1696,24 +1696,24 @@
     {
         "Name": "Thanatos",
 
-        "1": "**Execution**:\n",
+        "1": "**Execution**:\n132% Attack\nDecreases Defense by 1050 for 1 turn",
         "1MPcost": 15,
         "1GeneCost": 0,
 
-        "2": "**Mind Breaker**:\n",
+        "2": "**Mind Breaker**:\n153.4% Attack\nOverloads for 1 turn, dealing 250 damage for every 1 MP the target uses",
         "2MPcost": 67,
         "2GeneCost": 0,
 
-        "3": "**Doom Caller**:\n",
+        "3": "**Doom Caller**:\n183.5% Attack\n32% Weakening for 2 turns if skill hits 2 or more enemies\n20% Final Skill Power if skill hits 3 or more enemies",
         "3MPcost": 120,
         "3GeneCost": 0,
 
-        "4": "**Doomsday Watcher**:\n",
+        "4": "**Doomsday Watcher**:\n20% Max HP Restore, 33% Max MP Restore, and causes Thanatos's next attack to Double Attack for 40% more damage when he kills an enemy",
         "4GeneCost": 0,
 		
 		"5": "**Extinguisher's Authority**:\n817% Attack\n4000 Defense-ignoring Damage\n33% Attack and 33% Resistance for 2 turns",
         "5ChargeTurns": 4,
-		"5GeneCost": 0
+		"5GeneCost": 70
     },
     {
         "Name": "Unknown",
@@ -1784,20 +1784,20 @@
     {
         "Name": "Zero",
 
-        "1": "**Shadow Strike**:\n",
+        "1": "**Shadow Strike**:\n152.4% Attack\nDecreases Defense by 1180 for 1 turn",
         "1MPcost": 15,
-        "1GeneCost": 0,
+        "1GeneCost": 225,
 
-        "2": "**Eclipse**:\n",
+        "2": "**Eclipse**:\n181.5% Attack\nIncreases Movement by 1 and Ignores Defense by 3200 for 2 turns",
         "2MPcost": 66,
-        "2GeneCost": 0,
+        "2GeneCost": 446,
 
-        "3": "**Leg Down**:\n",
+        "3": "**Leg Down**:\n202.9% Attack\nDecreases Movement by 3 for 2 turns\n12400 Defense-ignoring Damage and 11% Current HP Damage if skill hits 2 or more enemies",
         "3MPcost": 102,
-        "3GeneCost": 0,
+        "3GeneCost": 893,
 
-        "4": "**Burning**:\n",
-        "4GeneCost": 0,
+        "4": "**Burning**:\n20% Attack and Decreases damage from skills with 2 or more range by 20% if HP is 60% or higher",
+        "4GeneCost": 446,
 		
 		"5": "**Final Blade**:\n342% Attack\n100% chance to Instantly Kill the target",
         "5ChargeTurns": 2,
@@ -1806,19 +1806,19 @@
     {
         "Name": "Yeka",
 
-        "1": "**Petals' Lullaby**:",
+        "1": "**Petals' Lullaby**:\n128.4% Attack\n60% chance to Sleep for 2 turns",
         "1MPcost": 15,
         "1GeneCost": 340,
 
-        "2": "**Weakness, Maybe**:",
+        "2": "**Weakness, Maybe**:\n163.7% Attack\n100% chance to Weaken by 23% for 2 turns\nDecreases Defense by 4700 for 2 turns if enemies are already Weakened",
         "2MPcost": 68,
-        "2GeneCost": 680,
+        "2GeneCost": 1020,
 
-        "3": "**Immature Energy Wave**:",
+        "3": "**Immature Energy Wave**:\n191.1% Attack\n4000 Defense Ignore\n80% chance to Disarm for 1 turn if enemies are Sealed",
         "3MPcost": 137,
         "3GeneCost": 1360,
 
-        "4": "**Dragon's Protection**:",
+        "4": "**Dragon's Protection**:\nRestores 15% Max HP every turn\n80% chance to Seal enemies for 1 turn",
         "4GeneCost": 680,
 		
 		"5": "**Help Me, Cel!**:\n236% Attack\nPushes enemies 4 tiles away\n100% Max HP Restore\nRemoves all debuffs on Yeka",
@@ -1828,19 +1828,19 @@
     {
         "Name": "Camelia",
 
-        "1": "**Economic Pressure**:",
+        "1": "**Economic Pressure**:\n134.3% Attack\nIncreases Skill Cost by 15% for 1 turn",
         "1MPcost": 15,
         "1GeneCost": 340,
 
-        "2": "**Loyal Hounds**:",
+        "2": "**Loyal Hounds**:\n143.7% Attack Heal for allies and Camelia\n3 tile Push on selected ally\nIncreases Attack by 24% and Max HP by 19.5% for 2 turns on selected ally",
         "2MPcost": 71,
-        "2GeneCost": 680,
+        "2GeneCost": 1020,
 
-        "3": "**Constricting Collapse**:",
+        "3": "**Constricting Collapse**\n191.1% Attack\n158.2% Heal on allies\n80% chance to Increase Skill Cost by 33% for 2 turns\n100% chance to Overload for 2 turns, dealing 350 damage for every MP the target uses",
         "3MPcost": 0,
         "3GeneCost": 1360,
 
-        "4": "**Dark Merchant's Calculation**:",
+        "4": "**Dark Merchant's Calculation**:\n8% more Gold from battles\n14% Max HP Restore if HP is below 40%",
         "4GeneCost": 680,
 		
 		"5": "**More Chess Pieces for the Better**:\nAttacks at 432% Attack\nHeals at 519.3% Attack\nIncreases allies' Crit Damage by 15% and Movement by 1 for 2 turns",
@@ -1856,7 +1856,7 @@
 
         "2": "**Adamantine Energy**:\n145.3% Attack\n30% Aggro for 3 turns\nApplies Energy Marks on allies and enemies within range (Max 3)\n25% Damage Reducing Shield for 1 hit on allies already with a mark",
         "2MPcost": 0,
-        "2GeneCost": 680,
+        "2GeneCost": 1020,
 
         "3": "**Asura's Energy**:\n176.5% Attack\nApplies Energy Marks on allies and enemies within range\n10% Max HP Damage to enemies if 4 or more Energy Marks",
         "3MPcost": 0,
@@ -1878,7 +1878,7 @@
 
         "2": "**White Tiger's Fangs**:\n175.7% Attack\n16% Final Skill Power increase if Sogoon is on Ice\n19% Final Skill Power increase if enemy is on Ice",
         "2MPcost": 67,
-        "2GeneCost": 680,
+        "2GeneCost": 1020,
 
         "3": "**Freezing Shackles**:\n195.1% Attack\n90% chance to Immoblize for 1 turn if enemy is on Ice\n100% chance to turns tiles in a 1 tile range around enemy to Ice for for 1 turn (Delay Effect)",
         "3MPcost": 126,
