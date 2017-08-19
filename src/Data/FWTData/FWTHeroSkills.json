@@ -1646,7 +1646,7 @@
         "4GeneCost": 0,
 		
 		"5": "**Brotherhood**:\n807% Attack\nIgnores 5100 Defense\nImmobilizes enemies for 1 turn\n31% Final Skill Power if enemies have their Defense decreased",
-        "5ChargeTurns": 6,
+        "5ChargeTurns": 4,
 		"5GeneCost": 0
     },
     {
@@ -1866,7 +1866,7 @@
         "4GeneCost": 680,
 		
 		"5": "**Gusting Heaven's Wrath**:\n858% Attack\n100% Damage Reducing Shield for 1 hit that lasts for 3 turns\n10000 Defense-ignoring Damage for every Energy Mark (Max 100000)\nApplies Energy Marks on allies and enemies within range",
-        "5ChargeTurns": 6,
+        "5ChargeTurns": 4,
 		"5GeneCost": 5100
     },
     {
@@ -1938,44 +1938,44 @@
     {
         "Name": "May",
 
-        "1": "**Dead Angle Attack**:",
+        "1": "**Dead Angle Attack**\n134% Attack\n60% chance to Stun for 2 turns",
         "1MPcost": 15,
         "1GeneCost": 270,
 
-        "2": "**Hop on Dolphin**:",
+        "2": "**Hop on Dolphin**:\n175.7% Attack\n15% Damage Reduction for 2 turns",
         "2MPcost": 67,
         "2GeneCost": 810,
 
-        "3": "**Ultimate Whiner**:",
+        "3": "**Ultimate Whiner**:\n204.8% Attack\n90% chance to Disarm for 1 turn\n20% Final Skill Power and 3500 Defense Ignore if enemies' Movement is decreased",
         "3MPcost": 122,
         "3GeneCost": 1080,
 
-        "4": "**Applause for the Victim**:",
+        "4": "**Applause for the Victim**:\nPassively attacks for 120.4% Attack every turn\nDecreases Movement by 2 for 2 turns",
         "4GeneCost": 540,
 		
-		"5": "**Ultimate Spinning Whirlwind**:",
+		"5": "**Ultimate Spinning Whirlwind**:\n234.9% Attack\nStuns enemies for 2 turns\n20% Crit Damage for 2 turns\nRestores 330 MP",
         "5ChargeTurns": 1,
 		"5GeneCost": 1000
     },
     {
         "Name": "Ramlethal Valentine",
 
-        "1": "**Deploy Giant Sword**:",
+        "1": "**Deploy Giant Sword**:\n133% Attack\n15% Final Skill Power if target is 5 or more tiles away",
         "1MPcost": 15,
         "1GeneCost": 270,
 
-        "2": "**Furama Kaago**:",
+        "2": "**Furama Kaago**:\n159.2% Attack\n2 tile self knockback\nDecreases Movement by 4 if allies coop with this skill",
         "2MPcost": 0,
         "2GeneCost": 810,
 
-        "3": "**Calvados**:",
-        "3MPcost": 0,
+        "3": "**Calvados**:\n181.5% Attack\n4000 Defense Ignore if 3 or more enemies are hit\n30% Weakening for 2 turns on enemies 3 or more tiles away",
+        "3MPcost": 146,
         "3GeneCost": 1080,
 
-        "4": "**Commence Subdual**:",
+        "4": "**Commence Subdual**:\n5% Crit Damage every time Ramlethal co-ops (Up to 15%)\nIncrease the range of Deploy Giant Sword (Skill 1) every time 2 or more allies coop with Ram\nLasts the entire battle",
         "4GeneCost": 540,
 		
-		"5": "**Trance**:",
+		"5": "**Trance**:\n816.3% Attack\n4000 Defense Ignore\n100% chance to Confuse for 2 turns\nRemoves all buffs",
         "5ChargeTurns": 4,
 		"5GeneCost": 1000
     },
