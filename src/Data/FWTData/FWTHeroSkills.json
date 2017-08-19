@@ -1910,7 +1910,7 @@
         "4GeneCost": 540,
 		
 		"5": "**Ride the Lightning**:\n446.5% Attack\nPushes enemies 2 tiles back\n68% Lethal Wound for 2 turns",
-        "5ChargeTurns": 0,
+        "5ChargeTurns": 3,
 		"5GeneCost": 1000
     },
     {
@@ -1932,7 +1932,7 @@
         "4GeneCost": 540,
 		
 		"5": "**Tyrant Rave**:\n336.8% Attack\n6000 Defense Ignore\n182.5% Attack Burn for 2 turns if Sol is in \"cannot be healed\" mode",
-        "5ChargeTurns": 0,
+        "5ChargeTurns": 1,
 		"5GeneCost": 1000
     },
     {
