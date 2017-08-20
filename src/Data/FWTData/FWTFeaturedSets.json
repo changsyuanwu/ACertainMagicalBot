@@ -348,10 +348,22 @@
         "Set2": "I Perform the Surgery!"
     },
     {
-        "Start": "",
-        "End": "",
-        "Set1": "",
-        "Set2": ""
+        "Start": "08-18-2017",
+        "End": "08-21-2017",
+        "Set1": "Pathfinder",
+        "Set2": "Rebel Army Commander"
+    },
+    {
+        "Start": "08-21-2017",
+        "End": "08-23-2017",
+        "Set1": "Vermillion Bird's Red Bloodline",
+        "Set2": "High Human Guardian"
+    },
+    {
+        "Start": "08-23-2017",
+        "End": "08-25-2017",
+        "Set1": "Klein's Secret Notebook",
+        "Set2": "Forgotten Hitter No. 4"
     },
     {
         "Start": "",
