@@ -800,7 +800,9 @@ bot.on("message", async (message) => {
     } else if (message.content.startsWith(config.prefix + "tyrant")) {
         message.channel.send({ files: ["./src/Images/Tyrant.png"] });
     } else if (message.content.startsWith(config.prefix + "atyrant")) {
-        message.channel.send({ files: ["./src/Images/ATyrant.png"] });
+        message.channel.send({ files: ["./src/Images/ATyrant.jpg"] });
+    } else if (message.content.startsWith(config.prefix + "hehe")) {
+        message.channel.send({ files: ["./src/Images/HongHehe.gif"] });
     } else if (message.content.startsWith(config.prefix + "moe")) {
         const randomMoeImageLink = moe[getRandomInt(0, moe.length)];
         message.channel.send({ files: [randomMoeImageLink] });
