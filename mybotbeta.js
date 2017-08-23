@@ -1073,7 +1073,7 @@ bot.on("message", async (message) => {
         }
     } // Looks up a hero's soul gear
 
-    else if (message.content.startsWith(config.prefix + "news")) {
+    else if (message.content.startsWith(config.prefix + "//news")) {
         if (args.length === 2) {
             var limit = Math.min(Number.parseInt(args[1], 10), 10);
         } else {
