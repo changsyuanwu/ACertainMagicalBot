@@ -1567,14 +1567,16 @@
     {
         "name": "Battle Priest",
         "aliases": [
-            "battle priest"
+            "battle priest",
+            "bp"
         ]
     },
     {
         "name": "Bloody Melee",
         "aliases": [
             "bloody melee",
-            "melee"
+            "melee",
+            "bm"
         ]
     },
     {
@@ -1660,7 +1662,8 @@
     {
         "name": "Sharp Advance",
         "aliases": [
-            "sharp advance"
+            "sharp advance",
+            "sa"
         ]
     },
     {
