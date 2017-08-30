@@ -1316,7 +1316,8 @@
             "40% aggro",
             "1* aggro",
             "assailable",
-            "unass"
+            "unass",
+            "unassliable"
         ]
     },
     {
