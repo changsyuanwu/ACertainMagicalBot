@@ -1931,7 +1931,7 @@
         "4": "**Flame of Corruption**:\nIf Sol's HP is below 50%, he enters \"cannot be healed\" mode\n20% Final Skill Power, 20% Counter Damage, and 30% Damage Reduction if Sol is in \"cannot be healed\" mode",
         "4GeneCost": 540,
 		
-		"5": "**Tyrant Rave**:\n336.8% Attack\n6000 Defense Ignore\n182.5% Attack Burn for 2 turns if Sol is in \"cannot be healed\" mode",
+		"5": "**Tyrant Rave**:\n235.9% Attack\n6000 Defense Ignore\n67% Attack Burn for 2 turns if Sol is in \"cannot be healed\" mode",
         "5ChargeTurns": 1,
 		"5GeneCost": 1000
     },
