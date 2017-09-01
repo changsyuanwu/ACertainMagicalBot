@@ -3532,7 +3532,7 @@
         "hp drain": "",
         "mastery decrease": "",
         "instant death": "",
-        "decrease crit rate": "",
+        "decrease crit rate": "TRUE",
         "push/pull/switch": "",
         "passive attack": "",
         "seal": "",
