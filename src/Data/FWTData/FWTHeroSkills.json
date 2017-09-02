@@ -1322,22 +1322,22 @@
     {
         "Name": "Rage",
 
-        "1": "**Rising Shot**:\nRage shoots his pistol, inflicting [97% ~ 133%] damage of Attack and increases enemy skill cost by [17% ~ 35%] for 1 turn.",
+        "1": "**Rising Shot**:\n133% Attack\nIncreases enemy's skill MP cost by 35% for 1 turn",
         "1MPcost": 15,
         "1GeneCost": 225,
 
-        "2": "**Show Time**:\nRandomly shoots at the surrounding enemies and inflicts damage equal to [112% ~ 153.4%] of Attack. For 1 turn, Rage's Crit Rate increases by [500 ~ 2750] and Dodge by [2500 ~ 4750].",
+        "2": "**Show Time**:\n153.4% Attack\nIncreases Crit Rate by 2750 and Dodge by 4750 for 1 turn",
         "2MPcost": 41,
         "2GeneCost": 446,
 
-        "3": "**Rapid Fire**:\nRapid pistol shot inflicting [143% ~ 196.1%] damage of Attack and Rage's MP recovers by [20 ~ 29]. This skill ignores [1780 ~ 3040] Defense of Scissors-type enemies.",
+        "3": "**Rapid Fire**:\n196.1% Attack\nRecovers 29 MP\n3040 Defense Ignore if enemy is Scissors type",
         "3MPcost": 94,
         "3GeneCost": 891,
 
-        "4": "**Blitz**:\nInflicts 15% more damage on Scissors-type enemies. When an enemy is eliminated by Rage, Attack increases by [5% ~ 14%] and Critical Damage by [5% ~ 32%] for 1 turn.",
+        "4": "**Blitz**:\nDeals 25% more damage to Scissors-type enemies\nAttack increases by 14% and Critical Damage by 32% for 1 turn when Rage kills an enemy",
         "4GeneCost": 446,
 		
-		"5": "Rage currently has no awakening skill!",
+		"5": "**Fever Time**:\n348.5% Attack\n20000 Defense-ignoring damage if this skill only hits 1 enemy\nImmobilizes and increases enemy's skill MP cost by 200% if enemy is Scissors-type",
         "5ChargeTurns": 0,
 		"5GeneCost": 0
     },
@@ -1718,24 +1718,24 @@
     {
         "Name": "Unknown",
 
-        "1": "**Chain Punch**:\n",
+        "1": "**Chain Punch**:\n136.9% Attack\nIncreases enemy skill MP cost by 33% for 1 turn\n50% chance to Prevent the enemy from being healed for 1 turn",
         "1MPcost": 15,
-        "1GeneCost": 0,
+        "1GeneCost": 108,
 
-        "2": "**Explosive Punch**:\n",
+        "2": "**Explosive Punch**:\n162.1% Attack\nIncreases Unknown's Counter Rate by 10000",
         "2MPcost": 60,
-        "2GeneCost": 0,
+        "2GeneCost": 216,
 
-        "3": "**Thunder Stomp**:\n",
+        "3": "**Thunder Stomp**:\n198% Attack\n75% to Stun enemies for 1 turn\nDouble Attack for 40% Damage if Unknown has 7 or more Movement",
         "3MPcost": 116,
-        "3GeneCost": 0,
+        "3GeneCost": 432,
 
-        "4": "**Leech Energy**:\n",
-        "4GeneCost": 0,
+        "4": "**Leech Energy**:\nRecovers 32.5% of Damage Dealt as HP\nIncreases Movement by 2 if there are no enemies within a 1-tile range",
+        "4GeneCost": 216,
 		
-		"5": "Unknown currently has no awakening skill!",
-        "5ChargeTurns": 0,
-		"5GeneCost": 0
+		"5": "**Explosive Fist**:\n442.6% Attack\nKnocks enemies 2 tiles away from Unknown\nRemoves all debuffs on Unknown\nIncreases Resistance by 100% for 1 turn",
+        "5ChargeTurns": 3,
+		"5GeneCost": 1093
     },
     {
         "Name": "Valkyrie",
@@ -1972,7 +1972,7 @@
         "3MPcost": 146,
         "3GeneCost": 1080,
 
-        "4": "**Commence Subdual**:\n5% Crit Damage every time Ramlethal co-ops (Up to 15%)\nIncrease the range of Deploy Giant Sword (Skill 1) every time 2 or more allies coop with Ram\nLasts the entire battle",
+        "4": "**Commence Subdual**:\n5% Crit Damage every time Ramlethal co-ops (Up to 15%)\nIncrease the range of Deploy Giant Sword (Skill 1) by 1 every time 2 or more allies coop with Ram (Up to 4)\nLasts the entire battle",
         "4GeneCost": 540,
 		
 		"5": "**Trance**:\n816.3% Attack\n4000 Defense Ignore\n100% chance to Confuse for 2 turns\nRemoves all buffs",
