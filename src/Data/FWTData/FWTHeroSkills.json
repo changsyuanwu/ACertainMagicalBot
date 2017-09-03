@@ -1338,8 +1338,8 @@
         "4GeneCost": 446,
 		
 		"5": "**Fever Time**:\n348.5% Attack\n20000 Defense-ignoring damage if this skill only hits 1 enemy\nImmobilizes and increases enemy's skill MP cost by 200% if enemy is Scissors-type",
-        "5ChargeTurns": 0,
-		"5GeneCost": 0
+        "5ChargeTurns": 2,
+		"5GeneCost": 3342
     },
     {
         "Name": "Ragna",
