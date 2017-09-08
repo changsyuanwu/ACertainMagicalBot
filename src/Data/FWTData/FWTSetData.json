@@ -2277,6 +2277,17 @@
         "Restrictions": "None"
     },
     {
+        "Name": "Hot-blooded Fighter Boy",
+        "Slot": "I",
+        "Rareness": "★★★★★★",
+        "Weapon": "Bow",
+        "Armor": "Boots",
+        "Accessory": "Necklace",
+        "2pc": "Increases HP by 1210",
+        "3pc": "Increases MP by 20",
+        "Restrictions": "None"
+    },
+    {
         "Name": "",
         "Slot": "",
         "Rareness": "★★★★★★",
