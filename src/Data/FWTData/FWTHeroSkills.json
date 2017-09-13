@@ -486,19 +486,19 @@
     {
         "Name": "Frankenstein",
 
-        "1": "**Dark Aura**:\nThrows dark energy at enemies, inflicting damage at [97% ~ 165%] Attack with a [20% ~ 47%] chance of preventing enemies from healing for 2 turns.",
+        "1": "**Dark Aura**:\n165% Attack\n50% chance to Decrease Healing Effects for 3 turns\nAdds 1 Erosion stack to Frankenstein\nErosion lasts for  3 turns and stacks up to 3 times",
         "1MPcost": 15,
         "1GeneCost": 300,
 
-        "2": "**Dark Arrow**:\nShowers enemies with numerous dark arrows, inflicting damage at [114% ~ 185.4%] Attack with an [30% ~ 80%] chance of casting a debuff that decreases their healing effects by 50% for 2 turns. If the targets are already affected by the debuff, this skill decreases their Movement by 3 for 2 turns.",
+        "2": "**Dark Arrow**:\n185.4% Attack\n80% chance to Decreases Healing Effects by 50% for 3 turns\n25% Final Skill Power if Frankenstein has an Erosion stack\nAdds 1 Erosion stack to Frankenstein\nErosion lasts for  3 turns and stacks up to 3 times",
         "2MPcost": 67,
         "2GeneCost": 500,
 
-        "3": "**Dark Spear: Penetration**:\nCharges at enemies with a dark spear, Attacking at 230% Attack, and moves to farthest cell. Afterward Frankenstein's Attack increases by 15% and Incoming Damage decreases by 15% for a turn. (Can only be used while Frankenstein's seal is broken).",
+        "3": "**Dark Spear: Penetration**:\n230 Attack\nMoves to farthest cell in range\n7000 Defense Ignore if Frankenstein has 1 or more Erosion stacks\n15% Damage Reduction if Frankenstein has 2 or more Erosion stacks",
         "3MPcost": 1000,
         "3GeneCost": 0,
 
-        "4": "**Unseal**:\nAt the beginning of each turn, Frankenstein creates a [15% ~ 33%] chance of breaking its seal to increase MAX MP by 1000 for 1 turn. This bonus effect remains in effect while the character's HP becomes 30% or lower. Additionally recovers 100% MP with each kill.",
+        "4": "**Unseal**:\nReceives 14% DoT Damage every turn\nEach Erosion stack increases Defense by 1020 and Crit Damage by 5.2% (Stacks up to 3 times)",
         "4GeneCost": 1000,
 		
 		"5": "Frankenstein currently has no awakening skill!",
@@ -1124,19 +1124,19 @@
     {
         "Name": "Muzaka",
 
-        "1": "**Sharp Claw**:\nSlashes at enemies with sharp claws, inflicting damage at [97% ~ 133%] Attack. Also increases Muzaka's Attack by [4% ~ 8.5%] for 1 turn.",
+        "1": "**Sharp Claw**:\n133%\nIncreases Attack by 8.5% for 1 turn",
         "1MPcost": 15,
         "1GeneCost": 258,
 
-        "2": "**Desolate Rift**:\nReopens enemies' wounds, inflicting damage at [119% ~ 163.1%] Attack, and causes [36% ~ 45%] DoT damage for 2 turns. This skill achieves [8% ~ 15.2%] greater power against enemies that are taking DoT damage.",
+        "2": "**Desolate Rift**:\n163.1% Attack\n45% DoT damage for 2 turns\n15.2% Final Skill Power if enemies are taking DoT damage",
         "2MPcost": 60,
         "2GeneCost": 715,
 
-        "3": "**Wolf-king's Roar**:\nLets out a paralyzing shout, Attacking enemies in range at [148% ~ 202.9%] Attack with a [44% ~ 75.5%] chance of Immobilizes them for 2 turns. Also inflicts additional [7000 ~ 13750] Defense-ignoring damage.",
+        "3": "**Wolf-king's Roar**:\n202.9% Attack\n75.5% chance to Immobilize for 2 turns\n28500 Defense-ignoring damage",
         "3MPcost": 110,
         "3GeneCost": 1032,
 
-        "4": "**Ruthless**:\nAttacks surrounding enemies in a 1-tile range at [91% ~ 100%] Attack at the beginning of each turn and restores [5% ~ 12.2%] Max HP per Attacked enemy (max 3).",
+        "4": "**Ruthless**:\nPassively attacks for 100% Attack every turn\nRestores 12.2% Max HP per enemy attacked (Max 36.6% Max HP Restore).",
         "4GeneCost": 715,
 		
 		"5": "Muzaka currently has no awakening skill!",
@@ -1498,23 +1498,23 @@
     {
         "Name": "Seira",
 
-        "1": "**Death Scythe**:\n",
+        "1": "**Death Scythe**:\n150.5% Attack\n20% Weakening for 1 turn if enemy is Branded",
         "1MPcost": 15,
         "1GeneCost": 244,
 
-        "2": "**Moonlight Slash**:\n",
+        "2": "**Moonlight Slash**:\n181.5% Attack\nRecovers 20% Max HP\n80% chance to Stun for 2 turns if enemies are Branded",
         "2MPcost": 66,
         "2GeneCost": 489,
 
-        "3": "**Grim Reaper**:\n",
+        "3": "**Grim Reaper**:\n215.5% Attack\n25000 Defense-ignoring Damage\nDouble Attack for 50% Damage if enemies are Branded",
         "3MPcost": 105,
         "3GeneCost": 979,
 
-        "4": "**Death Sentence**:\n",
+        "4": "**Death Sentence**:\nBrands enemies within a 6-tile range for 1 turn on odd-number turns\nIncreases Movement by 1 (Up to 3) and Crit Damage by 3.4% (Up to 17%) per enemy Branded",
         "4GeneCost": 489,
 		
-		"5": "Seira currently has no awakening skill!",
-        "5ChargeTurns": 0,
+		"5": "**Reaper's Strike**:\n845.4% Attack\n100% chance to Instantly Kill enemies",
+        "5ChargeTurns": 4,
 		"5GeneCost": 0
     },
     {
