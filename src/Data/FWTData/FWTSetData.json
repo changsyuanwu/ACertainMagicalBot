@@ -843,7 +843,7 @@
         "Armor": "Shield",
         "Accessory": "Necklace",
         "2pc": "Increase all allies Defense by 1100",
-        "3pc": "Increase Attack by 1800 for all allies in 2 cells around wearer",
+        "3pc": "Increase Attack by 2500 for all allies in 2 cells around wearer",
         "Restrictions": "None"
     },
     {
@@ -1359,7 +1359,7 @@
         "Weapon": "Bow",
         "Armor": "Shield",
         "Accessory": "Ring",
-        "2pc": "Dodge +1200",
+        "2pc": "Increase Property Strategy Power by 10%",
         "3pc": "Decreases Critical Damage from enemy Attacks by 20%",
         "Restrictions": "Activates when the wearer's HP is above 75%"
     },
@@ -2283,9 +2283,20 @@
         "Weapon": "Bow",
         "Armor": "Boots",
         "Accessory": "Necklace",
-        "2pc": "Increases HP by 1210",
-        "3pc": "Increases MP by 20",
+        "2pc": "Decrease all allies Defense by 1200 within a 1-tile range",
+        "3pc": "Increase Crit Damage by 15% for 2 turns if there is one or more enemy within 1 tile",
         "Restrictions": "None"
+    },
+    {
+        "Name": "Intelligence War",
+        "Slot": "II",
+        "Rareness": "★★★★★★",
+        "Weapon": "",
+        "Armor": "",
+        "Accessory": "",
+        "2pc": "Increase Directional Strategy Power by 9%",
+        "3pc": "Increase Movement by 2",
+        "Restrictions": "HP 85% or more"
     },
     {
         "Name": "",
