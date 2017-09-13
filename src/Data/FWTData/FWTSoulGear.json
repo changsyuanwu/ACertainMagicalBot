@@ -198,7 +198,7 @@
 		"Exclusive Soul Gear Weapon": "Attack: 380, Counter Damage: 600",
 		"Exclusive Weapon Effect": "Increases chance of Decrease Healing Effect by 20% on Skill 1",
 		"Exclusive Soul Gear Wings": "Defense: 400, Counter Rate: 200",
-		"Exclusive Wings Effect": "Passive Skill's activation condition changes to HP 70% or lower on Passive Skill",
+		"Exclusive Wings Effect": "Increases Erosion's Crit Damage by 2% and Grants 1 Erosion stack per turn for Passive Skill",
 		"Exclusive 2pc Effect": "Decreases incoming Critical Damage by 7%",
         "":"",
 		"Soul Gear Weapon": "Attack: 380, Counter Damage: 600",
@@ -582,15 +582,15 @@
 	{
 		"Name": "Seira",
 		"Exclusive Soul Gear Weapon": "Attack: 380, Counter Damage: 600",
-		"Exclusive Weapon Effect": "Increases Skill Damage by 29% for Skill 3",
+		"Exclusive Weapon Effect": "Increases Skill Damage by 14.8% and Defense-ignoring Damage by 7000 for Skill 3",
 		"Exclusive Soul Gear Wings": "Dodge: 200, Counter Damage: 600",
-		"Exclusive Wings Effect": "Increases Skill Damage by 19% and Stun chance by 10% for Skill 2",
+		"Exclusive Wings Effect": "Increases Skill Area of Effect by 1 and Stun chance by 10% for Skill 2",
 		"Exclusive 2pc Effect": "Decreases incoming Critical Damage by 7%",
         "":"",
 		"Soul Gear Weapon": "Attack: 380, Counter Damage: 600",
-		"Weapon Effect": "Increases HP recovery by 7.5% for Skill 3",
+		"Weapon Effect": "Increases Skill Damage by 19.8% and Weakening by 8% for Skill 1",
 		"Soul Gear Wings": "Dodge: 200, Counter Damage: 600",
-		"Wings Effect": "Passive effect activated upon eliminating enemies additionally increases Attack by 10% and Dodge by 1200 for Passive Skill",
+		"Wings Effect": "Increases Skill Damage by 19.8% for Skill 3",
 		"2pc Effect": "Increase Resistance by 5%"
 	},
 	{
