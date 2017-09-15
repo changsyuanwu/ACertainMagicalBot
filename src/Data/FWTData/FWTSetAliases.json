@@ -1095,7 +1095,10 @@
     {
         "name": "Shadow Ruler",
         "aliases": [
-            "shadow ruler"
+            "shadow ruler",
+            "sr",
+            "tod ruler",
+            "tod"
         ]
     },
     {
