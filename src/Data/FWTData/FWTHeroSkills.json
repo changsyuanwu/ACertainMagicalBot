@@ -217,7 +217,7 @@
 		
 		"5": "**Beat and Steal**:\n819% Attack\n100% chance to Confuse enemies for 2 turns\nRestores 300 MP.",
         "5ChargeTurns": 4,
-		"5GeneCost": 912
+		"5GeneCost": 610
     },
     {
         "Name": "Cat Sidhe",
@@ -349,7 +349,7 @@
 		
 		"5": "**Firewall**:\n822% Attack\nPrevents enemies from being healed for 3 turns\nForces all DoT effects to deal their total damage at once instead of over time. This also consumes them.",
         "5ChargeTurns": 4,
-		"5GeneCost": 912
+		"5GeneCost": 610
     },
     {
         "Name": "Deimos",
@@ -393,7 +393,7 @@
 		
 		"5": "**Power of Money**:\n338% Attack\nIncreases enemies' MP cost by 100% for 1 turn\nCopies up to 5 enemy buffs and keeps them for 1 turn\n Removes enemies' buffs",
         "5ChargeTurns": 2,
-		"5GeneCost": 1065
+		"5GeneCost": 710
     },
     {
         "Name": "Dominique",
@@ -679,7 +679,7 @@
 		
 		"5": "**GRRR!**:\n444% Attack\n100% chance to Confuse for 2 turns\nHeal Block for 2 turns",
         "5ChargeTurns": 3,
-		"5GeneCost": 1215
+		"5GeneCost": 810
     },
     {
         "Name": "Jenny",
@@ -701,7 +701,7 @@
 		
 		"5": "**Super Straight Chu~**:\n817% Attack\n50500 Defense-ignoring Damage\n33100 Defense-ignoring Damage if 2 enemies are attacked\n33100 Defense-ignoring Damage if 4 enemies are attacked",
         "5ChargeTurns": 4,
-		"5GeneCost": 1065
+		"5GeneCost": 710
     },
     {
         "Name": "Jin",
@@ -855,7 +855,7 @@
 		
 		"5": "**Last Fusion**:\n234% Attack\nCannot receive more than 35000 damage for 2 turns\n25% Final Skill Power if Lance's Movement is decreased",
         "5ChargeTurns": 1,
-		"5GeneCost": 912
+		"5GeneCost": 610
     },
     {
         "Name": "Lee",
@@ -1009,7 +1009,7 @@
 		
 		"5": "**Hymn to Hermes**:\nHeals at 528% Attack\nRemoves all debuffs\nIncreases all allies' Movement by 3 for 2 turns.",
         "5ChargeTurns": 2,
-		"5GeneCost": 1065
+		"5GeneCost": 710
     },
     {
         "Name": "Mercedes",
@@ -1273,7 +1273,7 @@
 		
 		"5": "**Phoenix's Feather**\n817% Attack\n14.5% Max HP revive for 2 turns on all allies within range",
         "5ChargeTurns": 4,
-		"5GeneCost": 1215
+		"5GeneCost": 810
     },
     {
         "Name": "Raboff",
@@ -1366,15 +1366,15 @@
     {
         "Name": "Raizel",
 
-        "1": "**Mind Control - Compulsion**:\nAttacks an enemy at [110% ~ 140.5%] Attack with a [24% ~ 60%] chance of Charming it for 1 turn. If the target's HP is below 55%, then Raizel's HP increased by [2% ~ 6.5%].",
+        "1": "**Mind Control - Compulsion**:\n140.5% Attack\n60% chance to Charm for 1 turn\nRestores 6.5% Max HP",
         "1MPcost": 15,
         "1GeneCost": 270,
 
-        "2": "**Blood Field**:\nSummons a crimson field that Attacks enemies within it's range at [130% ~ 178.6%] Attack and burns [30 ~ 120] MP. Additionally creates a [25% ~ 70%] chance of decreasing their Attack by [5% ~ 14%] for 2 turns.",
+        "2": "**Blood Field**:\n178.6% Attack\n180 MP Burn\nDecreases Attack by 20% for 2 turns",
         "2MPcost": 74,
         "2GeneCost": 810,
 
-        "3": "**Bloody Wings**:\nSpreads crimson wings, Attacking enemies straight ahead at [150% ~ 205.8%] Attack. Pierced enemies recieve [5000 ~ 23000] additional fixed damage. Additionally increases the selected target's skill MP cost by [45% ~ 90%] for 2 turns, but at the cost of 10% of Raizel's reamaining HP.",
+        "3": "**Bloody Wings**:\n205.8% Attack\nIncreases the selected target's skill MP cost by 150% for 2 turns\nPierced enemies recieve 35000 additional fixed damage but at the cost of 10% of Raizel's reamaining HP.",
         "3MPcost": 152,
         "3GeneCost": 1080,
 
@@ -1603,7 +1603,7 @@
 		
 		"5": "**Ninjutsu: Space Inferno**:\n444% Attack\nIgnores 5100 Defense\nEnables Sonic Boom to walk through enemies for 2 turns",
         "5ChargeTurns": 3,
-		"5GeneCost": 1215
+		"5GeneCost": 810
     },
     {
         "Name": "Spooky",
