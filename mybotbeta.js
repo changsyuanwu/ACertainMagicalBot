@@ -383,6 +383,10 @@ function trivia(message, isCritQuestion) {
         });
 } // Main trivia function
 
+function removeEntry(rowID) {
+    sql.run("DELETE FROM scores WHERE _rowid_ IN (?)", rowID);
+}
+
 // End of trivia functions
 
 //--------------------------------------------------------------------------------------------
