@@ -606,7 +606,7 @@ bot.on("message", async (message) => {
     } // Sends angryhedgehog image when message contains "angryhedgehog"
 
     if (message.content.includes("happyhedgehog")) {
-        message.channel.send({ files: ["./src/Images/HappyHedgeHog.png"] })
+        message.channel.send({ files: ["./src/Images/HappyHedgeHog.jpg"] })
     } // Sends happyhedgehog image when message contains "happyhedgehog"
 
     if (!message.content.startsWith(config.prefix)) return;
