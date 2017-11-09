@@ -603,7 +603,11 @@ bot.on("message", async (message) => {
 
     if (message.content.includes("angryhedgehog")) {
         message.channel.send({ files: ["./src/Images/AngryHedgeHog.png"] })
-    } // Sends Shu-shu gimme gif when message contains "gimme"
+    } // Sends angryhedgehog image when message contains "angryhedgehog"
+
+    if (message.content.includes("happyhedgehog")) {
+        message.channel.send({ files: ["./src/Images/HappyHedgeHog.png"] })
+    } // Sends happyhedgehog image when message contains "happyhedgehog"
 
     if (!message.content.startsWith(config.prefix)) return;
     // Ignore messages that don't start with the prefix
