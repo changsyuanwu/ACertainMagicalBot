@@ -449,6 +449,20 @@ function news(newsLimit, message) {
 // End of other FWT functions
 
 //--------------------------------------------------------------------------------------------
+function diceRoll(diceType, numberOfRolls) {
+    let sum = 0;
+    let results = "";
+    let roll = 0;
+    for (let i = 0; i < numberOfRolls; i++) {
+        roll = getRandomInt(1, parseInt(diceType) + 1);
+        results = results + roll
+        if (i + 1 != numberOfRolls) {
+            results = results + ", ";
+        } 
+        sum += roll;
+    }
+    return [results, sum];
+}
 
 function findEmojiFromGuildByName(guild, emoji_name) {
     const emoji = guild.emojis.find((emoji) => emoji.name === emoji_name);
@@ -1098,6 +1112,16 @@ bot.on("message", async (message) => {
                 }
             });
     } // Gets the latest FWT news from Facebook
+
+    else if (message.content.startsWith(config.prefix + "roll")) {
+        let dLocation = message.content.indexOf("d");
+        let spaceLocation = message.content.indexOf(" ");
+        let diceType = message.content.substring(dLocation + 1);
+        let numberOfRolls = message.content.substring(spaceLocation + 1, dLocation);
+        let rollResults = diceRoll(diceType, numberOfRolls);
+        console.log(rollResults);
+        message.channel.send(`Results: ${rollResults[0]}\nSum: ${rollResults[1]}`)
+    } // Bot rolls dice using specified dice type and number of rolls
 
 });
 
