@@ -1119,7 +1119,6 @@ bot.on("message", async (message) => {
         let diceType = message.content.substring(dLocation + 1);
         let numberOfRolls = message.content.substring(spaceLocation + 1, dLocation);
         let rollResults = diceRoll(diceType, numberOfRolls);
-        console.log(rollResults);
         message.channel.send(`Results: ${rollResults[0]}\nSum: ${rollResults[1]}`)
     } // Bot rolls dice using specified dice type and number of rolls
 
