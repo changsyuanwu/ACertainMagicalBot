@@ -1099,19 +1099,19 @@ bot.on("message", async (message) => {
         }
     } // Looks up a hero's soul gear
 
-    else if (message.content.startsWith(config.prefix + "news")) {
-        if (args.length === 2) {
-            var limit = Math.min(Number.parseInt(args[1], 10), 10);
-        } else {
-            var limit = 1;
-        }
-        news(limit, message)
-            .then((news) => {
-                for (let i = 0; i < limit; i++) {
-                    message.channel.send({ embed: news[i]["embed"] });
-                }
-            });
-    } // Gets the latest FWT news from Facebook
+    // else if (message.content.startsWith(config.prefix + "news")) {
+    //     if (args.length === 2) {
+    //         var limit = Math.min(Number.parseInt(args[1], 10), 10);
+    //     } else {
+    //         var limit = 1;
+    //     }
+    //     news(limit, message)
+    //         .then((news) => {
+    //             for (let i = 0; i < limit; i++) {
+    //                 message.channel.send({ embed: news[i]["embed"] });
+    //             }
+    //         });
+    // } // Gets the latest FWT news from Facebook
 
     else if (message.content.startsWith(config.prefix + "roll")) {
         let dLocation = message.content.indexOf("d");
