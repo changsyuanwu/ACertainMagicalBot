@@ -458,7 +458,7 @@ function diceRoll(diceType, numberOfRolls) {
         results = results + roll
         if (i + 1 != numberOfRolls) {
             results = results + ", ";
-        } 
+        }
         sum += roll;
     }
     return [results, sum];
@@ -1090,6 +1090,9 @@ bot.on("message", async (message) => {
         if (args.length >= 2) {
             const sgData = findListedPropertyData(args[1], "soulgear");
             if (sgData != "nosuchdata") {
+                if (findNameByAlias(args[1], "hero") == ("Celestial" || "Lena" || "Yeka")) {
+                    message.channel.send(sgData, { files: ["./src/Images/LenaCelYeka SG.png"] })
+                }
                 message.channel.send(sgData);
             } else {
                 message.channel.send("Unknown Soul Gear!");
