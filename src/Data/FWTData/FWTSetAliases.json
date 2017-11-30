@@ -1,11 +1,5 @@
 [
     {
-        "name": "",
-        "aliases": [
-            ""
-        ]
-    },
-    {
         "name": "Hot-blooded Fighter Boy",
         "aliases": [
             "hot-blooded fighter boy",
@@ -116,7 +110,8 @@
             "cold-hearted sniper",
             "cold hearted sniper",
             "coldhearted sniper",
-            "chs"
+            "chs",
+            "cold hearted"
         ]
     },
     {
@@ -1483,7 +1478,8 @@
             "stone monkey's treasure",
             "stone monkeys treasure",
             "stone monkey",
-            "smt"
+            "smt",
+            "monkey"
         ]
     },
     {
@@ -1749,6 +1745,112 @@
         "aliases": [
             "end of passion",
             "passion"
+        ]
+    },
+    {
+        "name": "Lonesome Sniper",
+        "aliases": [
+            "lonesome sniper",
+            "sniper",
+            "lonesome",
+            "lone"
+        ]
+    },
+    {
+        "name": "Goblin King's Order",
+        "aliases": [
+            "goblin",
+            "goblin king",
+            "goblin king's order",
+            "goblin kings order"
+        ]
+    },
+    {
+        "name": "Coo Coo Pirates",
+        "aliases": [
+            "coo coo pirate",
+            "pirate",
+            "pirates",
+            "ccp",
+            "coo coo pirates",
+            "coocoo pirate",
+            "coocoo pirates"
+        ]
+    },
+    {
+        "name": "Rose Knight",
+        "aliases": [
+            "rose",
+            "rk",
+            "rose knight"
+        ]
+    },
+    {
+        "name": "Raging Netherworld Overlord",
+        "aliases": [
+            "rage",
+            "nether",
+            "netherworld",
+            "overlord",
+            "rno",
+            "raging netherworld overlord"
+        ]
+    },
+    {
+        "name": "Split Personality Crybaby Maid",
+        "aliases": [
+            "mary",
+            "maid"
+        ]
+    },
+    {
+        "name": "Red Flash",
+        "aliases": [
+            "rf",
+            "red flash"
+        ]
+    },
+    {
+        "name": "Master of Tranquil Paradise",
+        "aliases": [
+            "tranquil",
+            "paradise",
+            "master od tranquil paradise",
+            "motp"
+        ]
+    },
+    {
+        "name": "Detective's Insight",
+        "aliases": [
+            "detective",
+            "insight",
+            "detective insight"
+        ]
+    },
+    {
+        "name": "Noble Kin",
+        "aliases": [
+            "kin",
+            "noble",
+            "noble kin"
+        ]
+    },
+    {
+        "name": "",
+        "aliases": [
+            ""
+        ]
+    },
+    {
+        "name": "",
+        "aliases": [
+            ""
+        ]
+    },
+    {
+        "name": "",
+        "aliases": [
+            ""
         ]
     }
 ]
