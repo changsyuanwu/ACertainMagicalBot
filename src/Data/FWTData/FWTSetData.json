@@ -83,7 +83,7 @@
         "Weapon": "Sword",
         "Armor": "Armor",
         "Accessory": "Ring",
-        "2pc": "Crit Rate +800 (If Attack-type, extra +150)",
+        "2pc": "Critical Rate +800 (If Attack-type, extra +150)",
         "3pc": "Attack +760 (If Attack-type, extra +300)",
         "Restrictions": "None"
     },
@@ -249,7 +249,7 @@
         "Armor": "Armor",
         "Accessory": "Ring",
         "2pc": "Increase Attack by 634",
-        "3pc": "Increase Crit Rate by 800",
+        "3pc": "Increase Critical Rate by 800",
         "Restrictions": "None"
     },
     {
@@ -336,7 +336,7 @@
         "Weapon": "Bow",
         "Armor": "Armor",
         "Accessory": "Necklace",
-        "2pc": "Increase Crit Rate by 900",
+        "2pc": "Increase Critical Rate by 900",
         "3pc": "Increase Attack by 12%",
         "Restrictions": "None"
     },
@@ -513,7 +513,7 @@
         "Armor": "Boots",
         "Accessory": "Brooch",
         "2pc": "Increase Attack by 601",
-        "3pc": "Increase Crit Rate by 800",
+        "3pc": "Increase Critical Rate by 800",
         "Restrictions": "Scissors-type character only"
     },
     {
@@ -534,7 +534,7 @@
         "Weapon": "Sword",
         "Armor": "Armor",
         "Accessory": "Brooch",
-        "2pc": "Increases Attack by 1344 and Crit Rate By 600",
+        "2pc": "Increases Attack by 1344 and Critical Rate By 600",
         "3pc": "Revives with 5% HP upon death for the first 2 turns (max once)",
         "Restrictions": "None"
     },
@@ -556,7 +556,7 @@
         "Weapon": "Bow",
         "Armor": "Armor",
         "Accessory": "Necklace",
-        "2pc": "Increase Crit Rate by 200 every turn (up to 1200)",
+        "2pc": "Increase Critical Rate by 200 every turn (up to 1200)",
         "3pc": "Increase Attack by 300 every turn (up to 1800)",
         "Restrictions": "Activates the Set effects at the beginning of combat"
     },
@@ -567,7 +567,7 @@
         "Weapon": "Mace",
         "Armor": "Shield",
         "Accessory": "Brooch",
-        "2pc": "Crit Rate +760",
+        "2pc": "Critical Rate +760",
         "3pc": "Attack +1154",
         "Restrictions": "None"
     },
@@ -600,7 +600,7 @@
         "Weapon": "Bow",
         "Armor": "Armor",
         "Accessory": "Ring",
-        "2pc": "Crit +250 (Max 1000)",
+        "2pc": "Critical +250 (Max 1000)",
         "3pc": "Attack +400 (Max 1600)",
         "Restrictions": "Activated each time the character is Attacked"
     },
@@ -633,7 +633,7 @@
         "Weapon": "Sword",
         "Armor": "Armor",
         "Accessory": "Ring",
-        "2pc": "Increases Crit Rate by 200 to all allies",
+        "2pc": "Increases Critical Rate by 200 to all allies",
         "3pc": "Boosts Critical Damage by 2% to all allies",
         "Restrictions": "None"
     },
@@ -667,7 +667,7 @@
         "Armor": "Boots",
         "Accessory": "Ring",
         "2pc": "Increase Attack by 3000",
-        "3pc": "Increase Crit Rate by 2500",
+        "3pc": "Increase Critical Rate by 2500",
         "Restrictions": "Activated only in the Pit of Nephthys"
     },
     {
@@ -699,7 +699,7 @@
         "Weapon": "Sword",
         "Armor": "Boots",
         "Accessory": "Necklace",
-        "2pc": "Increase Crit Rate by 700",
+        "2pc": "Increase Critical Rate by 700",
         "3pc": "Increase Attack by 1043",
         "Restrictions": "Attack-type character only"
     },
@@ -853,7 +853,7 @@
         "Weapon": "Mace",
         "Armor": "Armor",
         "Accessory": "Ring",
-        "2pc": "Increase Crit Rate by 1000 (+300 if equipped by an Attack-type hero)",
+        "2pc": "Increase Critical Rate by 1000 (+300 if equipped by an Attack-type hero)",
         "3pc": "Increase Attack by 2818 (+1082 if equipped by an Attack-type hero)",
         "Restrictions": "None"
     },
@@ -1019,7 +1019,7 @@
         "Armor": "Boots",
         "Accessory": "Brooch",
         "2pc": "Increase Attack by 7%",
-        "3pc": "Increase Crit Rate by 900",
+        "3pc": "Increase Critical Rate by 900",
         "Restrictions": "Attack-type character only"
     },
     {
@@ -1095,7 +1095,7 @@
         "Weapon": "Bow",
         "Armor": "Boots",
         "Accessory": "Ring",
-        "2pc": "Increase Crit Rate by 1200.",
+        "2pc": "Increase Critical Rate by 1200.",
         "3pc": "Increase Attack by 30%",
         "Restrictions": "None"
     },
@@ -1107,7 +1107,7 @@
         "Armor": "Shield",
         "Accessory": "Brooch",
         "2pc": "Increase HP by 11680",
-        "3pc": "Decrease all enemies Crit Rate by 800",
+        "3pc": "Decrease all enemies Critical Rate by 800",
         "Restrictions": "Activated when there are 3 or more allies alive"
     },
     {
@@ -1183,7 +1183,7 @@
         "Weapon": "Mace",
         "Armor": "Armor",
         "Accessory": "Brooch",
-        "2pc": "Increase Crit Rate by 1100",
+        "2pc": "Increase Critical Rate by 1100",
         "3pc": "Increase Attack by 3210",
         "Restrictions": "Paper-type hero only"
     },
@@ -1239,7 +1239,7 @@
         "Armor": "Armor",
         "Accessory": "Necklace",
         "2pc": "Increase Hit Rate by 900",
-        "3pc": "Increase Crit Rate by 1100",
+        "3pc": "Increase Critical Rate by 1100",
         "Restrictions": "None"
     },
     {
@@ -1283,7 +1283,7 @@
         "Armor": "Armor",
         "Accessory": "Ring",
         "2pc": "Increase Attack by 20%",
-        "3pc": "Increase Crit Rate by 2500",
+        "3pc": "Increase Critical Rate by 2500",
         "Restrictions": "Activated when the user's HP falls below 50%"
     },
     {
@@ -1316,7 +1316,7 @@
         "Armor": "Boots",
         "Accessory": "Ring",
         "2pc": "Defense +1000",
-        "3pc": "Crit Rate +1000",
+        "3pc": "Critical Rate +1000",
         "Restrictions": "Activated if 1 or more enemies are within 1 cell around the wearer"
     },
     {
@@ -1326,7 +1326,7 @@
         "Weapon": "Sword",
         "Armor": "Armor",
         "Accessory": "Ring",
-        "2pc": "Crit Rate +1100",
+        "2pc": "Critical Rate +1100",
         "3pc": "Will revive with 30% of HP if struck with a deathly Attack",
         "Restrictions": "Activated for 2 turns at the beginning of combat"
     },
@@ -1393,7 +1393,7 @@
         "Armor": "Shield",
         "Accessory": "Necklace",
         "2pc": "Increase Attack by 7190",
-        "3pc": "Increase Crit Rate by 1300",
+        "3pc": "Increase Critical Rate by 1300 and Critical Damage by 18%",
         "Restrictions": "Attack-type character only"
     },
     {
@@ -1458,7 +1458,7 @@
         "Weapon": "Mace",
         "Armor": "Shield",
         "Accessory": "Necklace",
-        "2pc": "Crit Rate +900",
+        "2pc": "Critical Rate +900",
         "3pc": "Recovers 5% of HP every turn",
         "Restrictions": "Exclusive to Muzaka (Noblesse Hero)"
     },
@@ -1502,7 +1502,7 @@
         "Weapon": "Mace",
         "Armor": "Armor",
         "Accessory": "Necklace",
-        "2pc": "Increase Crit Rate by 180 every time the wearer loses 10% of his HP (max 1620)",
+        "2pc": "Increase Critical Rate by 180 every time the wearer loses 10% of his HP (max 1620)",
         "3pc": "Increase Defense by 1500 at the beginning of wearer’sodd-number turn and Attack by 2608 at the beginning of wearer’s even-number turn",
         "Restrictions": "Exclusive to Krut (Lost Island Hero)"
     },
@@ -1524,7 +1524,7 @@
         "Weapon": "Mace",
         "Armor": "Armor",
         "Accessory": "Ring",
-        "2pc": "Incrases Crit Rate by 230 every time the wearer loses 10% of her HP (Max 2070)",
+        "2pc": "Incrases Critical Rate by 230 every time the wearer loses 10% of her HP (Max 2070)",
         "3pc": "Increases Attack of the wearer by 30% for 4 turns, and their Resistance by 50% for 3 turns.",
         "Restrictions": "Exclusive to Banshee (Limited Lost Island Hero)"
     },
@@ -1645,7 +1645,7 @@
         "Weapon": "Mace",
         "Armor": "Armor",
         "Accessory": "Brooch",
-        "2pc": "Decrease Crit Rate by 800 for all enemies",
+        "2pc": "Decrease Critical Rate by 800 for all enemies",
         "3pc": "Increases Attack by 40% and decreases MP cost by 20% for 3 turns",
         "Restrictions": "Exclusive to Luminous (Maplestory 2 Hero)"
     },
@@ -1668,7 +1668,7 @@
         "Armor": "Armor",
         "Accessory": "Brooch",
         "2pc": "Increases Defense by 10%",
-        "3pc": "Increases Attack by 30% and Crit by 1000 for 4 turns",
+        "3pc": "Increases Attack by 30% and Critical by 1000 for 4 turns",
         "Restrictions": "Exclusive to Eunwol (Maplestory 2 Hero)"
     },
     {
@@ -1898,8 +1898,8 @@
         "Weapon": "Sword",
         "Armor": "Armor",
         "Accessory": "Ring",
-        "2pc": "Increases Attack by 2820",
-        "3pc": "Increases HP by 8150 and Resistance by 25%",
+        "2pc": "Increases Attack by 4200",
+        "3pc": "Increases HP by 10150 and Resistance by 40%",
         "Restrictions": "None"
     },
     {
@@ -1953,8 +1953,8 @@
         "Weapon": "Mace",
         "Armor": "Shield",
         "Accessory": "Ring",
-        "2pc": "Increases the wearer's Defense by 2% of its current HP (up to 4000)",
-        "3pc": "Increases the wearer's Attack by 2% of its current HP (up to 10000)",
+        "2pc": "Increases the wearer's Defense by 5% of its current HP (up to 6000)",
+        "3pc": "Increases the wearer's Attack by 5% of its current HP (up to 10000)",
         "Restrictions": "None"
     },
     {
@@ -1997,7 +1997,7 @@
         "Weapon": "Bow",
         "Armor": "Boot",
         "Accessory": "Ring",
-        "2pc": "Increases Crit Rate by 800",
+        "2pc": "Increases Critical Rate by 800",
         "3pc": "Increases Attack by 10% when attack enemies more than 3 tiles away",
         "Restrictions": "None"
     },
@@ -2054,7 +2054,7 @@
         "Accessory": "Brooch",
         "2pc": "Increases Max HP by 10% until the beginning of next turn",
         "3pc": "Increases Max MP by 25 until the beginning of next turn",
-        "Restrictions": "Activates upon successful defense"
+        "Restrictions": "Activates upon successful Defense"
     },
     {
         "Name": "Bloody Melee",
@@ -2130,7 +2130,7 @@
         "Armor": "Armor",
         "Accessory": "Ring",
         "2pc": "Decreases Dodge by 100000, and increases Defense by 2000",
-        "3pc": "Decreases Counter rate by 100000, Decreases Crit Damage from enemy attacks by 5%",
+        "3pc": "Decreases Counter rate by 100000, Decreases Critical Damage from enemy attacks by 5%",
         "Restrictions": "None"
     },
     {
@@ -2140,8 +2140,8 @@
         "Weapon": "Sword",
         "Armor": "Armor",
         "Accessory": "Brooch",
-        "2pc": "Recovers 8 MP every turn",
-        "3pc": "If MP is 40% or above at the beginning of a turn, cast a Shield that decreases incoming damage by 10% once",
+        "2pc": "Recovers 15 MP every turn",
+        "3pc": "If MP is 20% or above at the beginning of a turn, cast a Shield that decreases incoming damage by 25% once",
         "Restrictions": "None"
     },
     {
@@ -2283,20 +2283,130 @@
         "Weapon": "Bow",
         "Armor": "Boots",
         "Accessory": "Necklace",
-        "2pc": "Decrease all allies Defense by 1200 within a 1-tile range",
-        "3pc": "Increase Crit Damage by 15% for 2 turns if there is one or more enemy within 1 tile",
+        "2pc": "Decrease all enemies Defense by 1200 within a 1-tile range",
+        "3pc": "Increase Critical Damage by 15% for 2 turns if there is one or more enemy within 1 tile",
         "Restrictions": "None"
     },
     {
         "Name": "Intelligence War",
         "Slot": "II",
         "Rareness": "★★★★★★",
-        "Weapon": "",
-        "Armor": "",
-        "Accessory": "",
+        "Weapon": "Bow",
+        "Armor": "Armor",
+        "Accessory": "Brooch",
         "2pc": "Increase Directional Strategy Power by 9%",
         "3pc": "Increase Movement by 2",
         "Restrictions": "HP 85% or more"
+    },
+    {
+        "Name": "Lonesome Sniper",
+        "Slot": "I",
+        "Rareness": "★★★★★★",
+        "Weapon": "Bow",
+        "Armor": "Armor",
+        "Accessory": "Brooch",
+        "2pc": "Increases Attack by 5%, and by 5% on enemies 3 or more tiles away ",
+        "3pc": "increases Critical Rate by 800. Increases Final Skill Power by 10% if there no enemy in a 1 tile-range",
+        "Restrictions": ""
+    },
+    {
+        "Name": "Goblin King's Order",
+        "Slot": "I",
+        "Rareness": "★★★★★★",
+        "Weapon": "Bow",
+        "Armor": "Armor",
+        "Accessory": "Necklace",
+        "2pc": "At the beginning of each turn, 2 more allies in a 1-tile range increases movement by 1 for 1 turn for all allies in range",
+        "3pc": "Increases Final Skill Power by 5% for all allies in a 2-tile range (Not Stackable)",
+        "Restrictions": ""
+    },
+    {
+        "Name": "CooCoo Pirates",
+        "Slot": "II",
+        "Rareness": "★★★★★★",
+        "Weapon": "Bow",
+        "Armor": "Armor",
+        "Accessory": "Brooch",
+        "2pc": "Increases wearer's Max HP by 10% and all allies by 5% (Not Stackable) ",
+        "3pc": "Restores HP at the beginning of each turn by 10% for it wearer and 5% for all allies (Not Stackable)",
+        "Restrictions": ""
+    },
+    {
+        "Name": "Rose Knight",
+        "Slot": "II",
+        "Rareness": "★★★★★★",
+        "Weapon": "Sword",
+        "Armor": "Armor",
+        "Accessory": "Brooch",
+        "2pc": "Reflects 35% of all incoming damage",
+        "3pc": "Enemies' Debuff on the wearer creates a 70% chance of affecting their casters as well",
+        "Restrictions": "Activated if there 2 or more enemies in a 2-tile range"
+    },
+    {
+        "Name": "Raging Netherworld Overlord",
+        "Slot": "III",
+        "Rareness": "★★★★★★",
+        "Weapon": "Mace",
+        "Armor": "Shield",
+        "Accessory": "Necklace",
+        "2pc": "Debuff Skills create 55% chance of double-casting certain debuffs",
+        "3pc": "Increases Final Skill Power by 18%",
+        "Restrictions": ""
+    },
+    {
+        "Name": "Split Personality Crybaby Maid",
+        "Slot": "III",
+        "Rareness": "★★★★★★",
+        "Weapon": "Bow",
+        "Armor": "Armor",
+        "Accessory": "Necklace",
+        "2pc": "Increases Attack by 1600 for all allies in a 2-tile range",
+        "3pc": "Increases Attack by 60%, and decreases skill MP cost by 20% for the first 3 turns of battle",
+        "Restrictions": "Mary Only"
+    },
+    {
+        "Name": "Red Flash",
+        "Slot": "III",
+        "Rareness": "★★★★★★",
+        "Weapon": "Sword",
+        "Armor": "Boot",
+        "Accessory": "Necklace",
+        "2pc": "Decreases Damage from enemy skill with 2 or greater range by 15%",
+        "3pc": "Increases Directional Strategy Power by 12%. Increases Critical Damage by 7% for every tile the wearer moves (Up to 35%) ",
+        "Restrictions": "Activated if the wear has 5 or more Movement"
+    },
+    {
+        "Name": "Master of Tranquil Paradise",
+        "Slot": "IV",
+        "Rareness": "★★★★★★",
+        "Weapon": "Mace",
+        "Armor": "Armor",
+        "Accessory": "Necklace",
+        "2pc": "Using skills on allies add 20% resistance for 1 turn",
+        "3pc": "Buff skills create a 75% chance to double-casting certain buffs",
+        "Restrictions": "Support-type character only"
+    },
+    {
+        "Name": "Detective's Insight",
+        "Slot": "IV",
+        "Rareness": "★★★★★★",
+        "Weapon": "Bow",
+        "Armor": "Armor",
+        "Accessory": "Ring",
+        "2pc": "At the beginning of each turn, if there are 1 or more enemies in a 2-tile range, increases Attack by 3800 and Max HP by 13850 for 2 turns",
+        "3pc": "At the beginning of each turn, if there are 2 or more enemies in a 2-tile range, removes 1 debuff cast on the wearer, and increases Movement by 2 for 2 turns",
+        "Restrictions": ""
+    },
+    {
+        "Name": "Noble Kin",
+        "Slot": "V",
+        "Rareness": "★★★★★★",
+        "Weapon": "Bow",
+        "Armor": "Armor",
+        "Accessory": "Ring",
+        "2pc": "Ignores enemy Defense by 3000",
+        "3pc": "Drains as much HP as 28% outgoing damage by and increases Attack by 4350",
+        "Restrictions": ""
     },
     {
         "Name": "",
