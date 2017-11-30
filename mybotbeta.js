@@ -1126,6 +1126,8 @@ bot.on("message", async (message) => {
         message.channel.send(`Results: ${rollResults[0]}\nSum: ${rollResults[1]}`, {split: true})
     } // Bot rolls dice using specified dice type and number of rolls
 
+
+
 });
 
 // End of all commands
