@@ -8,7 +8,7 @@
         "Accessory": "",
         "2pc": "",
         "3pc": "",
-        "Restrictions": ""
+        "Restrictions": "None"
     },
     {
         "Name": "Here Comes the Super Rookie!",
@@ -272,7 +272,7 @@
         "Accessory": "",
         "2pc": "",
         "3pc": "",
-        "Restrictions": ""
+        "Restrictions": "None"
     },
     {
         "Name": "Pumpkin Ghost Step",
@@ -525,7 +525,7 @@
         "Accessory": "",
         "2pc": "",
         "3pc": "",
-        "Restrictions": ""
+        "Restrictions": "None"
     },
     {
         "Name": "Death Bringer",
@@ -778,7 +778,7 @@
         "Accessory": "",
         "2pc": "",
         "3pc": "",
-        "Restrictions": ""
+        "Restrictions": "None"
     },
     {
         "Name": "Phoenix's Apostle",
@@ -1031,7 +1031,7 @@
         "Accessory": "",
         "2pc": "",
         "3pc": "",
-        "Restrictions": ""
+        "Restrictions": "None"
     },
     {
         "Name": "Oblivious Past",
@@ -1306,7 +1306,7 @@
         "Accessory": "",
         "2pc": "",
         "3pc": "",
-        "Restrictions": ""
+        "Restrictions": "None"
     },
     {
         "Name": "Skilled Martial Artist",
@@ -1405,7 +1405,7 @@
         "Accessory": "",
         "2pc": "",
         "3pc": "",
-        "Restrictions": ""
+        "Restrictions": "None"
     },
     {
         "Name": "Defeated Ruler",
@@ -2307,7 +2307,7 @@
         "Accessory": "Brooch",
         "2pc": "Increases Attack by 5%, and by 5% on enemies 3 or more tiles away ",
         "3pc": "increases Critical Rate by 800. Increases Final Skill Power by 10% if there no enemy in a 1 tile-range",
-        "Restrictions": ""
+        "Restrictions": "None"
     },
     {
         "Name": "Goblin King's Order",
@@ -2318,7 +2318,7 @@
         "Accessory": "Necklace",
         "2pc": "At the beginning of each turn, 2 more allies in a 1-tile range increases movement by 1 for 1 turn for all allies in range",
         "3pc": "Increases Final Skill Power by 5% for all allies in a 2-tile range (Not Stackable)",
-        "Restrictions": ""
+        "Restrictions": "None"
     },
     {
         "Name": "CooCoo Pirates",
@@ -2329,7 +2329,7 @@
         "Accessory": "Brooch",
         "2pc": "Increases wearer's Max HP by 10% and all allies by 5% (Not Stackable) ",
         "3pc": "Restores HP at the beginning of each turn by 10% for it wearer and 5% for all allies (Not Stackable)",
-        "Restrictions": ""
+        "Restrictions": "None"
     },
     {
         "Name": "Rose Knight",
@@ -2351,7 +2351,7 @@
         "Accessory": "Necklace",
         "2pc": "Debuff Skills create 55% chance of double-casting certain debuffs",
         "3pc": "Increases Final Skill Power by 18%",
-        "Restrictions": ""
+        "Restrictions": "None"
     },
     {
         "Name": "Split Personality Crybaby Maid",
@@ -2395,7 +2395,7 @@
         "Accessory": "Ring",
         "2pc": "At the beginning of each turn, if there are 1 or more enemies in a 2-tile range, increases Attack by 3800 and Max HP by 13850 for 2 turns",
         "3pc": "At the beginning of each turn, if there are 2 or more enemies in a 2-tile range, removes 1 debuff cast on the wearer, and increases Movement by 2 for 2 turns",
-        "Restrictions": ""
+        "Restrictions": "None"
     },
     {
         "Name": "Noble Kin",
@@ -2406,7 +2406,7 @@
         "Accessory": "Ring",
         "2pc": "Ignores enemy Defense by 3000",
         "3pc": "Drains as much HP as 28% outgoing damage by and increases Attack by 4350",
-        "Restrictions": ""
+        "Restrictions": "None"
     },
     {
         "Name": "",
@@ -2417,6 +2417,6 @@
         "Accessory": "",
         "2pc": "",
         "3pc": "",
-        "Restrictions": ""
+        "Restrictions": "None"
     }
 ]
