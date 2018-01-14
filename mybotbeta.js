@@ -491,7 +491,7 @@ function wait(time) {
 function status() {
     const statusCycle = ["https://github.com/TheMasterDodo/ACertainMagicalBot", "Use !help for info", "Spamming !whale", `Serving ${bot.guilds.size} servers`, `Serving ${bot.channels.size} channels`];
     const random = getRandomInt(0, statusCycle.length);
-    bot.user.setGame(statusCycle[random]);
+    bot.user.setActivity(statusCycle[random]);
     logger.log(2, `Set status to ${statusCycle[random]}`);
     setTimeout(status, 600000); // Cycles every 10 minutes
 } // Sets the status message of the bot
