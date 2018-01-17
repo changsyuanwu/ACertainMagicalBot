@@ -711,10 +711,10 @@ bot.on("message", async (message) => {
     } // Eval() code
 
 
-    else if (message.content.startsWith(config.prefix + "uses")) {
+    else if (message.content.startsWith(config.prefix + "messages")) {
         getUses()
             .then(uses => {
-                message.channel.send(`There have been ${uses} uses since 2017-04-24`);
+                message.channel.send(`I have sent ${uses} messages since 2017-04-24`);
             });
     } // Gets the number of uses
 
