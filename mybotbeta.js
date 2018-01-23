@@ -843,7 +843,7 @@ bot.on("message", async (message) => {
     else if (message.content.startsWith(config.prefix + "whale")) {
         let pulls = "";
         let totalPull = "";
-        if ((args[1] > 100) || ((args[1] > 10) && (message.guild.id === "164867600457662464"))) {
+        if ((args[1] > 100) || ((args[1] > 10) && (message.guild.id === "164867600457662464") && (message.guild.id === "206553301930475520"))) {
             message.channel.send("```OVERFLOW_ERROR```");
             return;
         }
