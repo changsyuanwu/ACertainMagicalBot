@@ -1,11 +1,11 @@
-const chalk = require('chalk');
-const moment = require('moment');
-const { LogLevels, LogColors } = require('./Constants');
+const chalk = require("chalk");
+const moment = require("moment");
+const { LogLevels, LogColors } = require("./Constants");
 
 class Logger {
     /**
      * Logging for bot.
-     * @param {boolean} [disabled=false] - Disables most logging.
+     * @param {boolean} [disabled = false] - Disables most logging.
      */
     constructor(disabled = false) {
         /**
@@ -23,8 +23,8 @@ class Logger {
     log(level, ...args) {
         if (this.disabled) return;
 
-        const joined = args.join(' ');
-        const time = chalk.cyan(`[${moment().format('YYYY-MM-DD HH:mm:ss')}]:`);
+        const joined = args.join(" ");
+        const time = chalk.cyan(`[${moment().format("YYYY-MM-DD HH:mm:ss")}]:`);
         const internal = chalk.bold(`[Internal/${LogLevels[level]}]:`);
         const colored = chalk[LogColors[level]](joined);
 
@@ -40,9 +40,9 @@ class Logger {
     logFrom(channel, level, ...args) {
         if (this.disabled) return;
 
-        const joined = args.join(' ');
-        const time = chalk.cyan(`[${moment().format('YYYY-MM-DD HH:mm:ss')}]:`);
-        const location = chalk.bold(`[${channel.guild ? channel.guild.name : 'PM'}/${channel.guild ? channel.name : channel.recipient.username}]:`);
+        const joined = args.join(" ");
+        const time = chalk.cyan(`[${moment().format("YYYY-MM-DD HH:mm:ss")}]:`);
+        const location = chalk.bold(`[${channel.guild ? channel.guild.name : "PM"}/${channel.guild ? channel.name : channel.recipient.username}]:`);
         const colored = chalk[LogColors[level]](joined);
 
         console.log(`${time} ${location} ${colored}`); // eslint-disable-line no-console
