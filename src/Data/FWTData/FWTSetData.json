@@ -8,7 +8,7 @@
         "Accessory": "",
         "2pc": "",
         "3pc": "",
-        "Restrictions": "None"
+        "Restrictions": ""
     },
     {
         "Name": "Here Comes the Super Rookie!",
@@ -264,17 +264,6 @@
         "Restrictions": "None"
     },
     {
-        "Name": "",
-        "Slot": "",
-        "Rareness": "",
-        "Weapon": "",
-        "Armor": "",
-        "Accessory": "",
-        "2pc": "",
-        "3pc": "",
-        "Restrictions": "None"
-    },
-    {
         "Name": "Pumpkin Ghost Step",
         "Slot": "II",
         "Rareness": "★★★★",
@@ -515,17 +504,6 @@
         "2pc": "Increase Attack by 601",
         "3pc": "Increase Critical Rate by 800",
         "Restrictions": "Scissors-type character only"
-    },
-    {
-        "Name": "",
-        "Slot": "",
-        "Rareness": "",
-        "Weapon": "",
-        "Armor": "",
-        "Accessory": "",
-        "2pc": "",
-        "3pc": "",
-        "Restrictions": "None"
     },
     {
         "Name": "Death Bringer",
@@ -770,17 +748,6 @@
         "Restrictions": "Attack-type character only"
     },
     {
-        "Name": "",
-        "Slot": "",
-        "Rareness": "",
-        "Weapon": "",
-        "Armor": "",
-        "Accessory": "",
-        "2pc": "",
-        "3pc": "",
-        "Restrictions": "None"
-    },
-    {
         "Name": "Phoenix's Apostle",
         "Slot": "IV",
         "Rareness": "★★★★",
@@ -1021,17 +988,6 @@
         "2pc": "Increase Attack by 7%",
         "3pc": "Increase Critical Rate by 900",
         "Restrictions": "Attack-type character only"
-    },
-    {
-        "Name": "",
-        "Slot": "",
-        "Rareness": "",
-        "Weapon": "",
-        "Armor": "",
-        "Accessory": "",
-        "2pc": "",
-        "3pc": "",
-        "Restrictions": "None"
     },
     {
         "Name": "Oblivious Past",
@@ -1298,17 +1254,6 @@
         "Restrictions": "Activated if only you are left standing"
     },
     {
-        "Name": "",
-        "Slot": "",
-        "Rareness": "",
-        "Weapon": "",
-        "Armor": "",
-        "Accessory": "",
-        "2pc": "",
-        "3pc": "",
-        "Restrictions": "None"
-    },
-    {
         "Name": "Skilled Martial Artist",
         "Slot": "II",
         "Rareness": "★★★★★",
@@ -1395,17 +1340,6 @@
         "2pc": "Increase Attack by 7190",
         "3pc": "Increase Critical Rate by 1300 and Critical Damage by 18%",
         "Restrictions": "Attack-type character only"
-    },
-    {
-        "Name": "",
-        "Slot": "",
-        "Rareness": "",
-        "Weapon": "",
-        "Armor": "",
-        "Accessory": "",
-        "2pc": "",
-        "3pc": "",
-        "Restrictions": "None"
     },
     {
         "Name": "Defeated Ruler",
@@ -1975,8 +1909,8 @@
         "Weapon": "Sword",
         "Armor": "Armor",
         "Accessory": "Ring",
-        "2pc": "Increases HP by 90% and ignore enemy Defense by 1400",
-        "3pc": "Increases Attack by 80% and decreases incoming Critical Damage by 10%",
+        "2pc": "Increases HP by 120% and ignore enemy Defense by 1400",
+        "3pc": "Increases Attack by 100% and decreases incoming Critical Damage by 10%",
         "Restrictions": "Activated if only you are left standing"
     },
     {
@@ -2307,7 +2241,7 @@
         "Accessory": "Brooch",
         "2pc": "Increases Attack by 5%, and by 5% on enemies 3 or more tiles away ",
         "3pc": "increases Critical Rate by 800. Increases Final Skill Power by 10% if there no enemy in a 1 tile-range",
-        "Restrictions": "None"
+        "Restrictions": ""
     },
     {
         "Name": "Goblin King's Order",
@@ -2318,7 +2252,7 @@
         "Accessory": "Necklace",
         "2pc": "At the beginning of each turn, 2 more allies in a 1-tile range increases movement by 1 for 1 turn for all allies in range",
         "3pc": "Increases Final Skill Power by 5% for all allies in a 2-tile range (Not Stackable)",
-        "Restrictions": "None"
+        "Restrictions": ""
     },
     {
         "Name": "CooCoo Pirates",
@@ -2329,7 +2263,7 @@
         "Accessory": "Brooch",
         "2pc": "Increases wearer's Max HP by 10% and all allies by 5% (Not Stackable) ",
         "3pc": "Restores HP at the beginning of each turn by 10% for it wearer and 5% for all allies (Not Stackable)",
-        "Restrictions": "None"
+        "Restrictions": ""
     },
     {
         "Name": "Rose Knight",
@@ -2351,7 +2285,7 @@
         "Accessory": "Necklace",
         "2pc": "Debuff Skills create 55% chance of double-casting certain debuffs",
         "3pc": "Increases Final Skill Power by 18%",
-        "Restrictions": "None"
+        "Restrictions": ""
     },
     {
         "Name": "Split Personality Crybaby Maid",
@@ -2395,7 +2329,7 @@
         "Accessory": "Ring",
         "2pc": "At the beginning of each turn, if there are 1 or more enemies in a 2-tile range, increases Attack by 3800 and Max HP by 13850 for 2 turns",
         "3pc": "At the beginning of each turn, if there are 2 or more enemies in a 2-tile range, removes 1 debuff cast on the wearer, and increases Movement by 2 for 2 turns",
-        "Restrictions": "None"
+        "Restrictions": ""
     },
     {
         "Name": "Noble Kin",
@@ -2406,7 +2340,117 @@
         "Accessory": "Ring",
         "2pc": "Ignores enemy Defense by 3000",
         "3pc": "Drains as much HP as 28% outgoing damage by and increases Attack by 4350",
-        "Restrictions": "None"
+        "Restrictions": ""
+    },
+    {
+        "Name": "Split Personality Crybaby Maid",
+        "Slot": "III",
+        "Rareness": "★★★★★★",
+        "Weapon": "Mace",
+        "Armor": "Armour",
+        "Accessory": "Necklace",
+        "2pc": "Increases Attack by 1600 for allies in a 2-tile range",
+        "3pc": "Increase Attack by 60%,and decreases skill MP cost by 20% for the frist 3 turns of battle",
+        "Restrictions": "Mary only"
+    },
+    {
+        "Name": "Ancient Vampire",
+        "Slot": "III",
+        "Rareness": "★★★★★★",
+        "Weapon": "Sword",
+        "Armor": "Armour",
+        "Accessory": "Brooch",
+        "2pc": "Incoming damage increase critial Damage by 8% for 1 turn(up to 16%)",
+        "3pc": "Increases Attack by 60% and all allies Attack by 10% for the first turns of battle",
+        "Restrictions": "Camilla only"
+    },
+    {
+        "Name": "Black Snake's Hunting",
+        "Slot": "III",
+        "Rareness": "★★★★★★",
+        "Weapon": "Sword",
+        "Armor": "Armour",
+        "Accessory": "Brooch",
+        "2pc": "Drain as much Hp as 28% outgoing damage",
+        "3pc": "Increases Attack by 60% and Max GP by 10% for the first 3 turns in battle",
+        "Restrictions": "Heuksa Only"
+    },
+    {
+        "Name": "Cold Haze",
+        "Slot": "III",
+        "Rareness": "★★★★★★",
+        "Weapon": "Bow",
+        "Armor": "Armour",
+        "Accessory": "Necklace",
+        "2pc": "Decrease all incoming damage by 10% while on a water terrain",
+        "3pc": "Increases Attack by 60%, and resistance by 20% for the frist 3 turns of battle",
+        "Restrictions": "Woryeong only"
+    },
+    {
+        "Name": "Bird Out of Its Nest",
+        "Slot": "III",
+        "Rareness": "★★★★★★",
+        "Weapon": "Bow",
+        "Armor": "Boot",
+        "Accessory": "Ring",
+        "2pc": "Can move through enemies for 1 turn per kill",
+        "3pc": "Increases Attack for 60% and Direction Strategy Power by 15% for the first 3 turns",
+        "Restrictions": "Parsifal only"
+    },
+    {
+        "Name": "Charging Girl in Love",
+        "Slot": "III",
+        "Rareness": "★★★★★★",
+        "Weapon": "Mace",
+        "Armor": "Armour",
+        "Accessory": "Brooch",
+        "2pc": "Increase Final Skill Power on nearby enemies by 15%",
+        "3pc": "Increase Attack by 60% and Defence by 2000 for 3 turns in battle",
+        "Restrictions": "May only"
+    },
+    {
+        "Name": "Flames of Corruption",
+        "Slot": "III",
+        "Rareness": "★★★★★★",
+        "Weapon": "Sword",
+        "Armor": "Armour",
+        "Accessory": "Necklace",
+        "2pc": "Incoming damage increases Counter damage by 10% for 2 turns (up to 20%)",
+        "3pc": "Increase Attack by 60% and resistance by 20% for the first 3 turns of battle",
+        "Restrictions": "Sol Badguy only"
+    },
+    {
+        "Name": "Endless Training",
+        "Slot": "III",
+        "Rareness": "★★★★★★",
+        "Weapon": "Mace",
+        "Armor": "Armour",
+        "Accessory": "Brooch",
+        "2pc": "Increase all allies Defense by 1100",
+        "3pc": "Increases Attack 60% and decreases incoming Critical damage by 10% for the first 3 turns of battle",
+        "Restrictions": "Churyeok only"
+    },
+    {
+        "Name": "White Tiger's Pride",
+        "Slot": "III",
+        "Rareness": "★★★★★★",
+        "Weapon": "Sword",
+        "Armor": "Armour",
+        "Accessory": "Ring",
+        "2pc": "Standing on an ice title decreases all incoming damage by 10%",
+        "3pc": "Increase Attack by 60% and Crit Rate by 12000 for the first 3 turns of battle",
+        "Restrictions": "Sogoon only"
+    },
+    {
+        "Name": "Silvery Trust",
+        "Slot": "III",
+        "Rareness": "★★★★★★",
+        "Weapon": "Sword",
+        "Armor": "Armour",
+        "Accessory": "Ring",
+        "2pc": "Increase Final Skill Power by 4% for every buff cast on its wearer (up to 16%)",
+        "3pc": "Increase Attack by 60% and decreases skill MP by 20% fot the first 3 turns of battle",
+        "Restrictions": "Ky Kiske only"
     },
     {
         "Name": "",
@@ -2417,6 +2461,6 @@
         "Accessory": "",
         "2pc": "",
         "3pc": "",
-        "Restrictions": "None"
+        "Restrictions": ""
     }
 ]
