@@ -1399,7 +1399,8 @@
             "bloodline",
             "vbrb",
             "vbb",
-            "vermillion"
+            "vermillion",
+            "attack type revive"
         ]
     },
     {
@@ -1534,14 +1535,6 @@
         ]
     },
     {
-        "name": "Young, But Not to Be Underestimated",
-        "aliases": [
-            "ryeo",
-            "oreo",
-            "ryeogang"
-        ]
-    },
-    {
         "name": "Arrogant Calculation",
         "aliases": [
             "cam",
@@ -1598,7 +1591,8 @@
         "name": "Oath of Flame",
         "aliases": [
             "oath of flame",
-            "oof"
+            "oof",
+            "slot 1 lava"
         ]
     },
     {
@@ -1632,14 +1626,16 @@
         "aliases": [
             "hungry predator",
             "predator",
-            "hungry"
+            "hungry",
+            "pred"
         ]
     },
     {
         "name": "Fair Play",
         "aliases": [
             "fair play",
-            "fair"
+            "fair",
+            "fp"
         ]
     },
     {
@@ -1832,7 +1828,8 @@
         "aliases": [
             "kin",
             "noble",
-            "noble kin"
+            "noble kin",
+            "nk"
         ]
     },
     {
