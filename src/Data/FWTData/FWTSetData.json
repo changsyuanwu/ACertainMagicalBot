@@ -1909,8 +1909,8 @@
         "Weapon": "Sword",
         "Armor": "Armor",
         "Accessory": "Ring",
-        "2pc": "Increases HP by 120% and ignore enemy Defense by 1400",
-        "3pc": "Increases Attack by 100% and decreases incoming Critical Damage by 10%",
+        "2pc": "Increases HP by 120% and ignore enemy Defense by 2500",
+        "3pc": "Increases Attack by 100% and decreases incoming Critical Damage by 25%",
         "Restrictions": "Activated if only you are left standing"
     },
     {
