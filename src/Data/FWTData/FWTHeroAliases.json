@@ -651,5 +651,50 @@
             "paris",
             "pars"
         ]
+    },
+    {
+        "name": "Woryeong",
+        "aliases": [
+            "woryeong",
+            "wory"
+        ]
+    },
+    {
+        "name": "Heuksa",
+        "aliases": [
+            "heuksa",
+            "heuk"
+        ]
+    },
+    {
+        "name": "Camilla",
+        "aliases": [
+            "camilla",
+            "cam2",
+            "red cam"
+        ]
+    },
+    {
+        "name": "Amora",
+        "aliases": [
+            "amora",
+            "amor",
+            "up"
+        ]
+    },
+    {
+        "name": "Pink Bean",
+        "aliases": [
+            "pink bean",
+            "bean",
+            "pb"
+        ]
+    },
+    {
+        "name": "",
+        "aliases": [
+            "",
+            ""
+        ]
     }
 ]
