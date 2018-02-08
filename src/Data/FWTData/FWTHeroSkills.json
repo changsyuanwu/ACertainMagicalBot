@@ -134,11 +134,11 @@
     {
         "Name": "Banshee",
 
-        "1": "**Bleak Footsteps**:\nCold energy rolls in, hitting enemies in range at [88% ~ 120.4%] Attack. Increases Banshee's Movement by 2 and her Attack by [150 ~ 960] for 2 turns if 2 or more enemies ate hit.",
+        "1": "**Bleak Footsteps**:\n120.4% Attack\nIncreases Movement by 2\nIncreases Attack by 960 for 2 turns if 2 or more enemies are hit",
         "1MPcost": 15,
         "1GeneCost": 340,
 
-        "2": "**Who Am I?**:\nPunishes enemies in range for not answering her riddle correctly. Deals damage at [114% ~ 156.3%] Attack with a [15% ~ 60%] chance of Confusion for 1 turn If ally Spooky is on the battlefield, [1000 ~ 2080] enemy Defense is ignored.",
+        "2": "**Who Am I?**:\n156.3% Attack\n60% chance to Confuse for 1 turn\nIf ally Spooky is on the battlefield ignores 2080 Defense",
         "2MPcost": 73,
         "2GeneCost": 1020,
 
