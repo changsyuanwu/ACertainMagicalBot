@@ -1833,15 +1833,89 @@
         ]
     },
     {
-        "name": "",
+        "name": "Ancient Vampire",
         "aliases": [
-            ""
+            "camilla",
+            "vilf",
+            "vampire",
+            "ancient vampire"
         ]
     },
     {
-        "name": "",
+        "name": "Black Snake's Hunting",
         "aliases": [
-            ""
+            "snake",
+            "black snake",
+            "heuksa",
+            "heuk",
+            "hunting"
+        ]
+    },
+    {
+        "name": "Cold Haze",
+        "aliases": [
+            "cold haze",
+            "wory",
+            "woryeong"
+        ]
+    },
+    {
+        "name": "Bird Out of Its Nest",
+        "aliases": [
+            "bird out of its nest",
+            "pars",
+            "parisial",
+            "parsifal",
+            "par"
+        ]
+    },
+    {
+        "name": "Charging Girl in Love",
+        "aliases": [
+            "may",
+            "charging",
+            "charging girl",
+            "charging girl in love"
+        ]
+    },
+    {
+        "name": "Flames of Corruption",
+        "aliases": [
+            "sol",
+            "badguy",
+            "sol badguy",
+            "flames of corruption"
+        ]
+    },
+    {
+        "name": "Endless Training",
+        "aliases": [
+            "chur",
+            "training",
+            "endless training",
+            "churyeok",
+            "chury",
+            "chu"
+        ]
+    },
+    {
+        "name": "White Tiger's Pride",
+        "aliases": [
+            "sogoon",
+            "sog",
+            "sogo",
+            "sogoo",
+            "white tiger",
+            "white tiger's pride"
+        ]
+    },
+    {
+        "name": "Silvery Trust",
+        "aliases": [
+            "ky",
+            "ky kiske",
+            "silvery trust",
+            "silvery"
         ]
     },
     {
