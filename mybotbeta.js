@@ -1138,7 +1138,7 @@ bot.on("message", async (message) => {
         let heroBirthdayImage = findHeroBirthday(msgContent);
 
         if (heroBirthdayImage !== "nosuchdata") {
-            message.channel.send({ files: [heroSkillImage] })
+            message.channel.send({ files: [heroBirthdayImage] })
         }
         else {
             message.channel.send("Unknown hero!");
