@@ -207,7 +207,7 @@ function findSkillImage(heroAlias, skill) {
                 return "./src/Images/Nexon.gif";
             } // If the hero has an awakening skill, the case falls to the default one
         default:
-            return `./src/Images/Hero Skills/${heroName} ${skill}.jpg`;
+            return `./src/Images/FWT Hero Skills/${heroName} ${skill}.jpg`;
     }
 } // Finds a hero skill's image
 
@@ -314,6 +314,17 @@ function findStatRank(statRequested, limit) {
         dataArray.splice(limit * 2);
     }
     return dataArray;
+}
+
+function findHeroBirthday(heroAlias) {
+
+    const heroName = findNameByAlias(heroAlias, "hero");
+
+    if (heroName === "nosuchalias") {
+        return "nosuchdata";
+    }
+
+    return `./src/Images/FWT Hero Birthdays/${heroName.toLowerCase()}.jpg`;
 }
 // End of database functions
 
@@ -1099,19 +1110,19 @@ bot.on("message", async (message) => {
         }
     } // Looks up a hero's soul gear
 
-    // else if (message.content.startsWith(config.prefix + "news")) {
-    //     if (args.length === 2) {
-    //         var limit = Math.min(Number.parseInt(args[1], 10), 10);
-    //     } else {
-    //         var limit = 1;
-    //     }
-    //     news(limit, message)
-    //         .then((news) => {
-    //             for (let i = 0; i < limit; i++) {
-    //                 message.channel.send({ embed: news[i]["embed"] });
-    //             }
-    //         });
-    // } // Gets the latest FWT news from Facebook
+    /* else if (message.content.startsWith(config.prefix + "news")) {
+        if (args.length === 2) {
+            var limit = Math.min(Number.parseInt(args[1], 10), 10);
+        } else {
+            var limit = 1;
+        }
+        news(limit, message)
+            .then((news) => {
+                for (let i = 0; i < limit; i++) {
+                    message.channel.send({ embed: news[i]["embed"] });
+                }
+            });
+     } */ // Gets the latest FWT news from Facebook
 
     else if (message.content.startsWith(config.prefix + "roll")) {
         let dLocation = message.content.indexOf("d");
@@ -1119,10 +1130,20 @@ bot.on("message", async (message) => {
         let diceType = message.content.substring(dLocation + 1).trim();
         let numberOfRolls = message.content.substring(spaceLocation + 1, dLocation).trim();
         let rollResults = diceRoll(diceType, numberOfRolls);
-        message.channel.send(`Results: ${rollResults[0]}\nSum: ${rollResults[1]}`, {split: true})
+        message.channel.send(`Results: ${rollResults[0]}\nSum: ${rollResults[1]}`, { split: true })
     } // Bot rolls dice using specified dice type and number of rolls
 
+    else if (message.content.startsWith(config.prefix + "birthday") || message.content.startsWith(config.prefix + "bd") || message.content.startsWith(config.prefix + "bday")) {
+        
+        let heroBirthdayImage = findHeroBirthday(msgContent);
 
+        if (heroBirthdayImage !== "nosuchdata") {
+            message.channel.send({ files: [heroSkillImage] })
+        }
+        else {
+            message.channel.send("Unknown hero!");
+        }
+    } // Bot finds a hero's birthday date and image
 
 });
 
