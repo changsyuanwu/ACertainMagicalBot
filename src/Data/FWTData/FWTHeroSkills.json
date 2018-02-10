@@ -970,7 +970,7 @@
     {
         "Name": "Luminous",
 
-        "1": "**Pressure Void**:\n133% Attack\n 33% Attack Heal to allies in range, 49.5% if buffed by Sunfire\n80% chance to Stun for 1 turn if buffed by Eclipse",
+        "1": "**Pressure Void**:\n133% Attack\n33% Attack Heal to allies in range, 49.5% if buffed by Sunfire\n80% chance to Stun for 1 turn if buffed by Eclipse",
         "1MPcost": 15,
         "1GeneCost": 340,
 
