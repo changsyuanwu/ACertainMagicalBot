@@ -970,24 +970,24 @@
     {
         "Name": "Luminous",
 
-        "1": "**Pressure Void**:\nGenerates a dark orb that releases dark energy, Attacking enemies within its range at [97% ~ 133%] Attack and restoring allies' HP at [24% ~ 33%] Attack. Under Eclipse, this skill creates a [35% ~ 80%] chance of Stunning the enemies for 1 turn.",
+        "1": "**Pressure Void**:\n133% Attack\n 33% Attack Heal to allies in range, 49.5% if buffed by Sunfire\n80% chance to Stun for 1 turn if buffed by Eclipse",
         "1MPcost": 15,
         "1GeneCost": 340,
 
-        "2": "**Ray of Redemption**:\nWith the power of light, this skill Attacks enemies within its range at [112% ~ 153.4%] Attack, restores allies' HP at [33% ~ 44.7%] Attack, and casts a shield around allies in range, decreasing incoming damage by [11% ~ 20%] once during 2 turns. The shield is removed after being Attacked once. Under Sunfire, this skill additionally casts a shield that decreases incoming damage by [11% ~ 20%].",
+        "2": "**Ray of Redemption**:\n165.8% Attack\n55.2% Attack Heal to allies in range\nCasts Shield that decreases damage by 20% for one attack (Lasts for 2 turns)\nSunfire decreases damage by an extra 20%",
         "2MPcost": 62,
         "2GeneCost": 1020,
 
-        "3": "**Armageddon**:\nExplodes the power of darkness, Attacking enemies within its range at [139% ~ 190.3%] and restoring allies' HP at [49% ~ 67%] Attack. Under Eclipse, this skill creates a [45% ~ 90%] chance of Disarming the enemies for 1 turn. Under Equilibrium, this skill's Final Power increases by [12% ~ 30%].",
+        "3": "**Armageddon**:\n202.9% Attack\n67% Attack Heal to allies in range\nUnder Eclipse, 90% chance to Disarm for 1 turn\nUnder Equilibrium, increase Final Skill Power by 30%",
         "3MPcost": 128,
         "3GeneCost": 1360,
 
-        "4": "**Equilibrium**:\nUsing skills on allies activates Sunfire, increasing Healing skill effects by [23% ~ 50%] for 2 turns. Killing enemies and having allies killed activates Eclipse, decreasing MP cost for all skills by [19% ~ 100%] for 2 turns. Under Eclipse, using skills that affect both allies and enemies activates Equilibrium, decreasing all incoming damage by [20% ~ 38%] and increasing Attack by [1360 ~ 5500] for 2 turns.",
+        "4": "**Equilibrium**:\nUsing skills on allies activates Sunfire, increasing healing effects by 50% for 1 turn\nUsing skills on enemies activates Eclipse, decreasing MP cost for all skills by 100% for 1 turn\nUsing skills on allies OR enemies activates Equilibrium, decreasing all damage received by 38% for 1 turn and increasing Attack by 5500",
         "4GeneCost": 680,
-		
-		"5": "Luminous currently has no awakening skill!",
-        "5ChargeTurns": 0,
-		"5GeneCost": 0
+        
+        "5": "**Punishing Resonator**:\n338.8% Attack\nIf Sunfire, Eclipse, or Equilibrium is active, then inflicts 80000 Defense-Ignoring Damage",
+        "5ChargeTurns": 2,
+        "5GeneCost": 5100  
     },
     {
         "Name": "Mas",
