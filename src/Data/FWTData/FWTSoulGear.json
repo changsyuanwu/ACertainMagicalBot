@@ -8,8 +8,9 @@
         "2pc Effect": "Increase Resistance by 5%",
         "": "",
         "Hero's Mark": "",
+        "Hero's Mark Skill Information": "",
         "Hero's Mark Effect": "",
-        "Hero's Mark Activation Requirements": ""
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
     },
     {
         "Name": "Alex",
@@ -20,8 +21,22 @@
         "2pc Effect": "Increase Resistance by 5%",
         "": "",
         "Hero's Mark": "",
+        "Hero's Mark Skill Information": "",
         "Hero's Mark Effect": "",
-        "Hero's Mark Activation Requirements": ""
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
+    },
+        {
+        "Name": "Amora",
+        "Soul Gear Weapon": "HP: 1200, MP recovery: 4",
+        "Weapon Effect": "Increases skill damage by 16% and additionally decreases the enemy's Defence by 1500 for Skill 3",
+        "Soul Gear Wings": "Attack: 380, Dodge: 200",
+        "Wings Effect": "Increases Immobilize chance by 10% for Skill 2",
+        "2pc Effect": "Increase Resistance by 5%",
+        "": "",
+        "Hero's Mark": "",
+        "Hero's Mark Skill Information": "",
+        "Hero's Mark Effect": "",
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
     },
     {
         "Name": "Alfred",
@@ -31,9 +46,10 @@
         "Wings Effect": "Increases Charm chance by 20% for Skill 2",
         "2pc Effect": "Increase Resistance by 5%",
         "": "",
-        "Hero's Mark": "",
-        "Hero's Mark Effect": "",
-        "Hero's Mark Activation Requirements": ""
+        "Hero's Mark": "Attack: 380, Crit Rate: 200",
+        "Hero's Mark Skill Information": "Increases skill damage by 7.3% and additionally decreases Counter Rate by 2000 for Skill 3",
+        "Hero's Mark Effect": "If 3 or more allies are alive, increases all allies' Max HP by 7%",
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
     },
     {
         "Name": "Angela",
@@ -44,8 +60,9 @@
         "2pc Effect": "Increase Resistance by 5%",
         "": "",
         "Hero's Mark": "",
+        "Hero's Mark Skill Information": "",
         "Hero's Mark Effect": "",
-        "Hero's Mark Activation Requirements": ""
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
     },
     {
         "Name": "Aran",
@@ -62,8 +79,9 @@
         "2pc Effect": "Increase Resistance by 5%",
         "": "",
         "Hero's Mark": "",
+        "Hero's Mark Skill Information": "",
         "Hero's Mark Effect": "",
-        "Hero's Mark Activation Requirements": ""
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
     },
     {
         "Name": "Azrael",
@@ -74,8 +92,9 @@
         "2pc Effect": "Increase Resistance by 5%",
         "": "",
         "Hero's Mark": "",
+        "Hero's Mark Skill Information": "",
         "Hero's Mark Effect": "",
-        "Hero's Mark Activation Requirements": ""
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
     },
     {
         "Name": "Banshee",
@@ -86,8 +105,9 @@
         "2pc Effect": "Increase Resistance by 5%",
         "": "",
         "Hero's Mark": "",
+        "Hero's Mark Skill Information": "",
         "Hero's Mark Effect": "",
-        "Hero's Mark Activation Requirements": ""
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
     },
     {
         "Name": "Bearman",
@@ -98,8 +118,9 @@
         "2pc Effect": "Increase Resistance by 5%",
         "": "",
         "Hero's Mark": "",
+        "Hero's Mark Skill Information": "",
         "Hero's Mark Effect": "",
-        "Hero's Mark Activation Requirements": ""
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
     },
     {
         "Name": "Belle",
@@ -110,8 +131,35 @@
         "2pc Effect": "Increase Resistance by 5%",
         "": "",
         "Hero's Mark": "",
+        "Hero's Mark Skill Information": "",
         "Hero's Mark Effect": "",
-        "Hero's Mark Activation Requirements": ""
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
+    },
+    {
+        "Name": "Camelia",
+        "Soul Gear Weapon": "HP: 1200, Counter Rate: 200",
+        "Weapon Effect": "Additionally increases Attack by 5%, Max HP by 5%, and pushing distance by 1 tiles for Skill 2",
+        "Soul Gear Wings": "Defence: 400, MP recovery: 4",
+        "Wings Effect": "Additionally increases Gold Bonus by 5%, and HP recovery by 6% for Passive skill",
+        "2pc Effect": "Increase Resistance by 5%",
+        "": "",
+        "Hero's Mark": "",
+        "Hero's Mark Skill Information": "",
+        "Hero's Mark Effect": "",
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
+    },
+    {
+        "Name": "Camilla",
+        "Soul Gear Weapon": "HP:1200, Defense: 400",
+        "Weapon Effect": "Increases skill damage by 18.3% and the Weakening effect by 10%",
+        "Soul Gear Wings": "Crit Rate: 200, Hit Rate: 200",
+        "Wings Effect": "Additionally decreases damage from skills with 4 or greater range by 6%",
+        "2pc Effect": "Increase Resistance by 5%",
+        "": "",
+        "Hero's Mark": "",
+        "Hero's Mark Skill Information": "",
+        "Hero's Mark Effect": "",
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
     },
     {
         "Name": "Carrot",
@@ -122,8 +170,9 @@
         "2pc Effect": "Increase Resistance by 5%",
         "": "",
         "Hero's Mark": "",
+        "Hero's Mark Skill Information": "",
         "Hero's Mark Effect": "",
-        "Hero's Mark Activation Requirements": ""
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
     },
     {
         "Name": "Cat Sidhe",
@@ -134,20 +183,28 @@
         "2pc Effect": "Increase Resistance by 5%",
         "": "",
         "Hero's Mark": "",
+        "Hero's Mark Skill Information": "",
         "Hero's Mark Effect": "",
-        "Hero's Mark Activation Requirements": ""
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
     },
     {
         "Name": "Celestial",
+        "Exclusive Soul Gear Weapon": "Attack: 380, Defense: 400",
+        "Exclusive Weapon Effect": "Increases Skill Damage by 9.7% and Ignore Defense by 1040 for Skill 3",
+        "Exclusive Soul Gear Wings": "HP: 1200, Dodge: 200",
+        "Exclusive Wings Effect": "Increases skill damage by 12.6% and Seal chance by 15% for Skill 2",
+        "Exclusive 2pc Effect": "Increases Crit Rate by 500",
+        "": "",
         "Soul Gear Weapon": "Dodge: 200, MP Recovery: 4",
         "Weapon Effect": "Increases Seal chance by 10% for Skill 2",
         "Soul Gear Wings": "Dodge: 200, Counter Damage: 600",
         "Wings Effect": "Increases ally recovery by 18% for Passive Skill",
         "2pc Effect": "Increase Resistance by 5%",
         "": "",
-        "Hero's Mark": "",
-        "Hero's Mark Effect": "",
-        "Hero's Mark Activation Requirements": ""
+        "Hero's Mark": "Attack: 380, Crit Rate: 200",
+        "Hero's Mark Skill Information": "Increases skill damage by 8% and Ignores Defense by 1020 for Skill 3",
+        "Hero's Mark Effect": "If there is Yeka or Yekaterina in the party, restores all allies' MP by 15 every turn(up to 30)",
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
     },
     {
         "Name": "Chenny",
@@ -157,21 +214,23 @@
         "Wings Effect": "Increases Skill Damage by 29.8% for Skill 2",
         "2pc Effect": "Increase Resistance by 5%",
         "": "",
-        "Hero's Mark": "",
-        "Hero's Mark Effect": "",
-        "Hero's Mark Activation Requirements": ""
+        "Hero's Mark": "Attack: 380, Crit Rate: 200",
+        "Hero's Mark Skill Information": "Increases skill damage by 9.6% for Skill 3",
+        "Hero's Mark Effect": "If 3 or more Balance-type Heros are in the party, increases all allies Critical damage by 5%",
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
     },
     {
         "Name": "Chris",
         "Soul Gear Weapon": "HP: 1200, Counter Rate: 200",
-        "Weapon Effect": "Increases Skill Damage by 14.9% and Stun chance by 25% Skill 2",
+        "Weapon Effect": "Increases Skill Damage by 14.9% and Stun chance by 25% for Skill 2",
         "Soul Gear Wings": "Dodge: 200, Counter Damage: 600",
-        "Wings Effect": "Increases chance of being attacked by enemies by 40%. Decreases Damage taken by 10% Passive Skill",
+        "Wings Effect": "Increases chance of being attacked by enemies by 40%. Decreases Damage taken by 10% for  Passive Skill",
         "2pc Effect": "Increase Resistance by 5%",
         "": "",
-        "Hero's Mark": "",
-        "Hero's Mark Effect": "",
-        "Hero's Mark Activation Requirements": ""
+        "Hero's Mark": "Attack: 380, Crit Rate: 200",
+        "Hero's Mark Skill Information": "Increases skill damage by 9% and the Protection effect by 10% for Skill 3",
+        "Hero's Mark Effect": "If 2 or more Paper-type Heros are in the party, Casts Protect, taking 8% incoming damage for all allies",
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
     },
     {
         "Name": "Cleo",
@@ -182,32 +241,48 @@
         "2pc Effect": "Increase Resistance by 5%",
         "": "",
         "Hero's Mark": "",
+        "Hero's Mark Skill Information": "",
         "Hero's Mark Effect": "",
-        "Hero's Mark Activation Requirements": ""
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
+    },
+        {
+        "Name": "Churyeok",
+        "Soul Gear Weapon": "HP: 1200, Counter Rate: 200",
+        "Weapon Effect": "Increases skill damage by 12.3%, and alleviates the condition for additional damage as per Max HP by 2 for Skill 3",
+        "Soul Gear Wings": "Defense: 400, MP Recovery: 4",
+        "Wings Effect": "Increases Max HP bonus per mark by additional 15% and all allies' Defense by additional 1460 for Passive skill",
+        "2pc Effect": "Increase Resistance by 5%",
+        "": "",
+        "Hero's Mark": "",
+        "Hero's Mark Skill Information": "",
+        "Hero's Mark Effect": "",
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
     },
     {
         "Name": "Deborah",
-        "Soul Gear Weapon": "MP:32, Hit Rate: 200",
+        "Soul Gear Weapon": "MP: 32, Hit Rate: 200",
         "Weapon Effect": "Increase Skill Damage by 19.6% for Skill 3",
         "Soul Gear Wings": "Defense: 400, Counter Rate: 200",
         "Wings Effect": "Increases Attack by 10% per kill for Passive Skill",
         "2pc Effect": "Increase Resistance by 5%",
         "": "",
         "Hero's Mark": "",
+        "Hero's Mark Skill Information": "",
         "Hero's Mark Effect": "",
-        "Hero's Mark Activation Requirements": ""
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
     },
     {
         "Name": "Deimos",
         "Soul Gear Weapon": "HP: 1200, Counter Rate: 200",
-        "Weapon Effect": "Increases Curse chance by 10% for Skill 2",
+        "Weapon Effect": "Increases Curse ch    ance by 10% for Skill 2",
         "Soul Gear Wings": "Defense: 400, Counter Rate: 200",
         "Wings Effect": "Increases Taunting chance by 10% for Skill 3",
         "2pc Effect": "Increase Resistance by 5%",
         "": "",
         "Hero's Mark": "",
+        "Hero's Mark Skill Information": "",
         "Hero's Mark Effect": "",
-        "Hero's Mark Activation Requirements": ""
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
     },
     {
         "Name": "Dolores",
@@ -218,8 +293,9 @@
         "2pc Effect": "Increase Resistance by 5%",
         "": "",
         "Hero's Mark": "",
+        "Hero's Mark Skill Information": "",
         "Hero's Mark Effect": "",
-        "Hero's Mark Activation Requirements": ""
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
     },
     {
         "Name": "Dominique",
@@ -230,8 +306,9 @@
         "2pc Effect": "Increase Resistance by 5%",
         "": "",
         "Hero's Mark": "",
+        "Hero's Mark Skill Information": "",
         "Hero's Mark Effect": "",
-        "Hero's Mark Activation Requirements": ""
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
     },
     {
         "Name": "Elektra",
@@ -242,8 +319,9 @@
         "2pc Effect": "Increase Resistance by 5%",
         "": "",
         "Hero's Mark": "",
+        "Hero's Mark Skill Information": "",
         "Hero's Mark Effect": "",
-        "Hero's Mark Activation Requirements": ""
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
     },
     {
         "Name": "Eunwol",
@@ -260,15 +338,16 @@
         "2pc Effect": "Increase Resistance by 5%",
         "": "",
         "Hero's Mark": "",
+        "Hero's Mark Skill Information": "",
         "Hero's Mark Effect": "",
-        "Hero's Mark Activation Requirements": ""
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
     },
     {
         "Name": "Evan",
         "Exclusive Soul Gear Weapon": "Attack: 380, Counter Damage: 600",
         "Exclusive Weapon Effect": "Increases Skill Damage by 14.6% and decreases additional effect activation condition by 1 for Skill 3.",
         "Exclusive Soul Gear Wings": "Crit Rate: 200, Hit Rate: 200",
-        "Exclusive Wings Effect": "Increases Attack by 400 and Defense by 400 per kill for Passive",
+        "Exclusive Wings Effect": "The Passive effect additionally increases Attack by 1200 and alleviates the effective range bonus condition by 1 upon activation for Passive skill",
         "Exclusive 2pc Effect": "Decrease Skill MP cost by 10%",
         "": "",
         "Soul Gear Weapon": "Attack: 380, Counter Damage: 600",
@@ -277,9 +356,10 @@
         "Wings Effect": "Increases Stun chance by 10% for Skill 2",
         "2pc Effect": "Increase Resistance by 5%",
         "": "",
-        "Hero's Mark": "",
-        "Hero's Mark Effect": "",
-        "Hero's Mark Activation Requirements": ""
+        "Hero's Mark": "Attack: 380, Crit Rate: 200",
+        "Hero's Mark Skill Information": "Increases skill damage by 9.6% for Skill 3",
+        "Hero's Mark Effect": "If Aran is in the party, all Final Skill Power increases by 10%",
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
     },
     {
         "Name": "Frankenstein",
@@ -296,8 +376,9 @@
         "2pc Effect": "Increase Resistance by 5%",
         "": "",
         "Hero's Mark": "",
+        "Hero's Mark Skill Information": "",
         "Hero's Mark Effect": "",
-        "Hero's Mark Activation Requirements": ""
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
     },
     {
         "Name": "Fruel",
@@ -308,8 +389,9 @@
         "2pc Effect": "Increase Resistance by 5%",
         "": "",
         "Hero's Mark": "",
+        "Hero's Mark Skill Information": "",
         "Hero's Mark Effect": "",
-        "Hero's Mark Activation Requirements": ""
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
     },
     {
         "Name": "Gillan",
@@ -320,8 +402,9 @@
         "2pc Effect": "Increase Resistance by 5%",
         "": "",
         "Hero's Mark": "",
+        "Hero's Mark Skill Information": "",
         "Hero's Mark Effect": "",
-        "Hero's Mark Activation Requirements": ""
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
     },
     {
         "Name": "Henry",
@@ -332,8 +415,22 @@
         "2pc Effect": "Increase Resistance by 5%",
         "": "",
         "Hero's Mark": "",
+        "Hero's Mark Skill Information": "",
         "Hero's Mark Effect": "",
-        "Hero's Mark Activation Requirements": ""
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
+    },
+    {
+        "Name": "Heuksa",
+        "Soul Gear Weapon": "HP: 1200, Attack: 380",
+        "Weapon Effect": "Increases skill damage by 17.6% and DoT by 24% for Skill 3",
+        "Soul Gear Wings": "Defense: 400, Counter Rate: 200",
+        "Wings Effect": "The Passive effect increases Max HP by additional 10% upon activation for Passive skill",
+        "2pc Effect": "Increase Resistance by 5%",
+        "": "",
+        "Hero's Mark": "",
+        "Hero's Mark Skill Information": "",
+        "Hero's Mark Effect": "",
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
     },
     {
         "Name": "Ian",
@@ -343,9 +440,10 @@
         "Wings Effect": "Increases additional Damage on Scissor-types by 32% for Skill 2",
         "2pc Effect": "Increase Resistance by 5%",
         "": "",
-        "Hero's Mark": "",
-        "Hero's Mark Effect": "",
-        "Hero's Mark Activation Requirements": ""
+        "Hero's Mark": "Attack: 380, Crit Rate: 200",
+        "Hero's Mark Skill Information": "Increases skill damage by 20% and Final Skill Power by 10% for Skill 1",
+        "Hero's Mark Effect": "If 3 or more allies are alive, increase their Mastery by 2000 and Attack by 10%",
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
     },
     {
         "Name": "Jack",
@@ -356,8 +454,9 @@
         "2pc Effect": "Increase Resistance by 5%",
         "": "",
         "Hero's Mark": "",
+        "Hero's Mark Skill Information": "",
         "Hero's Mark Effect": "",
-        "Hero's Mark Activation Requirements": ""
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
     },
     {
         "Name": "Jenny",
@@ -367,9 +466,10 @@
         "Wings Effect": "Decreases Skill MP cost by 17. Increases Skill Damage by 5% for Skill 3",
         "2pc Effect": "Increase Resistance by 5%",
         "": "",
-        "Hero's Mark": "",
-        "Hero's Mark Effect": "",
-        "Hero's Mark Activation Requirements": ""
+        "Hero's Mark": "Attack: 380, Crit Rate: 200",
+        "Hero's Mark Skill Information": "When passive activates, additionally increases Max HP by 8.5% and Critical Damage by 5% upon activation for Passive skill",
+        "Hero's Mark Effect": "If 2 or more Thornbush-type Heros are in the party, increases all allies' Critical Damage by 5%",
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
     },
     {
         "Name": "Jin",
@@ -380,8 +480,9 @@
         "2pc Effect": "Increase Resistance by 5%",
         "": "",
         "Hero's Mark": "",
+        "Hero's Mark Skill Information": "",
         "Hero's Mark Effect": "",
-        "Hero's Mark Activation Requirements": ""
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
     },
     {
         "Name": "Jin Kisaragi",
@@ -395,7 +496,12 @@
         "Weapon Effect": "NA",
         "Soul Gear Wings": "NA",
         "Wings Effect": "NA",
-        "2pc Effect": "NA"
+        "2pc Effect": "NA",
+        "": "",
+        "Hero's Mark": "",
+        "Hero's Mark Skill Information": "",
+        "Hero's Mark Effect": "",
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
     },
     {
         "Name": "Kai",
@@ -406,8 +512,9 @@
         "2pc Effect": "Increase Resistance by 5%",
         "": "",
         "Hero's Mark": "",
+        "Hero's Mark Skill Information": "",
         "Hero's Mark Effect": "",
-        "Hero's Mark Activation Requirements": ""
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
     },
     {
         "Name": "Kitty",
@@ -418,8 +525,9 @@
         "2pc Effect": "Increase Resistance by 5%",
         "": "",
         "Hero's Mark": "",
+        "Hero's Mark Skill Information": "",
         "Hero's Mark Effect": "",
-        "Hero's Mark Activation Requirements": ""
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
     },
     {
         "Name": "Klein",
@@ -430,8 +538,9 @@
         "2pc Effect": "Increase Resistance by 5%",
         "": "",
         "Hero's Mark": "",
+        "Hero's Mark Skill Information": "",
         "Hero's Mark Effect": "",
-        "Hero's Mark Activation Requirements": ""
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
     },
     {
         "Name": "Krut",
@@ -442,8 +551,28 @@
         "2pc Effect": "Increase Resistance by 5%",
         "": "",
         "Hero's Mark": "",
+        "Hero's Mark Skill Information": "",
         "Hero's Mark Effect": "",
-        "Hero's Mark Activation Requirements": ""
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
+    },
+    {
+        "Name": "Ky Kiske",
+        "Exclusive Soul Gear Weapon": "HP: 1200, Counter Rate: 200",
+        "Exclusive Weapon Effect": "Increases Skill Damage by 12.5% and decreases additionally effect's tile requirement by 1 for Skill 3",
+        "Exclusive Soul Gear Wings": "Crit Rate: 200, Hit Rate: 200",
+        "Exclusive Wings Effect": "Increases Critical Damage by 10% and HP recovery by 6% for Passive Skill",
+        "Exclusive 2pc Effect": "Increases HP by 5%",
+        "": "",
+        "Soul Gear Weapon": "",
+        "Weapon Effect": "",
+        "Soul Gear Wings": "",
+        "Wings Effect": "",
+        "2pc Effect": "Increase Resistance by 5%",
+        "": "",
+        "Hero's Mark": "",
+        "Hero's Mark Skill Information": "",
+        "Hero's Mark Effect": "",
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
     },
     {
         "Name": "Lance",
@@ -454,8 +583,9 @@
         "2pc Effect": "Increase Resistance by 5%",
         "": "",
         "Hero's Mark": "",
+        "Hero's Mark Skill Information": "",
         "Hero's Mark Effect": "",
-        "Hero's Mark Activation Requirements": ""
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
     },
     {
         "Name": "Lee",
@@ -466,20 +596,28 @@
         "2pc Effect": "Increase Resistance by 5%",
         "": "",
         "Hero's Mark": "",
+        "Hero's Mark Skill Information": "",
         "Hero's Mark Effect": "",
-        "Hero's Mark Activation Requirements": ""
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
     },
     {
         "Name": "Lena",
+        "Exclusive Soul Gear Weapon": "Attack: 380, Crit Rate: 200",
+        "Exclusive Weapon Effect": "Increases Skill Damage by 8.7% and Defense skill range by 1 for Skill 3",
+        "Exclusive Soul Gear Wings": "Counter Damage: 600, MP Recovery: 4",
+        "Exclusive Wings Effect": "The Passive effect increases Attack by an additional 825 and Double Attack damage by 6% for Passive skill",
+        "Exclusive 2pc Effect": "Increases Crit Rate by 500",
+        "": "",
         "Soul Gear Weapon": "Defense: 400, Crit Rate: 200",
         "Weapon Effect": "Increases Charm chance by 20% for Skill 1",
         "Soul Gear Wings": "Defense: 400, Counter Rate: 200",
         "Wings Effect": "Increases Skill Damage by 19.8% for Skill 3",
         "2pc Effect": "Increase Resistance by 5%",
         "": "",
-        "Hero's Mark": "",
-        "Hero's Mark Effect": "",
-        "Hero's Mark Activation Requirements": ""
+        "Hero's Mark": "Attack: 380, Crit Rate: 200",
+        "Hero's Mark Skill Information": "Increases skill damage by 9.8% and the Weakening effect by 8.5% for Skill 3",
+        "Hero's Mark Effect": "If 3 or more Scissor-type Heros are in the party, increases all allies' Attack by 2400",
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
     },
     {
         "Name": "Lilid",
@@ -490,8 +628,9 @@
         "2pc Effect": "Increase Resistance by 5%",
         "": "",
         "Hero's Mark": "",
+        "Hero's Mark Skill Information": "",
         "Hero's Mark Effect": "",
-        "Hero's Mark Activation Requirements": ""
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
     },
     {
         "Name": "Lily",
@@ -502,8 +641,9 @@
         "2pc Effect": "Increase Resistance by 5%",
         "": "",
         "Hero's Mark": "",
+        "Hero's Mark Skill Information": "",
         "Hero's Mark Effect": "",
-        "Hero's Mark Activation Requirements": ""
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
     },
     {
         "Name": "Lucas",
@@ -514,8 +654,9 @@
         "2pc Effect": "Increase Resistance by 5%",
         "": "",
         "Hero's Mark": "",
+        "Hero's Mark Skill Information": "",
         "Hero's Mark Effect": "",
-        "Hero's Mark Activation Requirements": ""
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
     },
     {
         "Name": "Luminous",
@@ -532,8 +673,22 @@
         "2pc Effect": "Increase Resistance by 5%",
         "": "",
         "Hero's Mark": "",
+        "Hero's Mark Skill Information": "",
         "Hero's Mark Effect": "",
-        "Hero's Mark Activation Requirements": ""
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
+    },
+    {
+        "Name": "Mary",
+        "Soul Gear Weapon": "Dodge: 200, MP Recovery: 4",
+        "Weapon Effect": "Increases skill damage by 18.7% and Sleep chance by 10% for Skill 2",
+        "Soul Gear Wings": "HP: 1200, Defense: 400",
+        "Wings Effect": "The Passive effect additionally decreases enemy's Hit Rate by 3500 and Defense by 1500 upon activation for Passive skill",
+        "2pc Effect": "Increase Resistance by 5%",
+        "": "",
+        "Hero's Mark": "",
+        "Hero's Mark Skill Information": "",
+        "Hero's Mark Effect": "",
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
     },
     {
         "Name": "Mas",
@@ -544,8 +699,28 @@
         "2pc Effect": "Increase Resistance by 5%",
         "": "",
         "Hero's Mark": "",
+        "Hero's Mark Skill Information": "",
         "Hero's Mark Effect": "",
-        "Hero's Mark Activation Requirements": ""
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
+    },
+    {
+        "Name": "May",
+        "Exclusive Soul Gear Weapon": "Attack: 380, Counter Damage: 600",
+        "Exclusive Weapon Effect": "Increases skill daamge by 13.4% and damage reduction by 5% for Skill 2",
+        "Exclusive Soul Gear Wings": "Crit Rate: 200, Hit Rate: 200",
+        "Exclusive Wings Effect": "Increases skill damage by 13.7% and increases movement reduction by 1 on Skill 3",
+        "Exclusive 2pc Effect": "Increases HP by 5%",
+        "": "",
+        "Soul Gear Weapon": "",
+        "Weapon Effect": "",
+        "Soul Gear Wings": "",
+        "Wings Effect": "",
+        "2pc Effect": "Increase Resistance by 5%",
+        "": "",
+        "Hero's Mark": "",
+        "Hero's Mark Skill Information": "",
+        "Hero's Mark Effect": "",
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
     },
     {
         "Name": "Mercedes",
@@ -562,8 +737,9 @@
         "2pc Effect": "Increase Resistance by 5%",
         "": "",
         "Hero's Mark": "",
+        "Hero's Mark Skill Information": "",
         "Hero's Mark Effect": "",
-        "Hero's Mark Activation Requirements": ""
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
     },
     {
         "Name": "Moa",
@@ -574,8 +750,9 @@
         "2pc Effect": "Increase Resistance by 5%",
         "": "",
         "Hero's Mark": "",
+        "Hero's Mark Skill Information": "",
         "Hero's Mark Effect": "",
-        "Hero's Mark Activation Requirements": ""
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
     },
     {
         "Name": "Momo",
@@ -586,8 +763,9 @@
         "2pc Effect": "Increase Resistance by 5%",
         "": "",
         "Hero's Mark": "",
+        "Hero's Mark Skill Information": "",
         "Hero's Mark Effect": "",
-        "Hero's Mark Activation Requirements": ""
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
     },
     {
         "Name": "Mu",
@@ -598,8 +776,9 @@
         "2pc Effect": "Increase Resistance by 5%",
         "": "",
         "Hero's Mark": "",
+        "Hero's Mark Skill Information": "",
         "Hero's Mark Effect": "",
-        "Hero's Mark Activation Requirements": ""
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
     },
     {
         "Name": "Muang",
@@ -610,8 +789,9 @@
         "2pc Effect": "Increase Resistance by 5%",
         "": "",
         "Hero's Mark": "",
+        "Hero's Mark Skill Information": "",
         "Hero's Mark Effect": "",
-        "Hero's Mark Activation Requirements": ""
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
     },
     {
         "Name": "Muzaka",
@@ -628,8 +808,9 @@
         "2pc Effect": "Increase Resistance by 5%",
         "": "",
         "Hero's Mark": "",
+        "Hero's Mark Skill Information": "",
         "Hero's Mark Effect": "",
-        "Hero's Mark Activation Requirements": ""
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
     },
     {
         "Name": "Nirvana",
@@ -640,8 +821,9 @@
         "2pc Effect": "Increase Resistance by 5%",
         "": "",
         "Hero's Mark": "",
+        "Hero's Mark Skill Information": "",
         "Hero's Mark Effect": "",
-        "Hero's Mark Activation Requirements": ""
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
     },
     {
         "Name": "Noel",
@@ -655,7 +837,11 @@
         "Weapon Effect": "NA",
         "Soul Gear Wings": "NA",
         "Wings Effect": "NA",
-        "2pc Effect": "NA"
+        "2pc Effect": "NA",
+        "Hero's Mark": "",
+        "Hero's Mark Skill Information": "",
+        "Hero's Mark Effect": "",
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
     },
     {
         "Name": "Nox",
@@ -665,9 +851,23 @@
         "Wings Effect": "Increases HP absorption by 18% and Skill power by 18.5% for Passive Skill",
         "2pc Effect": "Increase Resistance by 5%",
         "": "",
+        "Hero's Mark": "Attack: 380, Crit Rate: 200",
+        "Hero's Mark Skill Information": "Increases skill damage by 8.4% and Confusion chance by 10% for Skill 3",
+        "Hero's Mark Effect": "If 2 or more Paper-type Heros are in the party, increases all allies' Resistance by 5%",
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
+    },
+    {
+        "Name": "Parsifal",
+        "Soul Gear Weapon": "Attack: 380, Hit Rate: 200",
+        "Weapon Effect": "Increases skill daamge by 17.6% and deals additional damage against Paper-type enemies by 13% of Max HP on Skill 3",
+        "Soul Gear Wings": "MP: 32, Defense: 400",
+        "Wings Effect": "The Passive effect additionally increases Attack by 5% and Critical Damage by 4% upon activation for Passive skill",
+        "2pc Effect": "Increase Resistance by 5%",
+        "": "",
         "Hero's Mark": "",
+        "Hero's Mark Skill Information": "",
         "Hero's Mark Effect": "",
-        "Hero's Mark Activation Requirements": ""
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
     },
     {
         "Name": "Persona",
@@ -678,8 +878,9 @@
         "2pc Effect": "Increase Resistance by 5%",
         "": "",
         "Hero's Mark": "",
+        "Hero's Mark Skill Information": "",
         "Hero's Mark Effect": "",
-        "Hero's Mark Activation Requirements": ""
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
     },
     {
         "Name": "Phantom",
@@ -696,8 +897,28 @@
         "2pc Effect": "Increase Resistance by 5%",
         "": "",
         "Hero's Mark": "",
+        "Hero's Mark Skill Information": "",
         "Hero's Mark Effect": "",
-        "Hero's Mark Activation Requirements": ""
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
+    },
+    {   
+        "Name": "Pink Bean",
+        "Exclusive Soul Gear Weapon": "MP: 32, Crit Rate: 200",
+        "Exclusive Weapon Effect": "Increases skill damage by 14.2%, Burn chance by 10%, and skill/effect range by 1 for Skill 3",
+        "Exclusive Soul Gear Wings": "HP: 1200, MP recovery: 4",
+        "Exclusive Wings Effect": "Additionally increases Attack by 5% of Max HP. The Passive effect additionally increases Resistance by 10% upon activation for Passive skill",
+        "Exclusive 2pc Effect": "Decreases Skill MP cost by 10%",
+        "": "",
+        "Soul Gear Weapon": "MP: 32, Hit Rate: 200",
+        "Weapon Effect": "Increases skill damage by 17.6%, Burn damage by 8%",
+        "Soul Gear Wings": "Counter Rate: 200, MP recovery: 4",
+        "Wings Effect": "Increases skill damage by 26.3% and Final Skill Power by 8% for Skill 2",
+        "2pc Effect": "Increase Resistance by 5%",
+        "": "",
+        "Hero's Mark": "",
+        "Hero's Mark Skill Information": "",
+        "Hero's Mark Effect": "",
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
     },
     {
         "Name": "Poni",
@@ -708,8 +929,9 @@
         "2pc Effect": "Increase Resistance by 5%",
         "": "",
         "Hero's Mark": "",
+        "Hero's Mark Skill Information": "",
         "Hero's Mark Effect": "",
-        "Hero's Mark Activation Requirements": ""
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
     },
     {
         "Name": "Raboff",
@@ -720,8 +942,9 @@
         "2pc Effect": "Increase Resistance by 5%",
         "": "",
         "Hero's Mark": "",
+        "Hero's Mark Skill Information": "",
         "Hero's Mark Effect": "",
-        "Hero's Mark Activation Requirements": ""
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
     },
     {
         "Name": "Rachel",
@@ -735,7 +958,12 @@
         "Weapon Effect": "NA",
         "Soul Gear Wings": "NA",
         "Wings Effect": "NA",
-        "2pc Effect": "NA"
+        "2pc Effect": "NA",
+        "": "",
+        "Hero's Mark": "",
+        "Hero's Mark Skill Information": "",
+        "Hero's Mark Effect": "",
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
     },
     {
         "Name": "Rage",
@@ -745,9 +973,10 @@
         "Wings Effect": "Increases Attack by 7% per kill for Passive Skill",
         "2pc Effect": "Increase Resistance by 5%",
         "": "",
-        "Hero's Mark": "",
-        "Hero's Mark Effect": "",
-        "Hero's Mark Activation Requirements": ""
+        "Hero's Mark": "Attack: 380, Crit Rate: 200",
+        "Hero's Mark Skill Information": "Increases skill damage by 9.8% and Ignores Defense by 1020 for Skill 3",
+        "Hero's Mark Effect": "If 2 or more Attack-type heros are in the party, increaes all allies' Attack by 2400",
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
     },
     {
         "Name": "Ragna",
@@ -764,8 +993,9 @@
         "2pc Effect": "Increase Resistance by 5%",
         "": "",
         "Hero's Mark": "",
+        "Hero's Mark Skill Information": "",
         "Hero's Mark Effect": "",
-        "Hero's Mark Activation Requirements": ""
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
     },
     {
         "Name": "Raizel",
@@ -782,8 +1012,28 @@
         "2pc Effect": "Increase Resistance by 5%",
         "": "",
         "Hero's Mark": "",
+        "Hero's Mark Skill Information": "",
         "Hero's Mark Effect": "",
-        "Hero's Mark Activation Requirements": ""
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
+    },
+    {
+        "Name": "Ramlethal Valentine",
+        "Exclusive Soul Gear Weapon": "Attack: 380, Counter Damage: 600",
+        "Exclusive Weapon Effect": "Increases Skill Damage by 5.4% and Ignores Defense by 1000 for Skill 3",
+        "Exclusive Soul Gear Wings": "Defense: 400, Counter Rate: 200",
+        "Exclusive Wings Effect": "Increases Critical Damage by 3% and decreases bonus range character requirement by 1 Passive Skill",
+        "Exclusive 2pc Effect": "Increases HP by 5%",
+        "": "",
+        "Soul Gear Weapon": "",
+        "Weapon Effect": "",
+        "Soul Gear Wings": "",
+        "Wings Effect": "",
+        "2pc Effect": "Increase Resistance by 5%",
+        "": "",
+        "Hero's Mark": "",
+        "Hero's Mark Skill Information": "",
+        "Hero's Mark Effect": "",
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
     },
     {
         "Name": "Raskreia",
@@ -800,8 +1050,9 @@
         "2pc Effect": "Increase Resistance by 5%",
         "": "",
         "Hero's Mark": "",
+        "Hero's Mark Skill Information": "",
         "Hero's Mark Effect": "",
-        "Hero's Mark Activation Requirements": ""
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
     },
     {
         "Name": "Reina",
@@ -812,8 +1063,22 @@
         "2pc Effect": "Increase Resistance by 5%",
         "": "",
         "Hero's Mark": "",
+        "Hero's Mark Skill Information": "",
         "Hero's Mark Effect": "",
-        "Hero's Mark Activation Requirements": ""
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
+    },
+    {
+        "Name": "Ryeogang",
+        "Soul Gear Weapon": "MP: 32, Hit Rate: 200",
+        "Weapon Effect": "Increase skill damage by 14.6% and decreases Sleep Movement cost by 2 for Skill 2",
+        "Soul Gear Wings": "Dodge: 200, Counter Damage: 600",
+        "Wings Effect": "Increases skill damage by 8.7% and Activation chance by 8.7% for Skill 3",
+        "2pc Effect": "Increase Resistance by 5%",
+        "": "",
+        "Hero's Mark": "",
+        "Hero's Mark Skill Information": "",
+        "Hero's Mark Effect": "",
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
     },
     {
         "Name": "Seira",
@@ -830,8 +1095,9 @@
         "2pc Effect": "Increase Resistance by 5%",
         "": "",
         "Hero's Mark": "",
+        "Hero's Mark Skill Information": "",
         "Hero's Mark Effect": "",
-        "Hero's Mark Activation Requirements": ""
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
     },
     {
         "Name": "Serendi",
@@ -842,8 +1108,9 @@
         "2pc Effect": "Increase Resistance by 5%",
         "": "",
         "Hero's Mark": "",
+        "Hero's Mark Skill Information": "",
         "Hero's Mark Effect": "",
-        "Hero's Mark Activation Requirements": ""
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
     },
     {
         "Name": "Serphina",
@@ -854,8 +1121,9 @@
         "2pc Effect": "Increase Resistance by 5%",
         "": "",
         "Hero's Mark": "",
+        "Hero's Mark Skill Information": "",
         "Hero's Mark Effect": "",
-        "Hero's Mark Activation Requirements": ""
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
     },
     {
         "Name": "Shark",
@@ -866,8 +1134,9 @@
         "2pc Effect": "Increase Resistance by 5%",
         "": "",
         "Hero's Mark": "",
+        "Hero's Mark Skill Information": "",
         "Hero's Mark Effect": "",
-        "Hero's Mark Activation Requirements": ""
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
     },
     {
         "Name": "Shu-Shu",
@@ -878,8 +1147,9 @@
         "2pc Effect": "Increase Resistance by 5%",
         "": "",
         "Hero's Mark": "",
+        "Hero's Mark Skill Information": "",
         "Hero's Mark Effect": "",
-        "Hero's Mark Activation Requirements": ""
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
     },
     {
         "Name": "Sione",
@@ -890,8 +1160,41 @@
         "2pc Effect": "Increase Resistance by 5%",
         "": "",
         "Hero's Mark": "",
+        "Hero's Mark Skill Information": "",
         "Hero's Mark Effect": "",
-        "Hero's Mark Activation Requirements": ""
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
+    },
+    {
+        "Name": "Sogoon",
+        "Soul Gear Weapon": "Attack: 380, Counter Damage: 600",
+        "Weapon Effect": "Increases skill damage by 12.5% and Final Skill Power by 7% for Skill 2",
+        "Soul Gear Wings": "Crit Rate: 200, Hit Rate: 200",
+        "Wings Effect": "Increases Attack by 10% and damage reduction by 5% for Passive skill",
+        "2pc Effect": "Increase Resistance by 5%",
+        "": "",
+        "Hero's Mark": "Attack: 380, Crit Rate: 200",
+        "Hero's Mark Skill Information": "Increases skill damage by 9.8% and Immobolize chance by 10% for Skill 3",
+        "Hero's Mark Effect": "If 2 or more Ice Terrain Type Heros are in your party, increases all allies' Terrain Strategy Power by 5% ",
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
+    },
+    {
+        "Name": "Sol Badguy",
+        "Exclusive Soul Gear Weapon": "Defense: 400, Crit Rate: 200",
+        "Exclusive Weapon Effect": "Increases Skill Damage by 14.2% Skill 3",
+        "Exclusive Soul Gear Wings": "Crit Rate: 200, Hit Rate: 200",
+        "Exclusive Wings Effect": "Changes passive activation condition to HP 80% or less, and increases incoming damage reduction by 10% for Passive skill",
+        "Exclusive 2pc Effect": "Increases HP by 5%",
+        "": "",
+        "Soul Gear Weapon": "",
+        "Weapon Effect": "",
+        "Soul Gear Wings": "",
+        "Wings Effect": "",
+        "2pc Effect": "Increase Resistance by 5%",
+        "": "",
+        "Hero's Mark": "",
+        "Hero's Mark Skill Information": "",
+        "Hero's Mark Effect": "",
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
     },
     {
         "Name": "Sonic Boom",
@@ -902,8 +1205,9 @@
         "2pc Effect": "Increase Resistance by 5%",
         "": "",
         "Hero's Mark": "",
+        "Hero's Mark Skill Information": "",
         "Hero's Mark Effect": "",
-        "Hero's Mark Activation Requirements": ""
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
     },
     {
         "Name": "Spooky",
@@ -914,8 +1218,9 @@
         "2pc Effect": "Increase Resistance by 5%",
         "": "",
         "Hero's Mark": "",
+        "Hero's Mark Skill Information": "",
         "Hero's Mark Effect": "",
-        "Hero's Mark Activation Requirements": ""
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
     },
     {
         "Name": "Sraka",
@@ -926,8 +1231,9 @@
         "2pc Effect": "Increase Resistance by 5%",
         "": "",
         "Hero's Mark": "",
+        "Hero's Mark Skill Information": "",
         "Hero's Mark Effect": "",
-        "Hero's Mark Activation Requirements": ""
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
     },
     {
         "Name": "Tao",
@@ -938,8 +1244,9 @@
         "2pc Effect": "Increase Resistance by 5%",
         "": "",
         "Hero's Mark": "",
+        "Hero's Mark Skill Information": "",
         "Hero's Mark Effect": "",
-        "Hero's Mark Activation Requirements": ""
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
     },
     {
         "Name": "Unknown",
@@ -950,8 +1257,9 @@
         "2pc Effect": "Increase Resistance by 5%",
         "": "",
         "Hero's Mark": "",
+        "Hero's Mark Skill Information": "",
         "Hero's Mark Effect": "",
-        "Hero's Mark Activation Requirements": ""
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
     },
     {
         "Name": "Valkyrie",
@@ -962,8 +1270,28 @@
         "2pc Effect": "Increase Resistance by 5%",
         "": "",
         "Hero's Mark": "",
+        "Hero's Mark Skill Information": "",
         "Hero's Mark Effect": "",
-        "Hero's Mark Activation Requirements": ""
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
+    },
+    {
+        "Name": "Yeka",
+        "Exclusive Soul Gear Weapon": "HP: 1200, MP: 32",
+        "Exclusive Weapon Effect": "Increases Skill Damage by 9.8% and Disarm chance by 10% for Skill 3",
+        "Exclusive Soul Gear Wings": "Attack: 380, Defense: 400",
+        "Exclusive Wings Effect": "Increases Seal chance by 10% and skill effect range by 1 for Passive skill",
+        "Exclusive 2pc Effect": "Increases Crit Rate by 500",
+        "": "",
+        "Soul Gear Weapon": "Attack: 380, Crit Rate: 200",
+        "Weapon Effect": "Increases skill damage by 18.8% and decreases Ignore Defense conditions by 1",
+        "Soul Gear Wings": "Defense: 400, MP Recovery: 4",
+        "Wings Effect": "Increase Sealing chance by 10% for Passive skill",
+        "2pc Effect": "Increase Resistance by 5%",
+        "": "",
+        "Hero's Mark": "",
+        "Hero's Mark Skill Information": "",
+        "Hero's Mark Effect": "",
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
     },
     {
         "Name": "Yekaterina",
@@ -974,8 +1302,9 @@
         "2pc Effect": "Increase Resistance by 5%",
         "": "",
         "Hero's Mark": "",
+        "Hero's Mark Skill Information": "",
         "Hero's Mark Effect": "",
-        "Hero's Mark Activation Requirements": ""
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
     },
     {
         "Name": "Zero",
@@ -986,8 +1315,9 @@
         "2pc Effect": "Increase Resistance by 5%",
         "": "",
         "Hero's Mark": "",
+        "Hero's Mark Skill Information": "",
         "Hero's Mark Effect": "",
-        "Hero's Mark Activation Requirements": ""
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
     },
     {
         "Name": "Ildo",
@@ -998,8 +1328,9 @@
         "2pc Effect": "Increase Resistance by 5%",
         "": "",
         "Hero's Mark": "",
+        "Hero's Mark Skill Information": "",
         "Hero's Mark Effect": "",
-        "Hero's Mark Activation Requirements": ""
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
     },
     {
         "Name": "Taehwa",
@@ -1010,8 +1341,9 @@
         "2pc Effect": "Increase Resistance by 5%",
         "": "",
         "Hero's Mark": "",
+        "Hero's Mark Skill Information": "",
         "Hero's Mark Effect": "",
-        "Hero's Mark Activation Requirements": ""
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
     },
     {
         "Name": "Hongyeom",
@@ -1021,9 +1353,10 @@
         "Wings Effect": "Increases Crit Rate by 1000 and HP recovery by 7% for Passive Skill",
         "2pc Effect": "Increase Resistance by 5%",
         "": "",
-        "Hero's Mark": "",
-        "Hero's Mark Effect": "",
-        "Hero's Mark Activation Requirements": ""
+        "Hero's Mark": "Attack: 380, Crit Rate: 200",
+        "Hero's Mark Skill Information": "Increases skill damage by 12.6% and Final Skill Power by 8% for Skill 2",
+        "Hero's Mark Effect": "If 3 or more Rock-type Heros are in the party, increases all allies Terrain Strategy Power by 5%",
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
     },
     {
         "Name": "Ryeogang",
@@ -1034,8 +1367,9 @@
         "2pc Effect": "Increase Resistance by 5%",
         "": "",
         "Hero's Mark": "",
+        "Hero's Mark Skill Information": "",
         "Hero's Mark Effect": "",
-        "Hero's Mark Activation Requirements": ""
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
     },
     {
         "Name": "Thanatos",
@@ -1045,8 +1379,22 @@
         "Wings Effect": "Increases Double Attack Damage by 5% for Passive Skill",
         "2pc Effect": "Increase Resistance by 5%",
         "": "",
+        "Hero's Mark": "Attack: 380, Crit Rate: 200",
+        "Hero's Mark Skill Information": "Increases skill damage by 13.7% and Overload damage by 100 for Skill 2",
+        "Hero's Mark Effect": "If 2 or more Balance-type Heroes are in the party, increases all allies' Final Skill Power by 10%",
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
+    },
+    {
+        "Name": "Woryeong",
+        "Soul Gear Weapon": "HP: 1200, MP recovery: 4",
+        "Weapon Effect": "Increases skill damage by 17.6% and Confusion chance by 10% for Skill 3",
+        "Soul Gear Wings": "Attack: 380, Defense: 400",
+        "Wings Effect": "Increases skill damage by 28.3% and Final Skill Power by 13% for Skill 2",
+        "2pc Effect": "Increase Resistance by 5%",
+        "": "",
         "Hero's Mark": "",
+        "Hero's Mark Skill Information": "",
         "Hero's Mark Effect": "",
-        "Hero's Mark Activation Requirements": ""
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
     }
 ]
