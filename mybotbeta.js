@@ -1099,7 +1099,7 @@ bot.on("message", async (message) => {
 
     else if (message.content.startsWith(config.prefix + "sg")) {
         if (args.length >= 2) {
-            const sgData = findListedPropertyData(args[1], "soulgear");
+            const sgData = findListedPropertyData(msgContent, "soulgear");
             if (sgData != "nosuchdata") {
                 message.channel.send(sgData);
             } else {
