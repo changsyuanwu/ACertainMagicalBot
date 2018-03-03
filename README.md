@@ -19,11 +19,11 @@ In a command prompt in your projects folder (wherever that may be) run the follo
 
 Once finished:
 
-In the folder from where you ran the git command, run `cd ACertainMagicalBot` and then run `npm install`
+* In the folder from where you ran the git command, run `cd ACertainMagicalBot` and then run `npm install`
 
-Navigate to the folder, go to `/src/Data`, and rename config.js.example to config.js
+* Navigate to the folder, go to `/src/Data`, and rename `config.js.example` to `config.js`
 
-Edit config.js and fill in all the relevant details as indicated in the file's comments.
+* Edit `config.js` and fill in all the relevant details as indicated in the file's comments.
 
 # Starting the bot
 
