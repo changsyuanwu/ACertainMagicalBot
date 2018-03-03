@@ -1,6 +1,7 @@
 # ACertainMagicalBot
 
 A Discord Bot with various commands for roles moderation, entertainment, utility, etc.
+
 Also has specific commands for Fantasy War Tactics R such as getting hero stats and set information.
 
 # Requirements
@@ -19,7 +20,9 @@ In a command prompt in your projects folder (wherever that may be) run the follo
 Once finished:
 
 In the folder from where you ran the git command, run `cd ACertainMagicalBot` and then run `npm install`
+
 Navigate to the folder, go to `/src/Data`, and rename config.js.example to config.js
+
 Edit config.js and fill in all the relevant details as indicated in the file's comments.
 
 # Starting the bot
