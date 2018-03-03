@@ -1,16 +1,15 @@
 {
     "env": {
-        "node": true
+        "node": true,
+        "es6": true
     },
     "extends": "eslint:recommended",
     "parserOptions": {
-        "sourceType": "module"
+        "sourceType": "module",
+        "ecmaVersion": 2017
     },
     "rules": {
-        // "indent": [
-        //     "error",
-        //     "tab"
-        // ],
+
         "linebreak-style": [
             "error",
             "unix"
@@ -31,6 +30,8 @@
         "no-unused-vars": "warn",
         "constructor-super": "error",
         "valid-typeof": "error",
-        "no-use-before-define": ["error", { "functions": false}]
+        "no-use-before-define": ["error", { "functions": false}],
+        "no-case-declarations": "off",
+        "no-console": "off"
     }
 }
