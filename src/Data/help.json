@@ -1,67 +1,95 @@
 [
-    "Commands:\n",
+    "__**Available Commands:**__\n",
     
-    "**!ping**: Tests if bot is running (Bot should say \"pong!\")",
 
-    "**!id**: Bot tells you your Discord ID",
+    "__Bot Info/Management:__",
 
-    "**!calc** <mathExpression>: Bot becomes a calculator (Ex. <1+1> makes the bot output 2)",
-
-    "**!hug**: Bot gives you a hug (Everyone needs one at some point in their life)",
-
-    "**!choose <choice|choice2|choice3|etc.>**: Bot makes a choice based on provided choices",
-
-    "**!google <phrase>**: Gets you the Google search link for the phrase you wanted to Google",
-
-    "**!urban <phrase>**: Finds the Urban Dictionary definition for the phrase",
-
-    "**!moe:** Bot sends a moe picture",
-
-    "**!add <role>**: Adds the requested role to the user. (Ex. <Global> would add the \"Global\" role to you)",
-
-    "**!remove <role>**: Removes the requested role from the user. (Ex. <Global> would remove the \"Global\" role from you)",
-
-    "**!trivia**: Starts a fun round of Fantasy War Tactics R Trivia",
-
-    "**!rank <@user>**: Finds the trivia score and rank of the mentioned user. If no user is mentioned, the user who used the command's score and rank are returned",
-
-    "**!highscores**: Finds the top 10 leaderboard of Fantasy War Tactics R Trivia",
-
-    "**!news <limit>**: Gets the latest <limit> number of posts from Fantasy War Tactics R's Facebook Page. Leave limit blank for just 1. (Ex. <2> would get the 2 latest posts",
+    "**!ping**: Checks the bot's ping to the Discord server.",
     
-    "**!pull**: Bot does a 50/50 between pull and don't pull",
+    "**!help**: Lists all the commands.",
 
-    "**!whale <number>**: Simulates a 10x pull the number of times specified. Assumes <1> if no number is entered",
+    "**!credits**: Outputs the credits for the bot.",
 
-    "**!featuredsets <MM-DD-YYYY>**: Retrieves the featured sets for the requested date (Ex. <04-20-2017> would be the featured sets for April 20th, 2017), leave blank for current sets)",
+    "**!stats**: Displays information about the bot.",
 
-    "**!effect <effect>**: Finds all the heroes who can inflict the requested effect. <list> will list available effects. (Ex. <stun> finds all the heroes who can stun)",
+    "**!nameset**: Sets the nickname of the bot.",
 
-    "**!property <propertyType> <property>**: Finds all the heroes who have the requested property. (Ex. <type> <attack> finds all attack type heroes)",
+    "**!invite**: Outputs the invite link for the bot.",
 
-    "**!item <itemName> <slot> <rareness>**: Finds the max stats for the requested item at the requested slot and rareness (Ex. <bow> <V> <6> finds the max stats of a slot V 6* bow)",
+    "**!messages**: Outputs the number of messages the bot has sent.",
+    
+    "**!github**: Outputs the link to the bot's GitHub repository",
 
-    "**!stats <heroAlias>**: Finds all the stats for the requested heroes (Ex. <yeka> finds all the stats of Yekaterina)",
+        
+    "__Utility:__",
 
-    "**!stat <heroAlias> <stat>**: Finds the requested stat of the hero (Ex. <yeka> <attack> finds Yekaterina's base attack)",
+    "**!calc** `math expression`: Evaluates a math expression. (Does not work with exponents)",
 
-    "**!statrank <stat> <limit>**: Finds the top <limit> heroes for the requested stat (Ex. <hp> <5> would find the top 5 highest base HP heroes",
+    "**!id**: Tells you your Discord ID number.",
 
-    "**!compare <stat> <heroAlias> <heroAlias>**: Finds the requested stat for all requested heroes. There can be an infinite number of requested heroes. (Ex. <attack> <shushu> <krut> finds the base attack of Shu-shu and Krut)",
+    "**!addrole `role name`**: Gives a role to you.",
 
-    "**!skills <heroAlias>**: Finds the skill data for all skills of the requested hero. (Ex. <yeka> finds the skill data for Yekaterina's skills)",
+    "**!removerole `role`**: Removes a role from you.",
 
-    "**!skill <heroAlias> <skillNumber>**: Finds the skill data for the requested skill. (Ex. <yeka> <3> finds the data for Yekaterina's 3rd skill)",
+    "**!eval**: Evalutes JavaScript code. ONLY WORKS FOR THE BOT'S OWNER",
 
-    "**!sets <setSlot> <setRareness>**: Finds all the sets at the requested grade and tier. (Ex. <IV> <6> finds all the 6* sets at slot IV)",
+    "**!define**: Defines a word using a proper dictionary",
+    
 
-    "**!set <setAlias>**: Finds the data for the requested set. (Ex. <gr> finds all the data for the Super Ranger: Green set)",
+    "__Fun:__",
 
-    "**!sg <heroAlias>**: Finds the soul gear data for the requested hero. (Ex. <lee> finds Lee's soul gear data)",
+    "**!hug**: Gives you a hug.",
 
-    "**!help**: Lists all the commands. Although since you used it already you should know this one.",
+    "**!choose `choice|choice2|choice3|etc.`**: Randomly chooses one of the provided choices",
 
-    "There are also some secret commands you'll have to learn on your own :wink:",
+    "**!urban `word/phrase`**: Define a word or phrase via Urban Dictionary",
+
+    "**!moe:** Outputs a random moe picture",
+
+    "**!mee6**: Outputs the link to the server's mee6 leaderboard.",
+
+    "**!tadaima**: Welcomes you back home.",
+
+    "**!roll `number of dice` d `dice type`**: Rolls `number of dice` dice which each have a max value of `die type` (and a min value of 1).",
+
+
+    "__Fantasy War Tactics R:__",
+
+    "**!trivia**: Starts a round of Fantasy War Tactics R Trivia",
+
+    "**!rank `@user`**: Finds the trivia score and rank of the mentioned user. If no user is mentioned, finds your score and rank.",
+
+    "**!highscores**: Lists the top 10 leaderboard of Fantasy War Tactics R Trivia",
+    
+    "**!pull**: Randomly chooses between pull and don't pull",
+
+    "**!whale `number`**: Simulates a 10x pull `number` of times. Assumes `1` if no number is entered",
+
+    "**!effect `effect`**: Lists all heroes who can inflict the effect. `list` will list available effects.",
+
+    "**!property `property type` `property`**: Lists all heroes who have the property. (Ex. `type` `attack` finds all attack type heroes)",
+
+    "**!item `item name` `slot` `rareness`**: Finds the max transcendence stats for an item (Ex. <bow> <V> <6> finds the +15 stats of a slot V 6* bow)",
+
+    "**!stats `hero alias`**: Finds the base stats of a hero at 5* or Awakened lvl 70",
+
+    "**!stat `hero alias` `stat`**: Finds a base stat of a hero at 5* or Awakened lvl 70 (Ex. `celes` `attack` finds Celestial's base attack)",
+
+    "**!statrank `stat` `limit`**: Finds the top `limit` highest heroes for a base stat (Ex. `hp` `5` would find the top 5 highest base HP heroes",
+
+    "**!compare `stat` `hero alias` `hero alias` `etc.`**: Finds a stat for all requested heroes. There can be an infinite number of requested heroes. (Ex. `attack` `celes` `chris` finds the base attack of Celestial and Chris)",
+
+    "**!skills `hero alias`**: Lists the skills of a hero.",
+
+    "**!skill `hero alias` `skill number`**: Finds the information for a hero's skill. (Ex. `celes` `3` finds the description and range for Celestial's 3rd skill)",
+
+    "**!sets `slot` `rareness`**: Lists all sets at a slot and rareness. (Ex. `IV` `6` lists all the 6* sets at slot IV)",
+
+    "**!set `set alias`**: Finds a set's information.",
+
+    "**!sg `hero alias`**: Finds the soul gear and hero mark information for a hero.",
+
+    "**!birthday `hero alias`**: Finds a hero's birthday date.",
 
     "\\*\\***All about A Certain Magical Bot!**\\*\\*"
 ]
