@@ -1,10 +1,8 @@
 {
-  "token": "Discord Bot Token",
-  "prefix": "Prefix of choice (Can be anything)",
+  "token": "Your bot's Discord token",
+  "prefix": "Prefix of choice (Can be anything, commands have to start with this)",
   "ownerID": "Your Discord ID",
-  "invite": "Bot invite link",
-  "noLogs": false, 
-  "fbClientID": "Facebook App Client ID",
-  "fbClientSecret": "Facebook App Client Secret",
-  "selfBot": false
+  "invite": "Your bot's invite link",
+  "noLogs": false, // Whether you want to log your bot's activity to the console 
+  "selfBot": false // Whether this bot is a selfBot
 }
