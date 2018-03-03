@@ -1,15 +1,13 @@
-'use strict';
+"use strict";
 // Modules
 const Discord = require("discord.js");
 const sql = require("sqlite");
 const moment = require("moment");
-const FB = require("fb");
-const urban = require('relevant-urban');
+const urban = require("relevant-urban");
 const bot = new Discord.Client();
 
 // Utils
-const launchLocation = __dirname;
-const config = require("./src/Data/config.json")
+const config = require("./src/Data/config.json");
 const help = require("./src/Data/help.json");
 const Logger = require("./src/Utilities/Logger.js");
 const moe = require("./src/Data/Moe.json");
@@ -24,8 +22,7 @@ const heroDataTable = require("./src/Data/FWTData/FWTHeroStats.json");
 const itemDataTable = require("./src/Data/FWTData/FWTItemMaxStats.json");
 const triviaTable = require("./src/Data/FWTData/FWTTrivia.json");
 const soulGearTable = require("./src/Data/FWTData/FWTSoulGear.json");
-const featuredSetTable = require("./src/Data/FWTData/FWTFeaturedSets.json");
-const heroSkillTable = require("./src/Data/FWTData/FWTHeroSkills.json")
+const heroSkillTable = require("./src/Data/FWTData/FWTHeroSkills.json");
 
 // Effects
 const flagNames = ["confusion", "charm", "stun", "taunt", "disarm", "immobilize", "decrease movement", "dot", "mp burn", "skill cost", "defense ignore", "defense ignoring damage", "weakening", "buff removal", "hp% damage", "defense decrease", "attack decrease", "hp drain", "mastery decrease", "instant death", "decrease crit rate", "push/pull/switch", "passive attack", "seal", "sleep", "melee", "ranged", "overload", "terrain change", "dodge decrease", "decrease healing"];
@@ -41,40 +38,42 @@ const logger = new Logger(config.noLogs);
 
 //--------------------------------------------------------------------------------------------
 
-for (let i = 0; i < setDataTable.length; i++) {
-    for (let j = 0; j < featuredSetTable.length; j++) {
-        if ((featuredSetTable[j]["Set1"].toLowerCase() === setDataTable[i]["Name"].toLowerCase()) || (featuredSetTable[j]["Set2"].toLowerCase() === setDataTable[i]["Name"].toLowerCase())) {
-            setDataTable[i]["Last Time in Rotation"] = `${featuredSetTable[j]["Start"]} ~ ${featuredSetTable[j]["End"]}`;
-        }
-    }
-} // Adds the last time in rotation data to the set data
-
-//--------------------------------------------------------------------------------------------
-
 function coocooPull(isLast) {
+
     let number = Math.random();
+
     if (isLast) {
         var junkrate = 0;
         var brate = 0;
         var arate = 0.7;
         var srate = 0.2;
-    } else {
-        var junkrate = 0.524;
-        var brate = 0.2281;
-        var arate = 0.1587;
-        var srate = 0.0527;
     }
-    if (number < junkrate) return "junk";
-    else if (junkrate <= number && number < junkrate + brate) return "B_set";
-    else if (junkrate + brate <= number && number < junkrate + brate + arate) return "A_set";
-    else if (junkrate + brate + arate <= number && number < junkrate + brate + arate + srate) return "S_set";
-    else return "SS_set";
+    else {
+        junkrate = 0.565;
+        brate = 0.27;
+        arate = 0.10;
+        srate = 0.045;
+    }
+    if (number < junkrate)
+        return "junk";
+    else if (junkrate <= number && number < junkrate + brate)
+        return "B_set";
+    else if (junkrate + brate <= number && number < junkrate + brate + arate)
+        return "A_set";
+    else if (junkrate + brate + arate <= number && number < junkrate + brate + arate + srate)
+        return "S_set";
+    else
+        return "SS_set";
+
 } // Processes a single coocoo pull
 
 function coocooPull10() {
+
     let pull10 = new Array(10);
     pull10.fill(null);
+
     return pull10.map((element, index, array) => coocooPull(index === array.length - 1));
+
 } // Pulls 10 times and returns results in an array
 
 // End of CooCoo Pulling functions
@@ -83,151 +82,179 @@ function coocooPull10() {
 
 
 function createListOutput(list) {
+
     let dataString = "";
+
     for (let property in list) {
         if ((list.hasOwnProperty(property)) && (!flagNames.includes(property))) {
             dataString += capitalize(property) + ": " + list[property] + "\n";
         }
     }
+
     return dataString;
+
 } // Creates a output in a list
 
 function findNameByAlias(alias, type) {
+
     alias = alias.toLowerCase();
+
     if (type === "set") {
         var aliasList = aliasListSets;
-    } else if (type === "hero") {
-        var aliasList = aliasListHeroes;
-    } else {
+    }
+    else if (type === "hero") {
+        aliasList = aliasListHeroes;
+    }
+    else {
         return alias;
     }
+
     const data = aliasList.find(dataItem => dataItem.aliases.includes(alias));
+
     if (data !== undefined) {
         return data.name;
-    } else {
+    }
+    else {
         return "nosuchalias";
     }
 } // Finds the correct name from the alias
 
 function findListedPropertyData(alias, type) {
+
     if (type === "set") {
         var name = findNameByAlias(alias, "set");
         var dataTable = setDataTable;
-    } else if (type === "hero") {
-        var name = findNameByAlias(alias, "hero");
-        var dataTable = heroDataTable;
-    } else if (type === "soulgear") {
-        var name = findNameByAlias(alias, "hero");
-        var dataTable = soulGearTable;
     }
+    else if (type === "hero") {
+        name = findNameByAlias(alias, "hero");
+        dataTable = heroDataTable;
+    }
+    else if (type === "soulgear") {
+        name = findNameByAlias(alias, "hero");
+        dataTable = soulGearTable;
+    }
+
     if (name === "nosuchalias") {
         return "nosuchdata";
     }
+
     const data = dataTable.find(dataItem => dataItem.Name === name);
     return createListOutput(data);
 } // Finds a list of data with properties
 
-function findFeaturedSets(dateRequested) {
-    for (let i = 0; i < featuredSetTable.length; i++) {
-        let start = moment(featuredSetTable[i]["Start"], "MM-DD-YYYY");
-        let end = moment(featuredSetTable[i]["End"], "MM-DD-YYYY");
-        if (moment(dateRequested, "MM-DD-YYYY").isBetween(start, end, "day", "(]")) {
-            var featuredSets = featuredSetTable[i];
-        }
-    }
-    if (featuredSets === undefined) {
-        return "Date not found";
-    } else {
-        return createListOutput(featuredSets);
-    }
-} // Finds the set rotation for the requested week
-
 function findSingleData(alias, data, type) {
+
     if (type === "stat") {
         var dataTable = heroDataTable;
         var name = alias;
     }
+
     const results = dataTable.find(dataItem => dataItem.Name === name);
+
     if (results !== undefined) {
         return results[data];
-    } else {
+    }
+    else {
         return undefined;
     }
+
 } // Finds a single piece of data
 
 function findSets(slot, rareness) {
+
     let dataString = "";
+
     for (let i = 0; i < setDataTable.length; i++) {
         if ((setDataTable[i]["Slot"] === slot) && (setDataTable[i]["Rareness"] === rareness)) {
             dataString += "\n" + setDataTable[i]["Name"];
         }
     }
+
     return dataString;
 } // Finds all sets at the requested grade and tier
 
 function findProperty(propertyRequested, effectRequested) {
+
     let dataString = "";
+
     for (let i = 0, heronum = heroDataTable.length; i < heronum; i++) {
         if ((heroDataTable[i][propertyRequested] != undefined) && (heroDataTable[i][propertyRequested].includes(effectRequested))) {
             dataString += "\n" + heroDataTable[i]["Name"];
         }
     }
+
     return dataString;
 } // Finds all heroes who have the requested property
 
 function findSkillData(heroAlias, skill) {
+
     const heroName = findNameByAlias(heroAlias, "hero");
+
     if (heroName === "nosuchalias") {
         return "nosuchdata";
     }
+
     const heroData = heroSkillTable.find(hero => hero.Name === heroName);
+
     switch (skill) {
         case 4:
-        case 5:
         case "4":
-        case "5":
             return `${heroData[skill]}\n**Total Gene Cost**: ${heroData[`${skill}GeneCost`]}`;
+
+        case 5:
+        case "5":
+            return `${heroData[skill]}\n**Charge Turns**: ${heroData[`${skill}ChargeTurns`]}\n**Total Gene Cost**: ${heroData[`${skill}GeneCost`]}`;
+
         default:
             return `${heroData[skill]}\n**MP Cost**: ${heroData[`${skill}MPcost`]}\n**Total Gene Cost**: ${heroData[`${skill}GeneCost`]}`;
     }
+
 } // Finds the description, MP cost, and Gene cost for a hero's skill
 
 function findSkillImage(heroAlias, skill) {
+
     const heroName = findNameByAlias(heroAlias, "hero");
+
     if (heroName === "nosuchalias") {
         return "nosuchdata";
     }
+
     switch (skill) {
         case 5:
         case "5":
             const heroData = heroSkillTable.find(hero => hero.Name === heroName);
+
             if (heroData["5"].includes("currently has no awakening skill")) {
                 return "./src/Images/Nexon.gif";
             } // If the hero has an awakening skill, the case falls to the default one
+
+        // Falls through
+
         default:
-            return `./src/Images/Hero Skills/${heroName} ${skill}.jpg`;
+            return `./src/Images/FWT Hero Skills/${heroName} ${skill}.jpg`;
     }
 } // Finds a hero skill's image
 
 function findItem(item, slot, rareness) {
+
     switch (Number(rareness)) {
         case 1:
             var transcendence = 1;
             break;
         case 2:
-            var transcendence = 1.24;
+            transcendence = 1.24;
             break;
         case 3:
-            var transcendence = 1.60;
+            transcendence = 1.60;
             break;
         case 4:
-            var transcendence = 1.60;
+            transcendence = 1.60;
             break;
         case 5:
-            var transcendence = 1.75;
+            transcendence = 1.75;
             break;
         case 6:
-            var transcendence = 2.00;
+            transcendence = 2.00;
             break;
     } // Gets the max transcendence multiplier
 
@@ -238,44 +265,44 @@ function findItem(item, slot, rareness) {
             var stat2 = "Crit";
             break;
         case "mace":
-            var type = "Weapon";
-            var stat1 = "Attack";
-            var stat2 = "Counter Damage";
+            type = "Weapon";
+            stat1 = "Attack";
+            stat2 = "Counter Damage";
             break;
         case "sword":
-            var type = "Weapon";
-            var stat1 = "Attack";
-            var stat2 = "Hit";
+            type = "Weapon";
+            stat1 = "Attack";
+            stat2 = "Hit";
             break;
         case "armor":
-            var type = "Armor";
-            var stat1 = "HP";
-            var stat2 = "Defense";
+            type = "Armor";
+            stat1 = "HP";
+            stat2 = "Defense";
             break;
         case "shield":
-            var type = "Armor";
-            var stat1 = "HP";
-            var stat2 = "Counter Rate";
+            type = "Armor";
+            stat1 = "HP";
+            stat2 = "Counter Rate";
             break;
         case "boots":
-            var type = "Armor";
-            var stat1 = "HP";
-            var stat2 = "Dodge";
+            type = "Armor";
+            stat1 = "HP";
+            stat2 = "Dodge";
             break;
         case "ring":
-            var type = "Accessory";
-            var stat1 = "Hit";
-            var stat2 = "Crit";
+            type = "Accessory";
+            stat1 = "Hit";
+            stat2 = "Crit";
             break;
         case "brooch":
-            var type = "Accessory";
-            var stat1 = "HP";
-            var stat2 = "Defense";
+            type = "Accessory";
+            stat1 = "HP";
+            stat2 = "Defense";
             break;
         case "necklace":
-            var type = "Accessory";
-            var stat1 = "Mastery";
-            var stat2 = "Attack";
+            type = "Accessory";
+            stat1 = "Mastery";
+            stat2 = "Attack";
             break;
     } // Gets type of item and stat types
 
@@ -283,19 +310,25 @@ function findItem(item, slot, rareness) {
         if (itemDataTable[i]["Type"] === type) {
             const valueOfStat1 = itemDataTable[i][capitalize(item)][slot][stat1] * transcendence;
             const valueOfStat2 = itemDataTable[i][capitalize(item)][slot][stat2] * transcendence;
+
             return `${stat1}: ${valueOfStat1.toString()}, ${stat2}: ${valueOfStat2.toString()}`;
         }
     }
 } // Finds item max stats
 
 function findStatRank(statRequested, limit) {
+
+    // Checks if requested stat is numerical
     if ((isNaN(heroDataTable[1][statRequested.toLowerCase()])) || (flagNames.includes(statRequested.toLowerCase()))) {
         return ["Invalid stat!"];
     }
+
     let dataArray = [];
+
     for (let i = 1; i < heroDataTable.length; i++) {
-        dataArray.push(heroDataTable[i]["Name"], heroDataTable[i][statRequested.toLowerCase()])
+        dataArray.push(heroDataTable[i]["Name"], heroDataTable[i][statRequested.toLowerCase()]);
     }
+
     for (let i = 1; i < dataArray.length; i += 2) {
         for (let j = 1; j < dataArray.length - 1; j += 2) {
             if ((parseInt(dataArray[j + 2], 10) > parseInt(dataArray[j], 10)) && (i !== j) || (dataArray[j] === "") || (dataArray[j] === "N/A")) {
@@ -308,41 +341,58 @@ function findStatRank(statRequested, limit) {
             }
         }
     }
+
     if (limit) {
         dataArray.splice(limit * 2);
     }
+
     return dataArray;
+}
+
+function findHeroBirthday(heroAlias) {
+
+    const heroName = findNameByAlias(heroAlias, "hero");
+
+    if (heroName === "nosuchalias") {
+        return "nosuchdata";
+    }
+
+    return `./src/Images/FWT Hero Birthdays/${heroName.toLowerCase()}.jpg`;
 }
 // End of database functions
 
 //--------------------------------------------------------------------------------------------
 
 function getPoints(ID) {
-    return sql.get(`SELECT * FROM scores WHERE userID = ?`, ID)
+    return sql.get("SELECT * FROM scores WHERE userID = ?", ID)
         .then(row => {
             if (!row) {
                 sql.run("INSERT INTO scores (userID, points) VALUES (?, ?)", [ID, 0])
                     .then(() => {
                         return 0;
-                    })
+                    });
             } else
                 return row.points;
         });
 } // Finds the user's score
 
 function trivia(message, isCritQuestion) {
+
     triviaChannels.add(message.channel.id);
+
     do {
         var question = getRandomInt(1, triviaTable.length - 1);
     } while (question === triviaLastQuestion);
+
     triviaLastQuestion = question;
     const askedQuestion = triviaTable[question]["Question"];
     const correctAnswer = triviaTable[question]["Answer"];
 
     if (isCritQuestion) {
         var rewardPoints = 60;
-    } else {
-        var rewardPoints = 15;
+    }
+    else {
+        rewardPoints = 15;
     }
 
     wait(1500)
@@ -354,12 +404,15 @@ function trivia(message, isCritQuestion) {
                 errors: ["time"],
             })
                 .then((correctMessage) => {
+
                     const correctUserID = correctMessage.first().author.id;
-                    sql.get(`SELECT * FROM scores WHERE userID = ?`, correctUserID)
+
+                    sql.get("SELECT * FROM scores WHERE userID = ?", correctUserID)
                         .then(row => {
                             if (!row) {
                                 sql.run("INSERT INTO scores (userID, points) VALUES (?, ?)", [correctUserID, rewardPoints]);
-                            } else {
+                            }
+                            else {
                                 sql.run(`UPDATE scores SET points = ${row.points + rewardPoints} WHERE userID = ${correctUserID}`);
                             }
                         })
@@ -381,68 +434,55 @@ function trivia(message, isCritQuestion) {
         });
 } // Main trivia function
 
+function removeEntry(rowID) {
+    sql.run("DELETE FROM scores WHERE _rowid_ IN (?)", rowID);
+}
+
 // End of trivia functions
 
 //--------------------------------------------------------------------------------------------
 
 function generateRareness(rareness) {
+
     let setTier = "";
+
     for (let i = 0; i < rareness; i++) {
         setTier = setTier + "★";
     }
+
     return setTier;
 } // Makes the tiers for set equipment
 
 function PullOrNot() {
-    let number = Math.random();
-    if (number <= 0.5) return "./src/Images/Pull.png";
-    else return "./src/Images/Don't Pull.png";
-} // Does the 50/50 pull or not
 
-function news(newsLimit, message) {
-    const facebookEntityName = "Fwar";
-    return new Promise((resolve, reject) => {
-        FB.napi(facebookEntityName + "/posts", {
-            fields: ["from", "permalink_url", "message", "attachments{type,title,description,media,subattachments}"], newsLimit
-        }, (error, response) => {
-            if (error) {
-                if (error.response.error.code === "ETIMEDOUT") {
-                    console.log("request timeout");
-                } else {
-                    console.log("error", error.message);
-                }
-                reject(error);
-            } else {
-                resolve(response.data.map(postData => {
-                    if (message.channel.type === "dm") {
-                        var color = "#4F545C";
-                    } else {
-                        var color = message.guild.me.displayColor;
-                    }
-                    const embed = new Discord.RichEmbed()
-                        .setDescription(getNewsDescription(postData))
-                        .setTitle(getNewsTitle(postData))
-                        .setAuthor(postData.from.name, null, "https://www.facebook.com/" + facebookEntityName)
-                        .setColor(color)
-                        .setURL(postData.permalink_url);
-                    if (postData.attachments !== undefined) {
-                        var attachments = postData.attachments.data[0];
-                        if (attachments.type !== "album") {
-                            embed.setImage(attachments.media.image.src);
-                        }
-                    }
-                    return {
-                        embed
-                    };
-                }).filter(data => data !== null));
-            }
-        });
-    });
-} // Gets the lastest posts from FWT Facebook
+    let number = Math.random();
+
+    if (number <= 0.5)
+        return "./src/Images/Pull.png";
+    else
+        return "./src/Images/Don't Pull.png";
+} // Does the 50/50 pull or not
 
 // End of other FWT functions
 
 //--------------------------------------------------------------------------------------------
+function diceRoll(diceType, numberOfRolls) {
+
+    let sum = 0;
+    let results = "";
+    let roll = 0;
+
+    for (let i = 0; i < numberOfRolls; i++) {
+        roll = getRandomInt(1, parseInt(diceType) + 1);
+        results = results + roll;
+        if (i + 1 != numberOfRolls) {
+            results = results + ", ";
+        }
+        sum += roll;
+    }
+
+    return [results, sum];
+}
 
 function findEmojiFromGuildByName(guild, emoji_name) {
     const emoji = guild.emojis.find((emoji) => emoji.name === emoji_name);
@@ -451,6 +491,7 @@ function findEmojiFromGuildByName(guild, emoji_name) {
 
 function capitalize(inputString) {
     const outputString = inputString.substr(0, 1).toUpperCase() + inputString.substr(1, inputString.length - 1).toLowerCase();
+
     return outputString;
 } // Capitalizes the first letter in a string
 
@@ -470,18 +511,23 @@ function wait(time) {
 
 function status() {
     const statusCycle = ["https://github.com/TheMasterDodo/ACertainMagicalBot", "Use !help for info", "Spamming !whale", `Serving ${bot.guilds.size} servers`, `Serving ${bot.channels.size} channels`];
+
     const random = getRandomInt(0, statusCycle.length);
-    bot.user.setGame(statusCycle[random]);
+    bot.user.setActivity(statusCycle[random]);
+
     logger.log(2, `Set status to ${statusCycle[random]}`);
+
     setTimeout(status, 600000); // Cycles every 10 minutes
 } // Sets the status message of the bot
 
 function incrementUses() {
+    // eslint-disable-next-line quotes
     sql.get(`SELECT * FROM utilities WHERE type = "Uses"`)
         .then(row => {
             if (!row) {
                 sql.run("INSERT INTO utilities (type, value) VALUES (?, ?)", ["Uses", 0]);
-            } else {
+            }
+            else {
                 sql.run(`UPDATE utilities SET value = ${row.value + 1} WHERE type = "Uses"`);
             }
         })
@@ -494,6 +540,7 @@ function incrementUses() {
 } // Increments the number of uses of the bot by 1
 
 function getUses() {
+    // eslint-disable-next-line quotes
     return sql.get(`SELECT * FROM utilities WHERE type = "Uses"`)
         .then(row => {
             if (!row)
@@ -503,74 +550,9 @@ function getUses() {
         });
 } // Gets the number of uses of the bot
 
-function setupFacebookAccessToken() {
-    return new Promise((resolve, reject) => {
-        FB.napi("oauth/access_token", {
-            client_id: config.fbClientID,
-            client_secret: config.fbClientSecret,
-            grant_type: "client_credentials"
-        }, (error, res) => {
-            if (error) {
-                reject(error);
-            } else {
-                FB.setAccessToken(res.access_token);
-                resolve();
-            }
-        });
-    });
-} // Gets a Facebook access token 
-
-function getNewsTitle(data) {
-    let title = data.message.substring(0, data.message.indexOf("\n"));
-    if (data.attachments !== undefined) {
-        var attachments = data.attachments.data[0];
-        switch (attachments.type) {
-            case "note":
-                title = data.message;
-                break;
-            case "album":
-                title = data.message.substring(0, data.message.indexOf("\n"));
-                break;
-            case "video_inline":
-                title = `${attachments.title}: ${data.message.substring(0, data.message.indexOf("\n"))}`;
-                break;
-            case "cover_photo":
-                title = attachments.title;
-                break;
-            default:
-                title = data.message.substring(0, data.message.indexOf("\n"));
-                break;
-        }
-    }
-    return title;
-} // Gets the title of a Facebook post
-
-function getNewsDescription(data) {
-    let description = data.message.substring(data.message.indexOf("\n"));
-    if (data.attachments !== undefined) {
-        var attachments = data.attachments.data[0];
-        switch (attachments.type) {
-            case "note":
-                description = attachments.description;
-                break;
-            case "cover_photo":
-                description = " ";
-                break;
-            case "album":
-            case "video_inline":
-            default:
-                description = data.message.substring(data.message.indexOf("\n"));
-        }
-    }
-    if (description.length > 2048) {
-        description = description.substring(0, 2048);
-    }
-    return description;
-} // Gets text content from Facebook post
-
 function clean(text) {
-    if (typeof (text) === 'string')
-        return text.replace(/`/g, '`' + String.fromCharCode(8203)).replace(/@/g, '@' + String.fromCharCode(8203));
+    if (typeof (text) === "string")
+        return text.replace(/`/g, "`" + String.fromCharCode(8203)).replace(/@/g, "@" + String.fromCharCode(8203));
     else
         return text;
 } // Prevents the use of mentions in text
@@ -578,7 +560,13 @@ function clean(text) {
 // End of utility functions
 
 //--------------------------------------------------------------------------------------------
+
+function parseCommand(args, messageContent) {
+
+}
+
 bot.on("message", async (message) => {
+
     if (message.mentions.users.has(bot.user.id)) {
         console.log(`Message Received!\n\tSender: ${message.author.username} \n\tContent: ${message.content.slice(message.content.indexOf(" "))}`);
     } // Logs messages that mention the bot
@@ -591,9 +579,17 @@ bot.on("message", async (message) => {
         incrementUses();
     } // Increments whenever the bot sends a message (bot is "used")
 
-    if (message.content.includes("gimme") && (message.guild.id != 188363158107324400) && (message.guild.id != 164867600457662460)) {
-        message.channel.send({ files: ["./src/Images/Gimme.gif"] })
+    if (message.content.includes("plsgimme") || message.content.includes("gimme!")) {
+        message.channel.send({ files: ["./src/Images/Gimme.gif"] });
     } // Sends Shu-shu gimme gif when message contains "gimme"
+
+    if (message.content.includes("angryhedgehog")) {
+        message.channel.send({ files: ["./src/Images/AngryHedgeHog.png"] });
+    } // Sends angryhedgehog image when message contains "angryhedgehog"
+
+    if (message.content.includes("happyhedgehog")) {
+        message.channel.send({ files: ["./src/Images/HappyHedgeHog.jpg"] });
+    } // Sends happyhedgehog image when message contains "happyhedgehog"
 
     if (!message.content.startsWith(config.prefix)) return;
     // Ignore messages that don't start with the prefix
@@ -606,6 +602,7 @@ bot.on("message", async (message) => {
 
     logger.logFrom(message.channel, 1, `[command: ${args[0]}]`);
 
+
     if (message.content.startsWith(config.prefix + "ping")) {
         message.channel.send(`pong! [Response time: ${bot.ping}ms]`);
     } // Bot testing
@@ -614,13 +611,13 @@ bot.on("message", async (message) => {
     else if (message.content.startsWith(config.prefix + "help")) {
         message.author.send(help.join("\n\n"), { split: true })
             .then(() => {
-                message.channel.send(`Sent you a list of commands ${message.author}`)
-            })
+                message.channel.send(`Sent you a list of commands ${message.author}`);
+            });
     } // Help command
 
 
     else if (message.content.startsWith(config.prefix + "credits")) {
-        message.channel.send(credits.join("\n\n"))
+        message.channel.send(credits.join("\n\n"));
     }
 
 
@@ -642,7 +639,7 @@ bot.on("message", async (message) => {
     else if ((message.content.startsWith(config.prefix + "invite")) && (message.author.id === config.ownerID)) {
         message.mentions.users.first().send(config.invite)
             .then(() => {
-                message.channel.send(`Sent an invite to ${message.mentions.users.first()}`)
+                message.channel.send(`Sent an invite to ${message.mentions.users.first()}`);
             });
     } // Sends the invite link (Only owner can do it)
 
@@ -667,26 +664,26 @@ bot.on("message", async (message) => {
     } // Looks up an user's Discord ID
 
 
-    else if (message.content.startsWith(config.prefix + 'eval')) {
+    else if (message.content.startsWith(config.prefix + "eval")) {
         if (message.author.id !== config.ownerID) return;
         try {
-            const code = args.join(' ');
+            const code = args.join(" ");
             let evaled = eval(code);
 
-            if (typeof evaled !== 'string')
-                evaled = require('util').inspect(evaled);
+            if (typeof evaled !== "string")
+                evaled = require("util").inspect(evaled);
 
-            message.channel.send(clean(evaled), { code: 'xl' });
+            message.channel.send(clean(evaled), { code: "xl" });
         } catch (err) {
             message.channel.send(`\`ERROR\` \`\`\`xl\n${clean(err)}\n\`\`\``);
         }
     } // Eval() code
 
 
-    else if (message.content.startsWith(config.prefix + "uses")) {
+    else if (message.content.startsWith(config.prefix + "messages")) {
         getUses()
             .then(uses => {
-                message.channel.send(`There have been ${uses} uses since 2017-04-24`);
+                message.channel.send(`I have sent ${uses} messages since 2017-04-24`);
             });
     } // Gets the number of uses
 
@@ -726,10 +723,11 @@ bot.on("message", async (message) => {
                 msg.push(`\`\`\`${response.definition}\`\`\``);
                 msg.push(`**Example:** ${response.example}`);
                 msg.push(response.urbanURL);
-                message.channel.send(msg.join("\n"), { split: true })
+                message.channel.send(msg.join("\n"), { split: true });
             })
             .catch(error => {
                 message.channel.send("An error occured");
+                logger.log(3, "[command: urban]");
             });
     } // Searches Urban Dictionary for the requested phrase
 
@@ -740,8 +738,8 @@ bot.on("message", async (message) => {
             if (requestedRole !== null) {
                 message.member.addRole(requestedRole)
                     .then(() => {
-                        message.reply("this role was successfully added to you.")
-                    })
+                        message.reply("this role was successfully added to you.");
+                    });
             } else {
                 message.reply("either this Role does not exist or I do not have permission to access it.");
             }
@@ -757,8 +755,8 @@ bot.on("message", async (message) => {
             if (requestedRole !== null) {
                 message.member.removeRole(requestedRole)
                     .then(() => {
-                        message.reply("this role was successfully removed from you.")
-                    })
+                        message.reply("this role was successfully removed from you.");
+                    });
             } else {
                 message.reply("either this Role does not exist or I do not have permission to access it.");
             }
@@ -774,9 +772,9 @@ bot.on("message", async (message) => {
             const startingLetterAlphaCode = word.slice(0, 1).charCodeAt(0) - 97;
             const definition = dictionary[startingLetterAlphaCode][word];
             if (definition !== undefined) {
-                message.channel.send(`Definition for ${word}:\n\t${definition}`, { split: { char: " " } })
+                message.channel.send(`Definition for ${word}:\n\t${definition}`, { split: { char: " " } });
             } else {
-                message.channel.send("Could not find a definition for your query. Please check your spelling and remember that !define uses a real dictionary, and not UrbanDictionary (Use !urban for the UrbanDictionary).")
+                message.channel.send("Could not find a definition for your query. Please check your spelling and remember that !define uses a real dictionary, and not UrbanDictionary (Use !urban for the UrbanDictionary).");
             }
         } else {
             message.channel.send("Invalid request!");
@@ -798,7 +796,9 @@ bot.on("message", async (message) => {
     } else if (message.content.startsWith(config.prefix + "tyrant")) {
         message.channel.send({ files: ["./src/Images/Tyrant.png"] });
     } else if (message.content.startsWith(config.prefix + "atyrant")) {
-        message.channel.send({ files: ["./src/Images/ATyrant.png"] });
+        message.channel.send({ files: ["./src/Images/ATyrant.jpg"] });
+    } else if (message.content.startsWith(config.prefix + "hehe")) {
+        message.channel.send({ files: ["./src/Images/HongHehe.gif"] });
     } else if (message.content.startsWith(config.prefix + "moe")) {
         const randomMoeImageLink = moe[getRandomInt(0, moe.length)];
         message.channel.send({ files: [randomMoeImageLink] });
@@ -813,7 +813,7 @@ bot.on("message", async (message) => {
     else if (message.content.startsWith(config.prefix + "whale")) {
         let pulls = "";
         let totalPull = "";
-        if ((args[1] > 100) || ((args[1] > 10) && (message.guild.id === "164867600457662464"))) {
+        if ((args[1] > 100) || ((args[1] > 10) && (message.guild.id === "164867600457662464") && (message.guild.id === "206553301930475520"))) {
             message.channel.send("```OVERFLOW_ERROR```");
             return;
         }
@@ -869,7 +869,7 @@ bot.on("message", async (message) => {
             if (args.length === 2) {
                 var statRankings = findStatRank(args[1]);
             } else {
-                var statRankings = findStatRank(args[1], args[2]);
+                statRankings = findStatRank(args[1], args[2]);
             }
             message.channel.send(statRankings.join("\n"));
         } else {
@@ -984,16 +984,6 @@ bot.on("message", async (message) => {
         }
     } // Searches for the info for the requested hero skill
 
-    else if (message.content.startsWith(config.prefix + "featuredsets")) {
-        if (args.length >= 2) {
-            var dateRequested = args[1];
-        } else {
-            var dateRequested = moment().format("MM-DD-YYYY");
-        }
-        const currentSets = findFeaturedSets(dateRequested);
-        message.channel.send(currentSets);
-    } // Searches for current set rotation
-
     else if ((message.content.startsWith(config.prefix + "trivia")) && (!triviaChannels.has(message.channel.id))) {
         if (message.channel.type === "dm") {
             message.channel.send("Please use this command in a server!");
@@ -1010,7 +1000,7 @@ bot.on("message", async (message) => {
 
     else if (message.content.startsWith(config.prefix + "highscores")) {
         let msg = "__**Fantasy War Tactics R Trivia TOP 10**__";
-        sql.all(`SELECT userID, points FROM scores ORDER BY points DESC LIMIT 10`)
+        sql.all("SELECT userID, points FROM scores ORDER BY points DESC LIMIT 10")
             .then((rows) => {
                 for (let i = 0, j = 0; i < 10; i++) {
                     if (bot.users.get(rows[i].userID) === undefined) {
@@ -1026,7 +1016,7 @@ bot.on("message", async (message) => {
         if (args.length === 1) {
             var user = message.author;
         } else {
-            var user = message.mentions.users.first();
+            user = message.mentions.users.first();
         }
         sql.all("SELECT COUNT(*) FROM scores")
             .then((data) => {
@@ -1041,7 +1031,7 @@ bot.on("message", async (message) => {
                                 if (message.channel.type === "dm") {
                                     var color = "#4F545C";
                                 } else {
-                                    var color = message.guild.me.displayColor;
+                                    color = message.guild.me.displayColor;
                                 }
                                 const embed = new Discord.RichEmbed()
                                     .setAuthor(user.username, user.displayAvatarURL)
@@ -1050,15 +1040,14 @@ bot.on("message", async (message) => {
                                     .setColor(color);
 
                                 message.channel.send({ embed: embed });
-                            })
-
+                            });
                     });
             });
     } // Finds an user's rank and score in FWT Trivia
 
     else if (message.content.startsWith(config.prefix + "sg")) {
         if (args.length >= 2) {
-            const sgData = findListedPropertyData(args[1], "soulgear");
+            const sgData = findListedPropertyData(msgContent, "soulgear");
             if (sgData != "nosuchdata") {
                 message.channel.send(sgData);
             } else {
@@ -1069,19 +1058,26 @@ bot.on("message", async (message) => {
         }
     } // Looks up a hero's soul gear
 
-    else if (message.content.startsWith(config.prefix + "news")) {
-        if (args.length === 2) {
-            var limit = Math.min(Number.parseInt(args[1], 10), 10);
-        } else {
-            var limit = 1;
+    else if (message.content.startsWith(config.prefix + "roll")) {
+        let dLocation = message.content.indexOf("d");
+        let spaceLocation = message.content.indexOf(" ");
+        let diceType = message.content.substring(dLocation + 1).trim();
+        let numberOfRolls = message.content.substring(spaceLocation + 1, dLocation).trim();
+        let rollResults = diceRoll(diceType, numberOfRolls);
+        message.channel.send(`Results: ${rollResults[0]}\nSum: ${rollResults[1]}`, { split: true });
+    } // Bot rolls dice using specified dice type and number of rolls
+
+    else if (message.content.startsWith(config.prefix + "birthday") || message.content.startsWith(config.prefix + "bd") || message.content.startsWith(config.prefix + "bday")) {
+
+        let heroBirthdayImage = findHeroBirthday(msgContent);
+
+        if (heroBirthdayImage !== "nosuchdata") {
+            message.channel.send({ files: [heroBirthdayImage] });
         }
-        news(limit, message)
-            .then((news) => {
-                for (let i = 0; i < limit; i++) {
-                    message.channel.send({ embed: news[i]["embed"] });
-                }
-            });
-    } // Gets the latest FWT news from Facebook
+        else {
+            message.channel.send("Unknown hero!");
+        }
+    } // Bot finds a hero's birthday date and image
 
 });
 
@@ -1100,12 +1096,8 @@ bot.on("ready", () => {
     logger.log(1, `Ready to server in ${bot.channels.size} channels on ${bot.guilds.size} servers, for a total of ${bot.users.size} users.`);
 });
 
-Promise.all([
-    setupFacebookAccessToken()
-])
+
+bot.login(config.token)
     .then(() => {
-        bot.login(config.token)
-            .then(() => {
-                status();
-            });
+        status();
     });
