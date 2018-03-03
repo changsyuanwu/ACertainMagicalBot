@@ -1,9 +1,14 @@
 # ACertainMagicalBot
 
-This is a Discord Bot with general functions such as choose or calc and other more specific fucntions for Fantasy War Tactics such as getting hero stats and set information
+A Discord Bot with various commands for roles moderation, entertainment, utility, etc.
+Also has specific commands for Fantasy War Tactics R such as getting hero stats and set information.
+
+# Requirements
+
+* `node` Version 8.0.0 or higher
+
+You also need a bot token. This is obtained by creating an application in the Developer section of discordapp.com
 
 Entry Point: mybotbeta.js
-
-~~mybotworks.js is cut from mybotbeta.js every week and is the stable release~~
 
 Help/Docs: Help.json
