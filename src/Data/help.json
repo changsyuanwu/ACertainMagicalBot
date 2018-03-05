@@ -50,7 +50,7 @@
 
     "**!tadaima**: Welcomes you back home.",
 
-    "**!roll `number of dice` d `dice type`**: Rolls `number of dice` dice which each have a max value of `die type` (and a min value of 1).",
+    "**!roll `number of dice` d `dice type`**: Rolls `number of dice` dice which each have a max value of `die type` (Ex. `1d20` rolls 1 dice with a max value of 20)",
 
 
     "__Fantasy War Tactics R:__",
