@@ -645,7 +645,7 @@ bot.on("message", async (message) => {
 
 
     else if (message.content.startsWith(config.prefix + "calc")) {
-        const input = message.content.replace(/[^-()\d/*+.]/g, "");
+        const input = message.content.replace(/[^-()\d/*+.\^]/g, "");
         if (input != "") {
             const result = eval(input);
             message.channel.send(result);
