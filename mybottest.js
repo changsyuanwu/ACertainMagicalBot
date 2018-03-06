@@ -3,7 +3,9 @@
 const Discord = require("discord.js");
 const sql = require("sqlite");
 const moment = require("moment");
+require("moment-duration-format");
 const urban = require("relevant-urban");
+const mathjs = require("mathjs");
 const bot = new Discord.Client();
 
 // Utils
@@ -453,16 +455,6 @@ function generateRareness(rareness) {
     return setTier;
 } // Makes the tiers for set equipment
 
-function PullOrNot() {
-
-    let number = Math.random();
-
-    if (number <= 0.5)
-        return "./src/Images/Pull.png";
-    else
-        return "./src/Images/Don't Pull.png";
-} // Does the 50/50 pull or not
-
 // End of other FWT functions
 
 //--------------------------------------------------------------------------------------------
@@ -510,7 +502,7 @@ function wait(time) {
 } // Waits for a set amount of time
 
 function status() {
-    const statusCycle = ["https://github.com/TheMasterDodo/ACertainMagicalBot", "Use !help for info", "Spamming !whale", `Serving ${bot.guilds.size} servers`, `Serving ${bot.channels.size} channels`];
+    const statusCycle = ["https://github.com/TheMasterDodo/ACertainMagicalBot", "Use !help for info", "!whale", `on ${bot.guilds.size} servers`, `in ${bot.channels.size} channels`, `with ${bot.users.size} users`];
 
     const random = getRandomInt(0, statusCycle.length);
     bot.user.setActivity(statusCycle[random]);
@@ -561,9 +553,637 @@ function clean(text) {
 
 //--------------------------------------------------------------------------------------------
 
-function parseCommand(args, messageContent) {
+async function parseCommand(message) {
 
+    const args = message.content.toLowerCase().slice(1).split(" ");
+    const msgContent = message.content.slice(message.content.indexOf(" ") + 1);
+
+    switch (args[0].toLowerCase()) {
+
+        // Bot Info/Management commands
+
+        case "ping":
+            const msg = await message.channel.send("Ping?");
+            msg.edit(`Pong! Latency is ${msg.createdTimestamp - message.createdTimestamp}ms. API Latency is ${Math.round(bot.ping)}ms`);
+            break;
+
+        case "help":
+            // Direct message the user who called the command then notify them
+            message.author.send(help.join("\n\n"), { split: true })
+                .then(() => {
+                    message.channel.send(`Sent you a list of commands ${message.author}`);
+                });
+            break;
+
+        case "credits":
+            message.channel.send(credits.join("\n\n"));
+            break;
+
+        case "info":
+            const duration = moment.duration(bot.uptime).format(" D [days], H [hrs], m [mins], s [secs]");
+
+            message.channel.send(`
+= STATISTICS =
+ • Mem Usage  :: ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)} MB
+ • Uptime     :: ${duration}
+ • Users      :: ${bot.users.size.toLocaleString()}
+ • Servers    :: ${bot.guilds.size.toLocaleString()}
+ • Channels   :: ${bot.channels.size.toLocaleString()}
+ • Node       :: ${process.version}`, { code: "asciidoc" });
+            break;
+
+        case "nameset":
+            // Only owner can set the bot's name
+            if (message.author.id === config.ownerID) {
+
+                // If no name was provided, reset bot name to default
+                if (args.length === 1) {
+                    message.guild.member(bot.user).setNickname("A Certain Magical Bot");
+                }
+                else {
+                    message.guild.member(bot.user).setNickname(message.content.slice(message.content.indexOf(" ")));
+                }
+
+                message.channel.send("My name has been set!");
+            }
+            else {
+                message.channel.send("You have the to be the bot's owner to do this!");
+            }
+            break;
+
+        case "invite":
+            // Send invite link to message's author if no user was mentioned
+            if (args.length === 1) {
+                message.author.send(config.invite)
+                    .then(() => {
+                        message.channel.send(`Sent an invite to ${message.author}`);
+                    });
+            }
+            else {
+                message.mentions.users.first().send(config.invite)
+                    .then(() => {
+                        message.channel.send(`Sent an invite to ${message.mentions.users.first()}`);
+                    });
+            }
+            break;
+
+        case "messages":
+            getUses()
+                .then(msgs => {
+                    message.channel.send(`I have sent ${msgs} messages since 2017-04-24`);
+                });
+            break;
+
+        case "github":
+            message.channel.send("https://github.com/TheMasterDodo/ACertainMagicalBot");
+            break;
+
+        // Utility commands
+
+        case "calc":
+            const input = msgContent;
+            if (input != "") {
+                const result = mathjs.eval(input);
+                message.channel.send(result);
+            }
+            else {
+                message.channel.send("Invalid request!");
+            }
+            break;
+
+        case "id":
+            // Send id of message's author if no user was mentioned
+            if (args.length === 1) {
+                message.reply(`${message.author.id}`);
+            }
+            else {
+                message.channel.send(message.mentions.users.first().id);
+            }
+            break;
+
+        case "addrole":
+            // Must include the name of the role requested
+            if (args.length >= 2) {
+                const requestedRole = message.guild.roles.find(role => {
+                    role.name.toLowerCase() === msgContent.toLowerCase();
+                });
+
+                if (requestedRole !== null) {
+                    message.member.addRole(requestedRole)
+                        .then(() => {
+                            message.reply("this role was successfully added to you.");
+                        })
+                        .catch(() => {
+                            message.reply("I do not have permission to access this role");
+                        });
+                }
+                else {
+                    message.reply("this Role does not exist!");
+                }
+            }
+            else {
+                message.channel.send("Invalid request!");
+            }
+            break;
+
+        case "removerole":
+            // Must include the name of the role requested
+            if (args.length >= 2) {
+                const requestedRole = message.guild.roles.find(role => {
+                    role.name.toLowerCase() === msgContent.toLowerCase();
+                });
+
+                if (requestedRole !== null) {
+                    message.member.removeRole(requestedRole)
+                        .then(() => {
+                            message.reply("this role was successfully removed from you.");
+                        })
+                        .catch(() => {
+                            message.reply("I do not have permission to access this role");
+                        });
+                }
+                else {
+                    message.reply("either this Role does not exist!");
+                }
+            }
+            else {
+                message.channel.send("Invalid request!");
+            }
+            break;
+
+        case "eval":
+            // Only allow owner to use this command
+            if (message.author.id !== config.ownerID) return;
+            try {
+                const code = args.join(" ");
+                let evaled = eval(code);
+
+                if (typeof evaled !== "string")
+                    evaled = require("util").inspect(evaled);
+
+                message.channel.send(clean(evaled), { code: "xl" });
+            }
+            catch (err) {
+                message.channel.send(`\`ERROR\` \`\`\`xl\n${clean(err)}\n\`\`\``);
+            }
+            break;
+
+        case "define":
+            // Must include a word/phrase to define
+            if (args.length >= 2) {
+                const word = msgContent.toLowerCase();
+                const startingLetterAlphaCode = word.slice(0, 1).charCodeAt(0) - 97;
+                const definition = dictionary[startingLetterAlphaCode][word];
+
+                if (definition !== undefined) {
+                    message.channel.send(`Definition for ${word}:\n\t${definition}`, { split: { char: " " } });
+                }
+                else {
+                    message.channel.send("Could not find a definition for your query. Please check your spelling and remember that !define uses a real dictionary, and not UrbanDictionary (Use !urban for the UrbanDictionary).");
+                }
+            }
+            else {
+                message.channel.send("Invalid request!");
+            }
+            break;
+
+        // Fun commands
+
+        case "hug":
+            message.channel.send({ files: ["./src/Images/Hug.gif"] });
+            break;
+
+        case "choose":
+            if (args.length >= 2) {
+                const msg = message.content.slice(message.content.indexOf(" ") + 1);
+                const choices = msg.split("|");
+                const randomChoice = choices[getRandomInt(0, choices.length)];
+
+                message.channel.send(randomChoice);
+            }
+            else {
+                message.channel.send("Invalid request!");
+            }
+            break;
+
+        case "urban":
+            // Must include a word/phrase to define
+            if (args.length >= 2) {
+                urban(msgContent)
+                    .then(response => {
+                        let msg = [];
+                        msg.push(`**${response.word}**`);
+                        msg.push(`\`\`\`${response.definition}\`\`\``);
+                        msg.push(`**Example:** ${response.example}`);
+                        msg.push(response.urbanURL);
+                        message.channel.send(msg.join("\n"), { split: true });
+                    })
+                    .catch(() => {
+                        message.channel.send("An error occured");
+                        logger.log(3, "[command: urban]");
+                    });
+            }
+            else {
+                message.channel.send("Invalid request!");
+            }
+            break;
+
+        case "moe":
+            const randomMoeImageLink = moe[getRandomInt(0, moe.length)];
+            message.channel.send({ files: [randomMoeImageLink] });
+            break;
+
+        case "mee6":
+            message.channel.send(`Go check out **${message.guild.name}**'s leaderboard: https://mee6.xyz/levels/${message.guild.id}`);
+            break;
+
+        case "tadaima":
+            if (message.content.includes("maid")) {
+                message.channel.send("おかえりなさいませ！ご主人様♥, \nDo you want dinner or a shower or \*blushes\* me?");
+            }
+            else {
+                message.channel.send("Okaeri dear, \nDo you want dinner or a shower or \*blushes\* me?");
+            }
+            break;
+
+        case "dice":
+        case "roll":
+            const dLocation = message.content.indexOf("d");
+            const spaceLocation = message.content.indexOf(" ");
+            const diceType = message.content.substring(dLocation + 1).trim();
+            const numberOfRolls = message.content.substring(spaceLocation + 1, dLocation).trim();
+            const rollResults = diceRoll(diceType, numberOfRolls);
+
+            message.channel.send(`Results: ${rollResults[0]}\nSum: ${rollResults[1]}`, { split: true });
+            break;
+
+        // Fantasy War Tactics R commands
+
+        case "trivia":
+            // Only 1 trivia instance allowed in each channel at one time
+            if (!triviaChannels.has(message.channel.id)) {
+
+                if (message.channel.type === "dm") {
+                    message.channel.send("Please use this command in a server!");
+                    return;
+                }
+
+                if (getRandomInt(0, 100) < 5) {
+                    message.channel.send(`+++ ${message.member.displayName} started a new round of FWTR Trivia. Get ready! +++ CRITICAL QUESTION: 60 POINTS +++`);
+                    trivia(message, true);
+                }
+                else {
+                    message.channel.send(`+++ ${message.member.displayName} started a new round of FWTR Trivia. Get ready! +++`);
+                    trivia(message, false);
+                }
+            }
+            break;
+
+        case "rank":
+            // Find score of message's author if no user was mentioned
+            if (args.length === 1) {
+                var user = message.author;
+            }
+            else {
+                user = message.mentions.users.first();
+            }
+
+            sql.all("SELECT COUNT(*) FROM scores")
+                .then((data) => {
+                    getPoints(user.id)
+                        .then((points) => {
+                            sql.get(`SELECT COUNT(*) + 1 FROM scores WHERE Points > (SELECT Points FROM scores WHERE userID = ${user.id})`)
+                                .then(rank => {
+
+                                    const totalPlayers = data[0]["COUNT(*)"];
+                                    rank = rank["COUNT(*) + 1"];
+
+                                    if (message.channel.type === "dm") {
+                                        var color = "#4F545C";
+                                    } else {
+                                        color = message.guild.me.displayColor;
+                                    }
+                                    const embed = new Discord.RichEmbed()
+                                        .setAuthor(user.username, user.displayAvatarURL)
+                                        .addField("Rank", `${rank}/${totalPlayers}`, true)
+                                        .addField("Points", points, true)
+                                        .setColor(color);
+
+                                    message.channel.send({ embed: embed });
+                                });
+                        });
+                });
+            break;
+
+        case "highscores":
+            let response = "__**Fantasy War Tactics R Trivia TOP 10**__";
+
+            sql.all("SELECT userID, points FROM scores ORDER BY points DESC LIMIT 10")
+                .then((rows) => {
+                    for (let i = 0, j = 0; i < 10; i++) {
+                        if (bot.users.get(rows[i].userID) === undefined) {
+                            continue;
+                        }
+                        response += `\n#${i + 1} ${bot.users.get(rows[i].userID).username} (${rows[i].points})`;
+                    }
+                    message.channel.send(response);
+                });
+            break;
+
+        case "pull":
+            const number = Math.random();
+
+            if (number <= 0.5) {
+                message.channel.send({ files: ["./src/Images/Pull.png"] });
+            }
+            else {
+                message.channel.send({ files: ["./src/Images/Don't Pull.png"] });
+            }
+            break;
+
+        case "whale":
+            let pulls = "";
+            let totalPull = "";
+
+            if ((args[1] > 10)) {
+                message.channel.send("Only 10 pulls allowed at one time!");
+                return;
+            }
+
+            if (args.length > 1) {
+                for (let i = 0; i < args[1]; i++) {
+                    pulls = coocooPull10().map(emoji_name => {
+                        findEmojiFromGuildByName(message.guild, emoji_name);
+                    });
+                    totalPull = pulls.join(" ") + "\n" + totalPull;
+                }
+                message.channel.send(totalPull, { split: true });
+            }
+            else {
+                pulls = coocooPull10().map(emoji_name => {
+                    findEmojiFromGuildByName(message.guild, emoji_name);
+                });
+                message.channel.send(pulls.join(" "));
+            }
+            break;
+
+        case "effect":
+            // TO-DO: Search hero skill table for matching strings
+            if (args.length >= 2) {
+                const effect = msgContent.toLowerCase();
+                if (effect === "list") {
+                    let flags = "";
+                    for (let i = 0; i < flagNames.length; i++) {
+                        flags = flags + "\n" + capitalize(flagNames[i]);
+                    }
+                    message.channel.send(flags);
+                }
+                else if (flagNames.includes(effect)) {
+                    const effectHeroes = findProperty(effect, "TRUE");
+                    message.channel.send(effectHeroes);
+                }
+                else {
+                    message.channel.send("Unknown effect");
+                }
+            }
+            else {
+                message.channel.send("Invalid request!");
+            }
+            break;
+
+        case "property":
+            // TO-DO: allow for multiple properties
+            if (args.length >= 3) {
+                const propertyHeroes = findProperty(args[1].toLowerCase(), capitalize(args[2]));
+                message.channel.send(propertyHeroes);
+            }
+            else {
+                message.channel.send("Invalid request!");
+            }
+            break;
+
+        case "item":
+            // Must have name of item, slot, and rareness
+            if (args.length >= 4) {
+                const slot = args[2].toUpperCase();
+                if (((slot === "I") || (slot === "II") || (slot === "III") || (slot === "IV") || (slot === "V")) && (args[3] >= 1) && (args[3] <= 6)) {
+                    const itemStats = findItem(args[1].toLowerCase(), slot, args[3]);
+                    message.channel.send(itemStats);
+                    return;
+                }
+            }
+            else {
+                message.channel.send("Invalid request!");
+            }
+            break;
+
+        case "stats":
+            // Must have name of hero to search
+            if (args.length >= 2) {
+                const heroStats = findListedPropertyData(args[1], "hero");
+
+                if (heroStats != "nosuchdata") {
+                    message.channel.send(heroStats);
+                }
+                else {
+                    message.channel.send("Unknown Hero!");
+                }
+            }
+            else {
+                message.channel.send("Invalid request!");
+            }
+            break;
+
+        case "stat":
+            // Must have name of hero and stat to search
+            if (args.length >= 3) {
+                const heroRequested = findNameByAlias(args[1], "hero");
+                const statRequested = args[2].toLowerCase();
+                const statData = findSingleData(heroRequested, statRequested, "stat");
+
+                if ((heroRequested !== "nosuchalias") && (statData !== undefined)) {
+                    message.channel.send(`${heroRequested}'s ${capitalize(statRequested)}: ${statData}`);
+                }
+                else {
+                    message.channel.send("Unknown Hero/Stat!");
+                }
+            }
+            else {
+                message.channel.send("Invalid request!");
+            }
+            break;
+
+        case "statrank":
+            // Must have stat to search
+            if (args.length >= 2) {
+                if (args.length === 2) {
+                    var statRankings = findStatRank(args[1]);
+                }
+                else {
+                    statRankings = findStatRank(args[1], args[2]);
+                }
+                message.channel.send(statRankings.join("\n"));
+            }
+            else {
+                message.channel.send("Invalid request!");
+            }
+            break;
+
+        case "compare":
+            // Must have stat to compare and at least 2 heroes
+            if (args.length >= 4) {
+                const statRequested = args[1].toLowerCase();
+                let dataString = "";
+
+                for (let i = 0; i < args.length - 2; i++) {
+                    const heroRequested = findNameByAlias(args[2 + i], "hero");
+                    const statData = findSingleData(heroRequested, statRequested, "stat");
+
+                    if (statData != "nosuchdata") {
+                        dataString += `\n${heroRequested}'s ${capitalize(statRequested)}: ${statData}`;
+                    }
+                    else {
+                        dataString += "\nUnknown Hero!";
+                    }
+                }
+
+                message.channel.send(dataString);
+            }
+            else {
+                message.channel.send("Invalid request!");
+            }
+            break;
+
+        case "skills":
+            // Must have hero to search
+            if (args.length >= 2) {
+                for (let i = 1; i <= 5; i++) {
+                    const heroSkillDescription = findSkillData(args[1], i);
+                    const heroSkillImage = findSkillImage(args[1], i);
+
+                    if ((heroSkillDescription !== "nosuchdata") && (heroSkillImage !== "nosuchdata")) {
+                        await message.channel.send(heroSkillDescription, { files: [heroSkillImage] });
+                    }
+                    else {
+                        message.channel.send("Invalid request!");
+                        break;
+                    }
+                }
+            }
+            else {
+                message.channel.send("Invalid request!");
+            }
+            break;
+
+        case "skill":
+            // Must have hero and skill number to search
+            if (args.length >= 3) {
+                const heroSkillDescription = findSkillData(args[1], args[2]);
+                const heroSkillImage = findSkillImage(args[1], args[2]);
+
+                if ((heroSkillDescription !== "nosuchdata") && (heroSkillImage !== "nosuchdata")) {
+                    await message.channel.send(heroSkillDescription, { files: [heroSkillImage] });
+                }
+                else {
+                    message.channel.send("Unknown hero!");
+                }
+            }
+            else {
+                message.channel.send("Invalid request!");
+            }
+            break;
+
+        case "sets":
+            // Must have rareness and slot to search for
+            if (args.length >= 3) {
+                const setsInfo = findSets(args[1].toUpperCase(), generateRareness(args[2]));
+                message.channel.send(setsInfo);
+            }
+            else {
+                message.channel.send("Invalid request!");
+            }
+            break;
+
+        case "set":
+            // Must include set alias
+            if (args.length >= 2) {
+                const setInfo = findListedPropertyData(msgContent, "set");
+                if (setInfo != "nosuchdata") {
+                    message.channel.send(setInfo);
+                }
+                else {
+                    message.channel.send("Unknown Set!");
+                }
+            }
+            else {
+                message.channel.send("Invalid request!");
+            }
+            break;
+
+        case "sg":
+            // Must include hero alias 
+            if (args.length >= 2) {
+                const sgData = findListedPropertyData(msgContent, "soulgear");
+                if (sgData != "nosuchdata") {
+                    message.channel.send(sgData);
+                }
+                else {
+                    message.channel.send("Unknown Soul Gear!");
+                }
+            }
+            else {
+                message.channel.send("Invalid request!");
+            }
+            break;
+
+        case "birthday":
+        case "bday":
+        case "bd":
+            const heroBirthdayImage = findHeroBirthday(msgContent);
+
+            if (heroBirthdayImage !== "nosuchdata") {
+                message.channel.send({ files: [heroBirthdayImage] });
+            }
+            else {
+                message.channel.send("Unknown hero!");
+            }
+            break;
+
+        // Images commands
+
+        case "tuturu":
+            message.channel.send({ files: ["./src/Images/Tuturu.png"] });
+            break;
+
+        case "moa":
+            message.channel.send({ files: ["./src/Images/Moa.png"] });
+            break;
+
+        case "hehe":
+        case "honghehe":
+            message.channel.send({ files: ["./src/Images/HongHehe.gif"] });
+            break;
+    }
 }
+
+async function parseMessage(message) {
+
+    if (message.content.includes("plsgimme") || message.content.includes("gimme!")) {
+        message.channel.send({ files: ["./src/Images/Gimme.gif"] });
+    } // Sends Shu-shu gimme gif when message contains "gimme"
+
+    if (message.content.includes("angryhedgehog")) {
+        message.channel.send({ files: ["./src/Images/AngryHedgeHog.png"] });
+    } // Sends angryhedgehog image when message contains "angryhedgehog"
+
+    if (message.content.includes("happyhedgehog")) {
+        message.channel.send({ files: ["./src/Images/HappyHedgeHog.jpg"] });
+    } // Sends happyhedgehog image when message contains "happyhedgehog"
+}
+
+// End of message parsing functions
+
+//--------------------------------------------------------------------------------------------
 
 bot.on("message", async (message) => {
 
@@ -579,17 +1199,7 @@ bot.on("message", async (message) => {
         incrementUses();
     } // Increments whenever the bot sends a message (bot is "used")
 
-    if (message.content.includes("plsgimme") || message.content.includes("gimme!")) {
-        message.channel.send({ files: ["./src/Images/Gimme.gif"] });
-    } // Sends Shu-shu gimme gif when message contains "gimme"
-
-    if (message.content.includes("angryhedgehog")) {
-        message.channel.send({ files: ["./src/Images/AngryHedgeHog.png"] });
-    } // Sends angryhedgehog image when message contains "angryhedgehog"
-
-    if (message.content.includes("happyhedgehog")) {
-        message.channel.send({ files: ["./src/Images/HappyHedgeHog.jpg"] });
-    } // Sends happyhedgehog image when message contains "happyhedgehog"
+    parseMessage(message);
 
     if (!message.content.startsWith(config.prefix)) return;
     // Ignore messages that don't start with the prefix
@@ -597,491 +1207,12 @@ bot.on("message", async (message) => {
     if (message.author.bot) return;
     // Checks if sender is a bot
 
-    const args = message.content.slice(1).split(" ");
-    const msgContent = message.content.slice(message.content.indexOf(" ") + 1);
-
-    logger.logFrom(message.channel, 1, `[command: ${args[0]}]`);
-
-
-    if (message.content.startsWith(config.prefix + "ping")) {
-        message.channel.send(`pong! [Response time: ${bot.ping}ms]`);
-    } // Bot testing
-
-
-    else if (message.content.startsWith(config.prefix + "help")) {
-        message.author.send(help.join("\n\n"), { split: true })
-            .then(() => {
-                message.channel.send(`Sent you a list of commands ${message.author}`);
-            });
-    } // Help command
-
-
-    else if (message.content.startsWith(config.prefix + "credits")) {
-        message.channel.send(credits.join("\n\n"));
-    }
-
-
-    else if (message.content.startsWith(config.prefix + "hug")) {
-        message.channel.send("*hug*");
-    } // Gives a nice warm hug
-
-
-    else if (message.content.startsWith(config.prefix + "nameset") && (message.author.id === config.ownerID)) {
-        if (args.length === 1) {
-            message.guild.member(bot.user).setNickname("A Certain Magical Bot");
-        } else {
-            message.guild.member(bot.user).setNickname(message.content.slice(message.content.indexOf(" ")));
-        }
-        message.channel.send("My name has been set!");
-    } // Sets the bot's name (Only owner can do it)
-
-
-    else if ((message.content.startsWith(config.prefix + "invite")) && (message.author.id === config.ownerID)) {
-        message.mentions.users.first().send(config.invite)
-            .then(() => {
-                message.channel.send(`Sent an invite to ${message.mentions.users.first()}`);
-            });
-    } // Sends the invite link (Only owner can do it)
-
-
-    else if (message.content.startsWith(config.prefix + "calc")) {
-        const input = message.content.replace(/[^-()\d/*+.]/g, "");
-        if (input != "") {
-            const result = eval(input);
-            message.channel.send(result);
-        } else {
-            message.channel.send("Invalid request!");
-        }
-    } // Calculator function
-
-
-    else if (message.content.startsWith(config.prefix + "id")) {
-        if (args.length === 1) {
-            message.reply(`${message.author.id}`);
-        } else {
-            message.channel.send(message.mentions.users.first().id);
-        }
-    } // Looks up an user's Discord ID
-
-
-    else if (message.content.startsWith(config.prefix + "eval")) {
-        if (message.author.id !== config.ownerID) return;
-        try {
-            const code = args.join(" ");
-            let evaled = eval(code);
-
-            if (typeof evaled !== "string")
-                evaled = require("util").inspect(evaled);
-
-            message.channel.send(clean(evaled), { code: "xl" });
-        } catch (err) {
-            message.channel.send(`\`ERROR\` \`\`\`xl\n${clean(err)}\n\`\`\``);
-        }
-    } // Eval() code
-
-
-    else if (message.content.startsWith(config.prefix + "messages")) {
-        getUses()
-            .then(uses => {
-                message.channel.send(`I have sent ${uses} messages since 2017-04-24`);
-            });
-    } // Gets the number of uses
-
-
-    else if (message.content.startsWith(config.prefix + "choose")) {
-        if (args.length >= 2) {
-            const msg = message.content.slice(message.content.indexOf(" ") + 1);
-            const choices = msg.split("|");
-            const randomChoice = choices[getRandomInt(0, choices.length)];
-            message.channel.send(randomChoice);
-        } else {
-            message.channel.send("Invalid request!");
-        }
-    } // Bot makes a choice
-
-
-    else if (message.content.startsWith(config.prefix + "github")) {
-        message.channel.send("https://github.com/TheMasterDodo/ACertainMagicalBot");
-    } // Sends the GitHub repository link
-
-
-    else if (message.content.startsWith(config.prefix + "mee6")) {
-        message.channel.send(`Go check out **${message.guild.name}**'s leaderboard: https://mee6.xyz/levels/${message.guild.id}`);
-    } // Finds the link to the server's mee6 data
-
-
-    else if (message.content.startsWith(config.prefix + "google")) {
-        message.channel.send(`https://www.google.com/#q=${msgContent.replace(/\s/g, "+")}`);
-    } // Sends the Google search link
-
-
-    else if (message.content.startsWith(config.prefix + "urban")) {
-        urban(msgContent)
-            .then(response => {
-                let msg = [];
-                msg.push(`**${response.word}**`);
-                msg.push(`\`\`\`${response.definition}\`\`\``);
-                msg.push(`**Example:** ${response.example}`);
-                msg.push(response.urbanURL);
-                message.channel.send(msg.join("\n"), { split: true });
-            })
-            .catch(error => {
-                message.channel.send("An error occured");
-                logger.log(3, "[command: urban]");
-            });
-    } // Searches Urban Dictionary for the requested phrase
-
-
-    else if (message.content.startsWith(config.prefix + "add")) {
-        if (args.length >= 2) {
-            const requestedRole = message.guild.roles.find(role => role.name.toLowerCase() === msgContent.toLowerCase());
-            if (requestedRole !== null) {
-                message.member.addRole(requestedRole)
-                    .then(() => {
-                        message.reply("this role was successfully added to you.");
-                    });
-            } else {
-                message.reply("either this Role does not exist or I do not have permission to access it.");
-            }
-        } else {
-            message.channel.send("Invalid request!");
-        }
-    } // Adds a Role to an user
-
-
-    else if (message.content.startsWith(config.prefix + "remove")) {
-        if (args.length >= 2) {
-            const requestedRole = message.guild.roles.find(role => role.name.toLowerCase() === msgContent.toLowerCase());
-            if (requestedRole !== null) {
-                message.member.removeRole(requestedRole)
-                    .then(() => {
-                        message.reply("this role was successfully removed from you.");
-                    });
-            } else {
-                message.reply("either this Role does not exist or I do not have permission to access it.");
-            }
-        } else {
-            message.channel.send("Invalid request!");
-        }
-    } // Removes a Role from an user
-
-
-    else if (message.content.startsWith(config.prefix + "define")) {
-        if (args.length >= 2) {
-            const word = msgContent.toLowerCase();
-            const startingLetterAlphaCode = word.slice(0, 1).charCodeAt(0) - 97;
-            const definition = dictionary[startingLetterAlphaCode][word];
-            if (definition !== undefined) {
-                message.channel.send(`Definition for ${word}:\n\t${definition}`, { split: { char: " " } });
-            } else {
-                message.channel.send("Could not find a definition for your query. Please check your spelling and remember that !define uses a real dictionary, and not UrbanDictionary (Use !urban for the UrbanDictionary).");
-            }
-        } else {
-            message.channel.send("Invalid request!");
-        }
-    }
-
-
-    else if (message.content.startsWith(config.prefix + "tadaima") && (message.content.includes("maid"))) {
-        message.channel.send("おかえりなさいませ！ご主人様♥, \nDo you want dinner or a shower or \*blushes\* me?");
-    } else if (message.content.startsWith(config.prefix + "tadaima")) {
-        message.channel.send("Okaeri dear, \nDo you want dinner or a shower or \*blushes\* me?");
-    } // Tadaima ("I'm home")
-
-
-    else if (message.content.startsWith(config.prefix + "tuturu")) {
-        message.channel.send({ files: ["./src/Images/Tuturu.png"] });
-    } else if (message.content.startsWith(config.prefix + "moa")) {
-        message.channel.send({ files: ["./src/Images/Moa.png"] });
-    } else if (message.content.startsWith(config.prefix + "tyrant")) {
-        message.channel.send({ files: ["./src/Images/Tyrant.png"] });
-    } else if (message.content.startsWith(config.prefix + "atyrant")) {
-        message.channel.send({ files: ["./src/Images/ATyrant.jpg"] });
-    } else if (message.content.startsWith(config.prefix + "hehe")) {
-        message.channel.send({ files: ["./src/Images/HongHehe.gif"] });
-    } else if (message.content.startsWith(config.prefix + "moe")) {
-        const randomMoeImageLink = moe[getRandomInt(0, moe.length)];
-        message.channel.send({ files: [randomMoeImageLink] });
-    } // Custom/Anime commands
-
-
-    else if (message.content.startsWith(config.prefix + "pull")) {
-        const pullOrNot = PullOrNot();
-        message.channel.send({ files: [pullOrNot] });
-    } // Bot does a 50/50 pull or no
-
-    else if (message.content.startsWith(config.prefix + "whale")) {
-        let pulls = "";
-        let totalPull = "";
-        if ((args[1] > 100) || ((args[1] > 10) && (message.guild.id === "164867600457662464") && (message.guild.id === "206553301930475520"))) {
-            message.channel.send("```OVERFLOW_ERROR```");
-            return;
-        }
-        if (args.length > 1) {
-            for (let i = 0; i < args[1]; i++) {
-                pulls = coocooPull10().map((emoji_name) => findEmojiFromGuildByName(message.guild, emoji_name));
-                totalPull = pulls.join(" ") + "\n" + totalPull;
-            }
-            message.channel.send(totalPull, { split: true });
-        } else {
-            pulls = coocooPull10().map((emoji_name) => findEmojiFromGuildByName(message.guild, emoji_name));
-            message.channel.send(pulls.join(" "));
-        }
-    } // 10x pull
-
-    else if (message.content.startsWith(config.prefix + "sets")) {
-        if (args.length >= 3) {
-            const setsInfo = findSets(args[1].toUpperCase(), generateRareness(args[2]));
-            message.channel.send(setsInfo);
-        } else {
-            message.channel.send("Invalid request!");
-        }
-    } // Searches for sets at the requested slot and rareness
-
-    else if (message.content.startsWith(config.prefix + "set")) {
-        if (args.length >= 2) {
-            const setInfo = findListedPropertyData(msgContent, "set");
-            if (setInfo != "nosuchdata") {
-                message.channel.send(setInfo);
-            } else {
-                message.channel.send("Unknown Set!");
-            }
-        } else {
-            message.channel.send("Invalid request!");
-        }
-    } // Searches for set info
-
-    else if (message.content.startsWith(config.prefix + "stats")) {
-        if (args.length >= 2) {
-            const heroStats = findListedPropertyData(args[1], "hero");
-            if (heroStats != "nosuchdata") {
-                message.channel.send(heroStats);
-            } else {
-                message.channel.send("Unknown Hero!");
-            }
-        } else {
-            message.channel.send("Invalid request!");
-        }
-    } // Searches for hero stats
-
-    else if (message.content.startsWith(config.prefix + "statrank")) {
-        if (args.length >= 2) {
-            if (args.length === 2) {
-                var statRankings = findStatRank(args[1]);
-            } else {
-                statRankings = findStatRank(args[1], args[2]);
-            }
-            message.channel.send(statRankings.join("\n"));
-        } else {
-            message.channel.send("Invalid request!");
-        }
-    } // Finds the heroes who have the top requested stat
-
-    else if (message.content.startsWith(config.prefix + "stat")) {
-        if (args.length >= 3) {
-            const heroRequested = findNameByAlias(args[1], "hero");
-            const statRequested = args[2].toLowerCase();
-            const statData = findSingleData(heroRequested, statRequested, "stat");
-            if ((heroRequested !== "nosuchalias") && (statData !== undefined)) {
-                message.channel.send(`${heroRequested}'s ${capitalize(statRequested)}: ${statData}`);
-            } else {
-                message.channel.send("Unknown Hero/Stat!");
-            }
-        } else {
-            message.channel.send("Invalid request!");
-        }
-    } // Searches for the requested stat of the requested hero
-
-    else if (message.content.startsWith(config.prefix + "compare")) {
-        if (args.length >= 4) {
-            const statRequested = args[1].toLowerCase();
-            let dataString = "";
-            for (let i = 0; i < args.length - 2; i++) {
-                const heroRequested = findNameByAlias(args[2 + i], "hero");
-                const statData = findSingleData(heroRequested, statRequested, "stat");
-                if (statData != "nosuchdata") {
-                    dataString += `\n${heroRequested}'s ${capitalize(statRequested)}: ${statData}`;
-                } else {
-                    dataString += "\nUnknown Hero!";
-                }
-            }
-
-            message.channel.send(dataString);
-        } else {
-            message.channel.send("Invalid request!");
-        }
-    } // Searches for the requested stat of the requested heroes
-
-    else if (message.content.startsWith(config.prefix + "effect")) {
-        if (args.length >= 2) {
-            const effect = msgContent.toLowerCase();
-            if (effect === "list") {
-                let flags = "";
-                for (let i = 0; i < flagNames.length; i++) {
-                    flags = flags + "\n" + capitalize(flagNames[i]);
-                }
-                message.channel.send(flags);
-            } else if (flagNames.includes(effect)) {
-                const effectHeroes = findProperty(effect, "TRUE");
-                message.channel.send(effectHeroes);
-            } else {
-                message.channel.send("Unknown effect");
-            }
-        } else {
-            message.channel.send("Invalid request!");
-        }
-    } // Searches for which heroes can cause the requested effect
-
-    else if (message.content.startsWith(config.prefix + "property")) {
-        if (args.length >= 3) {
-            const propertyHeroes = findProperty(args[1].toLowerCase(), capitalize(args[2]));
-            message.channel.send(propertyHeroes);
-        } else {
-            message.channel.send("Invalid request!");
-        }
-    } // Searches for which heroes have the requested property
-
-    else if (message.content.startsWith(config.prefix + "item")) {
-        if (args.length >= 4) {
-            const slot = args[2].toUpperCase();
-            if (((slot === "I") || (slot === "II") || (slot === "III") || (slot === "IV") || (slot === "V")) && (args[3] >= 1) && (args[3] <= 6)) {
-                const itemStats = findItem(args[1].toLowerCase(), slot, args[3]);
-                message.channel.send(itemStats);
-                return;
-            }
-        }
-        message.channel.send("Invalid request!");
-    } // Searches for the requested item's max stats
-
-    else if (message.content.startsWith(config.prefix + "skills")) {
-        if (args.length >= 2) {
-            for (let i = 1; i <= 5; i++) {
-                const heroSkillDescription = findSkillData(args[1], i);
-                const heroSkillImage = findSkillImage(args[1], i);
-                if ((heroSkillDescription !== "nosuchdata") && (heroSkillImage !== "nosuchdata")) {
-                    await message.channel.send(heroSkillDescription, { files: [heroSkillImage] });
-                } else {
-                    message.channel.send("Invalid request!");
-                    break;
-                }
-            }
-        } else {
-            message.channel.send("Invalid request!");
-        }
-    } // Searches for the skill infos of the requested hero
-
-    else if (message.content.startsWith(config.prefix + "skill")) {
-        if (args.length >= 3) {
-            const heroSkillDescription = findSkillData(args[1], args[2]);
-            const heroSkillImage = findSkillImage(args[1], args[2]);
-            if ((heroSkillDescription !== "nosuchdata") && (heroSkillImage !== "nosuchdata")) {
-                await message.channel.send(heroSkillDescription, { files: [heroSkillImage] });
-            } else {
-                message.channel.send("Unknown hero!");
-            }
-        } else {
-            message.channel.send("Invalid request!");
-        }
-    } // Searches for the info for the requested hero skill
-
-    else if ((message.content.startsWith(config.prefix + "trivia")) && (!triviaChannels.has(message.channel.id))) {
-        if (message.channel.type === "dm") {
-            message.channel.send("Please use this command in a server!");
-            return;
-        }
-        if (getRandomInt(0, 100) < 5) {
-            message.channel.send(`+++ ${message.member.displayName} started a new round of FWTR Trivia. Get ready! +++ CRITICAL QUESTION: 60 POINTS +++`);
-            trivia(message, true);
-        } else {
-            message.channel.send(`+++ ${message.member.displayName} started a new round of FWTR Trivia. Get ready! +++`);
-            trivia(message, false);
-        }
-    } // Starts a round of FWT trivia
-
-    else if (message.content.startsWith(config.prefix + "highscores")) {
-        let msg = "__**Fantasy War Tactics R Trivia TOP 10**__";
-        sql.all("SELECT userID, points FROM scores ORDER BY points DESC LIMIT 10")
-            .then((rows) => {
-                for (let i = 0, j = 0; i < 10; i++) {
-                    if (bot.users.get(rows[i].userID) === undefined) {
-                        continue;
-                    }
-                    msg += `\n#${i + 1} ${bot.users.get(rows[i].userID).username} (${rows[i].points})`;
-                }
-                message.channel.send(msg);
-            });
-    } // Finds top 10 highscores for FWT Trivia
-
-    else if (message.content.startsWith(config.prefix + "rank")) {
-        if (args.length === 1) {
-            var user = message.author;
-        } else {
-            user = message.mentions.users.first();
-        }
-        sql.all("SELECT COUNT(*) FROM scores")
-            .then((data) => {
-                getPoints(user.id)
-                    .then((points) => {
-                        sql.get(`SELECT COUNT(*) + 1 FROM scores WHERE Points > (SELECT Points FROM scores WHERE userID = ${user.id})`)
-                            .then((rank) => {
-
-                                const totalPlayers = data[0]["COUNT(*)"];
-                                rank = rank["COUNT(*) + 1"];
-
-                                if (message.channel.type === "dm") {
-                                    var color = "#4F545C";
-                                } else {
-                                    color = message.guild.me.displayColor;
-                                }
-                                const embed = new Discord.RichEmbed()
-                                    .setAuthor(user.username, user.displayAvatarURL)
-                                    .addField("Rank", `${rank}/${totalPlayers}`, true)
-                                    .addField("Points", points, true)
-                                    .setColor(color);
-
-                                message.channel.send({ embed: embed });
-                            });
-                    });
-            });
-    } // Finds an user's rank and score in FWT Trivia
-
-    else if (message.content.startsWith(config.prefix + "sg")) {
-        if (args.length >= 2) {
-            const sgData = findListedPropertyData(msgContent, "soulgear");
-            if (sgData != "nosuchdata") {
-                message.channel.send(sgData);
-            } else {
-                message.channel.send("Unknown Soul Gear!");
-            }
-        } else {
-            message.channel.send("Invalid request!");
-        }
-    } // Looks up a hero's soul gear
-
-    else if (message.content.startsWith(config.prefix + "roll")) {
-        let dLocation = message.content.indexOf("d");
-        let spaceLocation = message.content.indexOf(" ");
-        let diceType = message.content.substring(dLocation + 1).trim();
-        let numberOfRolls = message.content.substring(spaceLocation + 1, dLocation).trim();
-        let rollResults = diceRoll(diceType, numberOfRolls);
-        message.channel.send(`Results: ${rollResults[0]}\nSum: ${rollResults[1]}`, { split: true });
-    } // Bot rolls dice using specified dice type and number of rolls
-
-    else if (message.content.startsWith(config.prefix + "birthday") || message.content.startsWith(config.prefix + "bd") || message.content.startsWith(config.prefix + "bday")) {
-
-        let heroBirthdayImage = findHeroBirthday(msgContent);
-
-        if (heroBirthdayImage !== "nosuchdata") {
-            message.channel.send({ files: [heroBirthdayImage] });
-        }
-        else {
-            message.channel.send("Unknown hero!");
-        }
-    } // Bot finds a hero's birthday date and image
+    parseCommand(message);
 
 });
 
-// End of all commands
+// Event handler when receiving a message
+
 //--------------------------------------------------------------------------------------------
 
 bot.on("error", (e) => console.error(e));
