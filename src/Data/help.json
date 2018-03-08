@@ -91,5 +91,7 @@
 
     "**!birthday `hero alias`**: Finds a hero's birthday date.",
 
+    "**!seteffect `effect`**: Lists all sets with an effect.",
+
     "\\*\\***All about A Certain Magical Bot!**\\*\\*"
 ]

@@ -361,6 +361,39 @@ function findHeroBirthday(heroAlias) {
 
     return `./src/Images/FWT Hero Birthdays/${heroName.toLowerCase()}.jpg`;
 }
+
+function filterSets(setEffect) {
+    setEffect = setEffect.toLowerCase();
+
+    switch (setEffect) {
+        case "aura":
+            setEffect = "all allies";
+            break;
+    }
+
+    const filteredSets2pc = setDataTable.filter(set => set["2pc"].toLowerCase().includes(setEffect));
+    const filteredSets3pc = setDataTable.filter(set => set["3pc"].toLowerCase().includes(setEffect));
+
+    let filteredSets = filteredSets2pc.concat(filteredSets3pc).sort();
+
+    filteredSets.forEach((value, index) => {
+        if (value.Name === filteredSets[index + 1]) {
+            filteredSets.splice(index + 1, 1);
+        }
+    });
+
+    let dataString = "";
+
+    filteredSets.forEach((val) => {
+        dataString += val.Name + "\n";
+    });
+
+    if (dataString !== "") {
+        return dataString;
+    }
+
+    return "No sets found!";
+}
 // End of database functions
 
 //--------------------------------------------------------------------------------------------
@@ -1146,6 +1179,16 @@ async function parseCommand(message) {
             }
             else {
                 message.channel.send("Unknown hero!");
+            }
+            break;
+
+        case "seteffect":
+            // Must include set effect
+            if (args.length >= 2) {
+                message.channel.send(filterSets(msgContent));
+            }
+            else {
+                message.channel.send("Invalid request!");
             }
             break;
 

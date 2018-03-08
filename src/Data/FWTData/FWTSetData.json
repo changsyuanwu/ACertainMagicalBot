@@ -293,7 +293,7 @@
         "Armor": "Shield",
         "Accessory": "Ring",
         "2pc": "Increase Defense by 1500",
-        "3pc": "Decreases incoming Critical Damage by 15%",
+        "3pc": "Decreases Critical Damage taken by 15%",
         "Restrictions": "Activated when the wearer's HP is at least 30% or above"
     },
     {
@@ -1426,7 +1426,7 @@
         "Armor": "Armor",
         "Accessory": "Ring",
         "2pc": "Decreases Attack of enemies within 3 tiles of the wearer by 1000.",
-        "3pc": "Increases Attack of the wearer by 40% for 3 turns and decreases incoming Damage by 15% for 2 turns",
+        "3pc": "Increases Attack of the wearer by 40% for 3 turns and decreases  Damage taken by 15% for 2 turns",
         "Restrictions": "Exclusive to Raizel (Noblesse Hero)"
     },
     {
@@ -1448,7 +1448,7 @@
         "Armor": "Armor",
         "Accessory": "Brooch",
         "2pc": "Restores 5% HP every turn",
-        "3pc": "Increases Attack of the wearer by 30% for 4 turns and decreases incoming Damage of the wearer by 10% for 3 turns.",
+        "3pc": "Increases Attack of the wearer by 30% for 4 turns and decreases Damage taken of the wearer by 10% for 3 turns.",
         "Restrictions": "Exclusive to Celestial (Skybrary Hero)"
     },
     {
@@ -1514,7 +1514,7 @@
         "Armor": "Shield",
         "Accessory": "Necklace",
         "2pc": "Increase Critical Rate by 1400",
-        "3pc": "Increases Attack of the wearer by 30% for 4 turns and decreases incoming Damage of the wearer by 10%.",
+        "3pc": "Increases Attack of the wearer by 30% for 4 turns and decreases Damage taken of the wearer by 10%.",
         "Restrictions": "Exclusive to Jin Kisaragi (BlazBlue Hero)"
     },
     {
@@ -1843,7 +1843,7 @@
         "Weapon": "Sword",
         "Armor": "Armor",
         "Accessory": "Necklace",
-        "2pc": "Decreases incoming Critical Damage by 10% for all allies in 2 tiles around the wearer",
+        "2pc": "Decreases Critical Damage taken by 10% for all allies in 2 tiles around the wearer",
         "3pc": "Increases all allies' Attack by 2100",
         "Restrictions": "None"
     },
@@ -1910,7 +1910,7 @@
         "Armor": "Armor",
         "Accessory": "Ring",
         "2pc": "Increases HP by 120% and ignore enemy Defense by 2500",
-        "3pc": "Increases Attack by 100% and decreases incoming Critical Damage by 25%",
+        "3pc": "Increases Attack by 100% and decreases Critical Damage taken by 25%",
         "Restrictions": "Activated if only you are left standing"
     },
     {
@@ -1953,7 +1953,7 @@
         "Weapon": "Bow",
         "Armor": "Armor",
         "Accessory": "Ring",
-        "2pc": "Decreases incoming damage from Rock enemies by 8%",
+        "2pc": "Decreases damage taken from Rock enemies by 8%",
         "3pc": "Increases Attack by 60% and ignores enemy Defense by 1200 for the first 3 turns in battle",
         "Restrictions": "Exclusive to Ryeogang (Sia Hero)"
     },
@@ -1965,7 +1965,7 @@
         "Armor": "Armor",
         "Accessory": "Ring",
         "2pc": "Removes 1 debuff cast on self every turn if there is an ally Celestial in the battlefield",
-        "3pc": "Increases Attack by 60% and decreases incoming Critical Damage by 20% for the first 3 turns in battle",
+        "3pc": "Increases Attack by 60% and decreases Critical Damage taken by 20% for the first 3 turns in battle",
         "Restrictions": "Exclusive to Yeka (Limited Skybrary Hero)"
     },
     {
@@ -2075,7 +2075,7 @@
         "Armor": "Armor",
         "Accessory": "Brooch",
         "2pc": "Recovers 15 MP every turn",
-        "3pc": "If MP is 20% or above at the beginning of a turn, cast a Shield that decreases incoming damage by 25% once",
+        "3pc": "If MP is 20% or above at the beginning of a turn, cast a Shield that decreases damage taken by 25% once",
         "Restrictions": "None"
     },
     {
@@ -2427,7 +2427,7 @@
         "Armor": "Armour",
         "Accessory": "Brooch",
         "2pc": "Increase all allies Defense by 1100",
-        "3pc": "Increases Attack 60% and decreases incoming Critical damage by 10% for the first 3 turns of battle",
+        "3pc": "Increases Attack 60% and decreases Critical Damage taken by 10% for the first 3 turns of battle",
         "Restrictions": "Churyeok only"
     },
     {
