@@ -362,7 +362,7 @@ function findHeroBirthday(heroAlias) {
     return `./src/Images/FWT Hero Birthdays/${heroName.toLowerCase()}.jpg`;
 }
 
-function filterSets(setEffect) {
+async function filterSets(setEffect) {
     setEffect = setEffect.toLowerCase();
 
     switch (setEffect) {
@@ -374,26 +374,39 @@ function filterSets(setEffect) {
     const filteredSets2pc = setDataTable.filter(set => set["2pc"].toLowerCase().includes(setEffect));
     const filteredSets3pc = setDataTable.filter(set => set["3pc"].toLowerCase().includes(setEffect));
 
-    let filteredSets = filteredSets2pc.concat(filteredSets3pc).sort();
+    let filteredSets = new Set([]);
 
-    filteredSets.forEach((value, index) => {
-        if (value.Name === filteredSets[index + 1]) {
-            filteredSets.splice(index + 1, 1);
+    // Add only unique sets to the Set object
+    filteredSets2pc.forEach(set => filteredSets.add(set));
+    filteredSets3pc.forEach(set => filteredSets.add(set));
+
+    filteredSets = Array.from(filteredSets).sort(function (a, b) {
+        const nameA = a.Name.toUpperCase();
+        const nameB = b.Name.toUpperCase();
+
+        if (nameA < nameB) {
+            return -1;
         }
+        if (nameA > nameB) {
+            return 1;
+        }
+
+        // If object names are equal
+        return 0;
     });
 
     let dataString = "";
 
-    filteredSets.forEach((val) => {
-        dataString += val.Name + "\n";
-    });
+    filteredSets.forEach(set => dataString += set.Name + ` (Slot ${set.Slot}, ${set.Rareness}) ` + "\n");
 
     if (dataString !== "") {
         return dataString;
     }
 
+    // If dataString is empty
     return "No sets found!";
 }
+
 // End of database functions
 
 //--------------------------------------------------------------------------------------------
@@ -1185,7 +1198,8 @@ async function parseCommand(message) {
         case "seteffect":
             // Must include set effect
             if (args.length >= 2) {
-                message.channel.send(filterSets(msgContent));
+                const sets = await filterSets(msgContent);
+                message.channel.send(sets, { split: true });
             }
             else {
                 message.channel.send("Invalid request!");
@@ -1249,6 +1263,8 @@ bot.on("message", async (message) => {
 
     if (message.author.bot) return;
     // Checks if sender is a bot
+
+    logger.logFrom(message.channel, 1, `[command: ${message.content.slice(1).split(" ")[0]}]`);
 
     parseCommand(message);
 
