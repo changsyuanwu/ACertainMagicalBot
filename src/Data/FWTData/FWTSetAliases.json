@@ -1319,7 +1319,8 @@
             "1* aggro",
             "assailable",
             "unass",
-            "unassliable"
+            "unassliable",
+            "ua"
         ]
     },
     {
@@ -1650,7 +1651,8 @@
         "aliases": [
             "king's arrogance",
             "kings arrogance",
-            "arrogance"
+            "arrogance",
+            "ka"
         ]
     },
     {
