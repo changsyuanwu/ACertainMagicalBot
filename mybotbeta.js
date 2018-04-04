@@ -603,6 +603,7 @@ async function parseCommand(message) {
 
     const args = message.content.toLowerCase().slice(1).split(" ");
     const msgContent = message.content.slice(message.content.indexOf(" ") + 1);
+    logger.log(1, msgContent);
 
     switch (args[0].toLowerCase()) {
 
@@ -709,11 +710,12 @@ async function parseCommand(message) {
 
         case "addrole":
             // Must include the name of the role requested
+            
             if (args.length >= 2) {
                 const requestedRole = message.guild.roles.find(role => {
                     role.name.toLowerCase() === msgContent.toLowerCase();
                 });
-
+                
                 if (requestedRole !== null) {
                     message.member.addRole(requestedRole)
                         .then(() => {
@@ -749,7 +751,7 @@ async function parseCommand(message) {
                         });
                 }
                 else {
-                    message.reply("either this Role does not exist!");
+                    message.reply("this Role does not exist!");
                 }
             }
             else {
@@ -926,8 +928,9 @@ async function parseCommand(message) {
 
             sql.all("SELECT userID, points FROM scores ORDER BY points DESC LIMIT 10")
                 .then((rows) => {
-                    for (let i = 0, j = 0; i < 10; i++) {
+                    for (let i = 0; i < 10; i++) {
                         if (bot.users.get(rows[i].userID) === undefined) {
+                            response += `\n#${i + 1} ${"Unknown User"} (${rows[i].points})`;
                             continue;
                         }
                         response += `\n#${i + 1} ${bot.users.get(rows[i].userID).username} (${rows[i].points})`;
