@@ -266,6 +266,7 @@ function findItem(item, slot, rareness) {
             var stat1 = "Attack";
             var stat2 = "Crit";
             break;
+        case "hammer":
         case "mace":
             type = "Weapon";
             stat1 = "Attack";
@@ -276,16 +277,19 @@ function findItem(item, slot, rareness) {
             stat1 = "Attack";
             stat2 = "Hit";
             break;
+        case "armour":
         case "armor":
             type = "Armor";
             stat1 = "HP";
             stat2 = "Defense";
             break;
+        case "sheild":
         case "shield":
             type = "Armor";
             stat1 = "HP";
             stat2 = "Counter Rate";
             break;
+        case "boot":
         case "boots":
             type = "Armor";
             stat1 = "HP";
@@ -301,6 +305,7 @@ function findItem(item, slot, rareness) {
             stat1 = "HP";
             stat2 = "Defense";
             break;
+        case "neck":
         case "necklace":
             type = "Accessory";
             stat1 = "Mastery";
