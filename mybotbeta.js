@@ -504,7 +504,20 @@ function giveTriviaPoints(UserID, points) {
             }
         });
 }
-// Give a trivia player score
+// Give a trivia player points
+
+function removeTriviaPoints(UserID, points) {
+    sql.get("SELECT * FROM scores WHERE userID = ?", UserID)
+        .then(row => {
+            if (!row) {
+                sql.run("INSERT INTO scores (userID, points) VALUES (?, ?)", [UserID, points]);
+            }
+            else {
+                sql.run(`UPDATE scores SET points = ${row.points - points} WHERE userID = ${UserID}`);
+            }
+        });
+}
+// Remove points from a trivia player 
 
 // End of trivia functions
 
