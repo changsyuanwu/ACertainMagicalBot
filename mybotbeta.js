@@ -718,7 +718,7 @@ async function parseCommand(message) {
             
             if (args.length >= 2) {
                 const requestedRole = message.guild.roles.find(role => {
-                    role.name.toLowerCase() === msgContent.toLowerCase();
+                    return role.name.toLowerCase() === msgContent.toLowerCase();
                 });
                 
                 if (requestedRole !== null) {
@@ -743,7 +743,7 @@ async function parseCommand(message) {
             // Must include the name of the role requested
             if (args.length >= 2) {
                 const requestedRole = message.guild.roles.find(role => {
-                    role.name.toLowerCase() === msgContent.toLowerCase();
+                    return role.name.toLowerCase() === msgContent.toLowerCase();
                 });
 
                 if (requestedRole !== null) {
