@@ -487,9 +487,24 @@ function trivia(message, isCritQuestion) {
         });
 } // Main trivia function
 
-function removeEntry(rowID) {
+function removeTriviaEntry(rowID) {
     sql.run("DELETE FROM scores WHERE _rowid_ IN (?)", rowID);
+} 
+// Delete a trivia player's score
+
+
+function giveTriviaPoints(UserID, points) {
+    sql.get("SELECT * FROM scores WHERE userID = ?", UserID)
+        .then(row => {
+            if (!row) {
+                sql.run("INSERT INTO scores (userID, points) VALUES (?, ?)", [UserID, points]);
+            }
+            else {
+                sql.run(`UPDATE scores SET points = ${row.points + points} WHERE userID = ${UserID}`);
+            }
+        });
 }
+// Give a trivia player score
 
 // End of trivia functions
 
@@ -715,12 +730,12 @@ async function parseCommand(message) {
 
         case "addrole":
             // Must include the name of the role requested
-            
+
             if (args.length >= 2) {
                 const requestedRole = message.guild.roles.find(role => {
                     return role.name.toLowerCase() === msgContent.toLowerCase();
                 });
-                
+
                 if (requestedRole !== null) {
                     message.member.addRole(requestedRole)
                         .then(() => {
@@ -881,7 +896,13 @@ async function parseCommand(message) {
                     return;
                 }
 
-                if (getRandomInt(0, 100) < 5) {
+                let criticalChance = 5;
+
+                if (message.author.id === config.ownerID) {
+                    criticalChance = 10;
+                }
+
+                if (getRandomInt(0, 100) < criticalChance) {
                     message.channel.send(`+++ ${message.member.displayName} started a new round of FWTR Trivia. Get ready! +++ CRITICAL QUESTION: 60 POINTS +++`);
                     trivia(message, true);
                 }
