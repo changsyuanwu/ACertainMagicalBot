@@ -969,7 +969,7 @@ async function parseCommand(message) {
                 .then((rows) => {
                     for (let i = 0; i < 10; i++) {
                         if (bot.users.get(rows[i].userID) === undefined) {
-                            response += `\n#${i + 1} "Unknown User [ID:" ${rows[i].userID}] (${rows[i].points})`;
+                            response += `\n#${i + 1} Unknown User [ID: ${rows[i].userID}] (${rows[i].points})`;
                             continue;
                         }
                         response += `\n#${i + 1} ${bot.users.get(rows[i].userID).username} (${rows[i].points})`;
