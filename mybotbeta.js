@@ -1443,7 +1443,7 @@ async function parseCommand(message) {
             break;
         
         case "thomas":
-            message.channel.send("https://media.discordapp.net/attachments/271668608487129088/432953986996371456/image.png?width=524&height=929");
+            message.channel.send("https://media.discordapp.net/attachments/271668608487129088/432953986996371456/image.png");
             break;
     }
 }
