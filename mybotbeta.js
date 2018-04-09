@@ -1441,6 +1441,10 @@ async function parseCommand(message) {
         case "honghehe":
             message.channel.send({ files: ["./src/Images/HongHehe.gif"] });
             break;
+        
+        case "thomas":
+            message.channel.send("https://media.discordapp.net/attachments/271668608487129088/432953986996371456/image.png?width=524&height=929");
+            break;
     }
 }
 
