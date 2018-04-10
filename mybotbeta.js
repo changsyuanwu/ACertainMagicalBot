@@ -1441,9 +1441,21 @@ async function parseCommand(message) {
         case "honghehe":
             message.channel.send({ files: ["./src/Images/HongHehe.gif"] });
             break;
-        
+
+        // Custom commands
+
         case "thomas":
+            if (message.guild.id !== "206553301930475530")
+                return;
+
             message.channel.send("https://media.discordapp.net/attachments/271668608487129088/432953986996371456/image.png");
+            break;
+
+        case "aidan":
+            if (message.guild.id !== "206553301930475530")
+                return;
+
+            message.channel.send("https://cdn.discordapp.com/attachments/206553301930475530/433080037680349184/20180219_214257.png");
             break;
     }
 }
