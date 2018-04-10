@@ -322,6 +322,19 @@
         "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
     },
     {
+        "Name": "Endorsi Jahad",
+        "Exclusive Soul Gear Weapon": "HP: 1200, Crit Rate: 200",
+        "Exclusive Weapon Effect": "Increases Skill Damage by 13.5% and skill range by 2 for Skill 3",
+        "Exclusive Soul Gear Wings": "MP: 32, Defense: 400",
+        "Exclusive Wings Effect": "Increases Attack by 5% and Final Skill Power by 9% for passive skill",
+        "Exclusive 2pc Effect": "Increase Attack by 5%",
+        "": "",
+        "Hero's Mark": "Attack: 380, Crit Rate: 200",
+        "Hero's Mark Skill Information": "Increases skill damage by 18.7% and Damage Reflection by additional 5% for skill 2",
+        "Hero's Mark Effect": "If 2 or more Balance-type Heros are in the party, all allies' HP increases by 10%",
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
+    },
+    {
         "Name": "Eunwol",
         "Exclusive Soul Gear Weapon": "HP: 1200, Counter Rate: 200",
         "Exclusive Weapon Effect": "Inceases Sealing chance by 10% for Skill 3",
@@ -521,6 +534,19 @@
         "Hero's Mark": "",
         "Hero's Mark Skill Information": "",
         "Hero's Mark Effect": "",
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
+    },
+    {
+        "Name": "Khun Aguero Agnes",
+        "Exclusive Soul Gear Weapon": "Attack: 380, Defense: 400",
+        "Exclusive Weapon Effect": "Increases Skill Damage by 11% and Seal chance by 15% Skill 3",
+        "Exclusive Soul Gear Wings": "HP: 1200, MP: 32",
+        "Exclusive Wings Effect": "Increases skill damage by 24.2% and skill effect range by 1 for skill 1",
+        "Exclusive 2pc Effect": "Increase Attack by 5%",
+        "": "",
+        "Hero's Mark": "Attack: 380, Crit Rate: 200",
+        "Hero's Mark Skill Information": "Increases skill damage by 18.7% and Final Skill Power by 3% for skill 2",
+        "Hero's Mark Effect": "If 3 or more allies are alive, all allies' Direction Strategy Power increases by 5%",
         "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
     },
     {
@@ -1241,6 +1267,19 @@
         "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
     },
     {
+        "Name": "Twenty-Fifth Bam",
+        "Exclusive Soul Gear Weapon": "Attack: 380, Crit Rate: 200",
+        "Exclusive Weapon Effect": "Increases Skill Damage by 14.7% and Disarm chance by 15% for Skill 3",
+        "Exclusive Soul Gear Wings": "HP: 1200, MP Recovery: 4",
+        "Exclusive Wings Effect": "Increases Shield damage reduction by 5% and Double Attack damage by 14.2% for passive skill",
+        "Exclusive 2pc Effect": "Increase Attack by 5%",
+        "": "",
+        "Hero's Mark": "Attack: 380, Crit Rate: 200",
+        "Hero's Mark Skill Information": "Increases skill damage by 17.5% and Max HP damage by 5% for skill 2",
+        "Hero's Mark Effect": "If 2 or more Attack-type Heros are in the party, all allies' Final Skill Power increases by 10%",
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
+    },
+    {
         "Name": "Unknown",
         "Soul Gear Weapon": "Attack: 380, Counter Damage: 600",
         "Weapon Effect": "Increases Stun chance by 10% for Skill 3",
@@ -1386,6 +1425,19 @@
         "Hero's Mark": "",
         "Hero's Mark Skill Information": "",
         "Hero's Mark Effect": "",
+        "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
+    },
+    {
+        "Name": "Yuri Jahad",
+        "Exclusive Soul Gear Weapon": "Attack: 380, MP Recovery: 4",
+        "Exclusive Weapon Effect": "Increases Skill Damage by 9.5% and skill range by 1 for Skill 3",
+        "Exclusive Soul Gear Wings": "HP: 1200, Defense: 400",
+        "Exclusive Wings Effect": "Additionally decreases Defense by 5% and the number of enemies required for the Critical Damage effect by 1 for passive skill",
+        "Exclusive 2pc Effect": "Increase Attack by 5%",
+        "": "",
+        "Hero's Mark": "Attack: 380, Crit Rate: 200",
+        "Hero's Mark Skill Information": "Increases skill damage by 19.6% and Lethal Wound damage by additional 8% for skill 2",
+        "Hero's Mark Effect": "If less than 4 allies are alive, all incoming Critical Damage for allies decreases by 10%",
         "Hero's Mark Activation Requirements": "1 Hero's Mark Summon Scroll"
     }
 ]
