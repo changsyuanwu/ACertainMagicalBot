@@ -1054,7 +1054,7 @@ async function parseCommand(message) {
                 let criticalChance = 5;
 
                 if (message.author.id === config.ownerID) {
-                    criticalChance = 10;
+                    criticalChance = 15;
                 }
 
                 if (getRandomInt(0, 100) < criticalChance) {
@@ -1426,6 +1426,17 @@ async function parseCommand(message) {
                 console.error(error);
             });
             break;
+
+        // case "list":
+        //     // Must include what to list
+        //     if (args.length >= 2) {
+        //         const data = ;
+        //         message.channel.send(data, { split: true });
+        //     }
+        //     else {
+        //         message.channel.send("Invalid request!");
+        //     }
+        //     break;
 
         // Images commands
 
