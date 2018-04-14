@@ -2,7 +2,7 @@
     {
         "Question": "",
         "Answer": ""
-    },
+    }, 
     {
         "Question": "What type of advantage does Alex have? (Rock/Paper/Scissors)",
         "Answer": "Paper"
@@ -2610,5 +2610,101 @@
     {
         "Question": "What is the name of this hero? http://i.imgur.com/ulMkhAK.png",
         "Answer": "Camelia"
+    },
+    {
+        "Question": "Which hero has the title of \"White Tiger\"?",
+        "Answer": "Sogoon"
+    },
+    {
+        "Question": "What is the title of Sogoon?",
+        "Answer": "White Tiger"
+    },
+    {
+        "Question": "What type of advantage does Sogoon have? (Rock/Paper/Scissors)",
+        "Answer": "Scissors"
+    },
+    {
+        "Question": "What is the name of this hero? https://i.imgur.com/n7EVhKY.png",
+        "Answer": "Sogoon"
+    },
+    {
+        "Question": "Which hero has the title of \"Martial Artist\"?",
+        "Answer": "Churyeok"
+    },
+    {
+        "Question": "What is the title of Churyeok?",
+        "Answer": "Martial Artist"
+    },
+    {
+        "Question": "What type of advantage does Churyeok have? (Rock/Paper/Scissors)",
+        "Answer": "Scissors"
+    },
+    {
+        "Question": "What is the name of this hero? https://i.imgur.com/8ZUpzDV.png",
+        "Answer": "Churyeok"
+    },
+    {
+        "Question": "Which hero has the title of \"Bounty Hunter\"?",
+        "Answer": "Sol Badguy"
+    },
+    {
+        "Question": "What is the title of Sol Badguy?",
+        "Answer": "Bounty Hunter"
+    },
+    {
+        "Question": "What type of advantage does Sol Badguy have? (Rock/Paper/Scissors)",
+        "Answer": "Rock"
+    },
+    {
+        "Question": "What is the name of this hero? https://i.imgur.com/iFoTMMZ.png",
+        "Answer": "Sol Badguy"
+    },
+    {
+        "Question": "Which hero has the title of \"First King\"?",
+        "Answer": "Ky Kiske"
+    },
+    {
+        "Question": "What is the title of Ky Kiske?",
+        "Answer": "First King"
+    },
+    {
+        "Question": "What type of advantage does Ky Kiske have? (Rock/Paper/Scissors)",
+        "Answer": "Paper"
+    },
+    {
+        "Question": "What is the name of this hero? https://i.imgur.com/Wi0KARz.png",
+        "Answer": "Ky Kiske"
+    },
+    {
+        "Question": "Which hero has the title of \"Jellyfish Pirate\"?",
+        "Answer": "May"
+    },
+    {
+        "Question": "What is the title of May?",
+        "Answer": "Jellyfish Pirate"
+    },
+    {
+        "Question": "What type of advantage does May have? (Rock/Paper/Scissors)",
+        "Answer": "Scissors"
+    },
+    {
+        "Question": "What is the name of this hero? https://i.imgur.com/l9j9Jo0.png",
+        "Answer": "May"
+    },
+    {
+        "Question": "Which hero has the title of \"Backyard's Messenger\"?",
+        "Answer": "Ramlethal Valentine"
+    },
+    {
+        "Question": "What is the title of Ramlethal Valentine?",
+        "Answer": "Backyard's Messenger"
+    },
+    {
+        "Question": "What type of advantage does Ramlethal Valentine have? (Rock/Paper/Scissors)",
+        "Answer": "Scissors"
+    },
+    {
+        "Question": "What is the name of this hero? https://i.imgur.com/8S2pLUN.png",
+        "Answer": "Ramlethal Valentine"
     }
 ]
