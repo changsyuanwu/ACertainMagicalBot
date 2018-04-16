@@ -1480,10 +1480,18 @@ async function parseMessage(message) {
     if (message.content.includes("angryhedgehog")) {
         message.channel.send({ files: ["./src/Images/AngryHedgeHog.png"] });
     } // Sends angryhedgehog image when message contains "angryhedgehog"
-
+    
     if (message.content.includes("happyhedgehog")) {
         message.channel.send({ files: ["./src/Images/HappyHedgeHog.jpg"] });
     } // Sends happyhedgehog image when message contains "happyhedgehog"
+
+    if (message.content.includes("lazyhedgehog")) {
+        message.channel.send("https://cdn.discordapp.com/attachments/188363158107324418/435184959964315654/unknown_4.png");
+    } // Sends lazyhedgehog image when message contains "lazyhedgehog"
+
+    if (message.content.includes("judginghedgehog")) {
+        message.channel.send("https://cdn.discordapp.com/attachments/188363158107324418/435184813989822474/71b08112e702c970094520d2c63dc169.jpg");
+    } // Sends judginghedgehog image when message contains "judginghedgehog"
 }
 
 // End of message parsing functions
