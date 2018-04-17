@@ -2144,8 +2144,16 @@
         "Answer": "2569"
     },
     {
-        "Question": "When did Season 2 come to the game?",
-        "Answer": "4/20 2017"
+        "Question": "In which month was Season 2 released?",
+        "Answer": "April"
+    },
+    {
+        "Question": "In which year was Season 2 released?",
+        "Answer": "2017"
+    },
+    {
+        "Question": "Which hero was given for free when Season 2 was released?",
+        "Answer": "Thanatos"
     },
     {
         "Question": "What is the highest %Attack mod you can get at slot V?",
@@ -2706,5 +2714,142 @@
     {
         "Question": "What is the name of this hero? https://i.imgur.com/8S2pLUN.png",
         "Answer": "Ramlethal Valentine"
-    }
+    },
+    {
+        "Question": "What is the name of the collaboration event Sol Badguy, Ky Kiske, May, and Ramlethal Valentine were released in?",
+        "Answer": "Guilty Gear"
+    },
+    {
+        "Question": "What is the name of the collaboration event Yuri Jahad, Twenty-fifth Bam, Endorsi Jahad, and Khun Aguero Agnes were released in?",
+        "Answer": "Tower of God"
+    },
+    {
+        "Question": "What is the name of the collaboration event Raizel, Raskreia, Muzaka, and Seira were released in?",
+        "Answer": "Noblesse"
+    },
+    {
+        "Question": "What is the name of the collaboration event Ragna, Rachel, Noel, and Jin Kisaragi were released in?",
+        "Answer": "BlazBlue"
+    },
+    {
+        "Question": "What is the name of the collaboration event Evan, Phantom, and Mercedes were released in?",
+        "Answer": "Maplestory"
+    },
+    {
+        "Question": "What is the name of the collaboration event Luminous, Aran, and Eunwol were released in?",
+        "Answer": "Maplestory 2"
+    },
+    {
+        "Question": "Which hero has the title of \"Soul Gear\"?",
+        "Answer": "Parsifal"
+    },
+    {
+        "Question": "What is the title of Parsifal?",
+        "Answer": "Soul Gear"
+    },
+    {
+        "Question": "What type of advantage does Parsifal have? (Rock/Paper/Scissors)",
+        "Answer": "Scissors"
+    },
+    {
+        "Question": "What is the name of this hero? https://i.imgur.com/tcv1BEC.png",
+        "Answer": "Parsifal"
+    },
+    {
+        "Question": "Which hero has the title of \"Azure Dragon\"?",
+        "Answer": "Woryeong"
+    },
+    {
+        "Question": "What is the title of Woryeong?",
+        "Answer": "Azure Dragon"
+    },
+    {
+        "Question": "What type of advantage does Woryeong have? (Rock/Paper/Scissors)",
+        "Answer": "Paper"
+    },
+    {
+        "Question": "What is the name of this hero? https://i.imgur.com/HHdmASr.png",
+        "Answer": "Woryeong"
+    },
+    {
+        "Question": "Which hero has the title of \"Bloodlust\"?",
+        "Answer": "Heuksa"
+    },
+    {
+        "Question": "What is the title of Heuksa?",
+        "Answer": "Bloodlust"
+    },
+    {
+        "Question": "What type of advantage does Heuksa have? (Rock/Paper/Scissors)",
+        "Answer": "Rock"
+    },
+    {
+        "Question": "What is the name of this hero? https://i.imgur.com/shacm50.png",
+        "Answer": "Heuksa"
+    },
+    {
+        "Question": "Which hero has the title of \"Vampire\"?",
+        "Answer": "Camilla"
+    },
+    {
+        "Question": "What is the title of Camilla?",
+        "Answer": "Vampire"
+    },
+    {
+        "Question": "What type of advantage does Camilla have? (Rock/Paper/Scissors)",
+        "Answer": "Rock"
+    },
+    {
+        "Question": "What is the name of this hero? https://i.imgur.com/AsmqAZP.png",
+        "Answer": "Camilla"
+    },
+    {
+        "Question": "Which hero has the title of \"North Sea Witch\"?",
+        "Answer": "Amora"
+    },
+    {
+        "Question": "What is the title of Amora?",
+        "Answer": "North Sea Witch"
+    },
+    {
+        "Question": "What type of advantage does Amora have? (Rock/Paper/Scissors)",
+        "Answer": "Scissors"
+    },
+    {
+        "Question": "What is the name of this hero? https://i.imgur.com/pgbSPIn.png",
+        "Answer": "Amora"
+    },
+    {
+        "Question": "Which hero has the title of \"Jellylike\"?",
+        "Answer": "Pink Bean"
+    },
+    {
+        "Question": "What is the title of Pink Bean?",
+        "Answer": "Jellylike"
+    },
+    {
+        "Question": "What type of advantage does Pink Bean have? (Rock/Paper/Scissors)",
+        "Answer": "Paper"
+    },
+    {
+        "Question": "What is the name of this hero? https://i.imgur.com/XW4axPk.png",
+        "Answer": "Pink Bean"
+    },
+    {
+        "Question": "Which hero has the title of \"Black Tortoise\"?",
+        "Answer": "Jinyo"
+    },
+    {
+        "Question": "What is the title of Jinyo?",
+        "Answer": "Black Tortoise"
+    },
+    {
+        "Question": "What type of advantage does Jinyo have? (Rock/Paper/Scissors)",
+        "Answer": "Rock"
+    },
+    {
+        "Question": "What is the name of this hero? https://i.imgur.com/mr5xSVr.png",
+        "Answer": "Jinyo"
+    },
+    
 ]
