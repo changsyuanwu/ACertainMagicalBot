@@ -696,7 +696,8 @@
         "name": "Jinyo",
         "aliases": [
             "jinyo",
-            "jiny"
+            "jiny",
+            "black tortoise"
         ]
     },
     {
@@ -733,6 +734,12 @@
             "agnes",
             "khun aguero",
             "khun agnes"
+        ]
+    },
+    {
+        "name": "Mary",
+        "aliases": [
+            "mary"
         ]
     },
     {
