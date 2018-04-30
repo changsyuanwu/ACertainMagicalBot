@@ -80,9 +80,9 @@
         "3GeneCost": 1360,
         "4": "**Adrenaline Rush**:\n1000 Attack and 10% Max HP for every Charge Aran has (Stacks up to 3 times)",
         "4GeneCost": 680,
-        "5": "Aran currently has no awakening skill!",
+        "5": "Aran has an awakening skill!",
         "5ChargeTurns": 0,
-        "5GeneCost": 0
+        "5GeneCost": 1000
     },
     {
         "Name": "Azrael",
@@ -199,9 +199,9 @@
         "3GeneCost": 1360,
         "4": "**Ward of the Ancients**:\nAt the beginning of every turn, this skill restores HP by [60% ~ 82.5%] Attack for Allies within 3 tiles around Celestial, removes 1 debuffs for allies in a 2-tile range, and increases Defense by [1000 ~ 1450] for 1 turn (for allies in a 2-tile range). Additionally restores [10% ~ 28%] HP for allies in a 1-tile range.",
         "4GeneCost": 675,
-        "5": "Celestial currently has no awakening skill!",
-        "5ChargeTurns": 0,
-        "5GeneCost": 0
+        "5": "Celestial has an awakening skill!",
+        "5ChargeTurns": 4,
+        "5GeneCost": 5100
     },
     {
         "Name": "Chenny",
@@ -216,9 +216,9 @@
         "3GeneCost": 1080,
         "4": "**Magic Gear**:\nWhen HP is 100%, Chenny's Attack increases by [5% ~ 23%].",
         "4GeneCost": 540,
-        "5": "Chenny currently has no awakening skill!",
+        "5": "Chenny has an awakening skill!",
         "5ChargeTurns": 0,
-        "5GeneCost": 0
+        "5GeneCost": 3645
     },
     {
         "Name": "Chris",
@@ -352,9 +352,9 @@
         "3GeneCost": 1360,
         "4": "**Spirit Bond**:\nEunwol communicatees with nature spirits and receives [2.5% ~ 25%] less damage while on special terrain tiles. He is also immune to terrain tile damage.",
         "4GeneCost": 680,
-        "5": "Eunwol currently has no awakening skill!",
-        "5ChargeTurns": 0,
-        "5GeneCost": 0
+        "5": "Eunwol has an awakening skill!",
+        "5ChargeTurns": 4,
+        "5GeneCost": 1000
     },
     {
         "Name": "Evan",
@@ -369,9 +369,9 @@
         "3GeneCost": 1360,
         "4": "**Dragon Soul**:\nMakes a contract with Onyx Dragon Mir, increasing Attack by [40 ~ 400] and Defense by [40 ~ 400] with each kill. (Attack up to 3000 and Defense up to 1500)",
         "4GeneCost": 680,
-        "5": "Evan currently has no awakening skill!",
+        "5": "Evan has an awakening skill!",
         "5ChargeTurns": 0,
-        "5GeneCost": 0
+        "5GeneCost": 1000
     },
     {
         "Name": "Frankenstein",
@@ -383,12 +383,12 @@
         "2GeneCost": 500,
         "3": "**Dark Spear: Penetration**:\n230 Attack\nMoves to farthest cell in range\n7000 Defense Ignore if Frankenstein has 1 or more Erosion stacks\n15% Damage Reduction if Frankenstein has 2 or more Erosion stacks",
         "3MPcost": 1000,
-        "3GeneCost": 0,
+        "3GeneCost": 1000,
         "4": "**Unseal**:\nReceives 14% DoT Damage every turn\nEach Erosion stack increases Defense by 1020 and Crit Damage by 5.2% (Stacks up to 3 times)",
-        "4GeneCost": 1000,
+        "4GeneCost": 500,
         "5": "Frankenstein currently has no awakening skill!",
         "5ChargeTurns": 2,
-        "5GeneCost": 0
+        "5GeneCost": 1000
     },
     {
         "Name": "Fruel",
@@ -420,9 +420,9 @@
         "3GeneCost": 720,
         "4": "**Doping**:\nTakes drugs to increase Defense by [2500 ~ 3400] when HP falls to 25% or below.",
         "4GeneCost": 360,
-        "5": "Gillan currently has no awakening skill!",
+        "5": "Gillan has an awakening skill!",
         "5ChargeTurns": 0,
-        "5GeneCost": 0
+        "5GeneCost": 2460
     },
     {
         "Name": "Hella",
@@ -556,9 +556,9 @@
         "3GeneCost": 900,
         "4": "**Sharpness**:\nEach time Jin cooperatives with allies, her Crit Rate increases by [500 ~ 1400] and Critical Damage by [4% ~ 8.5%]. Increases Crit Rate by up to 7000 and Critical Damage by up to 30%.",
         "4GeneCost": 225,
-        "5": "Jin currently has no awakening skill!",
+        "5": "Jin has an awakening skill!",
         "5ChargeTurns": 0,
-        "5GeneCost": 0
+        "5GeneCost": 3009
     },
     {
         "Name": "Jin Kisaragi",
@@ -573,9 +573,9 @@
         "3GeneCost": 1080,
         "4": "**Snow Flower Storm**:\nAt the beginning of each turn, rapidly slashes with his sword, Attacking enemies in a 1-tile (2-tile with SG)range at [74% ~ 101%] Attack, with a [35% ~ 80%] chance of decreasing their Movement by 1 for 1 turn.",
         "4GeneCost": 540,
-        "5": "Jin Kisaragi currently has no awakening skill!",
+        "5": "Jin Kisaragi has an awakening skill!",
         "5ChargeTurns": 0,
-        "5GeneCost": 0
+        "5GeneCost": 1000
     },
     {
         "Name": "Kai",
@@ -692,9 +692,9 @@
         "3GeneCost": 1080,
         "4": "**Fan Service**:\nIncreases Attack by [200 ~ 875] and Crit Rate by [500 ~ 1400] when Lena's fan (ally) is right next to her.",
         "4GeneCost": 540,
-        "5": "Lena currently has no awakening skill!",
+        "5": "Lena has an awakening skill!",
         "5ChargeTurns": 0,
-        "5GeneCost": 0
+        "5GeneCost": 3645
     },
     {
         "Name": "Lilid",
@@ -726,9 +726,9 @@
         "3GeneCost": 720,
         "4": "**Nasty!**:\nIncreases Attack by [5% ~ 23%] when using Direction Strategy.",
         "4GeneCost": 360,
-        "5": "Lily currently has no awakening skill!",
+        "5": "Lily has an awakening skill!",
         "5ChargeTurns": 0,
-        "5GeneCost": 0
+        "5GeneCost": 2461
     },
     {
         "Name": "Lucas",
@@ -794,9 +794,9 @@
         "3GeneCost": 1360,
         "4": "**Updraft**:\nMercedes achieves 1 more Movement and ignores enemies' Defense by [1000 ~ 1900] if she finishes a turn on a different type of terrain than the previous turn.",
         "4GeneCost": 680,
-        "5": "Mercedes currently has no awakening skill!",
-        "5ChargeTurns": 0,
-        "5GeneCost": 0
+        "5": "Mercedes has an awakening skill!",
+        "5ChargeTurns": 1,
+        "5GeneCost": 1000
     },
     {
         "Name": "Moa",
@@ -862,9 +862,9 @@
         "3GeneCost": 1080,
         "4": "**Melt Armor**:\nMuang's sparks can melt the armor of enemies. His Attacks ignore [500 - 680] Defense",
         "4GeneCost": 540,
-        "5": "Muang currently has no awakening skill!",
+        "5": "Muang has an awakening skill!",
         "5ChargeTurns": 0,
-        "5GeneCost": 0
+        "5GeneCost": 3645
     },
     {
         "Name": "Muzaka",
@@ -913,9 +913,9 @@
         "3GeneCost": 1080,
         "4": "**Arcus Diabolus: Bolverk**:\nIncreases Noel's Attack by [1% ~ 10%] and Defense by [1% ~ 10%].",
         "4GeneCost": 540,
-        "5": "Noel currently has no awakening skill!",
+        "5": "Noel has an awakening skill!",
         "5ChargeTurns": 0,
-        "5GeneCost": 0
+        "5GeneCost": 1000
     },
     {
         "Name": "Nox",
@@ -964,9 +964,9 @@
         "3GeneCost": 1360,
         "4": "**Skill Management**:\nPhantom, when having 2 or more buffs from Active skills, achieves [70 ~ 700] higher Attack and [100 ~ 550] higher Defense. 4 or more buffs additionally increases his Attack by [80 ~ 800] and Defense by [100 ~ 820].",
         "4GeneCost": 680,
-        "5": "Phantom currently has no awakening skill!",
+        "5": "Phantom has an awakening skill!",
         "5ChargeTurns": 0,
-        "5GeneCost": 0
+        "5GeneCost": 5100
     },
     {
         "Name": "Poni",
@@ -1015,9 +1015,9 @@
         "3GeneCost": 1080,
         "4": "**Slipheed**:\nIncreases Rachel's Movement by 2 on odd turns and recovers her HP by [3.3% ~ 17.7%] on even turns. While Rachel's HP is 70% or more, her Attack increases by [4% ~ 15.7%].",
         "4GeneCost": 540,
-        "5": "Rachel currently has no awakening skill!",
+        "5": "Rachel has an awakening skill!",
         "5ChargeTurns": 0,
-        "5GeneCost": 0
+        "5GeneCost": 1000
     },
     {
         "Name": "Rage",
@@ -1049,9 +1049,9 @@
         "3GeneCost": 1080,
         "4": "**Eater of Souls**:\nThe power of Soul Eater restores as much HP as [15% ~ 33%] of the damage inflicted on enemies.",
         "4GeneCost": 540,
-        "5": "Ragna currently has no awakening skill!",
+        "5": "Ragna has an awakening skill!",
         "5ChargeTurns": 0,
-        "5GeneCost": 0
+        "5GeneCost": 5100
     },
     {
         "Name": "Raizel",
@@ -1083,9 +1083,9 @@
         "3GeneCost": 800,
         "4": "***Lord's Authority*:\n14% Resistance",
         "4GeneCost": 400,
-        "5": "Raskreia currently has no awakening skill!",
+        "5": "Raskreia has an awakening skill!",
         "5ChargeTurns": 0,
-        "5GeneCost": 0
+        "5GeneCost": 1000
     },
     {
         "Name": "Reina",
@@ -1125,32 +1125,32 @@
         "Name": "Serendi",
         "1": "**Entangle**:\n",
         "1MPcost": 15,
-        "1GeneCost": 0,
+        "1GeneCost": 180,
         "2": "**Thorn Armor**:\n",
         "2MPcost": 77,
-        "2GeneCost": 0,
+        "2GeneCost": 365,
         "3": "**Pretty Deadly**:\n",
         "3MPcost": 125,
-        "3GeneCost": 0,
+        "3GeneCost": 730,
         "4": "**Natural Affinity**:\n",
-        "4GeneCost": 0,
-        "5": "Serendi currently has no awakening skill!",
+        "4GeneCost": 365,
+        "5": "Serendi has an awakening skill!",
         "5ChargeTurns": 0,
-        "5GeneCost": 0
+        "5GeneCost": 1640
     },
     {
         "Name": "Serphina",
         "1": "**Treasure Aquarius**:\n",
         "1MPcost": 15,
-        "1GeneCost": 0,
+        "1GeneCost": 340,
         "2": "**Aqua Blast**:\n",
         "2MPcost": 71,
-        "2GeneCost": 0,
+        "2GeneCost": 1020,
         "3": "**Circling Storm**:\n",
         "3MPcost": 154,
-        "3GeneCost": 0,
+        "3GeneCost": 1360,
         "4": "**Elemental Purification**:\n",
-        "4GeneCost": 0,
+        "4GeneCost": 680,
         "5": "Serphina currently has no awakening skill!",
         "5ChargeTurns": 0,
         "5GeneCost": 0
@@ -1176,15 +1176,15 @@
         "Name": "Shark",
         "1": "**Up the Anchor**:\n",
         "1MPcost": 15,
-        "1GeneCost": 0,
+        "1GeneCost": 90,
         "2": "**Hard Heart**:\n",
         "2MPcost": 64,
-        "2GeneCost": 0,
+        "2GeneCost": 180,
         "3": "**Shark-nado**:\n",
         "3MPcost": 110,
-        "3GeneCost": 0,
+        "3GeneCost": 360,
         "4": "**Pirate Freedom**:\n",
-        "4GeneCost": 0,
+        "4GeneCost": 180,
         "5": "Shark currently has no awakening skill!",
         "5ChargeTurns": 0,
         "5GeneCost": 0
@@ -1210,15 +1210,15 @@
         "Name": "Sione",
         "1": "**To You**:\n",
         "1MPcost": 15,
-        "1GeneCost": 0,
+        "1GeneCost": 285,
         "2": "**Bad Omen**:\n",
         "2MPcost": 71,
-        "2GeneCost": 0,
+        "2GeneCost": 855,
         "3": "**Memories of You**:\n",
         "3MPcost": 122,
-        "3GeneCost": 0,
+        "3GeneCost": 1140,
         "4": "**From Death**:\n",
-        "4GeneCost": 0,
+        "4GeneCost": 570,
         "5": "Sione currently has no awakening skill!",
         "5ChargeTurns": 0,
         "5GeneCost": 0
@@ -1244,15 +1244,15 @@
         "Name": "Spooky",
         "1": "**Burn, Burn**:\n",
         "1MPcost": 15,
-        "1GeneCost": 0,
+        "1GeneCost": 270,
         "2": "**Burnt EYe**:\n",
         "2MPcost": 72,
-        "2GeneCost": 0,
+        "2GeneCost": 810,
         "3": "**A Punishment for Bad Children**:\n",
         "3MPcost": 149,
-        "3GeneCost": 0,
+        "3GeneCost": 1080,
         "4": "**Red Witch of the Black Forest**:\n",
-        "4GeneCost": 0,
+        "4GeneCost": 540,
         "5": "Spooky currently has no awakening skill!",
         "5ChargeTurns": 0,
         "5GeneCost": 0
@@ -1295,15 +1295,15 @@
         "Name": "Tao",
         "1": "**Kick**:\n",
         "1MPcost": 15,
-        "1GeneCost": 0,
+        "1GeneCost": 225,
         "2": "**Earth, Water, Fire, Air**:\n",
         "2MPcost": 54,
-        "2GeneCost": 0,
+        "2GeneCost": 450,
         "3": "**Shadowless Kick**:\n",
         "3MPcost": 96,
-        "3GeneCost": 0,
+        "3GeneCost": 900,
         "4": "**Winner Takes All**:\n",
-        "4GeneCost": 0,
+        "4GeneCost": 450,
         "5": "Tao currently has no awakening skill!",
         "5ChargeTurns": 0,
         "5GeneCost": 0
@@ -1312,15 +1312,15 @@
         "Name": "Thanatos",
         "1": "**Execution**:\n132% Attack\nDecreases Defense by 1050 for 1 turn",
         "1MPcost": 15,
-        "1GeneCost": 0,
+        "1GeneCost": 340,
         "2": "**Mind Breaker**:\n153.4% Attack\nOverloads for 1 turn, dealing 250 damage for every 1 MP the target uses",
         "2MPcost": 67,
-        "2GeneCost": 0,
+        "2GeneCost": 1020,
         "3": "**Doom Caller**:\n183.5% Attack\n32% Weakening for 2 turns if skill hits 2 or more enemies\n20% Final Skill Power if skill hits 3 or more enemies",
         "3MPcost": 120,
-        "3GeneCost": 0,
+        "3GeneCost": 1360,
         "4": "**Doomsday Watcher**:\n20% Max HP Restore, 33% Max MP Restore, and causes Thanatos's next attack to Double Attack for 40% more damage when he kills an enemy",
-        "4GeneCost": 0,
+        "4GeneCost": 680,
         "5": "**Extinguisher's Authority**:\n817% Attack\n4000 Defense-ignoring Damage\n33% Attack and 33% Resistance for 2 turns",
         "5ChargeTurns": 4,
         "5GeneCost": 70
@@ -1346,15 +1346,15 @@
         "Name": "Valkyrie",
         "1": "**Healing Blade**:\n",
         "1MPcost": 15,
-        "1GeneCost": 0,
+        "1GeneCost": 270,
         "2": "**Demolish**:\n",
         "2MPcost": 68,
-        "2GeneCost": 0,
+        "2GeneCost": 810,
         "3": "**Epsilon's Shield**:\n",
         "3MPcost": 122,
-        "3GeneCost": 0,
+        "3GeneCost": 1080,
         "4": "**Ancient Imperial Guardian**:\n",
-        "4GeneCost": 0,
+        "4GeneCost": 540,
         "5": "Valkyrie currently has no awakening skill!",
         "5ChargeTurns": 0,
         "5GeneCost": 0
@@ -1363,15 +1363,15 @@
         "Name": "Yekaterina",
         "1": "**Eye of the Beholder**:\n",
         "1MPcost": 15,
-        "1GeneCost": 0,
+        "1GeneCost": 285,
         "2": "**Hypnotic Rhythm**:\n",
         "2MPcost": 73,
-        "2GeneCost": 0,
+        "2GeneCost": 850,
         "3": "**Big Bang**:\n",
         "3MPcost": 161,
-        "3GeneCost": 0,
+        "3GeneCost": 1135,
         "4": "**Call of the Void**:\n",
-        "4GeneCost": 0,
+        "4GeneCost": 567,
         "5": "Yekaterina currently has no awakening skill!",
         "5ChargeTurns": 0,
         "5GeneCost": 0
