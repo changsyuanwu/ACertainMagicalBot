@@ -1591,7 +1591,7 @@
         "3": "**Reverse-flow Control**:\n193.2% Attack\n80% chance of disarming the enemy for 1 turn \nDouble attack buff increases Reverse-flow control’s effect range by 1 tiles. ",
         "3MPcost": 121,
         "3GeneCost": 0,
-        "4": "**Shinsu Control**:\nCreates a shield on all allies within 2 tiles at the beginning of each turn\nTHe shield decreases all incoming damage by 16% once for 1 turn\nIf one ally is within 2 tiles of Bam, then he does a double attack which inflicts 40% more damage for 1 turn",
+        "4": "**Shinsu Control**:\nCreates a shield on all allies within 2 tiles at the beginning of each turn\nThe shield decreases all incoming damage by 16% once for 1 turn\nIf one ally is within 2 tiles of Bam, then he does a double attack which inflicts 40% more damage for 1 turn",
         "4GeneCost": 0,
         "5": "**Extreme Floral Butterfly Piercing Technique**:\n238.8% Attack\nIgnores 6700 defense\nThe target loses 100% attack for 1 turn. ",
         "5ChargeTurns": 1,
