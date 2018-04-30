@@ -1584,18 +1584,18 @@
         "Name": "Twenty-Fifth Bam",
         "1": "**Long Pierce**:\n133% Attack\nIncrease attack by 12% for 2 turns, not stackable",
         "1MPcost": 15,
-        "1GeneCost": 0,
+        "1GeneCost": 100,
         "2": "**Blue Oar**:\n157.3% Attack\nHit with additional damage equal to 20.8% of their max HP\nBam regains 30% of his Max HP",
         "2MPcost": 82,
-        "2GeneCost": 0,
+        "2GeneCost": 300,
         "3": "**Reverse-flow Control**:\n193.2% Attack\n80% chance of disarming the enemy for 1 turn \nDouble attack buff increases Reverse-flow control’s effect range by 1 tiles. ",
         "3MPcost": 121,
-        "3GeneCost": 0,
+        "3GeneCost": 400,
         "4": "**Shinsu Control**:\nCreates a shield on all allies within 2 tiles at the beginning of each turn\nThe shield decreases all incoming damage by 16% once for 1 turn\nIf one ally is within 2 tiles of Bam, then he does a double attack which inflicts 40% more damage for 1 turn",
-        "4GeneCost": 0,
+        "4GeneCost": 200,
         "5": "**Extreme Floral Butterfly Piercing Technique**:\n238.8% Attack\nIgnores 6700 defense\nThe target loses 100% attack for 1 turn. ",
         "5ChargeTurns": 1,
-        "5GeneCost": 0
+        "5GeneCost": 1000
     },
     {
         "Name": "",
