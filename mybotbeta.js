@@ -229,9 +229,13 @@ function findSkillImage(heroAlias, skill) {
 
             if (heroData["5"].includes("currently has no awakening skill")) {
                 return "./src/Images/Nexon.gif";
-            } // If the hero has an awakening skill, the case falls to the default one
+            } // If the hero does not have an awakening skill, send Nexon gif
 
-        // Falls through
+            if (heroData["5"].includes("has an awakening skill")) {
+                return "./src/Images/Coming Soon.jpg";
+            } // If the hero has an awakening skill but is not updated, send coming soon image
+
+        // Falls through if awakening skill is updated
 
         default:
             return `./src/Images/FWT Hero Skills/${heroName} ${skill}.jpg`;
