@@ -1151,6 +1151,7 @@ async function parseCommand(message) {
                     });
                     totalPull = pulls.join(" ") + "\n" + totalPull;
                 }
+                console.log(totalPull);
                 message.channel.send(totalPull, { split: true });
             }
             else {

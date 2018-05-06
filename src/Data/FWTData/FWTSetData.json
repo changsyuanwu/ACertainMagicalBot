@@ -997,7 +997,7 @@
         "Armor": "Armor",
         "Accessory": "Necklace",
         "2pc": "Increases HP by 15800, increases Attack by 3082",
-        "3pc": "Ignores damage from counter attacks",
+        "3pc": "Cannot be counter attacked",
         "Restrictions": "None"
     },
     {
