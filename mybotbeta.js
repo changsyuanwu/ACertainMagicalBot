@@ -434,7 +434,7 @@ function getPoints(ID) {
         });
 } // Finds the user's score
 
-function trivia(message, isCritQuestion) {
+function trivia(message, isCritQuestion, rewardPoints) {
 
     triviaChannels.add(message.channel.id);
 
@@ -445,13 +445,6 @@ function trivia(message, isCritQuestion) {
     triviaLastQuestion = question;
     const askedQuestion = triviaTable[question]["Question"];
     const correctAnswer = triviaTable[question]["Answer"];
-
-    if (isCritQuestion) {
-        var rewardPoints = getRandomInt(50, 100); // Random reward points between 50 and 100
-    }
-    else {
-        rewardPoints = getRandomInt(10, 26); // Random reward points between 10 and 25
-    }
 
     wait(1500)
         .then(() => message.channel.send(askedQuestion))
@@ -1062,12 +1055,14 @@ async function parseCommand(message) {
                 }
 
                 if (getRandomInt(0, 101) < criticalChance) {
-                    message.channel.send(`+++ ${message.member.displayName} started a new round of FWTR Trivia. Get ready! +++ CRITICAL QUESTION: 60 POINTS +++`);
-                    trivia(message, true);
+                    var rewardPoints = getRandomInt(50, 101); // Random reward points between 50 and 100
+                    message.channel.send(`+++ ${message.member.displayName} started a new round of FWTR Trivia. Get ready! +++ CRITICAL QUESTION: ${rewardPoints} POINTS +++`);
+                    trivia(message, true, rewardPoints);
                 }
                 else {
+                    rewardPoints = getRandomInt(10, 26); // Random reward points between 10 and 25
                     message.channel.send(`+++ ${message.member.displayName} started a new round of FWTR Trivia. Get ready! +++`);
-                    trivia(message, false);
+                    trivia(message, false, rewardPoints);
                 }
             }
             break;
