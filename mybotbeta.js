@@ -1055,12 +1055,23 @@ async function parseCommand(message) {
                 }
 
                 if (getRandomInt(0, 101) < criticalChance) {
+
                     var rewardPoints = getRandomInt(50, 101); // Random reward points between 50 and 100
+
+                    if (message.author.id === config.ownerID) {
+                        rewardPoints = getRandomInt(70, 101);
+                    }
+
                     message.channel.send(`+++ ${message.member.displayName} started a new round of FWTR Trivia. Get ready! +++ CRITICAL QUESTION: ${rewardPoints} POINTS +++`);
                     trivia(message, true, rewardPoints);
                 }
                 else {
                     rewardPoints = getRandomInt(10, 26); // Random reward points between 10 and 25
+
+                    if (message.author.id === config.ownerID) {
+                        rewardPoints = getRandomInt(15, 26);
+                    }
+
                     message.channel.send(`+++ ${message.member.displayName} started a new round of FWTR Trivia. Get ready! +++`);
                     trivia(message, false, rewardPoints);
                 }
