@@ -439,7 +439,7 @@ function trivia(message, isCritQuestion) {
     triviaChannels.add(message.channel.id);
 
     do {
-        var question = getRandomInt(1, triviaTable.length - 1);
+        var question = getRandomInt(1, triviaTable.length);
     } while (question === triviaLastQuestion);
 
     triviaLastQuestion = question;
@@ -447,10 +447,10 @@ function trivia(message, isCritQuestion) {
     const correctAnswer = triviaTable[question]["Answer"];
 
     if (isCritQuestion) {
-        var rewardPoints = 60;
+        var rewardPoints = getRandomInt(50, 100); // Random reward points between 50 and 100
     }
     else {
-        rewardPoints = 15;
+        rewardPoints = getRandomInt(10, 26); // Random reward points between 10 and 25
     }
 
     wait(1500)
@@ -639,7 +639,7 @@ function getRandomInt(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min)) + min;
-} // Generates a random integer between the specified values
+} // Generates a random integer between the min and max - 1
 
 function wait(time) {
     return new Promise(function (resolve) {
@@ -1061,7 +1061,7 @@ async function parseCommand(message) {
                     criticalChance = 15;
                 }
 
-                if (getRandomInt(0, 100) < criticalChance) {
+                if (getRandomInt(0, 101) < criticalChance) {
                     message.channel.send(`+++ ${message.member.displayName} started a new round of FWTR Trivia. Get ready! +++ CRITICAL QUESTION: 60 POINTS +++`);
                     trivia(message, true);
                 }
