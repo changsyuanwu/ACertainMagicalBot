@@ -26,9 +26,10 @@ const itemDataTable = require("./src/Data/FWTData/FWTItemMaxStats.json");
 const triviaTable = require("./src/Data/FWTData/FWTTrivia.json");
 const soulGearTable = require("./src/Data/FWTData/FWTSoulGear.json");
 const heroSkillTable = require("./src/Data/FWTData/FWTHeroSkills.json");
+const guildRaidTable = require("./src/Data/FWTData/FWTGuildRaid.json");
 
 // Effects
-const flagNames = ["confusion", "charm", "stun", "taunt", "disarm", "immobilize", "decrease movement", "dot", "mp burn", "skill cost", "defense ignore", "defense ignoring damage", "weakening", "buff removal", "hp% damage", "defense decrease", "attack decrease", "hp drain", "mastery decrease", "instant death", "decrease crit rate", "push/pull/switch", "passive attack", "seal", "sleep", "melee", "ranged", "overload", "terrain change", "dodge decrease", "decrease healing"];
+const flagNames = ["confusion", "charm", "stun", "taunt", "disarm", "immobilize", "decrease movement", "dot", "mp burn", "skill cost", "defense ignore", "defense ignoring damage", "weakening", "buff removal", "hp% damage", "defense decrease", "attack decrease", "hp drain", "mastery decrease", "instant death", "decrease crit rate", "push/pull/switch", "passive attack", "seal", "sleep", "melee", "ranged", "overload", "terrain change", "dodge decrease", "decrease healing", "lethal wound", "burn"];
 
 sql.open("./src/Data/botdata.sqlite");
 
@@ -1438,16 +1439,36 @@ async function parseCommand(message) {
             });
             break;
 
-        // case "list":
-        //     // Must include what to list
-        //     if (args.length >= 2) {
-        //         const data = ;
-        //         message.channel.send(data, { split: true });
-        //     }
-        //     else {
-        //         message.channel.send("Invalid request!");
-        //     }
-        //     break;
+        case "gr":
+        case "guildraid":
+        case "guild raid":
+            // Must include what to day to search for
+            if (args.length === 2) {
+
+                const data = guildRaidTable.find(raidDay => raidDay.Day.toLowerCase() === args[1].toLowerCase());
+
+                if (data != undefined) {
+                    message.channel.send(createListOutput(data));
+                }
+                else {
+                    message.channel.send("Invalid request!");
+                }
+            }
+            else if (args.length === 3) {
+
+                const data = guildRaidTable.find(raidDay => raidDay.Day.toLowerCase() === args[1].toLowerCase());
+
+                if (data != undefined) {
+                    message.channel.send(data[capitalize(args[2])]);
+                }
+                else {
+                    message.channel.send("Invalid request!");
+                }
+            }
+            else {
+                message.channel.send("Invalid request!");
+            }
+            break;
 
         // Images commands
 
@@ -1491,7 +1512,7 @@ async function parseMessage(message) {
     if (message.content.includes("angryhedgehog")) {
         message.channel.send({ files: ["./src/Images/AngryHedgeHog.png"] });
     } // Sends angryhedgehog image when message contains "angryhedgehog"
-    
+
     if (message.content.includes("happyhedgehog")) {
         message.channel.send({ files: ["./src/Images/HappyHedgeHog.jpg"] });
     } // Sends happyhedgehog image when message contains "happyhedgehog"

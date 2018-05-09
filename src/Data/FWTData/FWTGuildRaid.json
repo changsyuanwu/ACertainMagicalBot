@@ -1,0 +1,44 @@
+[
+    {
+        "Day": "Monday",
+        "Map": "https://cdn.discordapp.com/attachments/391009899401707520/412115995990163456/Monday_Blank.jpg",
+        "Bonus": "\n\t3+ Scissors Heroes: +50 MP regen per turn \n\t5+ Scissors Heroes: +5% Attack \n\t2+ Defense Heroes: +1000 Attack \n\t2+ Attack Heroes: +5% Score \n\tParty includes Sione: +15% Type Advantage Power",
+        "Boss": "\n\tSkill 1: http://imgur.com/a/nFxfU \n\tSkill 2: http://imgur.com/a/nNhEo \n\tSkill 3: http://imgur.com/a/qxsym \n\tSkill 4: http://imgur.com/a/JsBFm"
+    },
+    {
+        "Day": "Tuesday",
+        "Map": "https://cdn.discordapp.com/attachments/391009899401707520/412116016479469578/Tuesday_Blank.jpg",
+        "Bonus": "\n\t3+ Rock Heroes: +50 MP regen per turn \n\t5+ Rock Heroes: +5% Attack \n\t2+ Balance Heroes: +1000 Defense \n\t2+ Area Heroes: +5% Score \n\tParty includes Zero: Entire Party gains Water advantage",
+        "Boss": "\n\tSkill 1: http://imgur.com/a/pJSEd \n\tSkill 2: http://imgur.com/a/iTS9m \n\tSkill 3: http://imgur.com/a/1w24Q \n\tSkill 4: (4 Range Diamond Explosion) http://imgur.com/a/KuNIp"
+    },
+    {
+        "Day": "Wednesday",
+        "Map": "https://cdn.discordapp.com/attachments/391009899401707520/412116043524210699/Wednesday_Blank.jpg",
+        "Bonus": "\n\t3+ Paper Heroes: +50 MP regen per turn \n\t5+ Paper Heroes: +5% Attack \n\t2+ Defense Heroes: +1 Movement \n\t2+ Support Heroes: +5% Score \n\tParty includes Nox: Entire Party gains Lava advantage",
+        "Boss": "\n\tSkill 1: http://imgur.com/a/8uk3u \n\tSkill 2: http://imgur.com/a/KMUNs \n\tSkill 3: http://imgur.com/a/6ioRd \n\tSkill 4: (4 Range Deimos Skill 3 Explosion) http://imgur.com/a/EPYQH"
+    },
+    {
+        "Day": "Thursday",
+        "Map": "https://cdn.discordapp.com/attachments/391009899401707520/412116064567033856/Thursday_Blank.jpg",
+        "Bonus": "\n\t3+ Scissors Heroes: +50 MP regen per turn \n\t5+ Scissors Heroes: +5% Attack \n\t2+ Area Heroes: +5% Resistance \n\t2+ Area Heroes: +5% Score \n\tParty includes Belle: +5% Resistance",
+        "Boss": "\n\tSkill 1: http://imgur.com/a/zbpLL \n\tSkill 2: http://imgur.com/a/U0kZB \n\tSkill 3: http://imgur.com/a/vtNld \n\tSkill 4: http://imgur.com/a/oEDvE"
+    },
+    {
+        "Day": "Friday",
+        "Map": "https://cdn.discordapp.com/attachments/391009899401707520/412116087417602049/Friday_Blank.jpg",
+        "Bonus": "\n\t3+ Rock Heroes: +50 MP regen per turn \n\t5+ Rock Heroes: +5% Attack \n\t2+ Attack Heroes: -2 Movement (Enemies) \n\t2+ Support Heroes: +5% Score \n\tParty includes Rage: +1 Movement",
+        "Boss": "\n\tSkill 1: http://imgur.com/a/aqPL3 \n\tSkill 2: http://imgur.com/a/vvAi3 \n\tSkill 3: http://imgur.com/a/ii28H \n\tSkill 4: http://imgur.com/a/OASOG"
+    },
+    {
+        "Day": "Saturday",
+        "Map": "https://cdn.discordapp.com/attachments/391009899401707520/412116105964945408/Saturday_Blank.jpg",
+        "Bonus": "\n\t3+ Paper Heroes: +50 MP regen per turn \n\t5+ Paper Heroes: +5% Attack \n\t2+ Area Heroes: +2.5% Attack per target \n\t2+ Support Heroes: +5% Score \n\tParty includes Dolores: +2.5% Attack per target",
+        "Boss": "\n\tSkill 1: http://imgur.com/a/9iyax \n\tSkill 2: http://imgur.com/a/7R7XB \n\tSkill 3: http://imgur.com/a/1Wec9 \n\tSkill 4: http://imgur.com/a/uhlbj"
+    },
+    {
+        "Day": "Sunday",
+        "Map": "https://cdn.discordapp.com/attachments/391009899401707520/412116125262807050/Sunday_Blank.jpg",
+        "Bonus": "\n\t2+ Defense Heroes: +50 MP regen per turn \n\t2+ Support Heroes: +5% Attack \n\t2+ Attack Heroes: +5% HP drain (lifesteal) \n\t2+ Balance Heroes: +5% Score \n\tParty includes Valkyrie: +5% Max HP",
+        "Boss": "\n\tSkill 1: http://imgur.com/a/WKKfP \n\tSkill 2: http://imgur.com/a/b6M5n \n\tSkill 3: http://imgur.com/a/6X2Ba \n\tSkill 4: http://imgur.com/a/V7Lli"
+    }
+]
