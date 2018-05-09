@@ -597,6 +597,27 @@ function news(newsLimit, message) {
     });
 } // Gets the lastest posts from FWT Facebook
 
+function calcGRDamage(mainSkillDmg, coopDmg, noOfNormalCoops, specialCoopDmg, noOfSpecialCoops, hasPropertyAdv, hasTerrainAdv, hasDirectonalAdv) {
+
+    let propertyAdv = 1;
+    let terrainAdv = 1;
+    let directionAdv = 1;
+
+    if (hasPropertyAdv) {
+        propertyAdv = 1.3;
+    }
+
+    if (hasTerrainAdv) {
+        terrainAdv = 1.2;
+    }
+
+    if (hasDirectonalAdv) {
+        directionAdv = 1.15;
+    }
+
+    return (mainSkillDmg + (coopDmg * noOfNormalCoops) + (specialCoopDmg * noOfSpecialCoops)) * propertyAdv * terrainAdv * directionAdv;
+}
+
 // End of other FWT functions
 
 //--------------------------------------------------------------------------------------------
@@ -1465,6 +1486,29 @@ async function parseCommand(message) {
                     message.channel.send("Invalid request!");
                 }
             }
+            else if (args.length === 9) {
+
+                let propAdv = false;
+                let terrAdv = false;
+                let dircAdv = false;
+
+                if (args[6] === "true" || args[6] === "t" || args[6] === "1" || args[6] === "y" || args[6] === "yes") {
+                    propAdv = true;
+                }
+
+                if (args[7] === "true" || args[7] === "t" || args[7] === "1" || args[7] === "y" || args[7] === "yes") {
+                    terrAdv = true;
+                }
+
+                if (args[8] === "true" || args[8] === "t" || args[8] === "1" || args[8] === "y" || args[8] === "yes") {
+                    dircAdv = true;
+                }
+
+                const dmg = calcGRDamage(parseFloat(args[1]), parseFloat(args[2]), parseFloat(args[3]), parseFloat(args[4]), parseFloat(args[5]), propAdv, terrAdv, dircAdv);
+
+                message.channel.send(dmg);
+
+            }
             else {
                 message.channel.send("Invalid request!");
             }
@@ -1553,6 +1597,7 @@ bot.on("message", async (message) => {
     // Checks if sender is a bot
 
     logger.logFrom(message.channel, 1, `[command: ${message.content.slice(1).split(" ")[0]}]`);
+    // Log the content of the command
 
     parseCommand(message);
 
