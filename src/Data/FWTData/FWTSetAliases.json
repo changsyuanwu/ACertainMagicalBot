@@ -1628,7 +1628,8 @@
             "hungry predator",
             "predator",
             "hungry",
-            "pred"
+            "pred",
+            "hp"
         ]
     },
     {
@@ -2075,6 +2076,38 @@
             "wol ha ik",
             "wol ha ik song",
             "deputy master"
+        ]
+    },
+    {
+        "name": "Pink Pink Pink Bean",
+        "aliases": [
+            "pb",
+            "pink bean",
+            "pink pink bean",
+            "pink pink pink bean",
+            "bean"
+        ]
+    },
+    {
+        "name": "Annihilating Darkness",
+        "aliases": [
+            "jinyo",
+            "annihilating darkness"
+        ]
+    },
+    {
+        "name": "Conqueror of the North Sea",
+        "aliases": [
+            "amora",
+            "conqueror of the north sea",
+            "north sea"
+        ]
+    },
+    {
+        "name": "Nomadic Wind",
+        "aliases": [
+            "lynn",
+            "nomadic wind"
         ]
     },
     {
