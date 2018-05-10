@@ -1751,7 +1751,8 @@
             "lonesome sniper",
             "sniper",
             "lonesome",
-            "lone"
+            "lone",
+            "ls"
         ]
     },
     {
@@ -1760,7 +1761,8 @@
             "goblin",
             "goblin king",
             "goblin king's order",
-            "goblin kings order"
+            "goblin kings order",
+            "gko"
         ]
     },
     {
@@ -1923,6 +1925,156 @@
             "ky kiske",
             "silvery trust",
             "silvery"
+        ]
+    },
+    {
+        "name": "Potter's Warrior Sword",
+        "aliases": [
+            "potters warrior sword",
+            "potter",
+            "potters sword",
+            "potter warrior sword",
+            "potter sword",
+            "ps",
+            "pws"
+        ]
+    },
+    {
+        "name": "Torn Throne",
+        "aliases": [
+            "torn throne",
+            "torn",
+            "throne",
+            "tt"
+        ]
+    },
+    {
+        "name": "Worst Slayer",
+        "aliases": [
+            "worst slayer",
+            "wslayer",
+            "ws"
+        ]
+    },
+    {
+        "name": "Red-light District Prince",
+        "aliases": [
+            "red light",
+            "red light district prince",
+            "slot ii reflect",
+            "red light district",
+            "district prince",
+            "rldp"
+        ]
+    },
+    {
+        "name": "He Who Opened the Door of the Tower",
+        "aliases": [
+            "he who opened the door of the tower",
+            "open door",
+            "opened door of tower",
+            "hwotdott",
+            "door of the tower",
+            "dott",
+            "bam"
+        ]
+    },
+    {
+        "name": "Ruler's Style",
+        "aliases": [
+            "rulers style",
+            "ruler's style",
+            "ruler style",
+            "style",
+            "khun",
+            "rs"
+        ]
+    },
+    {
+        "name": "Jahad's Effenberg",
+        "aliases": [
+            "jahad",
+            "jahad's effenberg",
+            "effenberg",
+            "jahads effenburg",
+            "yuri",
+            "je"
+        ]
+    },
+    {
+        "name": "Mankind's Cultural Heritage",
+        "aliases": [
+            "mankind's cutural heritage",
+            "mankind",
+            "mch",
+            "mankinds cultural heritage",
+            "cutural heritage",
+            "heritage",
+            "endorsi"
+        ]
+    },
+    {
+        "name": "Mysterious Guide",
+        "aliases": [
+            "mysterious guide",
+            "mg",
+            "guide"
+        ]
+    },
+    {
+        "name": "Dignified Alligator",
+        "aliases": [
+            "dignified alligator",
+            "banana",
+            "croc",
+            "alligator",
+
+            "da"
+        ]
+    },
+    {
+        "name": "Shoes That Escaped the Rack",
+        "aliases": [
+            "shoes that escaped the rack",
+            "shoe",
+            "shoes",
+            "stetr"
+        ]
+    },
+    {
+        "name": "Evankhell Floor's Submerged Fish",
+        "aliases": [
+            "efsf",
+            "evankhell",
+            "fish",
+            "evankhell floor's submerged fish",
+            "submerged fish",
+            "evankhell floor",
+            "evankhell floors submerged fish"
+        ]
+    },
+    {
+        "name": "Royal Family's Fast Ship",
+        "aliases": [
+            "rffs",
+            "royal ship",
+            "royal family's fast ship",
+            "royal familys fast ship",
+            "fast ship",
+            "royal family ship"
+        ]
+    },
+    {
+        "name": "Wol Ha Ik Song Deputy Master",
+        "aliases": [
+            "wol ha ik song deputy master",
+            "deputy",
+            "endurance",
+            "wol ha",
+            "wol",
+            "wol ha ik",
+            "wol ha ik song",
+            "deputy master"
         ]
     },
     {

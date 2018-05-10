@@ -8,7 +8,7 @@
         "Accessory": "",
         "2pc": "",
         "3pc": "",
-        "Restrictions": ""
+        "Restrictions": "None"
     },
     {
         "Name": "Here Comes the Super Rookie!",
@@ -2241,7 +2241,7 @@
         "Accessory": "Brooch",
         "2pc": "Increases Attack by 5%, and by 5% on enemies 3 or more tiles away ",
         "3pc": "increases Critical Rate by 800. Increases Final Skill Power by 10% if there no enemy in a 1 tile-range",
-        "Restrictions": ""
+        "Restrictions": "None"
     },
     {
         "Name": "Goblin King's Order",
@@ -2252,7 +2252,7 @@
         "Accessory": "Necklace",
         "2pc": "At the beginning of each turn, 2 more allies in a 1-tile range increases movement by 1 for 1 turn for all allies in range",
         "3pc": "Increases Final Skill Power by 5% for all allies in a 2-tile range (Not Stackable)",
-        "Restrictions": ""
+        "Restrictions": "None"
     },
     {
         "Name": "CooCoo Pirates",
@@ -2263,7 +2263,7 @@
         "Accessory": "Brooch",
         "2pc": "Increases wearer's Max HP by 10% and all allies by 5% (Not Stackable) ",
         "3pc": "Restores HP at the beginning of each turn by 10% for it wearer and 5% for all allies (Not Stackable)",
-        "Restrictions": ""
+        "Restrictions": "None"
     },
     {
         "Name": "Rose Knight",
@@ -2285,7 +2285,7 @@
         "Accessory": "Necklace",
         "2pc": "Debuff Skills create 55% chance of double-casting certain debuffs",
         "3pc": "Increases Final Skill Power by 18%",
-        "Restrictions": ""
+        "Restrictions": "None"
     },
     {
         "Name": "Split Personality Crybaby Maid",
@@ -2329,7 +2329,7 @@
         "Accessory": "Ring",
         "2pc": "At the beginning of each turn, if there are 1 or more enemies in a 2-tile range, increases Attack by 3800 and Max HP by 13850 for 2 turns",
         "3pc": "At the beginning of each turn, if there are 2 or more enemies in a 2-tile range, removes 1 debuff cast on the wearer, and increases Movement by 2 for 2 turns",
-        "Restrictions": ""
+        "Restrictions": "None"
     },
     {
         "Name": "Noble Kin",
@@ -2340,7 +2340,7 @@
         "Accessory": "Ring",
         "2pc": "Ignores enemy Defense by 3000",
         "3pc": "Drains as much HP as 28% outgoing damage by and increases Attack by 4350",
-        "Restrictions": ""
+        "Restrictions": "None"
     },
     {
         "Name": "Split Personality Crybaby Maid",
@@ -2453,6 +2453,160 @@
         "Restrictions": "Ky Kiske only"
     },
     {
+        "Name": "Potter's Warrior Sword",
+        "Slot": "I",
+        "Rareness": "★★★★★★",
+        "Weapon": "",
+        "Armor": "",
+        "Accessory": "",
+        "2pc": "Increases Defense by 1000 and Movement by 2 for 2 turns",
+        "3pc": "Increases Attack by 800 for 2 turns. Creates a 50% chance of Double Attack Buff for 30% of skill damage",
+        "Restrictions": "Activated when attacked"
+    },
+    {
+        "Name": "Torn Throne",
+        "Slot": "I",
+        "Rareness": "★★★★★★",
+        "Weapon": "Sword",
+        "Armor": "Armor",
+        "Accessory": "",
+        "2pc": "Removes 1 debuff on self",
+        "3pc": "Increases Attack by 1000 (Up to 12000)",
+        "Restrictions": "Activated when eliminating enemies"
+    },
+    {
+        "Name": "Worst Slayer",
+        "Slot": "II",
+        "Rareness": "★★★★★★",
+        "Weapon": "",
+        "Armor": "",
+        "Accessory": "",
+        "2pc": "Increase Attack by 400 per equipped 6★ equipment",
+        "3pc": "Increase HP by 600 per equipped 6★ equipment",
+        "Restrictions": "None"
+    },
+    {
+        "Name": "Red-light District Prince",
+        "Slot": "II",
+        "Rareness": "★★★★★★",
+        "Weapon": "",
+        "Armor": "",
+        "Accessory": "",
+        "2pc": "Reflects 30% Damage",
+        "3pc": "Increases Aggro by 20% and HP by 6000",
+        "Restrictions": "None"
+    },
+    {
+        "Name": "He Who Opened the Door of the Tower",
+        "Slot": "III",
+        "Rareness": "★★★★★★",
+        "Weapon": "",
+        "Armor": "",
+        "Accessory": "",
+        "2pc": "Increases Resistance by 25%",
+        "3pc": "Increases Attack by 60% for 3 turns and Ignores Defense by 1500",
+        "Restrictions": "Attack-type hero only"
+    },
+    {
+        "Name": "Ruler's Style",
+        "Slot": "III",
+        "Rareness": "★★★★★★",
+        "Weapon": "",
+        "Armor": "",
+        "Accessory": "",
+        "2pc": "Decreases all enemies' Crit Rate by 2000",
+        "3pc": "Increases Attack by 60% for 3 turns and all allies Max HP by 10%",
+        "Restrictions": "Support-type hero only"
+    },
+    {
+        "Name": "Jahad's Effenberg",
+        "Slot": "III",
+        "Rareness": "★★★★★★",
+        "Weapon": "Sword",
+        "Armor": "Armor",
+        "Accessory": "",
+        "2pc": "Increases Final Skill Power by 25%",
+        "3pc": "Increases Attack by 60% for 3 turns and Movement by 2",
+        "Restrictions": "Area-type hero only"
+    },
+    {
+        "Name": "Mankind's Cultural Heritage",
+        "Slot": "III",
+        "Rareness": "★★★★★★",
+        "Weapon": "",
+        "Armor": "",
+        "Accessory": "",
+        "2pc": "Increases Attack by 7% for allies in a 2 tile range",
+        "3pc": "Increases Attack by 60% for 3 turns and reduces Crit Damage by 10%",
+        "Restrictions": "Balance-type hero only"
+    },
+    {
+        "Name": "Mysterious Guide",
+        "Slot": "III",
+        "Rareness": "★★★★★★",
+        "Weapon": "",
+        "Armor": "",
+        "Accessory": "",
+        "2pc": "Increases MP by 15 and MP Regen by 15",
+        "3pc": "Using the most recent skill increases Final Skill Power by 30%",
+        "Restrictions": "None"
+    },
+    {
+        "Name": "Dignified Alligator",
+        "Slot": "III",
+        "Rareness": "★★★★★★",
+        "Weapon": "",
+        "Armor": "",
+        "Accessory": "",
+        "2pc": "Incoming damage increases HP by 5% (Up to 40%)",
+        "3pc": "Restores 10% Max HP when attacking and another 10% Max HP when eliminating enemies",
+        "Restrictions": "None"
+    },
+    {
+        "Name": "Shoes That Escaped the Rack",
+        "Slot": "IV",
+        "Rareness": "★★★★★★",
+        "Weapon": "",
+        "Armor": "",
+        "Accessory": "",
+        "2pc": "Increases Dodge by 7000",
+        "3pc": "Increases Attack by 12%. Dodging an attack increases Defense Ignore by 500 (Up to 2000)",
+        "Restrictions": "None"
+    },
+    {
+        "Name": "Evankhell Floor's Submerged Fish",
+        "Slot": "IV",
+        "Rareness": "★★★★★★",
+        "Weapon": "",
+        "Armor": "",
+        "Accessory": "",
+        "2pc": "Decreases Defense by 3000 for enemies within 2 tiles",
+        "3pc": "Increases Movement by 4",
+        "Restrictions": "Activated until second turn of combat"
+    },
+    {
+        "Name": "Wol Ha Ik Song Deputy Master",
+        "Slot": "V",
+        "Rareness": "★★★★★★",
+        "Weapon": "Bow",
+        "Armor": "Boots",
+        "Accessory": "",
+        "2pc": "Decreases incoming Crit Damage by 25%",
+        "3pc": "Take 40% of incoming damage first, then the other 60% at the end of your next turn",
+        "Restrictions": "None"
+    },
+    {
+        "Name": "Royal Family's Fast Ship",
+        "Slot": "V",
+        "Rareness": "★★★★★★",
+        "Weapon": "",
+        "Armor": "",
+        "Accessory": "",
+        "2pc": "Increases Crit Damage by 12%. (Increases by an extra 8% for 1 turn when eliminating enemies)",
+        "3pc": "Decreases incoming Crit Damage by 12%. (Decreases by an extra 10% for 1 turn when eliminating enemies)",
+        "Restrictions": "None"
+    },
+    {
         "Name": "",
         "Slot": "",
         "Rareness": "★★★★★★",
@@ -2461,6 +2615,6 @@
         "Accessory": "",
         "2pc": "",
         "3pc": "",
-        "Restrictions": ""
+        "Restrictions": "None"
     }
 ]
