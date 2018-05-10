@@ -635,7 +635,7 @@
     {
         "Name": "Lena",
         "Exclusive Soul Gear Weapon": "Attack: 380, Crit Rate: 200",
-        "Exclusive Weapon Effect": "Increases Skill Damage by 8.7% and Defense Skill range by 1 for Skill 3",
+        "Exclusive Weapon Effect": "Increases Skill Damage by 8.7% and Target Skill range by 1 for Skill 3",
         "Exclusive Soul Gear Wings": "Counter Damage: 600, MP Recovery: 4",
         "Exclusive Wings Effect": "The Passive effect increases Attack by an additional 825 and Double Attack damage by 6% for Passive skill",
         "Exclusive 2pc Effect": "Increases Crit Rate by 500",
