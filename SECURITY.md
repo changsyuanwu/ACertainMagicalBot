@@ -8,4 +8,4 @@
 
 ## Reporting a Vulnerability
 
-Comment on it
+Open an issue on it
