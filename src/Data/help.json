@@ -10,7 +10,7 @@
 
     "**!credits**: Outputs the credits for the bot.",
 
-    "**!stats**: Displays information about the bot.",
+    "**!info**: Displays information about the bot.",
 
     "**!nameset**: Sets the nickname of the bot.",
 
