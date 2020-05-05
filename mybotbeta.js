@@ -15,7 +15,7 @@ const bot = new Discord.Client();
 // Utils
 const config = require("./src/Data/config.json");
 const help = require("./src/Data/help.json");
-const Logger = require("./src/Utilities/Logger.js");
+const Logger = require("./src/Utilities/logger.js");
 const moe = require("./src/Data/Moe.json");
 const credits = require("./src/Data/credits.json");
 const dictionary = require("./src/Utilities/dictionary.json");
