@@ -12,10 +12,10 @@ Also has specific commands for Fantasy War Tactics R such as getting hero stats 
 A Discord bot token is needed. This is obtained by creating an application in the Developer section of discordapp.com
 
 # Downloading
-
+c
 In a command prompt in your projects folder (wherever that may be) run the following:
 
-`git clone https://github.com/TheMasterDodo/ACertainMagicalBot.git`
+`git clone https://github.com/changsyuanwu/ACertainMagicalBot.git`
 
 Once finished:
 
