@@ -1,6 +1,6 @@
 # ACertainMagicalBot
 
-A Discord Bot with various commands for roles moderation, entertainment, utility, etc.
+A Discord Bot with various commands for server moderation, games, utility, etc.
 
 Also has specific commands for Fantasy War Tactics R such as getting hero stats and set information.
 
