@@ -16,7 +16,7 @@
     "relevant-urban": "^2.0.0",
     "simple-youtube-api": "^5.1.1",
     "sqlite": "^2.9.3",
-    "sqlite3": "^4.0.6",
+    "sqlite3": "^4.2.0",
     "ytdl-core": "^0.29.1"
   },
   "devDependencies": {
