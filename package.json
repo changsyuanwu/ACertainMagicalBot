@@ -9,7 +9,7 @@
     "discord.js": "^11.4.2",
     "fb": "^2.0.0",
     "mathjs": "^4.4.2",
-    "moment": "^2.24.0",
+    "moment": "^2.29.4",
     "moment-duration-format": "^2.2.2",
     "node-opus": "^0.3.1",
     "node-pre-gyp": "^0.12.0",
