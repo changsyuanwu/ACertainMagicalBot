@@ -12,7 +12,7 @@
     "moment": "^2.29.4",
     "moment-duration-format": "^2.2.2",
     "node-opus": "^0.3.1",
-    "node-pre-gyp": "^0.12.0",
+    "node-pre-gyp": "^0.17.0",
     "relevant-urban": "^2.0.0",
     "simple-youtube-api": "^5.1.1",
     "sqlite": "^2.9.3",
